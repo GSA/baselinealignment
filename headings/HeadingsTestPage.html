@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Heading Test Page</title>
+<meta charset=utf-8>
+<link rel="stylesheet" href="style.css">
+<style>
+h1, .heading1 { font-size: 3em; font-weight: normal; }
+h2, .heading2 { font-size: 2em; font-weight: normal; }
+h3, .heading3 { font-size: 1.5em; font-weight: normal; }
+</style>
+</head>
+<!-- modified from view-source:https://patrickhlauke.github.io/aria/demos/role-heading.html -->
+<body>
+<h1>Heading <code>&lt;h1&gt;</code></h1>
+<h2>Heading <code>&lt;h2&gt;</code></h2>
+<h3>Heading <code>&lt;h3&gt;</code></h3>
+<hr>
+<p class="heading1">Styled heading with <code>class="heading1"</code></p>
+<p class="heading2">Styled heading with <code>class="heading2"</code></p>
+<p class="heading3">Styled heading with <code>class="heading3"</code></p>
+<hr>
+<p class="heading1" role="heading" aria-level="1"><code>role="heading"</code> and <code>aria-level="1"</code></p>
+<p class="heading2" role="heading" aria-level="2"><code>role="heading"</code> and <code>aria-level="2"</code></code></p>
+<p class="heading3" role="heading" aria-level="3"><code>role="heading"</code> and <code>aria-level="3"</code></code></p>
+
+<p role="heading"> General <code>role="heading"</code>, no level assigned</p>
+</body>
+</html>
