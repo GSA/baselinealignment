@@ -15,7 +15,7 @@ Test Pages:
 9. [Color (contrast)](ColorContrast/color_contrast_testpage.html)
 10. *Flashing (reserved)*
 11. Forms (associated instructions)
-12. Page Titles
+12. [Page Titles](PageTitle/page-title-test.html)
 13. Data Tables (headers)
 14. Data Tables (cell-header association)
 15. [Headings](headings/HeadingsTestPage.html)
