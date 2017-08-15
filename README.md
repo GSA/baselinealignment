@@ -1,9 +1,18 @@
-## Baseline Test Pages
+# Baseline Test Pages
 The Baseline and ITTP Working Group will use this repository and set of pages to store and make reference to test pages for use in validating test rules contained in the [ICT Testing Basline](https://section508coordinators.github.io/ICTTestingBaseline/). 
 
 Working Group members can use the [editor on GitHub](https://github.com/Section508Coordinators/BaselineTestPages/edit/master/README.md) to directly edit this file to add references. Members can also  navigate to the [Baseline Test Pages repository](https://github.com/Section508Coordinators/BaselineTestPages) to add files to test. Static pages can be viewed via GitHub Pages from this repository at the following url: <https://section508coordinators.github.io/BaselineTestPages/>.
 
-Test Pages:
+## Test Page Documentation
+For each sample test page or set of pages, provide the following information (generally within the same folder where you provide the test page):
+1.	Brief description of test sample
+2.	Index of files/pages to be tested with URLs or relative file links/locations
+3.	Test rule(s) to be validated
+4.	List of elements to test
+5.	List of expected results for the rules listed
+6.	Rationale of why expected results should be achieved
+
+## Test Pages:
 1. Keyboard Navigation
 2. Focus (visible)
 3. Focus (order)
