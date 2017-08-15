@@ -21,13 +21,13 @@ For each sample test page or set of pages, provide the following information (ge
 6. Multi-state components
 7. Images
 8. Color (meaning)
-9. [Color (contrast)](ColorContrast/color_contrast_testpage.html)
+9. [Color (contrast)](TestPages/9ColorContrast/color_contrast_testpage.html)
 10. *Flashing (reserved)*
 11. Forms (associated instructions)
 12. Page Titles
 13. Data Tables (headers)
 14. Data Tables (cell-header association)
-15. [Headings](headings/HeadingsTestPage.html)
+15. [Headings](TestPages/15Headings/HeadingsTestPage.html)
 16. Links and User controls
 17. Language
 18. Audio (transcripts)
