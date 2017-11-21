@@ -2,7 +2,7 @@
 ## Brief description of test sample
 
 ## Index of files/pages to be tested with URLs or relative file links/locations
-* [Color Contrast Test Page](TestPages/9ColorContrast/color_contrast_testpage.html)
+* [Color Contrast Test Page](color_contrast_testpage.html)
 
 ## Test rule(s) to be validated
 
