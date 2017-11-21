@@ -21,7 +21,7 @@ For each sample test page or set of pages, provide the following information (ge
 6. Multi-state components
 7. Images
 8. Color (meaning)
-9. [Color (contrast)](TestPages/9ColorContrast/color_contrast_testpage.html)
+9. [Color (contrast)](TestPages/9ColorContrast/9ColorContrast-TestPageDoc.md)
 10. *Flashing (reserved)*
 11. Forms (associated instructions)
 12. Page Titles
