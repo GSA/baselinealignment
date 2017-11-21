@@ -27,7 +27,7 @@ For each sample test page or set of pages, provide the following information (ge
 12. Page Titles
 13. Data Tables (headers)
 14. Data Tables (cell-header association)
-15. [Headings](15Headings-TestPageDoc.md)
+15. [Headings](TestPages/15Headings/15Headings-TestPageDoc.md)
 16. Links and User controls
 17. Language
 18. Audio (transcripts)
