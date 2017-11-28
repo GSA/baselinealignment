@@ -35,7 +35,7 @@ For each sample test page or set of pages, provide the following information (ge
 20. Synchronized media (captions)
 21. Synchronized media (descriptions)
 22. Style-sheet non-dependence
-23. Frames
+23. [Frames](TestPages/23Frames/23Frames-TestPageDoc.md)
 24. Alternate pages
 25. Time outs
 26. Image maps
