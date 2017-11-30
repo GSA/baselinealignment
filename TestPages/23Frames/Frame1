@@ -1,0 +1,10 @@
+<html>
+<head>
+</head>
+
+<body>
+<h1>Frame 1 (Fails for title attribute)</h1>
+<p>This menu frame lacks a title attribute.</p> 
+</body>
+
+</html>
