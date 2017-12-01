@@ -1,6 +1,6 @@
 a:focus {
-  outline: #00FF00 dotted thick;
-  outline-width: 2px;
+  outline: #00FF00 dotted thick !Important;
+  outline-width: 2px !Important;
 }
 #skip a {
   position:absolute;
