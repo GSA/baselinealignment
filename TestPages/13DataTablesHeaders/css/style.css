@@ -36,20 +36,6 @@ th {
   bottom: 0;
   height: inherit;
 }
-.w3-main {top:43px;}
-a:focus {
-  outline: #00FF00 dotted thick;  
+.w3-main {
+    top:43px;
 }
-#skip a {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-}
-#skip a:focus {
-  position:static;
-  width:auto;
-  height:auto;
-} 
