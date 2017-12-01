@@ -1,0 +1,36 @@
+h2 {
+  padding-top: 43px;
+}
+table, th, td {
+  font-family: calibri;
+  border: 2px solid black;
+  padding: 3px;
+  border-collapse: collapse;
+  }
+th {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #ccc;
+}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.w3-main {top:43px;}
+#skip a {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+#skip a:focus {
+position:static;
+width:auto;
+height:auto;
+} 
