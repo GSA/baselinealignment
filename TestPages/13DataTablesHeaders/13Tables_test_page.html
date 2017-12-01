@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DrewPen</title>
+
+<link rel='stylesheet prefetch' href='https://www.w3schools.com/w3css/4/w3.css'>
+<link rel='stylesheet prefetch' href='https://www.w3schools.com/lib/w3-theme-black.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+  <title>Data Table Examples</title>
+<body>
+
+<!-- Navbar -->
+<div> id="skip"
+  <a class="element-invisible element-focusable" href="#dtExamples">Skip to Main Content</a>
+</div>
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Basic Tables (This Document)</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Trickery (Placeholder)</a>
+  </div>
+</div>  
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Contents</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Top</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Simple">Simple Tables</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#Irreg">Irregular Headers</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+</nav>  
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">  
+  <div class="w3-container w3-row w3-padding-32">
+  <h1 id="dtExamples">
+      Data Table Examples
+  </h1>
+  <p>
+    The tables below provide examples of accessible and non-accessible tables, for the purpose of facilitating accessibility test validation.
+  </p>
+  <p>
+    Most examples taken from W3.org WAI tutorials/examples
+  </p>
+  
+  <h2 id="Simple">
+  Simple Tables
+  </h2>
+  <h3>
+  Simple, Accessible - Column Headers
+  </h3>
+  <table>
+	<tr>
+		<th>Date</th>
+		<th>Event</th>
+		<th>Venue</th>
+	</tr>
+	<tr>
+		<td>12 February</td>
+		<td>Waltz with Strauss</td>
+		<td>Main Hall</td>
+	</tr>
+  <tr>
+    <td>10 December</td>
+    <td>Hermann and Stein</td>
+    <td>Washington Room</td>
+  </tr>
+  <tr>
+    <td>13 November</td>
+    <td>Your Company</td>
+    <td>Conference Center</td>
+  </tr>
+</table>
+  <h3>
+  Simple, Non-Accessible - Column Headers
+  </h3>
+  <table>
+	<tr style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">
+		<td>Date</td>
+		<td>Event</td>
+		<td>Venue</td>
+	</tr>
+	<tr>
+		<td>12 February</td>
+		<td>Waltz with Strauss</td>
+		<td>Main Hall</td>
+	</tr>
+  <tr>
+    <td>10 December</td>
+    <td>Hermann and Stein</td>
+    <td>Washington Room</td>
+  </tr>
+  <tr>
+    <td>13 November</td>
+    <td>Your Company</td>
+    <td>Conference Center</td>
+  </tr>
+</table>
+<h3>Simple, Accessible - Row Headers</h3>   
+<table>
+	<tr>
+		<th>Date</th>
+		<td>12 February</td>
+		<td>24 March</td>
+		<td>14 April</td>
+	</tr>
+	<tr>
+		<th>Event</th>
+		<td>Waltz with Strauss</td>
+		<td>The Obelisks</td>
+		<td>The What</td>
+	</tr>
+	<tr>
+		<th>Venue</th>
+		<td>Main Hall</td>
+		<td>West Wing</td>
+		<td>Main Hall</td>
+	</tr>
+</table>
+<h3>Simple, Non-Accessible - Row Headers</h3>
+<table>
+	<tr>
+		<td style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">Date</td>
+		<td>12 February</td>
+		<td>24 March</td>
+		<td>14 April</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">Event</td>
+		<td>Waltz with Strauss</td>
+		<td>The Obelisks</td>
+		<td>The What</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">Venue</td>
+		<td>Main Hall</td>
+		<td>West Wing</td>
+		<td>Main Hall</td>
+	</tr>
+</table>
+  <h2 id="Irreg">Irregular Headers</h2>
+  <h3>Row/Column Headers with <code>"scope="</code></h3>
+  <table>
+  <col>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="colgroup">Mars</th>
+    <th colspan="2" scope="colgroup">Venus</th>
+  </tr>
+  <tr>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+  </tr>
+  <tr>
+    <th scope="row">Teddy Bears</th>
+    <td>50,000</td>
+    <td>30,000</td>
+    <td>100,000</td>
+    <td>80,000</td>
+  </tr>
+  <tr>
+    <th scope="row">Board Games</th>
+    <td>10,000</td>
+    <td>5,000</td>
+    <td>12,000</td>
+    <td>9,000</td>
+  </tr>
+</table>
+  <h3>Row/Column Headers, <code><span>&ltth&gt</span></code> only (without <code>"scope"</code>)</h3>
+<table>
+  <col>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="colgroup">Mars</th>
+    <th colspan="2" scope="colgroup">Venus</th>
+  </tr>
+  <tr>
+    <th>Produced</th>
+    <th>Sold</th>
+    <th>Produced</th>
+    <th>Sold</th>
+  </tr>
+  <tr>
+    <th>Teddy Bears</th>
+    <td>50,000</td>
+    <td>30,000</td>
+    <td>100,000</td>
+    <td>80,000</td>
+  </tr>
+  <tr>
+    <th>Board Games</th>
+    <td>10,000</td>
+    <td>5,000</td>
+    <td>12,000</td>
+    <td>9,000</td>
+  </tr>
+</table>
+  </div>
+</div>
+</body>
+  
+  
+</body>
+</html>
