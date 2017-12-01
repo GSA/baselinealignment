@@ -29,7 +29,7 @@ For each sample test page or set of pages, provide the following information (ge
 14. Data Tables (cell-header association)
 15. [Headings](TestPages/15Headings/15Headings-TestPageDoc.md)
 16. Links and User controls
-17. Language
+17. [Language](TestPages/17Language/17Language-TestPageDoc.md)
 18. Audio (transcripts)
 19. Video (descriptions)
 20. Synchronized media (captions)
