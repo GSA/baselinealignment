@@ -6,6 +6,10 @@ h3 {
   padding-top: 16px;
 }
 
+td {
+  font-size:16px;
+}
+
 #tbright td, #tbright2 td {
   text-align: right;
 }
