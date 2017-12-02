@@ -1,18 +1,29 @@
 h2 {
   padding-top: 43px;
 }
+
+h3 {
+  padding-top: 16px;
+}
+
+#tbright td, #tbright2 td {
+  text-align: right;
+}
+
 table, th, td {
   font-family: calibri;
   border: 2px solid black;
   padding: 3px;
   border-collapse: collapse;
   }
+
 th {
   font-size: 20px;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   background-color: #ccc;
 }
+
 .w3-sidebar {
   z-index: 3;
   width: 250px;
@@ -20,7 +31,9 @@ th {
   bottom: 0;
   height: inherit;
 }
+
 .w3-main {top:43px;}
+
 #skip a {
 position:absolute;
 left:-10000px;
@@ -29,12 +42,25 @@ width:1px;
 height:1px;
 overflow:hidden;
 }
+
 #skip a:focus {
 position:static;
 width:auto;
 height:auto;
 } 
+
 a:focus {
   outline: #FF8F00 dotted thick !Important;
   outline-width: 2px !Important;
+}
+
+code {
+  background: #EFEBE9;
+  font-family: arial;
+}
+
+caption {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 700;
 }
