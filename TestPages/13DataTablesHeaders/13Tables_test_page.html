@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<!-- Navbar -->
+  <!-- Navbar -->
 
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
@@ -34,10 +34,10 @@
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Contents</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()" href="#">Top</a>
+  <a class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()" href="#">Top (Data Table Examples)</a>
   <a class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()" href="#Simple">Simple Tables</a>
   <a class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()" href="#Irreg">Irregular Headers</a>
-  <a class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" onclick="w3_close()" href="#Multi">Multi-Level</a>
 </nav>  
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -53,15 +53,11 @@
     The tables below provide examples of accessible and non-accessible tables, for the purpose of facilitating accessibility test validation.
   </p>
   <p>
-    Most examples taken from <a href="https://www.w3.org/WAI/tutorials/tables/">W3.org WAI tutorials/examples</a>
+    Most examples taken and modified from <a href="https://www.w3.org/WAI/tutorials/tables/">W3.org WAI tutorials/examples</a>
   </p>
   
-  <h2 id="Simple">
-  Simple Tables
-  </h2>
-  <h3>
-  Simple, Accessible - Column Headers
-  </h3>
+  <h2 id="Simple">Simple Tables</h2>
+  <h3>Simple, Accessible - Column Headers</h3>
   <table>
 	<tr>
 		<th>Date</th>
@@ -84,11 +80,9 @@
     <td>Conference Center</td>
   </tr>
 </table>
-  <h3>
-  Simple, Non-Accessible - Column Headers
-  </h3>
+  <h3>Simple, Non-Accessible - Column Headers</h3>
   <table>
-	<tr style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">
+	<tr style="font-size:20px;font-weight:700;background-color:#ccc">
 		<td>Date</td>
 		<td>Event</td>
 		<td>Venue</td>
@@ -133,26 +127,26 @@
 <h3>Simple, Non-Accessible - Row Headers</h3>
 <table>
 	<tr>
-		<td style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">Date</td>
+		<td style="font-size:20px;font-weight:700;background-color:#ccc">Date</td>
 		<td>12 February</td>
 		<td>24 March</td>
 		<td>14 April</td>
 	</tr>
 	<tr>
-		<td style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">Event</td>
+		<td style="font-size:20px;font-weight:700;background-color:#ccc">Event</td>
 		<td>Waltz with Strauss</td>
 		<td>The Obelisks</td>
 		<td>The What</td>
 	</tr>
 	<tr>
-		<td style="font-size:20px;font-weight:700;text-align:center;background-color:#ccc">Venue</td>
+		<td style="font-size:20px;font-weight:700;background-color:#ccc">Venue</td>
 		<td>Main Hall</td>
 		<td>West Wing</td>
 		<td>Main Hall</td>
 	</tr>
 </table>
   <h2 id="Irreg">Irregular Headers</h2>
-  <h3>Row/Column Headers with <code>"scope="</code></h3>
+  <h3>Row and Multiple Column Headers with <code>"scope="</code></h3>
   <table>
   <col>
   <colgroup span="2"></colgroup>
@@ -183,7 +177,7 @@
     <td>9,000</td>
   </tr>
 </table>
-  <h3>Row/Column Headers, <code><span>&ltth&gt</span></code> only (without <code>"scope"</code>)</h3>
+  <h3>Row and Multiple Column Headers, <code><span>&ltth&gt</span></code> only (without <code>"scope"</code>)</h3>
 <table>
   <col>
   <colgroup span="2"></colgroup>
@@ -214,6 +208,477 @@
     <td>9,000</td>
   </tr>
 </table>
+<h3>Column and Multiple Row Headers with <code>"scope="</code></h3>
+    <table>
+      <caption>
+        Poster availability
+      </caption>
+      <col>
+      <col>
+      <colgroup span="3"></colgroup>
+      <thead>
+        <tr>
+          <th scope="col">Poster name</th>
+          <th scope="col">Color</th>
+          <th colspan="3" scope="colgroup">Sizes available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3" scope="rowgroup">Zodiac</th>
+          <th scope="row">Full color</th>
+          <td>A2</td>
+          <td>A3</td>
+          <td>A4</td>
+        </tr>
+        <tr>
+          <th scope="row">Black and white</th>
+          <td>A1</td>
+          <td>A2</td>
+          <td>A3</td>
+        </tr>
+        <tr>
+          <th scope="row">Sepia</th>
+          <td>A3</td>
+          <td>A4</td>
+          <td>A5</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th rowspan="2" scope="rowgroup">Angels</th>
+          <th scope="row">Black and white</th>
+          <td>A1</td>
+          <td>A3</td>
+          <td>A4</td>
+        </tr>
+        <tr>
+          <th scope="row">Sepia</th>
+          <td>A2</td>
+          <td>A3</td>
+          <td>A5</td>
+        </tr>
+      </tbody>
+    </table>
+<h3>Column and Multiple Row Headers, <code>&ltth&gt</code> only (without <code>"scope="</code>)</h3>
+    <table>
+      <caption>
+        Poster availability
+      </caption>
+      <col>
+      <col>
+      <colgroup span="3"></colgroup>
+      <thead>
+        <tr>
+          <th>Poster name</th>
+          <th>Color</th>
+          <th colspan="3">Sizes available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Zodiac</th>
+          <th>Full color</th>
+          <td>A2</td>
+          <td>A3</td>
+          <td>A4</td>
+        </tr>
+        <tr>
+          <th>Black and white</th>
+          <td>A1</td>
+          <td>A2</td>
+          <td>A3</td>
+        </tr>
+        <tr>
+          <th>Sepia</th>
+          <td>A3</td>
+          <td>A4</td>
+          <td>A5</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th rowspan="2">Angels</th>
+          <th>Black and white</th>
+          <td>A1</td>
+          <td>A3</td>
+          <td>A4</td>
+        </tr>
+        <tr>
+          <th>Sepia</th>
+          <td>A2</td>
+          <td>A3</td>
+          <td>A5</td>
+        </tr>
+      </tbody>
+    </table>
+<h2 id="Multi">Multiple Level Headers</h2>
+    <h3>With multiple headers in one column, using <code>id=</code> and <code>headers=</code>
+      <table>
+        <caption>
+          Supplier contacts
+        </caption>
+        <tr>
+          <td id="blank">&nbsp;</td>
+          <th id="ex1" headers="blank">Example 1 Ltd</th>
+          <th id="ex2" headers="blank">Example 2 Co</th>
+        </tr>
+        <tr>
+          <th id="c1" headers="blank">Contact</th>
+          <td headers="ex1 c1">James Phillips</td>
+          <td headers="ex2 c1">Marie Beauchamp</td>
+        </tr>
+        <tr>
+          <th id="p1"  headers="blank">Position</th>
+          <td headers="ex1 p1">Sales Director</td>
+          <td headers="ex2 p1">Sales Manager</td>
+        </tr>
+        <tr>
+          <th id="e1"  headers="blank">Email</th>
+          <td headers="ex1 e1">jp@1ltd.example.com</td>
+          <td headers="ex2 e1">marie@2co.example.com</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <th id="ex3" headers="blank">Example 3 Ltd</th>
+          <th id="ex4" headers="blank">Example 4 Inc</th>
+        </tr>
+        <tr>
+          <th id="c2"  headers="blank">Contact</th>
+          <td headers="ex3 c2">Suzette Jones</td>
+          <td headers="ex4 c2">Alex Howe</td>
+        </tr>
+        <tr>
+          <th id="p2" headers="blank">Position</th>
+          <td headers="ex3 p2">Sales Officer</td>
+          <td headers="ex4 p2">Sales Director</td>
+        </tr>
+        <tr>
+          <th id="e2" headers="blank">Email</th>
+          <td headers="ex3 e2">Suz@ltd3.example.com</td>
+          <td headers="ex4 e2">howe@4inc.example.com</td>
+        </tr>
+      </table>
+    <h3>With multiple headers in one column, WITHOUT <code>id=</code> and <code>headers=</code>
+      <table>
+        <caption>
+          Supplier contacts
+        </caption>
+        <tr>
+          <td>&nbsp;</td>
+          <th>Example 1 Ltd</th>
+          <th>Example 2 Co</th>
+        </tr>
+        <tr>
+          <th>Contact</th>
+          <td>James Phillips</td>
+          <td>Marie Beauchamp</td>
+        </tr>
+        <tr>
+          <th>Position</th>
+          <td>Sales Director</td>
+          <td>Sales Manager</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>jp@1ltd.example.com</td>
+          <td>marie@2co.example.com</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <th>Example 3 Ltd</th>
+          <th>Example 4 Inc</th>
+        </tr>
+        <tr>
+          <th>Contact</th>
+          <td>Suzette Jones</td>
+          <td>Alex Howe</td>
+        </tr>
+        <tr>
+          <th>Position</th>
+          <td>Sales Officer</td>
+          <td>Sales Director</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>Suz@ltd3.example.com</td>
+          <td>howe@4inc.example.com</td>
+        </tr>
+      </table>
+    <h3>With three headers per cell, using <code>id=</code> and <code>headers=</code>
+      <table id="tbright"summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+        <caption>
+            Holiday accommodation availability
+        </caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th id="stud" scope="col">
+                    Studio
+                </th>
+                <th id="apt" scope="col">
+                    <abbr title="Apartment">Apt</abbr>
+                </th>
+                <th id="chal" scope="col">
+                    Chalet
+                </th>
+                <th id="villa" scope="col">
+                    Villa
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th id="par" class="span" colspan="5" scope="colgroup">
+                    Paris
+                </th>
+            </tr>
+            <tr>
+                <th headers="par" id="pbed1">
+                    1 bedroom
+                </th>
+                <td headers="par pbed1 stud">
+                    11
+                </td>
+                <td headers="par pbed1 apt">
+                    20
+                </td>
+                <td headers="par pbed1 chal">
+                    25
+                </td>
+                <td headers="par pbed1 villa">
+                    23
+                </td>
+            </tr>
+            <tr>
+                <th headers="par" id="pbed2">
+                    2 bedroom
+                </th>
+                <td headers="par pbed2 stud">
+                    NA
+                </td>
+                <td headers="par pbed2 apt">
+                    43
+                </td>
+                <td headers="par pbed2 chal">
+                    52
+                </td>
+                <td headers="par pbed2 villa">
+                    32
+                </td>
+            </tr>
+            <tr>
+                <th headers="par" id="pbed3">
+                    3 bedroom
+                </th>
+                <td headers="par pbed3 stud">
+                    NA
+                </td>
+                <td headers="par pbed3 apt">
+                    13
+                </td>
+                <td headers="par pbed3 chal">
+                    15
+                </td>
+                <td headers="par pbed3 villa">
+                    40
+                </td>
+            </tr>
+            <tr>
+                <th id="rome" class="span" colspan="5" scope="colgroup">
+                    Rome
+                </th>
+            </tr>
+            <tr>
+                <th id="rbed1" headers="rome">
+                    1 bedroom
+                </th>
+                <td headers="rome rbed1 stud">
+                    13
+                </td>
+                <td headers="rome rbed1 apt">
+                    21
+                </td>
+                <td headers="rome rbed1 chal">
+                    22
+                </td>
+                <td headers="rome rbed1 villa">
+                    3
+                </td>
+            </tr>
+            <tr>
+                <th id="rbed2" headers="rome">
+                    2 bedroom
+                </th>
+                <td headers="rome rbed2 stud">
+                    NA
+                </td>
+                <td headers="rome rbed2 apt">
+                    23
+                </td>
+                <td headers="rome rbed2 chal">
+                    43
+                </td>
+                <td headers="rome rbed2 villa">
+                    30
+                </td>
+            </tr>
+            <tr>
+                <th id="rbed3" headers="rome">
+                    3 bedroom
+                </th>
+                <td headers="rome rbed3 stud">
+                    NA
+                </td>
+                <td headers="rome rbed3 apt">
+                    16
+                </td>
+                <td headers="rome rbed3 chal">
+                    32
+                </td>
+                <td headers="rome rbed3 villa">
+                    40
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    <h3>With three headers per cell, WITHOUT <code>id=</code> and <code>headers=</code>
+      <table id="tbright2"summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+        <caption>
+            Holiday accommodation availability
+        </caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th>
+                    Studio
+                </th>
+                <th>
+                    <abbr title="Apartment">Apt</abbr>
+                </th>
+                <th>
+                    Chalet
+                </th>
+                <th>
+                    Villa
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="5">
+                    Paris
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    1 bedroom
+                </th>
+                <td>
+                    11
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    25
+                </td>
+                <td>
+                    23
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    2 bedroom
+                </th>
+                <td>
+                    NA
+                </td>
+                <td>
+                    43
+                </td>
+                <td>
+                    52
+                </td>
+                <td>
+                    32
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    3 bedroom
+                </th>
+                <td>
+                    NA
+                </td>
+                <td>
+                    13
+                </td>
+                <td>
+                    15
+                </td>
+                <td>
+                    40
+                </td>
+            </tr>
+            <tr>
+                <th colspan="5">
+                    Rome
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    1 bedroom
+                </th>
+                <td>
+                    13
+                </td>
+                <td>
+                    21
+                </td>
+                <td>
+                    22
+                </td>
+                <td>
+                    3
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    2 bedroom
+                </th>
+                <td>
+                    NA
+                </td>
+                <td>
+                    23
+                </td>
+                <td>
+                    43
+                </td>
+                <td>
+                    30
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    3 bedroom
+                </th>
+                <td>
+                    NA
+                </td>
+                <td>
+                    16
+                </td>
+                <td>
+                    32
+                </td>
+                <td>
+                    40
+                </td>
+            </tr>
+        </tbody>
+        </table>
   </div>
 </div>
   
