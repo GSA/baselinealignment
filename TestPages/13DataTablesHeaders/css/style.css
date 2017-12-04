@@ -1,9 +1,15 @@
 h2 {
-  padding-top: 43px;
+  margin: 0px 0px;
+  background-color: #E0E0E0;
+  position: sticky;
+  top: 43px;
 }
 
 h3 {
-  padding-top: 16px;
+  margin: 16px 0px;
+  background-color: #ECEFF1;
+  position: sticky;
+  top: 83px;
 }
 
 td {
@@ -25,7 +31,7 @@ th {
   font-size: 20px;
   font-weight: 700;
   text-align: left;
-  background-color: #ccc;
+  background-color: #E3F2FD;
 }
 
 .w3-sidebar {
@@ -35,8 +41,6 @@ th {
   bottom: 0;
   height: inherit;
 }
-
-.w3-main {top:43px;}
 
 #skip a {
 position:absolute;
@@ -54,17 +58,23 @@ height:auto;
 } 
 
 a:focus {
-  outline: #FF8F00 dotted thick !Important;
-  outline-width: 2px !Important;
+  outline: dotted thick !Important;
+  outline-color: invert !Important;
+  outline-offset: -1px !Important;
 }
 
 code {
-  background: #EFEBE9;
-  font-family: arial;
+  background: #FAFAFA;
+  font-family: Courier, monospace;
+  border: dotted thin
 }
 
 caption {
   text-align: left;
   font-size: 20px;
   font-weight: 700;
+}
+strong {
+  text-transform: uppercase;
+  text-weight: bold;
 }
