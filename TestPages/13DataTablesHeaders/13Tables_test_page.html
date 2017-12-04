@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<!-- Navbar -->
+  <!-- Navbar -->
 <nav>
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
@@ -60,7 +60,7 @@
     </p>
   
 <h2 id="Simple">Simple Tables</h2>
-  <h3>Simple, Accessible - Column Headers</h3>
+  <h3>Simple, Column Headers, <code>th</code> only</h3>
     <table>
       <tr>
         <th>Date</th>
@@ -84,7 +84,7 @@
       </tr>
     </table>
 
-<h3>Simple, Non-Accessible - Column Headers</h3>
+    <h3>Simple, Column Headers, no <code>th</code> or <code>scope</code></h3>
     <table>
       <tr style="font-size:20px;font-weight:700;background-color:#E3F2FD">
         <td>Date</td>
@@ -108,7 +108,7 @@
       </tr>
     </table>
 
-<h3>Simple, Accessible - Row Headers</h3>   
+<h3>Simple, Row Headers, <code>th</code> only</h3>   
   <table>
     <tr>
       <th>Date</th>
@@ -130,7 +130,8 @@
     </tr>
   </table>
 
-<h3>Simple, Non-Accessible - Row Headers</h3>
+<h3>Simple, Row Headers, no <code>th</code> or <code>scope</code></h3>
+    
   <table>
     <tr>
       <td style="font-size:20px;font-weight:700;background-color:#E3F2FD">Date</td>
@@ -150,7 +151,7 @@
       <td>West Wing</td>
       <td>Main Hall</td>
     </tr>
-  </table>
+    </table></br>
     
 <h2 id="Irreg">Irregular Headers</h2>
   <h3>Row and Multiple Column Headers with <code>"scope="</code></h3>
@@ -315,7 +316,7 @@
           <td>A5</td>
         </tr>
       </tbody>
-    </table>
+  </table></br>
 
 <h2 id="Multi">Multiple Level Headers</h2>
     <h3>With multiple headers in one column, using <code>id=</code> and <code>headers=</code></h3>
@@ -679,6 +680,139 @@
                     32
                 </td>
                 <td>
+                    40
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    <h3>With three headers per cell, using <code>id=</code> <strong>AND</strong> <code>headers=</code> <strong>AND</strong> <code>scope=</code></h3>
+      <table class="tbright">
+        <caption>
+            Holiday accommodation availability
+        </caption>
+        <thead>
+            <tr>
+                <td colspan="2"></td>
+                <th id="stud" scope="col">
+                    Studio
+                </th>
+                <th id="apt" scope="col">
+                    <abbr title="Apartment">Apt</abbr>
+                </th>
+                <th id="chal" scope="col">
+                    Chalet
+                </th>
+                <th id="villa" scope="col">
+                    Villa
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th id="par" class="span" rowspan="3" scope="rowgroup">
+                    Paris
+                </th>
+               <th headers="par" id="pbed1" scope="col">
+                    1 bedroom
+                </th>
+                <td headers="par pbed1 stud">
+                    11
+                </td>
+                <td headers="par pbed1 apt">
+                    20
+                </td>
+                <td headers="par pbed1 chal">
+                    25
+                </td>
+                <td headers="par pbed1 villa">
+                    23
+                </td>
+            </tr>
+            <tr>
+                <th headers="par" id="pbed2" scope="col">
+                    2 bedroom
+                </th>
+                <td headers="par pbed2 stud">
+                    NA
+                </td>
+                <td headers="par pbed2 apt">
+                    43
+                </td>
+                <td headers="par pbed2 chal">
+                    52
+                </td>
+                <td headers="par pbed2 villa">
+                    32
+                </td>
+            </tr>
+            <tr>
+                <th headers="par" id="pbed3" scope="col">
+                    3 bedroom
+                </th>
+                <td headers="par pbed3 stud">
+                    NA
+                </td>
+                <td headers="par pbed3 apt">
+                    13
+                </td>
+                <td headers="par pbed3 chal">
+                    15
+                </td>
+                <td headers="par pbed3 villa">
+                    40
+                </td>
+            </tr>
+            <tr>
+                <th id="rome" class="span" rowspan="3" scope="rowgroup">
+                    Rome
+                </th>
+                <th id="rbed1" headers="rome" scope="col">
+                    1 bedroom
+                </th>
+                <td headers="rome rbed1 stud">
+                    13
+                </td>
+                <td headers="rome rbed1 apt">
+                    21
+                </td>
+                <td headers="rome rbed1 chal">
+                    22
+                </td>
+                <td headers="rome rbed1 villa">
+                    3
+                </td>
+            </tr>
+            <tr>
+                <th id="rbed2" headers="rome" scope="col">
+                    2 bedroom
+                </th>
+                <td headers="rome rbed2 stud">
+                    NA
+                </td>
+                <td headers="rome rbed2 apt">
+                    23
+                </td>
+                <td headers="rome rbed2 chal">
+                    43
+                </td>
+                <td headers="rome rbed2 villa">
+                    30
+                </td>
+            </tr>
+            <tr>
+                <th id="rbed3" headers="rome" scope="col">
+                    3 bedroom
+                </th>
+                <td headers="rome rbed3 stud">
+                    NA
+                </td>
+                <td headers="rome rbed3 apt">
+                    16
+                </td>
+                <td headers="rome rbed3 chal">
+                    32
+                </td>
+                <td headers="rome rbed3 villa">
                     40
                 </td>
             </tr>
