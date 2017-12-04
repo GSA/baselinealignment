@@ -16,16 +16,17 @@
 </head>
 
 <body>
-  <!-- Navbar -->
+<!-- Navbar -->
 <nav>
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
 <div id="skip"> 
   <a class="element-invisible element-focusable" href="#dtExamples">Skip to Main Content</a>
 </div>
+
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Basic Tables (This Document)</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Trickery (Placeholder)</a>
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Open Contents Navigation"><i class="fa fa-bars"></i></a>
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()" aria-label="Open Contents Navigation"><i class="fa fa-bars"></i></a>
   </div>
 </div>
 </nav>
@@ -154,9 +155,6 @@
 <h2 id="Irreg">Irregular Headers</h2>
   <h3>Row and Multiple Column Headers with <code>"scope="</code></h3>
     <table class="tbright">
-      <col>
-      <colgroup span="2"></colgroup>
-      <colgroup span="2"></colgroup>
       <tr>
         <td rowspan="2"></td>
         <th colspan="2" scope="colgroup">Mars</th>
@@ -330,41 +328,41 @@
         </caption>
         <tr>
           <td id="blank">&nbsp;</td>
-          <th id="ex1" headers="blank">Example 1 Ltd</th>
-          <th id="ex2" headers="blank">Example 2 Co</th>
+          <th id="ex1">Example 1 Ltd</th>
+          <th id="ex2">Example 2 Co</th>
         </tr>
         <tr>
-          <th id="c1" headers="blank">Contact</th>
+          <th id="c1">Contact</th>
           <td headers="ex1 c1">James Phillips</td>
           <td headers="ex2 c1">Marie Beauchamp</td>
         </tr>
         <tr>
-          <th id="p1"  headers="blank">Position</th>
+          <th id="p1">Position</th>
           <td headers="ex1 p1">Sales Director</td>
           <td headers="ex2 p1">Sales Manager</td>
         </tr>
         <tr>
-          <th id="e1"  headers="blank">Email</th>
+          <th id="e1">Email</th>
           <td headers="ex1 e1">jp@1ltd.example.com</td>
           <td headers="ex2 e1">marie@2co.example.com</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
-          <th id="ex3" headers="blank">Example 3 Ltd</th>
-          <th id="ex4" headers="blank">Example 4 Inc</th>
+          <th id="ex3">Example 3 Ltd</th>
+          <th id="ex4">Example 4 Inc</th>
         </tr>
         <tr>
-          <th id="c2"  headers="blank">Contact</th>
+          <th id="c2">Contact</th>
           <td headers="ex3 c2">Suzette Jones</td>
           <td headers="ex4 c2">Alex Howe</td>
         </tr>
         <tr>
-          <th id="p2" headers="blank">Position</th>
+          <th id="p2">Position</th>
           <td headers="ex3 p2">Sales Officer</td>
           <td headers="ex4 p2">Sales Director</td>
         </tr>
         <tr>
-          <th id="e2" headers="blank">Email</th>
+          <th id="e2">Email</th>
           <td headers="ex3 e2">Suz@ltd3.example.com</td>
           <td headers="ex4 e2">howe@4inc.example.com</td>
         </tr>
@@ -416,30 +414,30 @@
         </tr>
       </table>
     <h3>With three headers per cell, using <code>id=</code> and <code>headers=</code></h3>
-      <table class="tbright" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+      <table class="tbright" aria-label="Column one has the location and size of accommodation, other columns show the type and number of properties available">
         <caption>
             Holiday accommodation availability
         </caption>
         <thead>
             <tr>
                 <td></td>
-                <th id="stud" scope="col">
+                <th id="stud">
                     Studio
                 </th>
-                <th id="apt" scope="col">
+                <th id="apt">
                     <abbr title="Apartment">Apt</abbr>
                 </th>
-                <th id="chal" scope="col">
+                <th id="chal">
                     Chalet
                 </th>
-                <th id="villa" scope="col">
+                <th id="villa">
                     Villa
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th id="par" class="span" colspan="5" scope="colgroup">
+                <th id="par" class="span" colspan="5">
                     Paris
                 </th>
             </tr>
@@ -495,7 +493,7 @@
                 </td>
             </tr>
             <tr>
-                <th id="rome" class="span" colspan="5" scope="colgroup">
+                <th id="rome" class="span" colspan="5">
                     Rome
                 </th>
             </tr>
@@ -553,7 +551,7 @@
         </tbody>
         </table>
     <h3>With three headers per cell, <strong>without</strong> <code>id=</code> and <code>headers=</code></h3>
-      <table class="tbright" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+      <table class="tbright" aria-label="Column one has the location and size of accommodation, other columns show the type and number of properties available">
         <caption>
             Holiday accommodation availability
         </caption>
