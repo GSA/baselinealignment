@@ -25,8 +25,8 @@ For each sample test page or set of pages, provide the following information (ge
 10. *Flashing (reserved)*
 11. Forms (associated instructions)
 12. Page Titles
-13. [Data Tables (headers)](TestPages/13DataTablesHeaders/13Tables_test_page.html)
-14. Data Tables (cell-header association)
+13. [Data Tables](TestPages/13DataTablesHeaders/13Tables_test_page.html)
+14. *Data Tables (cell-header association) - **removed and combined with 13***
 15. [Headings](TestPages/15Headings/15Headings-TestPageDoc.md)
 16. Links and User controls
 17. [Language](TestPages/17Language/17Language-TestPageDoc.md)
