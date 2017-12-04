@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Data Table Examples</title>
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
 <link rel='stylesheet prefetch' href='https://www.w3schools.com/w3css/4/w3.css'>
 <link rel='stylesheet prefetch' href='https://www.w3schools.com/lib/w3-theme-black.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto'>
@@ -16,7 +17,7 @@
 
 <body>
   <!-- Navbar -->
-
+<nav>
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
 <div id="skip"> 
@@ -26,7 +27,8 @@
     <a href="#" class="w3-bar-item w3-button w3-theme-l1">Basic Tables (This Document)</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Trickery (Placeholder)</a>
   </div>
-</div>  
+</div>
+</nav>
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
@@ -44,111 +46,114 @@
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<main>
 <div class="w3-main" style="margin-left:250px">  
   <div class="w3-container w3-row w3-padding-32">
-  <h1 id="dtExamples">
-      Data Table Examples
-  </h1>
-  <p>
-    The tables below provide examples of accessible and non-accessible tables, for the purpose of facilitating accessibility test validation.
-  </p>
-  <p>
-    Most examples taken and modified from <a href="https://www.w3.org/WAI/tutorials/tables/">W3.org WAI tutorials/examples</a>
-  </p>
+
+<h1 id="dtExamples">Data Table Examples</h1>
+    <p>
+      The tables below provide examples of accessible and non-accessible tables, for the purpose of facilitating accessibility test validation.
+    </p>
+    <p>
+      Most examples taken and modified from <a href="https://www.w3.org/WAI/tutorials/tables/">W3.org WAI tutorials/examples</a>
+    </p>
   
-  <h2 id="Simple">Simple Tables</h2>
+<h2 id="Simple">Simple Tables</h2>
   <h3>Simple, Accessible - Column Headers</h3>
-  <table>
-	<tr>
-		<th>Date</th>
-		<th>Event</th>
-		<th>Venue</th>
-	</tr>
-	<tr>
-		<td>12 February</td>
-		<td>Waltz with Strauss</td>
-		<td>Main Hall</td>
-	</tr>
-  <tr>
-    <td>10 December</td>
-    <td>Hermann and Stein</td>
-    <td>Washington Room</td>
-  </tr>
-  <tr>
-    <td>13 November</td>
-    <td>Your Company</td>
-    <td>Conference Center</td>
-  </tr>
-</table>
-  <h3>Simple, Non-Accessible - Column Headers</h3>
-  <table>
-	<tr style="font-size:20px;font-weight:700;background-color:#ccc">
-		<td>Date</td>
-		<td>Event</td>
-		<td>Venue</td>
-	</tr>
-	<tr>
-		<td>12 February</td>
-		<td>Waltz with Strauss</td>
-		<td>Main Hall</td>
-	</tr>
-  <tr>
-    <td>10 December</td>
-    <td>Hermann and Stein</td>
-    <td>Washington Room</td>
-  </tr>
-  <tr>
-    <td>13 November</td>
-    <td>Your Company</td>
-    <td>Conference Center</td>
-  </tr>
-</table>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Event</th>
+        <th>Venue</th>
+      </tr>
+      <tr>
+        <td>12 February</td>
+        <td>Waltz with Strauss</td>
+        <td>Main Hall</td>
+      </tr>
+      <tr>
+        <td>10 December</td>
+        <td>Hermann and Stein</td>
+        <td>Washington Room</td>
+      </tr>
+      <tr>
+        <td>13 November</td>
+        <td>Your Company</td>
+        <td>Conference Center</td>
+      </tr>
+    </table>
+
+<h3>Simple, Non-Accessible - Column Headers</h3>
+    <table>
+      <tr style="font-size:20px;font-weight:700;background-color:#E3F2FD">
+        <td>Date</td>
+        <td>Event</td>
+        <td>Venue</td>
+      </tr>
+      <tr>
+        <td>12 February</td>
+        <td>Waltz with Strauss</td>
+        <td>Main Hall</td>
+      </tr>
+      <tr>
+        <td>10 December</td>
+        <td>Hermann and Stein</td>
+        <td>Washington Room</td>
+      </tr>
+      <tr>
+        <td>13 November</td>
+        <td>Your Company</td>
+        <td>Conference Center</td>
+      </tr>
+    </table>
+
 <h3>Simple, Accessible - Row Headers</h3>   
-<table>
-	<tr>
-		<th>Date</th>
-		<td>12 February</td>
-		<td>24 March</td>
-		<td>14 April</td>
-	</tr>
-	<tr>
-		<th>Event</th>
-		<td>Waltz with Strauss</td>
-		<td>The Obelisks</td>
-		<td>The What</td>
-	</tr>
-	<tr>
-		<th>Venue</th>
-		<td>Main Hall</td>
-		<td>West Wing</td>
-		<td>Main Hall</td>
-	</tr>
-</table>
+  <table>
+    <tr>
+      <th>Date</th>
+      <td>12 February</td>
+      <td>24 March</td>
+      <td>14 April</td>
+    </tr>
+    <tr>
+      <th>Event</th>
+      <td>Waltz with Strauss</td>
+      <td>The Obelisks</td>
+      <td>The What</td>
+    </tr>
+    <tr>
+      <th>Venue</th>
+      <td>Main Hall</td>
+      <td>West Wing</td>
+      <td>Main Hall</td>
+    </tr>
+  </table>
+
 <h3>Simple, Non-Accessible - Row Headers</h3>
-<table>
-	<tr>
-		<td style="font-size:20px;font-weight:700;background-color:#ccc">Date</td>
-		<td>12 February</td>
-		<td>24 March</td>
-		<td>14 April</td>
-	</tr>
-	<tr>
-		<td style="font-size:20px;font-weight:700;background-color:#ccc">Event</td>
-		<td>Waltz with Strauss</td>
-		<td>The Obelisks</td>
-		<td>The What</td>
-	</tr>
-	<tr>
-		<td style="font-size:20px;font-weight:700;background-color:#ccc">Venue</td>
-		<td>Main Hall</td>
-		<td>West Wing</td>
-		<td>Main Hall</td>
-	</tr>
-</table>
+  <table>
+    <tr>
+      <td style="font-size:20px;font-weight:700;background-color:#E3F2FD">Date</td>
+      <td>12 February</td>
+      <td>24 March</td>
+      <td>14 April</td>
+    </tr>
+    <tr>
+      <td style="font-size:20px;font-weight:700;background-color:#E3F2FD">Event</td>
+      <td>Waltz with Strauss</td>
+      <td>The Obelisks</td>
+      <td>The What</td>
+    </tr>
+    <tr>
+      <td style="font-size:20px;font-weight:700;background-color:#E3F2FD">Venue</td>
+      <td>Main Hall</td>
+      <td>West Wing</td>
+      <td>Main Hall</td>
+    </tr>
+  </table>
     
-  <h2 id="Irreg">Irregular Headers</h2>
+<h2 id="Irreg">Irregular Headers</h2>
   <h3>Row and Multiple Column Headers with <code>"scope="</code></h3>
-      <table class="tbright">
+    <table class="tbright">
       <col>
       <colgroup span="2"></colgroup>
       <colgroup span="2"></colgroup>
@@ -178,7 +183,8 @@
         <td>9,000</td>
       </tr>
     </table>
-  <h3>Row and Multiple Column Headers, <code><span>&ltth&gt</span></code> only (without <code>"scope"</code>)</h3>
+
+<h3>Row and Multiple Column Headers, <code><span>&ltth&gt</span></code> <strong>only</strong> (without <code>"scope"</code>)</h3>
     <table class="tbright">
       <col>
       <colgroup span="2"></colgroup>
@@ -209,6 +215,7 @@
         <td>9,000</td>
       </tr>
     </table>
+
 <h3>Column and Multiple Row Headers with <code>"scope="</code></h3>
     <table class="tbright">
       <caption>
@@ -261,7 +268,8 @@
         </tr>
       </tbody>
     </table>
-<h3>Column and Multiple Row Headers, <code>&ltth&gt</code> only (without <code>"scope="</code>)</h3>
+
+<h3>Column and Multiple Row Headers, <code>&ltth&gt</code> <strong>only</strong> (without <code>"scope="</code>)</h3>
     <table class="tbright">
       <caption>
         Poster availability
@@ -313,8 +321,9 @@
         </tr>
       </tbody>
     </table>
+
 <h2 id="Multi">Multiple Level Headers</h2>
-    <h3>With multiple headers in one column, using <code>id=</code> and <code>headers=</code>
+    <h3>With multiple headers in one column, using <code>id=</code> and <code>headers=</code></h3>
       <table>
         <caption>
           Supplier contacts
@@ -360,7 +369,7 @@
           <td headers="ex4 e2">howe@4inc.example.com</td>
         </tr>
       </table>
-    <h3>With multiple headers in one column, WITHOUT <code>id=</code> and <code>headers=</code>
+    <h3>With multiple headers in one column, <strong>without</strong> <code>id=</code> and <code>headers=</code></h3>
       <table>
         <caption>
           Supplier contacts
@@ -406,7 +415,7 @@
           <td>howe@4inc.example.com</td>
         </tr>
       </table>
-    <h3>With three headers per cell, using <code>id=</code> and <code>headers=</code>
+    <h3>With three headers per cell, using <code>id=</code> and <code>headers=</code></h3>
       <table class="tbright" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
         <caption>
             Holiday accommodation availability
@@ -543,7 +552,7 @@
             </tr>
         </tbody>
         </table>
-    <h3>With three headers per cell, WITHOUT <code>id=</code> and <code>headers=</code>
+    <h3>With three headers per cell, <strong>without</strong> <code>id=</code> and <code>headers=</code></h3>
       <table class="tbright" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
         <caption>
             Holiday accommodation availability
@@ -682,6 +691,7 @@
         </table>
   </div>
 </div>
+</main>
   
     <script  src="js/index.js"></script>
 
