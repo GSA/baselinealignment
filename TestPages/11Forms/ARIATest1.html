@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+	 <TITLE>Testing sandbox</TITLE>	 
+<META charset="UTF-8"> 	 
+<STYLE>
+
+body {
+	background-color:lightblue;
+	color: Black;
+	font-family:Georgia;
+	background-image: url("mtn3.jpg");
+     	background-repeat: no-repeat;
+	font-size:18px;}
+
+h1 {
+	background-color: none;
+	border: 1px dashed black;
+   	text-align:center;
+	color: MidnightBlue;
+	padding: inherit;
+	font-family: verdana;
+	font-size: 35px;}
+h2 {
+	background-color: none;
+	color: snow;
+	padding: none;
+	font-family: verdana;
+	font-size: 20px;}
+h3 {
+	background-color: inherit;
+	color: snow;
+	padding: none;
+	font-family: verdana;
+	font-size: 18px}
+
+</STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<H1>Testing playground!</H1>
+<H2 style="color: black;"> Input Field: label for/id with ARIA labelled 
+by</H2><SPAN id="insertname" for="insertname" label="">Name <INPUT id="insertname" aria-labelledby="insertname" type="text" size="55"> 
+<H3> Inspect Results: </H3>
+<P style="color: snow;" ;=""> Name:"" <BR>Role: editable text <BR>State:focused, 
+focusable <BR>AriaRole: None <BR>AriaProperties: labelledby=insertname </P>
+<HR>
+
+<H2 style="color: black;"> This is an input field with label for/id with ARIA 
+labelledby and incorrect aria role="checkbox" and aria-disabled=true</H2><SPAN 
+id="favanimal" for="favanimal" label="">What is your favorite animal? <INPUT id="faveanimal" role="checkbox" aria-disabled="true" aria-labelledby="favanimal" type="text" size="55"> 
+<H3> Inspect Results: </H3>
+<P style="color: snow;" ;=""> Name:"" <BR>Role: checkbox <BR>State:unavialable, 
+focused, focusable <BR>AriaRole: checkbox <BR>AriaProperties: 
+labelledby=favanimal, disabled=true </P>
+<HR>
+
+<H2 style="color: black;"> Dropdown: with label for/id, ARIA Labelled by and 
+aria-expanded</H2>
+<FORM><LABEL for="favday">Select your favorite day: <SELECT name="favday" id="favday" 
+aria-expanded="true" aria-labelledby="favday"><OPTION 
+  value="Monday">Monday</OPTION> <OPTION value="Tuesday">Tuesday</OPTION>   
+  <OPTION value="Wednesday">Wednesday</OPTION>    <OPTION 
+  value="Thusrday">Thursday</OPTION>   <OPTION value="Friday">Friday</OPTION>    
+  <OPTION value="Saturday">Saturday</OPTION>    <OPTION 
+  value="Sunday">Sunday</OPTION> </SELECT> 
+<H3> Inspect Results: </H3>
+<P style="color: snow;" ;=""> Name:Monday, Tuesday....Sunday <BR>Role: combobox 
+<BR>State:focused,expanded, collpased, focusable <BR>AriaRole: expanded=true, 
+labelledby=favday <BR>AriaProperties: None </P>
+<HR>
+
+<H2 style="color: black;" ;=""> Checkbox: ARIA role="checkbox" 
+arai-checked=false, aria-setsize=4 aria-posinet=1</H2>
+<FORM>
+<DIV class="group">
+<DIV class="legend" id="gd" style="color: white;">Is today a good day for a good 
+day?</DIV><BR>
+<DIV class="text">
+<DIV id="yes!" style="color: white;">Yes!</DIV><INPUT tabindex="0" role="checkbox" 
+aria-checked="false" aria-posinset="1" aria-setsize="4" aria-labelledby="yes! gd" 
+type="checkbox"></DIV>
+<DIV class="text">
+<DIV id="no" style="color: white;">No!</DIV><INPUT tabindex="0" role="checkbox" 
+aria-checked="false" aria-posinset="1" aria-setsize="4" aria-labelledby="no gd" 
+type="checkbox"> </DIV></DIV></FORM>
+<H3> Inspect Results: </H3>
+<P style="color: snow;" ;=""> Name:"" <BR>Role: check box <BR>State:focused, 
+checked, focusable <BR>AriaRole: checkbox <BR>AriaProperties: labelledby=yes!, 
+checked=False, posinet=1, setsize=4 </P>
+<HR>
+
+<H2>Textarea: ARIA Labelledby, aria-multiline=true aria-placeholder=enter any 
+text here")</H2><SPAN id="thoughts*" style="color: snow;">Thoughts*</SPAN>       
+       
+<DIV role="textbox" aria-required="true" aria-labelledby="thoughts*" style="color: snow;" 
+contenteditable="" aria-multiline="true" 
+aria-placeholder="Enter any text here">Enter any text here</DIV>
+<H3> Inspect Results: </H3>
+<P style="color: snow;" ;=""> Name:Select your favorite day...(all the text on 
+the page)-weird-<BR>Role: editable text <BR>State: focused, focusable, alert low 
+<BR>AriaRole: textbox <BR>AriaProperties: labelledby=thoughts, multiline=true, 
+required=true </P>
+<HR>
+
+<H2> Button with pop up box</H2><BUTTON onclick="alert('The mightiest oak in the forest is just a little nut that held its ground.')" 
+type="button">Click for Inspiration!</BUTTON> 
+<HR>
+
+<H2>This is an example of an accessible image</H2><IMG alt="Status of Atlas, the man, holding the world on his shoulders." 
+src="file:///Y:/webpage/atlas.jpg"> </LABEL></FORM></SPAN></SPAN></BODY></HTML>
