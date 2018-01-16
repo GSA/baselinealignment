@@ -2,6 +2,7 @@
 ## Brief description of test sample
 
 ## Index of files/pages to be tested with URLs or relative file links/locations
+* [ARIA Test Page 1](ARIATest1.html)
 
 ## Test rule(s) to be validated
 
