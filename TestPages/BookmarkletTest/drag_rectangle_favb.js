@@ -1,4 +1,4 @@
-// function on() {
+(function () {
 	var add_div = document.createElement('div');
 	add_div.setAttribute('id', 'mydiv');
     add_div.style.position = "absolute";
@@ -54,4 +54,4 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-// }
+})();
