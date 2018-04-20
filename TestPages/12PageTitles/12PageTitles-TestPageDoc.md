@@ -3,6 +3,7 @@
 
 ## Index of files/pages to be tested with URLs or relative file links/locations
 * [Multiple Titles](MultipleTitles.html)
+* [`<title>` not in `<head>`](TitleNotInHead.html)
 
 ## Test rule(s) to be validated
 
