@@ -3,6 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Grid Example</title>
+  <style>
+    [role="gridcell"], [role="columnheader"] {
+      display: inline-block;
+      width: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    [role="columnheader"] {
+      background-color: skyblue;
+    }
+
+    [role="gridcell"]:focus, [role="columnheader"]:focus {
+      outline-color: invert;
+      outline-style: dotted;
+    }
+  </style>  
 </head>
 
 <body>
