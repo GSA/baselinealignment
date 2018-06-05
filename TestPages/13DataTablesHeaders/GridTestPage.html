@@ -7,60 +7,29 @@
 </head>
 
 <body>
-          <div role="grid" aria-rowcount="463" aria-label="Student grades for history 101">
-            <div role="rowgroup">
-              <div role="row" aria-rowindex="1">
-                  <!--
-                    aria-rowspan and aria-colspan provide
-                    assistive technologies with the correct data cell header information
-                    when header cells span more than one row or column.
-                  -->
-                  <span role="columnheader" aria-rowspan="2">Last Name</span>
-                  <span role="columnheader" aria-rowspan="2">First Name</span>
-                  <span role="columnheader" aria-colspan="2">Test 1</span>
-                  <span role="columnheader" aria-colspan="2">Test 2</span>
-                  <span role="columnheader" aria-colspan="2">Final</span>
-              </div>
-              <div role="row" aria-rowindex="2">
-                  <span role="columnheader">Score</span>
-                  <span role="columnheader">Grade</span>
-                  <span role="columnheader">Score</span>
-                  <span role="columnheader">Grade</span>
-                  <span role="columnheader">Total</span>
-                  <span role="columnheader">Grade</span>
-              </div>
-            </div>
-            <div role="rowgroup">
-              <div role="row" aria-rowindex="50">
-                <span role="cell">Henderson</span>
-                <span role="cell">Alan</span>
-                <span role="cell">89</span>
-                <span role="cell">B+</span>
-                <span role="cell">72</span>
-                <span role="cell">C</span>
-                <span role="cell">161</span>
-                <span role="cell">B-</span>
-              </div>
-              <div role="row"  aria-rowindex="51">
-                <span role="cell">Henderson</span>
-                <span role="cell">Alice</span>
-                <span role="cell">94</span>
-                <span role="cell">A</span>
-                <span role="cell">86</span>
-                <span role="cell">B</span>
-                <span role="cell">180</span>
-                <span role="cell">A-</span>
-              </div>
-              <div role="row"  aria-rowindex="52">
-                <span role="cell">Henderson</span>
-                <span role="cell">Andrew</span>
-                <span role="cell">82</span>
-                <span role="cell">B-</span>
-                <span role="cell">95</span>
-                <span role="cell">A</span>
-                <span role="cell">177</span>
-                <span role="cell">B+</span>
-              </div>
-            </div>
-          </div>
+<div role="grid" aria-colcount="16">
+  <div role="rowgroup">
+    <div role="row" aria-colindex="2">
+      <span role="columnheader">First Name</span>
+      <span role="columnheader">Last Name</span>
+      <span role="columnheader">Company</span>
+      <span role="columnheader">Address</span>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row" aria-colindex="2">
+      <span role="gridcell">Fred</span>
+      <span role="gridcell">Jackson</span>
+      <span role="gridcell">Acme, Inc.</span>
+      <span role="gridcell">123 Broad St.</span>
+    </div>
+    <div role="row" aria-colindex="2">
+      <span role="gridcell">Sara</span>
+      <span role="gridcell">James</span>
+      <span role="gridcell">Acme, Inc.</span>
+      <span role="gridcell">123 Broad St.</span>
+    </div>
+   …
+  </div>
+</div>
 </body>
