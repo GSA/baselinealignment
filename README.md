@@ -25,7 +25,7 @@ For each sample test page or set of pages, provide the following information (ge
 10. *Flashing (reserved)*
 11. [Forms (associated instructions)](TestPages/11Forms/11Forms-TestPageDoc.md)
 12. [Page Titles](TestPages/12PageTitles/12PageTitles-TestPageDoc.md)
-13. [Data Tables](TestPages/13DataTablesHeaders/13Tables_test_page.html) [Grid Example](TestPages/13DataTablesHeaders/GridTestPage.html)
+13. [Data Tables](TestPages/13DataTablesHeaders/13Tables_test_page.html) | [Grid Example](TestPages/13DataTablesHeaders/GridTestPage.html)
 14. *Data Tables (cell-header association) - **removed and combined with 13***
 15. [Headings](TestPages/15Headings/15Headings-TestPageDoc.md)
 16. Links and User controls
