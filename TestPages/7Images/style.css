@@ -1,8 +1,8 @@
 .bkground-image {
-  background-image: url("https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png");
-  color: white;
+  background-image:url("https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png");
+  color:white;
 }
 
 .css-image::after {
-  content: url("https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png");
+  content:url("https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png");
 }
