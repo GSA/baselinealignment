@@ -5,8 +5,14 @@
   <title>Image Test</title>
 </head>
 <body>
+  <p>Here is some text before an image that is aria-hidden=true</p>
+  <img aria-hidden="true" width="50%" alt="This is really scary" src="https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png"></img>
+  <p>Here is some more text after an image</p>
   <p>Here is some text before an image that is role=presentation</p>
-  <img aria-hidden="true" alt="This is really scary" src="https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png"></img>
+  <img aria-hidden="true" width="50%" role="presentation src="https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png"></img>
+  <p>Here is some more text after an image</p>
+  <p>Here is some text before an image that is positioned off screen</p>
+  <img width="50%" style="position:absolute left:-100px" src="https://section508coordinators.github.io/BaselineTestPages/TestPages/images/Friday13.png"></img>
   <p>Here is some more text after an image</p>
 </body>
 </html>
