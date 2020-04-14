@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> 5.D Passing Example 2</title>
+</head>
+
+
+<body>
+<script>
+javascript:void((function(){andiScript=document.createElement('script');andiScript.setAttribute('src','https://www.dhs.gov/xlibrary/oast/ANDI/andi.js');document.body.appendChild(andiScript)})());  
+</script>
+
+<p id="wikiwarn">When you leave the input field, a function is triggered, which will take you to the Wikipedia "name" page.</p>
+<label>Enter your name: <input type="text" id="fname" aria-describedby="wikiwarn" onblur="myFunction()"></label>
+
+<script>
+function myFunction() {
+    window.open("https://en.wikipedia.org/wiki/Name");
+}
+</script>
+
+</body>
+</html>

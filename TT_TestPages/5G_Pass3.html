@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>5.G Passing Example 3</title>
+</head>
+<body>
+<script>
+javascript:void((function(){andiScript=document.createElement('script');andiScript.setAttribute('src','https://www.dhs.gov/xlibrary/oast/ANDI/andi.js');document.body.appendChild(andiScript)})());  
+</script>
+ <p><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training course.</p> 
+<h2>Please indicate your satisfaction with our customer service:</h2>
+
+<p>*Please input a number between 1 and 10:</p>
+
+<input id="numb" title="Please input a number between 1 and 10">
+
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo" role="alert" aria-atomic="true"></p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid: Please enter a number between 1 and 10";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+Please leave any comments regarding what we have exceeded expectations at or need improvement on: <br>
+<input type="type" title="Please leave any comments regarding what we have exceeded expectations at or need improvement on" name="comments">
+</body>
+</html>

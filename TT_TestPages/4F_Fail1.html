@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Focus Order Failing Example 1</title>
+<style>
+input {
+    color: black;
+    width: 40%;
+    align="left";
+}
+
+#fldst1 {
+    position: absolute;
+    left: 410px;
+    top: 0px;
+}
+
+.left-div {
+    float: left;
+    width: 40%;
+    height: 0px;
+    margin-right: 0px;   
+}
+
+.right-div {
+    margin-left: 400px;
+    width: 60%;
+    height: 260px;
+    position: absolute;
+    left: 500px;
+    top: 0px;   
+}
+</style>
+</head>
+<body>
+<p tabindex="0"><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training 
+<form>
+<div class="left-div">
+<fieldset >
+<legend>
+<h2>Section 1</h2>
+</legend>
+
+
+Name: &nbsp;  &nbsp;   <input type="text" name="Shipping Address" value=""  title="Name" id="input1" tabindex="1"></br></br>
+Street Name &nbsp;  &nbsp;  <input type="text" name="street" value="" title="Street" id="input2" tabindex="3"></br></br>
+City &nbsp;  &nbsp;  <input type="text" name="City" value="" title="City"  id="input5" tabindex="5"></br></br>
+State/Province &nbsp;  &nbsp;  <input type="text" name="State" value=""  title="State" id="input4" tabindex="7"></br></br>
+Postal Code &nbsp;  &nbsp;  <input type="text" name="Postal code" value="" title="Postal Code"  id="input5" tabindex="9"></br></br>
+
+   
+</fieldset>
+
+<br>
+</div>
+<div class="right-div">
+<fieldset >
+  <legend>
+<h2>Section 2</h2>
+</legend>
+
+<input type="checkbox" name="vehicle1" value="NickName" title="NickName" tabindex="11"> I have a nickname<br>
+<input type="checkbox" name="vehicle2" value="PermanentAddress" title="PermanentAddress" tabindex="12"> This is my permanent address<br>
+
+
+</fieldset>
+
+<fieldset >
+  <legend>
+<h2>Section 3</h2>
+</legend>
+
+<input type="checkbox" name="Business Digest" value="Business Digest" title="Business Digest" tabindex="2"> Business Digest<br>
+<input type="checkbox" name="College Investment" value="How to Invest for College" title="How to Invest for College" tabindex="4"> How to Invest for College<br>
+<input type="checkbox" name="Strategies" value="Strategies to Eliminate Debt" title="Strategies to Eliminate Debt" tabindex="6"> Strategies to Eliminate Debt<br>
+<input type="checkbox" name="Planning" value="Planning for Retirement" title="Planning for Retirement" tabindex="8"> Planning for Retirement<br>
+<input type="checkbox" name="Stock" value="Stock Market Trends." title="Stock Market Trends." tabindex="10"> Stock Market Trends.<br>
+
+
+</fieldset>
+</div>
+</form> 
+
+</body>
+</html>

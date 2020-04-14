@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>On Focus Failing Example 1</title>
+</head>
+<body>
+<p tabindex="0"><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training course.</p>
+<h1>History of Peanuts</h1>
+<p>Select the following link to see the article <a href="4E_Fail1_1.html"   id="foo"> the history of the peanut.  </a></p>
+
+<script>
+var el = document.getElementById('foo');
+
+el.onfocus = showFoo;
+function showFoo() {
+window.open('4E_Fail1_1.html','mywindow').focus();
+}
+</script>
+
+</body>
+</html>
+

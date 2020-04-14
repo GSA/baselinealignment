@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>On Focus Passing Example 2</title>
+</head>
+<body>
+<p><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training course.</p>
+<h3>Where do you want to go?</h3>
+<p align="center">
+  <form name="jump" class="center">
+    <select name="menu">
+      <option value="#">Select an option</option>
+      <option value="4E_Pass2_home.html">Home</option>
+      <option value="4E_Pass2_menu.html">Menu</option>
+      <option value="4E_Pass2_glossary.html">Glossary</option>
+      <option value="4E_Pass2_about.html">About Us</option>
+    </select>
+    <input type="button" onClick="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO">
+  </form>
+</p>
+</body>
+</html>
