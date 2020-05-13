@@ -19,7 +19,7 @@ For each sample test page or set of pages, provide the following information (ge
 4. Focus (Revealing hidden content)
 5. Repetitive Content
 6. Multi-state components
-7. Images 
+7. Images
     * [ImageTest](TestPages/7Images/ImageTest.html)
 8. Color (meaning)
 9. [Color (contrast)](TestPages/9ColorContrast/9ColorContrast-TestPageDoc.md)
