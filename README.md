@@ -1,5 +1,5 @@
 # Baseline Test Pages
-The Baseline and ITTP Working Group will use this repository and set of pages to store and make reference to test pages for use in validating test rules contained in the [ICT Testing Basline](https://section508coordinators.github.io/ICTTestingBaseline/).. 
+The Baseline and ITTP Working Group will use this repository and set of pages to store and make reference to test pages for use in validating test rules contained in the [ICT Testing Basline](https://section508coordinators.github.io/ICTTestingBaseline/). 
 
 Working Group members can use the [editor on GitHub](https://github.com/Section508Coordinators/BaselineTestPages/edit/master/README.md) to directly edit this file to add references. Members can also  navigate to the [Baseline Test Pages repository](https://github.com/Section508Coordinators/BaselineTestPages) to add files to test. Static pages can be viewed via GitHub Pages from this repository at the following url: <https://section508coordinators.github.io/BaselineTestPages/>.
 
@@ -19,7 +19,7 @@ For each sample test page or set of pages, provide the following information (ge
 4. Focus (Revealing hidden content)
 5. Repetitive Content
 6. Multi-state components
-7. Images 
+7. Images
     * [ImageTest](TestPages/7Images/ImageTest.html)
 8. Color (meaning)
 9. [Color (contrast)](TestPages/9ColorContrast/9ColorContrast-TestPageDoc.md)
