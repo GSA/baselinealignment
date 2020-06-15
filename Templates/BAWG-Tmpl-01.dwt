@@ -163,9 +163,16 @@
 									</p>
 					
 								<h4 id="TCframe">Embeded Code</h4>
-									<p>[embed page within iframe]</p>
-									<iframe title="embedded code"></iframe>
+									
+									<iframe title="embedded code">
+									<!-- TemplateBeginEditable name="TCembeddedCode" -->
+									http://
+									<!-- TemplateEndEditable -->
+									</iframe>
+						
 						<h2 id="TCsteps">Test Steps</h2>
+							<!-- TemplateBeginEditable name="TCteststeptable" -->
+						
 							<table class="table table-hover">
 								<thead class="thead-dark">
 									<tr>
@@ -187,6 +194,7 @@
 									</tr>
 								</tbody>
 							</table>
+							<!-- TemplateEndEditable -->
 					</div>
 				</div>
 			</div>
@@ -195,8 +203,16 @@
 	
 	<!-- Footer content -->
 	<footer class="mt-auto py-2 bg-light">
+
+			<hr style="text-align: center" >
+			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Sunday 06/14/2020 9:48 PM<!-- #EndDate --> | Template Version: .05 | 03/07/2020 12:29a</p>
+			<hr style="text-align: center" >	
+		
 		<div class="footer-content offset-md-2 offset-xl-2 px-3 col-md-9 col-xl-8">
+			
+			<!---  Commented out
 			<span>copyright notice and link to license page</span>
+			// -->
 		</div>
 	</footer>
 
