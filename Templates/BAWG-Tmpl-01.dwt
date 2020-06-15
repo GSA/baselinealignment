@@ -7,7 +7,7 @@
     <title>ICT Testing Baseline Alignment - Test Case Template</title>
 	<!-- TemplateEndEditable -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/docs/css/bootstrap.css">
+    <link rel="stylesheet" href="../docs/css/bootstrap.css">
 	
 	
 	
@@ -15,7 +15,7 @@
 	<!-- FontAwesome CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="/docs/css/baseline-align.css">
+	<link rel="stylesheet" href="../docs/css/baseline-align.css">
 	<!-- TemplateBeginEditable name="dochead" -->  
 	<!--// ADK: Put any other <head> contents here //-->
 	<!-- TemplateEndEditable -->
