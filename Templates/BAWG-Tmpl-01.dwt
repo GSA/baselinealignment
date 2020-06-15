@@ -121,22 +121,47 @@
 					    </ul>
 						<!-- TemplateEndEditable -->
 								
-
+							<!-- Commented out Expected Test Type
 					        <h3 id="TCtype">Expected Test Type</h3>
-									<p><!-- TemplateBeginEditable name="TCtype" -->[automated/manual]<!-- TemplateEndEditable --></p>
+									<p>[automated/manual]</p>
+							//-->
 					</div>
 				</div>
 				<div class="card shadow my-3">
 					<div class="card-body">
+						
 						<h2 class="border-bottom" id="TCdet">Test Case Detail</h2>
 							<h3 id="TCresult">Expected Baseline Result</h3>
-								<p>[Pass/Fail/DNA]</p>
-								<p>[Any explanation about why we would expect this result]</p>
+						
+								<p><strong>
+								<!-- TemplateBeginEditable name="Pass-Fail-DNA" -->
+								[Pass/Fail/DNA]
+								<!-- TemplateEndEditable -->
+								</strong></p>
+						
+								<p>
+								<!--TemplateBeginEditable name="TCresultexplaination" -->
+								[Any explanation about why we would expect this result]
+								<!--TemplateEndEditable -->								
+								</p>
+					
 							<h3 id="TCdata">Test Data (code/link)</h3>
 								<h4 id="TCcode">Code</h4>
-									<pre><code>include the code here</code></pre>
+					
+									<pre><code>
+									<!-- TemplateBeginEditable name="TC_code" -->
+									include the code here
+									<!-- TemplateEndEditable -->
+									</code></pre>
+					
 								<h4 id="TCurl">Single-Page URL</h4>
-									<p>[URL to page hosted within this repository]</p>
+					
+									<p>
+									<!-- TemplateBeginEditable name="TCtestfile" -->
+									[URL to page hosted within this repository]
+									<!-- TemplateEndEditable -->
+									</p>
+					
 								<h4 id="TCframe">Embeded Code</h4>
 									<p>[embed page within iframe]</p>
 									<iframe></iframe>
