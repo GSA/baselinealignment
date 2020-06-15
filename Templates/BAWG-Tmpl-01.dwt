@@ -148,7 +148,7 @@
 							<h3 id="TCdata">Test Data (code/link)</h3>
 								<h4 id="TCcode">Code</h4>
 					
-									<pre><code>
+									<pre class="bg-light callout"><code>
 									<!-- TemplateBeginEditable name="TC_code" -->
 									include the code here
 									<!-- TemplateEndEditable -->
