@@ -1,0 +1,21 @@
+.container {
+  margin:16px;
+}
+
+.color-only {
+  color:#0000ff;
+  text-decoration:none
+}
+
+.color-only:visited, .color-only-visited {
+  color:#990000;
+}
+
+table, td, th {
+  border: 3px solid black;
+  border-collapse: collapse
+}
+
+td, th {
+  padding: 5px
+}

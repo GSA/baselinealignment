@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Visited/Unvisited Link Color Samples</title>
+    <link rel="stylesheet" href="linkcolors.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Visited/Unvisited Link Samples</h1>
+        <p>
+          The code samples below are presented here on a single page to facilitate review of the ICT Baseline test for Use of Color (<a href="https://section508coordinators.github.io/ICTTestingBaseline/07Sensory.html#test-procedure-for-sc-141-use-of-color">7. Sensory Characteristics > Use of Color</a>). For use in the ICT Baseline Alignment Validation process, each code sample will be separated into its own test file.
+        </p>
+        <h2>Code Sample Index - Use of color in links</h2>
+          <h3>Key</h3>
+            <table>
+              <tr>
+                <th scope="row">
+                  PASS
+                </th>
+                <td>
+                  Use of color plus some other method
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  FAIL
+                </th>
+                <td>
+                  Use of color only
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  DNA
+                </th>
+                <td>
+                  Color not used
+                </td>
+              </tr>
+            </table>
+          <h3>Index table</h3>
+            <p>
+              All possible combinations of PASS/FAIL/DNA results for methods using color to…
+                <ul>
+                  <li>
+                    Differentiate a link from surrounding text
+                  </li>
+                  <li>
+                    Differentiate between visited/unvisited links
+                  </li>
+                  <li>
+                    Differentiate hover/active link from other links
+                  </li>
+                </ul>
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    Code Sample #
+                  </th>
+                  <th>
+                    Link
+                  </th>
+                  <th>
+                    Visited
+                  </th>
+                  <th>
+                    Active/Hover
+                  </th>
+                </tr>
+                <tr><td>1</td><td>DNA</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td>2</td><td>DNA</td><td>DNA</td><td>FAIL</td></tr>
+                <tr><td>3</td><td>DNA</td><td>DNA</td><td>PASS</td></tr>
+                <tr><td>4</td><td>DNA</td><td>FAIL</td><td>DNA</td></tr>
+                <tr><td>5</td><td>DNA</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td>6</td><td>DNA</td><td>FAIL</td><td>PASS</td></tr>
+                <tr><td>7</td><td>DNA</td><td>PASS</td><td>DNA</td></tr>
+                <tr><td>8</td><td>DNA</td><td>PASS</td><td>FAIL</td></tr>
+                <tr><td>9</td><td>DNA</td><td>PASS</td><td>PASS</td></tr>
+                <tr><td>10</td><td>FAIL</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td>11</td><td>FAIL</td><td>DNA</td><td>FAIL</td></tr>
+                <tr><td>12</td><td>FAIL</td><td>DNA</td><td>PASS</td></tr>
+                <tr><td>13</td><td>FAIL</td><td>FAIL</td><td>DNA</td></tr>
+                <tr><td>14</td><td>FAIL</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td>15</td><td>FAIL</td><td>FAIL</td><td>PASS</td></tr>
+                <tr><td>16</td><td>FAIL</td><td>PASS</td><td>DNA</td></tr>
+                <tr><td>17</td><td>FAIL</td><td>PASS</td><td>FAIL</td></tr>
+                <tr><td>18</td><td>FAIL</td><td>PASS</td><td>PASS</td></tr>
+                <tr><td>19</td><td>PASS</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td>20</td><td>PASS</td><td>DNA</td><td>FAIL</td></tr>
+                <tr><td>21</td><td>PASS</td><td>DNA</td><td>PASS</td></tr>
+                <tr><td>22</td><td>PASS</td><td>FAIL</td><td>DNA</td></tr>
+                <tr><td>23</td><td>PASS</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td>24</td><td>PASS</td><td>FAIL</td><td>PASS</td></tr>
+                <tr><td>25</td><td>PASS</td><td>PASS</td><td>DNA</td></tr>
+                <tr><td>26</td><td>PASS</td><td>PASS</td><td>FAIL</td></tr>
+                <tr><td>27</td><td>PASS</td><td>PASS</td><td>PASS</td></tr>
+              </thead>
+            </table>
+        <h2>Code Samples</h2>
+        <h3>Color not used to differentiate links</h3>
+          <p>
+
+          </p>
+
+        <h3 id="colorOnly">Color (hue) only to identify link and indicate visited/unvisited</h3>
+          <p>
+            The <span class="color-only">blue (unvisited)</span> and <span class="color-only-visited">red (visited)</span> text have the same luminance/lightness. Both have sufficient contrast between background/foreground, but insufficient contrast between visited/unvisited colors. Both also have insufficient contrast between the link text and surrounding text to differentiate the links from the text.
+          </p>
+          <p>
+            <a href="#colorOnly" class="color-only">Here's an unvisited link</a> (Don't click on it if you want it to stay that way)
+          </p>
+          <p>
+            <a href="#" class="color-only">Here's a visited link</a> (Click it to visit it)
+          </p>
+    </div>
+  </body>
+</html>
