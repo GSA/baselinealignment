@@ -3,7 +3,7 @@
 <head>  
     <meta charset="utf-8">
 	<!-- InstanceBeginEditable name="doctitle" -->  
-    <title>Input text element - aria-label attribute</title>
+    <title>Input text element - aria-labelledby attribute</title>
 	<!-- InstanceEndEditable -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
@@ -85,12 +85,12 @@
 			<div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
 				<div class="card shadow">
 					<div class="card-body">
-						<h1 class="card-title" id="TCtitle"><!-- InstanceBeginEditable name="TCtitle" -->Input text element: aria-label attribute<!-- InstanceEndEditable --></h1>
+						<h1 class="card-title" id="TCtitle"><!-- InstanceBeginEditable name="TCtitle" -->Input text element: aria-labelledby attribute<!-- InstanceEndEditable --></h1>
 							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
 								<h3 id="TCid">Test Case ID</h3>
-									<p><!-- InstanceBeginEditable name="TCid" -->TC10-005-pass<!-- InstanceEndEditable --></p>
+									<p><!-- InstanceBeginEditable name="TCid" -->TC10-006-pass<!-- InstanceEndEditable --></p>
 								<h3 id="TCdesc">Test Case Description</h3>
-									<p><!-- InstanceBeginEditable name="TCdesc" -->Detect  attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the input element. The code sample data presents an aria-label  attribute that contributes to the accessible name  output. A successful test should identify a passing implementation against Baseline 10. Forms.<!-- InstanceEndEditable --></p>
+									<p><!-- InstanceBeginEditable name="TCdesc" -->Detect  attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the input element. The code sample data presents an aria-labelledby  attribute that contributes to the accessible name  output. A successful test should identify a passing implementation against Baseline 10. Forms.<!-- InstanceEndEditable --></p>
 								<h3 id="TCbase">Applicable ICT Baseline</h3>
 									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/10Forms.html">10. Forms</a><!-- InstanceEndEditable --></p>
 									<h4><!-- InstanceBeginEditable name="TCbaseheading4" -->Complete and programmatically associated form labels and instructions<!-- InstanceEndEditable --></h4>
@@ -143,7 +143,7 @@
 						
 								<p>
 								<!-- InstanceBeginEditable name="TCresultexplaination" -->
-								[The input element in the code sample provides an accessible name value via implementation of an aria-label attribute.
+								[The input element in the code sample provides an accessible name value via implementation of an aria-labelledby attribute.
 								<!-- InstanceEndEditable -->								
 								</p>
 					
@@ -152,7 +152,8 @@
 <pre class="bg-light callout">
 <code>
 <!-- InstanceBeginEditable name="TC_code" -->
-Middle Name: &lt;input aria-label=&quot;Middle Name&quot; type=&quot;text&quot; size=&quot;25&quot;&gt;
+&lt;span id=&quot;cn1&quot;&gt;Company Name&lt;/span&gt;: &lt;input aria-labelledby=&quot;cn1&quot; type=&quot;text&quot; size=&quot;25&quot;&gt;
+
 <!-- InstanceEndEditable -->
 </code>
 </pre>
@@ -160,13 +161,13 @@ Middle Name: &lt;input aria-label=&quot;Middle Name&quot; type=&quot;text&quot; 
 								<h4 id="TCurl">Single-Page URL</h4>
 					
 									<p>
-									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/BaselineTestPages/testfiles/TC10-005-pass/10-005-pass.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TC10-005-pass/10-005-pass.html</a><!-- InstanceEndEditable -->
+									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/BaselineTestPages/testfiles/TC10-006-pass/10-006-pass.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TC10-006-pass/10-006-pass.html</a><!-- InstanceEndEditable -->
 									</p>
 					
 								<h4 id="TCframe">Embeded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
 						
-									<iframe src="https://section508coordinators.github.io/BaselineTestPages/testfiles/TC10-005-pass/10-005-pass.html" title="embedded code">
+									<iframe src="https://section508coordinators.github.io/BaselineTestPages/testfiles/TC10-006-pass/10-006-pass.html" title="embedded code">
 									</iframe>
 						
 									<!-- InstanceEndEditable -->
@@ -196,7 +197,7 @@ Middle Name: &lt;input aria-label=&quot;Middle Name&quot; type=&quot;text&quot; 
 									<tr>
 									  <td>3</td>
 									  <td>Check that the combination of the accessible name and accessible description is not empty.</td>
-									  <td>The output for the accessible name and accessible descriptions computations is populated via the aria-label attribute value.</td>
+									  <td>The output for the accessible name and accessible descriptions computations is populated via the aria-labelledby attribute.</td>
 								  </tr>
 									<tr>
 									  <td>4</td>
@@ -216,7 +217,7 @@ Middle Name: &lt;input aria-label=&quot;Middle Name&quot; type=&quot;text&quot; 
 	<footer class="mt-auto py-2 bg-light">
 
 			<hr style="text-align: center" >
-			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Thursday 06/25/2020 7:13 AM<!-- #EndDate --> | Template Version: .05 | 06/14/2020 09:55p</p>
+			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Thursday 06/25/2020 7:21 AM<!-- #EndDate --> | Template Version: .05 | 06/14/2020 09:55p</p>
 			<hr style="text-align: center" >	
 		
 		<div class="footer-content offset-md-2 offset-xl-2 px-3 col-md-9 col-xl-8">
