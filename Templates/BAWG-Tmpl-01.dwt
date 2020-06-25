@@ -168,10 +168,8 @@
 					
 								<h4 id="TCframe">Embeded Code</h4>
 									<!-- TemplateBeginEditable name="TCembeddedCode" -->
-									<iframe src="http://" title="embedded code">
+									<iframe src="http://" title="embedded code"></iframe>
 									<!-- TemplateEndEditable -->
-									</iframe>
-							
 						
 						<h2 id="TCsteps">Test Steps</h2>
 							<!-- TemplateBeginEditable name="TCteststeptable" -->
@@ -208,7 +206,7 @@
 	<footer class="mt-auto py-2 bg-light">
 
 			<hr style="text-align: center" >
-			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Thursday 06/25/2020 4:36 AM<!-- #EndDate --> | Template Version: .05 | 06/14/2020 09:55p</p>
+			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Thursday 06/25/2020 4:46 AM<!-- #EndDate --> | Template Version: .05 | 06/14/2020 09:55p</p>
 			<hr style="text-align: center" >	
 		
 		<div class="footer-content offset-md-2 offset-xl-2 px-3 col-md-9 col-xl-8">
