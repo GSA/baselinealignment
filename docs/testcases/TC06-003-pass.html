@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Image - text equivalent in alt attribute</title>
+    <title>Image - text equivalent in title attribute</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -76,13 +76,13 @@
   			<div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
   				<div class="card shadow">
   					<div class="card-body">
-  						<h1 class="card-title" id="TCtitle">Image - text equivalent in alt attribute</h1>
+  						<h1 class="card-title" id="TCtitle">Image - text equivalent in title attribute</h1>
   							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
   								<h3 id="TCid">Test Case ID</h3>
-  									<p>TC06-002-pass</p>
+  									<p>TC06-003-pass</p>
   								<h3 id="TCdesc">Test Case Description</h3>
-  									<p>Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image. Then determine whether the text alternative output for the image provides an equivalent description of the image.</p>
-  									<p>The code sample provides an equivalent description of the image in an ALT attribute. A successful test should identify a PASS against Baseline 6. Images.</p>
+  									<p>Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative output for the image. Then determine whether the text alternative output for the image provides an equivalent description of the image.</p>
+  									<p>The code sample provides an equivalent description of the image in a title attribute. A successful test should identify a PASS against Baseline 6. Images.</p>
   								<h3 id="TCbase">Applicable ICT Baseline</h3>
   									<p><a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html">6. Images</a></p>
   									<h4 id="meaningful-images">Meaningful Images</h4>
@@ -114,22 +114,22 @@
   						<h2 class="border-bottom" id="TCdet">Test Case Detail</h2>
   							<h3 id="TCresult">Expected Baseline Result</h3>
   								<p><strong>PASS</strong></p>
-  								<p>The image in the code sample provides an ALT attribute with a value that provides an equivalent text alternative description of the image.</p>
+  								<p>The image in the code sample does not provide any attributes that would contribute to an accessible name or description text alternative output.</p>
   							<h3 id="TCdata">Test Data (code/link)</h3>
   								<h4 id="TCcode">Code</h4>
   									<pre class="bg-light callout">
   										<code>
   &ltbody&gt
 	&ltimg src="../assets/images/corplogo.png" width="50" height="50"
-          class="" alt="Bland Corp. logo"&gt
+          class="" title="Bland Corp. logo"&gt
 	&ltp&gtThis is a meaningful image&lt/p&gt
   &lt/body&gt
   										</code>
   									</pre>
   								<h4 id="TCurl">Single-Page URL</h4>
-  									<p><a href="../testfiles/TC06-002-pass/06-002-pass.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TC06-002-pass/06-002-pass.html</a></p>
+  									<p><a href="../testfiles/TC06-003-pass/06-003-pass.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TC06-003-pass/06-003-pass.html</a></p>
   								<h4 id="TCframe">Embedded Code</h4>
-  									<iframe src="../testfiles/TC06-002-pass/06-002-pass.html" class="card shadow my-3"></iframe>
+  									<iframe src="../testfiles/TC06-003-pass/06-003-pass.html" class="card shadow my-3"></iframe>
   						<h2 id="TCsteps">Test Steps</h2>
   							<table class="table table-hover">
   								<thead class="thead-dark">
@@ -140,7 +140,7 @@
   									</tr>
   								</thead>
   								<tbody>
-  									<tr>
+                    <tr>
   										<td>1.</td>
   										<td>Identify any <code>&ltimg&gt</code> elements.</td>
   										<td>One <code>&ltimg&gt</code> exists in the test data code sample.</td>
@@ -150,10 +150,10 @@
   										<td>Determine whether the image is meaningful. Review the page content and image context to determine whether the image conveys meaningful information.</td>
   										<td>The image is meaningful, based on the text directly below the image.</td>
   									</tr>
-  									<tr>
+                    <tr>
   										<td>3.</td>
   										<td>Calculate the accessible name and accessible description output for the image according to <a href="https://www.w3.org/TR/html-aam-1.0/#img-element">HTML Accessibility API Mappings 1.0 for img</a>.</td>
-  										<td>The output for the accessible name and accessible descriptions computations is "Bland Corp. logo". In this case, the text alternative is provided via an <code>alt</code> attribute.</td>
+  										<td>The output for the accessible name and accessible descriptions computations is "Bland Corp. logo". In this case, the text alternative is provided via a <code>title</code> attribute.</td>
   									</tr>
                     <tr>
                       <td>4.</td>
