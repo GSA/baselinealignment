@@ -91,11 +91,11 @@
 						<h1 class="card-title" id="TCtitle"><!-- TemplateBeginEditable name="TCtitle" -->Test Case Title<!-- TemplateEndEditable --></h1>
 							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
 								<h3 id="TCid">Test Case ID</h3>
-									<p><!-- TemplateBeginEditable name="TCid" -->TC05-001-fail ([ParentBaseline-IncrementalTC#-Pass/Fail/DNA]<!-- TemplateEndEditable -->)</p>
+									<p><!-- TemplateBeginEditable name="TCid" -->TC05-001-fail ([ParentBaseline-IncrementalTC#-Pass/Fail/DNA])<!-- TemplateEndEditable --></p>
 								<h3 id="TCdesc">Test Case Description</h3>
-									<p><!-- TemplateBeginEditable name="TCdesc" -->[Brief description of the code sample/issue to be tested. Include and detail about why this specific test case is necessary] - here is wehre we need to provide very specific guidance on description and intent<!-- TemplateEndEditable --></p>
+									<p><!-- TemplateBeginEditable name="TCdesc" -->[Brief description of the code sample/issue to be tested. Include and detail about why this specific test case is necessary] - here is wehre we need to provide very specific guidance on description and intent.<!-- TemplateEndEditable --></p>
 								<h3 id="TCbase">Applicable ICT Baseline</h3>
-									<p><!-- TemplateBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html">6. Images</a> ([Baseline Name linked to URL]<!-- TemplateEndEditable -->)</p>
+									<p><!-- TemplateBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html">6. Images</a> ([Baseline Name linked to URL])<!-- TemplateEndEditable --></p>
 									<h4><!-- TemplateBeginEditable name="TCbaseheading4" --> 
 									Meaningful Images (Test Case Heading)<!-- TemplateEndEditable --></h4>
 									<h5>Test Instructions</h5>
@@ -167,12 +167,11 @@
 									</p>
 					
 								<h4 id="TCframe">Embeded Code</h4>
-									
-									<iframe title="embedded code">
 									<!-- TemplateBeginEditable name="TCembeddedCode" -->
-									http://
+									<iframe src="http://" title="embedded code">
 									<!-- TemplateEndEditable -->
 									</iframe>
+							
 						
 						<h2 id="TCsteps">Test Steps</h2>
 							<!-- TemplateBeginEditable name="TCteststeptable" -->
@@ -209,7 +208,7 @@
 	<footer class="mt-auto py-2 bg-light">
 
 			<hr style="text-align: center" >
-			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Sunday 06/14/2020 10:09 PM<!-- #EndDate --> | Template Version: .05 | 06/14/2020 09:55p</p>
+			<p style="font-size:small; text-align: center">Updated: <!-- #BeginDate format:fAm3a -->Thursday 06/25/2020 4:36 AM<!-- #EndDate --> | Template Version: .05 | 06/14/2020 09:55p</p>
 			<hr style="text-align: center" >	
 		
 		<div class="footer-content offset-md-2 offset-xl-2 px-3 col-md-9 col-xl-8">
