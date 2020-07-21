@@ -70,7 +70,7 @@
                     Active/Hover
                   </th>
                 </tr>
-                <tr><td>1</td><td>DNA</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td><a href="#ex1">1</a></td><td>DNA</td><td>DNA</td><td>DNA</td></tr>
                 <tr><td>2</td><td>DNA</td><td>DNA</td><td>FAIL</td></tr>
                 <tr><td>3</td><td>DNA</td><td>DNA</td><td>PASS</td></tr>
                 <tr><td>4</td><td>DNA</td><td>FAIL</td><td>DNA</td></tr>
@@ -83,7 +83,7 @@
                 <tr><td>11</td><td>FAIL</td><td>DNA</td><td>FAIL</td></tr>
                 <tr><td>12</td><td>FAIL</td><td>DNA</td><td>PASS</td></tr>
                 <tr><td>13</td><td>FAIL</td><td>FAIL</td><td>DNA</td></tr>
-                <tr><td>14</td><td>FAIL</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td><a href="#ex14">14</a></td><td>FAIL</td><td>FAIL</td><td>FAIL</td></tr>
                 <tr><td>15</td><td>FAIL</td><td>FAIL</td><td>PASS</td></tr>
                 <tr><td>16</td><td>FAIL</td><td>PASS</td><td>DNA</td></tr>
                 <tr><td>17</td><td>FAIL</td><td>PASS</td><td>FAIL</td></tr>
@@ -96,25 +96,60 @@
                 <tr><td>24</td><td>PASS</td><td>FAIL</td><td>PASS</td></tr>
                 <tr><td>25</td><td>PASS</td><td>PASS</td><td>DNA</td></tr>
                 <tr><td>26</td><td>PASS</td><td>PASS</td><td>FAIL</td></tr>
-                <tr><td>27</td><td>PASS</td><td>PASS</td><td>PASS</td></tr>
+                <tr><td><a href="#ex14">27</a></td><td>PASS</td><td>PASS</td><td>PASS</td></tr>
               </thead>
             </table>
-        <h2>Code Samples</h2>
-        <h3>Color not used to differentiate links</h3>
+        <h2 id="samples">Code Samples</h2>
+        <h3 id="ex1">1. Color not used to differentiate links</h3>
           <p>
-
+            These links do no use color to differentiate them as links or to differentiate visited links from unvisited links.
+          </p>
+          <p>
+            <a href="#samples" class="no-color">Unvisited link</a>
+          </p>
+          <p>
+            <a href="#" class="no-color">Visited link</a>
           </p>
 
-        <h3 id="colorOnly">Color (hue) only to identify link and indicate visited/unvisited</h3>
-          <p>
-            The <span class="color-only">blue (unvisited)</span> and <span class="color-only-visited">red (visited)</span> text have the same luminance/lightness. Both have sufficient contrast between background/foreground, but insufficient contrast between visited/unvisited colors. Both also have insufficient contrast between the link text and surrounding text to differentiate the links from the text.
+        <h3 id="ex14">14. Color (hue) only to identify link, indicate visited/unvisited, and identify active/hover</h3>
+          <p class="color-only-text">
+            The <span class="color-only">blue (unvisited)</span>, <span class="color-only-visited">purple (visited)</span>, <span class="color-only-hover">green (hover)</span>, and <span class="color-only-active">orange (active)</span> link text all have similar luminance/lightness. All have sufficient contrast between background/foreground, but insufficient contrast between visited, unvisited, hover, and active colors. All also have insufficient contrast between the link text and surrounding text to differentiate the links from the text. The cursor is also the same for links as it is for text, so does not provide a method to differentiate from surrounding text.
           </p>
           <p>
-            <a href="#colorOnly" class="color-only">Here's an unvisited link</a> (Don't click on it if you want it to stay that way)
+            <a href="#samples" class="color-only">Unvisited link</a> (Don't click on it if you want it to stay that way)
           </p>
           <p>
-            <a href="#" class="color-only">Here's a visited link</a> (Click it to visit it)
+            <a href="#ex14" class="color-only">Visited link</a> (Click it to visit it)
           </p>
+
+          <h3 id="ex27">27. Color (hue) AND some other method to identify link, indicate visited/unvisited, and identify active/hover</h3>
+          <h4 id="ex27a">27.a. COLOR (hue) AND CONTRAST to identify and differentiate between visited/unvisited, active and hover. </h4>
+            <p>
+              Turns out that it is possible to use contrast to differentiate between a link and it's surrounding text while sill maintaining sufficient contrast with the background. HOWEVER, it is NOT possible to use contrast to distinguish between a visited link, unvisited link, AND surrounding text while ALSO maintaining sufficient contrast with the background. Some other method must be used in addition to contrast (e.g., text decoration, weight, outline, etc.).
+              <ul>
+                <li>
+                  <span class="color-contrast">Unvisited link (blue)</span> - contrast sufficient with background, but NOT sufficient to distinguish from surrounding text. Text underline used to distinguish from surrounding text.
+                  <ul>
+                    <li>
+                      <span class="color-contrast-hover">Hover link (green)</span> - same contrast as unvisited link; dotted underline to differentiate between unvisited, visited, and hover
+                    </li>
+                    <li>
+                      <span class="color-contrast-active">Active link (orange)</span> - same contrast as univisited link; wavy underline to differentiate between univisited, visited, hover, and active
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="color-contrast-visited">Visited link (purple, underlined)</span> - contrast sufficient with background AND to distinguish from unvisited link.
+                </li>
+              </ul>
+            </p>
+            <p>
+              <a href="#samples" class="color-contrast">Unvisited link</a> (Don't click on it if you want it to stay that way)
+            </p>
+            <p>
+              <a href="#ex14" class="color-contrast">Visited link</a> (Click it to visit it)
+            </p>
+
     </div>
   </body>
 </html>

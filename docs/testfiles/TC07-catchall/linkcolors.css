@@ -2,13 +2,53 @@
   margin:16px;
 }
 
+body {
+  color:black
+}
+
+.no-color {
+  color:black
+}
+
+.color-only-text {
+  color: #4d4d4d
+}
+
 .color-only {
-  color:#0000ff;
-  text-decoration:none
+  color: #0000ff;
+  text-decoration: none;
+  cursor: text;
 }
 
 .color-only:visited, .color-only-visited {
-  color:#990000;
+  color: #8600b3;
+}
+
+.color-only:hover, .color-only-hover {
+  color: #006622;
+}
+
+.color-only:active, .color-only-active {
+  color: #b32400;
+}
+
+.color-contrast {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.color-contrast:visited, .color-contrast-visited {
+  color: #ce02ce;
+}
+
+.color-contrast:hover, .color-contrast-hover {
+  color: #006622;
+  text-decoration-style: dotted;
+}
+
+.color-contrast:active, .color-contrast-active {
+  color: #b32400;
+  text-decoration-style: wavy;
 }
 
 table, td, th {
