@@ -125,21 +125,21 @@
           <h3 id="ex27">27. Color (hue) AND some other method to identify link, indicate visited/unvisited, and identify active/hover</h3>
           <h4 id="ex27a">27.a. COLOR (hue) AND CONTRAST to identify and differentiate between visited/unvisited, active and hover. </h4>
             <p>
-              Turns out that it is possible to use contrast to differentiate between a link and it's surrounding text while sill maintaining sufficient contrast with the background. HOWEVER, it is NOT possible to use contrast to distinguish between a visited link, unvisited link, AND surrounding text while ALSO maintaining sufficient contrast with the background. Some other method must be used in addition to contrast (e.g., text decoration, weight, outline, etc.).
+              Turns out that it is possible to use contrast to differentiate between a link and it's surrounding text while still maintaining sufficient contrast with the background. HOWEVER, it is NOT possible to use contrast to distinguish between a visited link, unvisited link, AND surrounding text while ALSO maintaining sufficient contrast with the background. Some other method must be used in addition to contrast (e.g., text decoration, weight, outline, cursor type, etc.).
               <ul>
                 <li>
-                  <span class="color-contrast">Unvisited link (blue)</span> - contrast sufficient with background, but NOT sufficient to distinguish from surrounding text. Text underline used to distinguish from surrounding text.
+                  <span class="color-contrast">Unvisited link (blue)</span> - contrast sufficient with background AND to distinguish from surrounding text. Cursor type: pointer, which is also a separate visual indication of the link (but only on hover).
                   <ul>
                     <li>
-                      <span class="color-contrast-hover">Hover link (green)</span> - same contrast as unvisited link; dotted underline to differentiate between unvisited, visited, and hover
+                      <span class="color-contrast-hover">Hover link (green)</span> - similar contrast as unvisited link; dotted underline to differentiate between unvisited, visited, and hover
                     </li>
                     <li>
-                      <span class="color-contrast-active">Active link (orange)</span> - same contrast as univisited link; wavy underline to differentiate between univisited, visited, hover, and active
+                      <span class="color-contrast-active">Active link (orange)</span> - similar contrast as univisited link; wavy underline to differentiate between univisited, visited, hover, and active
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <span class="color-contrast-visited">Visited link (purple, underlined)</span> - contrast sufficient with background AND to distinguish from unvisited link.
+                  <span class="color-contrast-visited">Visited link (black)</span> - contrast sufficient with background AND to distinguish from unvisited link (but not to distinguish between the link and surrounding text).
                 </li>
               </ul>
             </p>

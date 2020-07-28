@@ -33,21 +33,21 @@ body {
 }
 
 .color-contrast {
-  color: #0000ff;
-  text-decoration: underline;
+  color: #5e5eff;
 }
 
 .color-contrast:visited, .color-contrast-visited {
-  color: #ce02ce;
+  color: #000000;
+  text-decoration-style: dashed;
 }
 
 .color-contrast:hover, .color-contrast-hover {
-  color: #006622;
+  color: #008a24;
   text-decoration-style: dotted;
 }
 
 .color-contrast:active, .color-contrast-active {
-  color: #b32400;
+  color: #d1421e;
   text-decoration-style: wavy;
 }
 
