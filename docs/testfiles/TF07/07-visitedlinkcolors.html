@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Visited/Unvisited Link Color Samples</title>
+    <link rel="stylesheet" href="linkcolors.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Visited/Unvisited Link Samples</h1>
+        <p>
+          The code samples below are presented here on a single page to facilitate review of the ICT Baseline test for Use of Color (<a href="https://section508coordinators.github.io/ICTTestingBaseline/07Sensory.html#test-procedure-for-sc-141-use-of-color">7. Sensory Characteristics > Use of Color</a>). For use in the ICT Baseline Alignment Validation process, each code sample will be separated into its own test file.
+        </p>
+        <h2>Code Sample Index - Use of color in links</h2>
+          <h3>Key</h3>
+            <table>
+              <tr>
+                <th scope="row">
+                  PASS
+                </th>
+                <td>
+                  Use of color plus some other method (one or more)
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  FAIL
+                </th>
+                <td>
+                  Use of color only
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  DNA
+                </th>
+                <td>
+                  Color not used
+                </td>
+              </tr>
+            </table>
+          <h3>Index table</h3>
+            <p>
+              All possible combinations of PASS/FAIL/DNA results for methods using color to…
+                <ul>
+                  <li>
+                    Differentiate a link from surrounding text
+                  </li>
+                  <li>
+                    Differentiate between visited/unvisited links
+                  </li>
+                  <li>
+                    Differentiate hover/active link from other links
+                  </li>
+                </ul>
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    Code Sample #
+                  </th>
+                  <th>
+                    Link
+                  </th>
+                  <th>
+                    Visited
+                  </th>
+                  <th>
+                    Active/Hover
+                  </th>
+                </tr>
+                <tr><td><a href="#ex1">1</a></td><td>DNA</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td>2</td><td>DNA</td><td>DNA</td><td>FAIL</td></tr>
+                <tr><td>3</td><td>DNA</td><td>DNA</td><td>PASS</td></tr>
+                <tr><td>4</td><td>DNA</td><td>FAIL</td><td>DNA</td></tr>
+                <tr><td>5</td><td>DNA</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td>6</td><td>DNA</td><td>FAIL</td><td>PASS</td></tr>
+                <tr><td>7</td><td>DNA</td><td>PASS</td><td>DNA</td></tr>
+                <tr><td>8</td><td>DNA</td><td>PASS</td><td>FAIL</td></tr>
+                <tr><td>9</td><td>DNA</td><td>PASS</td><td>PASS</td></tr>
+                <tr><td>10</td><td>FAIL</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td>11</td><td>FAIL</td><td>DNA</td><td>FAIL</td></tr>
+                <tr><td>12</td><td>FAIL</td><td>DNA</td><td>PASS</td></tr>
+                <tr><td>13</td><td>FAIL</td><td>FAIL</td><td>DNA</td></tr>
+                <tr><td><a href="#ex14">14</a></td><td>FAIL</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td>15</td><td>FAIL</td><td>FAIL</td><td>PASS</td></tr>
+                <tr><td>16</td><td>FAIL</td><td>PASS</td><td>DNA</td></tr>
+                <tr><td>17</td><td>FAIL</td><td>PASS</td><td>FAIL</td></tr>
+                <tr><td>18</td><td>FAIL</td><td>PASS</td><td>PASS</td></tr>
+                <tr><td>19</td><td>PASS</td><td>DNA</td><td>DNA</td></tr>
+                <tr><td>20</td><td>PASS</td><td>DNA</td><td>FAIL</td></tr>
+                <tr><td>21</td><td>PASS</td><td>DNA</td><td>PASS</td></tr>
+                <tr><td>22</td><td>PASS</td><td>FAIL</td><td>DNA</td></tr>
+                <tr><td>23</td><td>PASS</td><td>FAIL</td><td>FAIL</td></tr>
+                <tr><td>24</td><td>PASS</td><td>FAIL</td><td>PASS</td></tr>
+                <tr><td>25</td><td>PASS</td><td>PASS</td><td>DNA</td></tr>
+                <tr><td>26</td><td>PASS</td><td>PASS</td><td>FAIL</td></tr>
+                <tr><td><a href="#ex14">27</a></td><td>PASS</td><td>PASS</td><td>PASS</td></tr>
+              </thead>
+            </table>
+        <h2 id="samples">Code Samples</h2>
+        <h3 id="ex1">1. Color not used to differentiate links</h3>
+          <p>
+            These links do no use color to differentiate them as links or to differentiate visited links from unvisited links.
+          </p>
+          <p>
+            <a href="#samples" class="no-color">Unvisited link</a>
+          </p>
+          <p>
+            <a href="#" class="no-color">Visited link</a>
+          </p>
+
+        <h3 id="ex14">14. Color (hue) only to identify link, indicate visited/unvisited, and identify active/hover</h3>
+          <p class="color-only-text">
+            The <span class="color-only">blue (unvisited)</span>, <span class="color-only-visited">purple (visited)</span>, <span class="color-only-hover">green (hover)</span>, and <span class="color-only-active">orange (active)</span> link text all have similar luminance/lightness. All have sufficient contrast between background/foreground, but insufficient contrast between visited, unvisited, hover, and active colors. All also have insufficient contrast between the link text and surrounding text to differentiate the links from the text. The cursor is also the same for links as it is for text, so does not provide a method to differentiate from surrounding text.
+          </p>
+          <p>
+            <a href="#samples" class="color-only">Unvisited link</a> (Don't click on it if you want it to stay that way)
+          </p>
+          <p>
+            <a href="#ex14" class="color-only">Visited link</a> (Click it to visit it)
+          </p>
+
+          <h3 id="ex27">27. Color (hue) AND some other method to identify link, indicate visited/unvisited, and identify active/hover</h3>
+          <h4 id="ex27a">27.a. COLOR (hue) AND CONTRAST to identify and differentiate between visited/unvisited, active and hover. </h4>
+            <p>
+              Turns out that it is possible to use contrast to differentiate between a link and it's surrounding text while still maintaining sufficient contrast with the background. HOWEVER, it is NOT possible to use contrast to distinguish between a visited link, unvisited link, AND surrounding text while ALSO maintaining sufficient contrast with the background. Some other method must be used in addition to contrast (e.g., text decoration, weight, outline, cursor type, etc.).
+              <ul>
+                <li>
+                  <span class="color-contrast">Unvisited link (blue)</span> - contrast sufficient with background AND to distinguish from surrounding text. Cursor type: pointer, which is also a separate visual indication of the link (but only on hover).
+                  <ul>
+                    <li>
+                      <span class="color-contrast-hover">Hover link (green)</span> - similar contrast as unvisited link; dotted underline to differentiate between unvisited, visited, and hover
+                    </li>
+                    <li>
+                      <span class="color-contrast-active">Active link (orange)</span> - similar contrast as univisited link; wavy underline to differentiate between univisited, visited, hover, and active
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="color-contrast-visited">Visited link (black)</span> - contrast sufficient with background AND to distinguish from unvisited link (but not to distinguish between the link and surrounding text).
+                </li>
+              </ul>
+            </p>
+            <p>
+              <a href="#samples" class="color-contrast">Unvisited link</a> (Don't click on it if you want it to stay that way)
+            </p>
+            <p>
+              <a href="#ex14" class="color-contrast">Visited link</a> (Click it to visit it)
+            </p>
+
+    </div>
+  </body>
+</html>

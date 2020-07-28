@@ -1,0 +1,61 @@
+.container {
+  margin:16px;
+}
+
+body {
+  color:black
+}
+
+.no-color {
+  color:black
+}
+
+.color-only-text {
+  color: #4d4d4d
+}
+
+.color-only {
+  color: #0000ff;
+  text-decoration: none;
+  cursor: text;
+}
+
+.color-only:visited, .color-only-visited {
+  color: #8600b3;
+}
+
+.color-only:hover, .color-only-hover {
+  color: #006622;
+}
+
+.color-only:active, .color-only-active {
+  color: #b32400;
+}
+
+.color-contrast {
+  color: #5e5eff;
+}
+
+.color-contrast:visited, .color-contrast-visited {
+  color: #000000;
+  text-decoration-style: dashed;
+}
+
+.color-contrast:hover, .color-contrast-hover {
+  color: #008a24;
+  text-decoration-style: dotted;
+}
+
+.color-contrast:active, .color-contrast-active {
+  color: #d1421e;
+  text-decoration-style: wavy;
+}
+
+table, td, th {
+  border: 3px solid black;
+  border-collapse: collapse
+}
+
+td, th {
+  padding: 5px
+}
