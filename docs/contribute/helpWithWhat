@@ -53,7 +53,7 @@
   	<nav class="col d-none d-xl-block col-xl-2 pr-0 order-2 sec-nav" aria-label="secondary navigation" id="secnav">
   		<h4 class="bg-light border-left mb-0 p-2">Table of Contents</h4>
   		<ul class="pl-2 border-left toc bg-light">
-  			<li class="toc-item"><a class="bg-light" href="#what-you-can-help-with">How to Contribute: What You Can Help With</a>
+  			<li class="toc-item"><a class="bg-light" href="#what-you-can-help-with">Contributing: What You Can Help With</a>
   				<ul>
   					<li class="toc-item"><a class="bg-light" href="#test-cases">Developing and Evaluating Test Cases</a></li>
   					<li class="toc-item"><a class="bg-light" href="#outreach">Planning and Conducting Outreach</a></li>
