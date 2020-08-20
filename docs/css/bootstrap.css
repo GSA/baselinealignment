@@ -510,7 +510,8 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  /* Proposed change (ADK) color: #e83e8c; */
+  color: #C00000;
   word-wrap: break-word;
 }
 
