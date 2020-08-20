@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Image - with aria-hidden="true"</title>
+    <title>Image - with non-descriptive alt text</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -76,13 +76,13 @@
   			<div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
   				<div class="card shadow">
   					<div class="card-body">
-  						<h1 class="card-title" id="TCtitle">Image - with aria-hidden="true"</h1>
+  						<h1 class="card-title" id="TCtitle">Image - with non-descriptive alt text</h1>
   							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
   								<h3 id="TCid">Test Case ID</h3>
-  									<p>TC06-009-fail</p>
+  									<p>TC06-010-fail</p>
   								<h3 id="TCdesc">Test Case Description</h3>
   									<p>Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image. Then determine whether the text alternative output for the image provides an equivalent description of the image.</p>
-  									<p>The code sample provides an equivalent description of the image in an ALT attribute. Hwoever, because it includes <code>aria-hidden="true"</code>, Assistive Technologies should ignore the presence of the image. A successful test should identify a FAIL against Baseline 6. Images because the meaningful image DOES NOT provide an equivalent text description.</p>
+  									<p>The code sample provides a text alternative in an ALT attribute. Hwoever, the text alternative DOES NOT provide an equivalent description.</p>
   								<h3 id="TCbase">Applicable ICT Baseline</h3>
 								  <p><a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images">6.1 Test Procedure for Meaningful Images</a></p>
 								  <p><strong>Baseline Test ID:</strong> 6.1-MeaningfulImage</p>
@@ -121,22 +121,22 @@
   						<h2 class="border-bottom" id="TCdet">Test Case Detail</h2>
   							<h3 id="TCresult">Expected Baseline Result</h3>
   								<p><strong>FAIL</strong></p>
-  								<p>The image in the code sample provides an ALT attribute with a value that provides an equivalent text alternative description of the image. However, the image also includes <code>aria-hidden="true"</code>, which would prompt Assistive Technologies to ignore the image and its text alternative description.</p>
+  								<p>The image in the code sample provides an ALT attribute with a value that DOES NOT provide an equivalent text alternative description of the image. </p>
   							<h3 id="TCdata">Test Data (code/link)</h3>
   								<h4 id="TCcode">Code</h4>
   									<pre class="bg-light callout">
   										<code>
   &ltbody&gt
 	&ltimg src="../assets/images/corplogo.png" width="50" height="50"
-          class="" alt="Bland Corp. logo" aria-hidden="true"&gt
+          class="" alt="pngfilelogo"&gt
 	&ltp&gtThis is a meaningful image&lt/p&gt
   &lt/body&gt
   										</code>
   									</pre>
   								<h4 id="TCurl">Single-Page URL</h4>
-  									<p><a href="../testfiles/TF06/06-009.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TF06/06-009.html</a></p>
+  									<p><a href="../testfiles/TF06/06-010.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TF06/06-010.html</a></p>
   								<h4 id="TCframe">Embedded Code</h4>
-  									<iframe src="../testfiles/TF06/06-009.html" class="card shadow my-3"></iframe>
+  									<iframe src="../testfiles/TF06/06-010.html" class="card shadow my-3"></iframe>
   						<h2 id="TCsteps">Test Steps</h2>
   							<table class="table table-hover">
   								<thead class="thead-dark">
@@ -160,32 +160,17 @@
   									<tr>
   										<td>3.</td>
   										<td>Calculate the accessible name and accessible description output for the image according to <a href="https://www.w3.org/TR/html-aam-1.0/#img-element">HTML Accessibility API Mappings 1.0 for img</a>.</td>
-  										<td>Without <code>aria-hidden="true"</code>, the output for the accessible name and accessible description computations would be "Bland Corp. logo". In this case, the text alternative is provided via an <code>alt</code> attribute.</td>
+  										<td>The accessible name and accessible description computations is "pngfilelogo". In this case, the text alternative is provided via an <code>alt</code> attribute.</td>
   									</tr>
 									<tr>
 										<td>4.</td>
   										<td>Determine whether the text alternative provides an equivalent description of the the image.</td>
-  										<td>Based on the page context, the text alternative provides an equivalent description of the image.</td>
+  										<td>Based on the page context, the text alternative DOES NOT provide an equivalent description of the image.</td>
                     				</tr>
-                    				<tr>
-										<td>5.</td>
-  										<td>Check that the <code>&ltimg&gt</code> DOES NOT include <code>role="presentation"</code>.</td>
-  										<td>There is no <code>role</code> attribute defined for the <code>&ltimg&gt</code> element.</td>
-									</tr>
-									<tr>
-										<td>6.</td>
-  										<td>Check that the <code>&ltimg&gt</code> DOES NOT include <code>role="none"</code>.</td>
-  										<td>There is no <code>role</code> attribute defined for the <code>&ltimg&gt</code> element.</td>
-									</tr>
-									<tr>  
-										<td>7.</td>
-										<td>Check that the <code>&ltimg&gt</code> DOES NOT have <code>aria-hidden</code> set to <code>"true"</code>.</td>
-										<td>There <code>&ltimg&gt</code>> includes <code>aria-hidden="true"</code>. Therefore, this check fails.</td>
-								  </tr>
 									<tr>
 										<td>8.</td>
 										<td>Determine whether any checks fail according to the <a href="#test-instructions">6. Images test instructions</a>.</td>
-										<td>Because the image includes <code>aria-hidden="true"</code>, it fails one of the checks in the test instructions. The result for Baseline 6. Images is a FAIL.</td>
+										<td>Because the text alternative does not provide an equivalent description of the image, it is not necessary to complete the remaining checks in the test instructions. The image fails step two of the test instructions, and the result for Baseline 6. Images is a FAIL.</td>
 									</tr>
   								</tbody>
   							</table>
