@@ -79,10 +79,10 @@
   						<h1 class="card-title" id="TCtitle">Image - text equivalent via aria-describedby attribute</h1>
   							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
   								<h3 id="TCid">Test Case ID</h3>
-  									<p>TC06-004-pass</p>
+  									<p>TC06-006-pass</p>
   								<h3 id="TCdesc">Test Case Description</h3>
   									<p>Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative output for the image. Then determine whether the text alternative output for the image provides an equivalent description of the image.</p>
-  									<p>The code sample provides an equivalent description of the image in an aria-label attribute. A successful test should identify a PASS against Baseline 6. Images.</p>
+  									<p>The code sample provides an equivalent description of the image via an aria-describedby attribute. A successful test should identify a PASS against Baseline 6. Images.</p>
   								<h3 id="TCbase">Applicable ICT Baseline</h3>
 								  <p><a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images">6.1 Test Procedure for Meaningful Images</a></p>
 								  <p><strong>Baseline Test ID:</strong> 6.1-MeaningfulImage</p>
@@ -161,7 +161,7 @@
                     				<tr>
   										<td>3.</td>
   										<td>Calculate the accessible name and accessible description output for the image according to <a href="https://www.w3.org/TR/html-aam-1.0/#img-element">HTML Accessibility API Mappings 1.0 for img</a>.</td>
-  										<td>The output for the accessible name and accessible descriptions computations is "Bland Corp. logo". In this case, the text alternative is provided via an <code>aria-describedby</code> attribute, mapped to a hidden parapgraph of text (using <code>style="display:none"</code>). Even though aria-describedby contributes to the accessible description component of the text alternative, and generally should be used to supplement an accessible name, it nevertheless provides adequate description.</td>
+  										<td>The output for the accessible name and accessible description computations is "Bland Corp. logo". In this case, the text alternative is provided via an <code>aria-describedby</code> attribute, mapped to a hidden parapgraph of text (using <code>style="display:none"</code>). Even though aria-describedby contributes to the accessible description component of the text alternative, and generally should be used to supplement an accessible name, it nevertheless provides adequate description.</td>
   									</tr>
 									<tr>
 										<td>4.</td>
