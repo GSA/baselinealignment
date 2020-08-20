@@ -16,7 +16,7 @@
   <body class="h-100">
 	<header class="navbar navbar-dark bg-dark flex">
 		<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Content</a>
-		<a href="#secnav" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Page Table of Contents</a>
+		<a href="#secnav" id="skipNavLink2" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Page Table of Contents</a>
 		<a class="navbar-brand d-md-none btn btn-dark mr-1" href="javascript:void(0)" onclick="sidebarOpenClose()" aria-label="Open/Close Nav Menu" id="openCloseMenu" aria-expanded="false" aria-haspopup="true" aria-controls="site-nav"><i class="fa fa-bars"></i></a>
 		<a href="https://github.com/Section508Coordinators/BaselineTestPages" class="navbar-brand ml-auto order-1 order-md-2 btn btn-dark m-0"><i class="fa fa-github" aria-label="Open Repository in GitHub"></i></a>
 		<span class="navbar-link text-white" id="nav-title"><span class="d-none d-md-inline">ICT Accessibility Testing </span>Baseline Alignment</span>
@@ -56,7 +56,6 @@
 					<li class="toc-item"><a class="bg-light" href="#TCdesc">Test Case Description</a></li>
 					<li class="toc-item"><a class="bg-light" href="#TCbase">Applicable Baseline</a></li>
 					<li class="toc-item"><a class="bg-light" href="#TCreq">Applicable Requirement</a></li>
-					<li class="toc-item"><a class="bg-light" href="#TCtype">Test Type</a></li>
 				</ul>
 			</li>
 			<li class="toc-item"><a class="bg-light" href="#TCdet">Test Case Detail</a>
@@ -87,8 +86,6 @@
 								<h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
 									<p>[WCAG/508 Req linked to URL]</p>
 									<p>[WCAG SC/508 Req text]</p>
-								<h3 id="TCtype">Expected Test Type</h3>
-									<p>[automated/manual]</p>
 					</div>
 				</div>
 				<div class="card shadow my-3">
@@ -99,12 +96,12 @@
 								<p>[Any explanation about why we would expect this result]</p>
 							<h3 id="TCdata">Test Data (code/link)</h3>
 								<h4 id="TCcode">Code</h4>
-									<pre><code>include the code here</code></pre>
+									<pre><code>[insert the 'escaped' test file code here]</code></pre>
 								<h4 id="TCurl">Single-Page URL</h4>
 									<p>[URL to page hosted within this repository]</p>
 								<h4 id="TCframe">Embedded Code</h4>
 									<p>[embed page within iframe]</p>
-									<iframe></iframe>
+									<iframe title="embedded test file">[Insert embedded test file URL here]</iframe>
 						<h2 id="TCsteps">Test Steps</h2>
 							<table class="table table-hover">
 								<thead class="thead-dark">
