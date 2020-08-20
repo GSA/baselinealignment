@@ -134,9 +134,9 @@
   										</code>
   									</pre>
   								<h4 id="TCurl">Single-Page URL</h4>
-  									<p><a href="../testfiles/TC06-003-pass/06-003-pass.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TC06-003-pass/06-003-pass.html</a></p>
+  									<p><a href="../testfiles/TF06/06-003.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TF06/06-003.html</a></p>
   								<h4 id="TCframe">Embedded Code</h4>
-  									<iframe src="../testfiles/TC06-003-pass/06-003-pass.html" class="card shadow my-3"></iframe>
+  									<iframe src="../testfiles/TF06/06-003.html" class="card shadow my-3"></iframe>
   						<h2 id="TCsteps">Test Steps</h2>
   							<table class="table table-hover">
   								<thead class="thead-dark">
@@ -147,7 +147,7 @@
   									</tr>
   								</thead>
   								<tbody>
-                    <tr>
+                    				<tr>
   										<td>1.</td>
   										<td>Identify any <code>&ltimg&gt</code> elements.</td>
   										<td>One <code>&ltimg&gt</code> exists in the test data code sample.</td>
@@ -157,28 +157,36 @@
   										<td>Determine whether the image is meaningful. Review the page content and image context to determine whether the image conveys meaningful information.</td>
   										<td>The image is meaningful, based on the text directly below the image.</td>
   									</tr>
-                    <tr>
+                    				<tr>
   										<td>3.</td>
   										<td>Calculate the accessible name and accessible description output for the image according to <a href="https://www.w3.org/TR/html-aam-1.0/#img-element">HTML Accessibility API Mappings 1.0 for img</a>.</td>
   										<td>The output for the accessible name and accessible descriptions computations is "Bland Corp. logo". In this case, the text alternative is provided via a <code>title</code> attribute.</td>
   									</tr>
-                    <tr>
-                      <td>4.</td>
+									<tr>
+										<td>4.</td>
   										<td>Determine whether the text alternative provides an equivalent description of the the image.</td>
   										<td>Based on the page context, the text alternative provides an equivalent description of the image.</td>
-                    </tr>
-                    <td>5.</td>
+									</tr>
+									<tr>
+										<td>5.</td>
   										<td>Check that the <code>&ltimg&gt</code> DOES NOT include <code>role="presentation"</code>.</td>
   										<td>There is no <code>role</code> attribute defined for the <code>&ltimg&gt</code> element.</td>
-  									</tr>
-  									<td>6.</td>
-  										<td>Check that the <code>&ltimg&gt</code> DOES NOT have <code>aria-hidden</code> set to <code>"true"</code>.</td>
-  										<td>There is no <code>aria-hidden</code> attribute defined for the <code>&ltimg&gt</code> element.</td>
-  									</tr>
-  									<td>7.</td>
-  										<td>Determine whether any checks fail according to the <a href="#test-instructions">6. Images test instructions</a>.</td>
-  										<td>All checks pass; therefore, the result for Baseline 6. Images is a PASS.</td>
-  									</tr>
+									</tr>
+									<tr>
+										<td>6.</td>
+										<td>Check that the <code>&ltimg&gt</code> DOES NOT include <code>role="none"</code>.</td>
+										<td>There is no <code>role</code> attribute defined for the <code>&ltimg&gt</code> element.</td>
+									</tr>
+									<tr>  
+										<td>7.</td>
+										<td>Check that the <code>&ltimg&gt</code> DOES NOT have <code>aria-hidden</code> set to <code>"true"</code>.</td>
+										<td>There is no <code>aria-hidden</code> attribute defined for the <code>&ltimg&gt</code> element.</td>
+									</tr>
+									<tr>
+										<td>8.</td>
+										<td>Determine whether any checks fail according to the <a href="#test-instructions">6. Images test instructions</a>.</td>
+										<td>All checks pass; therefore, the result for Baseline 6. Images is a PASS.</td>
+									</tr>
   								</tbody>
   							</table>
   					</div>
