@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en"><!-- InstanceBegin template="/Templates/BAWG-Tmpl-01.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>  
+    <meta charset="utf-8">
+	<!-- InstanceBeginEditable name="doctitle" -->  
+    <title>Input text element - Accessibility tree visibility (display:none)</title>
+
+	<!-- InstanceEndEditable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+	
+	<!-- FontAwesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../css/baseline-align.css">
+	<!-- InstanceBeginEditable name="dochead" -->  
+	<!--// ADK: Put any other <head> contents here //-->
+	<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+  </head>
+  <body class="h-100">
+	<header class="navbar navbar-dark bg-dark flex">
+		<a href="#main-content" id="skipNavLink" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Content</a>
+		<a href="#secnav" id="skipNavLink2" class="visually-hidden visible-when-focused bypass-block-link" tabindex="1">Skip to Page Table of Contents</a>
+		<a class="navbar-brand d-md-none btn btn-dark mr-1" href="javascript:void(0)" onclick="sidebarOpenClose()" aria-label="Open/Close Nav Menu" id="openCloseMenu" aria-expanded="false" aria-haspopup="true" aria-controls="site-nav"><i class="fa fa-bars"></i></a>
+		<a href="https://github.com/Section508Coordinators/BaselineTestPages" class="navbar-brand ml-auto order-1 order-md-2 btn btn-dark m-0"><i class="fa fa-github" aria-label="Open Repository in GitHub"></i></a>
+		<span class="navbar-link text-white" id="nav-title"><span class="d-none d-md-inline">ICT Accessibility Testing </span>Baseline Alignment</span>
+	</header>
+	
+		
+	<!-- Primary site nav manu -->
+	<nav class="col d-none d-md-block bg-light col-md-3 col-xl-2 base-nav order-0 px-0 shadow fixed-sidebar" id="site-nav" aria-label="primary navigation">
+		<div class="px-2 row">
+			<h4 class="text-dark bg-light d-inline-block ml-2 my-auto p-2">Menu</h4>
+			<a href="javascript:void(0)" onclick="sidebarOpenClose()" class="d-none btn btn-light my-1 mr-2 ml-auto text-danger" aria-label="Close Nave Menu" id="closeSidebar"><i class="fa fa-remove"></i></a>
+		</div>
+		<ul class="list-group-flush bg-light px-0">
+			<li><a href="#" class="list-group-item list-group-item-action bg-light">Home</a></li>
+			<li><a href="#" class="list-group-item list-group-item-action bg-light">Contributing</a></li>
+			<li><a href="#" class="list-group-item list-group-item-action bg-light">Validating Alignment</a></li>
+			<li><a  href="../testcases.html" class="list-group-item list-group-item-action bg-light">Test Cases</a></li>
+			<li><a  href="#" class="list-group-item list-group-item-action bg-light">Glossary</a></li>
+		</ul>
+		<ul class="list-group-flush bg-light px-0 border-top mt-5">
+			<li><a href="https://section508coordinators.github.io/ICTTestingBaseline/" class="list-group-item list-group-item-action bg-light">ICT Baseline (external)</a></li>
+		</ul>
+		
+	</nav>
+			
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div onclick="sidebarOpenClose()" style="cursor:pointer" class="d-none overlay" title="Close Nav Menu" id="myOverlay"></div>
+			
+	
+	<!-- Scondary navigation for page-specific TOC. Remove if not necessary -->
+	<nav class="col d-none d-xl-block col-xl-2 pr-0 order-2 sec-nav" aria-label="secondary navigation" id="secnav">
+		<h4 class="bg-light border-left mb-0 p-2">Table of Contents</h4>
+		<ul class="pl-2 border-left toc bg-light">
+			<li class="toc-item"><a class="bg-light" href="#TCsum">Test Case Summary</a>
+				<ul>
+					<li class="toc-item"><a class="bg-light" href="#TCid">Test Case ID</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCdesc">Test Case Description</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCbase">Applicable Baseline</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCreq">Applicable Requirement</a></li>
+					
+					<!-- Commenting out test type
+					<li class="toc-item"><a class="bg-light" href="#TCtype">Test Type</a></li>
+					-->
+					
+				</ul>
+			</li>
+			<li class="toc-item"><a class="bg-light" href="#TCdet">Test Case Detail</a>
+				<ul>
+					<li class="toc-item"><a class="bg-light" href="#TCresult">Expected Result</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCdata">Test Data</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCsteps">Test Steps</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+	<!-- Main page content -->
+	<main class="container-fluid mb-auto flex-shrink-0" id="main-content">	
+		<div class="row">	
+			<div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
+				<div class="card shadow">
+					<div class="card-body">
+						<h1 class="card-title" id="TCtitle"><!-- InstanceBeginEditable name="TCtitle" -->Input text element - Accessibility tree visibility (<code class="code">display:none</code>)<!-- InstanceEndEditable --></h1>
+							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
+								<h3 id="TCid">Test Case ID</h3>
+									<p><!-- InstanceBeginEditable name="TCid" -->TC10-009-DNA<!-- InstanceEndEditable --></p>
+								<h3 id="TCdesc">Test Case Description</h3>
+									<p><!-- InstanceBeginEditable name="TCdesc" -->The purpose of this test case is to detect  attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for <code class="code">input</code> elements. The code sample does not present itself via the <a href="https://wicg.github.io/aom/explainer.html">Accessibility tree/Accessibility object model (AOM)</a>, visually, or programmatically  and consequently cannot be identified by the tester within the current test process. Consequently, a successful test should indicate that this test does not apply to Baseline Test 10 Forms.<br>
+                                        <br>
+                                    <strong><u>Note</u>:</strong> If the intent of the developer is to make the <code class="code">input</code> element  available to users as a part of meaningful ICT functionality, then the CSS property <code class="code">display:none</code> should not be used with interactive elements.<!-- InstanceEndEditable --></p>
+								<h3 id="TCbase">Applicable ICT Baseline</h3>
+									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/10Forms.html">10. Forms</a><!-- InstanceEndEditable --></p>
+									<h4><!-- InstanceBeginEditable name="TCbaseheading4" -->Complete and programmatically associated form labels and instructions<!-- InstanceEndEditable --></h4>
+									<h5>Test Instructions</h5>
+								
+									<!--Test instructions text: //-->
+									<!-- InstanceBeginEditable name="TCbasetext" -->
+									<h6 id="test-procedure-for-131-info-and-relationships-and-412-name-role-value"> 4.1.2 Name, Role, Value and 1.3.1 Info and Relationships</h6>
+									<ol>
+									  <li>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</li>
+									  <li>Find all instructions and cues (textual and graphical) that are related to form components, including groupings, order of completion, special conditions or qualifiers, format instructions, etc.</li>
+									  <li>Check that the combination of the accessible name and accessible description is not empty. [SC 4.1.2]</li>
+									  <li> Check that the non-empty combination of the accessible name and accessible description and other programmatic associations (e.g., table column and/or row associations) describes each form component and includes all relevant instructions and cues (textual and graphical). [SC 1.3.1] For details on the computation of the accessible name and accessible description, references include:
+									    <ul>
+									      <li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-url-and-textarea-element">HTML Accessibility API Mappings 1.0 for text <code class="code">input</code></a></li>
+									      <li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-button-input-type-submit-and-input-type-reset">HTML Accessibility API Mappings for <code class="code">input</code> controls</a></li>
+									      <li><a href="https://www.w3.org/TR/html-aam-1.0/#button-element">HTML Accessibility API Mappings for <code class="code">button</code> element</a> </li>
+									      <li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-image">HTML Accessibility API Mappings for <code class="code">input type="image"</code></a></li>
+									      <li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements">HTML Accessibility API Mappings for Other Form Elements</a> </li>
+								        </ul>
+									  </li>
+									</ol>
+									<!-- InstanceEndEditable -->
+						
+									<h5>Test Results</h5>
+						
+									<!--Test results text: //-->
+					  <!-- InstanceBeginEditable name="TCbasetestresults" -->	
+					  <ul>
+									  <li>If any of the above checks fail, then SC 1.3.1, SC 4.1.2, and Baseline Requirement 10 fail.</li>
+									  <li>If there is no such content, then the result for the Baseline Test 10. Forms is <strong>DOES NOT APPLY (DNA)</strong></li>
+								    </ul>
+									<!-- InstanceEndEditable -->
+						
+						
+	                  <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
+						<!-- InstanceBeginEditable name="TCreqlink" -->
+						<ul>
+						  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">WCAG2 1.3.1 Info and Relationships</a>: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</li>
+						  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html">WCAG2 4.1.2 Name, Role, Value</a>: For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</li>
+					    </ul>
+						<!-- InstanceEndEditable -->
+								
+							<!-- Commented out Expected Test Type
+					        <h3 id="TCtype">Expected Test Type</h3>
+									<p>[automated/manual]</p>
+							//-->
+					</div>
+				</div>
+				<div class="card shadow my-3">
+					<div class="card-body">
+						
+						<h2 class="border-bottom" id="TCdet">Test Case Detail</h2>
+							<h3 id="TCresult">Expected Baseline Result</h3>
+						
+								<p><strong>
+								<!-- InstanceBeginEditable name="Pass-Fail-DNA" -->
+								DNA
+								<!-- InstanceEndEditable -->
+								</strong></p>
+						
+								<p>
+								<!-- InstanceBeginEditable name="TCresultexplaination" -->
+								[The input element in the code sample does not provide any attributes that would contribute to an accessible name or description.
+								<!-- InstanceEndEditable -->								
+								</p>
+					
+							<h3 id="TCdata">Test Data (code/link)</h3>
+								<h4 id="TCcode">Code</h4>
+<pre class="bg-light callout">
+<code>
+<!-- InstanceBeginEditable name="TC_code" -->
+&lt;div style=&quot;display:none&quot;&gt;
+ &lt;p class=&quot;plabel&quot;&gt;First Name: &lt;input type=&quot;text&quot; size=&quot;25&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+<!-- InstanceEndEditable -->
+</code>
+</pre>
+					
+								<h4 id="TCurl">Single-Page URL</h4>
+					
+									<p>
+									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/BaselineTestPages/testfiles/TF10/10-009.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TF10/10-009.html</a><!-- InstanceEndEditable -->
+									</p>
+					
+								<h4 id="TCframe">Embedded Code</h4>
+									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
+						
+									<iframe src="https://section508coordinators.github.io/BaselineTestPages/testfiles/TF10/10-009.html" title="embedded code">
+									</iframe>
+						
+									<!-- InstanceEndEditable -->
+						
+						<h2 id="TCsteps">Test Steps</h2>
+							<!-- InstanceBeginEditable name="TCteststeptable" -->
+						
+							<table class="table table-hover">
+								<thead class="thead-dark">
+									<tr>
+										<th width="6%" scope="col">Test Step</th>
+										<th width="43%" scope="col">Step Detail</th>
+										<th width="51%" scope="col">Expected Result</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</td>
+										<td>The single  <code class="code">input</code> element in this test case is enclosed in the <code class="code">display:none</code> CSS property which removes it from the accessibility tree, visible, and programmatic detection. Even though the code exists in the DOM, this property renders the element undetectable and therefore not applicable to this Baseline Test based on the results of test step 1.</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- InstanceEndEditable -->
+					</div>
+				</div>
+			</div>
+		</div>		
+	</main>
+	
+	<!-- Footer content -->
+	<footer class="mt-auto py-2 bg-light">
+		<div class="footer-content offset-md-2 offset-xl-2 px-3 col-md-9 col-xl-8">
+			<span>copyright notice and link to license page</span>
+		</div>
+	</footer>
+      
+      
+    <!-- jQuery, Bootstrap JS (bundled with Popper) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>  
+	<script src="js/baseline-align.js"></script>
+  </body>
+<!-- InstanceEnd --></html>
