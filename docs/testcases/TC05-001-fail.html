@@ -90,7 +90,7 @@
 								<h3 id="TCid">Test Case ID</h3>
 									<p><!-- InstanceBeginEditable name="TCid" -->TC05-001-fail<!-- InstanceEndEditable --></p>
 								<h3 id="TCdesc">Test Case Description</h3>
-									<p><!-- InstanceBeginEditable name="TCdesc" -->The aria-live politeness setting is used to set the priority with which screen readers should announce updates to designated live regions. The options are off, polite and assertive with the default being off. For any live region meant to convey meaningful information to assistive technology, the off setting, being the same as the omission of the live region altogether, would represent a failure of accessibility.  The code sample presents aria-live='off'. A successful test should identify a failure against Baseline Test 5.1-ChangeContent.<!-- InstanceEndEditable --></p>
+									<p><!-- InstanceBeginEditable name="TCdesc" --> The aria-live politeness setting is used to set the priority with which screen readers should announce updates to designated live regions. The options are off, polite and assertive. With the exceptions of the ARIA roles of alert, log, and status (with default option settings of assertive, polite, and polite respectively), the default aria-live option is off. For any live region meant to convey meaningful information to assistive technology, the off setting, being the same as the omission of the live region altogether, would represent a failure of accessibility. The code sample presents aria-live='off'. A successful test should identify a failure against Baseline Test 5.1-ChangeContent.<!-- InstanceEndEditable --></p>
 								<h3 id="TCbase">Applicable ICT Baseline</h3>
 									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/05Changing.html">05. Changing Content</a><!-- InstanceEndEditable --></p>
 									<h4><!-- InstanceBeginEditable name="TCbaseheading4" -->Visual and programmatically associated changes in content<!-- InstanceEndEditable --></h4>
@@ -119,7 +119,7 @@
 									      </li>
 									      <li>State: the state of the element is accurate after a change, if applicable
 									        <ul>
-									          <li>Evaluate ARIA and element-specific attributes (e.g., &lt;option selected=&rdquo;true&rdquo;&gt;)</li>
+									          <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
 								            </ul>
 								          </li>
 									      <li>Value: the value is updated after a change, if applicable.</li>
@@ -187,13 +187,13 @@
 								<h4 id="TCurl">Single-Page URL</h4>
 					
 									<p>
-									<!-- InstanceBeginEditable name="TCtestfile" --><a href="http://gits508cbaselinetestpages.kciprojects.com/testfiles/05-001.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TF05-001/05-001.html</a><!-- InstanceEndEditable -->
+									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/BaselineTestPages/testfiles/TF05/05-001.html">https://section508coordinators.github.io/BaselineTestPages/testfiles/TF05/05-001.html</a><!-- InstanceEndEditable -->
 									</p>
 					
 								<h4 id="TCframe">Embedded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
 						
-									<iframe src="http://gits508cbaselinetestpages.kciprojects.com/testfiles/05-001.html" title="embedded code">
+									<iframe src="https://section508coordinators.github.io/BaselineTestPages/testfiles/TF05/05-001.html" title="embedded code">
 									</iframe>
 						
 									<!-- InstanceEndEditable -->
@@ -212,14 +212,24 @@
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
-										  <ul>
-										    <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
-								        </ul></td>
-										<td>The <code>text</code> content being changed does not present notification of that change programmatically through alerts, shift in focus, or use of ARIA live regions.</td>
+										<td>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
+										<td>For the test example, the content (text) changes on selection of a button element - either by mouse or keyboard selection.</td>
 									</tr>
 									<tr>
-										<td>2</td>
+									  <td>2</td>
+									  <td>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</td>
+									  <td>The state of HTML text  updates in response to a clicking the &quot;Update&quot; button element.</td>
+								  </tr>
+									<tr>
+									  <td height="169">3</td>
+									  <td>Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
+									    <ul>
+									      <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
+							          </ul></td>
+									  <td>The page does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute included in the code example, because it is set to &quot;off&quot;, does not execute and therefore does not provide a programmatic notification.</td>
+								  </tr>
+									<tr>
+										<td>4</td>
 										<td>For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
 										  <ul>
 										    <li>Name: the name is accurate after a change.
@@ -234,17 +244,17 @@
 									        </li>
 										    <li>State: the state of the element is accurate after a change, if applicable
 										      <ul>
-										        <li>Evaluate ARIA and element-specific attributes (e.g., &lt;option selected=&rdquo;true&rdquo;&gt;)</li>
+										        <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
 									          </ul>
 									        </li>
 										    <li>Value: the value is updated after a change, if applicable.</li>
 								        </ul></td>
-										<td>The  <code>text</code> content change is accurate.</td>
+										<td>The change in content is not programmatically provided.</td>
 									</tr>
 									<tr>
 									  <td>3</td>
 									  <td>If any of the above checks fail, then Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
-									  <td>Test step 2 fails due to the absence of the text change being conveyed programmatically in any way and therefore Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
+									  <td>Test step 3 fails due to the absence of the text change being conveyed programmatically in any way and therefore Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
 								  </tr>
 								</tbody>
 							</table>
