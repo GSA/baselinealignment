@@ -112,7 +112,7 @@ header {
 	z-index: 10;
 }
 
-#skipNavLink {
+#skipNavLink, #skipNavLink2 {
     color: #000;
 }
 
