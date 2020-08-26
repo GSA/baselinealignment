@@ -98,7 +98,15 @@
 								
 									<!--Test instructions text: //-->
 									<!-- InstanceBeginEditable name="TCbasetext" -->
-									<h6 id="test-procedure-for-131-info-and-relationships-and-412-name-role-value"> 4.1.2 Name, Role, Value </h6>
+									<p><strong>Baseline Test ID:</strong> 5.1-ChangeContent</p>
+									
+									<h6>Identify Content</h6>
+									<p>Identify changes in presented content (both user driven and automatic). Examples include changes to images, navigation trees, data table sort controls, automatic information updates, form elements, revealed content, etc.</p>
+									<ul>
+									  <li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
+									  <li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc. </li>
+									</ul>
+									<h6>4.1.2 Name, Role, Value </h6>
 									<ol>
 									  <li>Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
 									    <ol>
@@ -133,7 +141,7 @@
 									<!--Test results text: //-->
 					  <!-- InstanceBeginEditable name="TCbasetestresults" -->	
 					  <ul>
-									  <li>If any of the above checks fail, then SC 4.1.2, and Baseline Requirement 05 fail.</li>
+									  <li>If any of the above checks fail, then Baseline Test 5.1-ChangeContent fails.</li>
 								    </ul>
 									<!-- InstanceEndEditable -->
 						
@@ -204,69 +212,61 @@
 							<table class="table table-hover">
 								<thead class="thead-dark">
 									<tr>
-										<th width="6%" id="th_step">Test Step</th>
-										<th width="43%" id="th_detail">Step Detail</th>
-										<th width="51%" id="th_result">Expected Result</th>
+										<th width="6%" scope="col">Test Step</th>
+										<th width="43%" scope="col">Step Detail</th>
+										<th width="51%" scope="col">Expected Result</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-									  <th id="th_content" colspan="3"><h4>Identify Content</h4></th>
-								  </tr>
-									<tr>
-										<th headers = "th_content th_step" id="rn1">1</th>
+										<td>1</td>
 										<td headers = "th_content th_detail rn1">It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
 										<td headers = "th_content th_result rn1">For the test example, the content (text) changes on selection of a button element - either by mouse or keyboard selection.</td>
 									</tr>
 									<tr>
-									  <th headers = "th_content th_step" id="rn2">2</th>
+									  <td>2</td>
 									  <td headers = "th_content th_detail rn2">Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</td>
 									  <td headers = "th_content th_result rn2">The state of HTML text  updates in response to a clicking the &quot;Update&quot; button element.</td>
 								  </tr>
 									<tr>
-									  <th id="th_instruct" height="69" colspan="3"><h4>Test Instructions</h4></th>
-								  </tr>
-									<tr>
-									  <th headers = "th_instruct th_step" id="rn3" height="169">1</th>
-									  <td headers = "th_instruct th_detail rn3">Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
+									  <td>3</td>
+									  <td headers = "th_content th_detail rn2">Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
 									    <ul>
 									      <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
 							          </ul></td>
-									  <td headers = "th_instruct th_result rn3">The page does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute included in the code example, because it is set to &quot;off&quot;, does not execute and therefore does not provide a programmatic notification.</td>
+									  <td headers = "th_content th_result rn2">The page does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute included in the code example, because it is set to "off", does not execute and therefore does not provide a programmatic notification.</td>
 								  </tr>
 									<tr>
-										<th headers = "th_instruct th_step" id="rn4" >2</th>
-										<td headers = "th_instruct th_detail rn4">For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
-										  <ul>
-										    <li>Name: the name is accurate after a change.
-										      <ul>
-										        <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.</li>
-									          </ul>
-									        </li>
-										    <li>Role: the role accurately describes the purpose of the element after a change, if applicable.
-										      <ul>
-										        <li>Consider ARIA role, element type, and other descriptive text.</li>
-									          </ul>
-									        </li>
-										    <li>State: the state of the element is accurate after a change, if applicable
-										      <ul>
-										        <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
-									          </ul>
-									        </li>
-										    <li>Value: the value is updated after a change, if applicable.</li>
-								        </ul></td>
-										<td headers = "th_instruct th_result rn4">The change in content is not programmatically provided.</td>
-									</tr>
-									<tr>
-									  <th id="th_testResults" colspan="3"><h4>Test Results</h4></th>
+									  <td>4</td>
+									  <td headers = "th_content th_detail rn2">For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
+									    <ul>
+									      <li>Name: the name is accurate after a change.
+									        <ul>
+									          <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.</li>
+								            </ul>
+								          </li>
+									      <li>Role: the role accurately describes the purpose of the element after a change, if applicable.
+									        <ul>
+									          <li>Consider ARIA role, element type, and other descriptive text.</li>
+								            </ul>
+								          </li>
+									      <li>State: the state of the element is accurate after a change, if applicable
+									        <ul>
+									          <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
+								            </ul>
+								          </li>
+									      <li>Value: the value is updated after a change, if applicable.</li>
+							          </ul></td>
+									  <td headers = "th_content th_result rn2">The change in content is not programmatically provided.</td>
 								  </tr>
 									<tr>
-									  <td aria-label="Test results bullet 1"><ul><li>&nbsp;</li></ul></td>
-									  <td headers = "th_testResults th_detail">If any of the above checks fail, then Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
-									  <td headers = "th_testResults th_result">Test instruction 2 fails due to the absence of the text change being conveyed programmatically in any way and therefore Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
+									  <td>5</td>
+									  <td headers = "th_content th_detail rn2">If any of the above checks fail, then Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
+									  <td headers = "th_content th_result rn2">Test step 3 fails due to the absence of the text change being conveyed programmatically in any way and therefore Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
 								  </tr>
 								</tbody>
 							</table>
+
 							<!-- InstanceEndEditable -->
 					</div>
 				</div>
