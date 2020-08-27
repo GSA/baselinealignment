@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10-001-fail</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../../../css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../../../css/baseline-align.css">
+<!--custom style -->
+<style>
+    body {
+        padding:10px 10px;
+    }
+    
+    .plabel {
+        color:#2E1CA0;
+        font-weight:500;
+    }
+    
+fieldset {
+    border: 2px solid #CCA383;
+    width: 275px;
+    padding-left:15px;
+    }
+
+fieldset legend {
+    font-size:1.25em;
+}
+    
+    p {
+        padding-left:3px;
+        padding-top:5px;
+    }
+    </style>
+<!--custom style -->
+
+    
+    
+</head>
+
+<body style="padding-left: 10px; padding-top: 10px;">
+
+<fieldset>
+    <legend>aria-live='off'</legend>
+        <button onclick="document.getElementById('content2').textContent = 'The text has been updated.'">Update</button>&nbsp;<button onclick="location.reload()">Reset</button>
+        <p id="content2" aria-live="off">Initial text.</p>
+</fieldset>  
+    
+</body>
+</html>

@@ -95,14 +95,14 @@
 									<p><!-- TemplateBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html">6. Images</a> ([Baseline Name linked to URL])<!-- TemplateEndEditable --></p>
 									<h4><!-- TemplateBeginEditable name="TCbaseheading4" --> 
 									Meaningful Images (Test Case Heading)<!-- TemplateEndEditable --></h4>
-									<h5>Test Instructions</h5>
+									<h5><!-- TemplateBeginEditable name="TProcedure" -->00.0 Test Procedure for Form Name<!-- TemplateEndEditable --></h5>
 								
 									<!--Test instructions text: //-->
 									<!-- TemplateBeginEditable name="TCbasetext" -->
 									&lt;If the image is meaningful...&gt;
 									<!-- TemplateEndEditable -->
 						
-									<h5>Test Results</h5>
+									<h6>Test Results</h6>
 						
 									<!--Test results text: //-->
 					  <!-- TemplateBeginEditable name="TCbasetestresults" -->	

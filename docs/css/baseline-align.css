@@ -139,3 +139,16 @@ header {
 .bypass-block-target:focus {
 	outline: none;
 }
+
+code {
+    color: #C00000 !important;
+}
+
+.code {
+    background-color: rgba(222,222,222,.5);
+    border-radius: 2px;
+    box-decoration-break: clone;
+    padding: 0 2px;
+    word-wrap: break-word;
+}
+
