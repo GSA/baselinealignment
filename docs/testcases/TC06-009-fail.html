@@ -82,7 +82,7 @@
   									<p>TC06-009-fail</p>
   								<h3 id="TCdesc">Test Case Description</h3>
   									<p>Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image. Then determine whether the text alternative output for the image provides an equivalent description of the image.</p>
-  									<p>The code sample provides an equivalent description of the image in an ALT attribute. Hwoever, because it includes <code>aria-hidden="true"</code>, Assistive Technologies should ignore the presence of the image. A successful test should identify a FAIL against Baseline 6. Images because the meaningful image DOES NOT provide an equivalent text description.</p>
+  									<p>The code sample provides an equivalent description of the image in an ALT attribute. However, because it includes <code>aria-hidden="true"</code>, Assistive Technologies should ignore the presence of the image. A successful test should identify a FAIL against Baseline 6. Images because the meaningful image DOES NOT provide an equivalent text description.</p>
   								<h3 id="TCbase">Applicable ICT Baseline</h3>
 								  <p><a href="https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images">6.1 Test Procedure for Meaningful Images</a></p>
 								  <p><strong>Baseline Test ID:</strong> 6.1-MeaningfulImage</p>
@@ -129,7 +129,7 @@
   &ltbody&gt
 	&ltimg src="../assets/images/corplogo.png" width="50" height="50"
           class="" alt="Bland Corp. logo" aria-hidden="true"&gt
-	&ltp&gtThis is a meaningful image&lt/p&gt
+	&ltp&gtThis is a meaningful image of our company logo&lt/p&gt
   &lt/body&gt
   										</code>
   									</pre>
