@@ -95,19 +95,24 @@
                                         <br>
                                     <strong><u>Note</u>:</strong> If the intent of the developer is to make the <code class="code">input</code> element  available to users as a part of meaningful ICT functionality, then the CSS property <code class="code">visibility:hidden</code> should not be used with interactive elements.<!-- InstanceEndEditable --></p>
 								<h3 id="TCbase">Applicable ICT Baseline</h3>
-									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/10Forms.html">10. Forms</a><!-- InstanceEndEditable --></p>
-									<h4><!-- InstanceBeginEditable name="TCbaseheading4" -->Complete and programmatically associated form labels and instructions<!-- InstanceEndEditable --></h4>
-									<h5><!-- InstanceBeginEditable name="TProcedure" -->10.1 Test Procedure for Form Names<!-- InstanceEndEditable --></h5>
-								
-									<!--Test instructions text: //-->
-									<!-- InstanceBeginEditable name="TCbasetext" -->
-									<p><strong>Baseline Test ID:</strong> 10.1-FormName</p>
-                                    <h6>Identify Content</h6>
-                                    <ol>
-                                      <li>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</li>
-                                      <li>Find all instructions and cues (textual and graphical) that are related to form components, including groupings, order of completion, special conditions or qualifiers, format instructions, etc.</li>
-                                    </ol>
-                                    <h6>Test Instructions</h6>
+									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/10Forms.html">10.1 Test Procedure for Form Names</a> <br>
+									  <br>
+									  <strong>Baseline Test ID:</strong> 10.1-FormName<!-- InstanceEndEditable --></p>
+																	
+									<!-- Identify Content Heading //-->
+                      <h4>Identify Content</h4>
+                      <!-- InstanceBeginEditable name="tcIdentifyContent" -->
+                      <ol>
+                        <li>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</li>
+                        <li>Find all instructions and cues (textual and graphical) that are related to form components, including groupings, order of completion, special conditions or qualifiers, format instructions, etc.</li>
+                      </ol>
+                      <!-- InstanceEndEditable -->
+						
+                                    <!--Test Instructions Heading //-->
+                      <h4>Test Instructions</h4>
+						
+									<!--Test instructions //-->
+                                    <!-- InstanceBeginEditable name="tcTestInstructions" -->
                                     <ol>
                                       <li>Check that the combination of the accessible name and accessible description is not empty. [SC 4.1.2]</li>
                                       <li>Check that the non-empty combination of the accessible name and accessible description and other programmatic associations (e.g., table column and/or row associations) describes each form component and includes all relevant instructions and cues (textual and graphical). [SC 1.3.1] For details on the computation of the accessible name and accessible description, references include:
@@ -116,24 +121,22 @@
                                           <li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-button-input-type-submit-and-input-type-reset">HTML Accessibility API Mappings for <code class="code">input</code> controls</a></li>
                                           <li><a href="https://www.w3.org/TR/html-aam-1.0/#button-element">HTML Accessibility API Mappings for <code class="code">button</code> element</a> </li>
                                           <li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-image">HTML Accessibility API Mappings for <code class="code">input type="image"</code></a></li>
-                                          <li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements">HTML Accessibility API Mappings for Other Form Elements</a> </li>
+                                          <li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements">HTML Accessibility API Mappings for Other Form Elements</a></li>
                                         </ul>
                                       </li>
                                     </ol>
-									<!-- InstanceEndEditable -->
+                                    <!-- InstanceEndEditable -->
+
+                                    <!--Test Results Heading //-->
+                      <h4>Test Results</h4>
 						
-									<h6>Test Results</h6>
+                        
+									<!--Test results //-->
+                                    <!-- InstanceBeginEditable name="tcTestResults" -->If any of the above checks fail, then Baseline Test 10.1-FormName fails.<!-- InstanceEndEditable -->
+                    
+                        
 						
-									<!--Test results text: //-->
-					  <!-- InstanceBeginEditable name="TCbasetestresults" -->	
-					  <ul>
-									  <li>If any of the above checks fail, then SC 1.3.1, SC 4.1.2, and Baseline Requirement 10 fail.</li>
-									  <li>If there is no such content, then the result for the Baseline Test 10. Forms is <strong>DOES NOT APPLY (DNA)</strong></li>
-								    </ul>
-									<!-- InstanceEndEditable -->
-						
-						
-	                  <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
+                      <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
 						<!-- InstanceBeginEditable name="TCreqlink" -->
 						<ul>
 						  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">WCAG2 1.3.1 Info and Relationships</a>: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</li>

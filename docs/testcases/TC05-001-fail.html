@@ -92,61 +92,67 @@
 								<h3 id="TCdesc">Test Case Description</h3>
 									<p><!-- InstanceBeginEditable name="TCdesc" --> The aria-live politeness setting is used to set the priority with which screen readers should announce updates to designated live regions. The options are off, polite and assertive. With the exceptions of the ARIA roles of alert, log, and status (with default option settings of assertive, polite, and polite respectively), the default aria-live option is off. For any live region meant to convey meaningful information to assistive technology, the off setting, being the same as the omission of the live region altogether, would represent a failure of accessibility. The code sample presents aria-live='off'. A successful test should identify a failure against Baseline Test 5.1-ChangeContent.<!-- InstanceEndEditable --></p>
 								<h3 id="TCbase">Applicable ICT Baseline</h3>
-									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/05Changing.html">05. Changing Content</a><!-- InstanceEndEditable --></p>
-									<h4><!-- InstanceBeginEditable name="TCbaseheading4" -->Visual and programmatically associated changes in content<!-- InstanceEndEditable --></h4>
-									<h5><!-- InstanceBeginEditable name="TProcedure" -->5.1 Test Procedure for Changes in Content<!-- InstanceEndEditable --></h5>
-								
-									<!--Test instructions text: //-->
-									<!-- InstanceBeginEditable name="TCbasetext" -->
-									<p><strong>Baseline Test ID:</strong> 5.1-ChangeContent</p>
-									
-									<h6>Identify Content</h6>
-									<p>Identify changes in presented content (both user driven and automatic). Examples include changes to images, navigation trees, data table sort controls, automatic information updates, form elements, revealed content, etc.</p>
-									<ul>
-									  <li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
-									  <li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc. </li>
-									</ul>
-									<h6>4.1.2 Name, Role, Value </h6>
-									<ol>
-									  <li>Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
-									    <ol>
-									      <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
-								        </ol>
-									  </li>
-									  <li>For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
-									    <ol>
-									      <li>Name: the name is accurate after a change.
-									        <ul>
-									          <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.									      </li>
-									        </ul>
-									      </li>
-									      <li>Role: the role accurately describes the purpose of the element after a change, if applicable.
-									        <ul>
-									          <li>Consider ARIA role, element type, and other descriptive text.								              </li>
-								            </ul>
-									      </li>
-									      <li>State: the state of the element is accurate after a change, if applicable
-									        <ul>
-									          <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
-								            </ul>
-								          </li>
-									      <li>Value: the value is updated after a change, if applicable.</li>
-									    </ol>
-									  </li>
-</ol>
-									<!-- InstanceEndEditable -->
+									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/05Changing.html">5.1 Test Procedure for Changes in Content</a><br>
+									  <br>
+									  <strong>Baseline Test ID:</strong> 5.1-ChangeContent<br>
+									<!-- InstanceEndEditable --></p>
+																	
+									<!-- Identify Content Heading //-->
+                      <h4>Identify Content</h4>
+                      <!-- InstanceBeginEditable name="tcIdentifyContent" -->
+                      <p>Identify changes in presented content (both user driven and automatic). Examples include changes to images, navigation trees, data table sort controls, automatic information updates, form elements, revealed content, etc.</p>
+                      <ul>
+                        <li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
+                        <li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.                      </li>
+                      </ul>
+                      <!-- InstanceEndEditable -->
 						
-									<h6>Test Results</h6>
+                                    <!--Test Instructions Heading //-->
+                      <h4>Test Instructions</h4>
 						
-									<!--Test results text: //-->
-					  <!-- InstanceBeginEditable name="TCbasetestresults" -->	
-					  <ul>
-									  <li>If any of the above checks fail, then Baseline Test 5.1-ChangeContent fails.</li>
-								    </ul>
-									<!-- InstanceEndEditable -->
+									<!--Test instructions //-->
+                                    <!-- InstanceBeginEditable name="tcTestInstructions" -->									
+                                    <ol>
+                                      <li>Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
+                                        <ul>
+                                          <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
+                                        </ul>
+                                      </li>
+                                      <li>For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
+                                        <ul>
+                                          <li>Name: the name is accurate after a change.
+                                            <ul>
+                                              <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.</li>
+                                            </ul>
+                                          </li>
+                                          <li>Role: the role accurately describes the purpose of the element after a change, if applicable.
+                                            <ul>
+                                              <li>Consider ARIA role, element type, and other descriptive text.</li>
+                                            </ul>
+                                          </li>
+                                          <li>State: the state of the element is accurate after a change, if applicable
+                                            <ul>
+                                              <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
+                                            </ul>
+                                          </li>
+                                          <li>Value: the value is updated after a change, if applicable.</li>
+                                        </ul>
+                                      </li>
+                                    </ol>
+                                    <!-- InstanceEndEditable -->
+
+                                    <!--Test Results Heading //-->
+                      <h4>Test Results</h4>
 						
+                        
+									<!--Test results //-->
+                                    <!-- InstanceBeginEditable name="tcTestResults" -->
+                                    <ul>
+                                      <li>If any of the above checks fail, then Baseline Test 5.1-ChangeContent fails.</li></ul><!-- InstanceEndEditable -->
+                    
+                        
 						
-	                  <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
+                      <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
 						<!-- InstanceBeginEditable name="TCreqlink" -->
 						<ul>
 						  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html">WCAG2 4.1.2 Name, Role, Value</a>: For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</li>
@@ -167,7 +173,7 @@
 						
 								<p><strong>
 								<!-- InstanceBeginEditable name="Pass-Fail-DNA" -->
-								Fail
+								FAIL
 								<!-- InstanceEndEditable -->
 								</strong></p>
 						
