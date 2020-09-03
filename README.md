@@ -13,7 +13,7 @@ Although the ICT Testing Baseline does not provide processes or tools for conduc
 
 The ICT Baseline Alignment Validation Framework provides test cases as a way for agencies to check whether their own test processes and use of testing tools cover all Section 508 requirements. Two different processes that align to the Baseline should produce the same replicable and reliable test results.
 
-##How to Contribute
+## How to Contribute
 Working Group members can use the [editor on GitHub](https://github.com/Section508Coordinators/BaselineTestPages/edit/master/README.md) to directly edit this file to add references. Members can also  navigate to the [Baseline Test Pages repository](https://github.com/Section508Coordinators/BaselineTestPages) to add files to test. Static pages can be viewed via GitHub Pages from this repository at the following url: <https://section508coordinators.github.io/BaselineTestPages/>.
 
 Contributors do not need to be highly technical nor make a long-term commitment, although both skills and time can certainly be helpful. The ICT Baseline Alignment Working Group needs help developing and evaluating test cases. Accessibility advocates are also needed to spread the word about the Framework, develop a governance structure, participate in governance, develop and maintain the website, provide user experience and plain language expertise, and even provide legal support. Please visit our [How You Can Help](https://section508coordinators.github.io/BaselineTestPages/contributing.html#helping) and [How We Work](https://section508coordinators.github.io/BaselineTestPages/contributing.html#how-we-work) sections or contact us at <ictbaseline@gsa.gov> for more information about getting involved.
