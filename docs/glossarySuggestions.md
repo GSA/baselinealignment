@@ -13,7 +13,7 @@ I don't know how basic you want to go (is the audience anyone who might want to 
 * Programmatic, programmatically determined (when "behind the scenes" is insufficient, I find this harder to explain to average OPM employees than I thought it would be), programmatically set, programmatically associated... Examples of programmatic event notifications are given in [TC05-001-fail](https://section508coordinators.github.io/BaselineTestPages/testcases/TC05-001-fail.html)
 * Accessible name and accesible description, accessible name and accessible description computation (links to various resources throughout the test cases)
 * Text alternative
-* Image ([TC06-001-fail[(https://section508coordinators.github.io/BaselineTestPages/testcases/TC06-001-fail.html) and [TC06-002-pass](https://section508coordinators.github.io/BaselineTestPages/testcases/TC06-002-pass.html) have a list of examples)
+* Image ([TC06-001-fail](https://section508coordinators.github.io/BaselineTestPages/testcases/TC06-001-fail.html) and [TC06-002-pass](https://section508coordinators.github.io/BaselineTestPages/testcases/TC06-002-pass.html) have a list of examples)
 * Meaningful image
 * Decorative image
 * Equivalent description
