@@ -98,7 +98,7 @@
 																	
 									<!-- Identify Content Heading //-->
                       <h4>Identify Content</h4>
-                      <!-- InstanceBeginEditable name="tcIdentifyContent" -->
+                                    <!-- InstanceBeginEditable name="tcIdentifyContent" -->
                       <ol>
                         <li>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</li>
                         <li>Find all instructions and cues (textual and graphical) that are related to form components, including groupings, order of completion, special conditions or qualifiers, format instructions, etc.</li>
@@ -106,7 +106,7 @@
                       <!-- InstanceEndEditable -->
 						
                                     <!--Test Instructions Heading //-->
-                      <h4>Test Instructions</h4>
+                      <h4 id="test-instructions">Test Instructions</h4>
 						
 									<!--Test instructions //-->
                                     <!-- InstanceBeginEditable name="tcTestInstructions" -->
@@ -133,7 +133,7 @@
                     
                         
 						
-                      <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
+	                                <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
 						<!-- InstanceBeginEditable name="TCreqlink" -->
 						<ul>
 						  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">WCAG2 1.3.1 Info and Relationships</a>: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</li>
@@ -218,8 +218,8 @@ First Name: &lt;input type=&quot;text&quot; size=&quot;25&quot;&gt;
 								  </tr>
 									<tr>
 									  <td>4</td>
-									  <td>If any of the above checks fail, then Baseline Test <strong>10.1-FormName</strong> fails.</td>
-									  <td>Test step 3 fails due to an <em><strong>empty</strong></em> accessible name and/or description in the text alternative computation output and therefore Baseline Test <strong>10.1-FormName</strong> fails.</td>
+									  <td>Determine whether any checks fail according to the <a href="#test-instructions">10.1 Test Procedure for Form Names test instructions</a>.</td>
+									  <td>This test fails due to an <em><strong>empty</strong></em> accessible name and/or description in the text alternative computation output and therefore Baseline Test <strong>10.1-FormName</strong> fails.</td>
 								  </tr>
 								</tbody>
 							</table>

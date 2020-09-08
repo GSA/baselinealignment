@@ -100,8 +100,8 @@
                                     <strong>Baseline Test ID:</strong> 10.1-FormName<!-- InstanceEndEditable --></p>
 																	
 									<!-- Identify Content Heading //-->
-                      <h4>Identify Content</h4>
-                      <!-- InstanceBeginEditable name="tcIdentifyContent" -->
+                      <h4 id="identify-content">Identify Content</h4>
+                                    <!-- InstanceBeginEditable name="tcIdentifyContent" -->
                       <ol>
                         <li>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</li>
                         <li>Find all instructions and cues (textual and graphical) that are related to form components, including groupings, order of completion, special conditions or qualifiers, format instructions, etc.</li>
@@ -109,7 +109,7 @@
                       <!-- InstanceEndEditable -->
 						
                                     <!--Test Instructions Heading //-->
-                      <h4>Test Instructions</h4>
+                      <h4 id="test-instructions">Test Instructions</h4>
 						
 									<!--Test instructions //-->
                                     <!-- InstanceBeginEditable name="tcTestInstructions" -->									
@@ -136,7 +136,7 @@
                     
                         
 						
-                      <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
+	                                <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
 						<!-- InstanceBeginEditable name="TCreqlink" -->
 						<ul>
 						  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">WCAG2 1.3.1 Info and Relationships</a>: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</li>
@@ -208,8 +208,8 @@
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</td>
-										<td>The single  <code class="code">input</code> element in this test case is enclosed in the <code class="code">display:none</code> CSS property which removes it from the accessibility tree, visible, and programmatic detection. Even though the code exists in the DOM, this property renders the element undetectable and therefore not applicable to this Baseline Test based on the results of test step 1.</td>
+										<td>Determine whether this test applies according to the <a href="#identify-content">10.1 Test Procedure for Form Names identify content instructions</a>.</td>
+										<td>The single  <code class="code">input</code> element in this test case is enclosed in the <code class="code">display:none</code> CSS property which removes it from the accessibility tree, visible, and programmatic detection. Even though the code exists in the DOM, this property renders the element undetectable and therefore not applicable to this Baseline Test.</td>
 									</tr>
 								</tbody>
 							</table>
