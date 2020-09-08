@@ -96,11 +96,11 @@
                                     <strong>Baseline Test ID:</strong> 6.1-MeaningfulImage<!-- TemplateEndEditable --></p>
 																	
 									<!-- Identify Content Heading //-->
-                      <h4>Identify Content</h4>
+                      <h4 id="identify-content">Identify Content</h4>
                                     <!-- TemplateBeginEditable name="tcIdentifyContent" -->Identify any image that conveys information (include images of text; functional images used to initiate action, convey meaning, or prompting a response; image maps, etc.).<!-- TemplateEndEditable -->
 						
                                     <!--Test Instructions Heading //-->
-                      <h4>Test Instructions</h4>
+                      <h4 id="test-instructions">Test Instructions</h4>
 						
 									<!--Test instructions //-->
                                     <!-- TemplateBeginEditable name="tcTestInstructions" -->
