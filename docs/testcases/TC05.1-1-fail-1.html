@@ -201,13 +201,13 @@
 								<h4 id="TCurl">Single-Page URL</h4>
 					
 									<p>
-									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05-001.html">https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05-001.html</a><!-- InstanceEndEditable -->
+									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05.1-1-fail-1.html">https://section508coordinators.github.io/baselinealignment/testfiles/TF05/TC05.1-1-fail-1.html</a><!-- InstanceEndEditable -->
 									</p>
 					
 								<h4 id="TCframe">Embedded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
 						
-									<iframe src="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05-001.html" title="embedded code">
+									<iframe src="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05.1-1-fail-1.html" title="embedded code">
 									</iframe>
 						
 									<!-- InstanceEndEditable -->
@@ -225,17 +225,17 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>1</td>
-										<td headers = "th_content th_detail rn1">It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
+										<td>-</td>
+										<td headers = "th_content th_detail rn1">Identify Content: It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
 										<td headers = "th_content th_result rn1">For the test example, the content (text) changes on selection of a button element - either by mouse or keyboard selection.</td>
 									</tr>
 									<tr>
-									  <td>2</td>
-									  <td headers = "th_content th_detail rn2">Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</td>
+									  <td>-</td>
+									  <td headers = "th_content th_detail rn2">Identify Content: Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</td>
 									  <td headers = "th_content th_result rn2">The state of HTML text  updates in response to a clicking the &quot;Update&quot; button element.</td>
 								  </tr>
 									<tr>
-									  <td>3</td>
+									  <td>1</td>
 									  <td headers = "th_content th_detail rn2">Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
 									    <ul>
 									      <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
@@ -243,13 +243,13 @@
 									  <td headers = "th_content th_result rn2">The page does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute included in the code example, because it is set to "off", does not execute and therefore does not provide a programmatic notification.</td>
 								  </tr>
 									<tr>
-									  <td>4</td>
+									  <td>2</td>
 									  <td headers = "th_content th_detail rn2">For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
-									    <ul>
+									    <ol style="list-style-type: lower-roman;">
 									      <li>Name: the name is accurate after a change.
 									        <ul>
 									          <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.</li>
-								            </ul>
+								            </ol>
 								          </li>
 									      <li>Role: the role accurately describes the purpose of the element after a change, if applicable.
 									        <ul>
