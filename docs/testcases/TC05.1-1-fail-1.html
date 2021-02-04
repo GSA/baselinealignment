@@ -73,7 +73,8 @@
 				<ul>
 					<li class="toc-item"><a class="bg-light" href="#TCresult">Expected Result</a></li>
 					<li class="toc-item"><a class="bg-light" href="#TCdata">Test Data</a></li>
-					<li class="toc-item"><a class="bg-light" href="#TCsteps">Test Steps</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCid">Baseline Test Identify Content</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCsteps">Baseline Test Instructions</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -151,12 +152,34 @@
 									</iframe>
 						
 									<!-- InstanceEndEditable -->
-						
-						<h2 id="TCsteps">Test Steps</h2>
+						<h2 id="TCid">Baseline Test Identify Content</h2>
+						<table class="table table-hover">
+							<caption>Description of the test case's applicability to the Baseline Test's Identify Content section. </caption>
+							<thead class="thead-dark">
+								<tr>
+									<th width="50%" scope="col">Identify Content</th>
+									<th width="50%" scope="col">Test Case Applicability</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>-</td>
+									<th scope="row">It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
+									<td>For the test case, the content (text) changes on selection of a button element - either by mouse or keyboard selection.</th>
+								</tr>
+								<tr>
+								  <td>-</td>
+								  <th scope="row">Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</th>
+								  <td>The state of HTML text  updates in response to a clicking the &quot;Update&quot; button element.</td>
+							  </tr>
+							</tbody>
+						</table>
+
+						<h2 id="TCsteps">Baseline Test Instructions</h2>
 							<!-- InstanceBeginEditable name="TCteststeptable" -->
 						
 							<table class="table table-hover">
-								<caption>Description of the test case's results for each part of the Baseline Test. Asterisk (*) indicates the test instruction for which this test case was developed.</caption>
+								<caption>Description of the test case's results for the Baseline Test. Asterisk (*) indicates the test instruction for which this test case was developed.</caption>
 								<thead class="thead-dark">
 									<tr>
 										<th width="10%" scope="col">Test Step</th>
@@ -165,16 +188,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>-</td>
-										<th scope="row">Identify Content: It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
-										<td>For the test case, the content (text) changes on selection of a button element - either by mouse or keyboard selection.</th>
-									</tr>
-									<tr>
-									  <td>-</td>
-									  <th scope="row">Identify Content: Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</th>
-									  <td>The state of HTML text  updates in response to a clicking the &quot;Update&quot; button element.</td>
-								  </tr>
+									
 									<tr>
 									  <th scope="row">*5.1-1</th>
 									  <th scope="row">Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
