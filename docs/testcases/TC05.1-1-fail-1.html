@@ -18,6 +18,8 @@
 	<!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
   </head>
   <body class="h-100">
 	<header class="navbar navbar-dark bg-dark flex">
@@ -138,23 +140,40 @@
 <!-- InstanceEndEditable -->
 </code>
 </pre>
-					
+<textarea id="codecopy" readonly rows="7">
+	<p>Here's some text:</p>
+    
+	<p id="content2" aria-live="off">Initial text.</p>
+	<button onclick="document.getElementById('content2').textContent = 'The text has been updated.'">Update</button>&nbsp;
+	<button onclick="document.getElementById('content2').textContent = 'Initial text.'">Reset</button>
+</textarea>
+<div id="codespace">[Placeholder for loaded Test Case Code]</div>	
+<div id="error">No Error</div>
+<script>
+	$( "#codespace" ).load( "../testfiles/TF05/05.1-1-fail-1.html", function( response, status, xhr ) {
+  		if ( status == "error" ) {
+    		var msg = "Sorry but there was an error: ";
+    		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+  		}
+	});
+</script>
+
 								<h4 id="TCurl">Single-Page URL</h4>
 					
 									<p>
-									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05.1-1-fail-1.html">https://section508coordinators.github.io/baselinealignment/testfiles/TF05/TC05.1-1-fail-1.html</a><!-- InstanceEndEditable -->
+									<!-- InstanceBeginEditable name="TCtestfile" --><a href="../testfiles/TF05/05.1-1-fail-1.html" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a><!-- InstanceEndEditable -->
 									</p>
 					
 								<h4 id="TCframe">Embedded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
 						
-									<iframe src="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05.1-1-fail-1.html" title="embedded code">
+									<iframe src="../testfiles/TF05/05.1-1-fail-1.html" title="embedded code">
 									</iframe>
 						
 									<!-- InstanceEndEditable -->
 						<h2 id="TCidc">Baseline Test Identify Content</h2>
 						<table class="table table-hover">
-							<caption>Description of the Baseline Test's Identify Content (to test) applicability to the test case. </caption>
+							<caption>Evaluate Baseline Test's Identify Content to determine applicability to the test case. </caption>
 							<thead class="thead-dark">
 								<tr>
 									<th width="50%" scope="col">Identify Content</th>
@@ -163,13 +182,15 @@
 							</thead>
 							<tbody>
 								<tr>
-									<th scope="row">It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
-									<td>The content (text) changes on selection of a button element - either by mouse or keyboard selection.</th>
+									<th scope="row"><p>Identify changes in presented content (both user driven and automatic). Examples include changes to images, navigation trees, data table sort controls, automatic information updates, form elements, revealed content, etc.</p>
+										<ul>
+											<li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
+											<li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</li>
+										</ul>
+									</th>
+									<td>APPLICABLE: <br>The content (text) changes on selection of a button element - either by mouse or keyboard selection. The value of HTML text changes in response to a clicking the &quot;Update&quot; button element.</td>
 								</tr>
-								<tr>
-								  <th scope="row">Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</th>
-								  <td>The state of HTML text updates in response to a clicking the &quot;Update&quot; button element.</td>
-							  </tr>
+								
 							</tbody>
 						</table>
 
@@ -177,7 +198,7 @@
 							<!-- InstanceBeginEditable name="TCteststeptable" -->
 						
 							<table class="table table-hover">
-								<caption>Description of the test case's results for the Baseline Test instructions. Asterisk (*) indicates the test instruction for which this test case was developed.</caption>
+								<caption>Test case's results for the Baseline Test instructions. Asterisk (*) indicates the test instruction for which this test case was developed.</caption>
 								<thead class="thead-dark">
 									<tr>
 										<th width="10%" scope="col">Test Instruction</th>
@@ -193,7 +214,7 @@
 									    <ul>
 									      <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
 							          </ul></th>
-									  <td><p>The test case does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute included in the code example, because it is set to "off", does not execute and therefore does not provide a programmatic notification.</p><p>Because this test step did not pass, further testing is not needed.</p></td>
+									  <td><p>This test case fails the check in Test Instruction 5.1-1.</p><p>The test case does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute is set to "off" and does not provide a programmatic notification.</p></td>
 								  </tr>
 									<tr>
 									  <th scope="row">5.1-2</th>
@@ -221,7 +242,7 @@
 									<tr>
 									  <th scope="row">Result</th>
 									  <th scope="row">If any of the above checks fail, then Baseline Test <strong>5.1-ChangeContent</strong> fails.</th>
-									  <td>Test step 5.1-1 fails due to the absence of the text change being conveyed programmatically in any way and therefore Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
+									  <td>This test case fails Test Instruction 5.1-1 due to the absence of the text change being conveyed programmatically. As a result, Baseline Test 5.1-ChangeContent fails.</td>
 								  </tr>
 								</tbody>
 							</table>

@@ -43,12 +43,13 @@ fieldset legend {
 </head>
 
 <body style="padding-left: 10px; padding-top: 10px;">
-
-<fieldset>
-    <legend>aria-live='off'</legend>
-        <button onclick="document.getElementById('content2').textContent = 'The text has been updated.'">Update</button>&nbsp;<button onclick="location.reload()">Reset</button>
+<div id="tc_code">
+<p>Here's some text:</p>
+    
         <p id="content2" aria-live="off">Initial text.</p>
-</fieldset>  
+        <button onclick="document.getElementById('content2').textContent = 'The text has been updated.'">Update</button>&nbsp;
+        <button onclick="document.getElementById('content2').textContent = 'Initial text.'">Reset</button>
+</div>
     
 </body>
 </html>
