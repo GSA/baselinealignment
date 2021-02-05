@@ -150,7 +150,7 @@
 <div id="codespace">[Placeholder for loaded Test Case Code]</div>	
 <div id="error">No Error</div>
 <script>
-	$( "#codespace" ).load( "../testfiles/TF05/05.1-1-fail-1.html", function( response, status, xhr ) {
+	$( "#codespace" ).load( "../testfiles/TF05/05.1-1-fail-1.html #tc_code", function( response, status, xhr ) {
   		if ( status == "error" ) {
     		var msg = "Sorry but there was an error: ";
     		$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
