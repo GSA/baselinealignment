@@ -20,12 +20,26 @@
 <!-- InstanceEndEditable -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-
+	//ENTER Test File full URL with http or https.
 	let file = "https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05.1-1-fail-1.html"
 	
 	fetch (file)
-	.then(x => x.text())
-	.then(y => document.getElementById("ta_code").innerHTML = y);
+	.then(function (response) {
+	// The API call was successful!
+	return response.text();
+})
+	.then(function(html) {
+		var parser = new DOMParser();
+		var doc = parser.parseFromString(html, "text/html");
+		//var testcasesnip = doc.getElementById("tc_code");
+		var testcasesnip = doc.getElementById("tc_code").innerHTML;
+		//console.log("Test case snip: " + testcasesnip);
+		document.getElementById("ta_code").innerHTML = testcasesnip
+	})
+	//.then(y => document.getElementById("ta_code").innerHTML = testcasesnip);
+	.catch(function (err) {  
+        console.warn('Failed to fetch page: ', err);  
+    });
 </script>
   </head>
   <body class="h-100">
@@ -138,15 +152,23 @@
 								<h4 id="TCurl">Single-Page URL</h4>
 					
 									<p>
-									<!-- InstanceBeginEditable name="TCtestfile" --><a href="../testfiles/TF05/05.1-1-fail-1.html" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a><!-- InstanceEndEditable -->
+										<script>
+											document.write('<a href="' + file +'" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a>');
+										</script>
+									<!-- InstanceBeginEditable name="TCtestfile" -->
+									<!-- <a href="../testfiles/TF05/05.1-1-fail-1.html" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a>-->
+										<!-- InstanceEndEditable -->
 									</p>
 					
 								<h4 id="TCframe">Embedded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
-						
+										<script>
+											document.write('<iframe id="codeframe" src="' + file + '" title="embedded code"></iframe>');
+										</script>
+									<!--
 									<iframe id="codeframe" src="../testfiles/TF05/05.1-1-fail-1.html" title="embedded code">
 									</iframe>
-						
+								-->
 								<h4 id="if_code">Code</h4>
 									<!-- <pre class="bg-light callout">
 									<code id="code_code">
@@ -161,12 +183,11 @@
 									</code>
 									</pre>  -->
 
-									<textarea id="ta_code" readonly rows="7">
-<p>Here's some text:</p>
-							
-<p id="content2" aria-live="off">Initial text.</p>
-<button onclick="document.getElementById('content2').textContent = 'The text has been updated.'">Update</button>&nbsp;
-<button onclick="document.getElementById('content2').textContent = 'Initial text.'">Reset</button>
+									<textarea id="ta_code" readonly rows="10">
+
+
+<p>COPY&PASTE</p>							
+
 									</textarea>
 
 									<div id="div_code">
