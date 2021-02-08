@@ -159,3 +159,13 @@ code {
     padding: 0 2px;
     word-wrap: break-word;
 }
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 100%;
+	font-family: monospace;
+	background-color: #000;
+	color:aqua;
+}

@@ -18,6 +18,15 @@
 	<!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+
+	let file = "https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05.1-1-fail-1.html"
+	
+	fetch (file)
+	.then(x => x.text())
+	.then(y => document.getElementById("ta_code").innerHTML = y);
+</script>
   </head>
   <body class="h-100">
 	<header class="navbar navbar-dark bg-dark flex">
@@ -61,7 +70,7 @@
 					<li class="toc-item"><a class="bg-light" href="#TCid">Test Case ID</a></li>
 					<li class="toc-item"><a class="bg-light" href="#TCdesc">Test Case Description</a></li>
 					<li class="toc-item"><a class="bg-light" href="#TCbase">Applicable Baseline</a></li>
-					<li class="toc-item"><a class="bg-light" href="#TCreq">Applicable Requirement</a></li>
+					<!--<li class="toc-item"><a class="bg-light" href="#TCreq">Applicable Requirement</a></li>-->
 					
 					<!-- Commenting out test type
 					<li class="toc-item"><a class="bg-light" href="#TCtype">Test Type</a></li>
@@ -73,7 +82,8 @@
 				<ul>
 					<li class="toc-item"><a class="bg-light" href="#TCresult">Expected Result</a></li>
 					<li class="toc-item"><a class="bg-light" href="#TCdata">Test Data</a></li>
-					<li class="toc-item"><a class="bg-light" href="#TCsteps">Test Steps</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCidc">Baseline Test Identify Content</a></li>
+					<li class="toc-item"><a class="bg-light" href="#TCsteps">Baseline Test Instructions</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -88,75 +98,15 @@
 						<h1 class="card-title" id="TCtitle"><!-- InstanceBeginEditable name="TCtitle" -->Changing Content: aria-live='off'<!-- InstanceEndEditable --></h1>
 							<h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
 								<h3 id="TCid">Test Case ID</h3>
-									<p><!-- InstanceBeginEditable name="TCid" -->TC05-001-fail<!-- InstanceEndEditable --></p>
+									<p><!-- InstanceBeginEditable name="TCid" -->TC05.1-1-fail-1<!-- InstanceEndEditable --></p>
 								<h3 id="TCdesc">Test Case Description</h3>
 									<p><!-- InstanceBeginEditable name="TCdesc" --> The aria-live politeness setting is used to set the priority with which screen readers should announce updates to designated live regions. The options are off, polite and assertive. With the exceptions of the ARIA roles of alert, log, and status (with default option settings of assertive, polite, and polite respectively), the default aria-live option is off. For any live region meant to convey meaningful information to assistive technology, the off setting, being the same as the omission of the live region altogether, would represent a failure of accessibility. The code sample presents aria-live='off'. A successful test should identify a failure against Baseline Test 5.1-ChangeContent.<!-- InstanceEndEditable --></p>
-								<h3 id="TCbase">Applicable ICT Baseline</h3>
-									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/05Changing.html">5.1 Test Procedure for Changes in Content</a><br>
-									  <br>
+								<h3 id="TCbase">Applicable ICT Baseline Test</h3>
+									<p><!-- InstanceBeginEditable name="TCbaseURL" --> <a href="https://section508coordinators.github.io/ICTTestingBaseline/05Changing.html#51-test-procedure-for-changes-in-content" target="_blank" rel="noopener">5.1 Test Procedure for Changes in Content</a><br>
 									  <strong>Baseline Test ID:</strong> 5.1-ChangeContent<br>
+									  <strong>Test instruction 1</strong>
 									<!-- InstanceEndEditable --></p>
-																	
-									<!-- Identify Content Heading //-->
-                      <h4>Identify Content</h4>
-                      <!-- InstanceBeginEditable name="tcIdentifyContent" -->
-                      <p>Identify changes in presented content (both user driven and automatic). Examples include changes to images, navigation trees, data table sort controls, automatic information updates, form elements, revealed content, etc.</p>
-                      <ul>
-                        <li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
-                        <li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.                      </li>
-                      </ul>
-                      <!-- InstanceEndEditable -->
-						
-                                    <!--Test Instructions Heading //-->
-                      <h4>Test Instructions</h4>
-						
-									<!--Test instructions //-->
-                                    <!-- InstanceBeginEditable name="tcTestInstructions" -->									
-                                    <ol>
-                                      <li>Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
-                                        <ul>
-                                          <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
-                                        </ul>
-                                      </li>
-                                      <li>For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
-                                        <ul>
-                                          <li>Name: the name is accurate after a change.
-                                            <ul>
-                                              <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.</li>
-                                            </ul>
-                                          </li>
-                                          <li>Role: the role accurately describes the purpose of the element after a change, if applicable.
-                                            <ul>
-                                              <li>Consider ARIA role, element type, and other descriptive text.</li>
-                                            </ul>
-                                          </li>
-                                          <li>State: the state of the element is accurate after a change, if applicable
-                                            <ul>
-                                              <li>Evaluate ARIA and element-specific attributes (e.g., <code class="code">&lt;option selected=&rdquo;true&rdquo;&gt;</code>)</li>
-                                            </ul>
-                                          </li>
-                                          <li>Value: the value is updated after a change, if applicable.</li>
-                                        </ul>
-                                      </li>
-                                    </ol>
-                                    <!-- InstanceEndEditable -->
-
-                                    <!--Test Results Heading //-->
-                      <h4>Test Results</h4>
-						
-                        
-									<!--Test results //-->
-                                    <!-- InstanceBeginEditable name="tcTestResults" -->
-                                    <ul>
-                                      <li>If any of the above checks fail, then Baseline Test 5.1-ChangeContent fails.</li></ul><!-- InstanceEndEditable -->
-                    
-                        
-						
-                      <h3 id="TCreq">Applicable WCAG/508 Requirement</h3>
-						<!-- InstanceBeginEditable name="TCreqlink" -->
-						<ul>
-						  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html">WCAG2 4.1.2 Name, Role, Value</a>: For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</li>
-					    </ul>
+<!-- Remove the excerpt of the Baseline Test since it's available in the table below.-->			
 						<!-- InstanceEndEditable -->
 								
 							<!-- Commented out Expected Test Type
@@ -184,68 +134,96 @@
 								</p>
 					
 							<h3 id="TCdata">Test Data (code/link)</h3>
-								<h4 id="TCcode">Code</h4>
-<pre class="bg-light callout">
-<code>
-<!-- InstanceBeginEditable name="TC_code" -->
-&lt;fieldset&gt;
-    &lt;legend&gt;aria-live='off'&lt;/legend&gt;
-        &lt;button onclick=&quot;document.getElementById('content2').textContent='The text has been updated.'&quot;&gt;Update&lt;/button&gt;&amp;nbsp;
-        &lt;button onclick=&quot;location.reload()&quot;&gt;Reset&lt;/button&gt;
-        &lt;p id=&quot;content2&quot; aria-live=&quot;off&quot;&gt;Initial text.&lt;/p&gt;
-&lt;/fieldset&gt; 
-<!-- InstanceEndEditable -->
-</code>
-</pre>
-					
+
 								<h4 id="TCurl">Single-Page URL</h4>
 					
 									<p>
-									<!-- InstanceBeginEditable name="TCtestfile" --><a href="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05-001.html">https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05-001.html</a><!-- InstanceEndEditable -->
+									<!-- InstanceBeginEditable name="TCtestfile" --><a href="../testfiles/TF05/05.1-1-fail-1.html" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a><!-- InstanceEndEditable -->
 									</p>
 					
 								<h4 id="TCframe">Embedded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
 						
-									<iframe src="https://section508coordinators.github.io/baselinealignment/testfiles/TF05/05-001.html" title="embedded code">
+									<iframe id="codeframe" src="../testfiles/TF05/05.1-1-fail-1.html" title="embedded code">
 									</iframe>
 						
+								<h4 id="if_code">Code</h4>
+									<!-- <pre class="bg-light callout">
+									<code id="code_code">
+									
+	&lt;fieldset&gt;
+		&lt;legend&gt;aria-live='off'&lt;/legend&gt;
+			&lt;button onclick=&quot;document.getElementById('content2').textContent='The text has been updated.'&quot;&gt;Update&lt;/button&gt;&amp;nbsp;
+			&lt;button onclick=&quot;location.reload()&quot;&gt;Reset&lt;/button&gt;
+			&lt;p id=&quot;content2&quot; aria-live=&quot;off&quot;&gt;Initial text.&lt;/p&gt;
+	&lt;/fieldset&gt; 
+									
+									</code>
+									</pre>  -->
+
+									<textarea id="ta_code" readonly rows="7">
+<p>Here's some text:</p>
+							
+<p id="content2" aria-live="off">Initial text.</p>
+<button onclick="document.getElementById('content2').textContent = 'The text has been updated.'">Update</button>&nbsp;
+<button onclick="document.getElementById('content2').textContent = 'Initial text.'">Reset</button>
+									</textarea>
+
+									<div id="div_code">
+									</div>
+
+									
+									
 									<!-- InstanceEndEditable -->
-						
-						<h2 id="TCsteps">Test Steps</h2>
+						<h2 id="TCidc">Baseline Test Identify Content</h2>
+						<table class="table table-hover">
+							<caption>Evaluate Baseline Test's Identify Content to determine applicability to the test case. </caption>
+							<thead class="thead-dark">
+								<tr>
+									<th width="50%" scope="col">Identify Content</th>
+									<th width="50%" scope="col">Test Case Applicability</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row"><p>Identify changes in presented content (both user driven and automatic). Examples include changes to images, navigation trees, data table sort controls, automatic information updates, form elements, revealed content, etc.</p>
+										<ul>
+											<li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
+											<li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</li>
+										</ul>
+									</th>
+									<td>APPLICABLE: <br>The content (text) changes on selection of a button element - either by mouse or keyboard selection. The value of HTML text changes in response to a clicking the &quot;Update&quot; button element.</td>
+								</tr>
+								
+							</tbody>
+						</table>
+
+						<h2 id="TCsteps">Baseline Test Instructions</h2>
 							<!-- InstanceBeginEditable name="TCteststeptable" -->
 						
 							<table class="table table-hover">
+								<caption>Test case's results for the Baseline Test instructions. Asterisk (*) indicates the test instruction for which this test case was developed.</caption>
 								<thead class="thead-dark">
 									<tr>
-										<th width="6%" scope="col">Test Step</th>
-										<th width="43%" scope="col">Step Detail</th>
-										<th width="51%" scope="col">Expected Result</th>
+										<th width="10%" scope="col">Test Instruction</th>
+										<th width="40%" scope="col">Instruction Detail</th>
+										<th width="50%" scope="col">Test Case Result</th>
 									</tr>
 								</thead>
 								<tbody>
+									
 									<tr>
-										<td>1</td>
-										<td headers = "th_content th_detail rn1">It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</td>
-										<td headers = "th_content th_result rn1">For the test example, the content (text) changes on selection of a button element - either by mouse or keyboard selection.</td>
-									</tr>
-									<tr>
-									  <td>2</td>
-									  <td headers = "th_content th_detail rn2">Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</td>
-									  <td headers = "th_content th_result rn2">The state of HTML text  updates in response to a clicking the &quot;Update&quot; button element.</td>
-								  </tr>
-									<tr>
-									  <td>3</td>
-									  <td headers = "th_content th_detail rn2">Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
+									  <th scope="row">*5.1-1</th>
+									  <th scope="row">Check that the page provides a notification of the change in content programmatically. [SC 4.1.2]
 									    <ul>
 									      <li>Programmatic event notifications include alert dialogs, focus shifts to the content that changed, and ARIA live regions.</li>
-							          </ul></td>
-									  <td headers = "th_content th_result rn2">The page does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute included in the code example, because it is set to "off", does not execute and therefore does not provide a programmatic notification.</td>
+							          </ul></th>
+									  <td><p>This test case fails the check in Test Instruction 5.1-1.</p><p>The test case does not provide a programmatic notification of change in content through alerts, shift in focus, or use of ARIA live regions. The aria-live region attribute is set to "off" and does not provide a programmatic notification.</p></td>
 								  </tr>
 									<tr>
-									  <td>4</td>
-									  <td headers = "th_content th_detail rn2">For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
-									    <ul>
+									  <th scope="row">5.1-2</th>
+									  <th scope="row">For each change in content, check that the combination of name, role, state, and value of the changed content is accurate. [SC 4.1.2]
+									    <ol style="list-style-type: lower-roman;">
 									      <li>Name: the name is accurate after a change.
 									        <ul>
 									          <li>Apply the <a href="https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation">accessible name and description computation</a>, if applicable.</li>
@@ -262,13 +240,13 @@
 								            </ul>
 								          </li>
 									      <li>Value: the value is updated after a change, if applicable.</li>
-							          </ul></td>
-									  <td headers = "th_content th_result rn2">The change in content is not programmatically provided.</td>
+							          </ol></th>
+									  <td><p>This test case passes the checks in Test Instruction 5.1-2.</p><ul><li>The accessible name updates with the text change; </li><li>Role, state and value are correct.</li></ul></td>
 								  </tr>
 									<tr>
-									  <td>5</td>
-									  <td headers = "th_content th_detail rn2">If any of the above checks fail, then Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
-									  <td headers = "th_content th_result rn2">Test step 3 fails due to the absence of the text change being conveyed programmatically in any way and therefore Baseline Test <strong>5.1-ChangeContent</strong> fails.</td>
+									  <th scope="row">Result</th>
+									  <th scope="row">If any of the above checks fail, then Baseline Test <strong>5.1-ChangeContent</strong> fails.</th>
+									  <td>Baseline Test 5.1-ChangeContent fails. (See 5.1-1 Test Case Result.)</td>
 								  </tr>
 								</tbody>
 							</table>
