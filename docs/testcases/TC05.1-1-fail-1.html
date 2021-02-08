@@ -34,6 +34,8 @@
 		
 		var testcasesnip = doc.getElementById("tc_code").innerHTML;
 		//console.log("Test case snip: " + testcasesnip);
+		document.getElementById("codeframe").innerHTML = '<iframe id="codeframe" src="' + file + '" title="embedded code">';
+		document.getElementById("codelink").innerHTML = '<a href="' + file + '" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a>';
 		document.getElementById("ta_code").innerHTML = testcasesnip;
 	})
 	//.then(y => document.getElementById("ta_code").innerHTML = testcasesnip);
@@ -151,20 +153,18 @@
 
 								<h4 id="TCurl">Single-Page URL</h4>
 					
-									<p>
+									<div id="codelink">
 										<!-- <script>
 											document.write('<a href="' + file +'" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a>');
 										</script> -->
 									<!-- InstanceBeginEditable name="TCtestfile" -->
-									<a href="../testfiles/TF05/05.1-1-fail-1.html" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a>
+									<!-- <a href="../testfiles/TF05/05.1-1-fail-1.html" target="_blank" rel="noopener">Test Case 05.1-1-fail-1</a> -->
 										<!-- InstanceEndEditable -->
-									</p>
+									</div>
 					
 								<h4 id="TCframe">Embedded Code</h4>
 									<!-- InstanceBeginEditable name="TCembeddedCode" --> 
-										<script>
-											document.write('<iframe id="codeframe" src="' + file + '" title="embedded code"></iframe>');
-										</script> 
+									<div id="codeframe"></div> 
 									<!-- 
 									<iframe id="codeframe" src="../testfiles/TF05/05.1-1-fail-1.html" title="embedded code">
 									</iframe> -->
