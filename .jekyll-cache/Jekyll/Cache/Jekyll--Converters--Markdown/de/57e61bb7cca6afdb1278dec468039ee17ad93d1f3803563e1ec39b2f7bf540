@@ -1,0 +1,39 @@
+I"�<h1 id="contributing-to-the-ict-baseline-alignment-framework">Contributing to the ICT Baseline Alignment Framework</h1>
+<h2 id="how-you-can-help">How you can help</h2>
+<h3 id="developing-and-evaluating-test-cases">Developing and Evaluating Test Cases</h3>
+<p>Need content from people doing this work. What do you need?</p>
+
+<p>I have a note about issuing templates. Does that belong bundled with this topic?</p>
+
+<h3 id="planning-and-conducting-outreach">Planning and Conducting Outreach</h3>
+<p>We need people to know about our work so they can contribute and use it! Whether you enjoy giving presentations or would prefer to remain behind the scenes writing and editing, your skills are needed. Can you help with any of the following?</p>
+<ul>
+  <li>Writing and editing: would you like to produce short articles for <a href="https://www.section508.gov">section508.gov</a> and other government websites, as well as announcements and presentation materials? You could also write for this website.</li>
+  <li>Presenting: can you present on the project to a wide range of audiences, such as Section 508 program managers, procurement personnel, and website testers?</li>
+  <li>Serving as a resource: or maybe you can just make yourself available to answer questions or route them to the appropriate expert?</li>
+</ul>
+
+<h3 id="developing-and-conducting-governance">Developing and Conducting Governance</h3>
+<p>Any project this size needs a program manager. Are you game? Or do you have process management or change control expertise that you could use to help ensure the test cases remain in alignment with the baseline?</p>
+
+<p>Once the test cases are ready, we’ll need to have a way of validating alignment to the ICT Baseline. We’re still working out how that would work (and could use your input), but we know we’ll need people to manage alignment certification. Also, disputes will occasionally arise, and we’ll need people with the technical and soft skills necessary to resolve them.</p>
+
+<h3 id="developing-and-maintaing-this-website">Developing and Maintaing this Website</h3>
+<p>We want this website to serve the needs of contributors and testers alike. We also need the basic information to be intelligible to Section 508 program managers, procurement officials, and others with potentially less technical knowledge so they can understand what this project is all about and how their agencies can benefit from it. And, of course, the website must be usable and accessible. Therefore, we could use your help with:</p>
+<ul>
+  <li>Designing and testing</li>
+  <li>Writing and editing for plain language</li>
+  <li>Long-term maintenance</li>
+</ul>
+
+<h2 id="how-we-work">How we work</h2>
+<p>We have small working groups that meet to make technical decisions or resolve problems. The larger group holds periodic status meetings. Communication and collaboration are through <a href="https://github.com/Section508Coordinators/baselinealignment">our GitHub presence</a> and, secondarily, email.</p>
+
+<p>Not familiar with GitHub? It’s a collaboration platform with strong version control. Here are some resources to get you started:</p>
+
+<ul>
+  <li>Get a basic understanding with <a href="https://guides.github.com/activities/hello-world/">Hello World from GitHub Guides</a></li>
+  <li><a href="https://guides.github.com/features/issues/">Learn about issues</a>, which we use not only for tracking bugs, but also for questions and our shared to-do list</li>
+  <li>If you have an hour to spare, consider watching <a href="https://www.youtube.com/watch?v=6fByt0o4UYs">GitHub for Project Management</a>, which goes over the features discussed in the other two links in greater detail, or <a href="https://www.youtube.com/watch?v=EwWZbyjDs9c">Exploring Workflows</a> for a somewhat more technical explanation</li>
+</ul>
+:ET
