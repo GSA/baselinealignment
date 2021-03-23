@@ -38,3 +38,6 @@ sample:
 #
 # Include the table in the content section below
 ---
+| Test Instruction | Instruction Detail | Expected Test Case Result |
+|------------------|--------------------|---------------------------|
+| # | Detail | Step Result | 

@@ -23,6 +23,8 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [TC06-007-fail](testcases/TC06-007-fail.html)
   * [TC06-008-fail](testcases/TC06-008-fail.html)
   * [TC06-009-fail](testcases/TC06-009-fail.html)
+* `8.` Contrast
+  * [TC08.1-2-fail-1](testcases/TC08.1-2-fail-1.html)
 * `10.` Forms
   * [TC10-001-fail](testcases/TC10-001-fail.html)
   * [TC10-008-dna](testcases/TC10-008-dna.html)
