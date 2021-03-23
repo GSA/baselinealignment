@@ -34,7 +34,7 @@ provided in the document front matter; see the admin/config > collections
                         <h3 id="TCdata">Test Data</h3>
                             <h4 id="TCurl">Single-Page URL</h4>
                                 <div id="codelink">
-                                    <p><a href="{{page.sample | absolute_url}}">{{page.sample | absolute_url}}</a></p>
+                                    <p><a id="samplecodelink" href="{{page.sample | absolute_url}}">{{page.sample | absolute_url}}</a></p>
                                 </div>
                 
                             <h4 id="TCframe">Embedded Code</h4>
@@ -44,11 +44,7 @@ provided in the document front matter; see the admin/config > collections
     
                             <h4 id="if_code">Code</h4>
                                 <div id="div_code">
-                                    <pre class="bg-light callout">
-                                        <code>
-                                                {{page.code | escape}}
-                                        </code>
-                                    </pre>
+                                    <pre class="bg-light callout"><code id="ta_code"></code></pre>
                                 </div>
 
                         <h3 id="TCsteps">Test Case Instruction</h3>
@@ -56,3 +52,4 @@ provided in the document front matter; see the admin/config > collections
         </div>
     </div>
 </main>
+<script src="/assets/js/testcases.js"></script>

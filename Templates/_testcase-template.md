@@ -26,15 +26,15 @@ result:
 result-descr: >
 
 # URL for the code sample
-# Upload the code sample to the 'testfiles' folder, then provide the link
-# (and only the url) below.
+# In the sample code file, add id="tc_code" to the 
+# element that contains the relevant code snippet.
+#
+# Then upload the code sample to the 'testfiles' folder 
+# and provide the link (and only the url) below.
 sample:
-
-# Provide a snippet of the code below
-code: |
 
 # Table of test instructions, including the following table headers: 
 # Test Instruction #; Instruction Detail; Expected Test Case Result
-steps: |
-
+#
+# Include the table in the content section below
 ---
