@@ -20,7 +20,7 @@ Any project this size needs a program manager. Are you game? Or do you have proc
 
 Once the test cases are ready, we'll need to have a way of validating alignment to the ICT Baseline. We're still working out how that would work (and could use your input), but we know we'll need people to manage alignment certification. Also, disputes will occasionally arise, and we'll need people with the technical and soft skills necessary to resolve them.
 
-### Developing and Maintaing this Website
+### Developing and Maintaining this Website
 We want this website to serve the needs of contributors and testers alike. We also need the basic information to be intelligible to Section 508 program managers, procurement officials, and others with potentially less technical knowledge so they can understand what this project is all about and how their agencies can benefit from it. And, of course, the website must be usable and accessible. Therefore, we could use your help with:
 * Designing and testing
 * Writing and editing for plain language
