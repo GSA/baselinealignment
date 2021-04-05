@@ -1,1 +1,10 @@
-theme: jekyll-theme-minimal
+title: ICT Baseline Alignment Framework
+email: ictbaseline@gsa.gov
+description: >-
+  The ICT Baseline Alignment Validation Framework provides 
+  test cases as a way for agencies to assess whether their 
+  own test processes and use of testing tools cover all Section 508 
+  requirements. Two different processes that align to the Baseline 
+  should produce the same replicable and reliable test results.
+
+theme: minima

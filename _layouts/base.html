@@ -1,0 +1,24 @@
+{% comment %}
+This is used for just about every page. It provides the basic structure for 
+the html document. 
+{% endcomment %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% include meta.html %}
+
+<body>
+  {% include header.html %}
+
+  {% include menu.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+</body>
+
+</html>

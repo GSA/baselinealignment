@@ -1,0 +1,171 @@
+/* Custom styling on top of Bootstrap styles */
+#closeSidebar {
+	font-size:1.25rem;
+	z-index:2010!important
+}
+
+header {
+	z-index:2;
+	position: fixed!important;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#main-content {
+	padding-top: 72px;
+}
+
+#main-content h1::before, #main-content h2::before, #main-content h3::before, #main-content h4::before, #main-content h5::before, #main-content h6::before {
+	display:block;
+	content:"";
+	margin-top:-72px;
+	height: 72px;
+	visibility: hidden;
+	pointer-events:none;
+}
+
+.sec-nav {
+	position:fixed;
+	top:58px;
+	bottom:0;
+	right:0;
+}
+
+.toc, #toc-container {
+	height:100%;
+}
+
+.toc a {
+	color:black;
+}
+
+.toc-item {
+	list-style-type:none;
+	text-decoration:none;
+}
+
+.toc-item a, .toc-item a:hover {
+	display:block;
+	text-decoration:none;
+	padding:0px 5px 0px 5px;
+}
+
+.toc-item ul {
+	padding-left:16px;
+	font-size:.85em;
+}
+
+@media (min-width: 768px) {
+	.fixed-sidebar {
+		position:fixed;
+		top:58px;
+		bottom:0;
+		left:0;
+	}
+}
+
+.callout {
+	border: 1px solid #eee;
+	border-radius: .25rem;
+	border-left-color:#3333ff;
+	border-left-width: .25rem;
+	margin:2rem;
+	padding-left:2rem;
+}
+
+/* Nav sidebar flyover styling*/
+.flyover-sidebar{
+	height:100%!important;
+	width:200px!important;
+	display:block!important;
+	position:fixed!important;
+	z-index:2000!important;
+	top:72px;
+	overflow:auto
+}
+
+.overlay{
+	position:fixed!important;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(0,0,0,0.5);
+	z-index:1
+	
+}
+
+/* Style for "Skip to Content" links. */
+.bypass-block-link {
+	position: absolute;
+	text-decoration: none;
+	background: #ffffcc;
+	border-radius: 10px;
+	padding: 0.2em;
+	z-index: 10;
+}
+
+#skipNavLink, #skipNavLink2 {
+    color: #000;
+}
+
+.visually-hidden {
+	clip: rect(1px 1px 1px 1px);
+	/* IE 6/7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	margin: -1px;
+}
+
+
+.bypass-block-link:focus {
+	clip: auto;
+	height: auto;
+	overflow: visible;
+	position: absolute;
+	white-space: normal;
+	width: auto;
+	margin: auto;
+	z-index: 10;
+}
+
+.bypass-block-target:focus {
+	outline: none;
+}
+
+ol ol {
+	list-style-type: lower-roman;
+}
+
+ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+code {
+    color: #C00000 !important;
+}
+
+.code {
+    background-color: rgba(222,222,222,.5);
+    border-radius: 2px;
+    box-decoration-break: clone;
+    padding: 0 2px;
+    word-wrap: break-word;
+}
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 100%;
+	font-family: monospace;
+	background-color: #000;
+	color:aqua;
+}
