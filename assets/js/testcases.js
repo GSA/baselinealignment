@@ -3,7 +3,7 @@
 //ENTER Test File full URL with http or https.
 
     let file = document.getElementById("samplecodelink").textContent;
-    //console.log("File path:" + file);
+    console.log("File path:" + file);
 
     fetch (file)
     .then(function (response) {
