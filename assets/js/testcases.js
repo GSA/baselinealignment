@@ -23,3 +23,22 @@
     .catch(function (err) {  
         console.warn('Failed to fetch page: ', err);  
     });
+
+// Make the first column in each row in the Test Case Instruction table a table header
+// using scope="row" and by changing the first column td to th
+$(document).ready(function() {
+    var attrs = { };
+
+    $("#TCsteps_table table tbody tr td:first-child").each(function(_idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+    });
+
+
+    $("#TCsteps_table table tbody tr td:first-child").replaceWith(function () {
+        attrs.text = $(this).text();
+        return $("<th />", attrs);
+    });
+
+    $("#TCsteps_table table tbody tr th").attr("scope", "row");
+    $("#TCsteps_table table thead tr th").attr("scope", "col");
+});
