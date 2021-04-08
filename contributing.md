@@ -5,7 +5,7 @@ title: Contributing to the ICT Baseline Alignment Framework
 # Contributing to the ICT Baseline Alignment Framework
 ## How you can help
 ### Developing and Evaluating Test Cases
-Need content from people doing this work. What do you need?
+Need content from individuals doing this work.
 
 I have a note about issuing templates. Does that belong bundled with this topic?
 
