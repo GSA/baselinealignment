@@ -21,8 +21,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Meaningful Image - text equivalent in aria-label attribute (TC06.1-all-pass-3)](testcases/TC06.1-all-pass-3.html)
   * [Meaningful Image - text equivalent in aria-labelledby attribute (TC06.1-all-pass-4)](testcases/TC06.1-all-pass-4.html)
   * [Meaningful Image - text equivalent in aria-describedby attribute (TC06.1-all-pass-5)](testcases/TC06.1-all-pass-5.html)  
-  * [TC06-007-fail](testcases/TC06-007-fail.html)
-  * [TC06-008-fail](testcases/TC06-008-fail.html)
+  * [Meaningful Image - with role="none" (TC06.1-4-fail-1)](testcases/TC06.1-4-fail-1.html)
   * [TC06-009-fail](testcases/TC06-009-fail.html)
 * `8.` Contrast
   * [TC08.1-2-fail-1](testcases/TC08.1-2-fail-1.html)
