@@ -1,0 +1,32 @@
+I"�<table>
+  <thead>
+    <tr>
+      <th>Test Instruction</th>
+      <th>Instruction Detail</th>
+      <th>Expected Test Case Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IC-1</strong></td>
+      <td>Find all form components. Examples include buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</td>
+      <td><code class="language-plaintext highlighter-rouge">Input</code> text field</td>
+    </tr>
+    <tr>
+      <td><strong>IC-2</strong></td>
+      <td>Find all instructions and cues (textual and graphical) that are related to form components, including groupings, order of completion, special conditions or qualifiers, format instructions, etc.</td>
+      <td>“First name” visually labels the input field.</td>
+    </tr>
+    <tr>
+      <td><strong>10.1-1</strong></td>
+      <td>Check that the combination of the accessible name and accessible description is not empty. [SC 4.1.2]</td>
+      <td>Fail: Accessible name and accessible description are both empty.</td>
+    </tr>
+    <tr>
+      <td><strong>Result</strong></td>
+      <td>If any of the above checks fail, then Baseline Test 10.1-FormName fails.</td>
+      <td>10.1-1 check fails.</td>
+    </tr>
+  </tbody>
+</table>
+:ET
