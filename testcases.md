@@ -22,10 +22,10 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Meaningful Image - text equivalent in aria-labelledby attribute (TC06.1-all-pass-4)](testcases/TC06.1-all-pass-4.html)
   * [Meaningful Image - text equivalent in aria-describedby attribute (TC06.1-all-pass-5)](testcases/TC06.1-all-pass-5.html)  
   * [Meaningful Image - with role="none" (TC06.1-4-fail-1)](testcases/TC06.1-4-fail-1.html)
-  * [TC06-009-fail](testcases/TC06-009-fail.html)
+  * [Meaningful Image - with aria-hidden="true" (TC06.1-5-fail-1)](testcases/TC06.1-5-fail-1.html)
 * `8.` Contrast
-  * [TC08.1-2-fail-1](testcases/TC08.1-2-fail-1.html)
+  * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
 * `10.` Forms
-  * [TC10-001-fail](testcases/TC10-001-fail.html)
+  * [Input text element: no accessible name or description (TC10-001-fail)](testcases/TC10-001-fail.html)
   * [TC10-008-dna](testcases/TC10-008-dna.html)
   * [TC10-009-dna](testcases/TC10-009-dna.html)
