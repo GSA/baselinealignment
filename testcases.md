@@ -28,5 +28,3 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
 * `10.` Forms
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
-  * [TC10-008-dna](testcases/TC10-008-dna.html)
-  * [TC10-009-dna](testcases/TC10-009-dna.html)
