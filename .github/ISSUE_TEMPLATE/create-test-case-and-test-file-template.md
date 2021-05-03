@@ -1,6 +1,6 @@
 ---
-name: Create Test Case and test file Template
-about: Complete the information needed to request development of Test Cases
+name: Request Test Case and/or Test File
+about: Complete the information needed to request development of Test Cases and/or Test Files
 title: Create Test Case and test file for [Baseline Test ID]
 labels: test case/test file
 assignees: ''
