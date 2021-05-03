@@ -15,11 +15,11 @@ Follow the steps below, replace to describe your request for a specific Test Cas
 2. Describe the Test Case requirements and/or Test Case file parameters (if already known):
 - Filename convention is *TC[Baseline Test ID]-[test instruction #]-[pass/fail]-[sequence # of this test].html*
   - Ex: TC05.1-1-fail-1.html
-  - If the Test Case is DNA, follow this filename convention: *TC[Baseline Test ID]-IC-DNA-[sequence # of this test].html*
+  - If the Test Case is DNA, follow this filename convention: *TC[Baseline Test ID]-ic-dna-[sequence # of this test].html*
 - Folder: testcases/
 
 3. Describe the Test File in order to meet the Test Case requirements and identify Test File parameters (if already known):
-- Filename convention is *[Baseline Test ID]-[test instruction #]-[pass/fail/dna]-[sequence # of this test].html*
+- Filename convention is *[Baseline Test ID]-[test instruction #]-[pass/fail]-[sequence # of this test].html*
   - Ex: 05.1-1-fail-1.html
-  - If the test file is DNA, follow this filename convention: *[Baseline Test ID]-IC-DNA-[sequence # of this test].html*
+  - If the test file is DNA, follow this filename convention: *[Baseline Test ID]-ic-dna-[sequence # of this test].html*
 - Folder: testfiles/TF[#]/
