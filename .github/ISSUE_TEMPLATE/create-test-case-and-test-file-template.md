@@ -7,16 +7,18 @@ assignees: ''
 
 ---
 
-1. Identify the Baseline Test ID in the Issue.
-- Example: "Create Test Case and test file for 5.1-ChangeContent"
+Follow the steps below, replace to describe your request for a specific Test Case and/or Test File:
 
-2. Create Test Case using template
+1. Identify the Baseline Test ID and Baseline Test Instruction in the Issue Title.
+- Example: "Create Test Case and Test File for 5.1-ChangeContent, Instruction [x]"
+
+2. Describe the Test Case requirements and/or Test Case file parameters (if already known):
 - Filename convention is *TC[Baseline Test ID]-[test instruction #]-[pass/fail]-[sequence # of this test].html*
   - Ex: TC05.1-1-fail-1.html
   - If the Test Case is DNA, follow this filename convention: *TC[Baseline Test ID]-IC-DNA-[sequence # of this test].html*
 - Folder: testcases/
 
-3. Create test file using template
+3. Describe the Test File in order to meet the Test Case requirements and identify Test File parameters (if already known):
 - Filename convention is *[Baseline Test ID]-[test instruction #]-[pass/fail/dna]-[sequence # of this test].html*
   - Ex: 05.1-1-fail-1.html
   - If the test file is DNA, follow this filename convention: *[Baseline Test ID]-IC-DNA-[sequence # of this test].html*
