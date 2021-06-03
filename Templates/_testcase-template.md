@@ -16,14 +16,14 @@ tcid:
 descr:
 
 # Reference and link to the applicable ICT Baseline test
-app-basline:
+app-baseline: | 
 
 # Expected result that the ICT Baseline would predict
 # [Pass | Fail | DNA]
 result:
 
 # Brief description of the rationale for the expected result
-result-descr: >
+result-descr: 
 
 # URL for the code sample
 # In the sample code file, add id="tc_code" to the 
