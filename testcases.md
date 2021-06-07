@@ -31,7 +31,10 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
 * `15.` Language
   * [Language of Page: English (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html) 
   * [Language of Page: not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html) 
+  * [Language of Page: not identified on `<`html`>` tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html) 
   * [Language of Page: not French (TC15.1-3-fail-1)](testcases/TC15.1-3-fail-1.html) 
   * [Language of Parts: French (TC15.2-all-pass-1)](testcases/TC15.2-all-pass-1.html) 
   * [Language of Parts: not identified (TC15.2-2-fail-1)](testcases/TC15.2-2-fail-1.html) 
-  * [Language of Parts: not Spanish (TC15.2-3-fail-1)](testcases/TC15.2-3-fail-1.html) 
+  * [Language of Parts: not Spanish (TC15.2-3-fail-2)](testcases/TC15.2-3-fail-2.html) 
+  * [Language of Parts: Not Applicable (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html) 
+  
