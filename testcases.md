@@ -31,7 +31,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
 * `15.` Language
   * [Language of Page: Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html) 
   * [Language of Page: not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html) 
-  * [Language of Page: <code>lang</code> attribute on wrong tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html) 
+  * [Language of Page: lang attribute on wrong tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html) 
   * [Language of Page: wrong language identified (TC15.1-3-fail-1)](testcases/TC15.1-3-fail-1.html) 
   * [Language of Parts: Pass (TC15.2-all-pass-1)](testcases/TC15.2-all-pass-1.html) 
   * [Language of Parts: not identified (TC15.2-2-fail-1)](testcases/TC15.2-2-fail-1.html) 
