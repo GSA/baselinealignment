@@ -28,3 +28,15 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
 * `10.` Forms
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
+* `15.` Language
+  * [Language of Page: Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html) 
+  * [Language of Page: not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html) 
+  * [Language of Page: lang attribute on wrong tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html) 
+  * [Language of Page: invalid language subtag (TC15.1-3-fail-1)](testcases/TC15.1-3-fail-1.html) 
+  * [Language of Page: wrong language identified (TC15.1-3-fail-2)](testcases/TC15.1-3-fail-2.html) 
+  * [Language of Parts: Pass (TC15.2-all-pass-1)](testcases/TC15.2-all-pass-1.html) 
+  * [Language of Parts: not identified (TC15.2-2-fail-1)](testcases/TC15.2-2-fail-1.html) 
+  * [Language of Parts: invalid language subtag (TC15.2-3-fail-1)](testcases/TC15.2-3-fail-1.html) 
+  * [Language of Parts: incorrect language identified (TC15.2-3-fail-2)](testcases/TC15.2-3-fail-2.html) 
+  * [Language of Parts: Does Not Apply (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html) 
+  
