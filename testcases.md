@@ -21,11 +21,15 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Meaningful Image - text equivalent in title attribute (TC06.1-all-pass-2)](testcases/TC06.1-all-pass-2.html)
   * [Meaningful Image - text equivalent in aria-label attribute (TC06.1-all-pass-3)](testcases/TC06.1-all-pass-3.html)
   * [Meaningful Image - text equivalent in aria-labelledby attribute (TC06.1-all-pass-4)](testcases/TC06.1-all-pass-4.html)
-  * [Meaningful Image - text equivalent in aria-describedby attribute (TC06.1-all-pass-5)](testcases/TC06.1-all-pass-5.html)  
+  * [Meaningful Image - text equivalent in aria-describedby attribute (TC06.1-all-pass-5)](testcases/TC06.1-all-pass-5.html)
+  * [Decorative Image - with non-descriptive text in accessible name and description (TC06.2-all-fail-1)](testcases/TC06.2-all-fail-1.html)
+  * [Decorative Image - with descriptive text in accessible name (TC06.2-all-fail-2)](testcases/TC06.2-all-fail-2.html)
+  * [Decorative Image - no decorative images (TC06.2-all-fail-3)](testcases/TC06.2-all-fail-3.html)  
   * [Decorative Image - with role equals presentation (TC06.2-all-pass-1)](testcases/TC06.2-all-pass-1.html)
   * [Decorative Image - with role equals none (TC06.2-all-pass-2)](testcases/TC06.2-all-pass-2.html)
   * [Decorative Image - with aria-hidden="true" (TC06.2-all-pass-3)](testcases/TC06.2-all-pass-3.html)
   * [Decorative Image - with alt="" (TC06.2-all-pass-4)](testcases/TC06.2-all-pass-4.html)
+
 * `8.` Contrast
   * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
 * `10.` Forms
