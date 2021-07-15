@@ -40,6 +40,10 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Language of Parts - incorrect language identified (TC15.2-3-fail-2)](testcases/TC15.2-3-fail-2.html) 
   * [Language of Parts - Does Not Apply (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html) 
 * `17.` Synchronized Media
+  * [ Media Player Controls - no synchronized media player on page (TC17.1-ic-dna-1)](testcases/TC17.1-ic-dna-1.html)
+  * [ Media Player Caption Control Level - no synchronized media player on page (TC17.2-ic-dna-1)](testcases/TC17.2-ic-dna-1.html)
+  * [ Media Player Audio Description Control Level - no synchronized media player on page (TC17.3-ic-dna-1)](testcases/TC17.3-ic-dna-1.html)
+  * [ Captions (Prerecorded) - no synchronized media on page (TC17.4-ic-dna-1)](testcases/TC17.4-ic-dna-1.html)
   * [ Captions (Prerecorded) - no captions (TC17.4-2-fail-1)](testcases/TC17.4-2-fail-1.html)
   * [ Captions (Prerecorded) - captions are complete, accurate, synchronized, and do not obscure other important on-screen text (TC17.4-all-pass-1)](testcases/TC17.4-all-pass-1.html)
-  * [ Captions (Prerecorded) - no synchronized media on page (TC17.4-ic-dna-1)](testcases/TC17.4-ic-dna-1.html)
+  * [ Audio Description (Prerecorded) - no synchronized media on page (TC17.5-ic-dna-1)](testcases/TC17.5-ic-dna-1.html)
