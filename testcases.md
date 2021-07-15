@@ -45,5 +45,6 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [ Media Player Audio Description Control Level - no synchronized media player on page (TC17.3-ic-dna-1)](testcases/TC17.3-ic-dna-1.html)
   * [ Captions (Prerecorded) - no synchronized media on page (TC17.4-ic-dna-1)](testcases/TC17.4-ic-dna-1.html)
   * [ Captions (Prerecorded) - no captions (TC17.4-2-fail-1)](testcases/TC17.4-2-fail-1.html)
+  * [ Captions (Prerecorded) - inaccurate captions (TC17.4-3b-fail-2)](testcases/TC17.4-3b-fail-2.html)
   * [ Captions (Prerecorded) - captions are complete, accurate, synchronized, and do not obscure other important on-screen text (TC17.4-all-pass-1)](testcases/TC17.4-all-pass-1.html)
   * [ Audio Description (Prerecorded) - no synchronized media on page (TC17.5-ic-dna-1)](testcases/TC17.5-ic-dna-1.html)
