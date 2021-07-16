@@ -43,6 +43,8 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [ Media Player Controls - no synchronized media player on page (TC17.1-ic-dna-1)](testcases/TC17.1-ic-dna-1.html)
   * [ Media Player Controls - no controls for captions or for audio descriptions (TC17.1-1-fail-1)](testcases/TC17.1-1-fail-1.html)
   * [ Media Player Controls - controls for captions, but not for audio descriptions (TC17.1-1-fail-2)](testcases/TC17.1-1-fail-2.html)
+  * [ Media Player Controls - controls for audio descriptions, but not for captions (TC17.1-fail-3)](testcases/TC17.1-1-fail-3.html)
+  * [ Media Player Controls - controls provided for both captions and audio descriptions (TC17.1-all-pass-1)](testcases/TC17.1-all-pass-1.html)
   * [ Media Player Caption Control Level - no synchronized media player on page (TC17.2-ic-dna-1)](testcases/TC17.2-ic-dna-1.html)
   * [ Media Player Audio Description Control Level - no synchronized media player on page (TC17.3-ic-dna-1)](testcases/TC17.3-ic-dna-1.html)
   * [ Captions (Prerecorded) - no synchronized media on page (TC17.4-ic-dna-1)](testcases/TC17.4-ic-dna-1.html)
