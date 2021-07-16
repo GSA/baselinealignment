@@ -41,6 +41,8 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Language of Parts - Does Not Apply (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html) 
 * `17.` Synchronized Media
   * [ Media Player Controls - no synchronized media player on page (TC17.1-ic-dna-1)](testcases/TC17.1-ic-dna-1.html)
+  * [ Media Player Controls - no controls for captions or for audio descriptions (TC17.1-1-fail-1)](testcases/TC17.1-1-fail-1.html)
+  * [ Media Player Controls - controls for captions, but not for audio descriptions (TC17.1-1-fail-2)](testcases/TC17.1-1-fail-2.html)
   * [ Media Player Caption Control Level - no synchronized media player on page (TC17.2-ic-dna-1)](testcases/TC17.2-ic-dna-1.html)
   * [ Media Player Audio Description Control Level - no synchronized media player on page (TC17.3-ic-dna-1)](testcases/TC17.3-ic-dna-1.html)
   * [ Captions (Prerecorded) - no synchronized media on page (TC17.4-ic-dna-1)](testcases/TC17.4-ic-dna-1.html)
@@ -48,3 +50,4 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [ Captions (Prerecorded) - inaccurate captions (TC17.4-3b-fail-2)](testcases/TC17.4-3b-fail-2.html)
   * [ Captions (Prerecorded) - captions are complete, accurate, synchronized, and do not obscure other important on-screen text (TC17.4-all-pass-1)](testcases/TC17.4-all-pass-1.html)
   * [ Audio Description (Prerecorded) - no synchronized media on page (TC17.5-ic-dna-1)](testcases/TC17.5-ic-dna-1.html)
+  * [ Audio Description (Prerecorded) - no audio descriptions (TC17.5-2-fail-1)](testcases/TC17.5-2-fail-1.html)

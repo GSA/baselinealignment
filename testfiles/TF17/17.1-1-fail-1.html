@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Captions (Prerecorded) - captions are complete, accurate, synchronized, and do not obscure other important on-screen text (TC17.4-all-pass-1)</title>
+    <title>Media Player Controls - no controls for captions or for audio descriptions (TC17.1-fail-1)</title>
 <!-- Ableplayer Dependencies -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../assets/ableplayer/thirdparty/js.cookie.js"></script>
@@ -19,8 +19,6 @@
     <video id="my-video" data-able-player width="900" height="500" data-skin="2020" playsinline data-debug data-root-path="../assets/ableplayer/" preload="auto">
       <source src="../assets/videos/demo_nc.webm" type='video/webm'>  
       <source src="../assets/videos/demo_nc.mp4" type='video/mp4'>
-        <track kind="captions" src="democaptions.vtt" srclang="en" label="English captions"/>
-        <track kind="descriptions" src="demodescriptionsempty.vtt" srclang="en"/>
         Your browser does not support the video tag.
     </video>
     </div>
