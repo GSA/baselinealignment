@@ -53,3 +53,4 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [ Captions (Prerecorded) - captions are complete, accurate, synchronized, and do not obscure other important on-screen text (TC17.4-all-pass-1)](testcases/TC17.4-all-pass-1.html)
   * [ Audio Description (Prerecorded) - no synchronized media on page (TC17.5-ic-dna-1)](testcases/TC17.5-ic-dna-1.html)
   * [ Audio Description (Prerecorded) - no audio descriptions (TC17.5-2-fail-1)](testcases/TC17.5-2-fail-1.html)
+  * [ Audio Description (Prerecorded) - audio descriptions do not adequately describe important visual content (TC17.1-3-fail-1)](testcases/TC17.5-3-fail-1.html)
