@@ -41,6 +41,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Language of Parts - Does Not Apply (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html) 
 * `17.` Synchronized Media
   * [ Media Player Controls - no synchronized media player on page (TC17.1-ic-dna-1)](testcases/TC17.1-ic-dna-1.html)
+  * [ Media Player Controls - media player on page, but it does not play synchronized media (only audio-only) (TC17.1-ic-dna-2)](testcases/TC17.1-ic-dna-2.html)
   * [ Media Player Controls - no controls for captions or for audio descriptions (TC17.1-1-fail-1)](testcases/TC17.1-1-fail-1.html)
   * [ Media Player Controls - controls for captions, but not for audio descriptions (TC17.1-1-fail-2)](testcases/TC17.1-1-fail-2.html)
   * [ Media Player Controls - controls for audio descriptions, but not for captions (TC17.1-fail-3)](testcases/TC17.1-1-fail-3.html)
