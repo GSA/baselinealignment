@@ -1,0 +1,55 @@
+---
+# The layout must be 'testcase'; DO NOT Change
+layout: testcase
+
+# Brief, descriptive title for the test case
+title: Functionality not keyboard accessible
+
+# The Test Case ID should follow the pattern: 
+# TC[Baseline Test Procedure #]-[Test Instruction #]-
+# [Expected Result (pass/fail/dna)]-[example #], e.g., TC05.1-1-fail-1
+tcid: TC1.1-1-fail-1
+
+# Description of the Test Case, the included code sample, test considerations,
+# and rationale for the expected result according to the applicable ICT
+# Baseline test
+descr: |
+  
+  Determine the functionality of visible and hidden interactive interface components (links, form fields, drop down menus, show/hide content, tree views, pop ups/light boxes, iframes, etc.) available using a mouse (hover and/or click). Can they also be accessed and executed using only a keyboard?
+  
+  The code sample includes elements that aren't accessible via keyboard and have no alternative on the page that is keyboard accessible. A successful test should identify a failure against Baseline 1. Keyboard Accessible.
+
+# Reference and link to the applicable ICT Baseline test
+app-baseline: 
+  [1.1 Test Procedure for Keyboard Access](https://section508coordinators.github.io/ICTTestingBaseline/01Keyboard.html#11-test-procedure-for-keyboard-access)
+  
+    **Baseline Test ID:** 1.1-KeyboardAccess
+    
+    **Test Instruction:** 1
+
+# Expected result that the ICT Baseline would predict
+# [Pass | Fail | DNA]
+result: Fail
+
+# Brief description of the rationale for the expected result
+result-descr: Not all interactive interface components can be accessed by keyboard or have an alternative control on the page with the same funtionality that is available by keyboard. Specifically, the city and area code form fields have a tabindex of -1 and their functionality is not available elsewhere on the page.
+
+# URL for the code sample
+# In the sample code file, add id="tc_code" to the 
+# element that contains the relevant code snippet.
+#
+# Then upload the code sample to the 'testfiles' folder 
+# and provide the link (and only the url) below.
+sample: /testfiles/TF01/1.1-1-fail-1.html
+
+# Table of test instructions, including the following table headers: 
+# Test Instruction #; Instruction Detail; Expected Test Case Result
+#
+# Include the table in the content section below
+---
+| Test Instruction | Instruction Detail | Expected Test Case Result |
+|------------------|--------------------|---------------------------|
+| **1C** | Determine the functionality of visible and hidden interactive interface components (links, form fields, drop down menus, show/hide content, tree views, pop ups/light boxes, iframes, etc.) available using a mouse (hover and/or click). | Seven form fields are accessible via mouse. | 
+| **1.1-1a** | Check that all functionality that is available via mouse can also be accessed via keyboard alone. | Fail: the city and area code form fields cannot be accessed via keyboard alone. |
+| **1.1-1b** | If 1.1-1a fails, check whether the failed functionality is available via keyboard alone through another control on the page with the same functionality | Fail: there is no keyboard-accessible means for entering the information requested in the city and area code form fields. |
+| **Result** | If 1.1-1b fails, then Baseline Test 1.1-Keyboard Access fails. | 1.1-1b check fails. |
