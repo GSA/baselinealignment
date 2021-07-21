@@ -3,12 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Decorative Image - image inserted via CSS (TC06.2-5-pass-1)</title>
-	<!-- (was 06-006) -->
+    <style>
+    #tc_code {
+      background-image: url("../assets/images/horizontalline.png");
+      height: 200px;
+      background-position: left;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+  </style>
   </head>
   <body>
     <div id="tc_code">
-	<img style = "background-image: url(../assets/images/horizontalline.png); background-repeat: no-repeat; width: 50px; height: 50px">
-  <p>This is a decorative image of a horizontal line. </p>
-  </div>
+      <!-- CSS background-image code inserted as comment for Test Case:
+        <style>
+            #tc_code {
+              background-image: url("../assets/images/horizontalline.png");
+              height: 200px;
+              background-position: left;
+              background-repeat: no-repeat;
+              position: relative;
+            }
+          </style>
+      -->
+	  </div>
   </body>
 </html>
