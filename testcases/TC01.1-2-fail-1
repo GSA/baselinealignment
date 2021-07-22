@@ -47,6 +47,7 @@ sample: /testfiles/TF01/1.1-2-fail-1.html
 ---
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
-| **1C** | Determine the functionality of visible and hidden interactive interface components (links, form fields, drop down menus, show/hide content, tree views, pop ups/light boxes, iframes, etc.) available using a mouse (hover and/or click). | Two form fields and two buttons are accessible via mouse. | 
-| **1.1-2** | Check that individual keystrokes do not require specific timings for activation. | Fail: changing the REquest Password Reset button to Request User Name requires the user to hold the spacebar for three seconds. |
-| **Result** | If the above check fails, then Baseline Test 1.1-Keyboard Access fails. | 1.1-2 check fails. |
+| **1C** | Determine the functionality of visible and hidden interactive interface components (links, form fields, drop down menus, show/hide content, tree views, pop ups/light boxes, iframes, etc.) available using a mouse (hover and/or click). If operation requires specific timings of individual keystrokes, check if another control is provided on the page with the same functionality which does not require specific timings for operation. (All functionality must be available without requiring specific timings for individual keystrokes to operate.)| Two form fields and two buttons are accessible via mouse. There is no alternative control. | 
+| **1.1-2a** | Check that individual keystrokes do not require specific timings for activation. | Fail: changing the Request Password Reset button to Request User Name requires the user to hold the spacebar for three seconds. |
+| **1.1-2b** | 	If 1.1-2a fails, check whether the failed functionality is available through another control on the page with the same functionality that does not require specific timings for operation. | Fail: there is no alternative control that does not require specific timings for operation. |
+| **Result** | If 1.1-2b fails, then Baseline Test 1.1-Keyboard Access fails. | 1.1-2b check fails. |
