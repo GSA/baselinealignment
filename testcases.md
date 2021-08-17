@@ -45,7 +45,6 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Visual Headings - with visual headings defined programmatically with multiple heading element levels AND role=heading BUT aria-level is not defined (13.2-1.c-fail-3)](testcases/TC13.2-1.c-fail-3.html)
   * [Visual Headings - with visual headings, with multiple levels visually apparent, are defined programmatically using role=heading BUT aria-level is not defined (13.2-1.c-fail-4)](testcases/TC13.2-1.c-fail-4.html)
 * `15.` Language
-<<<<<<< Updated upstream
   * [Language of Page - Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
   * [Language of Page - not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
   * [Language of Page - lang attribute on wrong tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html)
@@ -75,15 +74,3 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [ Audio Description (Prerecorded) - no audio descriptions (TC17.5-2-fail-1)](testcases/TC17.5-2-fail-1.html)
   * [ Audio Description (Prerecorded) - audio descriptions do not adequately describe important visual content (TC17.5-3-fail-1)](testcases/TC17.5-3-fail-1.html)
   * [ Audio Description (Prerecorded) - audio descriptions adequately describe all important visual content (TC17.5-all-pass-1)](testcases/TC17.5-all-pass-1.html)
-=======
-  * [Language of Page: Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
-  * [Language of Page: not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
-  * [Language of Page: lang attribute on wrong tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html)
-  * [Language of Page: invalid language subtag (TC15.1-3-fail-1)](testcases/TC15.1-3-fail-1.html)
-  * [Language of Page: wrong language identified (TC15.1-3-fail-2)](testcases/TC15.1-3-fail-2.html)
-  * [Language of Parts: Pass (TC15.2-all-pass-1)](testcases/TC15.2-all-pass-1.html)
-  * [Language of Parts: not identified (TC15.2-2-fail-1)](testcases/TC15.2-2-fail-1.html)
-  * [Language of Parts: invalid language subtag (TC15.2-3-fail-1)](testcases/TC15.2-3-fail-1.html)
-  * [Language of Parts: incorrect language identified (TC15.2-3-fail-2)](testcases/TC15.2-3-fail-2.html)
-  * [Language of Parts: Does Not Apply (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html)
->>>>>>> Stashed changes
