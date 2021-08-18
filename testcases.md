@@ -40,7 +40,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Descriptive Headings - with an extended heading that describes purpose and/or topic of its contents (TC13.1-1-pass-2)](testcases/TC13.1-1-pass-2.html)
   * [Visual Headings - programmatic heading levels do not match the visual hierarchy(13.2-1-fail-1)](testcases/TC13.2-1-fail-1.html)
   * [Visual Headings - most important heading does not have the higher priority level programmatically (13.2-1.a-fail-1)](testcases/TC13.2-1.a-fail-1.html)
-  * [Visual Headings - with the same heading level used for subsections, but styled to be smaller (13.2-1.b-fail-1)](testcases/TC13.2-1.b-fail-1.html)
+  * [Visual Headings - same heading level used for subsections and more major heading (13.2-1.b-fail-1)](testcases/TC13.2-1.b-fail-1.html)
   * [Visual Headings - with the visual heading not being defined programmatically (13.2-1.c-fail-1)](testcases/TC13.2-1.c-fail-1.html)
   * [Visual Headings - with visual headings defined programmatically using heading elements, but role=heading is used AND aria-level  does not match heading element level (13.2-1.c-fail-2)](testcases/TC13.2-1.c-fail-2.html)
   * [Visual Headings - with visual headings defined programmatically with multiple heading element levels AND role=heading BUT aria-level is not defined (13.2-1.c-fail-3)](testcases/TC13.2-1.c-fail-3.html)
