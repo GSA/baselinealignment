@@ -32,6 +32,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Decorative Image - with image inserted via CSS (TC06.2-5-pass-1)](testcases/TC06.2-5-pass-1.html)
 * `8.` Contrast
   * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
+  * [Contrast - insufficient contrast ratio for small bolded text (TC08.1-3-fail-1)](testcases/TC08.1-3-fail-1.html)
 * `10.` Forms
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
 * `13.` Content Structure
