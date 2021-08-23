@@ -4,3 +4,8 @@
 
 <!-- custom JS for sidbar flyover, TOC generation etc. -->
 <script src="/baselinealignment/assets/js/baseline-align.js"></script>
+
+{% if layout.scripts == "testcases" %}
+<!-- Scripts included for fetching test case code snippets and to add table headers to test steps table -->
+<script src="/baselinealignment/assets/js/testcases.js"></script>
+{% endif %}
