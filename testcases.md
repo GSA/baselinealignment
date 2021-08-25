@@ -37,6 +37,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
 * `12.` Tables
   * [Data table - `<td>` element in a table also includes `role = "cell"` (TC12.1-3-fail-1)](testcases/TC12.1-3-fail-1.html)
   * [Data table - no `<th>` elements (TC12.1-4-fail-1)](testcases/TC12.1-4-fail-1.html)
+  * [Data table - with incorrect or invalid scope attribute defined (TC12.1-4-fail-2)](testcases/TC12.1-4-fail-2.html)
 
 * `13.` Content Structure
   * [Descriptive Headings - with a visual heading that does not describe purpose or topic of its contents (TC13.1-1-fail-1)](testcases/TC13.1-1-fail-1.html)
