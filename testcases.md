@@ -45,6 +45,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Visual Headings - visual heading has conflicting heading levels (13.2-1.c-fail-2)](testcases/TC13.2-1.c-fail-2.html)
   * Not done: [Visual Headings - with visual headings defined programmatically with multiple heading element levels AND role=heading BUT aria-level is not defined (13.2-1.c-fail-3)](testcases/TC13.2-1.c-fail-3.html)
   * Not done: [Visual Headings - with visual headings, with multiple levels visually apparent, are defined programmatically using role=heading BUT aria-level is not defined (13.2-1.c-fail-4)](testcases/TC13.2-1.c-fail-4.html)
+  * [Visual Headings - multiple visually apparent heading levels identified using native heading elements (13.2-all-pass-1)](testcases/TC13.2-all-pass-1.html)
 * `15.` Language
   * [Language of Page - Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
   * [Language of Page - not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
