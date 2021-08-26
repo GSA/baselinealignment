@@ -43,7 +43,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Visual Headings - same heading level used for subsections and more major heading (13.2-1.b-fail-1)](testcases/TC13.2-1.b-fail-1.html)
   * [Visual Headings - visual heading not defined programmatically (13.2-1.c-fail-1)](testcases/TC13.2-1.c-fail-1.html)
   * [Visual Headings - visual heading has conflicting heading levels (13.2-1.c-fail-2)](testcases/TC13.2-1.c-fail-2.html)
-  * Not done: [Visual Headings - with visual headings defined programmatically with multiple heading element levels AND role=heading BUT aria-level is not defined (13.2-1.c-fail-3)](testcases/TC13.2-1.c-fail-3.html)
+  * [Visual Headings -  multiple visually apparent heading levels identified using HTML AND ARIA (13.2-all-pass-3)](testcases/TC13.2-1.c-fail-3.html)
   * Not done: [Visual Headings - with visual headings, with multiple levels visually apparent, are defined programmatically using role=heading BUT aria-level is not defined (13.2-1.c-fail-4)](testcases/TC13.2-1.c-fail-4.html)
   * [Visual Headings - multiple visually apparent heading levels identified using HTML (13.2-all-pass-1)](testcases/TC13.2-all-pass-1.html)
   * [Visual Headings - multiple visually apparent heading levels identified using ARIA (13.2-all-pass-2)](testcases/TC13.2-all-pass-2.html)
