@@ -10,6 +10,9 @@ title:
 # [Expected Result (pass/fail/dna)]-[example #], e.g., TC05.1-1-fail-1
 tcid:
 
+# Provide the test case version number. Major increments: x; Minor increments: x.x
+version: 
+
 # Description of the Test Case, the included code sample, test considerations,
 # and rationale for the expected result according to the applicable ICT
 # Baseline test

@@ -17,8 +17,14 @@ provided in the document front matter; see the admin/config > collections
 
                     <h1 class="card-title" id="TCtitle">{{page.title}}</h1>
                         <h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
-                            <h3 id="TCid">Test Case ID</h3>
-                                <p>{{page.tcid}}</p>
+                            <h3 id="TCid">Test Case ID and Version</h3>
+                                <p>{{page.tcid}} 
+                                    {% if page.version %}
+                                        {% if page.version != "" %}
+                                            version {{page.version}}
+                                        {% endif %}
+                                    {% endif %}
+                                </p>
                             <h3 id="TCdesc">Test Case Description</h3>
                                 <p>{{page.descr}}</p>
                             <h3 id="TCbase">Applicable ICT Baseline Test</h3>
