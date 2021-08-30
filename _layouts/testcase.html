@@ -19,7 +19,7 @@ provided in the document front matter; see the admin/config > collections
                             <h3 id="TCid">Test Case ID</h3>
                                 <p>{{page.tcid}}</p>
                             <h3 id="TCdesc">Test Case Description</h3>
-                                <p>{{page.descr}}</p>
+                                <p>{{page.descr | markdownify}}</p>
                             <h3 id="TCbase">Applicable ICT Baseline Test</h3>
                                 <p>{{page.app-baseline | markdownify}}</p>
             
@@ -29,7 +29,7 @@ provided in the document front matter; see the admin/config > collections
                                 {{page.result}}
                             </strong></p>
                             <p>
-                                {{page.result-descr}}
+                                {{page.result-descr | markdownify}}
                             </p>
                         <h3 id="TCdata">Test Data</h3>
                             <h4 id="TCurl">Single-Page URL</h4>

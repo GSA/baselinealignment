@@ -34,7 +34,8 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
 * `10.` Forms
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
-* `12.` Data Tables
+* `12.` Tables
+  * [Data Tables - data table with role="presentation" (TC12.1-2-fail-1)](testcases/TC12.1-2-fail-1.html)
   * [Table - data table in a `<table>` element and `role="none"` (TC12.1-2-fail-2)](testcases/TC12.1-2-fail-2.html)
 * `13.` Content Structure
   * [Descriptive Headings - with a visual heading that does not describe purpose or topic of its contents (TC13.1-1-fail-1)](testcases/TC13.1-1-fail-1.html)
