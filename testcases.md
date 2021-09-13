@@ -41,6 +41,8 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Data table - with scope attribute defined but insufficient to define all cell-header relationships (TC12.1-4-fail-3)](testcases/TC12.1-4-fail-3.html)
   * [Data table - with scope attribute and ids defined but incorrect header references (TC12.1-4-fail-4)](testcases/TC12.1-4-fail-4.html)
   * [Data table - with incorrect or incomplete id/header references (TC12.1-4-fail-5)](testcases/TC12.1-4-fail-5.html)
+  * [Data table - not using native `<table>` and incorrect or missing roles for row and column headers (TC12.1-4-fail-6)](testcases/TC12.1-4-fail-6.html)
+
 
 * `13.` Content Structure
   * [Descriptive Headings - with a visual heading that does not describe purpose or topic of its contents (TC13.1-1-fail-1)](testcases/TC13.1-1-fail-1.html)
