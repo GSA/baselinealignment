@@ -50,8 +50,6 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Visual Headings - multiple visually apparent heading levels identified using HTML and ARIA (13.2-all-pass-3)](testcases/TC13.2-all-pass-3.html)
   * [Visual Headings - no visually apparent headings (13.2-ic-dna-1)](testcases/TC13.2-ic-dna-1.html)
   * [Visual Headings - programmatically defined headings, but none visually apparent (13.2-ic-dna-2)](testcases/TC13.2-ic-dna-2.html)
-  * [Visual Headings - no visual headings (13.2-ic-dna-1)](testcases/TC13.2-ic-dna-1.html)
-  * [Visual Headings - programmatic headings, but no visual headings (13.2-ic-dna-2)](testcases/TC13.2-ic-dna-2.html)
 * `15.` Language
   * [Language of Page - Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
   * [Language of Page - not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
