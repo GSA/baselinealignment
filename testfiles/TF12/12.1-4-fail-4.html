@@ -2,32 +2,41 @@
 <html lang="en-us">
 <head>
 <title>Data Table with scope and ids but incorrect header references</title>
+<style>
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  table th, table td {
+    border: 1px solid black;
+  }
+</style>
 </head>
 
 <body>
 <div style="margin:20px" id="tc_code">
-<table border="1" cellpadding="0" cellspacing="0" width="10%">
+<table cellpadding="0" cellspacing="0" width="10%">
    <tr>
      <th rowspan="2" id="h">Homework</th>
-     <th colspan="3" id="e">Exams</th>
-     <th colspan="3" id="p">Projects</th>
+     <th colspan="3" id="e" scope="col">Exams</th>
+     <th colspan="3" id="p" scope="col">Projects</th>
    </tr>
    <tr>
-     <th scope="col" id="e1" headers="incorrect">1</th>
-     <th scope="col" id="e2" headers="incorrect">2</th>
-     <th scope="col" id="ef" headers="incorrect">Final</th>
-     <th scope="col" id="p1" headers="incorrect">1</th>
-     <th scope="col" id="p2" headers="incorrect">2</th>
-     <th scope="col" id="pf" headers="incorrect">Final</th>
+     <th scope="col" id="e1">1</th>
+     <th scope="col" id="e2">2</th>
+     <th scope="col" id="ef">Final</th>
+     <th scope="col" id="p1">1</th>
+     <th scope="col" id="p2">2</th>
+     <th scope="col" id="pf">Final</th>
    </tr>
    <tr>
     <td headers="h">Percentage</td>
-    <td headers="e e1">15%</td>
-    <td headers="e e2">15%</td>
-    <td headers="e ef">20%</td>
-    <td headers="p p1">10%</td>
-    <td headers="p p2">10%</td>
-    <td headers="p pf">15%</td>
+    <td headers="e1">15%</td>
+    <td headers="e2">15%</td>
+    <td headers="ef">20%</td>
+    <td headers="p1">10%</td>
+    <td headers="p2">10%</td>
+    <td headers="pf">15%</td>
    </tr>
   </table>
 </div>
