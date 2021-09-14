@@ -12,7 +12,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
 * `5.` Changing Content
   * [Changing Content - aria-live='off' (TC05.1-1-fail-1)](testcases/TC05.1-1-fail-1.html)
 * `6.` Images
-  * [Image - no accessible name or description (TC06.1-1-fail-1)](testcases/TC06.1-1-fail-1.html)
+  * [Meaningful Image - no accessible name or description (TC06.1-1-fail-1)](testcases/TC06.1-1-fail-1.html)
   * [Meaningful Image - with non-descriptive alt text (TC06.1-2-fail-1)](testcases/TC06.1-2-fail-1.html)
   * [Meaningful Image - with role="presentation" (TC06.1-3-fail-1)](testcases/TC06.1-3-fail-1.html)
   * [Meaningful Image - with role="none" (TC06.1-4-fail-1)](testcases/TC06.1-4-fail-1.html)
