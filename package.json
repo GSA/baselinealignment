@@ -1,0 +1,19 @@
+{
+  "name": "baselinealignment",
+  "version": "1.0.0",
+  "description": "The Baseline and ITTP Working Group will use this repository and set of pages to store and make reference to test pages for use in validating test rules contained in the [ICT Testing Baseline](https://section508coordinators.github.io/ICTTestingBaseline/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Section508Coordinators/baselinealignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Section508Coordinators/baselinealignment/issues"
+  },
+  "homepage": "https://github.com/Section508Coordinators/baselinealignment#readme"
+}
