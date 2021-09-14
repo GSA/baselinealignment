@@ -3,42 +3,55 @@
 <head>
 <title>Data Table element without appropriately assigned roles</title>
 <style>
-  table {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  table th, table td {
-    border: 1px solid black;
-  }
+  [role="gridcell"], .columnheader, [role="columnheader"] {
+      display: inline-block;
+      width: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .columnheader, [role="columnheader"] {
+      background-color: skyblue;
+    }
+
+    [role="gridcell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
+      outline-color: invert;
+    }  
 </style>
 </head>
 
 <body>
-<div style="margin:20px" id="tc_code" role="grid">
-<table cellpadding="0" cellspacing="0" width="10%">
-   <tr>
-     <th role="columnheader" rowspan="2" id="h">Homework</th>
-     <th role="rowheader" colspan="3" id="e">Exams</th>
-     <th role="rowheader" colspan="3" id="p">Projects</th>
-   </tr>
-   <tr>
-     <th id="e1" headers="e">1</th>
-     <th id="e2" headers="e">2</th>
-     <th id="ef" headers="e">Final</th>
-     <th id="p1" headers="p">1</th>
-     <th id="p2" headers="p">2</th>
-     <th id="pf" headers="p">Final</th>
-   </tr>
-   <tr>
-    <td headers="h">Percentage</td>
-    <td headers="e e1">15%</td>
-    <td headers="e e2">15%</td>
-    <td headers="e ef">20%</td>
-    <td headers="p p1">10%</td>
-    <td headers="p p2">10%</td>
-    <td headers="p pf">15%</td>
-   </tr>
-  </table>
+<div id="tc_code">
+  <!--Taken from W3C example -->
+  <div role="grid">
+    <div role="rowgroup">
+      <div role="row">
+        <span role="columnheader" tabindex="0">First Name</span>
+        <span role="columnheader" tabindex="0">Last Name</span>
+        <span role="columnheader" tabindex="0">Company</span>
+        <span class="columnheader" tabindex="0">Address</span>
+      </div>
+    </div>
+    <div role="rowgroup">
+      <div role="row">
+        <span role="gridcell" tabindex="0">Fred</span>
+        <span role="gridcell" tabindex="0">Jackson</span>
+        <span role="gridcell" tabindex="0">Acme, Inc.</span>
+        <span role="gridcell" tabindex="0">123 Broad St.</span>
+      </div>
+      <div role="row">
+        <span role="gridcell" tabindex="0">Sara</span>
+        <span role="gridcell" tabindex="0">James</span>
+        <span role="gridcell" tabindex="0">Competitor, Inc.</span>
+        <span role="gridcell" tabindex="0">124 Broad St.</span>
+      </div>
+    </div>
+  </div>
+  <br>
+
 </div>
+
 </body>
 </html>
