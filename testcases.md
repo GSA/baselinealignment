@@ -38,7 +38,13 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
 * `12.` Tables
   * [Data Tables - data table with role="presentation" (TC12.1-2-fail-1)](testcases/TC12.1-2-fail-1.html)
-  * [Data table - td element in a table also includes role = "cell" (TC12.1-3-fail-1)](testcases/TC12.1-3-fail-1.html)
+  * [Data table - `<td>` element in a table also includes `role = "cell"` (TC12.1-3-fail-1)](testcases/TC12.1-3-fail-1.html)
+  * [Data table - no `<th>` elements (TC12.1-4-fail-1)](testcases/TC12.1-4-fail-1.html)
+  * [Data table - with incorrect or invalid scope attribute defined (TC12.1-4-fail-2)](testcases/TC12.1-4-fail-2.html)
+  * [Data table - with scope attribute defined but insufficient to define all cell-header relationships (TC12.1-4-fail-3)](testcases/TC12.1-4-fail-3.html)
+  * [Data table - with scope attribute and ids defined but incorrect header references (TC12.1-4-fail-4)](testcases/TC12.1-4-fail-4.html)
+  * [Data table - with incorrect or incomplete id/header references (TC12.1-4-fail-5)](testcases/TC12.1-4-fail-5.html)
+  * [Data table - not using native `<table>` and incorrect or missing roles for row and column headers (TC12.1-4-fail-6)](testcases/TC12.1-4-fail-6.html)
 * `13.` Content Structure
   * [Descriptive Headings - with a visual heading that does not describe purpose or topic of its contents (TC13.1-1-fail-1)](testcases/TC13.1-1-fail-1.html)
   * [Descriptive Headings - with an extended heading that describes purpose and/or topic of its contents (TC13.1-1-pass-1)](testcases/TC13.1-1-pass-1.html)
