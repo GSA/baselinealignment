@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-<title>Data Table element with an overlaping ARIA role</title>
+<title>Data Table with incorrect or invalid scope attribute defined</title>
 </head>
 
 <body>
 <div style="margin:20px" id="tc_code">
 <table border="1" cellpadding="0" cellspacing="0" width="10%">
    <tr>
-     <th rowspan="2" id="h">Homework</th>
-     <th colspan="3" id="e">Exams</th>
-     <th colspan="3" id="p">Projects</th>
+     <th scope="row">Homework</th>
+     <th scope="col">Exams</th>
+     <th scope="col">Projects</th>
    </tr>
    <tr>
      <th id="e1" headers="e">1</th>
@@ -21,8 +21,8 @@
      <th id="pf" headers="p">Final</th>
    </tr>
    <tr>
-    <td headers="h" role="cell">Percentage</td>
-    <td headers="e e1" role="cell">15%</td>
+    <td headers="h">Percentage</td>
+    <td headers="e e1">15%</td>
     <td headers="e e2">15%</td>
     <td headers="e ef">20%</td>
     <td headers="p p1">10%</td>
