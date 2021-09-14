@@ -38,6 +38,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
 * `12.` Tables
   * [Data Tables - data table with role="presentation" (TC12.1-2-fail-1)](testcases/TC12.1-2-fail-1.html)
+  * [Table - data table in a `<table>` element and `role="none"` (TC12.1-2-fail-2)](testcases/TC12.1-2-fail-2.html)
   * [Data table - `<td>` element in a table also includes `role = "cell"` (TC12.1-3-fail-1)](testcases/TC12.1-3-fail-1.html)
   * [Data table - no `<th>` elements (TC12.1-4-fail-1)](testcases/TC12.1-4-fail-1.html)
   * [Data table - with incorrect or invalid scope attribute defined (TC12.1-4-fail-2)](testcases/TC12.1-4-fail-2.html)
