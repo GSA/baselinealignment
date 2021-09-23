@@ -8,7 +8,7 @@ title: Link - purpose of each link can be determined from the link text
 # The Test Case ID should follow the pattern: 
 # TC[Baseline Test Procedure #]-[Test Instruction #]-
 # [Expected Result (pass/fail/dna)]-[example #], e.g., TC05.1-1-fail-1
-tcid:TC14.1-pass-1
+tcid:TC14.1-all-pass-1
 # Description of the Test Case, the included code sample, test considerations,
 # and rationale for the expected result according to the applicable ICT
 # Baseline test
@@ -31,7 +31,7 @@ result-descr: The the code sample describes the purpose of the link.
 #
 # Then upload the code sample to the 'testfiles' folder 
 # and provide the link (and only the url) below.
-sample:
+sample:14.1-all-pass-1.html
 
 # Table of test instructions, including the following table headers: 
 # Test Instruction #; Instruction Detail; Expected Test Case Result
