@@ -36,6 +36,9 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Conrast - Insufficient contrast ratio for 15 point, bolded text (TC08.1-3-fail-1)](testcases/TC08.1-3-fail-1.html)
 * `10.` Forms
   * [Input text element: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
+* `11.` Page Titles
+  * [Page Titles - page with no title element (TC11.1-1-fail-1)](testcases/TC11.1-1-fail-1.html)
+  * [Page Titles - page with inaccurate title element (TC11.1-2-fail-1)](testcases/TC11.1-2-fail-1.html)
 * `12.` Tables
   * [Data Tables - data table with role="presentation" (TC12.1-2-fail-1)](testcases/TC12.1-2-fail-1.html)
   * [Table - data table in a `<table>` element and `role="none"` (TC12.1-2-fail-2)](testcases/TC12.1-2-fail-2.html)
