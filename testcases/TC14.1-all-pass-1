@@ -31,7 +31,7 @@ result-descr: The the code sample describes the purpose of the link.
 #
 # Then upload the code sample to the 'testfiles' folder 
 # and provide the link (and only the url) below.
-sample:14.1-all-pass-1.html
+sample:/testfiles/TF14/14.1-all-pass-1.html
 
 # Table of test instructions, including the following table headers: 
 # Test Instruction #; Instruction Detail; Expected Test Case Result
