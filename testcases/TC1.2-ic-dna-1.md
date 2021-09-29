@@ -20,7 +20,7 @@ descr: |
 
 # Reference and link to the applicable ICT Baseline test
 app-baseline: | 
-    [1.2 Test Procedure for No Keyboard Trap](https://github.com/Section508Coordinators/ICTTestingBaseline/blob/section508coordinators301/01Keyboard.md)
+    [1.2 Test Procedure for No Keyboard Trap](https://github.com/Section508Coordinators/ICTTestingBaseline/blob/section508coordinators301/01Keyboard.md#12-test-procedure-for-no-keyboard-trap)
 
     **Baseline Test ID:** 1.2 Test Procedure for No Keyboard Trap
     
