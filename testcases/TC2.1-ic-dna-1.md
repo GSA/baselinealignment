@@ -20,7 +20,7 @@ descr: |
 
 # Reference and link to the applicable ICT Baseline test
 app-baseline: | 
-    [2.1 Test Procedure for Focus Visible](https://github.com/Section508Coordinators/ICTTestingBaseline/blob/section508coordinators301/02FocusVisible.md)
+    [2.1 Test Procedure for Focus Visible](https://github.com/Section508Coordinators/ICTTestingBaseline/blob/section508coordinators301/02FocusVisible.md#21-test-procedure-for-focus-visible)
 
     **Baseline Test ID:** 2.1 Test Procedure for Focus Visible
     
