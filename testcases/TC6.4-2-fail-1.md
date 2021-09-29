@@ -50,5 +50,5 @@ sample: /testfiles/TF1/TC6.4-2-fail-1.html
 |------------------|--------------------|---------------------------|
 | **IC-1** | Identify any images of text, except where a particular presentation of text is essential to the information being conveyed (e.g., logotypes or text that is part of a logo or brand name).
 | **6.4-1** | Check that using text cannot achieve the same visual presentation and effect as images of text. `[SC 1.4.5`] | Fail: using text could achieve the same visual presentation and effect. |
-| **6.4-2** | Check that the image of text can be visually customized to a user's requirements. `[SC 1.4.5`] | Fail: image of text cannot be customized for font. |
+| **6.4-2** | Check that the image of text can be visually customized to a user's requirements. For example, web content allows users to specify font, size, color, and background settings, and all images of text are then provided based on those settings. `[SC 1.4.5`] | Fail: image of text cannot be customized for font. |
 | FAIL; page has an image of text that cannot be customized for font. |
