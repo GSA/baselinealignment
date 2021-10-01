@@ -66,7 +66,10 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Visually Apparent Lists - visually apparent unordered list not identified as a list programmatically (TC13.4-1.a-fail-1)](testcases/TC13.4-1.a-fail-1.html)
   * [Visually Apparent Lists - visually apparent ordered list not identified as a list programmatically (TC13.4-1.b-fail-1)](testcases/TC13.4-1.b-fail-1.html)
 * `14.` Links
-  * [Link - DNA (TC14.1-all-dna-1)](testcases/TC14.1-all-dna-1.html) 
+  * [Link Purpose (In Context) - no links (TC14.1-all-dna-1)](testcases/TC14.1-all-dna-1.html)
+  * [Link Purpose (In Context) - link text is sufficiently descriptive of link purpose (TC14.1-all-pass-1)](testcases/TC14.1-all-pass-1.html)
+  * [Link Purpose (In Context) - image/link has empty accessible name and description (TC14.1-1-fail-1)](testcases/TC14.1-1-fail-1.html)
+  * [Link Purpose (In Context) - link has an accessible name/description that is not sufficiently description of the link (TC14.1-2-fail-1)](testcases/TC14.1-2-fail-1.html)
 * `15.` Language
   * [Language of Page - Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
   * [Language of Page - not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
