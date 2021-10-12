@@ -44,3 +44,74 @@ The Test Case file contains the description the Baseline’s evaluation of the t
 4. Update the content in the front matter (enclosed by “---"). Do not modify the lines that start with “#” or the identifier terms that precede a colon.)
     - Please do not edit the special characters, spaces, and blank lines, as these were inserted to format and build the page correctly.
     - Below is a sample test case markdown file with the text that should be edited in italics and highlighted. The editable text follows the identifier term and colon (and sometimes, special character) in each section.
+
+        \# The layout must be 'testcase'; DO NOT Change `layout: testcase`
+    
+        `layout: testcase`
+
+        \# Brief, descriptive title for the test case
+    
+        `title: Image - no accessible name or description`
+
+        \# The Test Case ID should follow the pattern: 
+        
+        \# TC\[Baseline Test Procedure #\]-\[Test Instruction #\]-
+        
+        \# \[Expected Result (pass/fail/dna)\]-\[example #\], e.g., TC05.1-1-fail-1
+    
+        `tcid: TC06.1-1-fail-1`
+    
+        \# Description of the Test Case, the included code sample, test considerations,
+        \# and rationale for the expected result according to the applicable ICT
+        \# Baseline test
+    
+        `descr: |` (Developer note: please do not edit the syntax here, or your file may not render as expected. Start your description entry on the next line.)
+    
+       `Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image.`
+
+        `The code sample data input does not include any attributes that would contribute to accessible name or accessible description output. A successful test should identify a failure against Baseline 6. Images.`
+    
+        \#Reference and link to the applicable ICT Baseline test
+    
+        `app-baseline: |` (Developer note: please do not edit the syntax here, or your file may not render as expected. Start your Baseline link entry on the next line.)
+
+        `[6.1 Test Procedure for Meaningful Images](https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images)`
+    
+        `**Baseline Test ID.**: 6.1-MeaningfulImage`
+    
+        `**Test Instruction.** 1`
+    
+        \# Expected result that the ICT Baseline would predict
+    
+        \# [Pass | Fail | DNA]
+    
+        `result: FAIL`
+     
+        \# Brief description of the rationale for the expected result
+     
+        `result-descr: The image in the code sample does not provide any attributes that would contribute to an accessible name or description text alternative output.`
+         
+        \# URL for the code sample
+    
+        \# In the sample code file, add id="tc_code" to the 
+
+        \# element that contains the relevant code snippet.
+
+        \#
+
+        \# Then upload the code sample to the 'testfiles' folder 
+
+        \# and provide the link (and only the url) below.
+
+        sample: `/testfiles/TF06/06.1-1-fail-1.html`
+
+        \# Table of test instructions, including the following table headers: 
+
+        \# Test Instruction #; Instruction Detail; Expected Test Case Result
+    
+        \#
+    
+        \# Include the table in the content section below
+
+
+
