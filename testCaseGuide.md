@@ -1,5 +1,5 @@
 # Guide for Developing Test Case and Test Files
-Test cases and their related test files will be used to demonstrate expected outcomes for Baseline test instructions.  Each of these test instructions is mapped to a 508 requirement ([draft Appendix A of the Baseline for Web](https://federalist-78ccea55-7a06-447c-aabf-bd620b207b74.app.cloud.gov/preview/atbcb/icttestingbaseline/nextupdateafter301/AppendixA/)) in the ICT Testing Baseline for Web. 
+Test cases and their related test files will be used to demonstrate expected outcomes for Baseline test instructions.  Each of these test instructions is mapped to a 508 requirement ([Appendix A of the Baseline for Web](https://federalist-78ccea55-7a06-447c-aabf-bd620b207b74.app.cloud.gov/preview/atbcb/icttestingbaseline/nextupdateafter301/AppendixA/)) in the ICT Testing Baseline for Web. 
 
 A note on developer tools: some contributors use VSCode and others use notepad++, depending on what they have access to. This work can all be done in the GitHub website, but some tasks would be much easier with a code editor.  
 
@@ -13,7 +13,7 @@ Thank you for contributing your time and skills to this!
 5. [Contributing Test Case video play list](https://www.youtube.com/playlist?list=PLaqerowLitKmBu1MkZcJhu-VHmTBaDJho) - Youtube
 
 ## Claim Your Test Case
-1. Go to the [Test Case map to Baseline Tests.xlsx](https://documents.max.gov/community-pages/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b8C6CC728-95D2-4E54-826D-3CA97A7BCCA0%7d&action=edit) to see a listing of all test cases that are needed.
+1. Go to the [Test Case map to Baseline Tests.xlsx](https://documents.max.gov/community-pages/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b8C6CC728-95D2-4E54-826D-3CA97A7BCCA0%7d&action=edit) on Max.gov to see a listing of all test cases that are needed.
    - This spreadsheet is used for tracking of all test case development. 
    - All details for the test cases are included here, including a description of the test case and test file and filenames.
 2. Enter your name (in the blank Assigned column) next to the test case you want to work on.
