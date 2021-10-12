@@ -36,14 +36,14 @@ The Test File contains the code and includes HTML and any other supporting files
 ### Create the Test File
 The Test Case file contains the description the Baseline’s evaluation of the test file.
 1. Open the "_testcase_template.md" file in the "Templates" folder in the [GitHub repo](https://github.com/Section508Coordinators/baselinealignment).
-   Alternatively, you can copen a published test case file from the "testcases" folder, such as TC06.1-1-fail-1.
+   Alternatively, you can open a published test case file from the "testcases" folder, such as TC06.1-1-fail-1.
 2. Create a copy of the file.
 3. Rename the duplicated file with the filename identified in the spreadsheet in the Test Case ID column. The file should be saved in the “testcases” folder. Test cases follow this naming convention:
     - TC[Baseline Test ID]-[test instruction #]-[pass/fail/dna]-[sequence #].md
     - Please note that the test case starts with “TC” and is markdown file format.
 4. Update the content in the front matter (enclosed by “---"). Do not modify the lines that start with “#” or the identifier terms that precede a colon.)
     - Please do not edit the special characters, spaces, and blank lines, as these were inserted to format and build the page correctly.
-    - Below is a sample test case markdown file with the text that should be edited in italics and highlighted. The editable text follows the identifier term and colon (and sometimes, special character) in each section.
+    - Below is a sample test case markdown file with the *text that should be edited preceded by "edit:"*. The editable text follows the identifier term and colon (and sometimes, special character) in each section.
 
         \# The layout must be 'testcase'; DO NOT Change `layout: testcase`
     
@@ -51,7 +51,7 @@ The Test Case file contains the description the Baseline’s evaluation of the t
 
         \# Brief, descriptive title for the test case
     
-        `title: Image - no accessible name or description`
+        `title: `edit: `Image - no accessible name or description`
 
         \# The Test Case ID should follow the pattern: 
         
@@ -59,7 +59,7 @@ The Test Case file contains the description the Baseline’s evaluation of the t
         
         \# \[Expected Result (pass/fail/dna)\]-\[example #\], e.g., TC05.1-1-fail-1
     
-        `tcid: TC06.1-1-fail-1`
+        `tcid: `edit: `TC06.1-1-fail-1`
     
         \# Description of the Test Case, the included code sample, test considerations,
         \# and rationale for the expected result according to the applicable ICT
@@ -67,29 +67,29 @@ The Test Case file contains the description the Baseline’s evaluation of the t
     
         `descr: |` (Developer note: please do not edit the syntax here, or your file may not render as expected. Start your description entry on the next line.)
     
-       `Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image.`
+       edit: `Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image.`
 
-        `The code sample data input does not include any attributes that would contribute to accessible name or accessible description output. A successful test should identify a failure against Baseline 6. Images.`
+        edit: `The code sample data input does not include any attributes that would contribute to accessible name or accessible description output. A successful test should identify a failure against Baseline 6. Images.`
     
         \#Reference and link to the applicable ICT Baseline test
     
         `app-baseline: |` (Developer note: please do not edit the syntax here, or your file may not render as expected. Start your Baseline link entry on the next line.)
 
-        `[6.1 Test Procedure for Meaningful Images](https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images)`
+        edit: `[6.1 Test Procedure for Meaningful Images](https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images)`
     
-        `**Baseline Test ID.**: 6.1-MeaningfulImage`
+        `**Baseline Test ID.**: `edit: `6.1-MeaningfulImage`
     
-        `**Test Instruction.** 1`
+        `**Test Instruction.** `edit: `1`
     
         \# Expected result that the ICT Baseline would predict
     
         \# [Pass | Fail | DNA]
     
-        `result: FAIL`
+        `result: `edit: `FAIL`
      
         \# Brief description of the rationale for the expected result
      
-        `result-descr: The image in the code sample does not provide any attributes that would contribute to an accessible name or description text alternative output.`
+        `result-descr: `edit: `The image in the code sample does not provide any attributes that would contribute to an accessible name or description text alternative output.`
          
         \# URL for the code sample
     
@@ -103,7 +103,7 @@ The Test Case file contains the description the Baseline’s evaluation of the t
 
         \# and provide the link (and only the url) below.
 
-        sample: `/testfiles/TF06/06.1-1-fail-1.html`
+        sample: edit: `/testfiles/TF06/06.1-1-fail-1.html`
 
         \# Table of test instructions, including the following table headers: 
 
@@ -112,6 +112,33 @@ The Test Case file contains the description the Baseline’s evaluation of the t
         \#
     
         \# Include the table in the content section below
+        
+    - Enter the table information (defined in markdown format) to describe the Test File’s result for each corresponding Baseline Test instruction. **COPY & PASTE the test instruction identifier and the Instruction Detail from the [ICT Baseline for Web](https://ictbaseline.access-board.gov/).**
 
+        - Include all test instructions up to and including the instruction that determine the test result (pass/fail/dna). For example, if the third instruction determines the result, include the first, second, and third instructions in the table.
+        - Do not edit the table column headers:
+        
+             `| Test Instruction | Instruction Detail | Expected Test Case Result |`
 
+             `|------------------|--------------------|---------------------------|`
+           
+        - Edit the table data. Create additional rows as needed:
+        
+            | \*\*\[Baseline Test Instruction ID\]\*\* | \[Copy and paste from [Baseline](https://ictbaseline.access-board.gov/) instruction\] | \[describe the test file's result for this Baseline test instruction\] |
 
+5. Commit your changes (i.e., save or upload your files to your branch).
+
+## Update the Test Case Index File
+**This is necessary because the Test Cases page is the main navigation to all test case/files on the Alignment website.**
+
+1. Open the “testcases.md” file in the root folder in the GitHub repo.
+2. Modify the list to add a link to your new test case. 
+3. Commit your changes (i.e., save or upload your files to your GitHub branch).
+
+## Open Pull Request
+1. Open a pull request in [Pull requests · Section508Coordinators/baselinealignment](https://github.com/Section508Coordinators/baselinealignment/pulls)
+2. Each pull request should include the 
+    1. test case (markdown), ex: TC06.1-1-fail-1.md
+    2. test file (HTML), ex: 06.1-1-fail-1.html
+    3. Test case index update: testcases.md
+3.	When you are ready for your pull request to be reviewed, assign Andrew (drewnielson) or Kathy (kengdoj) as reviewers. 
