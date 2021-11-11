@@ -1,0 +1,151 @@
+---
+layout: page
+title: Developing Test Cases and Test Files
+---
+<h1> Guide for Developing Test Cases and Test Files</h1>
+<p>Test cases and their related test files will be used to demonstrate expected outcomes for Baseline test instructions.  Each test instruction is mapped in to their Section 508/WCAG requirements in <a href="https://ictbaseline.access-board.gov/AppendixA/">Appendix A of the ICT Testing Baseline for Web</a>.</p>
+
+<p>A note on developer tools: some contributors use VSCode and others use notepad++, depending on what they are comfortable using or have access to. This work can all be done in the GitHub website, but some tasks would be much easier with a code editor.</p>
+
+<p>Thank you for contributing your time and skills to this! And please <a href="mailto:ictbaseline@gsa.gov">contact us at ictbaseline@gsa.gov</a>if you have any questions.</p>
+
+<h2>Baseline Alignment Resources</h2>
+<ol>
+    <li><a href="https://section508coordinators.github.io/baselinealignment/testcases.html">Baseline for Web Alignment site</a> - Test Cases page</li> 
+    <li><a href="https://documents.max.gov/community-pages/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b8C6CC728-95D2-4E54-826D-3CA97A7BCCA0%7d&action=edit">Test Case map to Baseline Tests.xlsx</a> - list of all test cases for development on Max.gov</li>
+    <li><a href="https://github.com/Section508Coordinators/baselinealignment"">Section508coordinators/baselinealignment</a> – Baseline Alignment GitHub repository</li>
+    <li><a href="https://ictbaseline.access-board.gov/">ICT Testing Baseline for Web</a> – where Baseline test instructions can be found</li>
+    <li><a href="https://www.youtube.com/playlist?list=PLaqerowLitKmBu1MkZcJhu-VHmTBaDJho">Our Youtube playlist for Contributing Test Cases</a></li>
+</ol>
+
+<h2>Claim Your Test Case</h2>
+<ol>
+    <li>Go to the <a href="https://documents.max.gov/community-pages/_layouts/15/WopiFrame2.aspx?sourcedoc=%7b8C6CC728-95D2-4E54-826D-3CA97A7BCCA0%7d&action=edit">Test Case map to Baseline Tests.xlsx</a> on Max.gov to see a listing of all test cases that are needed.</li>
+        <ul>
+            <li>This spreadsheet is used for tracking of all test case development.</li>
+            <li>All details for the test cases are included here, including a description of the test case and test file and filenames.</li>
+        </ul>
+    <li>Enter your name (in the blank Assigned column) next to the test case you want to work on.</li>
+    <li>Change the status to “To Do” or “In Progress”, as appropriate.</li>
+</ol>
+
+<h2>Develop the Test Case and Associated Files</h2>
+<p>Go to the <a href="https://github.com/Section508Coordinators/baselinealignment">Section508coordinators/baselinealignment GitHub repo</a> and create a new branch for your work. If you've never used GitHub, you may want to start with <a href="https://lab.github.com/githubtraining/introduction-to-github">Introduction to GitHub</a>.</p>
+
+<h3>Create the Test File</h3>
+<p>The Test File contains the HTML code and includes any other supporting files needed.</p>
+<ol>
+    <li>Open an existing test file in the <a href="https://github.com/Section508Coordinators/baselinealignment">Baseline Alignment GitHub repo</a>, such as baselinealignment/testfiles/TF06/06.1-1-fail-1.html. Or create the new test file from scratch.</li>
+    <li>Save with a new filename, in the appropriate “testfiles” sub-folder (/TF##).  (Create a new /TF## folder if necessary.)</li>
+        <ul>
+            <li>Obtain the filename from the spreadsheet. See the Test Case ID column and remove “TC”.</li>
+            <li>Test files follow this naming convention: [Baseline Test ID]-[test instruction #]-[pass/fail/dna]-[sequence # of this test].html</li>
+        </ul>
+    <li>Edit/create the code in the HTML test file.</li>
+    <li>Ensure that the relevant code that you want displayed in the test case is enclosed in <code>&lt;div id="tc_code"&gt;</code>. (A script is used to display this code snippet in the test case’s Test Detail section.) If you find that the relevant code cannot be enclosed in a <code>&lt;div&gt;</code>, please open an issue in the <a href="https://github.com/Section508Coordinators/baselinealignment/issues">Baselinealignment GitHub repo</a>.</li>
+    <li>Commit your changes (i.e., save or upload your files to your branch)</li>
+</ol>
+
+<h3>Create the Test Case</h3>
+<p>The Test Case file contains the description the Baseline’s evaluation of the test file.</p>
+<ol>
+    <li>Open the "_testcase_template.md" file in the "Templates" folder in the <a href="https://github.com/Section508Coordinators/baselinealignment">GitHub repo</a>.
+        Alternatively, you can open a published test case file from the "testcases" folder, such as TC06.1-1-fail-1.</li>
+    <li>Create a copy of the file.</li>
+    <li>Rename the duplicated file with the filename identified in the spreadsheet in the Test Case ID column. The file should be saved in the “testcases” folder. Test cases follow this naming convention:</li>
+        <ul>
+            <li>TC[Baseline Test ID]-[test instruction #]-[pass/fail/dna]-[sequence #].md</li>
+            <li>Please note that the test case starts with “TC” and is markdown file format.</li>
+        </ul>
+    <li>Update the content in the front matter (enclosed by “---"). Do not modify the lines that start with “#” or the identifier terms that precede a colon.</li>
+        <ul>
+            <li>Please do not edit the special characters, spaces, and blank lines, as these were inserted to format and build the page correctly.</li>
+            <li>Below is a sample test case markdown file. The editable text follows the identifier term and colon (and sometimes, special character) in each section.</li>
+        
+    <pre>
+        # The layout must be 'testcase'; DO NOT Change layout: testcase
+        layout: testcase
+
+        # Brief, descriptive title for the test case
+        title: Image - no accessible name or description
+
+        # The Test Case ID should follow the pattern: 
+        # TC[Baseline Test Procedure #]-[Test Instruction #]-[Expected Result (pass/fail/dna)]-[example #], e.g., TC05.1-1-fail-1
+        tcid: TC06.1-1-fail-1
+    
+        # Description of the Test Case, the included code sample, test considerations,
+        # and rationale for the expected result according to the applicable ICT
+        # Baseline test
+    
+        descr: | (Developer note: please do not edit the syntax here, or your file may not render as expected. Start your description entry on the next line.)
+    
+        Detect existence of attributes that would contribute to the accessible name and accessible description computation and calculate the text alternative for the image.
+
+        The code sample data input does not include any attributes that would contribute to accessible name or accessible description output. A successful test should identify a failure against Baseline 6. Images.
+    
+        #Reference and link to the applicable ICT Baseline test
+        app-baseline: | (Developer note: please do not edit the syntax here, or your file may not render as expected. Start your Baseline link entry on the next line.)
+
+        [6.1 Test Procedure for Meaningful Images](https://section508coordinators.github.io/ICTTestingBaseline/06Images.html#61-test-procedure-for-meaningful-images)
+    
+        **Baseline Test ID.**: 6.1-MeaningfulImage
+    
+        **Test Instruction.** 1
+    
+        # Expected result that the ICT Baseline would predict
+        # [Pass | Fail | DNA]
+        result: FAIL
+     
+        # Brief description of the rationale for the expected result
+        result-descr: The image in the code sample does not provide any attributes that would contribute to an accessible name or description text alternative output.
+         
+        # URL for the code sample
+        # In the sample code file, add id="tc_code" to the 
+        # element that contains the relevant code snippet.
+        #
+        # Then upload the code sample to the 'testfiles' folder 
+        # and provide the link (and only the url) below.
+        sample: /testfiles/TF06/06.1-1-fail-1.html
+
+        # Table of test instructions, including the following table headers:
+        # Test Instruction #; Instruction Detail; Expected Test Case Result  
+        #
+        # Include the table in the content section below
+    </pre>   
+    </ul>
+    <li>To enter the test file's results for the Baseline Test instructions:</li>
+        <ul>
+            <li>Please do not edit the table column headers: </li>
+            <pre>
+             | Test Instruction | Instruction Detail | Expected Test Case Result |
+             |------------------|--------------------|---------------------------|
+            </pre>
+            <li>Use this table (defined in markdown format) to describe the Test File’s result for each corresponding Baseline Test instruction. <strong>COPY & PASTE</strong> the test instruction identifier and the Instruction Detail from <a href="https://ictbaseline.access-board.gov/">the Web Baseline</a></li>
+            <li>Include all test instructions up to and including the instruction that determines the test result (pass/fail/dna). For example, if the third instruction determines the result, include the first, second, and third instructions in the table.</li>
+            <li>Create additional rows. Each row will have this general format (columns in markdown tables are created using "|"):</li>
+            <pre>
+            | [Baseline Test Instruction ID] | [Copy and paste the instructions from <a href="https://ictbaseline.access-board.gov/">the Web Baseline</a> | [describe the test file's result for this Baseline test instruction] |
+            </pre>
+        </ul>
+    <li>Commit your changes (i.e., save or upload your files to your branch).</li>
+</ol>
+<h2>Update the Test Case Index File</h2>
+<p>This is necessary because the Test Cases page is the main navigation to all test case/files on the Alignment website.</p>
+<ol>
+    <li>Open the “testcases.md” file in the root folder in the GitHub repo.</li>
+    <li>Modify the list to add a link to your new test case.</li>
+    <li>Commit your changes (i.e., save or upload your files to your GitHub branch).</li>
+</ol>
+
+<h2>Open a Pull Request</h2>
+<ol>
+    <li>Open a pull request in <a href="https://github.com/Section508Coordinators/baselinealignment/pulls">Pull requests · Section508Coordinators/baselinealignment</a></li>
+    <li>Each pull request should include</li>
+        <ul>
+            <li>test case (markdown), ex: TC06.1-1-fail-1.md</li>
+            <li>test file (HTML), ex: 06.1-1-fail-1.html</li>
+            <li>updated testcases.md</li>
+        </ul>
+    <li>When you are ready for your pull request to be reviewed, assign Andrew (drewnielson) or Kathy (kengdoj) as reviewers.</li>
+</ol>
+

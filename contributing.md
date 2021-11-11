@@ -5,9 +5,7 @@ title: Contributing to the ICT Baseline Alignment Framework
 # Contributing to the ICT Baseline Alignment Framework
 ## How you can help
 ### Developing and Evaluating Test Cases
-Need content from people doing this work. What do you need?
-
-I have a note about issuing templates. Does that belong bundled with this topic?
+Test Cases are essential for the Baseline Alignment Framework. These will be used to determine how well a test process aligns to the [ICT Testing Baseline for Web](https://ictbaseline.access-board.gov). If you would like to contribute to the collection of [test cases](testcases.html), please take a look at the [Guide for Developing Test Case and Test Files](testCaseGuide.html). All of the work is done on GitHub. Please email [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov) with questions.
 
 ### Planning and Conducting Outreach
 We need people to know about our work so they can contribute and use it! Whether you enjoy giving presentations or would prefer to remain behind the scenes writing and editing, your skills are needed. Can you help with any of the following?
