@@ -87,7 +87,8 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
 * `16.` Audio-Only and Video-Only
   * [Audio-Only - No audio-only content (TC16.1-ic-dna-1)](testcases/TC16.1-ic-dna-1.html)
   * [Audio-Only - No transcript provided for audio-only content (TC16.1-1-fail-1)](testcases/TC16.1-1-fail-1.html)
-  * [Audio-Only - Transcript provided, but transcript is an image of text (with no text alternative) (TC16.1-2-fail-1)](testcases/TC16.1-2-fail-1.html)
+  * [Audio-Only - Transcript provided is an image of text (with no text alternative) (TC16.1-2-fail-1)](testcases/TC16.1-2-fail-1.html)
+  * [Audio-Only - Transcript provided is an image of text (with equivalent text alternative) (TC16.1-2-fail-2)](testcases/TC16.1-2-fail-2.html)
   * [Audio-Only - Complete text transcript provided (TC16.1-all-pass-1)](testcases/TC16.1-all-pass-1.html)
 * `17.` Synchronized Media
   * [ Media Player Controls - no synchronized media player on page (TC17.1-ic-dna-1)](testcases/TC17.1-ic-dna-1.html)
