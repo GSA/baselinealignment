@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>05.1-all-pass-1</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    th, td{
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid gray;
+        padding: 1rem;
+    }
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+window.onload = function(){
+
+    //Add click event to all delete buttons
+    let deleteBtns = document.querySelectorAll(".delete-btn");
+    deleteBtns.forEach(function(elem){
+        elem.addEventListener("click", function(){
+           //get this button element's containing row
+            let parentRow = elem.parentNode.parentNode;
+
+           //get product name from first table cell
+           let productName = parentRow.children[0].innerText;
+
+           //remove this button element's containing row
+           parentRow.remove();
+
+            //delay is necessary to perform the remove before the alert appears
+            setTimeout(function(){
+                //display alert notification
+                alert(productName + " have been deleted.");
+            },100);
+        });
+    });
+};
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td id="id1">Bananas</td>
+                <td>43</td>
+                <td><button class="delete-btn" aria-describedby="id1">Delete</button></td>
+            </tr>
+            <tr>
+                <td id="id2">Apples</td>
+                <td>72</td>
+                <td><button class="delete-btn" aria-describedby="id2">Delete</button></td>
+            </tr>
+            <tr>
+                <td id="id3">Oranges</td>
+                <td>18</td>
+                <td><button class="delete-btn" aria-describedby="id3">Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

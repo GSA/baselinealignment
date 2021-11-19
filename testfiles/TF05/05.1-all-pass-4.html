@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>05.1-all-pass-4</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+    label, select, option, strong{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14pt;
+    }
+    select{
+        margin-bottom: 1rem;
+    }
+    label{
+        font-weight: bold;
+    }
+    strong{
+        color: blueviolet;
+    }
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <label for="state">
+            Select a state to display the state bird:
+        </label>
+        <br>
+        <select id="state" onchange="document.getElementById('bird').innerText = this.value;">
+            <option value="Yellowhammer">Alabama</option>
+            <option value="Willow ptarmigan">Alaska</option>
+            <option value="Cactus wren">Arizona</option>
+            <option value="Northern mockingbird">Arkansas</option>
+            <option value="California quail">California</option>
+            <option value="Lark bunting">Colorado</option>
+            <option value="American robin">Connecticut</option>
+            <option value="Delaware Blue Hen">Delaware</option>
+            <option value="Northern mockingbird">Florida</option>
+            <option value="Brown thrasher">Georgia</option>
+            <option value="Hawaiian goose">Hawaii</option>
+            <option value="Mountain bluebird">Idaho</option>
+            <option value="Northern cardinal">Illinois</option>
+            <option value="Northern cardinal">Indiana</option>
+            <option value="Eastern goldfinch">Iowa</option>
+            <option value="Western meadowlark">Kansas</option>
+            <option value="Northern cardinal">Kentucky</option>
+            <option value="Brown pelican">Louisiana</option>
+            <option value="Chickadee">Maine</option>
+            <option value="Baltimore oriole">Maryland</option>
+            <option value="Black-capped chickadee">Massachusetts</option>
+            <option value="American robin">Michigan</option>
+            <option value="Common loon">Minnesota</option>
+            <option value="Northern mockingbird">Mississippi</option>
+            <option value="Eastern bluebird">Missouri</option>
+            <option value="Western meadowlark">Montana</option>
+            <option value="Western meadowlark">Nebraska</option>
+            <option value="Mountain bluebird">Nevada</option>
+            <option value="Purple finch">New Hampshire</option>
+            <option value="Eastern goldfinch">New Jersey</option>
+            <option value="Greater roadrunner">New Mexico</option>
+            <option value="Eastern bluebird">New York</option>
+            <option value="Northern cardinal">North Carolina</option>
+            <option value="Western meadowlark">North Dakota</option>
+            <option value="Northern cardinal">Ohio</option>
+            <option value="Scissor-tailed flycatcher">Oklahoma</option>
+            <option value="Western meadowlark">Oregon</option>
+            <option value="Ruffed Grouse">Pennsylvania</option>
+            <option value="Rhode Island Red">Rhode Island</option>
+            <option value="Carolina wren">South Carolina</option>
+            <option value="Ring-necked pheasant">South Dakota</option>
+            <option value="Northern mockingbird">Tennessee</option>
+            <option value="Northern mockingbird">Texas</option>
+            <option value="California gull">Utah</option>
+            <option value="Hermit thrush">Vermont</option>
+            <option value="Northern cardinal">Virginia</option>
+            <option value="Willow goldfinch">Washington</option>
+            <option value="Northern cardinal">West Virginia</option>
+            <option value="American robin">Wisconsin</option>
+            <option value="Western meadowlark">Wyoming</option>
+        </select>
+        <br>
+        <strong id="bird"></strong>
+    </div>
+
+</body>
+</html>
