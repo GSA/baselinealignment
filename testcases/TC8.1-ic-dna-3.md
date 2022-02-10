@@ -47,6 +47,5 @@ sample: /testfiles/TF08/08.1-ic-dna-3.html
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
 |IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions above)|
-| 8.1-1| Determine the contrast ratio of foreground and background in the image of text. | The contrast ratio for the text is DNA | 
-| 8.1-2| Check that the contrast ratio is at least 4.5:1. [SC 3.14] | The contrast ratio is more than 4.5:1 (it is DNA) |
-| Results | Both of the above checks are DNA, then the Baseline Test 8.1-Contrast Minimum.  | DNA |
+| 8.1-1| Determine the contrast ratio of foreground and background in the image of text. | The contrast ratio for the text is DNA. | 
+| If the above check fail, then Baseline Test 8.1 contrast contrast fail. | DNA - Test 8.1-Color contrast does not apply because the image is a logo. Logos and brand names are exempt for color contrast 8.1 test. |
