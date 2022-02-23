@@ -27,7 +27,7 @@ app-baseline:|[8.1 Test Procedure for Contrast Minimum](https://section508coordi
 result: Fail
 
 # Brief description of the rationale for the expected result
-result-descr: The foreground and background text and size contrast ratio in the code sample provide sufficient contrast in an image of text.
+result-descr: The foreground and background text and size contrast ratio in the code sample does not provide sufficient contrast in an image of text.
 
 # URL for the code sample
 # In the sample code file, add id="tc_code" to the 
