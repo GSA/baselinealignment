@@ -14,15 +14,15 @@ tcid: TC8.1-ic-dna-1
 # and rationale for the expected result according to the applicable ICT
 
 # Baseline test
-descr: Detect the foreground and background text and size contrast ratio. Determine whether contrast ratio is sufficient. The text in the code sample is sufficient contrast between the foreground and background.
+descr: Detect the visual presentation of text, images of text or logos. The following types of text and images of text are pure decoration purposes and not meaningful, having no functionality.
 
 
 # Reference and link to the applicable ICT Baseline test
-app-basline:|[8.1 Test Procedure for Contrast Minimum]https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum
+app-baseline:|[8.1 Test Procedure for Contrast Minimum](https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum)
 
   **Baseline Test ID:** 8.1-Contrast
     
-  **Test Instruction:** 1
+  **Test Instruction:** IC
 
 
 # Expected result that the ICT Baseline would predict
@@ -30,7 +30,7 @@ app-basline:|[8.1 Test Procedure for Contrast Minimum]https://section508coordina
 result: DNA
 
 # Brief description of the rationale for the expected result
-result-descr: The foreground and background text and size contrast ratio in the code sample provide sufficient contrast in logotype, logo, or brand name image of text.
+result-descr: Detect the visual presentation of text, images of text or logos. The following types of text and images of text are pure decoration purposes and not meaningful, having no functionality.
 
 # URL for the code sample
 # In the sample code file, add id="tc_code" to the 
@@ -47,7 +47,5 @@ sample: /testfiles/TF08/08.1-ic-dna-1.html
 ---
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
-|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions above)|
-| 8.1-1| Determine the contrast ratio of foreground and background in the image of text. | The contrast ratio for the text is DNA | 
-| 8.1-2| Check that the contrast ratio is at least 4.5:1. [SC 3.14] | The contrast ratio is more than 4.5:1 (it is DNA) |
-| Results | Both of the above checks are DNA, then the Baseline Test 8.1-Contrast Minimum.  | DNA |
+|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions above)| Presence of a decorative image. |
+| Results || Does Not Apply |
