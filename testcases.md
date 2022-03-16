@@ -77,6 +77,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Programmatic Heading - visually apparent headings but no programmatic headings (TC13.3-ic-dna-2)](testcases/TC13.3-ic-dna-2.html)
   * [Visually Apparent Lists - visually apparent unordered list not identified as a list programmatically (TC13.4-1.a-fail-1)](testcases/TC13.4-1.a-fail-1.html)
   * [Visually Apparent Lists - visually apparent ordered list not identified as a list programmatically (TC13.4-1.b-fail-1)](testcases/TC13.4-1.b-fail-1.html)
+  * [Visually Apparent Lists - visually apparent ordered list identified programmatically as unordered list (TC13.4-1.b-fail-2)](testcases/TC13.4-1.b-fail-2.html)
 * `15.` Language
   * [Language of Page - Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
   * [Language of Page - not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
