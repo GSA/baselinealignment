@@ -12,9 +12,9 @@ tcid: TC8.1-ic-dna-2
 
 # Description of the Test Case, the included code sample, test considerations,
 # and rationale for the expected result according to the applicable ICT
-
 # Baseline test
-descr: Detect the visual presentation of text, images of text or logos. Text that is part of a logo or brand name has no minimum contrast requirement.
+
+descr: Detect the visual presentation of text, images of text or logos. Text that is part of an inactive (disabled) user interface components are exempt.
 
 
 # Reference and link to the applicable ICT Baseline test
@@ -47,4 +47,4 @@ sample: /testfiles/TF08/08.1-ic-dna-2.html
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
 |IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions).| Presence of text found in an inactive element. |
-| Results |  | Does Not Apply |
+| Results |Inactive (disabled) user interface components are exempt.  | Does Not Apply |
