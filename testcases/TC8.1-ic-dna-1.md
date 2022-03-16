@@ -14,7 +14,7 @@ tcid: TC8.1-ic-dna-1
 # and rationale for the expected result according to the applicable ICT
 
 # Baseline test
-descr: Detect the visual presentation of text, images of text or logos. The following types of text and images of text are pure decoration purposes and not meaningful, having no functionality.
+descr: Detect the visual presentation of text, images of text or logos. Logos or brand names of logos are exempt from testing.
 
 
 # Reference and link to the applicable ICT Baseline test
@@ -30,7 +30,7 @@ app-baseline:|[8.1 Test Procedure for Contrast Minimum](https://section508coordi
 result: DNA
 
 # Brief description of the rationale for the expected result
-result-descr: Detect the visual presentation of text, images of text or logos. The following types of text and images of text are pure decoration purposes and not meaningful, having no functionality.
+result-descr: The code sample contains a logo.  Logos are exempt from all contrast testing.
 
 # URL for the code sample
 # In the sample code file, add id="tc_code" to the 
@@ -47,5 +47,5 @@ sample: /testfiles/TF08/08.1-ic-dna-1.html
 ---
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
-|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions above)| Presence of a decorative image. |
-| Results || Does Not Apply |
+|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions). | Presence of a logo. | 
+|Result| Logos are exempt from all contrast testing.| Does Not Apply |
