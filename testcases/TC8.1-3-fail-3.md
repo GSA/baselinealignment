@@ -14,15 +14,15 @@ tcid: TC8.1-3-fail-3
 # and rationale for the expected result according to the applicable ICT
 
 # Baseline test
-descr: Detect the foreground and background text and size contrast ratio. Determine whether contrast ratio is sufficient. The code sample is sufficient contrast between the foreground and background.
+descr: Detect the foreground and background text and size contrast ratio. Determine whether contrast ratio is sufficient. The code sample is not sufficient for contrast between the foreground and background when hover/focus for color change.
 
 
 # Reference and link to the applicable ICT Baseline test
-app-basline:|[8.1 Test Procedure for Contrast Minimum]https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum
+app-baseline:|[8.1 Test Procedure for Contrast Minimum](https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum)
 
   **Baseline Test ID:** 8.1-Contrast
     
-  **Test Instruction:** 1
+  **Test Instruction:** 3
 
 
 # Expected result that the ICT Baseline would predict
@@ -47,7 +47,7 @@ sample: /testfiles/TF08/08.1-3-fail-3.html
 ---
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
-|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions above)|
-| 8.1-1| Determine the contrast ratio of foreground text and background. | The contrast ratio for the text is 3.1 | 
-| 8.1-2| Check that the contrast ratio is at least 3.1. [SC 3.14] | The contrast ratio is more than 3.1 (it is 2.3:1) |
+|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions)| Presence of text change when hover/focus. |
+| 8.1-1| Determine the contrast ratio of foreground text and background. | The contrast ratio for the text is 2.0:1 | 
+| 8.1-2| Check that the contrast ratio is at least 3.1. [SC 3.14] | The contrast ratio is less than 3.1 (it is 2.0:1) |
 | Results | Both of the above checks fail, then Baseline Test 8.1-Contrast Minimum.  | Fail |
