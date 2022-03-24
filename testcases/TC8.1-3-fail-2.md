@@ -3,7 +3,7 @@
 layout: testcase
 
 # Brief, descriptive title for the test case
-title: insufficient contrast ratio for 18 point text
+title: Insufficient contrast ratio for 18 point text
 
 # The Test Case ID should follow the pattern: 
 # TC[Baseline Test Procedure #]-[Test Instruction #]-
@@ -18,11 +18,11 @@ descr: Detect the foreground and background text and size contrast ratio. Determ
 
 
 # Reference and link to the applicable ICT Baseline test
-app-basline:|[8.1 Test Procedure for Contrast Minimum]https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum
+app-baseline:|[8.1 Test Procedure for Contrast Minimum](https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum)
 
   **Baseline Test ID:** 8.1-Contrast
     
-  **Test Instruction:** 1
+  **Test Instruction:** 2
 
 
 # Expected result that the ICT Baseline would predict
@@ -47,7 +47,7 @@ sample: /testfiles/TF08/08.1-3-fail-2.html
 ---
 | Test Instruction | Instruction Detail | Expected Test Case Result |
 |------------------|--------------------|---------------------------|
-|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions above)|
+|IC| All visible text AND images of text (except those noted in Limitations, Assumptions, or Exceptions)|
 | 8.1-1| Determine the contrast ratio of foreground text and background. | The contrast ratio for the text is 3:1 | 
-| 8.1-2| Check that the contrast ratio is at least 3:1. [SC 3.14] | The contrast ratio is more than 3:1 (it is 1:7.2 ) |
-| Results | Both of the above checks pass, then Baseline Test 8.1-Contrast Minimum.  | Fail |
+| 8.1-2| Check that the contrast ratio is at least 3:1. [SC 3.14] | The contrast ratio is less than 3:1 (it is 1:7.2 ) |
+| Results | Both of the above checks fail, then Baseline Test 8.1-Contrast Minimum.  | Fail |
