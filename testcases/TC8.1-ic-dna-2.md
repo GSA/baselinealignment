@@ -18,9 +18,10 @@ descr: Detect the visual presentation of text, images of text or logos. Text tha
 
 
 # Reference and link to the applicable ICT Baseline test
-app-baseline:|[8.1 Test Procedure for Contrast Minimum](https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum)
+app-baseline: |
+  [8.1 Test Procedure for Contrast Minimum](https://ictbaseline.access-board.gov/08Contrast/#81-test-procedure-for-contrast-minimum)
 
-  **Baseline Test ID:** 8.1-Contrast
+  **Baseline Test ID:** 8.1-ContrastMinimum
     
   **Test Instruction:** IC
 
