@@ -52,7 +52,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Form Label: Form component with no label nor instructions (TC10.5-1-fail-1)](testcases/TC10.5-1-fail-1.html)
   * [Form Label: Form component with a clear label (TC10.5-1-pass-1)](testcases/TC10.5-1-pass-1.md)
   * [Form Label: Form component with descriptive label (TC10.5-1-pass-2)](testcases/TC10.5-1-pass-2.md)
-  * [Form label: Form hello component with descriptive instructions (TC10.5-1-pass3)](testcases/TC10.5-1-pass-3.md)
+  * [Form label: Form component with descriptive instructions (TC10.5-1-pass3)](testcases/TC10.5-1-pass-3.md)
 * `12.` Tables
   * [Data Tables - data table with role="presentation" (TC12.1-2-fail-1)](testcases/TC12.1-2-fail-1.html)
   * [Table - data table in a `<table>` element and `role="none"` (TC12.1-2-fail-2)](testcases/TC12.1-2-fail-2.html)
