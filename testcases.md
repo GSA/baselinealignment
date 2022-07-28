@@ -35,6 +35,9 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [CAPTCHA - no alternative form of CAPTCHA provided for users without vision (TC06.3-3-fail-1)](testcases/TC06.3-3-fail-1.html)
   * [CAPTCHA - no alternative form of CAPTCHA provided for users without hearing (TC06.3-3-fail-2)](testcases/TC06.3-3-fail-2.html)
   * [CAPTCHA - text alternative identifies and describes purpose, and alternative forms of CAPTCHA provided for users without vision and users without hearing (TC06.3-all-pass-1)](testcases/TC06.3-all-pass-1.html)
+* `7.` Sensory Characteristics
+  * [Color - Colored text with alt text (TC07.1-1.a-pass-1)](testcases/7.1-1.a-pass-1.html)
+  * [Color - Text with Visual Differentiations (TC07.1-1.b-pass-1)](testcases/7.1-1.b-pass-1.html)
 * `8.` Contrast
   * [Contrast - insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
   * [Contrast - Pass; text with contrast ratio greater than 4.5:1 (TC08.1-2-pass-1)](testcases/TC08.1-2-pass-1.html)
