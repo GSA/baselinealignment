@@ -7,3 +7,4 @@ public/
 *dwsync.xml
 *.LCK
 _notes/
+node_modules
