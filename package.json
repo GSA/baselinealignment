@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Section508Coordinators/baselinealignment/issues"
   },
-  "homepage": "https://github.com/Section508Coordinators/baselinealignment#readme"
+  "homepage": "https://github.com/Section508Coordinators/baselinealignment#readme",
+  "dependencies": {
+    "@uswds/uswds": "^3.0.2"
+  },
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0-beta.3"
+  }
 }
