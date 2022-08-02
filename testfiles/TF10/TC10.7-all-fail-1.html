@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TC10.7-all-fail-1</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    strong{
+        margin-bottom: 5px;
+    }
+    label{
+        font-weight: bold;
+    }
+    select{
+        padding: 2px;
+        clear:right;
+    }
+    li{
+        margin: 5px;
+    }
+    #order-confirmation{
+        padding:5px;
+        background-color: #dfd;
+        width: 500px;
+    }
+    #order-confirmation:focus{
+        outline: 2px solid black;
+    }
+
+    i.fa-check{
+        color:darkgreen;
+    }
+    </style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+
+    window.onload = function(){
+
+        //submit button click event
+        document.getElementById("submit-btn").addEventListener("click", function(){
+
+            //hide order form
+            document.getElementById("order-form").setAttribute("hidden","hidden");
+
+            let number = document.getElementById("number").value;
+            let time = document.getElementById("time").value;
+
+            document.getElementById("pizza-number").innerHTML = number;
+            document.getElementById("pizza-time").innerHTML = time;
+
+            const pizza_price = 10; //dollars
+            let total = "$" + parseInt(number * pizza_price) + ".89";
+            document.getElementById("pizza-total").innerText = total;
+
+            //display confirmation
+            let order = document.getElementById("order-confirmation");
+            order.removeAttribute("hidden");
+            order.focus();
+        });
+
+    };
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <h2>Fibonacci's Pizzarazzi</h2>
+
+        <div id="order-form">
+            <label for="number">How many pizzas do you want? ($10 each, cheese only)</label>
+            <br>
+            <select id="number">
+                <option>0</option>
+                <option>1</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>5</option>
+                <option>8</option>
+                <option>13</option>
+                <option>21</option>
+                <option>34</option>
+                <option>55</option>
+            </select>
+            <br><br>
+            <label for="time">What time should we deliver?</label>
+            <br>
+            <select id="time">
+                <option>12:00pm</option>
+                <option>12:01pm</option>
+                <option>12:01pm</option>
+                <option>12:02pm</option>
+                <option>12:03pm</option>
+                <option>12:05pm</option>
+                <option>12:08pm</option>
+                <option>12:13pm</option>
+                <option>12:21pm</option>
+                <option>12:34pm</option>
+                <option>12:55pm</option>
+            </select>
+            <br><br>
+            <button id="submit-btn">Submit</button>
+        </div>
+
+        <div id="order-confirmation" hidden tabindex="-1">
+            <h3><i class="fa fa-check" aria-hidden="true"></i> Your order is complete and pizza is on the way</h3>
+            <ul>
+                <li>Cheese Pizzas: <b id="pizza-number"></b></li>
+                <li>Delivery time: <b id="pizza-time"></b></li>
+                <li>A convenience fee of <b>$0.89</b> has been applied</li>
+                <li>Your credit card on file has been charged <b id="pizza-total"></b></li>
+                <li>All charges are non-refundable.</li>
+            </ul>
+            <p>
+            Thank you for choosing Fibonacci's Pizzarazzi!
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
