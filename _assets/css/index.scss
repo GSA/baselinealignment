@@ -1,0 +1,557 @@
+/*
+  Customize US Web Design System SASS
+  See all at designsystem.digital.gov/documentation/settings
+*/
+
+// Example - Override the background image in the hero component using SASS:
+// $theme-hero-image: asset_path("whatever-the-default-is.png");
+$theme-font-type-sans: "public-sans";
+$theme-show-notifications: false;
+@import "uswds";
+
+// Example - Override the background image in the hero component using CSS:
+.usa-hero {
+  background-image: asset_url("hero.jpg")
+//  background-position: 50%;
+//  background-size: cover;
+}
+.usa-hero.mission {
+  background-image: asset_url("absolutvision@2x.png")
+  //  background-position: 50%;
+  //  background-size: cover;
+}
+/*
+  Add your SASS/CSS here
+*/
+
+.dataTables_filter [type="search"]{
+  float: none;
+  border-right: 2px solid;
+}
+
+.usa-section {
+  padding-top: 2rem;
+}
+
+a{
+  color: #135fcb;
+}
+.card-tag {
+    font-size: .9rem;
+    margin-top: .2em;
+    margin-bottom: .15em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #323a45;
+}
+
+
+.navy {
+    background-color: #144571;
+}
+.ltblue {
+    background-color: #EBEFF2;
+}
+.brown {
+    background-color: #645359;
+}
+.tan {
+    background-color: #F6F2F1;
+}
+.tan-breakout {
+    background-color: #F2ECDC;
+}
+.dark {
+    background-color: #343C3F;
+}
+.olive {
+    background-color: #747A55;
+}
+.lt-olive {
+    background-color: #F0EFE8;
+}
+.brown-breakout {
+    background-color: #907139;
+}
+.maroon {
+    background-color: #907139;
+}
+.text-highlight {
+    background-color: #747A55;
+    color: #fff;
+    display: inline-block;
+    padding: 0 3px;
+}
+.cell {
+    margin-bottom: .2rem;
+    color: #fff;
+}
+.agenda-description {
+    border-left: .2rem solid #fff;
+    color: #1b1b1b;
+}
+.brown-breakout-header {
+    background-color: #8f7241;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 5px;
+    min-height: 80px;
+}
+
+.fade_line {
+  margin: 25px 0;
+  height: 2px;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #a9aeb1));
+}
+
+.usa-sidenav__item_nolink {
+    color: #565c65;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.usa-sidenav__title {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+// default mode hide banner
+.usa-banner__content {
+  display: hidden;
+}
+.usa-hero__callout {
+  background-color: white;
+}
+.usa-card__container {
+  border-top: 0.25rem solid #162E51 ;
+  border-bottom: 1px solid #dfe1e2;
+  border-left: 1px solid #dfe1e2;
+  border-right: 1px solid #dfe1e2;
+  .usa-card__body {
+    li {
+      margin-top: 0.5em;
+    }
+  }
+}
+.h2color{
+  color:#235EBC;
+}
+.primary-background-color{
+  background-color:#2672de;
+}
+.mission h3{
+  font-size:26px;
+}
+.mission__callout {
+  background-color: #112f4e;
+  a {
+    color: #6CA3EF;
+  }
+  a.usa-button {
+    color: white;
+  }
+}
+
+.secondary-background-color{
+  background-color: #00a871 ;
+}
+.white-background{
+  background: var(--white) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 80px #00000012;
+  border-radius: 16px;
+  opacity: 1;
+  .circle{
+    width:115px;
+    margin: 0 auto;
+    background: #edf5ff;
+    border-radius:50%;
+    height:115px;
+    text-align: center;
+    .icon{
+      margin-top: 25px;
+    }
+    .icon-1{
+      margin-top: 18px;
+    }
+  }
+  .card{
+    height:207px;
+    a{
+      margin-top: 135px;
+    }
+  }
+}
+.pillcolor{
+  background: #edf5ff;
+}
+.buy{
+  background-image: asset_url("icons/Icon-awesome-shopping-bag.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 7px;
+}
+.news{
+  background-image: asset_url("icons/Icon-awesome-newspaper.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+}
+.tools{
+  background-image: asset_url("icons/Icon-awesome-tools.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 8px;
+}
+.buy-content{
+  background-image: asset_url("rupixen.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.design-content{
+  background-image: asset_url("design.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.test-content{
+  background-image: asset_url("test.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.training-content{
+  background-image: asset_url("training.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.news-content{
+  background-image: asset_url("markus.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.tools-content{
+  background-image: asset_url("jo-szczepanska.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.topics {
+  li {
+    text-align: left;
+    line-height: 2em;
+    padding-left: 1em;
+    a{
+      color: #2672de;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  li:hover{
+    background: #edf5ff;
+  }
+  ul {
+    border-left: 6px solid #DBF6ED;
+    list-style: none;
+    padding: 0;
+  }
+
+  .grid-row {
+    flex-wrap: wrap;
+  }
+}
+ul.menu{
+  padding: 0;
+  list-style: none;
+  clear: both;
+  display: table;
+  .list{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: sub;
+    clear: both;
+    background-image: url(../img/plus.svg), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: right 0rem center;
+    background-size: 0.75rem;
+    &.active{
+      background-image: url(../img/minus.svg), linear-gradient(transparent, transparent);
+      background-repeat: no-repeat;
+      background-position: right 0rem center;
+      background-size: 0.75rem;
+    }
+    a{
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .items{
+      height: 0px;
+      overflow: hidden;
+      display: none;
+    }
+  }
+  .active{
+    >.items{
+      display: block;
+      height: auto;
+      clear: both;
+      float: left;
+      width: 100%;
+    }
+  }
+}
+
+.usa-menu-btn {
+  height: 4rem;
+}
+
+.usa-navbar {
+  height: 4rem;
+}
+
+.usa-sidenav__item {
+  clear: both;
+  span {
+  color: #565c65;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  ul{
+    li{
+      span{
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+.banner-title-color {
+  color: #9DDFEB;
+}
+
+// jump links
+.jump-links {
+  border-bottom: 3px solid #005ea2;
+  border-top: 3px solid #005ea2;
+  padding: 10px;
+}
+
+#backtotop {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(17, 47, 78, 0.93);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#backtotop:hover {
+  background-color: #555;
+}
+a {
+  color: #1e6ad6;
+}
+
+.landing-page-banner {
+  background-color: #162E51;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.agenda-description a{
+  color: #1C62C4;
+}
+div[role=rowheader] {
+  background-color: #1c5295;
+  font-weight: bold;
+  padding-left: .2em;
+  color: white;
+}
+@media screen and (min-width: 640px) {
+  .tablet\:width-1\/3 {
+    width: 33%;
+  }
+  .tablet\:float-left {
+    float: left;
+  }
+}
+@media screen and (min-width: 640px) {
+  .paginate-link {
+    display: initial;
+  }
+  .paginate-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .paginate-link {
+    display: none;
+  }
+  .paginate-button {
+    display: block;
+  }
+  .white-background {
+    .card {
+      height: 157px;
+
+      a {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+@media all and (min-width: 64em) {
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    padding: 1rem 1.5rem;
+    color: #71767a;
+  }
+  .usa-header [role="search"] {
+    float: right;
+    max-width: calc( 35ch + 4rem );
+    width: 100%;
+  }
+  .usa-nav__secondary-links .usa-nav__secondary-item + .usa-nav__secondary-item::before{
+    visibility: hidden;
+  }
+  .topics {
+    ul {
+      border-left: 6px solid #DBF6ED;
+      margin: 43px 0 43px 10px;
+    }
+
+    .tools-list ul {
+      margin: 10px 0 0 10px;
+    }
+  }
+  .usa-header--extended .usa-logo {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 40em) {
+  .usa-hero__callout {
+    max-width: 24rem;
+  }
+
+  .topics {
+    .grid-row {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .usa-sidenav__sublist .usa-current::after {
+    background-color: #005ea2;
+    border-radius: 99rem;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0.25rem;
+    top: 0.25rem;
+    width: 0.25rem;
+    left: 0;
+  }
+}
+@media (min-width: 64em) {
+  .usa-header--extended .usa-nav__primary-item > .usa-current::after, .usa-header--extended .usa-nav__primary-item > .usa-nav__link:hover::after {
+    background-color: #098850;
+  }
+  .usa-nav__primary > .usa-nav__primary-item > a:hover {
+    color: #098850;
+  }
+}
+
+.session-type {
+  display: block;
+  font-weight: bold;
+}
+
+.session-link {
+  color: #006eb9;
+}
+
+// Page header USAB logo override
+
+.usa-menu-btn {
+  position: absolute;
+  right: 0px;
+}
+
+.star-logo {
+  height: 100%;
+  width: 100%;
+}
+.site-title {
+  font-weight: bold;
+  @include u-text("primary-dark");
+}
+
+.site-title-short {
+  font-weight: bold;
+  @include u-text("primary-dark")
+}
+
+.site-subtitle {
+  font-weight: bold;
+  font-style: italic;
+  @include u-text("primary-vivid");
+}
+
+@media (min-width: 64em) {
+  .usa-header--extended .usa-logo {
+    margin: 1rem 0 .25rem!important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .usa-header--extended .usa-logo {
+    max-width: 75%;
+  }
+  .site-logo {
+    max-height: 3rem;
+  }
+  .star-logo-box {
+    max-height: 4rem;
+    max-width: 4rem;
+    padding: 5px 10px 5px 10px;
+  }
+  .star-logo {
+    max-height: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .usa-header--extended .usa-logo {
+    max-width: 75%;
+  }
+  .star-logo-box {
+    max-width: 4rem;
+  }
+  .site-subtitle {
+    @include u-font('sans', 'md');
+  }
+  .onlymobile {
+    display: none;
+  }
+}
+
+@media (max-width: 35em) {
+  .site-subtitle {
+    display: none;
+  }
+}
+
+@media (min-width: 30em) {
+  .site-title-short {
+  display: none;
+  }
+}
+@media screen and (max-width: 29.99em) {
+  .site-title {
+    position: absolute;
+    left: -999em;
+  }
+}
