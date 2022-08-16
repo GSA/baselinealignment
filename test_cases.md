@@ -11,19 +11,18 @@ The table below lists the test cases for validating alignment of test processes 
 
 Test Case documents are organized by Baseline Test; each ICT Baseline corresponds to multiple Test Cases. Each Test Case provides a specific example (with sample code) of web content that passes, fails, or does not apply to particular ICT Baseline. You can also use the following links to download expanded test case index information in JavaScript Object Notation (JSON) or Comma-Separated Variable (CSV) formats.
 
-[Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) `|` [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
+[Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) <span>|</span> [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
 
-<table id="test-case-index" class="display" data-order='[[ 2, "asc" ]]' >
+<table id="test-case-index" class="display" data-order='[[ 1, "asc" ]]' >
   <caption>
     Index of Baseline Alignment Framework Test Cases
   </caption>
   <thead>
     <tr>
-      <th>ICT Baseline</th>
-      <th>Test Case Name</th>
-      <th>Test Case ID</th>
-      <th>Sample Code/Test Page</th>
-      <th>Relevant Standard</th>
+      <th scope="col">ICT Baseline</th>
+      <th scope="col">Test Case</th>
+      <th scope="col">Sample Code</th>
+      <th scope="col">Relevant Standard</th>
     </tr>
   </thead>
   <tbody>
@@ -39,13 +38,10 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
         {% endfor %}
         </td>
         <td>
-          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title | markdownify }}</a>
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.tcid }} {{ page.title | markdownify }}</a>
         </td>
         <td>
-          {{ page.tcid }}
-        </td>
-        <td>
-          <a href="{{ site.baseurl }}{{ page.sample }}">{{ page.sample }}</a>
+          <a href="{{ site.baseurl }}{{ page.sample }}">Test Page</a>
         </td>
         <td>
           {{ page.standard }} {{ page.standard-ref }}

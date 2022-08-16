@@ -23,6 +23,29 @@ $theme-show-notifications: false;
 /*
   Add your SASS/CSS here
 */
+.dataTable tbody a {
+	@include u-text('primary-vivid');
+}
+
+.dataTable tbody a:focus p {
+  outline: 5px solid #2491FF!important;
+}
+
+.page-item.active .page-link {
+  background-color: #0050d8!important;
+}
+
+.pagination .page-link {
+  color:#0050d8!important;
+}
+
+.pagination .active .page-link {
+  color:white!important;
+}
+
+.pagination .disabled .page-link {
+  color:dimgrey!important;
+}
 
 .dataTables_filter [type="search"]{
   float: none;
