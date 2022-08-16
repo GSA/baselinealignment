@@ -23,6 +23,12 @@ $theme-show-notifications: false;
 /*
   Add your SASS/CSS here
 */
+
+.landing-page-banner p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .dataTable tbody a {
 	@include u-text('primary-vivid');
 }
