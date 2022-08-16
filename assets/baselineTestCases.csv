@@ -1,0 +1,5 @@
+---
+---
+Test Case ID,Test Case Name,Test Case URL,Sample File URL,Baseline-Expected Result,Related Baseline,Relevant Standard,Standard Reference
+{% for page in site.pages %}{% if page.layout == "testcase" %}{{ page.tcid }},"{{ page.title }}",{{ site.url }}{{ page.url }},{{ site.url }}{{ page.sample }},{{ page.result | upcase }},{% assign baselineID = page.tcid | slice: 2, 2 %}{% for baseline in site.data.baselines %}{% if baseline.id == baselineID %}{{ baseline.name }}{% endif %}{% endfor %},{{ page.standard }},"{{ page.standard-ref }}"{% endif %}
+{% endfor %}

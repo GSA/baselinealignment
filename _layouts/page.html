@@ -6,12 +6,28 @@ layout: base
 This template is for a basic single page with bootstrap 'card' holders for content
 {% endcomment %}
 
-{% include toc.html %}
+{% include banner.html %}
 
-<main class="container-fluid mb-auto flex-shrink-0" id="main-content">
-    <div class="row" id="card-holder">
-        <div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
+<div id="main-content" class="usa-layout-docs usa-section">
+
+  <div class="grid-container">
+
+    <div class="grid-row grid-gap">
+      {% if page.sidenav == true %}
+      {% include sidenav.html %}
+
+      <main class="usa-layout-docs__main desktop:grid-col-9" id="content-section">
+        <div class="usa-graphic-list">
             {{ content }}
         </div>
+      </main>
+      {% else %}
+      <main class="usa-layout-docs__main">
+        <div class="usa-graphic-list">
+          {{ content }}
+        </div>
+      </main>
+      {% endif %}
     </div>
-</main>
+  </div>
+</div>

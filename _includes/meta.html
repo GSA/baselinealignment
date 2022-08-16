@@ -1,14 +1,62 @@
 <head>
+    <!-- Basic Page Needs
+    ================================================== -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% if site.branch == "main" %}
+    <meta name="robots" content="index, follow">
+    {% else %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title and meta description
+    ================================================== -->
+    <title>{{page.title}} | {{site.title}}</title>
+    <meta property="og:title" content="{{site.title}}">
+    <meta name="description" content="{{site.description}}">
+    <meta property="og:description" content="{{site.description}}">
 
-    <title>{{page.title}}</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{site.twitter}}" />
+    <meta name="twitter:title" content="{{site.title}}" />
+    <meta name="twitter:description" content="{{site.description}}" />
 
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <!-- Favicons
+    ================================================== -->
+    <!-- 128x128 -->
+    <link rel="shortcut icon" type="image/ico" href="{% asset favicon.ico @path %}" />
+    <link rel="icon" type="image/png" href="{% asset favicon @path %}" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="{% asset android-chrome-192x192 @path %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% asset apple-touch-icon @path %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% asset favicon-32x32 @path %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% asset favicon-16x16 @path %}" />
+    <link rel="manifest" href="{% asset site.webmanifest @path %}" />
+
+    <!-- CSS
+    ================================================== -->
+    <!-- USWDS Primary CSS -->
+    {% asset index.css %}
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.css">
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% if page.scripts == "datatables" %}
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/datatables.css">
+    {% endif %}
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+    
+    <!-- JQuery/Script
+    ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </head>

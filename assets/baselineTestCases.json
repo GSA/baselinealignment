@@ -1,0 +1,24 @@
+---
+---
+[{% assign testcasePages = site.pages | where: "layout", "testcase"%}{% assign lastTestcase = testcasePages.last %}{% assign lastTitle = lastTestcase.title %}{% for page in testcasePages %}{% unless page.title == lastTitle %}
+    {
+        "testCaseID": "{{ page.tcid }}",
+        "testCaseName": "{{ page.title | smartify }}",
+        "testCaseUrl": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+        "sampleFileUrl": "{{ site.url }}{{ site.baseurl }}{{ page.sample }}",
+        "baselineExpectedResult": "{{ page.result | upcase }}",
+        "relatedBaseline": "{% assign baselineID = page.tcid | slice: 2, 2 %}{% for baseline in site.data.baselines %}{% if baseline.id == baselineID %}{{ baseline.name }}{% endif %}{% endfor %}",
+        "relevantStandard": "{{ page.standard }}",
+        "standarReference": "{{ page.standard-ref }}"
+    },{% else %}
+    {
+        "testCaseID": "{{ page.tcid }}",
+        "testCaseName": "{{ page.title | smartify }}",
+        "testCaseUrl": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+        "sampleFileUrl": "{{ site.url }}{{ site.baseurl }}{{ page.sample }}",
+        "baselineExpectedResult": "{{ page.result | upcase }}",
+        "relatedBaseline": "{% assign baselineID = page.tcid | slice: 2, 2 %}{% for baseline in site.data.baselines %}{% if baseline.id == baselineID %}{{ baseline.name }}{% endif %}{% endfor %}",
+        "relevantStandard": "{{ page.standard }}",
+        "standarReference": "{{ page.standard-ref }}"
+    }{% endunless %}{% endfor %}
+]

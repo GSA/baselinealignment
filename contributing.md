@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Contributing to the ICT Baseline Alignment Framework
+sidenav: true
 ---
-# Contributing to the ICT Baseline Alignment Framework
 ## How you can help
 ### Developing and Evaluating Test Cases
 Need content from people doing this work. What do you need?

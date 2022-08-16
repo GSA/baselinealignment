@@ -13,6 +13,8 @@ tcid:
 # Provide the test case version number. Major increments: x; Minor increments: x.x
 version: 
 
+version: 1.0
+
 # Description of the Test Case, the included code sample, test considerations,
 # and rationale for the expected result according to the applicable ICT
 # Baseline test

@@ -1,11 +1,44 @@
-<!-- jQuery, Bootstrap JS (bundled with Popper) -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- Bootstrap JS (bundled with Popper) -->
 <script src="/baselinealignment/assets/js/bootstrap.bundle.min.js"></script>
 
-<!-- custom JS for sidbar flyover, TOC generation etc. -->
+<!-- Custom scripts for TOC generation etc. -->
 <script src="/baselinealignment/assets/js/baseline-align.js"></script>
 
-{% if layout.scripts == "testcases" %}
+{% if page.layout == "testcase" %}
 <!-- Scripts included for fetching test case code snippets and to add table headers to test steps table -->
 <script src="/baselinealignment/assets/js/testcases.js"></script>
 {% endif %}
+
+{% if page.scripts == "datatables" %}
+<!-- datatables Script (https://datatables.net/) -->
+<script src="{{ site.baseurl }}/assets/js/datatables.js"></script>
+{% endif %}
+
+{% if site.dap.agency %}
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+<script
+  id="_fed_an_ua_tag"
+  src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency={{site.dap.agency}}{% if site.dap.subagency %}&subagency={{site.dap.subagency}}{% endif %}"
+></script>
+{% endif %}
+
+{% if site.ga.ua %}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga.ua }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  /**
+    * `forceSSL` was used for analytics.js (the older Google Analytics script).
+    * It isn't documented for gtag.js, but the term occurs in the gtag.js code;
+    * figure it doesn't hurt to leave it in. -@afeld, 5/29/19
+    */
+  gtag('config', '{{ site.ga.ua }}', { 'anonymize_ip': true, 'forceSSL': true });
+</script>
+{% endif %}
+
+<!-- USWDS -->
+{% asset uswds.min.js %}
+{% asset app.js %}
