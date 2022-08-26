@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TC10.4-all-pass-3</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #errors{
+        color: darkred;
+    }
+    strong{
+        margin-bottom: 5px;
+    }
+    strong:focus{
+        outline: 2px solid black;
+    }
+    label{
+        font-weight: bold;
+    }
+    input{
+        font-family:monospace;
+        padding: 2px;
+        height: 1.3rem;
+        width: 5rem;
+        font-size: 16pt;
+        margin: 3px;
+    }
+    </style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+
+    function validate(elem){
+        let errorDisplay =  document.getElementById("errors");
+        if (!(/^[0-9]+$/.test(elem.value))) {
+            //invalid number
+            errorDisplay.innerHTML = '<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error: not a number.';
+            //Send focus to error notification
+            errorDisplay.focus();
+        }
+        else{
+            //valid number, Clear errors
+            errorDisplay.innerHTML = '';
+        }
+    }
+
+    window.onload = function(){
+
+        //submit button click event
+        document.getElementById("submit-btn").addEventListener("click", function(){
+            validate(document.getElementById("number"));
+        });
+
+    };
+    </script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <strong id="errors" tabindex="-1"></strong>
+        <br><br>
+        <label for="number">Enter A Number:</label>
+        <input type="text" id="number">
+        <button id="submit-btn">Validate Number</button>
+    </div>
+
+</body>
+</html>
+
