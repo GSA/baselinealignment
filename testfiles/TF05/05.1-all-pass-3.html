@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>05.1-all-pass-3</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #error{
+        background-color: #fdd;
+        border: 1px solid #c00;
+        padding: 0 1rem 1rem 1rem;
+    }
+    #error:focus{
+        outline: 2px solid black;
+    }
+    #error i{
+       color: #c00;
+    }
+    button{
+        padding: 5px;
+    }
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+function checkInToAppt(){
+    let errorDisplay = document.getElementById('error');
+
+    //display error container
+    errorDisplay.removeAttribute('hidden');
+
+    //shift focus to error container
+    errorDisplay.focus();
+}
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+<div style="width: 400px;">
+    <div id="tc_code">
+        <h1>Casino Mobile Check In</h1>
+        <div id="error" hidden tabindex="0">
+            <h2><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Oopsie!</h2>
+            <p>
+            You are attempting to check in too early
+            and according to your device's location, you're in Timbuktu.
+            </p>
+            <p>
+            Your appointment is at <b>11:15pm</b> in <b>Las Vegas, Nevada</b>.
+            </p>
+        </div>
+        <h2>Hey there high roller,</h2>
+        <p>When you arrive at the casino, press the button below to check in to your appointment.</p>
+
+        <button onclick="checkInToAppt()">I'm Here, Check In Now</button>
+    </div>
+</div>
+</body>
+</html>
