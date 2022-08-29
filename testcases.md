@@ -9,6 +9,9 @@ Until we modify the primary index file, this serves as a placeholder with links 
 
 Test Case documents are organized by Baseline Test (each serving as a Test Scenario or general "functional requirement" for testing), which inculde multiple Test Cases. Will need to develop a Test Scenario template to summarize Test Scenario purpose and subordinate Test Cases
 
+* `1.` Keyboard Accessible
+  * [Keyboard Access - Functionality not keyboard accessible (TC01.1-1-fail-1)](testcases/TC01.1-1-fail-1.html)
+  * [Keyboard Access - individual keystrokes require specific timing (TC01.1-2-fail-1)](testcases/TC01.1-2-fail-1.html)
 * `5.` Changing Content
   * [Changing Content - aria-live='off' (TC05.1-1-fail-1)](testcases/TC05.1-1-fail-1.html)
 * `6.` Images
