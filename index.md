@@ -13,9 +13,9 @@ Members of the U.S. federal accessibility community must agree on what constitut
 
 The Section 508 standards incorporate the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/), levels A and AA. The ICT Testing Baseline for Web establishes the minimum tests and evaluation guidance for determining whether Web content meets the requirements of WCAG 2.0 A and AA and, therefore, Section 508.
 
-Although the ICT Testing Baseline does not provide processes or tools for conducting baseline tests, it can be used to develop test processes and evaluate how well test processes cover all Section 508 requirements.
+Although the ICT Testing Baseline does not provide processes or tools for conducting baseline tests, it can be used to develop test processes and evaluate how well test processes address all Section 508 requirements.
 
-The ICT Baseline Alignment Validation Framework provides test cases as a way for agencies to check whether their own test processes and use of testing tools cover all Section 508 requirements. Two different processes that align to the Baseline should produce the same replicable and reliable test results.
+The ICT Baseline Alignment Validation Framework provides test cases as a way for agencies to check whether their own test processes and use of testing tools adequately address all Section 508 requirements. Two different processes that align to the Baseline should produce the same replicable and reliable test results.
 
 ## How to contribute
 
@@ -23,4 +23,6 @@ Contributors do not need to be highly technical nor make a long-term commitment,
 
 ## How to validate alignment to the ICT Baseline
 
-Some basic info, then link to the "Validating Alignment" detailed guidance.
+Our ICT Baseline Working Group is still developing test cases and guidance for test process and tool owners to evaluate alignment to the ICT Testing Baseline. The basic purpose of the [test cases](testcases.html) contained in this Baseline Alignment Framework is to provide code samples paired with relevant ICT Testing Baseline test procedures along with the Baeline's expected conformance test reulst for that specific code sample and test procedure. Test process and tool owners can test the same sample code using their own relevant test procedures and/or test rules and compare their test results to those in the test cases to determine whether their tools/processes procues the same results that the ICT Testing Bseline would predict and for the same reasons.
+
+More detailed guidance is still to come. As our working group continues to develop test cases and accompanying guidance, we invite test process and tool owners to review the test cases and provide feedback.
