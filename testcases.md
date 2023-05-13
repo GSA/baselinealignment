@@ -40,6 +40,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [CAPTCHA - text alternative identifies and describes purpose, and alternative forms of CAPTCHA provided for users without vision and users without hearing (TC06.3-all-pass-1)](testcases/TC06.3-all-pass-1.html)
 * `8.` Contrast
   * [Contrast - Insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
+  * [Contrast - Insufficient contrast ratio for 14 point font (TC08.1-2-fail-2)](testcases/TC08.1-2-fail-2.html)
   * [Contrast - Contrast ratio greater than 4.5:1 (TC08.1-2-pass-1)](testcases/TC08.1-2-pass-1.html)
   * [Contrast - Insufficient contrast ratio for small text in an image of text (TC08.1-2-fail-4)](testcases/TC08.1-2-fail-4.html)
   * [Contrast - Insufficient contrast ratio for 14 point, bolded text (TC08.1-3-fail-1)](testcases/TC08.1-3-fail-1.html)
