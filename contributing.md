@@ -4,10 +4,10 @@ title: Contributing to the ICT Baseline Alignment Framework
 ---
 # Contributing to the ICT Baseline Alignment Framework
 ## How you can help
-### Developing and Evaluating Test Cases
-Need content from people doing this work. What do you need?
+If you are a federal employee or providing direct contract support to a federal agency, we invite you to contribute directly as a member of our ICT Baseline Working Group (with supervisor and/or client approval). If you are not a federal employee, we can still use your help and welcome your feedback and contributions via sumission of [issues](https://github.com/Section508Coordinators/baselinealignment/issues) and [pull requests](https://github.com/Section508Coordinators/baselinealignment/pulls) in the [GitHub repository](https://github.com/Section508Coordinators/baselinealignment). We are also happy to accept input and/or recommendations for other methods of contributions via [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov).
 
-I have a note about issuing templates. Does that belong bundled with this topic?
+### Developing and Evaluating Test Cases
+We welcome any input and feedback on the Baseline Alignment Framework Test Cases. If you have experience in front-end web development, we need help to develop code samples with various examples of both failures and passes against specific Section 508 conformance standards. Even if you aren't a developer, but you have some good examples of web content passes and failures, we welcome those suggestions as well. We will use contributed code samples to complete development of our Test Cases, which help test process and tool owners evaluate whether their tools/processes produce the same test results that the ICT Testing Baseline would predict.
 
 ### Planning and Conducting Outreach
 We need people to know about our work so they can contribute and use it! Whether you enjoy giving presentations or would prefer to remain behind the scenes writing and editing, your skills are needed. Can you help with any of the following?

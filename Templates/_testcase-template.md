@@ -16,7 +16,7 @@ tcid:
 descr:
 
 # Reference and link to the applicable ICT Baseline test
-app-basline:
+app-baseline:
 
 # Expected result that the ICT Baseline would predict
 # [Pass | Fail | DNA]
