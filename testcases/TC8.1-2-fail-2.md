@@ -18,7 +18,8 @@ descr: Detect the foreground and background text and size contrast ratio. Determ
 
 
 # Reference and link to the applicable ICT Baseline test
-app-basline:|[8.1 Test Procedure for Contrast Minimum]https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum
+app-basline: |
+  [8.1 Test Procedure for Contrast Minimum]https://section508coordinators.github.io/ICTTestingBaseline/08Contrast.html#81-test-procedure-for-contrast-minimum
 
   **Baseline Test ID:** 8.1-Contrast
     
