@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10.3-3-fail-3</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+    select:focus, button:focus{
+        outline:3px solid blueviolet;
+    }
+
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+window.onload = function(){
+
+    let selection = document.getElementById("id1");
+    let button = document.getElementById("id2");
+
+    //Add change event to select box
+    selection.addEventListener("change", function(){
+        //send focus to button element
+        button.focus();
+    });
+};
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <label for="id1">How would you like your steak?</label>
+        <br />
+        <select id="id1">
+            <option></option>
+            <option>rare</option>
+            <option>medium</option>
+            <option>well done</option>
+            <option>vegetarian</option>
+        </select>
+        <br />
+        <br />
+        <button id="id2">Submit</button>
+    </div>
+
+</body>
+</html>
