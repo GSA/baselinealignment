@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Keystroke Timing Failing Example 3</title>
+<style> button:hover {
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+<p><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training course.</p>
+</br>
+<div id="tc_code">
+  <label for="username">User Name: </label>&nbsp;  &nbsp;   <input type="text" name="Username" value=""  id="username">
+</br></br>
+<label for="pword">Password: </label>&nbsp; &nbsp; <input type="password" name="Password" value="" id="pword">
+ </br></br>
+<button  id="button1">Log in </button> 
+</br></br> 
+<p> To change the button from <strong>Request Password Reset</strong> to <strong>Request User Name</strong>, tab to the button,</br>
+press and hold the space bar for 3 seconds, and release the spacebar. </br> 
+Repeat the steps to change it back again.</p>
+
+<button id="btnReset">Request Password Reset</button>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script>
+$(function(){
+  
+  var lastKeyUpAt = 0;
+  var fired = false;
+
+  $("#btnReset").keydown(function(e) {
+    if((!fired)&&(e.which==32)){
+        var keyDownAt = new Date();
+
+        setTimeout(function() {
+            if (+keyDownAt > +lastKeyUpAt)
+                // Key has been held down for x seconds
+              {var mybtn = document.getElementById("btnReset");
+               
+               if (mybtn.innerHTML === "Request Password Reset")
+                {mybtn.innerHTML = "Request User Name";}
+               else
+                {mybtn.innerHTML = "Request Password Reset"} 
+              }
+            else 
+                // Key has not been held down for x seconds
+              {}
+        }, 3000);
+    fired = true;  
+    }
+  });
+  
+  $("#btnReset").keyup(function(){
+    lastKeyUpAt = new Date();
+    fired = false;
+  });
+});
+</script>
+</div>
+</body>
+</html>
