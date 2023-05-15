@@ -7,7 +7,7 @@ title: Placeholder Index of Test Cases
 
 Until we modify the primary index file, this serves as a placeholder with links to current test case documents.
 
-Test Case documents are organized by Baseline Test (each serving as a Test Scenario or general "functional requirement" for testing), which inculde multiple Test Cases. Will need to develop a Test Scenario template to summarize Test Scenario purpose and subordinate Test Cases
+Test Case documents are organized by Baseline Test (each serving as a Test Scenario or general "functional requirement" for testing), which include multiple Test Cases. Will need to develop a Test Scenario template to summarize Test Scenario purpose and subordinate Test Cases
 
 * `1.` Keyboard Accessible
   * [Keyboard Access - Functionality not keyboard accessible (TC01.1-1-fail-1)](testcases/TC01.1-1-fail-1.html)
@@ -41,8 +41,9 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
 * `8.` Contrast
   * [Contrast - Insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
   * [Contrast - Insufficient contrast ratio for 14 point font (TC08.1-2-fail-2)](testcases/TC08.1-2-fail-2.html)
-  * [Contrast - Contrast ratio greater than 4.5:1 (TC08.1-2-pass-1)](testcases/TC08.1-2-pass-1.html)
+  * [Contrast - Insufficient contrast ratio for small text, when color changes on hover/focus (TC08.1-2-fail-3)](testcases/TC08.1-2-fail-3.html)
   * [Contrast - Insufficient contrast ratio for small text in an image of text (TC08.1-2-fail-4)](testcases/TC08.1-2-fail-4.html)
+  * [Contrast - Contrast ratio greater than 4.5:1 (TC08.1-2-pass-1)](testcases/TC08.1-2-pass-1.html)
   * [Contrast - Insufficient contrast ratio for 14 point, bolded text (TC08.1-3-fail-1)](testcases/TC08.1-3-fail-1.html)
   * [Contrast - Insufficient contrast ratio for 18 point font (TC08.1-3-fail-2)](testcases/TC08.1-3-fail-2.html)
   * [Contrast - 3:1 Contrast Ratio for 18 point font (TC08.1-3-pass-1)](testcases/TC08.1-3-pass-1.html)
