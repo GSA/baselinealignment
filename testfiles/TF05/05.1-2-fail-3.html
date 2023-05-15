@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>05.1-2-fail-3</title>
+<!--  (was 05-001-fail) -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+    [role=checkbox]{
+        display: inline-block;
+        cursor: default;
+        padding: 5px;
+    }
+    </style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+    //This function toggles the checkbox
+    function toggle(elem){
+        let icon = elem.children[0];
+
+        if(icon.classList.contains("fa-square")){
+            //check the checkbox
+            icon.classList.remove("fa-square");
+            icon.classList.add("fa-check-square");
+        }
+        else{
+            //uncheck the checkbox
+            icon.classList.remove("fa-check-square");
+            icon.classList.add("fa-square");
+        }
+    }
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <div role="checkbox" aria-checked="false" tabindex="0" onclick="toggle(this)" onkeydown="if(event.keyCode == 32){toggle(this)}">
+            <i class="fa fa-square"></i>
+            I agree to the terms and conditions
+        </div>
+    </div>
+
+</body>
+</html>
