@@ -7,7 +7,7 @@ title: Placeholder Index of Test Cases
 
 Until we modify the primary index file, this serves as a placeholder with links to current test case documents.
 
-Test Case documents are organized by Baseline Test (each serving as a Test Scenario or general "functional requirement" for testing), which inculde multiple Test Cases. Will need to develop a Test Scenario template to summarize Test Scenario purpose and subordinate Test Cases
+Test Case documents are organized by Baseline Test (each serving as a Test Scenario or general "functional requirement" for testing), which include multiple Test Cases. Will need to develop a Test Scenario template to summarize Test Scenario purpose and subordinate Test Cases
 
 * `1.` Keyboard Accessible
   * [Keyboard Access - Functionality not keyboard accessible (TC01.1-1-fail-1)](testcases/TC01.1-1-fail-1.html)
