@@ -130,7 +130,9 @@ var en = {
 
 "orHigher": "or higher",
 
-"prefMenuCaptions": "Captions",
+"prefMenuCaptionsOn": "CC",
+
+"prefMenuCaptions": "Captions Setting",
 
 "prefMenuDescriptions": "Descriptions",
 
