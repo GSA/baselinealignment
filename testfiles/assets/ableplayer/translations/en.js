@@ -132,6 +132,8 @@ var en = {
 
 "prefMenuCaptionsOn": "CC",
 
+"prefMenuAudioDescription": "Audio Description",
+
 "prefMenuCaptions": "Captions Setting",
 
 "prefMenuDescriptions": "Descriptions",
