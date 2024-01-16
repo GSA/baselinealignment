@@ -37,3 +37,57 @@
         margin: 5px 0px;
     }
 }
+#overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#timeout-alert
+{
+    display: none;
+    padding: 18px;
+    background-color: white;
+    width: 300px;
+    height: 80px;
+    border-radius: 5px;
+    left: 50%;
+    top: 2%;
+    margin-left: -168px;
+    z-index: 99;
+    position: fixed;
+    #timeout-alert-decision
+    {
+        display: flex;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        column-gap: 10px;
+    }
+}
+
+.button
+{
+    background-color: #005ea2;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+    height: 35px;
+    p 
+    {
+        margin: 3px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #1a3b66;
+    
+}

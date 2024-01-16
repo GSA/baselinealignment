@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>21.1-1.c-pass-1</title>
+        <link rel="stylesheet" href="TF21.css" type="text/css">
+        <script src="TF21.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="overlay"></div>
+        <div id="timeout-alert">
+            <div id="timeout-alert-text">
+                <p>You are reaching the time limit. (<span id="alert-time-limit"></span>)</p>
+                <!-- <p id="alert-time-limit">00:00</p> -->
+            </div>
+            <div id="timeout-alert-decision">
+                <button class="button" name="Do nothing" aria-label="Do not extend the time limit" onclick="continueTimer()"><p>Do nothing</p></button>
+                <button class="button" name="Extend" aria-label="Extend the time limit" onclick="extendTimer()"><p>Extend</p></button>
+            </div>
+        </div>
+        <div id="tc_code" class="timer-form">
+            <div id="timer-div">
+                <p>Timer: <span id="time-limit"></span></p>
+                <button id="timer-button" name="Disable time limit" onclick="stopTimer()"><p>Disable Time limit</p></button>
+            </div>
+            <p>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname">
+            </p>
+            <p>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname">
+            </p>
+            <button class="button" name="submit the form" onclick="submitForm()">Submit</button>
+        </div>
+    </body>
+</html>
