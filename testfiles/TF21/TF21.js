@@ -59,7 +59,6 @@ function stopTimer()
 //This function continue the timer.
 function continueTimer()
 {
-    console.log("continueTimer");
     clearInterval(alertTimeInterval);
     let display = document.getElementById('time-limit');
     setTimer(currDuration, display);
@@ -68,7 +67,6 @@ function continueTimer()
 //This function extent the timer according to extendDuration.
 function extendTimer()
 {
-    console.log("extendTimer");
     clearInterval(alertTimeInterval);
     let display = document.getElementById('time-limit');
     setTimer(currDuration + extendDuration, display);
