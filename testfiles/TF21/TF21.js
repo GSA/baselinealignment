@@ -2,6 +2,7 @@ let timerInterval, currDuration, alertTimeInterval;
 let extendDuration = 20; //How long is the time going to be extended if the user chooses to extend the time on the alert.
 let alertTime = 10; //Time that the alert will pop up to ask if the user wants to extent the timer.
 let alertTimeLimit = 20; // Time limit of the alert, once the time limit is reached will continue the timer with no extended time added.
+let alertPopUpLimit = -1, popUplimitCount = 0; // Set how many time the Time limit pop up can be display.
 
 //This function set the timer for the form.
 function setTimer(duration, display) {
@@ -16,16 +17,26 @@ function setTimer(duration, display) {
         //If the test case have the timeout alert.
         if(document.getElementById("overlay") !== null && duration == (alertTime-1))
         {   
-            currDuration = duration;
-            clearInterval(timerInterval);
-            document.getElementById("alert-time-limit").innerHTML = "00:20";
-            document.getElementById("overlay").style.display = "block";
-            document.getElementById("timeout-alert").style.display = "block";
-            setAlertTime(document.getElementById("alert-time-limit"));
+            //Popup limit set.
+            if((alertPopUpLimit > 0)&&(popUplimitCount < alertPopUpLimit))
+            {
+                currDuration = duration;
+                clearInterval(timerInterval);
+                displayAlert();
+                popUplimitCount++;
+            }
+            //No Popup limit set (-1 is the default value of the alertPopUpLimit).
+            else if(alertPopUpLimit == -1)
+            {
+                currDuration = duration;
+                clearInterval(timerInterval);
+                displayAlert();
+            }
 
         }
     }, 1000);
 }
+
 //This function set the timer for the alert.
 function setAlertTime(display)
 {
@@ -74,11 +85,19 @@ function extendTimer()
 }
 
 //This function hide the alert and the overlay.
+function displayAlert()
+{
+    document.getElementById("alert-time-limit").innerHTML = `00:${alertTimeLimit}`;
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("timeout-alert").style.display = "block";
+    setAlertTime(document.getElementById("alert-time-limit"));
+}
+//This function hide the alert and the overlay.
 function hideAlert()
 {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-alert").style.display = "none";
-    document.getElementById("alert-time-limit").innerHTML = "00:20";
+    document.getElementById("alert-time-limit").innerHTML = `00:${alertTimeLimit}`;
 }
 
 function submitForm()
@@ -88,6 +107,14 @@ function submitForm()
 }
 
 window.onload = function () {
+    if(document.title == '21.1-all-fail-2')
+    {
+        alertPopUpLimit = 9;
+    }
+    else if(document.title == '21.1-all-fail-3')
+    {
+        alertTimeLimit = 10;
+    }
     let duration = 30; //Second
     let display = document.getElementById('time-limit'); //Where to display
     display.innerHTML = "00:30";
