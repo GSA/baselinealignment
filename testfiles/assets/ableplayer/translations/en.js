@@ -134,6 +134,8 @@ var en = {
 
 "prefMenuAudioDescription": "Audio Description",
 
+"prefMenuChapterNavigation": "Chapter navigation",
+
 "prefMenuCaptions": "Captions Setting",
 
 "prefMenuDescriptions": "Descriptions",
