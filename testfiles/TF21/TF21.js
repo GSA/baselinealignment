@@ -1,8 +1,10 @@
 let timerInterval, currDuration, alertTimeInterval;
+let submitText = "The form was submitted successfully.";
 let extendDuration = 20; //How long is the time going to be extended if the user chooses to extend the time on the alert.
 let alertTime = 10; //Time that the alert will pop up to ask if the user wants to extent the timer.
 let alertTimeLimit = 20; // Time limit of the alert, once the time limit is reached will continue the timer with no extended time added.
 let alertPopUpLimit = -1, popUplimitCount = 0; // Set how many time the Time limit pop up can be display.
+let currBid = 0;
 
 //This function set the timer for the form.
 function setTimer(duration, display) {
@@ -14,13 +16,13 @@ function setTimer(duration, display) {
         {
             submitForm();
         }
+        currDuration = duration;
         //If the test case have the timeout alert.
         if(document.getElementById("overlay") !== null && duration == (alertTime-1))
         {   
             //Popup limit set.
             if((alertPopUpLimit > 0)&&(popUplimitCount < alertPopUpLimit))
             {
-                currDuration = duration;
                 clearInterval(timerInterval);
                 displayAlert();
                 popUplimitCount++;
@@ -28,7 +30,6 @@ function setTimer(duration, display) {
             //No Popup limit set (-1 is the default value of the alertPopUpLimit).
             else if(alertPopUpLimit == -1)
             {
-                currDuration = duration;
                 clearInterval(timerInterval);
                 displayAlert();
             }
@@ -103,7 +104,38 @@ function hideAlert()
 function submitForm()
 {
     clearInterval(timerInterval);
-    document.getElementsByClassName("timer-form")[0].innerHTML = `<p>Thank You</p><p>The form was submitted successfully.</p>`;
+    document.getElementsByClassName("timer-form")[0].innerHTML = `<p>Thank You</p><p>${submitText}</p>`;
+}
+
+//This function submit the bidding that user insert. If user insert equal or less than the current bid do nothing, else update and reflect the new bid and extend the timer by 10 sec.
+function submitBidding()
+{
+    let bidWarning = document.getElementById('bidding-warning');
+    bidWarning.innerHTML = "";
+    let newBid = parseInt(document.getElementById("bidding-amount").value);
+    if(isNaN(newBid))
+    {
+        bidWarning.innerHTML= `Sorry that is invalid input.`;
+    }
+    else if(newBid > currBid)
+    {
+        document.getElementById('current-bid').innerHTML= newBid;
+        document.getElementById('price-to-bid').innerHTML= newBid+1;
+        currBid = newBid;
+        extendBiddingTimer();
+    }
+    else
+    {
+        bidWarning.innerHTML= `Sorry $ ${newBid} is insufficient amount to place bid.`;
+    }
+}
+
+//This function extend the time limit when user place a bid.
+function extendBiddingTimer()
+{
+    let display = document.getElementById('time-limit');
+    clearInterval(timerInterval);
+    setTimer((currDuration > 10) ? currDuration : 10, display);
 }
 
 window.onload = function () {
@@ -114,6 +146,13 @@ window.onload = function () {
     else if(document.title == '21.1-all-fail-3')
     {
         alertTimeLimit = 10;
+    }
+    else if(document.title == '21.1-ic-dna-2')
+    {
+        submitText = "The live auction is now closed, we will reach out to you regarding the result.";
+        currBid = 5000;
+        document.getElementById('current-bid').innerHTML= currBid;
+        document.getElementById('price-to-bid').innerHTML= currBid+1;
     }
     let duration = 30; //Second
     let display = document.getElementById('time-limit'); //Where to display

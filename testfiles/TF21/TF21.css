@@ -81,4 +81,41 @@
 .button:hover {
   cursor: pointer;
   background-color: #1a3b66;
+}
+
+.bidding-submit {
+  height: 25px !important;
+  padding: 0px 10px;
+}
+
+#bidding-input {
+  border: 1px inset #ccc;
+  padding-left: 4px;
+}
+#bidding-input input {
+  border: 0;
+}
+
+#bidding-warning {
+  color: red;
+}
+
+#bidding-info {
+  display: flex;
+  flex-direction: column;
+}
+#bidding-info #bidding-image {
+  border-radius: 10px;
+  max-width: 450px;
+  height: 300px;
+}
+#bidding-info h3, #bidding-info p {
+  text-align: center;
+}
+#bidding-info #bidding-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }/*# sourceMappingURL=TF21.css.map */

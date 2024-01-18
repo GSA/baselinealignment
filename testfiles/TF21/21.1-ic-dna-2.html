@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>21.1-ic-dna-2</title>
+        <link rel="stylesheet" href="TF21.css" type="text/css">
+        <script src="TF21.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="tc_code" class="timer-form">
+            <h2>
+                Vacation Package to Puerto Rico
+            </h2>
+            <div id="timer-div">
+                <p>Time left: <span id="time-limit"></span></p>
+            </div>
+            <div id="bidding-info">
+                <img id="bidding-image" alt="Puerto Rico beach image" src="Puerto-Rico.jpg" alt="">
+                <div id="bidding-price">
+                    <h3>
+                        Current bid: $<span id="current-bid" ></span>
+                    </h3>
+                    <p>
+                        (Enter more than $<span id="price-to-bid"></span>)
+                    </p>
+                </div>
+            </div>
+            <p>
+                    <label for="bidding-amount">Insert bid:</label>
+                    <span id="bidding-input">$<input type="text" id="bidding-amount" name="bidding-amount" title="Enter bidding amount"></span>
+                    <button class="button bidding-submit" name="Place bid" onclick="submitBidding()">Place bid</button>
+            </p>
+            <h3 id="bidding-warning"></h3>
+        </div>
+    </body>
+</html>

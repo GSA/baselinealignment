@@ -91,3 +91,45 @@
     background-color: #1a3b66;
     
 }
+.bidding-submit
+{
+    height: 25px !important;
+    padding: 0px 10px;
+}
+
+#bidding-input
+{
+    border: 1px inset #ccc;
+    padding-left: 4px;
+    input 
+    {
+        border: 0;
+    }
+}
+#bidding-warning
+{
+    color: red;
+}
+
+#bidding-info
+{
+    display: flex;
+    flex-direction: column;
+    #bidding-image
+    {
+        border-radius: 10px;
+        max-width: 450px;
+        height: 300px;
+    }
+    h3,p
+    {
+        text-align: center;
+    }
+    #bidding-price
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5px;
+    }
+}
