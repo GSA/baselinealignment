@@ -118,4 +118,10 @@
   justify-content: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
+}
+
+#animated-button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=TF21.css.map */
