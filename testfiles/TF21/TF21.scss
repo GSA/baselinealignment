@@ -134,9 +134,40 @@
     }
 }
 
-#animated-button
+.gif-div
 {
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    .gif-label
+    {
+        margin-bottom: 10px;
+    }
+    #animated-button
+    {
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+        #gif-overlay
+        {
+            width: 400px;
+            height: 325px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img 
+            {
+                width: 170px;
+                height: 170px;
+            }
+        }
+        img
+        {
+            width: 400px;
+            height: 325px;
+        }
+    }
+
 }
