@@ -153,4 +153,39 @@
 .gif-div #animated-button img {
   width: 400px;
   height: 325px;
+}
+
+.stock-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.stock-div .stock-name {
+  margin: 0;
+}
+.stock-div .stock-price {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.stock-div .stock-price p {
+  margin: 0;
+}
+.stock-div .stock-price .stock-movement {
+  font-size: 13px;
+  font-weight: bold;
+}
+.stock-div .stock-price .stock-down {
+  color: #A80000;
+}
+.stock-div .stock-price .stock-up {
+  color: green;
 }/*# sourceMappingURL=TF21.css.map */

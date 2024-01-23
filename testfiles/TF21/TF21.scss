@@ -171,3 +171,44 @@
     }
 
 }
+
+.stock-div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    .stock-name
+    {
+        margin: 0;
+    }
+    .stock-price
+    {
+        display: flex;
+        flex-direction: row;
+        column-gap: 5px;
+        p 
+        {
+            margin: 0;
+        }
+        .stock-movement
+        {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .stock-down
+        {
+            color: #A80000;
+        }
+        .stock-up
+        {
+            color: green;
+        }
+    }
+}
