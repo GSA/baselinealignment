@@ -17,14 +17,14 @@
                 <p>Time left: <span id="time-limit"></span></p>
             </div>
             <div id="bidding-info">
-                <img id="bidding-image" alt="Puerto Rico beach image" src="../assets/images/Puerto-Rico.jpg" alt="">
-                <div id="bidding-price">
+                <img id="bidding-image" src="../assets/images/Puerto-Rico.jpg" alt="Coastal view of Puerto Rico, with housing on the cliff overlooking blue skies and waves crashing on the beach.">
+                <div id="bidding-price" aria-live="assertive">
                     <h3>
-                        Current bid: $<span id="current-bid" ></span>
+                        Current bid: $<span id="current-bid" >0</span>
                     </h3>
-                    <p>
-                        (Enter more than $<span id="price-to-bid"></span>)
-                    </p>
+                    <h4>
+                        (Enter more than $<span id="price-to-bid">0</span>)
+                    </h4>
                 </div>
             </div>
             <p>
@@ -32,7 +32,7 @@
                     <span id="bidding-input">$<input type="text" id="bidding-amount" name="bidding-amount" title="Enter bidding amount"></span>
                     <button class="button bidding-submit" name="Place bid" onclick="submitBidding()">Place bid</button>
             </p>
-            <h3 id="bidding-warning"></h3>
+            <h3 id="bidding-warning" aria-live="assertive"></h3>
         </div>
     </body>
 </html>

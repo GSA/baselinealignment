@@ -109,7 +109,7 @@
   max-width: 450px;
   height: 300px;
 }
-#bidding-info h3, #bidding-info p {
+#bidding-info h3, #bidding-info h2 {
   text-align: center;
 }
 #bidding-info #bidding-price {
