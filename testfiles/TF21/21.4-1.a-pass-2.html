@@ -20,8 +20,9 @@
         </div>
         <div id="tc_code" class="page-contents">
             <div id="audio-div">
-                <audio id="audio-p" controls autoplay src="../assets/audio/declaration.mp3"></audio>
-                <button id="audio-stop" class="button" onclick="stopAudio()">Stop</button>
+                <button id="audio-stop" class="button" onclick="stopAudio()">Stop audio</button>
+                <button id="pause-resume-button" class="button" onclick="stopResumeAudio(this)">Pause audio</button>
+                <audio id="audio-p" class="audio-only-pause" autoplay controlsList="nodownload noplaybackrate" src="../assets/audio/declaration.mp3"></audio>
             </div>
             <div id="doi">
                 <h1>

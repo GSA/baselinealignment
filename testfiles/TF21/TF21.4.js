@@ -4,12 +4,19 @@ window.onload = function ()
 {
     audioPlayer = document.getElementById("audio-p");
     pageContents = document.getElementsByClassName("page-contents")[0];
-    console.log(pageContents.children.length);
     for(let i = 0; i < pageContents.children.length; i++)
     {
         if(pageContents.children[i].id != "doi")
         {
             pageContents.children[i].tabIndex = -1;
+        }
+        //For the 21.4-1.a-pass-2
+        if(pageContents.children[i].id == "audio-div")
+        {   
+            for(let j = 0; j < pageContents.children[i].children.length; j++)
+            {
+                pageContents.children[i].children[j].tabIndex = -1;
+            }
         }
     }
     
@@ -22,20 +29,31 @@ function startAudio()
     audioPlayer.play();
     for(let i = 0; i < pageContents.children.length; i++)
     {
-        if(pageContents.children[i].id != "doi")
+        //If the Audio element has "audio-only-pause" as it classname, do not change it tabIndex.
+        if((pageContents.children[i].id != "doi") && (pageContents.children[i].className != "audio-only-pause"))
         {
-            pageContents.children[i].tabIndex = 1;
+            pageContents.children[i].tabIndex = 0;  
+        }
+        //For the 21.4-1.a-pass-2
+        if(pageContents.children[i].id == "audio-div")
+        {   
+            pageContents.children[i].tabIndex = -1;
+            for(let j = 0; j < pageContents.children[i].children.length; j++)
+            {
+                if(pageContents.children[i].children[j].id != "audio-p")
+                pageContents.children[i].children[j].tabIndex = 0;
+            }
         }
     }
 
 }
-//This function stop audio and hide audio player along with the stop button.
+//This function stop audio and hide all buttons that relate to audio player.
 function stopAudio()
 {
     audioPlayer.pause();
     audioPlayer.currentTime = 0;
-    audioPlayer.style.display = "none";
     document.getElementById("audio-stop").style.display = "none";
+    document.getElementById("pause-resume-button").style.display = "none";
 
 }
 //This function toggle between stop or playing the audio on the page, and update the button that click to run this function accordingly.
