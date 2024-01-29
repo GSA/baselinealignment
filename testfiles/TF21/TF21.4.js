@@ -7,7 +7,10 @@ window.onload = function ()
     console.log(pageContents.children.length);
     for(let i = 0; i < pageContents.children.length; i++)
     {
-        pageContents.children[i].tabIndex = -1;
+        if(pageContents.children[i].id != "doi")
+        {
+            pageContents.children[i].tabIndex = -1;
+        }
     }
     
 };
@@ -19,7 +22,10 @@ function startAudio()
     audioPlayer.play();
     for(let i = 0; i < pageContents.children.length; i++)
     {
-        pageContents.children[i].tabIndex = 1;
+        if(pageContents.children[i].id != "doi")
+        {
+            pageContents.children[i].tabIndex = 1;
+        }
     }
 
 }

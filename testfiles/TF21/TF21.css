@@ -233,4 +233,15 @@
 
 .audio-only-volume::-webkit-media-controls-play-button {
   display: none;
+}
+
+#doi {
+  max-width: 1000px;
+}
+#doi p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+#doi .padding-left {
+  padding-left: 20px;
 }/*# sourceMappingURL=TF21.css.map */
