@@ -256,3 +256,7 @@
     justify-content: center;
 }
 
+.audio-only-volume::-webkit-media-controls-play-button
+{
+    display: none;
+}

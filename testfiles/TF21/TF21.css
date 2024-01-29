@@ -229,4 +229,8 @@
        column-gap: 10px;
   align-items: center;
   justify-content: center;
+}
+
+.audio-only-volume::-webkit-media-controls-play-button {
+  display: none;
 }/*# sourceMappingURL=TF21.css.map */
