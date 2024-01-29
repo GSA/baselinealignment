@@ -1,8 +1,15 @@
 let isPlaying = true;
-let audioPlayer;
+let audioPlayer, pageContents;
 window.onload = function ()
 {
     audioPlayer = document.getElementById("audio-p");
+    pageContents = document.getElementsByClassName("page-contents")[0];
+    console.log(pageContents.children.length);
+    for(let i = 0; i < pageContents.children.length; i++)
+    {
+        pageContents.children[i].tabIndex = -1;
+    }
+    
 };
 //This function hide the overlay and start the audio.
 function startAudio()
@@ -10,6 +17,10 @@ function startAudio()
     document.getElementById("site-access-overlay").style.display = "none";
     document.getElementById("site-access").style.display = "none";
     audioPlayer.play();
+    for(let i = 0; i < pageContents.children.length; i++)
+    {
+        pageContents.children[i].tabIndex = 1;
+    }
 
 }
 //This function stop audio and hide audio player along with the stop button.
