@@ -104,7 +104,7 @@ function hideAlert()
 function submitForm()
 {
     clearInterval(timerInterval);
-    document.getElementsByClassName("timer-form")[0].innerHTML = `<p>Thank You</p><p>${submitText}</p>`;
+    document.getElementsByClassName("page-contents")[0].innerHTML = `<p>Thank You</p><p>${submitText}</p>`;
 }
 
 //This function submit the bidding that user insert. If user insert equal or less than the current bid do nothing, else update and reflect the new bid and extend the timer by 10 sec.

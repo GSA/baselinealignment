@@ -1,17 +1,17 @@
-.timer-form {
+.page-contents {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
 }
-.timer-form #timer-div {
+.page-contents #timer-div {
   display: flex;
   flex-direction: row;
   align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-.timer-form #timer-div #timer-button {
+.page-contents #timer-div #timer-button {
   background-color: #005ea2;
   color: white;
   border-radius: 5px;
@@ -19,16 +19,16 @@
   width: auto;
   height: 35px;
 }
-.timer-form #timer-div #timer-button p {
+.page-contents #timer-div #timer-button p {
   margin: 3px;
   font-size: 13px;
   font-weight: 600;
 }
-.timer-form #timer-div #timer-button:hover {
+.page-contents #timer-div #timer-button:hover {
   cursor: pointer;
   background-color: #1a3b66;
 }
-.timer-form p {
+.page-contents p {
   margin: 5px 0px;
 }
 
