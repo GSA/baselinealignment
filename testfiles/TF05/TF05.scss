@@ -1,0 +1,72 @@
+.page-contents
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    #timer-div
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10px;
+        #timer-button
+        {
+            background-color: #005ea2;
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            width: auto;
+            height: 35px;
+            p 
+            {
+                margin: 3px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+        #timer-button:hover
+        {
+            cursor: pointer;
+            background-color: #1a3b66;
+            
+        }
+    }
+    p
+    {
+        margin: 5px 0px;
+        max-width: 1000px;
+    }
+    #puerto-rico
+    {
+        width: 370px;
+        height: 250px;
+    }
+    #puerto-rico-flag
+    {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+.button
+{
+    background-color: #005ea2;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+    height: 35px;
+    p 
+    {
+        margin: 3px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #1a3b66;
+    
+}
