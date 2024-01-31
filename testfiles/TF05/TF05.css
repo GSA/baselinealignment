@@ -58,4 +58,53 @@
 .button:hover {
   cursor: pointer;
   background-color: #1a3b66;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  background-color: #005ea2;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidenav button {
+  text-align: left;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.sidenav a, .sidenav button {
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidenav a:hover, .sidenav button:hover {
+  background-color: #1a3b66;
+}
+.sidenav .dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.sidenav .dropdown-menu .expanded {
+  display: none;
+}
+.sidenav .active .expanded {
+  display: block;
+}
+.sidenav .active .collapsed {
+  display: none;
+}
+.sidenav .dropdown-container {
+  flex-direction: column;
+}
+
+.dropdown-container {
+  display: none;
 }/*# sourceMappingURL=TF05.css.map */

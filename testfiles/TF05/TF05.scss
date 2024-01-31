@@ -70,3 +70,66 @@
     background-color: #1a3b66;
     
 }
+
+.sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    background-color: #005ea2;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    button 
+    {
+        text-align: left;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+    a, button
+    {
+        cursor: pointer;
+        padding: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 550;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    a:hover, button:hover
+    {
+        background-color: #1a3b66;
+    }
+    .dropdown-menu
+    {
+        display: flex;
+        justify-content: space-between;
+        .expanded
+        {
+            display: none;
+        }
+        
+    }
+    .active 
+    {
+        .expanded
+        {
+            display: block;
+        }
+        .collapsed
+        {
+            display: none;
+        }
+    }
+    .dropdown-container
+    {
+        flex-direction: column;
+    }
+  }
+  
+  .dropdown-container
+  {
+    display: none;
+  }
+
