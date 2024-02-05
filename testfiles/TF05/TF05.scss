@@ -70,11 +70,24 @@
     background-color: #1a3b66;
     
 }
-
+.page-contents-sn
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: -8px;
+    height: 100vh;
+    .sidenav-content
+    {
+        padding-left: 15px;
+    }
+}
+//Style for side navigation for 5.1
 .sidenav {
     height: 100%;
     width: 300px;
-    position: fixed;
+    left: 0;
+    // position: fixed;
     z-index: 1;
     background-color: #005ea2;
     padding-top: 20px;

@@ -1,12 +1,12 @@
-let submitText = "";
+let submitText = "", pageContentList;
 function submitForm()
 {
-    console.log(document.getElementById("fname").value);
     document.getElementsByClassName("page-contents")[0].innerHTML = `<p>${document.getElementById("fname").value} ${document.getElementById("lname").value} your application will be reviewed shortly.</p>`;
 }
 window.onload = function ()
 {
-
+    pageContentList = document.getElementById("tc_code").children;
+    //Does not contain Aria-exapanded.
     if(document.title == "05.1-1-fail-1")
     {
         var dropdown = document.getElementsByClassName("dropdown-menu");
@@ -26,6 +26,7 @@ window.onload = function ()
             });
             }
     }
+    //Does contain Aria-exapanded but mislabel.
     else if(document.title == "05.1-2-fail-1")
     {
         var dropdown = document.getElementsByClassName("dropdown-menu");
@@ -47,6 +48,7 @@ window.onload = function ()
             });
             }
     }
+    //Does contain Aria-exapanded and function properly.
     else if(document.title == "05.1-2-pass-1")
     {
         var dropdown = document.getElementsByClassName("dropdown-menu");
@@ -67,5 +69,12 @@ window.onload = function ()
                 this.classList.toggle("active");
             });
             }
+    }
+}
+function changePage(page)
+{
+    for(let i = 1; i < pageContentList.length; i++)
+    {
+        pageContentList[i].style.display = (page == pageContentList[i].id) ? "block" : "none";
     }
 }
