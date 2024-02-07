@@ -49,7 +49,7 @@ window.onload = function ()
             }
     }
     //Does contain Aria-exapanded and function properly.
-    else if(document.title == "05.1-2-pass-1")
+    else if((document.title == "05.1-2-pass-1")||(document.title == "05.1-3-pass-1"))
     {
         var dropdown = document.getElementsByClassName("dropdown-menu");
         for (let i = 0; i < dropdown.length; i++) {
@@ -64,6 +64,49 @@ window.onload = function ()
                 else 
                 {
                     this.ariaExpanded = "true";
+                    dropdownContent.style.display = "flex";
+                }
+                this.classList.toggle("active");
+            });
+            }
+    }
+    //Does contain Aria-exapanded but dissapear once it expan
+    else if(document.title == "05.1-3-fail-1")
+    {
+        var dropdown = document.getElementsByClassName("dropdown-menu");
+        for (let i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() 
+            {
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "flex") 
+                {
+                    this.ariaExpanded = "false";
+                    dropdownContent.style.display = "none";
+                } 
+                else 
+                {
+                    this.removeAttribute('aria-expanded');
+                    dropdownContent.style.display = "flex";
+                }
+                this.classList.toggle("active");
+            });
+            }
+    }
+    //Aria expand does not change its status when the user expands the dropdown (wrong accessible name when expanded).
+    else if(document.title == "05.1-3-fail-2")
+    {
+        var dropdown = document.getElementsByClassName("dropdown-menu");
+        for (let i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() 
+            {
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "flex") 
+                {
+                    this.ariaExpanded = "false";
+                    dropdownContent.style.display = "none";
+                } 
+                else 
+                {
                     dropdownContent.style.display = "flex";
                 }
                 this.classList.toggle("active");
