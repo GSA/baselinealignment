@@ -35,4 +35,8 @@
 #alert-notification {
   color: red;
   font-size: 20px;
+}
+
+.required {
+  font-weight: bold;
 }/*# sourceMappingURL=TF07.css.map */
