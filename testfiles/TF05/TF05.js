@@ -142,7 +142,7 @@ function updateRating()
 //This function update the rating according to the slider correclty but not on the aria.
 function updateWrongRating()
 {
+    ratingSlider.ariaValueNow = 11 - ratingSlider.value;
     ratingOutput.children[0].innerHTML = `Current rating: ${ratingSlider.value}`;
-    // ratingSlider.ariaLabel = 11 - ratingSlider.value;
     ratingOutput.ariaLabel = `Current rating: ${(11 - ratingSlider.value)}`;
 }
