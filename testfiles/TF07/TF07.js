@@ -8,7 +8,7 @@ function submitForm()
         document.getElementsByClassName("page-contents")[0].innerHTML = `<p>Thank You ${fname.value}, we will review your application shortly.</p>`;
     else if(document.title == '07.3-1-fail-2')
     {
-        document.getElementById("alert-notification").innerHTML = "Error! cannot submit the form.";
+        document.getElementById("alert-notification").innerHTML = "404 Error";
         audio.play();
     }
     else
