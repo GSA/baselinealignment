@@ -13,7 +13,7 @@ function submitDateForm()
     //Either date is invalid or format is invalid (Lack of detail explaination).
     else if(document.title == "10.6-all-fail-1")
     {
-        alertNotfication.innerHTML = "Error: Failed due to error in date field.";
+        alertNotfication.innerHTML = "Form error";
     }
     else if((currDate.value.length == 10) && (dateCheck == "Invalid Date"))
     {
@@ -31,10 +31,46 @@ function submitForm()
     let fname = document.getElementById("fname");
     let lname = document.getElementById("lname");
     if((fname.value.length > 0) && (lname.value.length > 0))
-        document.getElementsByClassName("page-contents")[0].innerHTML = `<p>Thank You ${fname.value}, we will review your application shortly.</p>`;
+    {
+        //Check captilization
+        if((fname.value !== fname.value.toLowerCase())&&(lname.value !== lname.value.toLowerCase()))
+        {
+            alertNotfication.innerHTML = "Error: Username and Password contain upper case character(s).";
+        }
+        else if(fname.value !== fname.value.toLowerCase())
+        {
+            alertNotfication.innerHTML = "Error: Username contain upper case character(s).";
+        }
+        else if(lname.value !== lname.value.toLowerCase())
+        {
+            alertNotfication.innerHTML = "Error: Password contain upper case character(s).";
+        }
+        else
+        {
+            document.getElementsByClassName("page-contents")[0].innerHTML = `<p>Thank You ${fname.value}, we will review your application shortly.</p>`;
+        }
+    }
+    else if(document.title == "10.6-all-pass-2")
+    {
+        //Both username and password are not inserted.
+        if((fname.value.length == 0)&&(lname.value.length == 0))
+        {
+            alertNotfication.innerHTML = "Username and Password are required.";
+        }
+        //Username is not inserted.
+        else if(fname.value.length == 0)
+        {
+            alertNotfication.innerHTML = "Username is required; please input user name.";
+        }
+        //Password is not inserted
+        else if(lname.value.length == 0)
+        {
+            alertNotfication.innerHTML = "Password is required; please input your password.";
+        }
+    }
     else 
     {
-        alertNotfication.innerHTML = "Error in required field";
+        alertNotfication.innerHTML = "Form error";
     }
 }
 window.onload = function ()

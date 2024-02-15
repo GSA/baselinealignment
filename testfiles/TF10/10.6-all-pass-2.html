@@ -10,16 +10,19 @@
     </head>
     <body>
         <div id="tc_code" class="page-contents">
+            <h3>
+                Reminder: Capital letters are not allowed in your username and password.
+            </h3>
             <div id="alert-notification" aria-live="assertive">
                 
             </div>
             <form>
-                <label for="fname" >First name:</label>
+                <label for="fname" >Username <span class="required">(required)</span>:</label>
                 <input type="text" id="fname" name="fname"><br><br>
-                <labe.l for="lname" >Last name:</label>
+                <label for="lname" >Password <span class="required">(required)</span>:</label>
                 <input type="text" id="lname" name="lname"><br><br>
             </form>
             <input class="button" type="submit" onclick="submitForm()">
-          </div>
+        </div>
     </body> 
 </html>
