@@ -19,7 +19,7 @@ function submitDateForm()
     {
         alertNotfication.innerHTML = "Error: Date you insert is invalid.";
     }
-    else 
+    else if(document.title != "10.6-ic-dna-2")
     {
         alertNotfication.innerHTML = "Error: Date must be in the format of MM/DD/YYYY.";
     }
