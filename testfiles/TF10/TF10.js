@@ -5,6 +5,10 @@ function submitDateForm()
     let currDate = document.getElementById("date");
     console.log(currDate.value.length);
     let dateCheck = new Date(currDate.value);
+    if(document.title == "10.6-ic-dna-2")
+    {
+        document.getElementsByClassName("page-contents")[0].innerHTML = `<p>The date has been inserted.</p>`;
+    }
     //Everything is correct
     if((currDate.value.length == 10) && (dateCheck != "Invalid Date"))
     {
