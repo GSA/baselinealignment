@@ -1,17 +1,22 @@
-let emailDiv, emailCb, emailInput;
+let emailDiv, emailCb, emailInput, submitButton;
 window.onload = function()
 {
     emailDiv = document.getElementById("email-div");
     emailDiv.style.display = "none";
     emailCb = document.getElementById("email-checkbox");
+    emailCb.tabIndex = -1;
     emailInput = document.getElementById("email");
     emailInput.tabIndex = -1;
+    submitButton = document.getElementById("submit-button");
+    submitButton.tabIndex = -1;
     document.addEventListener("keydown", function(event) 
     {
         // Check if the pressed key is "Shift" and "a" at the same time
-        if (event.shiftKey && event.key === "A") 
+        if (event.shiftKey && event.ctrlKey) 
         {
+            emailCb.tabIndex = 0;
           emailInput.tabIndex = 0;
+          submitButton.tabIndex = 0;
         }
     });
 }

@@ -1,0 +1,43 @@
+.role-table {
+  width: 1250px;
+}
+.role-table h1 {
+  text-align: center;
+}
+.role-table [role=gridcell], .role-table .columnheader, .role-table [role=columnheader], .role-table .rowheader, .role-table [role=rowheader] {
+  display: inline-block;
+  width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.role-table [role=columnEmpty] {
+  display: inline-block;
+  width: 242px;
+}
+.role-table [role=row] {
+  margin-bottom: 3px;
+}
+.role-table .columnheader, .role-table [role=columnheader], .role-table .rowheader, .role-table [role=rowheader] {
+  background-color: skyblue;
+}
+.role-table [role=gridcell]:focus, .role-table .columnheader:focus, .role-table [role=columnheader]:focus {
+  outline-color: invert;
+}
+.role-table .colspan-4 {
+  width: 938px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table th, table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+table th {
+  background-color: skyblue;
+}/*# sourceMappingURL=TF12.css.map */

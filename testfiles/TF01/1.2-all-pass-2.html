@@ -14,20 +14,20 @@
                 
             </div>
             <form>
-                <label for="fname" >Firstname:</label>
+                <label for="fname" >First name:</label>
                 <input type="text" id="fname" name="fname"><br><br>
-                <label for="lname" >Lastname:</label>
+                <label for="lname" >Last name:</label>
                 <input type="text" id="lname" name="lname"><br><br>
+                <h3>To access the email section below with tab button please press (Ctrl + Shift)</h3>
                 <input type="checkbox" id="email-checkbox" name="email-checkbox" onclick="displayEmail()">
                 <label for="email-checkbox">Sign up your email to recieve update from us!</label>
                 <br><br>
                 <div id="email-div">
-                    <h3>To access the email section below with tab button please press (Shift + A)</h3>
                     <label for="email" >Email:</label>
                     <input type="text" id="email" name="email">
                 </div>
             </form>
-            <input class="button" type="submit" onclick="submitForm()">
+            <input id="submit-button" class="button" type="submit" onclick="submitForm()">
         </div>
     </body> 
 </html>

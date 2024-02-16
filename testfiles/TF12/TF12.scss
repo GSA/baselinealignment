@@ -1,0 +1,51 @@
+.role-table
+{
+    width: 1250px;
+    h1 
+    {
+        text-align: center;
+    }
+    [role="gridcell"], .columnheader, [role="columnheader"], .rowheader, [role="rowheader"] 
+    {
+        display: inline-block;
+        width: 200px;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    [role="columnEmpty"]
+    {
+        display: inline-block;
+        width: 242px;
+    }
+    [role="row"]
+    {
+        margin-bottom: 3px;
+    }
+    
+      .columnheader, [role="columnheader"], .rowheader, [role="rowheader"] {
+        background-color: skyblue;
+      }
+    
+      [role="gridcell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
+        outline-color: invert;
+      } 
+      .colspan-4
+      {
+        width: 938px;
+      }
+}
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: skyblue;
+    }
+}
