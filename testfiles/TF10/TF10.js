@@ -2,7 +2,7 @@ let alertNotfication;
 //This function show the submission successfully when user insert the correct date format and the date is valid.
 function submitDateForm()
 {
-    let currDate = document.getElementById("currDate");
+    let currDate = document.getElementById("date");
     console.log(currDate.value.length);
     let dateCheck = new Date(currDate.value);
     //Everything is correct
