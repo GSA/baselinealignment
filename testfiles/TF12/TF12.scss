@@ -5,7 +5,7 @@
     {
         text-align: center;
     }
-    [role="gridcell"], .columnheader, [role="columnheader"], .rowheader, [role="rowheader"] 
+    [role="cell"],[role="gridcell"], .columnheader, [role="columnheader"], .rowheader, [role="rowheader"] 
     {
         display: inline-block;
         width: 200px;
@@ -28,7 +28,7 @@
         background-color: skyblue;
       }
     
-      [role="gridcell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
+      [role="cell"],[role="gridcell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
         outline-color: invert;
       } 
       .colspan-4

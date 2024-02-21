@@ -4,7 +4,7 @@
 .role-table h1 {
   text-align: center;
 }
-.role-table [role=gridcell], .role-table .columnheader, .role-table [role=columnheader], .role-table .rowheader, .role-table [role=rowheader] {
+.role-table [role=cell], .role-table [role=gridcell], .role-table .columnheader, .role-table [role=columnheader], .role-table .rowheader, .role-table [role=rowheader] {
   display: inline-block;
   width: 200px;
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -22,7 +22,7 @@
 .role-table .columnheader, .role-table [role=columnheader], .role-table .rowheader, .role-table [role=rowheader] {
   background-color: skyblue;
 }
-.role-table [role=gridcell]:focus, .role-table .columnheader:focus, .role-table [role=columnheader]:focus {
+.role-table [role=cell], .role-table [role=gridcell]:focus, .role-table .columnheader:focus, .role-table [role=columnheader]:focus {
   outline-color: invert;
 }
 .role-table .colspan-4 {
