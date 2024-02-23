@@ -40,4 +40,16 @@ table th, table td {
 }
 table th {
   background-color: skyblue;
+}
+table .no-outerline {
+  border: none;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+#ic-dna-3 tr td {
+  border: none;
+  padding: 10px;
 }/*# sourceMappingURL=TF12.css.map */

@@ -48,4 +48,24 @@ table
     th {
         background-color: skyblue;
     }
+    .no-outerline
+    {
+        border: none;
+    }
+}
+
+.text-align-center
+{
+    text-align: center;
+}
+#ic-dna-3
+{
+    tr 
+    {
+        td 
+        {
+            border: none;
+            padding: 10px;
+        }
+    }
 }
