@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- "Use the same code as TC2.2-1.a.i-fail-1 with a couple modifications:
+1) When a user selects the help button, ensure that the focus order goes 
+immediately to links in that side navigation and then the close button. 
+2) When the user selects the close button, ensure focus goes to the Submit button. " -->
+<html lang="en-us">
+    <meta charset="utf-8">
+    <title>02.2-1.b.i-fail-1</title>
+    <link rel="stylesheet" href="TF02.css" type="text/css">
+    <script src="TF02.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="tc_code" class="page-contents">
+        <div id="tc_code" class="page-contents">
+            <form>
+                <label for="fname" >First name <span class="required"></span>:</label>
+                <input tabindex="0" type="text" id="fname" class="form-input" name="fname">
+                <button id="help" class="form-input" type="button" onclick="toggleSideNavOrder()">Help?</button>
+                <br><br>
+                <label for="lname" >Last name <span class="required"></span>:</label>
+                <input tabindex="0" type="text" id="lname" class="form-input" name="lname"><br><br>
+                <div>
+                <label for="email" >Email adress <span class="required"></span>:</label>
+                <input tabindex="0" type="text" id="email" class="form-input" name="lname">
+                <br><br>
+                <div>
+                    <input id="submit-button" tabindex="0" class="button form-input" type="submit" onclick="submitForm()">
+                </div>
+            </form>
+        </div>
+        <div id="help-sidenav" class="sidenav sidenav-hide">
+            <button tabindex="4" id="exit-sidenav" aria-label="Exit the side navigation" onclick="toggleSideNavOrder()">X</button>
+            <a tabindex="1" target="_blank" href="https://www.google.com/">More information</a>
+            <a tabindex="2" target="_blank" href="https://www.google.com/">Contact Us</a>
+            <a tabindex="3" target="_blank" href="https://www.google.com/">Email Us</a>
+        </div>
+    </div>
+</body>
+</html>
+  

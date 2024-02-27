@@ -1,0 +1,172 @@
+.page-contents
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    #timer-div
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10px;
+        #timer-button
+        {
+            background-color: #005ea2;
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            width: auto;
+            height: 35px;
+            p 
+            {
+                margin: 3px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+        #timer-button:hover
+        {
+            cursor: pointer;
+            background-color: #1a3b66;
+            
+        }
+    }
+    p
+    {
+        margin: 5px 0px;
+        max-width: 1000px;
+    }
+    #puerto-rico
+    {
+        width: 370px;
+        height: 250px;
+    }
+    #puerto-rico-flag
+    {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+.button
+{
+    background-color: #005ea2;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+    height: 35px;
+    p 
+    {
+        margin: 3px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #1a3b66;
+    
+}
+.page-contents-sn
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: -8px;
+    height: 100vh;
+    .sidenav-content
+    {
+        padding-left: 15px;
+    }
+}
+//Style for side navigation for 2.2
+.sidenav {
+    height: 100%;
+    width: 300px;
+    right: 0;
+    margin-top: -8px;
+    position: fixed;
+    z-index: 1;
+    background-color: #005ea2;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    button 
+    {
+        text-align: left;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+    a, button
+    {
+        cursor: pointer;
+        padding: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 550;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    a:hover
+    {
+        background-color: #1a3b66;
+    }
+    #exit-sidenav
+    {
+        align-self: flex-end;
+        padding: 0;
+        margin-right: 20px;  
+        width: fit-content;
+    }
+    .dropdown-menu
+    {
+        display: flex;
+        justify-content: space-between;
+        .expanded
+        {
+            display: none;
+        }
+        
+    }
+    .active 
+    {
+        .expanded
+        {
+            display: block;
+        }
+        .collapsed
+        {
+            display: none;
+        }
+    }
+    .dropdown-container
+    {
+        flex-direction: column;
+    }
+  }
+  .sidenav-hide
+  {
+    transform: translateX(100%);
+  }
+  .sidenav-display
+  {
+    transform: translateX(0%);
+  }
+  
+  .dropdown-container
+  {
+    display: none;
+  }
+
+.slidecontainer
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

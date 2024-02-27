@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- Create a web page that opens a side navigation menu (say a web page with a couple form fields
+ (name and email address) and submit button. The first form field  has a help button, 
+ that when selected, opens a side navigation menu with a close button and three links 
+ (you can put random text in the links)). When the user selects the help, 
+ ensure that the focus order does NOT move to the new side nav, 
+ but instead continues to cycle to email address and the submit button before getting to the side navigation links and close button.  -->
+<html lang="en-us">
+    <meta charset="utf-8">
+    <title>02.2-1.a.i-fail-1</title>
+    <link rel="stylesheet" href="TF02.css" type="text/css">
+    <script src="TF02.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="tc_code" class="page-contents">
+        <div id="tc_code" class="page-contents">
+            <form>
+                <label for="fname" >First name <span class="required"></span>:</label>
+                <input tabindex="0" type="text" id="fname" name="fname">
+                <button id="help" type="button" onclick="toggleSideNav()">Help?</button>
+                <br><br>
+                <label for="lname" >Last name <span class="required"></span>:</label>
+                <input tabindex="0" type="text" id="lname" name="lname"><br><br>
+                <div>
+                <label for="email" >Email adress <span class="required"></span>:</label>
+                <input tabindex="0" type="text" id="email" name="lname">
+                <br><br>
+                <div>
+                    <input tabindex="0" class="button" type="submit" onclick="submitForm()">
+                </div>
+            </form>
+        </div>
+        <div id="help-sidenav" class="sidenav sidenav-hide">
+            <button id="exit-sidenav" aria-label="Exit the side navigation" onclick="toggleSideNav()">X</button>
+            <a target="_blank" href="https://www.google.com/">More information</a>
+            <a target="_blank" href="https://www.google.com/">Contact Us</a>
+            <a target="_blank" href="https://www.google.com/">Email Us</a>
+        </div>
+    </div>
+</body>
+</html>
+  
