@@ -10,11 +10,11 @@
     <div id="tc_code" class="page-contents">
         <form>
             <label for="fname" >First name <span class="required"></span>:</label>
-            <input tabindex="0" onfocus="hideFocus(this)" type="text" id="fname" name="fname"><br><br>
+            <input tabindex="0" onfocus="hideFocus(this)" onfocusout="unhideFocus(this)" type="text" id="fname" class="" name="fname"><br><br>
             <label for="lname" >Last name <span class="required"></span>:</label>
-            <input tabindex="0" onfocus="hideFocus(this)" type="text" id="lname" name="lname"><br><br>
+            <input tabindex="0" onfocus="hideFocus(this)" onfocusout="unhideFocus(this)" type="text" id="lname" name="lname"><br><br>
             <div>
-                <input onfocus="hideFocus(this)" tabindex="0" class="button" type="submit" onclick="submitForm()">
+                <input onfocus="hideFocus(this)" onfocusout="unhideFocus(this)" tabindex="0" class="button" type="submit" onclick="submitForm()">
             </div>
         </form>
     </div>

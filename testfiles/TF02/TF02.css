@@ -144,4 +144,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hideBorderline {
+  outline: none;
 }/*# sourceMappingURL=TF02.css.map */

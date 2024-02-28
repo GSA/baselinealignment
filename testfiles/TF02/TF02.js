@@ -1,4 +1,3 @@
-
 let helpButton,sideNav,sideNavDisplay = false;
 //Run after all the content loaded.
 document.addEventListener("DOMContentLoaded", function() {
@@ -19,8 +18,14 @@ function hideFocus(el)
 {
     setTimeout(function ()
     {
-        el.blur();
-    },2000)
+        el.classList.add("hideBorderline");
+    },1000)
+}
+//This function add back keyboard focus to the current element user currently focus on after 2 seconds.
+function unhideFocus(el)
+{
+    // console.log (el);
+    el.classList.remove("hideBorderline");
 }
 //This fucntion hide/unhide the side nav.
 function toggleSideNav()
