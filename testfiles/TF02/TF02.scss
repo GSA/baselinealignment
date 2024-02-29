@@ -146,7 +146,15 @@
     .dropdown-container
     {
         flex-direction: column;
+        .dropdown-content
+        {
+            padding-left: 30px;
+        }
     }
+  }
+  .sidenav-dropdown
+  {
+    margin-top: -160px;
   }
   .sidenav-hide
   {
@@ -174,4 +182,31 @@
 .hideBorderline
 {
     outline: none;
+}
+
+form 
+{
+    div 
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 5px;
+        #fname 
+        {
+            width: 145px;
+            height: 15px;
+        }
+        .input-popup
+        {
+            // position: absolute;
+            border-radius: 5px;
+            padding: 10px 5px;
+            background-color: skyblue;
+        }
+        .popup-hidden
+        {
+            display: none;
+        }
+    }
 }

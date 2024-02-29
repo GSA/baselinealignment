@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-us">
+    <meta charset="utf-8">
+    <title>02.C-2-fail-3</title>
+    <link rel="stylesheet" href="TF02.css" type="text/css">
+    <script src="TF02.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="tc_code" class="page-contents">
+        <form>
+            <div>
+                <label for="fname" >First name <span class="required">(required)</span>:</label>
+                <input type="text" id="fname" name="fname" onfocus="displayPopup(this)">
+                <p class="input-popup  popup-hidden" aria-live="assertive">
+                    Insert your first name that display on your ID.
+                    <br>
+                    Learn more: <a tabindex="0" target="_blank" onfocusout="hidePopup(this)" href="https://www.section508.gov/">here</a>
+                </p>
+            </div>
+            <br><br>
+            <div>
+                <label for="lname" >Last name <span class="required">(required)</span>:</label>
+                <input type="text" id="lname" name="lname">
+            </div>
+        </form>
+        <input class="button" type="submit" onclick="submitForm()">
+    </div>
+</body>
+</html>
+  

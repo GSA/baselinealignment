@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-us">
+    <meta charset="utf-8">
+    <title>02.C-2-pass-1</title>
+    <link rel="stylesheet" href="TF02.css" type="text/css">
+    <script src="TF02.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="tc_code" class="page-contents">
+        <form>
+            <label for="fname" >First name <span class="required"></span>:</label>
+            <input tabindex="0" type="text" id="fname" class="form-input" name="fname">
+            <button id="help" class="form-input" type="button" onclick="toggleSideNavOrder()">Help?</button>
+            <br><br>
+            <label for="lname" >Last name <span class="required"></span>:</label>
+            <input tabindex="0" type="text" id="lname" class="form-input" name="lname"><br><br>
+            <label for="email" >Email adress <span class="required"></span>:</label>
+            <input tabindex="0" type="text" id="email" class="form-input" name="lname">
+            <br><br>
+            <div>
+                <input id="submit-button" tabindex="0" class="button form-input" type="submit" onclick="submitForm()">
+            </div>
+        </form>
+    </div>
+    <div id="help-sidenav" class="sidenav sidenav-dropdown sidenav-hide">
+        <button id="exit-sidenav" aria-label="Exit the side navigation" onclick="toggleSideNavOrder()">X</button>
+        <a target="_blank" href="https://www.google.com/">Contact Us</a>
+        <button class="dropdown-menu" aria-expanded="false">
+            About Us
+            <span aria-hidden="true" class="collapsed">+</span>
+            <span aria-hidden="true" class="expanded">-</span>
+        </button>
+          <div id="about-us-dropdown" class="dropdown-container">
+            <a class="dropdown-content" target="_blank" href="https://www.gsa.gov/">GSA</a>
+            <a class="dropdown-content" target="_blank" href="https://www.section508.gov/">Section508</a>
+            <a class="dropdown-content" target="_blank" href="https://www.whitehouse.gov/">The White House</a>
+          </div>
+        <a target="_blank" href="https://www.google.com/">More information</a>
+    </div>
+</body>
+</html>

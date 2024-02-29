@@ -125,6 +125,13 @@
 .sidenav .dropdown-container {
   flex-direction: column;
 }
+.sidenav .dropdown-container .dropdown-content {
+  padding-left: 30px;
+}
+
+.sidenav-dropdown {
+  margin-top: -160px;
+}
 
 .sidenav-hide {
   transform: translateX(100%);
@@ -148,4 +155,24 @@
 
 .hideBorderline {
   outline: none;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+form div #fname {
+  width: 145px;
+  height: 15px;
+}
+form div .input-popup {
+  border-radius: 5px;
+  padding: 10px 5px;
+  background-color: skyblue;
+}
+form div .popup-hidden {
+  display: none;
 }/*# sourceMappingURL=TF02.css.map */
