@@ -1,5 +1,7 @@
 let helpButton,sideNav,sideNavDisplay = false;
-let inputPopup;
+let currInput;
+const inputF = function() {currInput = this; toggleSideNavOrder();}; //Input when focus is on
+const inputFO = function() { this.addEventListener("focus", inputF);}; //Input when focus is out
 //Run after all the content loaded.
 document.addEventListener("DOMContentLoaded", function() {
     if((document.title == "02.2-1.a.i-fail-1"))
@@ -7,17 +9,21 @@ document.addEventListener("DOMContentLoaded", function() {
         sideNav = document.getElementById("help-sidenav");  
         setSideNavTabIndex(-1);
     }
-    if((document.title =="02.2-1.b.i-fail-1") || (document.title =="02.C-2-pass-1"))
+    if((document.title =="02.2-1.b.i-fail-1") || (document.title =="02.C-2-fail-3")||(document.title =="02.C-2-pass-1"))
     {
         sideNav = document.getElementById("help-sidenav");  
         setSideNavTabIndex(-1);
     }
+    if((document.title =="02.C-2-pass-2"))
+    {
+        sideNav = document.getElementById("help-sidenav");  
+    }
     if((document.title =="02.C-2-fail-3"))
     {
-        inputPopup = document.getElementsByClassName("input-popup");
-        console.log(inputPopup);
+        document.getElementById("fname").addEventListener("focus", inputF);
+        document.getElementById("lname").addEventListener("focus", inputF);
     }
-    if((document.title == "02.C-2-pass-1"))
+    if((document.title == "02.C-2-pass-2")||(document.title =="02.C-2-fail-3")||(document.title =="02.C-2-pass-1"))
     {
         var dropdown = document.getElementsByClassName("dropdown-menu");
         for (let i = 0; i < dropdown.length; i++) {
@@ -38,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             }
     }
-    
 });
 //This function removes keyboard focus from the current element user currently focus on after 2 seconds.
 function hideFocus(el)
@@ -51,7 +56,6 @@ function hideFocus(el)
 //This function add back keyboard focus to the current element user currently focus on after 2 seconds.
 function unhideFocus(el)
 {
-    // console.log (el);
     el.classList.remove("hideBorderline");
 }
 //This fucntion hide/unhide the side nav.
@@ -76,30 +80,36 @@ function toggleSideNav()
 //This fucntion hide/unhide the side nav and set tabIndex for all content inside in order.
 function toggleSideNavOrder()
 {
-    if((sideNavDisplay == false)&&(document.title =="02.C-2-pass-1"))
-    {
-         sideNavDisplay = true;
-         sideNav.classList.remove("sidenav-hide");
-         sideNav.classList.add("sidenav-display");
-         setFormInputTabIndex(-1);
-         let tabValue = 0;
-         for(let i = 0; i < sideNav.children.length; i++)
-         {
-            if(sideNav.children[i].id != "about-us-dropdown")
-            {
-                tabValue += 1;
-                sideNav.children[i].tabIndex = tabValue;
-            }
-             else
-             {
-                for(let j = 0; j < sideNav.children[i].children.length; j++)
-                {
-                    tabValue += 1;
-                    sideNav.children[i].children[j].tabIndex = tabValue;
-                }
-             }
-         }
-    }
+   if(sideNavDisplay == false&&(document.title =="02.C-2-fail-3"))
+   {
+        sideNavDisplay = true;
+        sideNav.classList.remove("sidenav-hide");
+        sideNav.classList.add("sidenav-display");
+        setFormInputTabIndex(-1);
+        for(let i = 0; i < sideNav.children.length; i++)
+        {
+            sideNav.children[i].tabIndex = i;
+        }
+        sideNav.children[0].focus();
+        let inputDetail = document.getElementById("input-detail");
+        if(currInput.id == "fname")
+            inputDetail.innerText = "Insert your first name that display on your ID.";
+        if(currInput.id == "lname")
+            inputDetail.innerText = "Insert your last name that display on your ID.";
+
+   }
+   else if(sideNavDisplay == false&&(document.title =="02.C-2-pass-1"))
+   {
+        sideNavDisplay = true;
+        sideNav.classList.remove("sidenav-hide");
+        sideNav.classList.add("sidenav-display");
+        setFormInputTabIndex(-1);
+        for(let i = 0; i < sideNav.children.length; i++)
+        {
+            sideNav.children[i].tabIndex = i;
+        }
+        sideNav.children[0].focus();
+   }
    else if(sideNavDisplay == false)
    {
         sideNavDisplay = true;
@@ -122,7 +132,19 @@ function toggleSideNavOrder()
         sideNav.classList.add("sidenav-hide");
         setSideNavTabIndex(-1);
         setFormInputTabIndex(0);
-        document.getElementById("help").focus();
+        currInput.focus();
+   }
+   //When user close the side navigation focus on the input that open the side navigation in the first place.
+   else if((sideNavDisplay == true) && ((document.title =="02.C-2-fail-3")))
+   {
+        sideNavDisplay = false;
+        sideNav.classList.remove("sidenav-display");
+        sideNav.classList.add("sidenav-hide");
+        setSideNavTabIndex(-1);
+        currInput.removeEventListener("focus", inputF)
+        currInput.focus();
+        currInput.addEventListener("focusout", inputFO);
+        setFormInputTabIndex(0);
    }
    else
    {
@@ -166,24 +188,15 @@ function changePage(page)
         pageContentList[i].style.display = (page == pageContentList[i].id) ? "block" : "none";
     }
 }
-
 //This function click on the element that the agruement recieve.
 function clickLink(el)
 {
     el.click();
 }
-//This function display the popup for the input.
-function displayPopup(el)
+//This function insert text on the side navigation according to the currInput.
+function addSideNavContext(el,context)
 {
-    const popUp = el.nextElementSibling;
-    if(popUp)
-    {   
-        popUp.classList.remove("popup-hidden");
-        popUp.children[1].focus();
-    }   
-}
-//This function hide the popup when the anchor element on the popup is no longer focus.
-function hidePopup(el)
-{
-    el.parentElement.classList.add("popup-hidden");
+    let inputDetail = document.getElementById("input-detail");
+    inputDetail.innerText = context;
+    currInput = el;
 }

@@ -87,6 +87,7 @@
     height: 100%;
     width: 300px;
     right: 0;
+    top: 0;
     margin-top: -8px;
     position: fixed;
     z-index: 1;
@@ -101,7 +102,7 @@
         background-color: transparent;
         border: none;
     }
-    a, button
+    a, button, p
     {
         cursor: pointer;
         padding: 10px;
@@ -152,10 +153,6 @@
         }
     }
   }
-  .sidenav-dropdown
-  {
-    margin-top: -160px;
-  }
   .sidenav-hide
   {
     transform: translateX(100%);
@@ -164,7 +161,6 @@
   {
     transform: translateX(0%);
   }
-  
   .dropdown-container
   {
     display: none;

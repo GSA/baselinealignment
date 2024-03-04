@@ -75,6 +75,7 @@
   height: 100%;
   width: 300px;
   right: 0;
+  top: 0;
   margin-top: -8px;
   position: fixed;
   z-index: 1;
@@ -89,7 +90,7 @@
   background-color: transparent;
   border: none;
 }
-.sidenav a, .sidenav button {
+.sidenav a, .sidenav button, .sidenav p {
   cursor: pointer;
   padding: 10px;
   font-family: "Courier New", Courier, monospace;
@@ -127,10 +128,6 @@
 }
 .sidenav .dropdown-container .dropdown-content {
   padding-left: 30px;
-}
-
-.sidenav-dropdown {
-  margin-top: -160px;
 }
 
 .sidenav-hide {

@@ -11,12 +11,7 @@
         <form>
             <div>
                 <label for="fname" >First name <span class="required">(required)</span>:</label>
-                <input type="text" id="fname" name="fname" onfocus="displayPopup(this)">
-                <p class="input-popup  popup-hidden" aria-live="assertive">
-                    Insert your first name that display on your ID.
-                    <br>
-                    Learn more: <a tabindex="0" target="_blank" onfocusout="hidePopup(this)" href="https://www.section508.gov/">here</a>
-                </p>
+                <input type="text" id="fname" name="fname">
             </div>
             <br><br>
             <div>
@@ -25,6 +20,10 @@
             </div>
         </form>
         <input class="button" type="submit" onclick="submitForm()">
+    </div>
+    <div id="help-sidenav" class="sidenav sidenav-hide">
+        <button id="exit-sidenav" aria-label="Exit the side navigation" onclick="toggleSideNavOrder()">X</button>
+        <p id="input-detail"></p>
     </div>
 </body>
 </html>

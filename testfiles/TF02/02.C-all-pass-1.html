@@ -8,16 +8,25 @@
 </head>
 <body>
     <div id="tc_code" class="page-contents">
-        <p>
-            Learn more about National Park Service <a target="blank" href="https://www.nps.gov/acad/index.htm">Click here</a>
-        </p>
         <form>
+            <p>
+                Learn more about National Park Service <a target="blank" href="https://www.nps.gov/acad/index.htm">Learn more about Acadia National Park</a>
+            </p>
             <label for="fname" >First name <span class="required">(required)</span>:</label>
-            <input type="text" id="fname" name="fname"><br><br>
+            <input type="text" id="fname" name="fname">
+            <button id="help" class="form-input" type="button" onclick="addSideNavContext(this,'Insert your first name that display on your ID.');toggleSideNavOrder()">Help with First name</button>
+            <br><br>
             <label for="lname" >Last name <span class="required">(required)</span>:</label>
-            <input type="text" id="lname" name="lname"><br><br>
+            <input type="text" id="lname" name="lname">
+            <button id="help" class="form-input" type="button" onclick="addSideNavContext(this,'Insert your last name that display on your ID.');toggleSideNavOrder()">Help with Last name</button>
+            <br><br>
         </form>
         <input class="button" type="submit" onclick="submitForm()">
     </div>
+    <div id="help-sidenav" class="sidenav sidenav-hide">
+        <button id="exit-sidenav" aria-label="Exit the side navigation" onclick="toggleSideNavOrder()">X</button>
+        <p id="input-detail"></p>
+    </div>
 </body>
 </html>
+  
