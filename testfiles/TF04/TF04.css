@@ -1,0 +1,74 @@
+.maincontent-nav-body {
+  margin: 0;
+}
+
+.page-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.page-contents #maincontent-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e6eb;
+}
+.page-contents #maincontent-nav #maincontent-nav-list {
+  overflow: scroll;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li {
+  display: flex;
+  align-items: center;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li button {
+  cursor: pointer;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li #skip-maincontent {
+  border: none;
+  background-color: transparent;
+  color: #005186;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 45px;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li a, .page-contents #maincontent-nav #maincontent-nav-list li label {
+  text-decoration: none;
+  font-size: 18px;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li a, .page-contents #maincontent-nav #maincontent-nav-list li a:visited {
+  color: black;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li a:hover {
+  background-color: #005186;
+  color: white;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li label {
+  padding-left: 10px;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li input {
+  width: 100px;
+  border-radius: 3px;
+}
+.page-contents #maincontent-nav #maincontent-nav-list li #search-button {
+  background-color: #005186;
+  color: white;
+  margin-left: 3px;
+  border-radius: 3px;
+}
+.page-contents #maincontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=TF04.css.map */

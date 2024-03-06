@@ -1,0 +1,89 @@
+.maincontent-nav-body
+{
+    margin: 0;
+}
+.page-contents 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    #maincontent-nav
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e0e6eb;
+        #maincontent-nav-list
+        {
+            overflow: scroll;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            // column-gap: 20px;
+            list-style: none;
+            li 
+            {
+                display: flex;
+                align-items: center;
+                button 
+                {
+                    cursor: pointer;
+                }
+                #skip-maincontent
+                {
+                    border: none;
+                    background-color: transparent;
+                    color: #005186;
+                }
+                a 
+                {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    height: 45px;
+                }
+                a, label 
+                {
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+                a,a:visited 
+                {
+                    color: black;
+                }
+                a:hover
+                {
+                    background-color: #005186;
+                    color: white;
+                }
+                label 
+                {
+                    padding-left: 10px;
+                }
+                input 
+                {
+                    width: 100px;
+                    border-radius: 3px;
+                }
+                #search-button
+                {
+                    background-color: #005186;
+                    color: white;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    #maincontent
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
