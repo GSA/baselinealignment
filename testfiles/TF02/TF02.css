@@ -142,6 +142,18 @@
   display: none;
 }
 
+.pass-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 0;
+  margin-right: 0;
+}
+.pass-2 .sidenav-pass-2 {
+  position: relative;
+  height: 100vh;
+}
+
 .slidecontainer {
   margin-top: 20px;
   display: flex;

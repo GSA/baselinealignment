@@ -82,11 +82,13 @@ function toggleSideNavOrder()
 {
    if(sideNavDisplay == false&&(document.title =="02.C-2-fail-3"))
    {
+    setTimeout(()=>
+    {
         sideNavDisplay = true;
         sideNav.classList.remove("sidenav-hide");
         sideNav.classList.add("sidenav-display");
         setFormInputTabIndex(-1);
-        for(let i = 0; i < sideNav.children.length; i++)
+        for(let i = 0; i < sideNav.children.length-1; i++)
         {
             sideNav.children[i].tabIndex = i;
         }
@@ -96,6 +98,7 @@ function toggleSideNavOrder()
             inputDetail.innerText = "Insert your first name that display on your ID.";
         if(currInput.id == "lname")
             inputDetail.innerText = "Insert your last name that display on your ID.";
+    },500);
 
    }
    else if(sideNavDisplay == false&&(document.title =="02.C-2-pass-1"))
