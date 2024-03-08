@@ -71,4 +71,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.page-contents #maincontent p {
+  max-width: 1000px;
+  padding: 0px 10px;
 }/*# sourceMappingURL=TF04.css.map */

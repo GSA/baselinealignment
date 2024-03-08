@@ -2,7 +2,7 @@ let skipButton, searchInput, pageLink;
 document.addEventListener("DOMContentLoaded", 
 function()
 {
-    if(document.title == "04.a-4-fail-1")
+    if((document.title == "04.a-4-fail-1")||(document.title == "04.a-4-fail-1 About Us"))
     {
         skipButton = document.getElementById("skip-maincontent");
         searchInput = document.getElementById("site-search");
@@ -12,7 +12,7 @@ function()
         }
         );
     }
-    if(document.title == "04.a-4-fail-2")
+    if((document.title == "04.a-4-fail-2")||(document.title == "04.a-4-fail-2 About Us"))
     {
         skipButton = document.getElementById("skip-maincontent");
         pageLink = document.getElementById("bottom-link");
@@ -22,7 +22,7 @@ function()
         }
         );
     }
-    if(document.title == "04.a-all-pass-1")
+    if((document.title == "04.a-all-pass-1")||(document.title == "04.a-all-pass-1 About Us"))
     {
         skipButton = document.getElementById("skip-maincontent");
         pageLink = document.getElementById("first-link");
