@@ -1,0 +1,54 @@
+.page-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.page-contents p {
+  margin: 5px 0px;
+  max-width: 1000px;
+}
+.page-contents #flash-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  opacity: 0;
+  -webkit-animation: flash 0.3s ease;
+          animation: flash 0.3s ease;
+  cursor: pointer;
+}
+.page-contents .button {
+  cursor: pointer;
+  background-color: #005ea2;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  width: auto;
+  height: 35px;
+}
+.page-contents .button p {
+  margin: 3px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=TF09.css.map */
