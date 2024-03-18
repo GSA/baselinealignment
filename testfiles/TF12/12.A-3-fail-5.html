@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<title>12.A-3-fail-5</title>
+<style>
+  [role="cell"], .columnheader, [role="columnheader"] {
+      display: inline-block;
+      width: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .columnheader, [role="columnheader"] {
+      background-color: skyblue;
+    }
+
+    [role="cell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
+      outline-color: invert;
+    }  
+</style>
+</head>
+<body>
+<div id="tc_code">
+  <!--Taken from W3C example -->
+  <div >
+      <div role="row">
+        <span role="columnheader" tabindex="0">First Name</span>
+        <span role="columnheader" tabindex="0">Last Name</span>
+        <span role="columnheader" tabindex="0">Company</span>
+        <span class="columnheader" tabindex="0">Address</span>
+      </div>
+      <div role="table">
+        <span role="cell" tabindex="0">Fred</span>
+        <span role="cell" tabindex="0">Jackson</span>
+        <span role="cell" tabindex="0">Acme, Inc.</span>
+        <span role="cell" tabindex="0">123 Broad St.</span>
+      </div>
+      <div role="table">
+        <span role="cell" tabindex="0">Sara</span>
+        <span role="cell" tabindex="0">James</span>
+        <span role="cell" tabindex="0">Competitor, Inc.</span>
+        <span role="cell" tabindex="0">124 Broad St.</span>
+      </div>
+    </div>
+  <br>
+
+</div>
+
+</body>
+</html>
