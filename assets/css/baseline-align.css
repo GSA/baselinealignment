@@ -6,14 +6,14 @@
 
 header {
 	z-index:2;
-	position: fixed!important;
+	position: sticky !important;
 	top: 0;
 	left: 0;
 	width: 100%;
 }
 
 #main-content {
-	padding-top: 72px;
+	margin-top:-300px;
 }
 
 #main-content h1::before, #main-content h2::before, #main-content h3::before, #main-content h4::before, #main-content h5::before, #main-content h6::before {
@@ -26,10 +26,12 @@ header {
 }
 
 .sec-nav {
-	position:fixed;
-	top:58px;
+	position:absolute;
 	bottom:0;
 	right:0;
+	float:right;
+	top:250px;
+	height:200px;
 }
 
 .toc, #toc-container {
@@ -58,10 +60,10 @@ header {
 
 @media (min-width: 768px) {
 	.fixed-sidebar {
-		position:fixed;
-		top:58px;
-		bottom:0;
-		left:0;
+		position: sticky;
+		top: 4em;
+		bottom: 0;
+		left: 0;
 	}
 }
 
