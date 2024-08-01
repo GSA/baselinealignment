@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Placeholder Index of Test Cases
+title: ICT Baseline Alignment Framework - Test Cases
 ---
-# ICT Baseline Alignment Framework - Test Cases
 ## Placeholder Index
 
 Until we modify the primary index file, this serves as a placeholder with links to current test case documents.

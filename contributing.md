@@ -2,7 +2,6 @@
 layout: page
 title: Contributing to the ICT Baseline Alignment Framework
 ---
-# Contributing to the ICT Baseline Alignment Framework
 ## How you can help
 If you are a federal employee or providing direct contract support to a federal agency, we invite you to contribute directly as a member of our ICT Baseline Working Group (with supervisor and/or client approval). If you are not a federal employee, we can still use your help and welcome your feedback and contributions via sumission of [issues](https://github.com/Section508Coordinators/baselinealignment/issues) and [pull requests](https://github.com/Section508Coordinators/baselinealignment/pulls) in the [GitHub repository](https://github.com/Section508Coordinators/baselinealignment). We are also happy to accept input and/or recommendations for other methods of contributions via [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov).
 
