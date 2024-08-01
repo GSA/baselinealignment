@@ -21,18 +21,16 @@ ga:
 
 # Site Navigation
 primary_navigation:
-  - name: Policy & Management
-    url: /manage/
-  - name: Acquisition
-    url: /buy-sell/
-  - name: Content Creation
-    url: /create/
-  - name: Design & Develop
-    url: /develop/
-  - name: Testing
-    url: /test/
-  - name: Training, Tools & Events
-    url: /training/
+  - name: Baseline Alignment Home
+    url: /
+  - name: Contributing
+    url: /contributing/
+  - name: Test Cases
+    url: /testcases/
+  - name: ICT Baseline (external)
+    url: /https://ictbaseline.access-board.gov/
+  - name: Section508.gov Home
+    url: /https://www.section508.gov/
 
 
 secondary_navigation:

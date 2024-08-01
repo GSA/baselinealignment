@@ -12,32 +12,30 @@ where we provide an easy way to manage your navigation system
     <div class="usa-nav__inner">
         <button class="usa-nav__close"><img alt="close" src="{{ site.baseurl }}/assets/img/close.svg"></button>
       <ul class="usa-nav__primary usa-accordion">
+        {% for nav_item in include.primary_navigation %}
+        {% unless nav_item.children %}
+        {% assign basedir = page.url | remove_first: '/' | split: '/' | first | lstrip %}
+        {% assign linkdir = nav_item.url |  replace: "/", ""  | lstrip %}
         <li class="usa-nav__primary-item">
-          <a class="usa-nav__link{% if page.url == '/' %} usa-current{% endif %}"
-            href="{{site.baseurl}}/"><span>Baseline Alignment Home</span></a>
+          <a aria-label="{{ nav_item.name | escape }} primary navigation" class="usa-nav__link{% if basedir == linkdir %} usa-current{% endif %}" onclick="return navigate(this)"
+            href="{{ nav_item.url | prepend: site.baseurl}}"><span>{{ nav_item.name | escape }}</span></a>
         </li>
+        {% else %}
+        {% assign nav_id = 'primary-nav-' | append: forloop.index %}
         <li class="usa-nav__primary-item">
-          <a class="usa-nav__link{% if page.url contains '/contributing/' %} usa-current{% endif %}"
-          href="{{site.baseurl}}/contributing/"><span>Contributing</span></a>
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false"
+            aria-controls="{{ nav_id }}"><span>{{ nav_item.name | escape }}</span></button>
+          <ul id="{{ nav_id }}" class="usa-nav__submenu">
+            {% for subnav_item in nav_item.children %}
+            <li class="usa-nav__submenu-item">
+              <a href="{{ subnav_item.url | prepend: site.baseurl }}">{{ subnav_item.name | escape }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+
         </li>
-        <li class="usa-nav__primary-item">
-          <a class="usa-nav__link{% if page.url contains 'testcases' or page.url contains 'test_cases' %} usa-current{% endif %}"
-            href="{{site.baseurl}}/testcases/"><span>Test Cases</span></a>
-        </li>
-        <li class="usa-nav__primary-item">
-          <a class="usa-nav__link"
-            href="https://ictbaseline.access-board.gov/"><span>ICT Baseline (external)</span></a>
-        </li>
-        <li class="usa-nav__primary-item">
-          <a class="usa-nav__link"
-            href="https://section508.gov/"><span>Section508.gov</span></a>
-        </li>
-        <!-- insert Verify Alignment link once page is available 
-        <li class="usa-nav__primary-item">
-          <a class="usa-nav__link{% if basedir == linkdir %} usa-current{% endif %}"
-            href="{{site.baseurl}}/align/"><span>Verify Alignment</span></a>
-        </li>
-      -->
+        {% endunless %}
+        {% endfor %}
       </ul>
       <div class="usa-nav__secondary">
         <ul class="usa-nav__secondary-links">
