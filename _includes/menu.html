@@ -1,22 +1,54 @@
- 
-<!-- Primary site nav manu -->
-<nav class="col d-none d-md-block bg-light col-md-3 col-xl-2 base-nav order-0 px-0 shadow fixed-sidebar" id="site-nav" aria-label="primary navigation">
-    <div class="px-2 row">
-        <h4 class="text-dark bg-light d-inline-block ml-2 my-auto p-2">Menu</h4>
-        <a href="javascript:void(0)" onclick="sidebarOpenClose()" class="d-none btn btn-light my-1 mr-2 ml-auto text-danger" aria-label="Close Nave Menu" id="closeSidebar"><i class="fa fa-remove"></i></a>
+{% comment %}
+To modify the menu system, you are welcome to edit this HTML directly or you can look inside _config.yml
+where we provide an easy way to manage your navigation system
+{% endcomment %}
+
+<header class="usa-header usa-header--extended" role="banner">
+  <div class="usa-navbar">
+    {% include logo.html %}
+    <button class="usa-menu-btn">Menu</button>
+  </div>
+  <nav id="site-nav" role="navigation" class="usa-nav" aria-label="Primary Site Navigation">
+    <div class="usa-nav__inner">
+        <button class="usa-nav__close"><img alt="close" src="{{ site.baseurl }}/assets/img/close.svg"></button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link{% if page.url == '/' %} usa-current{% endif %}"
+            href="{{site.baseurl}}/"><span>Baseline Alignment Home</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link{% if page.url contains '/contributing/' %} usa-current{% endif %}"
+          href="{{site.baseurl}}/contributing/"><span>Contributing</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link{% if page.url contains 'testcases' or page.url contains 'test_cases' %} usa-current{% endif %}"
+            href="{{site.baseurl}}/testcases/"><span>Test Cases</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link"
+            href="https://ictbaseline.access-board.gov/"><span>ICT Baseline (external)</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link"
+            href="https://section508.gov/"><span>Section508.gov</span></a>
+        </li>
+        <!-- insert Verify Alignment link once page is available 
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link{% if basedir == linkdir %} usa-current{% endif %}"
+            href="{{site.baseurl}}/align/"><span>Verify Alignment</span></a>
+        </li>
+      -->
+      </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          {% for nav_item in include.secondary_navigation %}
+          <li class="usa-nav__secondary-item">
+            <a href="{{ nav_item.url | prepend: site.baseurl }}" class="external-link" onclick="return navigate(this)">{{ nav_item.name | escape }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% include searchgov/form.html searchgov=site.searchgov %}
+      </div>
     </div>
-    <ul class="list-group-flush bg-light px-0">
-        <li><a href="/baselinealignment/index.html" id="home" class="list-group-item list-group-item-action bg-light">Home</a></li>
-        <li><a href="/baselinealignment/contributing.html" id="contributing" class="list-group-item list-group-item-action bg-light">Contributing</a></li>
-        <!-- <li><a href="#" class="list-group-item list-group-item-action bg-light">Validating Alignment</a></li> -->
-        <li><a  href="/baselinealignment/testcases.html" id="testcases" class="list-group-item list-group-item-action bg-light">Test Cases</a></li>
-        <!-- <li><a  href="#" class="list-group-item list-group-item-action bg-light">Glossary</a></li> -->
-    </ul>
-    <ul class="list-group-flush bg-light px-0 border-top mt-5">
-        <li><a href="https://ictbaseline.access-board.gov" class="list-group-item list-group-item-action bg-light" target="_blank" rel="noopener noreferrer">ICT Baseline (external)</a></li>
-    </ul>
-
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div onclick="sidebarOpenClose()" style="cursor:pointer" class="d-none overlay" title="Close Nav Menu" id="myOverlay"></div>
+  </nav>
+</header>

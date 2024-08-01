@@ -8,49 +8,63 @@ provided in the document front matter; see the admin/config > collections
 > Test Cases for field details
 {% endcomment %}
 
-{% include toc.html %}
+{% include banner.html %}
 
-<main class="container-fluid mb-auto flex-shrink-0" id="main-content">
-    <div class="row" id="card-holder">
-        <div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
+<div id="main-content" class="usa-layout-docs usa-section">
 
-                    <h1 class="card-title" id="TCtitle">{{page.title | markdownify}}</h1>
-                        <h2 class="border-bottom" id="TCsum">Test Case Summary</h2>
-                            <h3 id="TCid">Test Case ID</h3>
-                                <p>{{page.tcid}}</p>
-                            <h3 id="TCdesc">Test Case Description</h3>
-                                <p>{{page.descr | markdownify}}</p>
-                            <h3 id="TCbase">Applicable ICT Baseline Test</h3>
-                                <p>{{page.app-baseline | markdownify}}</p>
+  <div class="grid-container">
+
+    <div class="grid-row grid-gap">
+      {% include sidenav.html %}
+      <main class="usa-layout-docs__main desktop:grid-col-9" id="content-section">
+        <div class="usa-graphic-list">
+            <div class="padding-2 border border-primary-dark radius-md shadow-1">
+                <h2 id="TCsum">Test Case Summary</h2>
+                    <h3 id="TCid">Test Case ID and Version</h3>
+                        <p>{{page.tcid}} 
+                            {% if page.version %}
+                                {% if page.version != "" %}
+                                    v{{page.version}}
+                                {% else %}
+                                    v1.0
+                                {% endif %}
+                            {% endif %}
+                        </p>
+                    <h3 id="TCdesc">Test Case Description</h3>
+                        <p>{{page.descr | markdownify}}</p>
+                    <h3 id="TCbase">Applicable ICT Baseline Test</h3>
+                        <p>{{page.app-baseline | markdownify}}</p>
+            </div>
+            <div class="padding-2 border border-primary-dark radius-md shadow-1 margin-top-2">
+                <h2 id="TCdet">Test Case Detail</h2>
+                    <h3 id="TCresult">Expected Baseline Result</h3>
+                        <p><strong>
+                            {{page.result | upcase }}
+                        </strong></p>
+                        <p>
+                            {{page.result-descr | markdownify}}
+                        </p>
+                    <h3 id="TCdata">Test Data</h3>
+                        <h4 id="TCurl">Code Sample Single-Page URL</h4>
+                            <div id="codelink">
+                                <p><a id="samplecodelink" href="{{page.sample | absolute_url}}">{{page.sample | absolute_url}}</a></p>
+                            </div>
             
-                    <h2 class="border-bottom" id="TCdet">Test Case Detail</h2>
-                        <h3 id="TCresult">Expected Baseline Result</h3>
-                            <p><strong>
-                                {{page.result}}
-                            </strong></p>
-                            <p>
-                                {{page.result-descr | markdownify}}
-                            </p>
-                        <h3 id="TCdata">Test Data</h3>
-                            <h4 id="TCurl">Single-Page URL</h4>
-                                <div id="codelink">
-                                    <p><a id="samplecodelink" href="{{page.sample | absolute_url}}">{{page.sample | absolute_url}}</a></p>
-                                </div>
-                
-                            <h4 id="TCframe">Embedded Code</h4>
-                                <div id="codeframe"></div> 
-                                    <iframe id="codeframe" src="{{page.sample | absolute_url}}" title="embedded code">
-                                </iframe>
-    
-                            <h4 id="if_code">Code</h4>
-                                <div id="div_code">
-                                    <pre class="bg-light callout"><code id="ta_code"></code></pre>
-                                </div>
+                        <h4 id="TCframe">Embedded Sample</h4>
+                            <div id="codeframe"></div> 
+                                <iframe id="codeframe" src="{{page.sample | absolute_url}}" title="embedded code" class="w-100 h-auto">
+                            </iframe>
 
-                        <h3 id="TCsteps">Test Case Instruction</h3>
-                        <div id="TCsteps_table">{{content}}</div>
+                        <h4 id="if_code">Sample Code Snippet</h4>
+                            <div id="div_code">
+                                <pre class="bg-light callout"><code id="ta_code"></code></pre>
+                            </div>
+
+                    <h3 id="TCsteps">Test Case Instruction</h3>
+                    <div id="TCsteps_table">{{content}}</div>
+            </div>
         </div>
+      </main>
     </div>
-</main>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="/baselinealignment/assets/js/testcases.js"></script>
+  </div>
+</div>
