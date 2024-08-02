@@ -274,3 +274,51 @@
         padding-left: 20px;
     }
 }
+
+
+
+// Kevin SCSS
+// 21.B.ib SCSS
+.main-container{
+    height: 500px;
+    width: 1000px;
+    background-image: url('../assets/images/Rocket.png');
+    background-size: auto;
+    position: relative;
+}
+
+#movingContent {
+    width: 100%;
+    height: 50px;
+    background-color: lightblue;
+    overflow: hidden;
+    position: absolute;
+    bottom:0;
+    
+}
+
+
+#movingText {
+    position: absolute;
+    white-space: nowrap;
+    animation: moveText 25s linear infinite;
+}
+
+.button-container{
+    position: absolute;
+    bottom: 50px;
+    p{
+        color:#fff;
+        padding:0;
+        margin:0;
+    }
+}
+
+@keyframes moveText {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
+#pauseButton, #stopButton, #hideButton {
+    margin: 10px;
+}

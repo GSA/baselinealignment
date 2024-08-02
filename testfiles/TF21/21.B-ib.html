@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>21.B-ib</title>
+        <link rel="stylesheet" href="TF21.css" type="text/css">
+        <script src="TF21.2.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <h1>
+       Live Stream of Shuttle Launch
+    </h1>
+    <div class="main-container">
+
+        <div id="movingContent" aria-live="assertive">
+            <p id="movingText">You're watching a live stream of the shuttle launch</p>
+        
+        </div>
+    
+        <div class="button-container">
+            <p>Banner Controls</p>
+            <button id="playButton">Play</button>
+            <button id="pauseButton">Pause</button>
+            <button id="stopButton">Stop</button>
+            <button id="hideButton">Hide</button>
+        </div>
+      
+    </div>
+
+
+    <script>
+        const movingText = document.getElementById('movingText');
+        const pauseButton = document.getElementById('pauseButton');
+        const stopButton = document.getElementById('stopButton');
+        const hideButton = document.getElementById('hideButton');
+
+        pauseButton.addEventListener('click', () => {
+            movingText.style.animationPlayState = 'paused';
+        });
+
+        stopButton.addEventListener('click', () => {
+            movingText.style.animation = 'none';
+        });
+
+        hideButton.addEventListener('click', () => {
+            document.getElementById('movingContent').style.display = 'none';
+        });
+
+        playButton.addEventListener('click', () => {
+            movingText.style.animation = 'moveText 10s linear infinite';
+            movingText.style.animationPlayState = 'running';
+        });
+    </script>
+    </body>
+</html>

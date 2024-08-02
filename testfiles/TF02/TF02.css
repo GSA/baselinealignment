@@ -106,7 +106,6 @@
   align-self: flex-end;
   padding: 0;
   margin-right: 20px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }

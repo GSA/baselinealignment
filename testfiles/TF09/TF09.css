@@ -16,8 +16,7 @@
   left: 0;
   background-color: blue;
   opacity: 0;
-  -webkit-animation: flash 0.3s ease;
-          animation: flash 0.3s ease;
+  animation: flash 0.3s ease;
   cursor: pointer;
 }
 .page-contents .button {
@@ -33,15 +32,6 @@
   margin: 3px;
   font-size: 13px;
   font-weight: 600;
-}
-
-@-webkit-keyframes flash {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes flash {

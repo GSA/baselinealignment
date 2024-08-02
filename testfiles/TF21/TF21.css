@@ -131,10 +131,8 @@
   cursor: pointer;
   padding: 0;
   margin: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -244,4 +242,49 @@
 }
 #doi .padding-left {
   padding-left: 20px;
+}
+
+.main-container {
+  height: 500px;
+  width: 1000px;
+  background-image: url("../assets/images/Rocket.png");
+  background-size: auto;
+  position: relative;
+}
+
+#movingContent {
+  width: 100%;
+  height: 50px;
+  background-color: lightblue;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+#movingText {
+  position: absolute;
+  white-space: nowrap;
+  animation: moveText 25s linear infinite;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 50px;
+}
+.button-container p {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes moveText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+#pauseButton, #stopButton, #hideButton {
+  margin: 10px;
 }/*# sourceMappingURL=TF21.css.map */

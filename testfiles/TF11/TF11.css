@@ -16,7 +16,6 @@
   background-color: #e0e6eb;
 }
 .page-contents #maincontent-nav #maincontent-nav-list {
-  overflow: scroll;
   margin: 0;
   display: flex;
   flex-direction: row;
