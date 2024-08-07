@@ -62,3 +62,12 @@ iframe {
     height: 100%;
     border: none;
 }
+
+.obscured-text {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    border: 1px solid #000;
+    padding: 5px;
+}
