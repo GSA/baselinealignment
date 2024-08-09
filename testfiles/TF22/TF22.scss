@@ -1,73 +1,97 @@
-body{
-    background-color: #D6E1FC;
-    font-size:16px;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  background-color: #d6e1fc;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.contact-us{
-    background-color:#fff;
-    width: 75%;
-    padding:20px;
-    border-radius: 10px;
+.contact-us {
+  background-color: #fff;
+  width: 75%;
+  padding: 20px;
+  border-radius: 10px;
 }
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
-input[type="text"], input[type="email"], textarea, select {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: solid 1px #a2a2a2;
-    border-radius: 5px;
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: solid 1px #a2a2a2;
+  border-radius: 5px;
 }
 button {
-    padding: 10px 20px;
-    font-size: 13px;
-    cursor: pointer;
-    background-color: #4059AD;
-    color:#fff;
-    border:none;
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #4059ad;
+  color: #fff;
+  border: none;
 }
 
-.clipping-text{
-    max-width: 300px;
-    height: 200px;
-    overflow: hidden; /* This causes clipping when text is resized */
-    border: 1px solid #000;
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative; /* Make the container fixed in size */
+.clipping-text {
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden; /* This causes clipping when text is resized */
+  border: 1px solid #000;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative; /* Make the container fixed in size */
 }
 
-.main-container{
-    font-size: 16px; /* Base font size */
-    line-height: 1.5;
-   
-    margin: 0 auto;
-    padding: 0px;
-}
+.main-container {
+  font-size: 16px; /* Base font size */
+  line-height: 1.5;
 
+  margin: 0 auto;
+  padding: 0px;
+}
 
 .iframe-container {
-    width: 80%;
-    height: 100px;
-    border: 1px solid #000;
-    overflow: hidden; /* This causes clipping when text is resized */
+  width: 80%;
+  height: 100px;
+  border: 1px solid #000;
+  overflow: hidden; /* This causes clipping when text is resized */
 }
 iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
+.content-truncated-text{
+        font-size: 1.125em;
+        white-space: nowrap; /* Prevents text from wrapping to the next line */
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
+
+
 .obscured-text {
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    
-    border: 1px solid #000;
-    padding: 5px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.resizable-text {
+  font-size: 16px;
+  cursor: pointer;
+  color: red;
+}
+.resizable-text.clicked {
+  font-size: 24px;
+}
+input[type="text"],
+textarea {
+  font-size: 16px;
 }

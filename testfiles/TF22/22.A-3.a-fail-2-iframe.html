@@ -4,24 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22A-3.a-fail-2 Iframe Content</title>
-    <style>
-        body {
-            font-size: 16px; /* Base font size */
-            padding: 10px;
-            box-sizing: border-box;
-            margin: 0;
-        }
-        .content {
-            font-size: 1.125em;
-            white-space: nowrap; /* Prevents text from wrapping to the next line */
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    </style>
+    <link rel="stylesheet" href="TF22.css" type="text/css">
 </head>
 <body>
-    <div class="content">
-        This text will be truncated if you resize the container 
+    <div class="content-truncated-text">
+        This text will be truncated if you resize the container / window.
         <br/>
         If you resize your broswer window to a smaller size you'll see '...' for the overflow
     </div>
