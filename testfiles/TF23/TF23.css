@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #444;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.hero-section {
+  background-color: #b5caff;
+  height: 200px;
+  padding: 70px 100px;
+}
+.hero-section h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section-about {
+  background-color: #d7b7d6;
+  height: 200px;
+  padding: 70px 100px;
+}
+.hero-section-about .companies-button {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 7px 16px;
+  color: #ffffff;
+  background: #008060;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+}
+.hero-section-about .companies-button :hover {
+  background: #006e52;
+}
+
+.hero-section-companies {
+  background-color: #bff3e5;
+  height: 200px;
+  padding: 70px 100px;
+}
+
+.hero-section-site-map {
+  background-color: #bff3e5;
+  height: 250px;
+  padding: 70px 100px;
+  color: #383838;
+}
+.hero-section-site-map ul {
+  color: #383838;
+}
+.hero-section-site-map ul li a {
+  color: #383838;
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.table-of-contents {
+  border: solid #444;
+}
+
+.footer {
+  background-color: #333;
+  padding: 14px 20px;
+  color: #fff;
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+}/*# sourceMappingURL=TF23.css.map */

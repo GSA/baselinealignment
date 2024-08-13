@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.A-3.b-fail-4</title>
+    <link rel="stylesheet" href="TF22.css" type="text/css">
+
+</head>
+<body>
+    <div class="test-22.A-3.b-fail-4">
+        <p>
+            Click the field label 'Text Input' to resize the field label.  You will see that the input box and text will not resize.
+        </p>
+        <form>
+            <label for="text-input" class="resizable-text" onclick="resizeText(this)">Text Input:</label>
+            <input type="text" id="text-input" name="text-input">
+         
+        </form>
+    </div>
+   
+
+    <script>
+        function resizeText(element) {
+            element.classList.toggle('clicked');
+        }
+    </script>
+</body>
+</html>

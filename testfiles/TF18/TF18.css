@@ -63,4 +63,24 @@
   order: 3;
   background-color: #ad8ac2;
   padding: 20px;
+}
+
+.art-gallery ul#nav {
+  float: left;
+  width: 9em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em;
+  color: #fff;
+  background-color: #063;
+}
+.art-gallery ul#nav a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  background-color: #063;
+}
+.art-gallery div#description {
+  margin-left: 11em;
 }/*# sourceMappingURL=TF18.css.map */
