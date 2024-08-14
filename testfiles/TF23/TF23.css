@@ -76,6 +76,20 @@ body {
   line-height: 36px;
 }
 
+.hero-section-contact {
+  background-color: #f3bfbf;
+  height: 250px;
+  padding: 70px 100px;
+  color: #383838;
+}
+
+.hero-section-home {
+  background-color: #f3bfbf;
+  height: 250px;
+  padding: 70px 100px;
+  color: #383838;
+}
+
 .table-of-contents {
   border: solid #444;
 }
@@ -84,7 +98,6 @@ body {
   background-color: #333;
   padding: 14px 20px;
   color: #fff;
-  text-align: center;
 }
 .footer a {
   color: #fff;
