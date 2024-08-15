@@ -39,3 +39,7 @@ iframe#codeframe {
 .usa-table tbody td {
     vertical-align: top;
 }
+
+#codelink {
+    overflow: hidden;
+}
