@@ -1,3 +1,9 @@
+@media (min-width: 64em) {
+    .usa-banner__inner, .usa-navbar, .usa-nav__inner, .usa-footer__primary-section .grid-container,
+    .usa-header--extended .usa-navbar {
+        padding-left: 2rem !important;
+    }
+}
 .baseline-menu .usa-nav__primary > .usa-nav__primary-item > a {
     font-weight: normal;
 }
@@ -13,6 +19,10 @@
 
 .layout-testcase .usa-in-page-nav-container main {
     max-width: 43rem;
+}
+
+code {
+    color: #d83933 !important;
 }
 
 #ta_code {
@@ -42,4 +52,9 @@ iframe#codeframe {
 
 #codelink {
     overflow: hidden;
+}
+
+#TCsteps_table table caption {
+    visibility: hidden;
+    height: 0;
 }

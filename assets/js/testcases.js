@@ -43,6 +43,30 @@ $(document).ready(function() {
         return $("<th />", attrs);
     });
 
-    $("#TCsteps_table table tbody tr th").attr("scope", "row");
+    $("#TCsteps_table table tbody tr th").attr("scope", "row");//.attr('data-label', 'Test Instruction');
     $("#TCsteps_table table thead tr th").attr("scope", "col");
+    // $("#TCsteps_table table tbody tr td").first().attr('data-label', 'Instruction Detail');
+    // $("#TCsteps_table table tbody tr td").last().attr('data-label', 'Expected Test Case Result');
+
+    // Add labels
+    const headerLabels = $("#TCsteps_table table thead th").map(function() {
+        return $(this).text();
+    }).get();
+
+    console.log(headerLabels);
+
+    // Loop through each row in the tbody
+    $("#TCsteps_table table tbody tr").each(function() {
+        // Get all th and td tags in the row
+        $(this).children("th, td").each(function(index) {
+            // Assign the corresponding data-label
+            if (headerLabels[index]) {
+                $(this).attr("data-label", headerLabels[index]);
+            }
+        });
+    });
+
+    // Add captions
+    $('#TCsteps_table table').first().prepend('<caption>Test Case Instruction</caption>');
+
 });

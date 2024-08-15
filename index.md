@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ICT Testing Baseline Alignment Framework Home
+title: ICT Testing Baseline Alignment Framework
 ---
 
 ## Purpose and objectives

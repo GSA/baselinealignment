@@ -10,6 +10,7 @@
             data-page-url="{{ page.url }}"
             data-nav-item-url="{{ nav_item.url }}"
             class="usa-nav__link{% if page.url == nav_item.url %} usa-current{% endif %}"
+            aria-label="{{ nav_item.name }} menu link"
             {% if nav_item.ext== true %}target="_blank" {% endif %}>{{
           nav_item.name }}</a></li>
 
