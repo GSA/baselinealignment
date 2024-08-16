@@ -94,3 +94,18 @@
 }
 
 
+.app-tabs {
+    display: flex;
+    cursor: pointer;
+   
+}
+.app-tabs div {
+    padding: 10px;
+    border: 1px solid #000;
+    margin-right: 5px;
+}
+.app-main-content {
+    border: 1px solid #000;
+    height: 300px;
+    padding: 20px;
+}
