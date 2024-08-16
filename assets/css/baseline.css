@@ -21,6 +21,18 @@
     max-width: 43rem;
 }
 
+@media (max-width: 820px) {
+    .layout-testcase .usa-in-page-nav-container main {
+        max-width: 31rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout-testcase .usa-in-page-nav-container main {
+        max-width: 28rem;
+    }
+}
+
 code {
     color: #d83933 !important;
 }
