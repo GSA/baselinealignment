@@ -69,4 +69,6 @@ $(document).ready(function() {
     // Add captions
     $('#TCsteps_table table').first().prepend('<caption>Test Case Instruction</caption>');
 
+    // Set active menu
+    $('a[data-nav-item-url="/testcases.html"]').addClass('usa-current');
 });
