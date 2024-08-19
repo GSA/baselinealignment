@@ -41,13 +41,12 @@ button {
 }
 
 .clipping-text {
-  max-width: 300px;
-  height: 200px;
+  max-width: 20%;
+  max-height: 200px;
   overflow: hidden; /* This causes clipping when text is resized */
   border: 1px solid #000;
   padding: 10px;
   box-sizing: border-box;
-  position: relative; /* Make the container fixed in size */
 }
 
 .main-container {
