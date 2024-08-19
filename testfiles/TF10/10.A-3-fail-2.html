@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>10.B-1-pass-1</title>
+<title>10.A-3-fail-2.html</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
 <!-- FontAwesome CSS -->
@@ -21,8 +21,8 @@
 <body>
     <h1>Date Input Form</h1>
     <form onsubmit="return validateDate()">
-        <label for="date">Enter your date of birth (format: DD/MM/YYYY):</label>
-        <input type="text" id="date" aria-describedby="Date Input - DD/MM/YYYY" name="date" required>
+        <label for="date">Enter your date of birth:</label>
+        <input type="text" id="date" aria-describedby="Form Field 1" name="formField1" required>
         <button type="submit">Submit</button>
     </form>
  
@@ -34,7 +34,7 @@
             const regex = /^([0-2][0-9]|(3)[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
             
             if (!regex.test(dateValue)) {
-                alert("Please enter the date in DD/MM/YYYY format.");
+                alert("Please enter the date in correct format.");
                 return false;
             }
             return true;
