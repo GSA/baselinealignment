@@ -9,13 +9,19 @@
 </head>
 
 <body>
-    <h1>Test Case: Invalid Role for User Control</h1>
+  
+    <!-- Button with valid role for interaction -->
+    <button role="button" onclick="updateContentInvalid()">Click to Update Content</button>
 
-    <!-- Button has role of checkbox -->
-    <button role="checkbox" onclick="alert('This is a button, not a checkbox!')">Click Me</button>
-    <br/>
-    <!--Link has role of button -->
-    <a href="https://gsa.gov" role="button">Go to GSA.gov</a>
+    <!-- Content area with a defined role -->
+    <div id="content" role="region" aria-live="polite">
+        This is the original content.
+    </div>
+
+    <!-- Notification to show once button is clicked -->
+    <div id="notification" class="hidden" role="status" aria-live="assertive">
+        Notification: Content has been updated. Role also changed.
+    </div>
 </body>
 
 </html>

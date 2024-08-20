@@ -159,3 +159,16 @@ function updateContent() {
     content.setAttribute("role", "alert");
     notification.setAttribute("role", "status");
 }
+
+function updateContentInvalid() {
+    const content = document.getElementById("content");
+    const notification = document.getElementById("notification");
+    
+    // Change content and notify user
+    content.textContent = "The content has been updated!";
+    notification.classList.remove("hidden");
+    
+    // Change the role of content for accuracy
+    content.setAttribute("role", "checkbox");
+    notification.setAttribute("role", "checkbox");
+}
