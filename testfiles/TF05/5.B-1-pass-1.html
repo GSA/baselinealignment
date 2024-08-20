@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>5.B-1-pass-1</title>
+    <link rel="stylesheet" href="TF05.css" type="text/css">
+    <script src="TF05.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+   
+        <h1>Change Content Example</h1>
+
+        <!-- Button with valid role for interaction -->
+        <button role="button" onclick="updateContent()">Click to Update Content</button>
+
+        <!-- Content area with a defined role -->
+        <div id="content" role="region" aria-live="polite">
+            This is the original content.
+        </div>
+
+        <!-- Notification to show once button is clicked -->
+        <div id="notification" class="hidden" role="status" aria-live="assertive">
+            Notification: Content has been updated. Role also changed.
+        </div>
+
+
+</body>
+
+</html>

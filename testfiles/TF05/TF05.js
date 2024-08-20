@@ -146,3 +146,16 @@ function updateWrongRating()
     ratingOutput.children[0].innerHTML = `Current rating: ${ratingSlider.value}`;
     ratingOutput.ariaLabel = `Current rating: ${(11 - ratingSlider.value)}`;
 }
+
+function updateContent() {
+    const content = document.getElementById("content");
+    const notification = document.getElementById("notification");
+    
+    // Change content and notify user
+    content.textContent = "The content has been updated!";
+    notification.classList.remove("hidden");
+    
+    // Change the role of content for accuracy
+    content.setAttribute("role", "alert");
+    notification.setAttribute("role", "status");
+}

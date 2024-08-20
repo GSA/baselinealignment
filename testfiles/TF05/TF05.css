@@ -126,4 +126,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=TF05.css.map */
