@@ -1,9 +1,8 @@
 ---
 layout: page
-title: ICT Testing Baseline Alignment Framework Home
+title: ICT Testing Baseline Alignment Framework
 ---
 
-# ICT Baseline Alignment Framework
 ## Purpose and objectives
 
 Members of the U.S. federal accessibility community must agree on what constitutes conforming to the Section 508 standards, in concrete terms. This is important to:
