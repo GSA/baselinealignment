@@ -33,10 +33,65 @@
 }
 
 #alert-notification {
-  color: #9E0000;
+  color: #9e0000;
   font-size: 20px;
 }
 
 .required {
+  font-weight: bold;
+}
+
+.important {
+  color: #8c0b0b;
+}
+
+.warning {
+  color: #5b5406;
+}
+
+.note-box {
+  width: 600px;
+  background-color: #ffffff;
+  border: solid #d7d7d7;
+  padding: 10px;
+}
+
+.important {
+  width: 500px;
+  color: #711313;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 10px 0;
+}
+
+.warning {
+  width: 500px;
+  color: #9a590e;
+  font-style: italic;
+  border: 2px solid #9a590e;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.info {
+  width: 500px;
+  color: #15157b;
+  font-size: larger;
+  border: 2px solid #15157b;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.warning-title {
+  font-weight: bold;
+}
+
+.success {
+  color: #228b22;
+  font-weight: bold;
+}
+
+.error {
+  color: #b22222;
   font-weight: bold;
 }/*# sourceMappingURL=TF07.css.map */
