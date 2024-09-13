@@ -92,4 +92,39 @@
 
 .error {
   color: #b22222;
+}
+
+.submit-button {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.large-button {
+  font-size: 24px;
+}
+
+.medium-button {
+  font-size: 16px;
+}
+
+.small-button {
+  font-size: 12px;
+}
+
+.fail-4-form {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.arrow-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=TF07.css.map */
