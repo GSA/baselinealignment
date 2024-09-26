@@ -127,4 +127,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.large-text {
+  font-size: 24px;
 }/*# sourceMappingURL=TF07.css.map */
