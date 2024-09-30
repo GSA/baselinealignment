@@ -131,3 +131,56 @@
 .large-text{
     font-size: 24px;
 }
+
+.button-container {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.rectangle-button {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.circle-button {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+// 7B-1-fail-4
+.article-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.articlecontent {
+    padding: 10px;
+}
+.illustration-section {
+    display: flex;
+   
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.illustration img {
+    height: 500px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 300px;
+    color: #333;
+}
+.additional-links {
+    width: 15%;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
