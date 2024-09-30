@@ -9,21 +9,15 @@
 </head>
 <body>
  
-    <h1>Form Submission</h1>
+    <h1>To go to next page, select the rectangle. To go back to previous page, select the circle.</h1>
 
-    <!-- Instructions relying on shape -->
-    <p>Click the button with the arrow to continue.</p>
+    <div class="button-container">
+        <!-- Back Button (Circle) -->
+        <button class="circle-button" aria-label="left arrow">Previous</button>
 
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <br><br>
-        <!-- Green, round button without descriptive information -->
-       
-    <button class="arrow-button">
-        <span>&#8594;</span> <!-- Right arrow symbol -->
-    </button>
-    </form>
+        <!-- Next Button (Rectangle) -->
+        <button class="rectangle-button" aria-label="right arrow">Next</button>
+    </div>
 
 </body>
 </html>

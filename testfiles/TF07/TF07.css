@@ -148,8 +148,8 @@
 .rectangle-button {
   width: 100px;
   height: 50px;
-  background-color: black;
-  color: white;
+  background-color: #333333;
+  color: #ffffff;
   border: none;
   font-size: 16px;
   cursor: pointer;
@@ -158,7 +158,8 @@
 .circle-button {
   width: 70px;
   height: 70px;
-  background-color: black;
+  background-color: #333333;
+  color: #ffffff;
   border-radius: 50%;
   border: none;
   cursor: pointer;

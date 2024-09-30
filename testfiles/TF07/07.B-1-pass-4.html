@@ -5,19 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>07.B-1-fail-2</title>
     <link rel="stylesheet" href="TF07.css" type="text/css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .content {
+            width: 75%;
+            padding: 10px;
+        }
 
+    </style>
 </head>
 <body>
-    <h1>Form Submission</h1>
-    <p>Click on the submit button the bottom right handside of the form to continue</p>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <br/>
-    <br/>
-    <form class="fail-4-form">
-        <button type="button">Cancel</button>
-        <button type="submit">Submit</button>
-    </form>
+    <h1>Today's Headline: Historic Rocket Launches</h1>
 
+    <div class="container">
+        <!-- Sidebar for additional information -->
+        <div class="sidebar">
+            <h2>Additional Links</h2>
+            <ul>
+                <li><a href="#">Crew Bios</a></li>
+                <li><a href="#">Rocket Details</a></li>
+                <li><a href="#">Schedule</a></li>
+            </ul>
+        </div>
+
+        <!-- Main content with illustration -->
+        <div class="content">
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Feugiat purus placerat sapien aenean magnis faucibus. Aliquet erat magna pulvinar, euismod nascetur turpis vel curabitur enim. Leo primis dignissim malesuada enim fames scelerisque </p>
+            <p>Blandit auctor lacus auctor torquent posuere gravida lacinia. Posuere habitant venenatis ligula tempor accumsan nisi ante. Primis senectus elementum accumsan congue eget odio placerat sollicitudin.Rutrum ut sed rutrum condimentum curabitur posuere integer taciti urna. Mattis id facilisi litora elementum tristique. Tortor sociosqu pulvinar sociosqu taciti cursus nibh et lectus eros. Aliquam tempor accumsan dolor varius luctus erat cura</p>
+
+            <p>Please see the links to the right of the illustration for additional information.</p>
+            <div class="illustration">
+                <img src="../assets/images/Rocket.png">
+            </div>
+
+            <p>Vehicula potenti mi dis vehicula in rhoncus eu curabitur quam. Posuere erat imperdiet arcu penatibus fusce fringilla. Maecenas eget cursus condimentum quis massa, duis donec. Mattis lacinia sagittis integer tempus finibus eros justo nisi mollis. Eleifend eleifend duis tempus aliquet, ullamcorper fusce augue feugiat auctor. Cubilia consectetur egestas praesent efficitur eros dictum montes placerat. Commodo molestie nullam suscipit sem tortor ex quam libero.</p>
+        </div>
+    </div>
 </body>
 </html>
