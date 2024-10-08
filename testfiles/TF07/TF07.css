@@ -193,4 +193,13 @@
   width: 15%;
   background-color: #f0f0f0;
   padding: 10px;
+}
+
+.restaurant-container {
+  color: #000000;
+  width: 50%;
+}
+
+.restaurant {
+  color: #3333FF;
 }/*# sourceMappingURL=TF07.css.map */
