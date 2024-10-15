@@ -37,7 +37,7 @@
   font-size: 20px;
 }
 .required {
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 //7.A-1.a-pass-1
@@ -194,4 +194,23 @@
 
 .restaurant{
   color: #3333FF;
+}
+
+.legend {
+  margin-bottom: 20px;
+}
+
+.info-only {
+  color: #0c0c58;
+  font-weight: bold;
+}
+
+.high-priority {
+  color: #800d0d;
+  text-decoration: underline;
+}
+
+.secondary {
+  color: #603f11;
+  font-style: italic;
 }

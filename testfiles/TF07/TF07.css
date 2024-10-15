@@ -38,10 +38,6 @@
 }
 
 .required {
-  font-weight: bold;
-}
-
-.required {
   color: #8c0b0b;
 }
 
@@ -202,4 +198,23 @@
 
 .restaurant {
   color: #3333FF;
+}
+
+.legend {
+  margin-bottom: 20px;
+}
+
+.info-only {
+  color: #0c0c58;
+  font-weight: bold;
+}
+
+.high-priority {
+  color: #800d0d;
+  text-decoration: underline;
+}
+
+.secondary {
+  color: #603f11;
+  font-style: italic;
 }/*# sourceMappingURL=TF07.css.map */

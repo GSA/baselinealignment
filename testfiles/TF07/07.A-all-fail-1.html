@@ -10,9 +10,17 @@
 <body>
     <h1>Color-Only Meaning Test Case</h1>
 
-    <p>This example uses only color to convey meaning, without any other indicators.</p>
-
-    <p class="success">Status: All systems are operational</p>
-    <p class="error">Error: Connection failed</p>
+    <div class="note-box">
+        <p>Note: fields in red text are required</p>
+        <form>
+            <label for="first-name" class="required">First name:</label>
+            <input type="text" id="fname" name="fname" value="John"><br><br>
+            <label for="middle-name">Middle name:</label>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <label for="last-name" class="required">Last name:</label>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+    </div>
 </body>
 </html>
