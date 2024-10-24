@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<title>12.A-3-fail-6</title>
+<style>
+  [role="cell"], .columnheader, [role="columnheader"], td {
+      display: inline-block;
+      width: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .columnheader, [role="columnheader"] {
+      background-color: skyblue;
+    }
+
+    [role="cell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
+      outline-color: invert;
+    }  
+</style>
+</head>
+<body>
+<div id="tc_code">
+  <!--Taken from W3C example -->
+  <div role="table">
+      <div role="row">
+        <span role="row" tabindex="0">First Name</span>
+        <span role="row" tabindex="0">Last Name</span>
+        <span role="row" tabindex="0">Company</span>
+        <span class="row" tabindex="0">Address</span>
+      </div>
+      <div role="columnheader">
+        <td>Fred</td>
+        <td>Jackson</td>
+        <td>Acme, Inc.</td>
+        <td>123 Broad St.</td>
+      </div>
+      <div role="columnheader">
+        <td>Sara</td>
+        <td>James</td>
+        <td>Competitor, Inc.</td>
+        <td>124 Broad St.</td>
+      </div>
+    </div>
+  <br>
+
+</div>
+
+</body>
+</html>

@@ -52,4 +52,8 @@ table .no-outerline {
 #ic-dna-3 tr td {
   border: none;
   padding: 10px;
+}
+
+.col-header {
+  background-color: skyblue;
 }/*# sourceMappingURL=TF12.css.map */
