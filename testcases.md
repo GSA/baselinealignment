@@ -47,6 +47,7 @@ Test Case documents are organized by Baseline Test (each serving as a Test Scena
   * [Contrast - Insufficient contrast ratio for 18 point font (TC08.1-3-fail-2)](testcases/TC08.1-3-fail-2.html)
   * [Contrast - 3:1 Contrast Ratio for 18 point font (TC08.1-3-pass-1)](testcases/TC08.1-3-pass-1.html)
   * [Contrast - 3:1 contrast ratio for 14 point, bold font (TC08.1-3-pass-2)](testcases/TC08.1-3-pass-2.html)
+  * [Contrast - Insufficient contrast ratio in logotype, logo, or brand name image of text.](testcases/TC08.1-ic-dna-1.html)
 * `10.` Forms
   * [Form Names: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
   * [Form Names: accessible name from placeholder attribute (TC10.1-all-pass-1)](testcases/TC10.1-all-pass-1.html)
