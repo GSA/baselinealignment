@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuttle Launch Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .animation {
+            width: 200px;
+            height: 200px;
+            margin: 20px ;
+            background: url('../assets/images/Rocket.png') no-repeat center;
+            background-size: cover;
+        }
+        .launch {
+            background: url('../assets/images/rocketLaunch.png') no-repeat center;
+            background-size: cover;
+        }
+        #countdown{
+            font-size: 21px;
+        }
+    </style>
+    <script>
+        let countdown = 5;
+
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            const animationElement = document.getElementById("animation");
+
+            const interval = setInterval(() => {
+                if (countdown > 0) {
+                    countdownElement.innerText = countdown--;
+                } else {
+                    clearInterval(interval);
+                    countdownElement.innerText = "Launch!";
+                    animationElement.classList.add("launch");
+                }
+            }, 1000);
+        }
+
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <h1>Live Stream of Shuttle Launch</h1>
+    <p>The shuttle is preparing for launch. Stay tuned!</p>
+    <div id="animation" class="animation" aria-live="polite" aria-atomic="true">
+        <span id="countdown">5</span>
+    </div>
+
+</body>
+</html>
