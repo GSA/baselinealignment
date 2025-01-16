@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -6,25 +7,120 @@
     <link rel="stylesheet" href="TF05.css" type="text/css">
     <script src="TF05.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./5.B-1-pass-1.js"></script>
+    <style>
+        ul[role="tree"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 120%;
+}
+
+ul[role="tree"] li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+[role="treeitem"][aria-expanded="false"] + [role="group"] {
+  display: none;
+}
+
+[role="treeitem"][aria-expanded="true"] + [role="group"] {
+  display: block;
+}
+
+[role="treeitem"].doc::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f15c";
+  display: inline-block;
+  padding-right: 2px;
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+[role="treeitem"][aria-expanded="false"] > ul {
+  display: none;
+}
+
+[role="treeitem"][aria-expanded="true"] > ul {
+  display: block;
+}
+
+[role="treeitem"][aria-expanded="false"] > span::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f07b";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+[role="treeitem"][aria-expanded="true"] > span::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f07c";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+[role="treeitem"],
+[role="treeitem"] span {
+  width: 9em;
+  margin: 0;
+  padding: 0.125em;
+  display: block;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="treeitem"]:focus {
+  outline: 0;
+}
+
+[role="treeitem"][aria-selected="true"] {
+  padding-left: 4px;
+  border-left: 5px solid #005a9c;
+}
+
+[role="treeitem"].focus,
+[role="treeitem"] span.focus {
+  border-color: black;
+  background-color: #eee;
+}
+
+[role="treeitem"].hover,
+[role="treeitem"] span:hover {
+  padding-left: 4px;
+  background-color: #ddd;
+  border-left: 5px solid #333;
+}
+
+    </style>
 </head>
 
 <body>
-   
-        <h1>Change Content Example</h1>
-
-        <!-- Button with valid role for interaction -->
-        <button role="button" onclick="updateContent()">Click to Update Content</button>
-
-        <!-- Content area with a defined role -->
-        <div id="content" role="region" aria-live="polite">
-            This is the original content.
-        </div>
-
-        <!-- Notification to show once button is clicked -->
-        <div id="notification" class="hidden" role="status" aria-live="assertive">
-            Notification: Content has been updated. Role also changed.
-        </div>
-
+    <h3 id="tree_label">Reports</h3>
+    <ul role="tree" aria-labelledby="tree_label">
+ 
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> Reports </span>
+        <ul role="group">
+          <li role="treeitem" aria-expanded="false" aria-selected="false">
+            <span> report-1 </span>
+            <ul role="group">
+              <li role="treeitem" aria-selected="false" class="doc">report-1A.docx</li>
+              <li role="treeitem" aria-selected="false" class="doc">report-1B.docx</li>
+              <li role="treeitem" aria-selected="false" class="doc">report-1C.docx</li>
+            </ul>
+          </li>
+     
+        </ul>
+      </li>
+ 
+    </ul>
+    
 
 </body>
 
