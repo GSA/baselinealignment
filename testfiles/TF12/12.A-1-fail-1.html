@@ -15,6 +15,14 @@
     .columnheader, [role="columnheader"] {
       background-color: skyblue;
     }
+    .cell{
+      display: inline-block;
+      width: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
 
     [role="cell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
       outline-color: invert;
@@ -28,24 +36,24 @@
   <div>
     <div role="rowgroup">
       <div role="row">
-        <span role="columnheader" tabindex="0">First Name</span>
-        <span role="columnheader" tabindex="0">Last Name</span>
-        <span role="columnheader" tabindex="0">Company</span>
-        <span class="columnheader" tabindex="0">Address</span>
+        <td role="columnheader" tabindex="0"><span class="columnheader">First Name</span></td>
+        <td role="columnheader" tabindex="0"><span class="columnheader">Last Name</span></td>
+        <td role="columnheader" tabindex="0"><span class="columnheader">Company</span></td>
+        <td class="columnheader" tabindex="0"><span class="columnheader">Address</span></td>
       </div>
     </div>
     <div role="rowgroup">
       <div role="row">
-        <span role="cell" tabindex="0">Fred</span>
-        <span role="cell" tabindex="0">Jackson</span>
-        <span role="cell" tabindex="0">Acme, Inc.</span>
-        <span role="cell" tabindex="0">123 Broad St.</span>
+        <td role="cell" tabindex="0"><span class="cell">Fred</span></td>
+        <td role="cell" tabindex="0"><span class="cell">Jackson</span></td>
+        <td role="cell" tabindex="0"><span class="cell">Acme, Inc.</span></td>
+        <td role="cell" tabindex="0"><span class="cell">123 Broad St.</span></td>
       </div>
       <div role="row">
-        <span role="cell" tabindex="0">Sara</span>
-        <span role="cell" tabindex="0">James</span>
-        <span role="cell" tabindex="0">Competitor,Inc.</span>
-        <span role="cell" tabindex="0">124 Broad St.</span>
+        <td role="cell" tabindex="0"><span class="cell">Sara</span></td>
+        <td role="cell" tabindex="0"><span class="cell">James</span></td>
+        <td role="cell" tabindex="0"><span class="cell">Competitor,Inc.</span></td>
+        <td role="cell" tabindex="0"><span class="cell">124 Broad St.</span></td>
       </div>
     </div>
   </div>
