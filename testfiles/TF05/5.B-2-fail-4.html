@@ -1,26 +1,72 @@
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>5.B-2-fail-4</title>
-    <link rel="stylesheet" href="TF05.css" type="text/css">
-    <script src="TF05.js"></script>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            cursor: not-allowed;
+            background-color: gray;
+            color: white;
+            border: none;
+        }
+        button.enabled {
+            cursor: pointer;
+            background-color: blue;
+        }
+        .star{
+            color:red;
+        }
+    </style>
+    <script>
+        function checkFields() {
+            let field1 = document.getElementById("field1").value.trim();
+            let field2 = document.getElementById("field2").value.trim();
+            let field3 = document.getElementById("field3").value.trim();
+            let button = document.getElementById("submitBtn");
+
+            if (field1 && field2 && field3) {
+                button.disabled = false;
+                button.classList.add("enabled");
+            } else {
+                button.disabled = true;
+                button.classList.remove("enabled");
+            }
+        }
+    </script>
 </head>
-
 <body>
-  
-    <!-- Button with valid role for interaction -->
-    <button role="button" onclick="updateContentInvalid()">Click to Update Content</button>
 
-    <!-- Content area with a defined role -->
-    <div id="content" role="region" aria-live="polite">
-        This is the original content.
-    </div>
+    <h2>Form</h2>
+    <p>Fields with a <span class="star">*</span> are required</p>
+    <form>
+        <label for="field1"><span class="star">*</span> First Name:</label>
+        <input type="text" id="field1" oninput="checkFields()">
+        
+        <label for="field2"><span class="star">*</span> Last Name:</label>
+        <input type="text" id="field2" oninput="checkFields()">
+        
+        <label for="field3"><span class="star">*</span> Email:</label>
+        <input type="text" id="field3" oninput="checkFields()">
+        
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
 
-    <!-- Notification to show once button is clicked -->
-    <div id="notification" class="hidden" role="status" aria-live="assertive">
-        Notification: Content has been updated. Role also changed.
-    </div>
 </body>
-
 </html>
