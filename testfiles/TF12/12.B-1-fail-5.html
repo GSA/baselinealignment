@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-<title>12.A-3-fail-6</title>
+<title>12.B-1-fail-5</title>
 <style>
-  [role="cell"], .columnheader, [role="columnheader"], td {
+  /* [role="cell"], .rowheader, [role="rowheader"], td {
       display: inline-block;
       width: 200px;
       border: 1px solid rgba(0, 0, 0, 0.8);
@@ -18,29 +18,44 @@
 
     [role="cell"]:focus, .columnheader:focus, [role="columnheader"]:focus {
       outline-color: invert;
-    }  
+    }   */
+    body{
+      font-size:16px;
+    }
+    [role="row"]{
+      color:#333;
+    }
+    .top-header{
+      border-bottom: solid #53b3ea;
+      width: 25%;
+      
+    }
+    .header{
+      color:#000;
+      width: 300px;
+    }
+
 </style>
 </head>
 <body>
 <div id="tc_code">
-  <!--Taken from W3C example -->
-  <div role="table">
-      <div role="row">
-        <span role="row" tabindex="0">First Name</span>
-        <span role="row" tabindex="0">Last Name</span>
-        <span role="row" tabindex="0">Company</span>
-        <span class="row" tabindex="0">Address</span>
+  <div role="grid">
+      <div role="row" class="top-header">
+        <span class="header"><th tabindex="0" role="rowheader">First Name, </th></span>
+        <th tabindex="0" role="rowheader"><span class="header">Last Name, </span></th>
+        <th tabindex="0" role="rowheader"><span class="header">Company, </span></th>
+        <th tabindex="0" role="rowheader"><span class="header">Address</span></th>
       </div>
-      <div role="columnheader">
-        <td>Fred</td>
-        <td>Jackson</td>
-        <td>Acme, Inc.</td>
+      <div role="row" class="test">
+        <td>Fred, </td>
+        <td>Jackson, </td>
+        <td>Acme, Inc., </td>
         <td>123 Broad St.</td>
       </div>
-      <div role="columnheader">
-        <td>Sara</td>
-        <td>James</td>
-        <td>Competitor, Inc.</td>
+      <div role="row">
+        <td>Sara, </td>
+        <td>James, </td>
+        <td>Competitor, Inc., </td>
         <td>124 Broad St.</td>
       </div>
     </div>
