@@ -1,44 +1,64 @@
 <!DOCTYPE html>
+<html lang="en-us">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>22.A-all-pass-4</title>
-        <link rel="stylesheet" href="TF22.css" type="text/css">
-        <script src="TF22.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-      <div class="contact-us">
-        <h1>Contact Us</h1>
-        <p>This page can be resized using the browser's on page zoom tool </p>
-        <form>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="reason">Reason for Contact:</label>
-                <select id="reason" name="reason" required>
-                    <option value="inquiry">General</option>
-                    <option value="support">Techinical</option>
-                    <option value="feedback">Other</option>
-                </select>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <title>22.A-all-pass-4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
 
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-        
-            <button type="submit">Submit</button>
-        </form>
-      </div>
-    </body> 
+        .text-controls {
+            margin-bottom: 20px;
+            width: 200px;
+            padding-left: 20px;
+            border: solid #333 .5px;
+        }
+
+        .text-button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 24px;
+
+        }
+
+        .article {
+            max-width: 600px;
+
+            line-height: 1.6;
+        }
+    </style>
+    <script>
+        function changeTextSize(sizeChange) {
+            const body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentSize + sizeChange) + "px";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="text-controls">
+        <h3>Text Size Controls</h3>
+        <button class="text-button" onclick="changeTextSize(2)" aria-label="Increase text size">
+            <i class="fas fa-arrow-up"></i> <span style="font-size: 28px;">T</span>
+        </button>
+        <button class="text-button" onclick="changeTextSize(-2)" aria-label="Decrease text size">
+            <i class="fas fa-arrow-down"></i> <span style="font-size: 16px;">T</span>
+        </button>
+    </div>
+
+    <div class="article">
+        <h1>Article Headline</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget sapien ut velit bibendum interdum.
+            Nullam non urna sit amet orci tincidunt feugiat.</p>
+    </div>
+
+</body>
+
 </html>
