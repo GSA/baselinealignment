@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.B-2-fail-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+         
+            margin: 45px;
+        }
+        #timer {
+            font-size: 24px;
+            margin: 20px 0;
+            display: none;
+        }
+        .question {
+            display: none;
+            margin-bottom: 15px;
+        }
+    </style>
+    <script>
+        function playBeep() {
+            let beep = document.getElementById('beep');
+            beep.play();
+        }
+
+        function startQuiz() {
+            let beep = document.getElementById('beep');
+            let beepCount = 0;
+
+            function playBeepSeries() {
+                if (beepCount < 3) {
+                    beep.play();
+                    beepCount++;
+                    setTimeout(playBeepSeries, 100); // Beep every second
+                } else {
+                    setTimeout(showQuestions, 100); // Show questions after third beep
+                }
+            }
+
+            function showQuestions() {
+                document.getElementById('timer').style.display = 'block';
+                let timeLeft = 10;
+                document.querySelectorAll('.question').forEach(q => q.style.display = 'block');
+
+                let timerInterval = setInterval(() => {
+                    document.getElementById('time').textContent = timeLeft;
+                    timeLeft--;
+                    if (timeLeft < 0) {
+                        clearInterval(timerInterval);
+                    }
+                }, 1000);
+            }
+
+            playBeepSeries();
+        }
+    </script>
+</head>
+<body onload="startQuiz()">
+
+    <h1>State Capital Quiz </h1>
+    <p>At the sound of the beep, begin the quiz.</p>
+    
+   
+    <audio id="beep">
+        <source src="../assets/audio/alert-bell.wav" type="audio/mpeg">
+    </audio>
+
+    <div id="timer">Time left: <span id="time">10</span> seconds</div>
+
+    <form>
+        <div class="question">
+            <label>1. What is the capital of Virginia?</label>
+            <input type="text">
+        </div>
+        <div class="question">
+            <label>2.What is the capital of North Carolina?</label>
+            <input type="text">
+        </div>
+        <div class="question">
+            <label>3. What is the capital of Maryland?</label>
+            <input type="text">
+        </div>
+    </form>
+
+</body>
+</html>
