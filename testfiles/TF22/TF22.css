@@ -98,13 +98,6 @@ textarea {
   font-size: 16px;
 }
 
-.test-22-A-3-b-fail-5 .test-container {
-  border: solid #767676;
-  padding: 10px;
-  width: 30%;
-  height: 200px;
-  overflow: hidden;
-}
 
 .test-22-A-3-b-fail-6 {
   background-color: #fff;
@@ -120,7 +113,7 @@ textarea {
   background-color: #535353;
   overflow: hidden;
 }
-.test-22-A-3-b-fail-6 .navbar a {
+.test-22-A-3-b-fail-6 .navbar span {
   float: left;
   display: block;
   color: white;
