@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22.A-3.b-fail-4</title>
-    <link rel="stylesheet" href="TF22.css" type="text/css">
-
-</head>
-<body>
-    <div class="test-22.A-3.b-fail-4">
-        <p>
-            Click the field label 'Text Input' to resize the field label.  You will see that the input box and text will not resize.
-        </p>
-        <form>
-            <label for="text-input" class="resizable-text" onclick="resizeText(this)">Text Input:</label>
-            <input type="text" id="text-input" name="text-input">
-         
-        </form>
-    </div>
-   
-
-    <script>
-        function resizeText(element) {
-            element.classList.toggle('clicked');
+    <style>
+        h1 {
+            font-size: 2em;
         }
-    </script>
+
+        p,
+        label {
+            font-size: 1em;
+        }
+
+        input {
+            font-size: 12pt;
+        }
+        div{
+            padding-bottom:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contact Form</h1>
+    <p>Please provide us with your details and we will contact you as soon as we can.
+        Note that all of the form fields are required.</p>
+    <div>
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname">
+    </div>
+    <div>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+    </div>
+    <input type="submit" name="Submit" value="Submit" id="Submit">
 </body>
+
 </html>
