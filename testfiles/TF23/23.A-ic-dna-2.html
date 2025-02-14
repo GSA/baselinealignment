@@ -3,26 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>23.A-ic-dna-2</title>
-    <link rel="stylesheet" href="TF23.css"/>
+    <title>Search Engine Simulation</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        #results {
+            display: none;
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+    </style>
+    <script>
+        function performSearch() {
+            let query = document.getElementById("search-input").value.trim();
+            let resultsContainer = document.getElementById("results");
+
+            if (query) {
+                resultsContainer.innerHTML = `
+                    <p>Search Results for: <strong> "${query}<strong>"</p>
+                    <ul>
+                        <li><a href="#">Example result 1 for ${query}</a></li>
+                        <li><a href="#">Example result 2 for ${query}</a></li>
+                        <li><a href="#">Example result 3 for ${query}</a></li>
+                    </ul>
+                `;
+                resultsContainer.style.display = "block";
+            } else {
+                resultsContainer.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
-    <div class="main-container">
-        <div class="navbar">
-            <a href="#">Home</a>
-            <a href="23.A-ic-dna-2-about.html">About</a>
-            <a href="#">Articles</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="hero-section">
-          <h1>Welcome!</h1>
-          <h3>This is the main hero section for test case 23.A-ic-dna-2</h3>  
-          <p>Click 'About' in the top nav to access the next page.</p>
-        </div>
-        <div class="footer">
-            Footer
-        
-        </div>
+
+    <h1>Example Search Engine</h1>
+    
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Enter search term">
+        <button onclick="performSearch()">Search</button>
     </div>
+
+    <div id="results"></div>
+
 </body>
 </html>
