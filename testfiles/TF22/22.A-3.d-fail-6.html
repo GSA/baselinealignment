@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22.A-3.d-fail-6</title>
+    <link rel="stylesheet" href="TF22.css" type="text/css">
+    <style>
+        .test-container {
+            border: solid #767676;
+            padding: 10px;
+            width: 80%;
+            height: auto;
+            overflow: hidden;
+            font-size: 1em;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+            background-color: #333;
+            padding: 10px;
+            color: white;
+        }
+
+        .navbar span {
+            cursor: pointer;
+        }
+
+        /* Hides the navbar when the text size is increased to 200% */
+        @media (min-width: 1px) and (max-width: 800px) { 
+            .test-container {
+                font-size: 1.75em;
+            }
+
+            .navbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-22-A-3-b-fail-6">
+       <h1>Resize Text Fail 6</h1>
+       <p>Resizing the text above to 200% will move the navbar outside of the container and make it disappear.</p>
+    
+        <div class="test-container">
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Est platea curabitur fringilla, curae venenatis penatibus torquent libero. Rutrum pellentesque elit sit justo luctus penatibus. Efficitur phasellus arcu tincidunt, a sollicitudin pretium. Mollis leo congue in; proin dictum tortor. Semper himenaeos senectus semper tincidunt etiam lacus fringilla? Morbi non ac ante tellus scelerisque facilisis hac.</p>
+            <p>Aenean risus erat adipiscing viverra vestibulum ornare pellentesque pulvinar vulputate. Egestas dapibus nullam facilisi dis magna tortor leo; ridiculus est. Blandit accumsan justo platea sit cras libero augue gravida viverra. Lobortis quis fringilla in dis eros ad himenaeos donec. Commodo blandit amet aliquet efficitur nulla? Porta porta amet auctor nullam leo egestas urna praesent. Molestie sociosqu vulputate bibendum; tristique et turpis. Odio dapibus lobortis tempor, non pellentesque dictumst finibus.</p>
+            <p>Sodales litora sapien suscipit, vehicula in per risus vulputate cursus. Orci venenatis quisque, posuere imperdiet laoreet accumsan vulputate. Ultrices hendrerit nunc magnis ipsum cras posuere scelerisque. Mus faucibus litora duis litora tortor venenatis? Libero fermentum eu libero proin dignissim natoque. Duis efficitur dolor quam; libero ligula neque aliquam! Sem iaculis dui gravida gravida fringilla nisl vestibulum sagittis. Bibendum sodales sed blandit iaculis dolor mauris odio facilisi urna. Nec vulputate habitant hac et senectus netus proin.</p>
+ 
+            <div class="navbar">
+                <span>Home</span>
+                <span>About</span>
+                <span>Articles</span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
