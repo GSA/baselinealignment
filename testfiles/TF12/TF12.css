@@ -55,5 +55,10 @@ table .no-outerline {
 }
 
 .col-header {
-  background-color: skyblue;
+  background-color: #87ceeb;
+}
+
+.table-header {
+  background-color: #87ceeb;
+  font-weight: bold;
 }/*# sourceMappingURL=TF12.css.map */
