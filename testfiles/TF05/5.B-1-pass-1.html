@@ -1,127 +1,110 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
     <meta charset="utf-8">
     <title>5.B-1-pass-1</title>
-    <link rel="stylesheet" href="TF05.css" type="text/css">
-    <script src="TF05.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./5.B-1-pass-1.js"></script>
     <style>
         ul[role="tree"] {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 120%;
-}
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 120%;
+        }
 
-ul[role="tree"] li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+        ul[role="tree"] li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-[role="treeitem"][aria-expanded="false"] + [role="group"] {
-  display: none;
-}
+        [role="group"] {
+            display: none;
+        }
 
-[role="treeitem"][aria-expanded="true"] + [role="group"] {
-  display: block;
-}
+        [role="treeitem"][aria-expanded="true"] + [role="group"] {
+            display: block;
+        }
 
-[role="treeitem"].doc::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f15c";
-  display: inline-block;
-  padding-right: 2px;
-  padding-left: 5px;
-  vertical-align: middle;
-}
+        [role="treeitem"] span {
+            width: 9em;
+            margin: 0;
+            padding: 0.125em;
+            display: block;
+            cursor: pointer;
+        }
 
-[role="treeitem"][aria-expanded="false"] > ul {
-  display: none;
-}
-
-[role="treeitem"][aria-expanded="true"] > ul {
-  display: block;
-}
-
-[role="treeitem"][aria-expanded="false"] > span::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f07b";
-  display: inline-block;
-  padding-right: 3px;
-  vertical-align: middle;
-  font-weight: 900;
-}
-
-[role="treeitem"][aria-expanded="true"] > span::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f07c";
-  display: inline-block;
-  padding-right: 3px;
-  vertical-align: middle;
-  font-weight: 900;
-}
-
-[role="treeitem"],
-[role="treeitem"] span {
-  width: 9em;
-  margin: 0;
-  padding: 0.125em;
-  display: block;
-}
-
-/* disable default keyboard focus styling for treeitems
-   Keyboard focus is styled with the following CSS */
-[role="treeitem"]:focus {
-  outline: 0;
-}
-
-[role="treeitem"][aria-selected="true"] {
-  padding-left: 4px;
-  border-left: 5px solid #005a9c;
-}
-
-[role="treeitem"].focus,
-[role="treeitem"] span.focus {
-  border-color: black;
-  background-color: #eee;
-}
-
-[role="treeitem"].hover,
-[role="treeitem"] span:hover {
-  padding-left: 4px;
-  background-color: #ddd;
-  border-left: 5px solid #333;
-}
-
+        [role="treeitem"] span:focus {
+            outline: 2px solid blue;
+            background-color: #ddd;
+        }
     </style>
 </head>
-
 <body>
     <h3 id="tree_label">Reports</h3>
     <ul role="tree" aria-labelledby="tree_label">
- 
-      <li role="treeitem" aria-expanded="false" aria-selected="false">
-        <span> Reports </span>
-        <ul role="group">
-          <li role="treeitem" aria-expanded="false" aria-selected="false">
-            <span> report-1 </span>
+        <!-- Initially only "Reports" is visible -->
+        <li role="treeitem" aria-expanded="false">
+            <span tabindex="0">Reports</span>
             <ul role="group">
-              <li role="treeitem" aria-selected="false" class="doc">report-1A.docx</li>
-              <li role="treeitem" aria-selected="false" class="doc">report-1B.docx</li>
-              <li role="treeitem" aria-selected="false" class="doc">report-1C.docx</li>
+                <li role="treeitem" aria-expanded="false">
+                    <span tabindex="-1">report-1</span>
+                    <ul role="group">
+                        <li role="treeitem">
+                            <input type="checkbox" tabindex="-1"> report-1A.docx
+                        </li>
+                        <li role="treeitem">
+                            <input type="checkbox" tabindex="-1"> report-1B.docx
+                        </li>
+                        <li role="treeitem">
+                            <input type="checkbox" tabindex="-1"> report-1C.docx
+                        </li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-     
-        </ul>
-      </li>
- 
+        </li>
     </ul>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const treeItems = document.querySelectorAll('[role="treeitem"] > span');
+
+            treeItems.forEach(span => {
+                span.addEventListener('click', function () {
+                    let parent = this.parentElement;
+                    let isExpanded = parent.getAttribute('aria-expanded') === "true";
+
+                    parent.setAttribute('aria-expanded', !isExpanded);
+
+                    let childGroup = parent.querySelector('[role="group"]');
+                    if (childGroup) {
+                        childGroup.style.display = isExpanded ? 'none' : 'block';
+                    }
+
+                    updateTabIndexes();
+                });
+
+                span.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        this.click();
+                    }
+                });
+            });
+
+            function updateTabIndexes() {
+                document.querySelectorAll('[role="treeitem"] span, [role="treeitem"] input').forEach(item => {
+                    let parentTreeItem = item.closest('[role="treeitem"]');
+                    let parentGroup = parentTreeItem.closest('[role="group"]');
+
+                    if (parentGroup && getComputedStyle(parentGroup).display === "none") {
+                        item.setAttribute("tabindex", "-1");
+                    } else {
+                        item.setAttribute("tabindex", "0");
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
-
 </html>
