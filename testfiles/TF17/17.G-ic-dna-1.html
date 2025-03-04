@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
   <title>17.G-ic-dna-1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ableplayer Dependencies -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../assets/ableplayer/thirdparty/js.cookie.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/ableplayer/build/ableplayer.min.css" type="text/css" />
+
+  <!-- JavaScript -->
+  <script src="../assets/ableplayer/build/ableplayer.min.js"></script>
+
 </head>
+
 <body>
   <h1>Veggie Soup Recipe</h1>
   <h3>Instructions</h3>
   <ol>
     <li>Cut carrots into quarter inch slices</li>
   </ol>
+  <div id="tc_code">
+    <video id="my-video" data-able-player width="900" height="500" data-skin="2020" playsinline data-debug
+      data-root-path="../assets/ableplayer/" preload="auto">
+      <source src="../assets/videos/Carrots-with-audio.webm" type='video/webm'>
+      <source src="../assets/videos/Carrots-with-audio.mp4" type='video/mp4'>
 
+      Your browser does not support the video tag.
 
-  <video controls width="700" height="400">
-    <source src="../assets/videos/Carrots-with-audio.mp4" type='video/mp4'>
-  </video>
+    </video>
+  
+  </div>
 
 
 </body>
 
-</html>
+
+
+
