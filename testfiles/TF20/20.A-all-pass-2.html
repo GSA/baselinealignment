@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20.A-all-pass-1</title>
+  <style>
+    body {
+      background-color: black;
+      color: darkgray;
+      font-size: 12px;
+    }
+
+    .nonconforming-image {
+      width: 300px;
+      height: 200px;
+    }
+
+    .accessibility-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Non-Conforming Version</h1>
+  <p>This version has accessibility issues such as poor contrast and missing alternative text.</p>
+
+  <img src="../assets/images/billboards.jpg" class="nonconforming-image">
+
+  <!-- ✅ Button to switch to the accessible version -->
+  <button class="accessibility-btn" onclick="location.href='./20.A-all-pass-2-conforming.html'"
+    aria-label="Switch to Accessible Version">
+    Go to Accessible Version
+  </button>
+
+</body>
+
+</html>
