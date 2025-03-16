@@ -9,6 +9,38 @@
     .hidden {
       display: none;
     }
+
+    /* Style the main container */
+    #standard-version {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Make the paragraphs appear as list items */
+    #standard-version p {
+      position: relative;
+      padding-left: 20px;
+      /* Add space for the bullet */
+      margin: 5px 0;
+    }
+
+    /* Add bullet points before each paragraph */
+    #standard-version p::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Style sub-bullets for nested paragraphs (create hierarchy) */
+    #standard-version .sub-location {
+      padding-left: 40px;
+      /* Indent sub-bullets */
+    }
+
+    #standard-version .sub-location::before {
+      content: '○';
+      /* Different bullet style for sub-items */
+    }
   </style>
   <script>
     function toggleVersion() {
@@ -35,20 +67,37 @@
 
   <!-- Standard Version -->
   <div id="standard-version">
-    <h1>List of Our Locations</h1>
-   
-      <p>Arlington, VA</p>
-      <p>Reston, VA</p>
-      <p>Fairfax, VA</p>
+    <h1>List of Our Locations with hours</h1>
 
+    <p>Arlington, VA</p>
+    <p class="sub-location">Sub-location 1: 10 am -4 pm 7 days a week</p>
+    <p class="sub-location">Sub-location 2: 10 am -6 pm, every day but Monday</p>
+    <p>Reston, VA</p>
+    <p class="sub-location">Sub-location 1: 24/7</p>
+    <p>Fairfax, VA</p>
+    <p class="sub-location">Sub-location 1: 1 pm - 5 pm Monday, Wednesday, and Friday</p>
+    <p class="sub-location">Sub-location 2: 10 am -12 pm daily</p>
   </div>
 
   <!-- Alternate Accessible Version -->
   <div id="alternate-version" class="hidden">
     <h1>List of Our Locations</h1>
-  
-      <p>Raligh, NC</p>
-      <p>Durham, NC</p>
+    <ul>
+      <li>Arlington, VA</li>
+      <ul>
+        <li class="sub-location">Sub-location 1</li>
+        <li class="sub-location">Sub-location 2</li>
+      </ul>
+      <li>Reston, VA</li>
+      <ul>
+        <li class="sub-location">Sub-location 1</li>
+      </ul>
+      <li>Fairfax, VA</li>
+      <ul>
+        <li class="sub-location">Sub-location 1</li>
+        <li class="sub-location">Sub-location 2</li>
+      </ul>
+    </ul>
 
   </div>
 
