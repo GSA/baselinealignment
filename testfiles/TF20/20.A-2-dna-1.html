@@ -9,6 +9,36 @@
     .hidden {
       display: none;
     }
+        
+        /* Style the main container */
+    #standard-version {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Make the paragraphs appear as list items */
+    #standard-version p {
+      position: relative;
+      padding-left: 20px; /* Add space for the bullet */
+      margin: 5px 0;
+    }
+
+    /* Add bullet points before each paragraph */
+    #standard-version p::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Style sub-bullets for nested paragraphs (create hierarchy) */
+    #standard-version .sub-location {
+      padding-left: 40px; /* Indent sub-bullets */
+    }
+
+    #standard-version .sub-location::before {
+      content: '○'; /* Different bullet style for sub-items */
+    }
+
   </style>
   <script>
     function toggleVersion() {
@@ -35,26 +65,40 @@
 
   <!-- Standard Version -->
   <div id="standard-version">
-    <h1>List of Our Locations (2025)</h1>
-    <ul>
-      <li>Arlington, VA</li>
-      <li>Reston, VA</li>
-      <li>Fairfax, VA</li>
-    </ul>
-
-
+    <h1>List of Our Locations with hours</h1>
+   
+    <p>Arlington, VA</p>
+    <p class="sub-location">Sub-location 1: 10 am -4 pm 7 days a week</p>
+    <p class="sub-location">Sub-location 2: 10 am -6 pm, every day but Monday</p>
+    <p>Reston, VA</p>
+    <p class="sub-location">Sub-location 1: 24/7</p>
+    <p>Fairfax, VA</p>
+    <p class="sub-location">Sub-location 1: 1 pm - 5 pm Monday, Wednesday, and Friday</p>
+    <p class="sub-location">Sub-location 2: 10 am -12 pm daily</p>
+        
+        <p> Last Updated: 3/14/2025</p>
   </div>
 
   <!-- Alternate Accessible Version -->
   <div id="alternate-version" class="hidden">
-    <h1>List of Our Locations (2024)</h1>
-    <ul>
-      <li>Arlington, VA</li>
-      <li>Reston, VA</li>
-      <li>Fairfax, VA</li>
-    </ul>
-
-
+    <h1>List of Our Locations</h1>
+        <ul>
+        <li>Arlington, VA</li>
+        <ul>
+    <li class="sub-location">Sub-location 1: 10 am -4 pm 7 days a week</li>
+    <li class="sub-location">Sub-location 2: 10 am -6 pm, every day but Monday</li>
+        </ul>
+    <li>Reston, VA</li>
+        <ul>
+    <li class="sub-location">Sub-location 1: all day, every day</li>
+        </ul>
+    <li>Fairfax, VA</li>
+        <ul>
+    <li class="sub-location">Sub-location 1: 1 pm - 5 pm Monday, Wednesday, and Friday</li>
+    <li class="sub-location">Sub-location 2: 10 am -1 pm daily</li>
+        </ul>
+        </ul>
+        <p> Last Updated: 3/14/2023</p>
   </div>
 
 </body>
