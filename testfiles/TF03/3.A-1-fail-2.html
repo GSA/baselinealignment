@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>3.A-1-fail-2</title>
-<style> button:hover {
-cursor:pointer;
-}
-</style>
+  <meta charset="utf-8">
+  <title>3.A-1-fail-2</title>
+
 </head>
+
 <body>
-<p><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training course.</p>
-</br>
-<div id="tc_code">
-  <label for="username">User Name: </label>&nbsp;  &nbsp;   <input type="text" name="Username" value=""  id="username">
-</br></br>
-<label for="pword">Password: </label>&nbsp; &nbsp; <input type="password" name="Password" value="" id="pword">
- </br></br>
-<button  id="button1">Log in </button> 
-</br></br> 
-<p> To change the button from <strong>Request Password Reset</strong> to <strong>Request User Name</strong>, tab to the button,</br>
-press and hold the space bar for 3 seconds, and release the spacebar. </br> 
-Repeat the steps to change it back again.</p>
+  <h1>Checkout</h1>
 
-<button id="btnReset">Request Password Reset</button>
+  <h2>Shipping Address</h2>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script>
-$(function(){
-  
-  var lastKeyUpAt = 0;
-  var fired = false;
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="add">Street Address</label><br>
+    <input type="text" id="add" name="add"><br>
+    <label for="city">City</label><br>
+    <input type="text" id="city" name="city"><br>
+    <label for="state">State</label><br>
+    <input type="text" id="state" name="state"><br>
+  </form>
 
-  $("#btnReset").keydown(function(e) {
-    if((!fired)&&(e.which==32)){
-        var keyDownAt = new Date();
+  <h2>Payment Information</h2>
 
-        setTimeout(function() {
-            if (+keyDownAt > +lastKeyUpAt)
-                // Key has been held down for x seconds
-              {var mybtn = document.getElementById("btnReset");
-               
-               if (mybtn.innerHTML === "Request Password Reset")
-                {mybtn.innerHTML = "Request User Name";}
-               else
-                {mybtn.innerHTML = "Request Password Reset"} 
-              }
-            else 
-                // Key has not been held down for x seconds
-              {}
-        }, 3000);
-    fired = true;  
+  <form>
+    <label for="num">Credit Card Number:</label><br>
+    <input type="text" id="num" name="num"><br>
+    <label for="num2">CVV:</label><br>
+    <input type="text" id="num2" name="num2"><br>
+    <label for="exp">Expiration Date (mm/dd/yyyy):</label><br>
+    <input type="date" id="exp" name="exp"><br>
+
+    <label for="fname1">First name:</label><br>
+    <input type="text" id="fname1" name="fname1"><br>
+    <label for="lname1">Last name:</label><br>
+    <input type="text" id="lname1" name="lname1"><br>
+    <label for="add1">Street Address</label><br>
+    <input type="text" id="add1" name="add1"><br>
+    <label for="city1">City</label><br>
+    <input type="text" id="city1" name="city1"><br>
+    <label for="state1">State</label><br>
+    <input type="text" id="state1" name="state1"><br>
+  </form>
+
+  <script>
+    var $state = document.getElementById('state');
+    $state.onkeydown = function (event) {
+      event.preventDefault();
     }
-  });
-  
-  $("#btnReset").keyup(function(){
-    lastKeyUpAt = new Date();
-    fired = false;
-  });
-});
-</script>
-</div>
+  </script>
 </body>
+
 </html>
