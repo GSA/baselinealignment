@@ -5,34 +5,55 @@
     <link rel="stylesheet" href="TF12.css" type="text/css">
     <script src="TF12.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+         
+            text-align: center;
+        }
+        span{
+            border:solid #333 1px;
+            display: inline-block;
+            padding:0;
+            margin:0;
+            width: 300px;
+           
+        }
+    </style>
 </head>
 <body>
-    <div id="tc_code">
-        <table role="table">
-            <thead>
-                <tr role="row">
-                    <th>Product</th>
-                    <th>Region</th>
-                    <th>Sales Q1</th>
-                    <th>Sales Q2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr role="row">
-                    <th role="rowheader">Product A</th>
-                    <td>North</td>
-                    <td>500</td>
-                    <td>600</td>
-                </tr>
-                <tr role="row">
-                    <th role="rowheader">Product B</th>
-                    <td>South</td>
-                    <td>450</td>
-                    <td>520</td>
-                </tr>
-            </tbody>
-          </table>
-          
+
+
+    <div
+    role="table"
+    aria-label="Product Sales"
+    aria-describedby="product_sales_table"
+    aria-rowcount="81">
+    
+    <div role="rowgroup">
+      <div role="row">
+        <span role="columnheader" aria-sort="none">Prodcut</span>
+        <span role="columnheader" aria-sort="none">Sales</span>
+      </div>
     </div>
+    <div role="rowgroup">
+      <div role="row" aria-rowindex="11">
+        <span role="cell">Paper</span>
+        <span role="cell">$100,000</span>
+      </div>
+      <div role="row" aria-rowindex="16">
+        <span role="cell">Staples</span>
+        <span role="cell">$20,000</span>
+      </div>
+      <div role="row" aria-rowindex="18">
+        <span role="cell">Paperclips</span>
+        <span role="cell">$10,000</span>
+      </div>
+     
+    </div>
+  </div>
+  
+
+
+
 </body>
 </html>
