@@ -67,6 +67,8 @@
             }, 1000);
         }
 
+        function confirmSubmission() { alert("✅ Quiz submitted successfully!"); }
+
         window.onload = startCountdown;
     </script>
 </head>
@@ -79,16 +81,16 @@
     <div id="start-text">Start</div>
 
     <!-- Button to manually test the beep -->
-    <button onclick="playBeep()">Play Beep</button>
+    <!-- <button onclick="playBeep()">Play Beep</button> -->
 
     <audio id="beep">
-        <source src="YOUR_AUDIO_FILE_HERE.mp3" type="audio/mpeg">
+        <source src="../assets/audio/alert-bell.wav" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <div id="timer">Time left: <span id="time">5</span> seconds</div>
+    <div id="timer"></div>
 
-    <form>
+    <form onsubmit="confirmSubmission(); return false;">
         <div class="question">
             <label>1. What is the capital of France?</label>
             <input type="text">
@@ -101,7 +103,10 @@
             <label>3. What is the color of the sky?</label>
             <input type="text">
         </div>
+
+        <button type="submit">Submit</button>
     </form>
+    
 
 </body>
 </html>
