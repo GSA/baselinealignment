@@ -41,23 +41,23 @@
     </style>
 </head>
 <body>
-    <h3 id="tree_label">Reports</h3>
+    <h3 id="tree_label">My Documents</h3>
     <ul role="tree" aria-labelledby="tree_label">
         <!-- Initially only "Reports" is visible -->
         <li role="treeitem" aria-expanded="false">
-            <span tabindex="0">Reports</span>
+            <span tabindex="0">My Reports +</span>
             <ul role="group">
                 <li role="treeitem" aria-expanded="false">
-                    <span tabindex="-1">report-1</span>
+                    <span tabindex="-1">report-1 +</span>
                     <ul role="group">
                         <li role="treeitem">
-                            <input type="checkbox" tabindex="-1"> report-1A.docx
+                            <input type="checkbox" tabindex="-1" id="report-1A" aria-describedby="report1A"> report-1A.docx
                         </li>
                         <li role="treeitem">
-                            <input type="checkbox" tabindex="-1"> report-1B.docx
+                            <input type="checkbox" tabindex="-1" id="report-1B" aria-describedby="report1B"> report-1B.docx
                         </li>
                         <li role="treeitem">
-                            <input type="checkbox" tabindex="-1"> report-1C.docx
+                            <input type="checkbox" tabindex="-1" id="report-1C" aria-describeby="report1C"> report-1C.docx
                         </li>
                     </ul>
                 </li>
