@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
+    <title>5.B-2-fail-4</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,11 +28,9 @@
         }
         button.enabled {
             cursor: pointer;
-            background-color: blue;
+            background-color: rgb(22, 68, 114);
         }
-        .star{
-            color:red;
-        }
+
     </style>
     <script>
         function checkFields() {
@@ -65,7 +63,7 @@
         <label for="field3"><span class="star">*</span> Email:</label>
         <input type="text" id="field3" oninput="checkFields()">
         
-        <button type="submit" id="submitBtn" disabled>Submit</button>
+        <button type="submit" role="toggle-button" id="submitBtn" disabled>Submit</button>
     </form>
 
 </body>
