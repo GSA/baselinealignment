@@ -2,111 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=device-width, initial-scale=1.0">
-    <title>Quiz Countdown</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        #countdown {
-            font-size: 30px;
-            margin: 20px 0;
-        }
-        #start-text {
-            font-size: 30px;
-            font-weight: bold;
-            display: none;
-        }
-        #timer {
-            font-size: 24px;
-            margin: 20px 0;
-            display: none;
-        }
-        .question {
-            display: none;
-            margin-bottom: 15px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission with Sound</title>
     <script>
-        function playBeep() {
-            document.getElementById('beep').play();
+        function playSoundAndSubmit(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById('submit-sound').play();
+            alert("Form submitted successfully!"); 
         }
-
-        function startCountdown() {
-            let countdownElement = document.getElementById('countdown');
-            let startText = document.getElementById('start-text');
-            let timeLeft = 5;
-
-            let countdownInterval = setInterval(() => {
-                countdownElement.textContent = timeLeft;
-                timeLeft--;
-
-                if (timeLeft < 0) {
-                    clearInterval(countdownInterval);
-                    countdownElement.style.display = 'none';
-                    startText.style.display = 'block';
-                    playBeep();
-                    setTimeout(startQuiz, 1000); // Start quiz after beep
-                }
-            }, 1000);
-        }
-
-        function startQuiz() {
-            document.getElementById('timer').style.display = 'block';
-            let timeLeft = 5;
-            document.querySelectorAll('.question').forEach(q => q.style.display = 'block');
-
-            let timerInterval = setInterval(() => {
-                document.getElementById('time').textContent = timeLeft;
-                timeLeft--;
-                if (timeLeft < 0) {
-                    clearInterval(timerInterval);
-                }
-            }, 1000);
-        }
-
-        function confirmSubmission() { alert("✅ Quiz submitted successfully!"); }
-
-        window.onload = startCountdown;
     </script>
 </head>
 <body>
+    <h1>Simple Form</h1>
+    <p>You will hear a sound to indicate successful submission of the form</p>
+    <form onsubmit="playSoundAndSubmit(event)">
+        <div>
+            <label for="question1">First Name</label>
+            <input type="text" id="question1" name="question1">
+        </div>
+        <br/>
+        <div>
+            <label for="question2">Last Name</label>
+            <input type="text" id="question2" name="question2">
+        </div>
+        <br/>
+        <div>
+            <label for="question3">Telephone</label>
+            <input type="text" id="question3" name="question3">
+        </div>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
 
-    <h1>Quiz Challenge</h1>
-    <p>Countdown will start, followed by a beep, then the quiz begins.</p>
-
-    <div id="countdown">5</div>
-    <div id="start-text">Start</div>
-
-    <!-- Button to manually test the beep -->
-    <!-- <button onclick="playBeep()">Play Beep</button> -->
-
-    <audio id="beep">
+    <audio id="submit-sound">
         <source src="../assets/audio/alert-bell.wav" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-
-    <div id="timer"></div>
-
-    <form onsubmit="confirmSubmission(); return false;">
-        <div class="question">
-            <label>1. What is the capital of France?</label>
-            <input type="text">
-        </div>
-        <div class="question">
-            <label>2. What is 2 + 2?</label>
-            <input type="text">
-        </div>
-        <div class="question">
-            <label>3. What is the color of the sky?</label>
-            <input type="text">
-        </div>
-
-        <button type="submit">Submit</button>
-    </form>
-    
-
 </body>
 </html>
