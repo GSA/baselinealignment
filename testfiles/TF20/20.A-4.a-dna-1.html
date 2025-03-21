@@ -22,11 +22,11 @@
       if (standard.style.display === "none") {
         standard.style.display = "block";
         alternate.style.display = "none";
-        toggleButton.innerText = "Button 1";
+        toggleButton.innerText = "Switch to Accessible Version";
       } else {
         standard.style.display = "none";
         alternate.style.display = "block";
-        toggleButton.innerText = "Button 1";
+        toggleButton.innerText = "Switch to Standard Version";
       }
     }
   </script>
@@ -34,7 +34,7 @@
 
 <body>
 
-  <button id="toggle-button" onclick="toggleVersion()" tabindex="-1">Button 1</button>
+  <button id="toggle-button" onclick="toggleVersion()" tabindex="-1">Switch to Accessible Version</button>
 
   <!-- Standard Version -->
   <div id="standard-version">
