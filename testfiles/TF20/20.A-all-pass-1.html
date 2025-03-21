@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,8 @@
     .hidden {
       display: none;
     }
-        
-        /* Style the main container */
+
+    /* Style the main container */
     #standard-version {
       font-family: Arial, sans-serif;
     }
@@ -38,7 +37,6 @@
     #standard-version .sub-location::before {
       content: '○'; /* Different bullet style for sub-items */
     }
-
   </style>
   <script>
     function toggleVersion() {
@@ -46,13 +44,13 @@
       let alternate = document.getElementById("alternate-version");
       let toggleButton = document.getElementById("toggle-button");
 
-      if (standard.style.display === "none") {
-        standard.style.display = "block";
-        alternate.style.display = "none";
+      if (standard.classList.contains("hidden")) {
+        standard.classList.remove("hidden");
+        alternate.classList.add("hidden");
         toggleButton.innerText = "Switch to Accessible Version";
       } else {
-        standard.style.display = "none";
-        alternate.style.display = "block";
+        standard.classList.add("hidden");
+        alternate.classList.remove("hidden");
         toggleButton.innerText = "Switch to Standard Version";
       }
     }
@@ -61,12 +59,38 @@
 
 <body>
 
-  <button id="toggle-button" onclick="toggleVersion()">Switch to Accessible Version</button>
+ 
 
-  <!-- Standard Version -->
-  <div id="standard-version">
+  <!-- Accessible Version (Now Default) -->
+  <div id="alternate-version">
+    <button id="toggle-button" onclick="toggleVersion()">Switch to Standard Version</button>
+    <h1>List of Our Locations</h1>
+    <ul>
+      <li>Arlington, VA
+        <ul>
+          <li class="sub-location">Sub-location 1: 10 am -4 pm 7 days a week</li>
+          <li class="sub-location">Sub-location 2: 10 am -6 pm, every day but Monday</li>
+        </ul>
+      </li>
+      <li>Reston, VA
+        <ul>
+          <li class="sub-location">Sub-location 1: 24/7</li>
+        </ul>
+      </li>
+      <li>Fairfax, VA
+        <ul>
+          <li class="sub-location">Sub-location 1: 1 pm - 5 pm Monday, Wednesday, and Friday</li>
+          <li class="sub-location">Sub-location 2: 10 am -12 pm daily</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Last Updated: 3/14/2025</p>
+  </div>
+
+  <!-- Standard Version (Hidden by Default) -->
+  <div id="standard-version" class="hidden">
     <h1>List of Our Locations with hours</h1>
-   
+
     <p>Arlington, VA</p>
     <p class="sub-location">Sub-location 1: 10 am -4 pm 7 days a week</p>
     <p class="sub-location">Sub-location 2: 10 am -6 pm, every day but Monday</p>
@@ -75,32 +99,9 @@
     <p>Fairfax, VA</p>
     <p class="sub-location">Sub-location 1: 1 pm - 5 pm Monday, Wednesday, and Friday</p>
     <p class="sub-location">Sub-location 2: 10 am -12 pm daily</p>
-        
-        <p> Last Updated: 3/14/2025</p>
-  </div>
 
-  <!-- Alternate Accessible Version -->
-  <div id="alternate-version" class="hidden">
-    <h1>List of Our Locations</h1>
-        <ul>
-        <li>Arlington, VA</li>
-        <ul>
-    <li class="sub-location">Sub-location 1: 10 am -4 pm 7 days a week</li>
-    <li class="sub-location">Sub-location 2: 10 am -6 pm, every day but Monday</li>
-        </ul>
-    <li>Reston, VA</li>
-        <ul>
-    <li class="sub-location">Sub-location 1: 24/7</li>
-        </ul>
-    <li>Fairfax, VA</li>
-        <ul>
-    <li class="sub-location">Sub-location 1: 1 pm - 5 pm Monday, Wednesday, and Friday</li>
-    <li class="sub-location">Sub-location 2: 10 am -12 pm daily</li>
-        </ul>
-        </ul>
-        <p> Last Updated: 3/14/2025</p>
+    <p>Last Updated: 3/14/2025</p>
   </div>
 
 </body>
-
 </html>
