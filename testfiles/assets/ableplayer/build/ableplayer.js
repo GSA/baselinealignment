@@ -9925,7 +9925,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 		if (typeof thisCaption !== 'undefined') {
 			if (this.currentCaption !== thisCaption) {
 				// it's time to load the new caption into the container div
-				captionText = this.flattenCueForCaption(cues[thisCaption]).replace('\n', '<br>');
+				captionText = this.flattenCueForCaption(cues[thisCaption]).replace(/\n/g, '<br>');
 				this.$captionsDiv.html(captionText);
 				this.currentCaption = thisCaption;
 				if (captionText.length === 0) {
