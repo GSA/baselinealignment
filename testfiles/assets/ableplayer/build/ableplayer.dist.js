@@ -9925,7 +9925,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 		if (typeof thisCaption !== 'undefined') {
 			if (this.currentCaption !== thisCaption) {
 				// it's time to load the new caption into the container div
-				captionText = this.flattenCueForCaption(cues[thisCaption]).replace('\n', '<br>');
+				captionText = this.flattenCueForCaption(cues[thisCaption]).replace(/\n/g, '<br>');
 				this.$captionsDiv.html(captionText);
 				this.currentCaption = thisCaption;
 				if (captionText.length === 0) {
@@ -10490,7 +10490,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 			if (this.currentMeta !== thisMeta) {
 				if (this.metaType === 'text') {
 					// it's time to load the new metadata cue into the container div
-					this.$metaDiv.html(this.flattenCueForMeta(cues[thisMeta]).replace('\n', '<br>'));
+					this.$metaDiv.html(this.flattenCueForMeta(cues[thisMeta]).replace(/\n/g, '<br>'));
 				}
 				else if (this.metaType === 'selector') {
 					// it's time to show content referenced by the designated selector(s)
@@ -11190,7 +11190,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					if (typeof result === 'string') {
 						if (thisObj.lyricsMode) {
 							// add <br> BETWEEN each caption and WITHIN each caption (if payload includes "\n")
-							result = result.replace('\n','<br>') + '<br>';
+							result = result.replace(/\n/g,'<br>') + '<br>';
 						}
 						else {
 							// just add a space between captions
