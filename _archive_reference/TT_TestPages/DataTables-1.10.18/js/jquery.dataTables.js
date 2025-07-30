@@ -6055,7 +6055,7 @@
 		{
 			var col = columns[i];
 			var asSorting = col.asSorting;
-			var sTitle = col.sTitle.replace( /<.*?>/g, "" );
+			var sTitle = _fnStripHtml(col.sTitle);
 			var th = col.nTh;
 	
 			// IE7 is throwing an error when setting these properties with jQuery's
@@ -6083,6 +6083,16 @@
 	
 			th.setAttribute('aria-label', label);
 		}
+	}
+
+	/**
+	 * Safely removes HTML tags from a string using DOMParser.
+	 * @param {string} html - The HTML string to sanitize.
+	 * @returns {string} - The sanitized string with HTML tags removed.
+	 */
+	function _fnStripHtml(html) {
+		var doc = new DOMParser().parseFromString(html, 'text/html');
+		return doc.body.textContent || "";
 	}
 	
 	
