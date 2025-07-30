@@ -14694,13 +14694,19 @@
 	
 	$.extend( DataTable.ext.type.search, {
 		html: function ( data ) {
-			return _empty(data) ?
-				data :
-				typeof data === 'string' ?
-					data
-						.replace( _re_new_lines, " " )
-						.replace( _re_html, "" ) :
-					'';
+			if (_empty(data)) {
+				return data;
+			}
+			if (typeof data === 'string') {
+				data = data.replace(_re_new_lines, " ");
+				let previous;
+				do {
+					previous = data;
+					data = data.replace(_re_html, "");
+				} while (data !== previous);
+				return data;
+			}
+			return '';
 		},
 	
 		string: function ( data ) {
