@@ -6067,7 +6067,11 @@
 		{
 			var col = columns[i];
 			var asSorting = col.asSorting;
-			var sTitle = col.sTitle.replace( /<.*?>/g, "" );
+			var sTitle = col.sTitle;
+			do {
+				var previous = sTitle;
+				sTitle = sTitle.replace(/<.*?>/g, "");
+			} while (sTitle !== previous);
 			var th = col.nTh;
 	
 			// IE7 is throwing an error when setting these properties with jQuery's
