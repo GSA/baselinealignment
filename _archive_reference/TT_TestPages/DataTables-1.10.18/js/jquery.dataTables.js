@@ -14789,11 +14789,18 @@
 	
 		// html
 		"html-pre": function ( a ) {
-			return _empty(a) ?
-				'' :
-				a.replace ?
-					a.replace( /<.*?>/g, "" ).toLowerCase() :
-					a+'';
+			if (_empty(a)) {
+				return '';
+			}
+			if (a.replace) {
+				let previous;
+				do {
+					previous = a;
+					a = a.replace(/<.*?>/g, "");
+				} while (a !== previous);
+				return a.toLowerCase();
+			}
+			return a + '';
 		},
 	
 		// string
