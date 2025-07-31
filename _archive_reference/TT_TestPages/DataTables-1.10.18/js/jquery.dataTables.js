@@ -1512,7 +1512,12 @@
 	
 	
 	var _stripHtml = function ( d ) {
-		return d.replace( _re_html, '' );
+		var previous;
+		do {
+			previous = d;
+			d = d.replace( _re_html, '' );
+		} while (d !== previous);
+		return d;
 	};
 	
 	
@@ -5804,7 +5809,11 @@
 	
 		for ( var i=0, ien=settings.aoData.length ; i<ien ; i++ ) {
 			s = _fnGetCellData( settings, i, colIdx, 'display' )+'';
-			s = s.replace( __re_html_remove, '' );
+			let previous;
+			do {
+				previous = s;
+				s = s.replace( __re_html_remove, '' );
+			} while (s !== previous);
 			s = s.replace( /&nbsp;/g, ' ' );
 	
 			if ( s.length > max ) {
@@ -6055,7 +6064,7 @@
 		{
 			var col = columns[i];
 			var asSorting = col.asSorting;
-			var sTitle = col.sTitle.replace( /<.*?>/g, "" );
+			var sTitle = _fnStripHtml(col.sTitle);
 			var th = col.nTh;
 	
 			// IE7 is throwing an error when setting these properties with jQuery's
@@ -6083,6 +6092,16 @@
 	
 			th.setAttribute('aria-label', label);
 		}
+	}
+
+	/**
+	 * Safely removes HTML tags from a string using DOMParser.
+	 * @param {string} html - The HTML string to sanitize.
+	 * @returns {string} - The sanitized string with HTML tags removed.
+	 */
+	function _fnStripHtml(html) {
+		var doc = new DOMParser().parseFromString(html, 'text/html');
+		return doc.body.textContent || "";
 	}
 	
 	
@@ -14694,13 +14713,19 @@
 	
 	$.extend( DataTable.ext.type.search, {
 		html: function ( data ) {
-			return _empty(data) ?
-				data :
-				typeof data === 'string' ?
-					data
-						.replace( _re_new_lines, " " )
-						.replace( _re_html, "" ) :
-					'';
+			if (_empty(data)) {
+				return data;
+			}
+			if (typeof data === 'string') {
+				data = data.replace(_re_new_lines, " ");
+				let previous;
+				do {
+					previous = data;
+					data = data.replace(_re_html, "");
+				} while (data !== previous);
+				return data;
+			}
+			return '';
 		},
 	
 		string: function ( data ) {
@@ -14789,11 +14814,18 @@
 	
 		// html
 		"html-pre": function ( a ) {
-			return _empty(a) ?
-				'' :
-				a.replace ?
-					a.replace( /<.*?>/g, "" ).toLowerCase() :
-					a+'';
+			if (_empty(a)) {
+				return '';
+			}
+			if (a.replace) {
+				let previous;
+				do {
+					previous = a;
+					a = a.replace(/<.*?>/g, "");
+				} while (a !== previous);
+				return a.toLowerCase();
+			}
+			return a + '';
 		},
 	
 		// string
