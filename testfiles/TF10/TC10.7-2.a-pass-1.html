@@ -78,7 +78,7 @@
             document.getElementById("order-confirmation").setAttribute("hidden","hidden");
 
             //set refund amount
-            document.getElementById("pizza-refund").innerHTML = document.getElementById("pizza-total").innerText;
+            document.getElementById("pizza-refund").textContent = document.getElementById("pizza-total").innerText;
             let refund = document.getElementById("order-cancel");
 
             //show refund notification
