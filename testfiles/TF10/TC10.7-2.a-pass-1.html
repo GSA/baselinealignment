@@ -60,7 +60,7 @@
             let time = document.getElementById("time").value;
 
             document.getElementById("pizza-number").innerHTML = number;
-            document.getElementById("pizza-time").innerHTML = time;
+            document.getElementById("pizza-time").textContent = time;
 
             const pizza_price = 10; //dollars
             let total = "$" + parseInt(number * pizza_price) + ".89";
