@@ -4752,7 +4752,7 @@ var AblePlayerInstances = [];
 				if (thisObj.hasAttr($(this),'data-src')) {
 					// this is the only required attribute
 					var $newSource = $('<source>',{
-						'src': $(this).attr('data-src')
+						'src': encodeURI($(this).attr('data-src'))
 					});
 					if (thisObj.hasAttr($(this),'data-type')) {
 						$newSource.attr('type',$(this).attr('data-type'));
@@ -4778,7 +4778,7 @@ var AblePlayerInstances = [];
 					thisObj.hasAttr($(this),'data-srclang')) {
 					// all required attributes are present
 					var $newTrack = $('<track>',{
-						'src': $(this).attr('data-src'),
+						'src': encodeURI($(this).attr('data-src')),
 						'kind': $(this).attr('data-kind'),
 						'srclang': $(this).attr('data-srclang')
 					});
