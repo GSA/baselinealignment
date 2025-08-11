@@ -4829,7 +4829,9 @@ function sanitizeMediaUrl(url) {
 				if (typeof itemLang !== 'undefined') {
 					nowPlayingSpan.attr('lang',itemLang);
 				}
-				nowPlayingSpan.html('<span>' + this.tt.selectedTrack + ':</span>' + itemTitle);
+				var labelSpan = $('<span>').text(this.tt.selectedTrack + ':');
+				nowPlayingSpan.append(labelSpan);
+				nowPlayingSpan.append(document.createTextNode(itemTitle));
 				this.$nowPlayingDiv.html(nowPlayingSpan);
 			}
 		}
