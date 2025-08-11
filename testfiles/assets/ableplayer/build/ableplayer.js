@@ -37,6 +37,18 @@
 // maintain an array of Able Player instances for use globally (e.g., for keeping prefs in sync)
 var AblePlayerInstances = [];
 
+// Helper function to sanitize media URLs for <source> elements
+function sanitizeMediaUrl(url) {
+	// Only allow http, https, or relative URLs (no protocol-relative, javascript:, data:, etc.)
+	if (typeof url !== 'string') return '';
+	// Strictly allow only http(s) URLs or relative URLs
+	var pattern = /^(https?:\/\/[^\s]+|\.?\.?\/[^\s]+)$/i;
+	if (pattern.test(url)) {
+		return url;
+	}
+	return '';
+}
+
 (function ($) {
 	$(document).ready(function () {
 
@@ -4812,7 +4824,9 @@ var AblePlayerInstances = [];
 				if (typeof itemLang !== 'undefined') {
 					nowPlayingSpan.attr('lang',itemLang);
 				}
-				nowPlayingSpan.html('<span>' + this.tt.selectedTrack + ':</span>' + itemTitle);
+				var labelSpan = $('<span>').text(this.tt.selectedTrack + ':');
+				nowPlayingSpan.append(labelSpan);
+				nowPlayingSpan.append(document.createTextNode(itemTitle));
 				this.$nowPlayingDiv.html(nowPlayingSpan);
 			}
 		}
@@ -7476,11 +7490,18 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 
 			if (this.usingAudioDescription()) {
 				// the described version is currently playing. Swap to non-described
+				// Helper function to validate media URLs
+				function isSafeMediaUrl(url) {
+					// Only allow http, https, or relative URLs (no javascript: or data:)
+					if (!url) return false;
+					var pattern = /^(https?:\/\/|\/|\.\/|\.\.\/)[^\s]*$/i;
+					return pattern.test(url);
+				}
 				for (i=0; i < this.$sources.length; i++) {
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc) {
+					if (origSrc && isSafeMediaUrl(origSrc)) {
 						this.$sources[i].setAttribute('src',origSrc);
 					}
 				}
@@ -7498,8 +7519,11 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					descSrc = this.$sources[i].getAttribute('data-desc-src');
 					srcType = this.$sources[i].getAttribute('type');
 					if (descSrc) {
-						this.$sources[i].setAttribute('src',descSrc);
-						this.$sources[i].setAttribute('data-orig-src',origSrc);
+						var safeDescSrc = sanitizeMediaUrl(descSrc);
+						if (safeDescSrc) {
+							this.$sources[i].setAttribute('src', safeDescSrc);
+							this.$sources[i].setAttribute('data-orig-src', origSrc);
+						}
 					}
 				}
 				this.swappingSrc = true;
