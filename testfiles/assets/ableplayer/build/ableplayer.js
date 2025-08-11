@@ -37,6 +37,23 @@
 // maintain an array of Able Player instances for use globally (e.g., for keeping prefs in sync)
 var AblePlayerInstances = [];
 
+// Helper function to sanitize media URLs for <source> elements
+function sanitizeMediaUrl(url) {
+	// Only allow http, https, or relative URLs
+	try {
+		var a = document.createElement('a');
+		a.href = url;
+		// If protocol is empty, it's a relative URL (safe)
+		// Otherwise, only allow http: or https:
+		if (!a.protocol || a.protocol === ':' || a.protocol === 'http:' || a.protocol === 'https:') {
+			return url;
+		}
+	} catch (e) {
+		// If URL parsing fails, treat as unsafe
+	}
+	return '';
+}
+
 (function ($) {
 	$(document).ready(function () {
 
@@ -7498,8 +7515,11 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					descSrc = this.$sources[i].getAttribute('data-desc-src');
 					srcType = this.$sources[i].getAttribute('type');
 					if (descSrc) {
-						this.$sources[i].setAttribute('src',descSrc);
-						this.$sources[i].setAttribute('data-orig-src',origSrc);
+						var safeDescSrc = sanitizeMediaUrl(descSrc);
+						if (safeDescSrc) {
+							this.$sources[i].setAttribute('src', safeDescSrc);
+							this.$sources[i].setAttribute('data-orig-src', origSrc);
+						}
 					}
 				}
 				this.swappingSrc = true;
