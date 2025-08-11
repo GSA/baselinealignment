@@ -7476,11 +7476,18 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 
 			if (this.usingAudioDescription()) {
 				// the described version is currently playing. Swap to non-described
+				// Helper function to validate media URLs
+				function isSafeMediaUrl(url) {
+					// Only allow http, https, or relative URLs (no javascript: or data:)
+					if (!url) return false;
+					var pattern = /^(https?:\/\/|\/|\.\/|\.\.\/)[^\s]*$/i;
+					return pattern.test(url);
+				}
 				for (i=0; i < this.$sources.length; i++) {
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc) {
+					if (origSrc && isSafeMediaUrl(origSrc)) {
 						this.$sources[i].setAttribute('src',origSrc);
 					}
 				}
