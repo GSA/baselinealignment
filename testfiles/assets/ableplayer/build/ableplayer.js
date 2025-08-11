@@ -41,12 +41,38 @@ var AblePlayerInstances = [];
 function sanitizeMediaUrl(url) {
 	// Only allow http, https, or relative URLs (no protocol-relative, javascript:, data:, etc.)
 	if (typeof url !== 'string') return '';
-	// Strictly allow only http(s) URLs or relative URLs
-	var pattern = /^(https?:\/\/[^\s]+|\.?\.?\/[^\s]+)$/i;
-	if (pattern.test(url)) {
-		return url;
+	// Remove leading/trailing whitespace
+	url = url.trim();
+	// Disallow any URLs containing dangerous characters or schemes
+	// Only allow http(s) URLs or relative URLs that do not contain suspicious characters
+	var pattern = /^(https?:\/\/[a-zA-Z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+|\.?\.?\/[a-zA-Z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+)$/i;
+	if (!pattern.test(url)) {
+		return '';
 	}
-	return '';
+	// Disallow javascript:, data:, vbscript: even if obfuscated
+	var lowerUrl = url.toLowerCase();
+	if (
+		lowerUrl.startsWith('javascript:') ||
+		lowerUrl.startsWith('data:') ||
+		lowerUrl.startsWith('vbscript:')
+	) {
+		return '';
+	}
+	// Optionally, use the URL constructor for absolute URLs to further validate
+	try {
+		if (/^https?:\/\//i.test(url)) {
+			var parsed = new URL(url);
+			// Only allow http and https protocols
+			if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+				return '';
+			}
+			return parsed.href;
+		}
+		// For relative URLs, just return the sanitized string
+		return url;
+	} catch (e) {
+		return '';
+	}
 }
 
 (function ($) {
