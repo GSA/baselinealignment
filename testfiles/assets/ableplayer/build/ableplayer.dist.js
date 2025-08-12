@@ -1078,12 +1078,16 @@ var AblePlayerInstances = [];
 				var $youTubeVideos = $(this).find('li[data-youtube-id]');
 				$youTubeVideos.each(function() {
 					var youTubeId = $(this).attr('data-youtube-id');
-					var youTubePoster = thisObj.getYouTubePosterUrl(youTubeId,'120');
-					var $youTubeImg = $('<img>',{
-						'src': youTubePoster,
-						'alt': ''
-					});
-					$(this).find('button').prepend($youTubeImg);
+					// Validate YouTube video ID: 11 chars, letters, numbers, - and _
+					if (/^[A-Za-z0-9_-]{11}$/.test(youTubeId)) {
+						var youTubePoster = thisObj.getYouTubePosterUrl(youTubeId,'120');
+						var $youTubeImg = $('<img>',{
+							'src': youTubePoster,
+							'alt': ''
+						});
+						$(this).find('button').prepend($youTubeImg);
+					}
+					// else: invalid ID, do not inject image
 				});
 
 				// add accessibility to the list markup
