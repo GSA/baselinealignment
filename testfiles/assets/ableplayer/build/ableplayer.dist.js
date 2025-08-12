@@ -4770,20 +4770,24 @@ var AblePlayerInstances = [];
 		if ($sourceSpans.length) {
 			$sourceSpans.each(function() {
 				if (thisObj.hasAttr($(this),'data-src')) {
-					// this is the only required attribute
-					var $newSource = $('<source>',{
-						'src': $(this).attr('data-src')
-					});
-					if (thisObj.hasAttr($(this),'data-type')) {
-						$newSource.attr('type',$(this).attr('data-type'));
+					var dataSrc = $(this).attr('data-src');
+					if (isSafeMediaSrc(dataSrc)) {
+						// this is the only required attribute
+						var $newSource = $('<source>',{
+							'src': dataSrc
+						});
+						if (thisObj.hasAttr($(this),'data-type')) {
+							$newSource.attr('type',$(this).attr('data-type'));
+						}
+						if (thisObj.hasAttr($(this),'data-desc-src')) {
+							$newSource.attr('data-desc-src',$(this).attr('data-desc-src'));
+						}
+						if (thisObj.hasAttr($(this),'data-sign-src')) {
+							$newSource.attr('data-sign-src',$(this).attr('data-sign-src'));
+						}
+						thisObj.$media.append($newSource);
 					}
-					if (thisObj.hasAttr($(this),'data-desc-src')) {
-						$newSource.attr('data-desc-src',$(this).attr('data-desc-src'));
-					}
-					if (thisObj.hasAttr($(this),'data-sign-src')) {
-						$newSource.attr('data-sign-src',$(this).attr('data-sign-src'));
-					}
-					thisObj.$media.append($newSource);
+					// else: invalid src, do not add
 				}
 			});
 		}
