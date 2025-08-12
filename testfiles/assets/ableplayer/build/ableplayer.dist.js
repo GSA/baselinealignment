@@ -4802,7 +4802,7 @@ var AblePlayerInstances = [];
 					thisObj.hasAttr($(this),'data-srclang')) {
 					// all required attributes are present
 					var dataSrc = $(this).attr('data-src');
-					if (typeof isSafeMediaSrc === 'function' && !isSafeMediaSrc(dataSrc)) {
+					if (!isSafeMediaSrc(dataSrc)) {
 						// Skip this track if src is not safe
 						return;
 					}
