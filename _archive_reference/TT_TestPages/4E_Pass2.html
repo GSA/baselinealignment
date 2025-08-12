@@ -2,6 +2,22 @@
 <html lang="en">
 <head>
 <title>On Focus Passing Example 2</title>
+<script type="text/javascript">
+function safeNavigate() {
+  var allowed = [
+    "4E_Pass2_home.html",
+    "4E_Pass2_menu.html",
+   "4E_Pass2_glossary.html",
+   "4E_Pass2_about.html"
+ ];
+ var sel = document.jump.menu;
+ var val = sel.options[sel.selectedIndex].value;
+ if (allowed.indexOf(val) !== -1) {
+   location = val;
+ }
+ // else do nothing or show an error
+}
+</script>
 </head>
 <body>
 <p><strong>*Note:</strong> this page provides only limited functionality, as described in the Trusted Tester training course.</p>
@@ -15,7 +31,7 @@
       <option value="4E_Pass2_glossary.html">Glossary</option>
       <option value="4E_Pass2_about.html">About Us</option>
     </select>
-    <input type="button" onClick="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO">
+    <input type="button" onClick="safeNavigate()" value="GO">
   </form>
 </p>
 </body>
