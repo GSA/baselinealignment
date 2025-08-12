@@ -42,13 +42,22 @@ var AblePlayerInstances = [];
 	// Helper function to validate media src URLs
 	function isSafeMediaSrc(src) {
 		// Only allow http(s), relative URLs, and disallow javascript: and data: schemes
-		// You may want to further restrict to only allow certain file extensions
+		// Restrict to only allow certain file extensions (e.g., .mp4, .webm, .ogg, .mp3, .wav)
 		var pattern = /^(https?:\/\/|\.{0,2}\/|\/)[^<>"]+$/i;
 		if (!pattern.test(src)) {
 			return false;
 		}
 		// Disallow javascript: and data: schemes explicitly
 		if (/^\s*(javascript:|data:)/i.test(src)) {
+			return false;
+		}
+		// Only allow certain file extensions
+		var allowedExtensions = ['.mp4', '.webm', '.ogg', '.mp3', '.wav', '.m4a'];
+		var lowerSrc = src.toLowerCase();
+		var hasAllowedExtension = allowedExtensions.some(function(ext) {
+			return lowerSrc.endsWith(ext);
+		});
+		if (!hasAllowedExtension) {
 			return false;
 		}
 		return true;
