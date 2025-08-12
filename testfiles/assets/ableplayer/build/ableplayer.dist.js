@@ -38,6 +38,22 @@
 var AblePlayerInstances = [];
 
 (function ($) {
+
+	// Helper function to validate media src URLs
+	function isSafeMediaSrc(src) {
+		// Only allow http(s), relative URLs, and disallow javascript: and data: schemes
+		// You may want to further restrict to only allow certain file extensions
+		var pattern = /^(https?:\/\/|\.{0,2}\/|\/)[^<>"]+$/i;
+		if (!pattern.test(src)) {
+			return false;
+		}
+		// Disallow javascript: and data: schemes explicitly
+		if (/^\s*(javascript:|data:)/i.test(src)) {
+			return false;
+		}
+		return true;
+	}
+
 	$(document).ready(function () {
 
 		$('video, audio').each(function (index, element) {
@@ -4812,7 +4828,8 @@ var AblePlayerInstances = [];
 				if (typeof itemLang !== 'undefined') {
 					nowPlayingSpan.attr('lang',itemLang);
 				}
-				nowPlayingSpan.html('<span>' + this.tt.selectedTrack + ':</span>' + itemTitle);
+				nowPlayingSpan.append($('<span>').text(this.tt.selectedTrack + ':'));
+				nowPlayingSpan.append(document.createTextNode(itemTitle));
 				this.$nowPlayingDiv.html(nowPlayingSpan);
 			}
 		}
@@ -7497,7 +7514,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					origSrc = this.$sources[i].getAttribute('src');
 					descSrc = this.$sources[i].getAttribute('data-desc-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (descSrc) {
+					if (descSrc && isSafeMediaSrc(descSrc)) {
 						this.$sources[i].setAttribute('src',descSrc);
 						this.$sources[i].setAttribute('data-orig-src',origSrc);
 					}
