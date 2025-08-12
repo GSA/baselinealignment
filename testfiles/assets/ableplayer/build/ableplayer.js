@@ -6086,6 +6086,10 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 			 // return a URL for retrieving a YouTube poster image
 			 // supported values of width: 120, 320, 480, 640
 
+			 // Validate youTubeId: must be 11 characters, letters, numbers, - or _
+			 if (typeof youTubeId !== 'string' || !/^[a-zA-Z0-9_-]{11}$/.test(youTubeId)) {
+				 return false;
+			 }
 			 var url = 'https://img.youtube.com/vi/' + youTubeId;
 			 if (width == '120') {
 				 // default (small) thumbnail, 120 x 90
