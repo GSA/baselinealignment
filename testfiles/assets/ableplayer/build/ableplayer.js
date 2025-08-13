@@ -7532,7 +7532,10 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
 					if (origSrc && isSafeMediaUrl(origSrc)) {
-						this.$sources[i].setAttribute('src',origSrc);
+						var safeOrigSrc = sanitizeMediaUrl(origSrc);
+						if (safeOrigSrc) {
+							this.$sources[i].setAttribute('src', safeOrigSrc);
+						}
 					}
 				}
 				// No need to check for this.initializing
