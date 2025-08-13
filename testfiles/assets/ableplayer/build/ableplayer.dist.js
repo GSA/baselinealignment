@@ -7519,7 +7519,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc) {
+					if (origSrc && isSafeMediaSrc(origSrc)) {
 						this.$sources[i].setAttribute('src',origSrc);
 					}
 				}
