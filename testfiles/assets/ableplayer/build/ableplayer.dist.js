@@ -4815,11 +4815,10 @@ var AblePlayerInstances = [];
 						// Skip this track if src is not safe
 						return;
 					}
-					var $newTrack = $('<track>',{
-						'src': dataSrc,
-						'kind': $(this).attr('data-kind'),
-						'srclang': $(this).attr('data-srclang')
-					});
+					var $newTrack = $('<track>');
+					$newTrack.attr('src', String(dataSrc));
+					$newTrack.attr('kind', $(this).attr('data-kind'));
+					$newTrack.attr('srclang', $(this).attr('data-srclang'));
 					if (thisObj.hasAttr($(this),'data-label')) {
 						$newTrack.attr('label',$(this).attr('data-label'));
 					}
