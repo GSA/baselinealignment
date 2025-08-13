@@ -4815,11 +4815,10 @@ var AblePlayerInstances = [];
 						// Skip this track if src is not safe
 						return;
 					}
-					var $newTrack = $('<track>',{
-						'src': dataSrc,
-						'kind': $(this).attr('data-kind'),
-						'srclang': $(this).attr('data-srclang')
-					});
+					var $newTrack = $('<track>');
+					$newTrack.attr('src', String(dataSrc));
+					$newTrack.attr('kind', $(this).attr('data-kind'));
+					$newTrack.attr('srclang', $(this).attr('data-srclang'));
 					if (thisObj.hasAttr($(this),'data-label')) {
 						$newTrack.attr('label',$(this).attr('data-label'));
 					}
@@ -7519,7 +7518,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc) {
+					if (origSrc && isSafeMediaSrc(origSrc)) {
 						this.$sources[i].setAttribute('src',origSrc);
 					}
 				}
