@@ -42,13 +42,22 @@ var AblePlayerInstances = [];
 	// Helper function to validate media src URLs
 	function isSafeMediaSrc(src) {
 		// Only allow http(s), relative URLs, and disallow javascript: and data: schemes
-		// You may want to further restrict to only allow certain file extensions
+		// Restrict to only allow certain file extensions (e.g., .mp4, .webm, .ogg, .mp3, .wav)
 		var pattern = /^(https?:\/\/|\.{0,2}\/|\/)[^<>"]+$/i;
 		if (!pattern.test(src)) {
 			return false;
 		}
 		// Disallow javascript: and data: schemes explicitly
 		if (/^\s*(javascript:|data:)/i.test(src)) {
+			return false;
+		}
+		// Only allow certain file extensions
+		var allowedExtensions = ['.mp4', '.webm', '.ogg', '.mp3', '.wav', '.m4a'];
+		var lowerSrc = src.toLowerCase();
+		var hasAllowedExtension = allowedExtensions.some(function(ext) {
+			return lowerSrc.endsWith(ext);
+		});
+		if (!hasAllowedExtension) {
 			return false;
 		}
 		return true;
@@ -1078,12 +1087,16 @@ var AblePlayerInstances = [];
 				var $youTubeVideos = $(this).find('li[data-youtube-id]');
 				$youTubeVideos.each(function() {
 					var youTubeId = $(this).attr('data-youtube-id');
-					var youTubePoster = thisObj.getYouTubePosterUrl(youTubeId,'120');
-					var $youTubeImg = $('<img>',{
-						'src': youTubePoster,
-						'alt': ''
-					});
-					$(this).find('button').prepend($youTubeImg);
+					// Validate YouTube video ID: 11 chars, letters, numbers, - and _
+					if (/^[A-Za-z0-9_-]{11}$/.test(youTubeId)) {
+						var youTubePoster = thisObj.getYouTubePosterUrl(youTubeId,'120');
+						var $youTubeImg = $('<img>',{
+							'src': youTubePoster,
+							'alt': ''
+						});
+						$(this).find('button').prepend($youTubeImg);
+					}
+					// else: invalid ID, do not inject image
 				});
 
 				// add accessibility to the list markup
@@ -4766,20 +4779,24 @@ var AblePlayerInstances = [];
 		if ($sourceSpans.length) {
 			$sourceSpans.each(function() {
 				if (thisObj.hasAttr($(this),'data-src')) {
-					// this is the only required attribute
-					var $newSource = $('<source>',{
-						'src': $(this).attr('data-src')
-					});
-					if (thisObj.hasAttr($(this),'data-type')) {
-						$newSource.attr('type',$(this).attr('data-type'));
+					var dataSrc = $(this).attr('data-src');
+					if (isSafeMediaSrc(dataSrc)) {
+						// this is the only required attribute
+						var $newSource = $('<source>',{
+							'src': dataSrc
+						});
+						if (thisObj.hasAttr($(this),'data-type')) {
+							$newSource.attr('type',$(this).attr('data-type'));
+						}
+						if (thisObj.hasAttr($(this),'data-desc-src')) {
+							$newSource.attr('data-desc-src',$(this).attr('data-desc-src'));
+						}
+						if (thisObj.hasAttr($(this),'data-sign-src')) {
+							$newSource.attr('data-sign-src',$(this).attr('data-sign-src'));
+						}
+						thisObj.$media.append($newSource);
 					}
-					if (thisObj.hasAttr($(this),'data-desc-src')) {
-						$newSource.attr('data-desc-src',$(this).attr('data-desc-src'));
-					}
-					if (thisObj.hasAttr($(this),'data-sign-src')) {
-						$newSource.attr('data-sign-src',$(this).attr('data-sign-src'));
-					}
-					thisObj.$media.append($newSource);
+					// else: invalid src, do not add
 				}
 			});
 		}
@@ -4793,8 +4810,13 @@ var AblePlayerInstances = [];
 					thisObj.hasAttr($(this),'data-kind') &&
 					thisObj.hasAttr($(this),'data-srclang')) {
 					// all required attributes are present
+					var dataSrc = $(this).attr('data-src');
+					if (!isSafeMediaSrc(dataSrc)) {
+						// Skip this track if src is not safe
+						return;
+					}
 					var $newTrack = $('<track>',{
-						'src': $(this).attr('data-src'),
+						'src': dataSrc,
 						'kind': $(this).attr('data-kind'),
 						'srclang': $(this).attr('data-srclang')
 					});
