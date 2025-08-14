@@ -7518,8 +7518,12 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc && isSafeMediaSrc(origSrc)) {
-						this.$sources[i].setAttribute('src',origSrc);
+					if (
+						typeof origSrc === 'string' &&
+						isSafeMediaSrc(origSrc) &&
+						!/[<>"'`]/.test(origSrc) // extra check: disallow HTML meta-characters
+					) {
+						this.$sources[i].setAttribute('src', origSrc);
 					}
 				}
 				// No need to check for this.initializing
