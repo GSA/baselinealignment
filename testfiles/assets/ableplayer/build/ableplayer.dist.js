@@ -39,6 +39,16 @@ var AblePlayerInstances = [];
 
 (function ($) {
 
+	// Helper function to encode HTML entities
+	function escapeHtml(text) {
+		return String(text)
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	}
+
 	// Helper function to validate media src URLs
 	function isSafeMediaSrc(src) {
 		// Only allow http(s), relative URLs, and disallow javascript: and data: schemes
@@ -4783,7 +4793,7 @@ var AblePlayerInstances = [];
 					if (isSafeMediaSrc(dataSrc)) {
 						// this is the only required attribute
 						var $newSource = $('<source>',{
-							'src': dataSrc
+							'src': escapeHtml(dataSrc)
 						});
 						if (thisObj.hasAttr($(this),'data-type')) {
 							$newSource.attr('type',$(this).attr('data-type'));
@@ -4816,7 +4826,7 @@ var AblePlayerInstances = [];
 						return;
 					}
 					var $newTrack = $('<track>');
-					$newTrack.attr('src', String(dataSrc));
+					$newTrack.attr('src', dataSrc);
 					$newTrack.attr('kind', $(this).attr('data-kind'));
 					$newTrack.attr('srclang', $(this).attr('data-srclang'));
 					if (thisObj.hasAttr($(this),'data-label')) {
@@ -7518,8 +7528,12 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc && isSafeMediaSrc(origSrc)) {
-						this.$sources[i].setAttribute('src',origSrc);
+					if (
+						typeof origSrc === 'string' &&
+						isSafeMediaSrc(origSrc) &&
+						!/[<>"'`]/.test(origSrc) // extra check: disallow HTML meta-characters
+					) {
+						this.$sources[i].setAttribute('src', origSrc);
 					}
 				}
 				// No need to check for this.initializing
