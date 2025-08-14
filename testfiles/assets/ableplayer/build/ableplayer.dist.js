@@ -7533,7 +7533,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 						isSafeMediaSrc(origSrc) &&
 						!/[<>"'`]/.test(origSrc) // extra check: disallow HTML meta-characters
 					) {
-						this.$sources[i].setAttribute('src', origSrc);
+						this.$sources[i].setAttribute('src', escapeHtml(origSrc));
 					}
 				}
 				// No need to check for this.initializing
