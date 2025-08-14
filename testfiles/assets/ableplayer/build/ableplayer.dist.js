@@ -39,6 +39,16 @@ var AblePlayerInstances = [];
 
 (function ($) {
 
+	// Helper function to encode HTML entities
+	function escapeHtml(text) {
+		return String(text)
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	}
+
 	// Helper function to validate media src URLs
 	function isSafeMediaSrc(src) {
 		// Only allow http(s), relative URLs, and disallow javascript: and data: schemes
@@ -4783,7 +4793,7 @@ var AblePlayerInstances = [];
 					if (isSafeMediaSrc(dataSrc)) {
 						// this is the only required attribute
 						var $newSource = $('<source>',{
-							'src': dataSrc
+							'src': escapeHtml(dataSrc)
 						});
 						if (thisObj.hasAttr($(this),'data-type')) {
 							$newSource.attr('type',$(this).attr('data-type'));
