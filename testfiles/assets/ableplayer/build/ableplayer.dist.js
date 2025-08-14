@@ -4816,7 +4816,7 @@ var AblePlayerInstances = [];
 						return;
 					}
 					var $newTrack = $('<track>');
-					$newTrack.attr('src', String(dataSrc));
+					$newTrack.attr('src', dataSrc);
 					$newTrack.attr('kind', $(this).attr('data-kind'));
 					$newTrack.attr('srclang', $(this).attr('data-srclang'));
 					if (thisObj.hasAttr($(this),'data-label')) {
