@@ -7550,7 +7550,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					descSrc = this.$sources[i].getAttribute('data-desc-src');
 					srcType = this.$sources[i].getAttribute('type');
 					if (descSrc && isSafeMediaSrc(descSrc)) {
-						this.$sources[i].setAttribute('src',descSrc);
+						this.$sources[i].setAttribute('src', escapeHtml(descSrc));
 						this.$sources[i].setAttribute('data-orig-src',origSrc);
 					}
 				}
