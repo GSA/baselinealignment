@@ -12,9 +12,7 @@
     "ng": "ng",
     "start:ang": "ng serve --configuration development",
     "build:ang": "ng build --configuration dev",
-    "watch": "ng build --watch --configuration development",
-    "test:ang": "ng test",
-    "federalist": " bash ./angular-build.sh; "
+    "watch": "ng build --watch --configuration development"
   },
   "repository": {
     "type": "git",
