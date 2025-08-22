@@ -7,8 +7,7 @@ description: >-
   requirements. Two different processes that align to the Baseline 
   should produce the same replicable and reliable test results.
 
-theme: minima
-baseurl: /baselinealignment
+baseurl: ""
 
 primary_navigation:
   - name: Baseline Alignment Home
@@ -20,3 +19,9 @@ primary_navigation:
   - name: ICT Baseline (external)
     url: https://ictbaseline.access-board.gov/
     ext: true
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-redirect-from
+  - jekyll-sitemap # See additional instructions for url parameter above.
+  - jekyll-seo-tag

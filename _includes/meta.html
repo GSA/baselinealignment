@@ -4,8 +4,11 @@
 
     <title>{{page.title}}</title>
 
-    <!-- Bootstrap CSS -->
-<!--    <link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">-->
+    {% if page.scripts == "datatables" %} 
+    <!-- DataTables Style -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.3/css/dataTables.dataTables.css" />
+    {% endif %}
+
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

@@ -5,3 +5,14 @@
 <!-- custom JS for sidbar flyover, TOC generation etc. -->
 <script src="/baselinealignment/assets/js/baseline-align.js"></script>
 <script src="https://www.section508.gov/assets/js/uswds.min.js" defer="defer"></script>
+
+{% if page.scripts == "datatables" %}
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/2.3.3/js/dataTables.js" integrity="sha384-Xd9EI+3ANHTKs/M8nj3opCZh5f2/jQ6M60riN67nV9QBUqq18TptEuS0tHREh+DE" crossorigin="anonymous"></script>
+<script>
+    let table = new DataTable('#test-case-index', {
+        // options
+    });
+</script>
+{% endif %}
+
