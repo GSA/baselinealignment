@@ -1,147 +1,51 @@
 ---
 layout: page
-title: ICT Baseline Alignment Framework - Test Cases
+title: Test Cases - Baseline Alignment for Web
+scripts: datatables
 ---
-## Placeholder Index
+## Index of Test Cases
 
-Until we modify the primary index file, this serves as a placeholder with links to current test case documents.
+The table below lists the test cases for validating alignment of test processes to the [Section 508 ICT Testing Baseline for Web](https://ictbaseline.access-board.gov/).
 
-Test Case documents are organized by Baseline Test (each serving as a Test Scenario or general "functional requirement" for testing), which include multiple Test Cases. Will need to develop a Test Scenario template to summarize Test Scenario purpose and subordinate Test Cases
+Test Case documents are organized by Baseline Test; each ICT Baseline corresponds to multiple Test Cases. Each Test Case provides a specific example (with sample code) of web content that passes, fails, or does not apply to particular ICT Baseline. You can also use the following links to download expanded test case index information in JavaScript Object Notation (JSON) or Comma-Separated Variable (CSV) formats.
 
-* `1.` Keyboard Accessible
-  * [Keyboard Access - Functionality not keyboard accessible (TC01.1-1-fail-1)](testcases/TC01.1-1-fail-1.html)
-  * [Keyboard Access - individual keystrokes require specific timing (TC01.1-2-fail-1)](testcases/TC01.1-2-fail-1.html)
-* `5.` Changing Content
-  * [Changing Content - aria-live='off' (TC05.1-1-fail-1)](testcases/TC05.1-1-fail-1.html)
-* `6.` Images
-  * [Meaningful Image - no accessible name or description (TC06.1-1-fail-1)](testcases/TC06.1-1-fail-1.html)
-  * [Meaningful Image - with non-descriptive alt text (TC06.1-2-fail-1)](testcases/TC06.1-2-fail-1.html)
-  * [Meaningful Image - with role="presentation" (TC06.1-3-fail-1)](testcases/TC06.1-3-fail-1.html)
-  * [Meaningful Image - with role="none" (TC06.1-4-fail-1)](testcases/TC06.1-4-fail-1.html)
-  * [Meaningful Image - with aria-hidden="true" (TC06.1-5-fail-1)](testcases/TC06.1-5-fail-1.html)
-  * [Meaningful Image - text equivalent in alt attribute (TC06.1-all-pass-1)](testcases/TC06.1-all-pass-1.html)
-  * [Meaningful Image - text equivalent in title attribute (TC06.1-all-pass-2)](testcases/TC06.1-all-pass-2.html)
-  * [Meaningful Image - text equivalent in aria-label attribute (TC06.1-all-pass-3)](testcases/TC06.1-all-pass-3.html)
-  * [Meaningful Image - text equivalent in aria-labelledby attribute (TC06.1-all-pass-4)](testcases/TC06.1-all-pass-4.html)
-  * [Meaningful Image - text equivalent in aria-describedby attribute (TC06.1-all-pass-5)](testcases/TC06.1-all-pass-5.html)
-  * [Decorative Image - with no accessible name or description defined, not in background (TC06.2-all-fail-1)](testcases/TC06.2-all-fail-1.html)
-  * [Decorative Image - with non descriptive text in accessible name and description (TC06.2-all-fail-2)](testcases/TC06.2-all-fail-2.html)
-  * [Decorative Image - with descriptive text in accessible name (TC06.2-all-fail-3)](testcases/TC06.2-all-fail-3.html)
-  * [Decorative Image - with role equals presentation (TC06.2-1-pass-1)](testcases/TC06.2-1-pass-1.html)
-  * [Decorative Image - with role equals none (TC06.2-2-pass-1)](testcases/TC06.2-2-pass-1.html)
-  * [Decorative Image - with aria-hidden="true" (TC06.2-3-pass-1)](testcases/TC06.2-3-pass-1.html)
-  * [Decorative Image - with alt="" (TC06.2-4-pass-1)](testcases/TC06.2-4-pass-1.html)
-  * [Decorative Image - with image inserted via CSS (TC06.2-5-pass-1)](testcases/TC06.2-5-pass-1.html)
-  * [CAPTCHA - empty text alternative for CAPTCHA (TC06.3-1-fail-1)](testcases/TC06.3-1-fail-1.html)
-  * [CAPTCHA - non-empty text alternative, but does not identify or describe the purpose of the CAPTCHA (TC06.3-2-fail-1)](testcases/TC06.3-2-fail-1.html)
-  * [CAPTCHA - no alternative form of CAPTCHA provided for users without vision (TC06.3-3-fail-1)](testcases/TC06.3-3-fail-1.html)
-  * [CAPTCHA - no alternative form of CAPTCHA provided for users without hearing (TC06.3-3-fail-2)](testcases/TC06.3-3-fail-2.html)
-  * [CAPTCHA - text alternative identifies and describes purpose, and alternative forms of CAPTCHA provided for users without vision and users without hearing (TC06.3-all-pass-1)](testcases/TC06.3-all-pass-1.html)
-* `8.` Contrast
-  * [Contrast - Insufficient contrast ratio for small text (TC08.1-2-fail-1)](testcases/TC08.1-2-fail-1.html)
-  * [Contrast - Insufficient contrast ratio for 14 point font (TC08.1-2-fail-2)](testcases/TC08.1-2-fail-2.html)
-  * [Contrast - Insufficient contrast ratio for small text, when color changes on hover/focus (TC08.1-2-fail-3)](testcases/TC08.1-2-fail-3.html)
-  * [Contrast - Insufficient contrast ratio for small text in an image of text (TC08.1-2-fail-4)](testcases/TC08.1-2-fail-4.html)
-  * [Contrast - Contrast ratio greater than 4.5:1 (TC08.1-2-pass-1)](testcases/TC08.1-2-pass-1.html)
-  * [Contrast - Insufficient contrast ratio for 14 point, bolded text (TC08.1-3-fail-1)](testcases/TC08.1-3-fail-1.html)
-  * [Contrast - Insufficient contrast ratio for 18 point font (TC08.1-3-fail-2)](testcases/TC08.1-3-fail-2.html)
-  * [Contrast - 3:1 Contrast Ratio for 18 point font (TC08.1-3-pass-1)](testcases/TC08.1-3-pass-1.html)
-  * [Contrast - 3:1 contrast ratio for 14 point, bold font (TC08.1-3-pass-2)](testcases/TC08.1-3-pass-2.html)
-* `10.` Forms
-  * [Form Names: no accessible name or description (TC10.1-1-fail-1)](testcases/TC10.1-1-fail-1.html)
-  * [Form Names: accessible name from placeholder attribute (TC10.1-all-pass-1)](testcases/TC10.1-all-pass-1.html)
-  * [Form Names: accessible name from label/for binding (TC10.1-all-pass-2)](testcases/TC10.1-all-pass-2.html)
-  * [Form Names: accessible name from title attribute (TC10.1-all-pass-3)](testcases/TC10.1-all-pass-3.html)
-  * [Form Names: accessible name from aria-label attribute (TC10.1-all-pass-4)](testcases/TC10.1-all-pass-4.html)
-  * [Form Names: accessible name via aria-labelledby attribute (TC10.1-all-pass-5)](testcases/TC10.1-all-pass-5.html)
-  * [Form Names: accessible name via aria-describedby attribute (TC10.1-all-pass-6)](testcases/TC10.1-all-pass-6.html)
-  * [Form Names: hidden input element (visibility:hidden) (TC10.1-ic-dna-1)](testcases/TC10.1-ic-dna-1.html)
-  * [Form Names: hidden input element (display:none) (TC10.1-ic-dna-2)](testcases/TC10.1-ic-dna-2.html)
-  * [Form Label: Form component with no label nor instructions (TC10.5-1-fail-1)](testcases/TC10.5-1-fail-1.html)
-  * [Form Label: Form component with a clear label (TC10.5-1-pass-1)](testcases/TC10.5-1-pass-1.html)
-  * [Form Label: Form component with descriptive label (TC10.5-1-pass-2)](testcases/TC10.5-1-pass-2.html)
-  * [Form label: Form component with descriptive instructions (TC10.5-1-pass-3)](testcases/TC10.5-1-pass-3.html)
-* `11.` Page Titles
-  * [Page Titles - page with no title element (TC11.1-1-fail-1)](testcases/TC11.1-1-fail-1.html)
-  * [Page Titles - page with inaccurate title element (TC11.1-2-fail-1)](testcases/TC11.1-2-fail-1.html)
-* `12.` Tables
-  * [Data Tables - data table with role="presentation" (TC12.1-2-fail-1)](testcases/TC12.1-2-fail-1.html)
-  * [Table - data table in a `<table>` element and `role="none"` (TC12.1-2-fail-2)](testcases/TC12.1-2-fail-2.html)
-  * [Data table - `<td>` element in a table also includes `role = "cell"` (TC12.1-3-fail-1)](testcases/TC12.1-3-fail-1.html)
-  * [Data table - no `<th>` elements (TC12.1-4-fail-1)](testcases/TC12.1-4-fail-1.html)
-  * [Data table - with incorrect or invalid scope attribute defined (TC12.1-4-fail-2)](testcases/TC12.1-4-fail-2.html)
-  * [Data table - with scope attribute defined but insufficient to define all cell-header relationships (TC12.1-4-fail-3)](testcases/TC12.1-4-fail-3.html)
-  * [Data table - with scope attribute and ids defined but incorrect header references (TC12.1-4-fail-4)](testcases/TC12.1-4-fail-4.html)
-  * [Data table - with incorrect or incomplete id/header references (TC12.1-4-fail-5)](testcases/TC12.1-4-fail-5.html)
-  * [Data table - not using native `<table>` and incorrect or missing roles for row and column headers (TC12.1-4-fail-6)](testcases/TC12.1-4-fail-6.html)
-  * [Data table - Pass - simple table with `<th>` elements to denote headers](testcases/TC12.1-all-pass-1.html)
-* `13.` Content Structure
-  * [Descriptive Headings - with a visual heading that does not describe purpose or topic of its contents (TC13.1-1-fail-1)](testcases/TC13.1-1-fail-1.html)
-  * [Descriptive Headings - with an extended heading that describes purpose and/or topic of its contents (TC13.1-1-pass-1)](testcases/TC13.1-1-pass-1.html)
-  * [Descriptive Headings - with an extended heading that describes purpose and/or topic of its contents (TC13.1-1-pass-2)](testcases/TC13.1-1-pass-2.html)
-  * [Visual Headings - most important heading does not have the higher priority level programmatically (TC13.2-1.a-fail-1)](testcases/TC13.2-1.a-fail-1.html)
-  * [Visual Headings - programmatic heading levels do not match the visual hierarchy(TC13.2-1.a-fail-2)](testcases/TC13.2-1.a-fail-2.html)
-  * [Visual Headings - same heading level used for subsections and more major heading (TC13.2-1.b-fail-1)](testcases/TC13.2-1.b-fail-1.html)
-  * [Visual Headings - visual heading not defined programmatically (TC13.2-1.c-fail-1)](testcases/TC13.2-1.c-fail-1.html)
-  * [Visual Headings - visual heading has conflicting heading levels (TC13.2-1.c-fail-2)](testcases/TC13.2-1.c-fail-2.html)
-  * [Visual Headings -  multiple visually apparent heading levels identified using HTML AND role="heading", undefined aria-level (TC13.2-1.c-fail-3)](testcases/TC13.2-1.c-fail-3.html)
-  * [Visual Headings - multiple visually apparent headings identified using ARIA role=heading, undefined aria-level attributes (TC13.2-1.c-fail-4)](testcases/TC13.2-1.c-fail-4.html)
-  * [Visual Headings - multiple visually apparent heading levels identified using HTML (TC13.2-all-pass-1)](testcases/TC13.2-all-pass-1.html)
-  * [Visual Headings - multiple visually apparent heading levels identified using ARIA (TC13.2-all-pass-2)](testcases/TC13.2-all-pass-2.html)
-  * [Visual Headings - multiple visually apparent heading levels identified using HTML and ARIA (TC13.2-all-pass-3)](testcases/TC13.2-all-pass-3.html)
-  * [Visual Headings - no visually apparent headings (13.2-ic-dna-1)](testcases/TC13.2-ic-dna-1.html)
-  * [Visual Headings - programmatically defined headings, but none visually apparent (13.2-ic-dna-2)](testcases/TC13.2-ic-dna-2.html)
-  * [Programmatic Headings - non-visual heading has heading structure (TC13.3-1-fail-1)](testcases/TC13.3-1-fail-1.html)
-  * [Programmatic Headings - navigation menu items have heading structure (TC13.3-1-fail-2)](testcases/TC13.3-1-fail-2.html)
-  * [Programmatic Headings -correct structure and levels (TC13.3-1-pass-1)](testcases/TC13.3-1-pass-1.html)
-  * [Programmatic Headings - no programmatic headings (13.3-ic-dna-1)](textcases/TC13.3-ic-dna-1.html)
-  * [Programmatic Headings - visually apparent headings but no programmatic headings (TC13.3-ic-dna-2)](testcases/TC13.3-ic-dna-2.html)
-  * [Visually Apparent Lists - visually apparent unordered list not identified as a list programmatically (TC13.4-1-fail-1)](testcases/TC13.4-1-fail-1.html)
-  * [Visually Apparent Lists - visually apparent unordered list correctly identified as a list programmatically (TC13.4-1-pass-1)](testcases/TC13.4-1-pass-1.html)
-  * [Visually Apparent Lists - visually apparent ordered list not identified as a list programmatically (TC13.4-2-fail-1)](testcases/TC13.4-2-fail-1.html)
-  * [Visually Apparent Lists - visually apparent ordered list identified programmatically as unordered list (TC13.4-2-fail-2)](testcases/TC13.4-2-fail-2.html)
-  * [Visually Apparent Lists - visually apparent ordered list correctly identified programmatically as ordered list (TC13.4-2-pass-2)](testcases/TC13.4-2-pass-2.html)
-  * [Visually Apparent Lists - visually apparent description list not identified programmatically (TC13.4-3-fail-2)](testcases/TC13.4-3-fail-2.html)
-  * [Visually Apparent Lists - visually apparent description list correctly identified programmatically (TC13.4-3-pass-2)](testcases/TC13.4-3-pass-2.html)
-  * [Visually Apparent Lists - no visually apparent list (TC13.4-ic-dna-1)](testcases/TC13.4-ic-dna-1.html)
-* `14.` Links
-  * [Link Purpose (In Context) - Page with No Links (TC14.1-ic-dna-1)](testcases/TC14.1-ic-dna-1.html)
-  * [Link Purpose (In Context) - Image/link has empty accessible name and description (TC14.1-1-fail-1)](testcases/TC14.1-1-fail-1.html)
-  * [Link Purpose (In Context) - Link that does not sufficiently describe its purpose (TC14.1-2-fail-1)](testcases/TC14.1-2-fail-1.html)
-  * [Link Purpose (In Context) - The purpose of each link can be determined from the link text (TC14.1-all-pass-1)](testcases/TC14.1-all-pass-1.html)
-* `15.` Language
-  * [Language of Page - Pass (TC15.1-all-pass-1)](testcases/TC15.1-all-pass-1.html)
-  * [Language of Page - not identified (TC15.1-2-fail-1)](testcases/TC15.1-2-fail-1.html)
-  * [Language of Page - lang attribute on wrong tag (TC15.1-2-fail-2)](testcases/TC15.1-2-fail-2.html)
-  * [Language of Page - invalid language subtag (TC15.1-3-fail-1)](testcases/TC15.1-3-fail-1.html)
-  * [Language of Page - wrong language identified (TC15.1-3-fail-2)](testcases/TC15.1-3-fail-2.html)
-  * [Language of Parts - Pass (TC15.2-all-pass-1)](testcases/TC15.2-all-pass-1.html)
-  * [Language of Parts - not identified (TC15.2-2-fail-1)](testcases/TC15.2-2-fail-1.html)
-  * [Language of Parts - invalid language subtag (TC15.2-3-fail-1)](testcases/TC15.2-3-fail-1.html)
-  * [Language of Parts - incorrect language identified (TC15.2-3-fail-2)](testcases/TC15.2-3-fail-2.html)
-  * [Language of Parts - Does Not Apply (TC15.2-ic-dna-1)](testcases/TC15.2-ic-dna-1.html)
-* `16.` Audio-Only and Video-Only
-  * [Audio-Only - No audio-only content (TC16.1-ic-dna-1)](testcases/TC16.1-ic-dna-1.html)
-  * [Audio-Only - No transcript provided for audio-only content (TC16.1-1-fail-1)](testcases/TC16.1-1-fail-1.html)
-  * [Audio-Only - Transcript provided is an image of text (with no text alternative) (TC16.1-2-fail-1)](testcases/TC16.1-2-fail-1.html)
-  * [Audio-Only - Transcript provided is an image of text (with equivalent text alternative) (TC16.1-2-fail-2)](testcases/TC16.1-2-fail-2.html)
-  * [Audio-Only - Complete text transcript provided (TC16.1-all-pass-1)](testcases/TC16.1-all-pass-1.html)
-* `17.` Synchronized Media
-  * [ Media Player Controls - no synchronized media player on page (TC17.1-ic-dna-1)](testcases/TC17.1-ic-dna-1.html)
-  * [ Media Player Controls - media player on page, but it does not play synchronized media (only audio-only) (TC17.1-ic-dna-2)](testcases/TC17.1-ic-dna-2.html)
-  * [ Media Player Controls - no controls for captions or for audio descriptions (TC17.1-1-fail-1)](testcases/TC17.1-1-fail-1.html)
-  * [ Media Player Controls - controls for captions, but not for audio descriptions (TC17.1-1-fail-2)](testcases/TC17.1-1-fail-2.html)
-  * [ Media Player Controls - controls for audio descriptions, but not for captions (TC17.1-fail-3)](testcases/TC17.1-1-fail-3.html)
-  * [ Media Player Controls - controls provided for both captions and audio descriptions (TC17.1-all-pass-1)](testcases/TC17.1-all-pass-1.html)
-  * [ Media Player Caption Control Level - no synchronized media player on page (TC17.2-ic-dna-1)](testcases/TC17.2-ic-dna-1.html)
-  * [ Media Player Caption Control Level - media player on page, but it does not play synchronized media (only audio-only) (TC17.2-ic-dna-2)](testcases/TC17.2-ic-dna-2.html)
-  * [ Media Player Audio Description Control Level - no synchronized media player on page (TC17.3-ic-dna-1)](testcases/TC17.3-ic-dna-1.html)
-  * [ Media Player Audio Description Control Level - media player does not play synchronized media (only audio) (TC17.3-ic-dna-2)](testcases/TC17.3-ic-dna-2.html)
-  * [ Captions (Prerecorded) - no synchronized media on page (TC17.4-ic-dna-1)](testcases/TC17.4-ic-dna-1.html)
-  * [ Captions (Prerecorded) - no captions (TC17.4-2-fail-1)](testcases/TC17.4-2-fail-1.html)
-  * [ Captions (Prerecorded) - inaccurate captions (TC17.4-3b-fail-2)](testcases/TC17.4-3b-fail-2.html)
-  * [ Captions (Prerecorded) - captions are complete, accurate, synchronized, and do not obscure other important on-screen text (TC17.4-all-pass-1)](testcases/TC17.4-all-pass-1.html)
-  * [ Audio Description (Prerecorded) - no synchronized media on page (TC17.5-ic-dna-1)](testcases/TC17.5-ic-dna-1.html)
-  * [ Audio Description (Prerecorded) - no audio descriptions (TC17.5-2-fail-1)](testcases/TC17.5-2-fail-1.html)
-  * [ Audio Description (Prerecorded) - audio descriptions do not adequately describe important visual content (TC17.5-3-fail-1)](testcases/TC17.5-3-fail-1.html)
-  * [ Audio Description (Prerecorded) - audio descriptions adequately describe all important visual content (TC17.5-all-pass-1)](testcases/TC17.5-all-pass-1.html)
+[Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) <span>|</span> [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
+
+<table id="test-case-index" class="display" data-order='[[ 1, "asc" ]]' >
+  <caption>
+    Index of Baseline Alignment Framework Test Cases
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">ICT Baseline</th>
+      <th scope="col">Test Case</th>
+      <th scope="col">Sample Code</th>
+      <th scope="col">Relevant Standard</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for page in site.pages %}
+      {% if page.layout == "testcase" %}
+      {% assign baselineID = page.tcid | slice: 2, 2 %}
+      <tr>
+        <td>
+        {% for baseline in site.data.baselines %}
+          {% if baseline.id == baselineID %}
+          <a href="{{ baseline.url }}">{{ baseline.name }}</a>
+          {% endif %} 
+        {% endfor %}
+        </td>
+        <td>
+          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.tcid }} {{ page.title | markdownify }}</a>
+        </td>
+        <td>
+          <a href="{{ site.baseurl }}{{ page.sample }}">Test Page</a>
+        </td>
+        <td>
+          {{ page.standard }} {{ page.standard-ref }}
+        </td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
