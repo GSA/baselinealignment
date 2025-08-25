@@ -10,9 +10,9 @@
 <!-- DataTables JS -->
 <script src="https://cdn.datatables.net/2.3.3/js/dataTables.js" integrity="sha384-Xd9EI+3ANHTKs/M8nj3opCZh5f2/jQ6M60riN67nV9QBUqq18TptEuS0tHREh+DE" crossorigin="anonymous"></script>
 <script>
-    let table = new DataTable('#test-case-index', {
-        // options
-    });
+    $(document).ready( function () {
+        $('#test-case-index').DataTable();
+    } );
 </script>
 {% endif %}
 

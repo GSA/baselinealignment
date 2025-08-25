@@ -11,7 +11,7 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
 
 [Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) <span>|</span> [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
 
-<table id="test-case-index" class="display" data-order='[[ 1, "asc" ]]' >
+<table id="test-case-index" class="display compact" data-order='[[ 1, "asc" ]]' data-page-length='25'>
   <caption>
     Index of Baseline Alignment Framework Test Cases
   </caption>
