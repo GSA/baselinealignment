@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC2.B-2-fail-2 Focus Order Does Not Preserve Usability (2.4.3)</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            line-height: 1.6;
+        }
+        *:focus { outline: 3px solid #ff8800; outline-offset: 2px; }
+
+        .menu-trigger {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .menu {
+            list-style: none;
+            margin: 0.25rem 0 0;
+            padding: 0;
+            border: 1px solid #ccc;
+            width: 220px;
+            display: none;
+        }
+        .menu.open { display: block; }
+        .menu li a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #003366;
+            border-bottom: 1px solid #eee;
+        }
+        .menu li a:hover { background: #f0f4f8; }
+        .note {
+            background: #fff3cd; border: 1px solid #ffc107;
+            padding: 0.75rem; border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Account Menu</h1>
+
+    <p class="note">
+        <strong>Test focus:</strong> The menu opens, closes, and returns focus
+        to the trigger correctly (earlier steps PASS). However, the focus order
+        <em>within</em> the revealed menu does not match the visible reading
+        order — meaning is preserved (all items reachable), but usability is
+        degraded (final check FAILS).
+    </p>
+
+    <button class="menu-trigger" id="menuTrigger"
+            aria-haspopup="true" aria-expanded="false" aria-controls="accountMenu">
+        Account Options ▾
+    </button>
+
+    <!-- The menu items appear VISUALLY in this reading order:
+         1. Profile  2. Settings  3. Billing  4. Notifications  5. Sign out -->
+    <ul class="menu" id="accountMenu" role="menu" aria-label="Account Options">
+        <!-- ❌ Positive tabindex values scramble the KEYBOARD focus order so it
+             does NOT follow the visible top-to-bottom reading order. All items
+             remain reachable (meaning preserved), and focus still returns to
+             the trigger on close (mechanics pass) — but the tab sequence is:
+             Sign out → Profile → Notifications → Settings → Billing.
+             That mismatch means focus order does not preserve usability. -->
+        <li role="none"><a role="menuitem" href="#profile"       tabindex="2">Profile</a></li>
+        <li role="none"><a role="menuitem" href="#settings"      tabindex="4">Settings</a></li>
+        <li role="none"><a role="menuitem" href="#billing"       tabindex="5">Billing</a></li>
+        <li role="none"><a role="menuitem" href="#notifications" tabindex="3">Notifications</a></li>
+        <li role="none"><a role="menuitem" href="#signout"       tabindex="1">Sign out</a></li>
+    </ul>
+
+    <p><a href="#next">Continue to dashboard</a></p>
+
+    <script>
+        const trigger = document.getElementById('menuTrigger');
+        const menu = document.getElementById('accountMenu');
+
+        function openMenu() {
+            menu.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            // Move focus into the revealed content (first item in tab order)
+            menu.querySelector('[tabindex="1"]').focus();
+        }
+        function closeMenu(returnFocus) {
+            menu.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+            if (returnFocus) trigger.focus(); // ✅ focus returns to trigger
+        }
+
+        trigger.addEventListener('click', () => {
+            menu.classList.contains('open') ? closeMenu(true) : openMenu();
+        });
+
+        // Escape closes the menu and returns focus to the trigger (PASS)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menu.classList.contains('open')) {
+                closeMenu(true);
+            }
+        });
+    </script>
+</body>
+</html>
