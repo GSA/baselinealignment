@@ -7,7 +7,6 @@ description: >-
   requirements. Two different processes that align to the Baseline 
   should produce the same replicable and reliable test results.
 
-theme: minima
 baseurl: /baselinealignment
 
 primary_navigation:
