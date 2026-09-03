@@ -1,0 +1,72 @@
+@media (min-width: 64em) {
+    .usa-banner__inner, .usa-navbar, .usa-nav__inner, .usa-footer__primary-section .grid-container,
+    .usa-header--extended .usa-navbar {
+        padding-left: 2rem !important;
+    }
+}
+.baseline-menu .usa-nav__primary > .usa-nav__primary-item > a {
+    font-weight: normal;
+}
+
+.baseline-menu .usa-nav__primary > .usa-nav__primary-item > a:hover {
+    color: #005ea2;
+}
+
+.baseline-menu.usa-header--extended .usa-nav__primary-item > .usa-current::after,
+.baseline-menu.usa-header--extended .usa-nav__primary-item > .usa-nav__link:hover::after {
+    background-color: #005ea2;
+}
+
+.layout-testcase .usa-in-page-nav-container main {
+    max-width: 43rem;
+}
+
+@media (max-width: 820px) {
+    .layout-testcase .usa-in-page-nav-container main {
+        max-width: 31rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout-testcase .usa-in-page-nav-container main {
+        max-width: 28rem;
+    }
+}
+
+code {
+    color: #d83933 !important;
+}
+
+#ta_code {
+    white-space: pre;
+    display: inline-block;
+    margin: 0;
+    font: 14px / 1.625em Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+    padding: 0 .5em;
+}
+
+iframe#codeframe {
+    width: 100%;
+}
+
+.usa-table thead th {
+    background-color: #f0f0f0;
+}
+
+.usa-table tbody th {
+    font-weight: bold;
+}
+
+.usa-table tbody th,
+.usa-table tbody td {
+    vertical-align: top;
+}
+
+#codelink {
+    overflow: hidden;
+}
+
+#TCsteps_table table caption {
+    visibility: hidden;
+    height: 0;
+}

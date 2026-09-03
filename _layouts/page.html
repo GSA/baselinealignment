@@ -6,12 +6,19 @@ layout: base
 This template is for a basic single page with bootstrap 'card' holders for content
 {% endcomment %}
 
-{% include toc.html %}
-
-<main class="container-fluid mb-auto flex-shrink-0" id="main-content">
-    <div class="row" id="card-holder">
-        <div class="col-md-9 col-xl-8 py-1 px-1 py-md-2 pl-md-3 offset-md-3 offset-xl-2 order-1">
-            {{ content }}
+<div id="main-content" class="usa-layout-docs usa-section layout-{{ page.layout }}">
+    <div class="grid-container active">
+        <div class="usa-in-page-nav-container">
+            <aside class="usa-in-page-nav"
+                   data-title-text="Table of Contents"
+                   data-title-heading-level="h2"
+                   data-scroll-offset="0"
+                   data-root-margin="0px 0px 0px 0px"
+                   data-threshold="1">
+            </aside>
+            <main class="main-content usa-graphic-list">
+                {{ content }}
+            </main>
         </div>
     </div>
-</main>
+</div>

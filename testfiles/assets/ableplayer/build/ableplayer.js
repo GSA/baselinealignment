@@ -37,6 +37,44 @@
 // maintain an array of Able Player instances for use globally (e.g., for keeping prefs in sync)
 var AblePlayerInstances = [];
 
+// Helper function to sanitize media URLs for <source> elements
+function sanitizeMediaUrl(url) {
+	// Only allow http, https, or relative URLs (no protocol-relative, javascript:, data:, etc.)
+	if (typeof url !== 'string') return '';
+	// Remove leading/trailing whitespace
+	url = url.trim();
+	// Disallow any URLs containing dangerous characters or schemes
+	// Only allow http(s) URLs or relative URLs that do not contain suspicious characters
+	var pattern = /^(https?:\/\/[a-zA-Z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+|\.?\.?\/[a-zA-Z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+)$/i;
+	if (!pattern.test(url)) {
+		return '';
+	}
+	// Disallow javascript:, data:, vbscript: even if obfuscated
+	var lowerUrl = url.toLowerCase();
+	if (
+		lowerUrl.startsWith('javascript:') ||
+		lowerUrl.startsWith('data:') ||
+		lowerUrl.startsWith('vbscript:')
+	) {
+		return '';
+	}
+	// Optionally, use the URL constructor for absolute URLs to further validate
+	try {
+		if (/^https?:\/\//i.test(url)) {
+			var parsed = new URL(url);
+			// Only allow http and https protocols
+			if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+				return '';
+			}
+			return parsed.href;
+		}
+		// For relative URLs, just return the sanitized string
+		return url;
+	} catch (e) {
+		return '';
+	}
+}
+
 (function ($) {
 	$(document).ready(function () {
 
@@ -4752,7 +4790,7 @@ var AblePlayerInstances = [];
 				if (thisObj.hasAttr($(this),'data-src')) {
 					// this is the only required attribute
 					var $newSource = $('<source>',{
-						'src': $(this).attr('data-src')
+						'src': encodeURI($(this).attr('data-src'))
 					});
 					if (thisObj.hasAttr($(this),'data-type')) {
 						$newSource.attr('type',$(this).attr('data-type'));
@@ -4778,7 +4816,7 @@ var AblePlayerInstances = [];
 					thisObj.hasAttr($(this),'data-srclang')) {
 					// all required attributes are present
 					var $newTrack = $('<track>',{
-						'src': $(this).attr('data-src'),
+						'src': encodeURI($(this).attr('data-src')),
 						'kind': $(this).attr('data-kind'),
 						'srclang': $(this).attr('data-srclang')
 					});
@@ -4812,7 +4850,9 @@ var AblePlayerInstances = [];
 				if (typeof itemLang !== 'undefined') {
 					nowPlayingSpan.attr('lang',itemLang);
 				}
-				nowPlayingSpan.html('<span>' + this.tt.selectedTrack + ':</span>' + itemTitle);
+				var labelSpan = $('<span>').text(this.tt.selectedTrack + ':');
+				nowPlayingSpan.append(labelSpan);
+				nowPlayingSpan.append(document.createTextNode(itemTitle));
 				this.$nowPlayingDiv.html(nowPlayingSpan);
 			}
 		}
@@ -6046,6 +6086,10 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 			 // return a URL for retrieving a YouTube poster image
 			 // supported values of width: 120, 320, 480, 640
 
+			 // Validate youTubeId: must be 11 characters, letters, numbers, - or _
+			 if (typeof youTubeId !== 'string' || !/^[a-zA-Z0-9_-]{11}$/.test(youTubeId)) {
+				 return false;
+			 }
 			 var url = 'https://img.youtube.com/vi/' + youTubeId;
 			 if (width == '120') {
 				 // default (small) thumbnail, 120 x 90
@@ -7476,12 +7520,22 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 
 			if (this.usingAudioDescription()) {
 				// the described version is currently playing. Swap to non-described
+				// Helper function to validate media URLs
+				function isSafeMediaUrl(url) {
+					// Only allow http, https, or relative URLs (no javascript: or data:)
+					if (!url) return false;
+					var pattern = /^(https?:\/\/|\/|\.\/|\.\.\/)[^\s]*$/i;
+					return pattern.test(url);
+				}
 				for (i=0; i < this.$sources.length; i++) {
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc) {
-						this.$sources[i].setAttribute('src',origSrc);
+					if (origSrc && isSafeMediaUrl(origSrc)) {
+						var safeOrigSrc = sanitizeMediaUrl(origSrc);
+						if (safeOrigSrc) {
+							this.$sources[i].setAttribute('src', safeOrigSrc);
+						}
 					}
 				}
 				// No need to check for this.initializing
@@ -7498,8 +7552,11 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					descSrc = this.$sources[i].getAttribute('data-desc-src');
 					srcType = this.$sources[i].getAttribute('type');
 					if (descSrc) {
-						this.$sources[i].setAttribute('src',descSrc);
-						this.$sources[i].setAttribute('data-orig-src',origSrc);
+						var safeDescSrc = sanitizeMediaUrl(descSrc);
+						if (safeDescSrc) {
+							this.$sources[i].setAttribute('src', safeDescSrc);
+							this.$sources[i].setAttribute('data-orig-src', origSrc);
+						}
 					}
 				}
 				this.swappingSrc = true;
@@ -9925,7 +9982,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 		if (typeof thisCaption !== 'undefined') {
 			if (this.currentCaption !== thisCaption) {
 				// it's time to load the new caption into the container div
-				captionText = this.flattenCueForCaption(cues[thisCaption]).replace('\n', '<br>');
+				captionText = this.flattenCueForCaption(cues[thisCaption]).replace(/\n/g, '<br>');
 				this.$captionsDiv.html(captionText);
 				this.currentCaption = thisCaption;
 				if (captionText.length === 0) {
@@ -10490,7 +10547,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 			if (this.currentMeta !== thisMeta) {
 				if (this.metaType === 'text') {
 					// it's time to load the new metadata cue into the container div
-					this.$metaDiv.html(this.flattenCueForMeta(cues[thisMeta]).replace('\n', '<br>'));
+					this.$metaDiv.html(this.flattenCueForMeta(cues[thisMeta]).replace(/\n/g, '<br>'));
 				}
 				else if (this.metaType === 'selector') {
 					// it's time to show content referenced by the designated selector(s)
@@ -11190,7 +11247,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					if (typeof result === 'string') {
 						if (thisObj.lyricsMode) {
 							// add <br> BETWEEN each caption and WITHIN each caption (if payload includes "\n")
-							result = result.replace('\n','<br>') + '<br>';
+							result = result.replace(/\n/g, '<br>') + '<br>';
 						}
 						else {
 							// just add a space between captions
@@ -13250,99 +13307,119 @@ console.log('You pushed ESC');
 })(jQuery);
 
 (function ($) {
-	AblePlayer.prototype.initSignLanguage = function() {
 
-		// Sign language is only currently supported in HTML5 player, not YouTube or Vimeo
-		if (this.player === 'html5') {
-			// check to see if there's a sign language video accompanying this video
-			// check only the first source
-			// If sign language is provided, it must be provided for all sources
-			this.signFile = this.$sources.first().attr('data-sign-src');
-			if (this.signFile) {
-  		  if (this.isIOS()) {
-    		  // IOS does not allow multiple videos to play simultaneously
-    		  // Therefore, sign language as rendered by Able Player unfortunately won't work
+  AblePlayer.prototype.initSignLanguage = function () {
+
+    // Helper to sanitize and validate sign language video URLs
+    function sanitizeURL(url) {
+      try {
+        return new URL(url, window.location.href).href;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // Sign language is only currently supported in HTML5 player, not YouTube or Vimeo
+    if (this.player === 'html5') {
+      // check to see if there's a sign language video accompanying this video
+      // check only the first source
+      // If sign language is provided, it must be provided for all sources
+      let rawSignFile = this.$sources.first().attr('data-sign-src');
+      this.signFile = sanitizeURL(rawSignFile);
+
+      if (this.signFile) {
+        if (this.isIOS()) {
+          // IOS does not allow multiple videos to play simultaneously
           this.hasSignLanguage = false;
           if (this.debug) {
             console.log('Sign language has been disabled due to IOS restrictions');
           }
-        }
-        else {
-  				if (this.debug) {
-	  				console.log('This video has an accompanying sign language video: ' + this.signFile);
+        } else {
+          if (this.debug) {
+            console.log('This video has an accompanying sign language video: ' + this.signFile);
           }
           this.hasSignLanguage = true;
           this.injectSignPlayerCode();
         }
-			}
-			else {
-				this.hasSignLanguage = false;
-			}
-		}
-		else {
-			this.hasSignLanguage = false;
-		}
-	};
+      }
+      else {
+        this.hasSignLanguage = false;
+      }
+    }
+    else {
+      this.hasSignLanguage = false;
+    }
+  };
 
-	AblePlayer.prototype.injectSignPlayerCode = function() {
+  AblePlayer.prototype.injectSignPlayerCode = function () {
 
-		// create and inject surrounding HTML structure
+    // Helper to sanitize and validate URLs
+    function sanitizeURL(url) {
+      try {
+        return new URL(url, window.location.href).href;
+      } catch (e) {
+        return null;
+      }
+    }
 
-		var thisObj, signVideoId, signVideoWidth, i, signSrc, srcType, $signSource;
+    var thisObj, signVideoId, signVideoWidth, i, signSrc, srcType, $signSource;
 
-		thisObj = this;
+    thisObj = this;
 
-		signVideoWidth = this.getDefaultWidth('sign');
+    signVideoWidth = this.getDefaultWidth('sign');
 
-		signVideoId = this.mediaId + '-sign';
-		this.$signVideo = $('<video>',{
-			'id' : signVideoId,
-			'tabindex' : '-1'
-		});
-		this.signVideo = this.$signVideo[0];
-		// for each original <source>, add a <source> to the sign <video>
-		for (i=0; i < this.$sources.length; i++) {
-			signSrc = this.$sources[i].getAttribute('data-sign-src');
-			srcType = this.$sources[i].getAttribute('type');
-			if (signSrc) {
-				$signSource = $('<source>',{
-					'src' : signSrc,
-					'type' : srcType
-				});
-				this.$signVideo.append($signSource);
-			}
-			else {
-				// source is missing a sign language version
-				// can't include sign language
-				this.hasSignLanguage = false;
-				break;
-			}
-		}
+    signVideoId = this.mediaId + '-sign';
+    this.$signVideo = $('<video>', {
+      'id': signVideoId,
+      'tabindex': '-1'
+    });
+    this.signVideo = this.$signVideo[0];
 
-		this.$signWindow = $('<div>',{
-			'class' : 'able-sign-window',
-  		'role': 'dialog',
+    // for each original <source>, add a <source> to the sign <video>
+    for (i = 0; i < this.$sources.length; i++) {
+      signSrc = this.$sources[i].getAttribute('data-sign-src');
+      srcType = this.$sources[i].getAttribute('type');
+
+      signSrc = sanitizeURL(signSrc); // ✅ Fix is here
+
+      if (signSrc) {
+        $signSource = $('<source>', {
+          'src': signSrc,
+          'type': srcType
+        });
+        this.$signVideo.append($signSource);
+      }
+      else {
+        // source is missing a sign language version
+        this.hasSignLanguage = false;
+        break;
+      }
+    }
+
+    this.$signWindow = $('<div>', {
+      'class': 'able-sign-window',
+      'role': 'dialog',
       'aria-label': this.tt.sign
-		});
-		this.$signToolbar = $('<div>',{
-			'class': 'able-window-toolbar able-' + this.toolbarIconColor + '-controls'
-		});
+    });
+    this.$signToolbar = $('<div>', {
+      'class': 'able-window-toolbar able-' + this.toolbarIconColor + '-controls'
+    });
 
-		this.$signWindow.append(this.$signToolbar, this.$signVideo);
+    this.$signWindow.append(this.$signToolbar, this.$signVideo);
 
-		this.$ableWrapper.append(this.$signWindow);
+    this.$ableWrapper.append(this.$signWindow);
 
-		// make it draggable
-		this.initDragDrop('sign');
+    // make it draggable
+    this.initDragDrop('sign');
 
-		if (this.prefSign === 1) {
-			// sign window is on. Go ahead and position it and show it
-			this.positionDraggableWindow('sign',this.getDefaultWidth('sign'));
-		}
-		else {
-			this.$signWindow.hide();
-		}
-	};
+    if (this.prefSign === 1) {
+      // sign window is on. Go ahead and position it and show it
+      this.positionDraggableWindow('sign', this.getDefaultWidth('sign'));
+    }
+    else {
+      this.$signWindow.hide();
+    }
+  };
 
 })(jQuery);
 

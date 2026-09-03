@@ -1,22 +1,23 @@
- 
-<!-- Primary site nav manu -->
-<nav class="col d-none d-md-block bg-light col-md-3 col-xl-2 base-nav order-0 px-0 shadow fixed-sidebar" id="site-nav" aria-label="primary navigation">
-    <div class="px-2 row">
-        <h4 class="text-dark bg-light d-inline-block ml-2 my-auto p-2">Menu</h4>
-        <a href="javascript:void(0)" onclick="sidebarOpenClose()" class="d-none btn btn-light my-1 mr-2 ml-auto text-danger" aria-label="Close Nave Menu" id="closeSidebar"><i class="fa fa-remove"></i></a>
+<header class="usa-header usa-header--extended baseline-menu">
+  <nav aria-label="Primary site navigation" class="usa-nav site-nav sticky" id="site-nav">
+    <div class="usa-nav__inner site-nav__inner">
+      <button class="usa-nav__close"><img alt="close" src="https://www.section508.gov/assets/img/close.svg"></button>
+      <!-- Desktop nav -->
+      <ul class="usa-nav__primary usa-nav__primary--desktop usa-accordion">
+        {% for nav_item in site.primary_navigation %}
+        <li class="usa-nav__primary-item"><a
+            href="{% if nav_item.ext == true %}{{ nav_item.url }}{% else %}{{ nav_item.url | prepend: site.baseurl }}{% endif %}"
+            data-page-url="{{ page.url }}"
+            data-nav-item-url="{{ nav_item.url }}"
+            class="usa-nav__link{% if page.url == nav_item.url %} usa-current{% endif %}"
+            aria-label="{{ nav_item.name }} menu link"
+            {% if nav_item.ext== true %}target="_blank" {% endif %}>{{
+          nav_item.name }}</a></li>
+
+        {% endfor %}
+
+      </ul>
+      <!-- /Desktop nav -->
     </div>
-    <ul class="list-group-flush bg-light px-0">
-        <li><a href="/baselinealignment/index.html" id="home" class="list-group-item list-group-item-action bg-light">Home</a></li>
-        <li><a href="/baselinealignment/contributing.html" id="contributing" class="list-group-item list-group-item-action bg-light">Contributing</a></li>
-        <!-- <li><a href="#" class="list-group-item list-group-item-action bg-light">Validating Alignment</a></li> -->
-        <li><a  href="/baselinealignment/testcases.html" id="testcases" class="list-group-item list-group-item-action bg-light">Test Cases</a></li>
-        <!-- <li><a  href="#" class="list-group-item list-group-item-action bg-light">Glossary</a></li> -->
-    </ul>
-    <ul class="list-group-flush bg-light px-0 border-top mt-5">
-        <li><a href="https://ictbaseline.access-board.gov" class="list-group-item list-group-item-action bg-light" target="_blank" rel="noopener noreferrer">ICT Baseline (external)</a></li>
-    </ul>
-
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div onclick="sidebarOpenClose()" style="cursor:pointer" class="d-none overlay" title="Close Nav Menu" id="myOverlay"></div>
+  </nav>
+</header>

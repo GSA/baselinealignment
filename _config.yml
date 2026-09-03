@@ -7,5 +7,15 @@ description: >-
   requirements. Two different processes that align to the Baseline 
   should produce the same replicable and reliable test results.
 
-theme: minima
 baseurl: /baselinealignment
+
+primary_navigation:
+  - name: Baseline Alignment Home
+    url: /
+  - name: Contributing
+    url: /contributing.html
+  - name: Test Cases
+    url: /testcases.html
+  - name: ICT Baseline (external)
+    url: https://ictbaseline.access-board.gov/
+    ext: true

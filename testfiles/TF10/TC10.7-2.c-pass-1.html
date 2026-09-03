@@ -59,8 +59,8 @@
             let time = document.getElementById("time").value;
 
             //copy values from form
-            document.getElementById("cart-number").innerHTML = number;
-            document.getElementById("cart-time").innerHTML = time;
+            document.getElementById("cart-number").textContent = number;
+            document.getElementById("cart-time").textContent = time;
 
             //hide order form
             document.getElementById("order-form").setAttribute("hidden","hidden");
@@ -86,9 +86,9 @@
             let total = document.getElementById("cart-total").innerText;
 
             //copy values from cart
-            document.getElementById("pizza-number").innerHTML = number;
-            document.getElementById("pizza-time").innerHTML = time;
-            document.getElementById("pizza-total").innerHTML = total;
+            document.getElementById("pizza-number").textContent = number;
+            document.getElementById("pizza-time").textContent = time;
+            document.getElementById("pizza-total").textContent = total;
 
             //hide cart summary
             document.getElementById("order-summary").setAttribute("hidden","hidden");
