@@ -1,24 +1,29 @@
 ---
 ---
-[{% assign testcasePages = site.pages | where: "layout", "testcase"%}{% assign lastTestcase = testcasePages.last %}{% assign lastTitle = lastTestcase.title %}{% for page in testcasePages %}{% unless page.title == lastTitle %}
-    {
-        "testCaseID": "{{ page.tcid }}",
-        "testCaseName": "{{ page.title | smartify }}",
-        "testCaseUrl": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
-        "sampleFileUrl": "{{ site.url }}{{ site.baseurl }}{{ page.sample }}",
-        "baselineExpectedResult": "{{ page.result | upcase }}",
-        "relatedBaseline": "{% assign baselineID = page.tcid | slice: 2, 2 %}{% for baseline in site.data.baselines %}{% if baseline.id == baselineID %}{{ baseline.name }}{% endif %}{% endfor %}",
-        "relevantStandard": "{{ page.standard }}",
-        "standarReference": "{{ page.standard-ref }}"
-    },{% else %}
-    {
-        "testCaseID": "{{ page.tcid }}",
-        "testCaseName": "{{ page.title | smartify }}",
-        "testCaseUrl": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
-        "sampleFileUrl": "{{ site.url }}{{ site.baseurl }}{{ page.sample }}",
-        "baselineExpectedResult": "{{ page.result | upcase }}",
-        "relatedBaseline": "{% assign baselineID = page.tcid | slice: 2, 2 %}{% for baseline in site.data.baselines %}{% if baseline.id == baselineID %}{{ baseline.name }}{% endif %}{% endfor %}",
-        "relevantStandard": "{{ page.standard }}",
-        "standarReference": "{{ page.standard-ref }}"
-    }{% endunless %}{% endfor %}
+{% assign testcasePages = site.pages | where: "layout", "testcase" %}
+[
+{% for page in testcasePages %}
+  {% assign baselineID = page.tcid | remove_first: "TC" | split: "." | first | plus: 0 %}
+  {% assign baseline = nil %}
+  {% for candidate in site.data.baselines %}
+    {% assign candidateID = candidate.id | plus: 0 %}
+    {% if candidateID == baselineID %}
+      {% assign baseline = candidate %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% assign procedures = baseline["test-procedures"] %}
+  {% assign relevantStandards = procedures | map: "standard" | uniq | join: ", " %}
+  {% assign standardReferences = procedures | map: "standard-ref" | uniq | join: ", " %}
+  {
+    "testCaseID": {{ page.tcid | jsonify }},
+    "testCaseName": {{ page.title | smartify | jsonify }},
+    "testCaseUrl": {{ site.url | append: site.baseurl | append: page.url | jsonify }},
+    "sampleFileUrl": {{ site.url | append: site.baseurl | append: page.sample | jsonify }},
+    "baselineExpectedResult": {{ page.result | upcase | jsonify }},
+    "relatedBaseline": {{ baseline.name | jsonify }},
+    "relevantStandard": {{ relevantStandards | jsonify }},
+    "standardReference": {{ standardReferences | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
 ]

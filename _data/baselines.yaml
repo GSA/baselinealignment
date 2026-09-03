@@ -2,13 +2,13 @@
   id: '01'
   url: https://ictbaseline.access-board.gov/01Keyboard/
   test-procedures:
-  - name: 1.1 Keyboard Access
-    id: 1.1-KeyboardAccess
+  - name: 1.A Keyboard Access
+    id: 1.A-KeyboardAccess
     url: https://ictbaseline.access-board.gov/01Keyboard/#11-test-procedure-for-keyboard-access
     standard: WCAG
     standard-ref: 2.1.1
-  - name: 1.2 No Keyboard Trap
-    id: 1.2-NoKeyboardTrap
+  - name: 1.B No Keyboard Trap
+    id: 1.B-NoKeyboardTrap
     url: https://ictbaseline.access-board.gov/01Keyboard/#12-test-procedure-for-no-keyboard-trap
     standard: WCAG
     standard-ref: 2.1.2
@@ -16,18 +16,18 @@
   id: '02'
   url: https://ictbaseline.access-board.gov/02FocusVisible/
   test-procedures:
-  - name: 2.1 Focus Visible
-    id: 2.1-FocusVisible
+  - name: 2.A Focus Visible
+    id: 2.A-FocusVisible
     url: https://ictbaseline.access-board.gov/02FocusVisible/#21-test-procedure-for-focus-visible
     standard: WCAG
     standard-ref: 2.4.7
-  - name: 2.2 Focus Order
-    id: 2.2-FocusOrder
+  - name: 2.B Focus Order
+    id: 2.B-FocusOrder
     url: https://ictbaseline.access-board.gov/02FocusVisible/#22-test-procedure-for-focus-order
     standard: WCAG
     standard-ref: 2.4.3
-  - name: 2.3 On Focus
-    id: 2.3-OnFocus
+  - name: 2.C On Focus
+    id: 2.C-OnFocus
     url: https://ictbaseline.access-board.gov/02FocusVisible/#23-test-procedure-for-on-focus
     standard: WCAG
     standard-ref: 3.2.1

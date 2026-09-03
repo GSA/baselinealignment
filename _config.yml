@@ -24,5 +24,5 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-redirect-from
-  - jekyll-sitemap # See additional instructions for url parameter above.
+  - jekyll-sitemap
   - jekyll-seo-tag
