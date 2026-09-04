@@ -70,3 +70,8 @@ iframe#codeframe {
     visibility: hidden;
     height: 0;
 }
+
+/* Override USWDS's search-input float so the DataTables label stays first. */
+#test-case-index_wrapper .dt-search input[type="search"] {
+    float: none;
+}
