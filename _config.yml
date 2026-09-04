@@ -19,3 +19,25 @@ primary_navigation:
   - name: ICT Baseline (external)
     url: https://ictbaseline.access-board.gov/
     ext: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - package.json
+  - package-lock.json
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE.md
+  - degit.json
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - CODEOWNERS
+  - Templates/_testcase-template.md
+  - Templates/_BAWG-Tmpl-01.dwt
