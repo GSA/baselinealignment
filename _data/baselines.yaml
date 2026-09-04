@@ -1,34 +1,34 @@
 - name: 1. Keyboard Accessible
   id: '01'
-  url: https://ictbaseline.access-board.gov/01Keyboard/
+  url: https://ictbaseline.access-board.gov/web-baselines/01Keyboard/
   test-procedures:
   - name: 1.A Keyboard Access
     id: 1.A-KeyboardAccess
-    url: https://ictbaseline.access-board.gov/01Keyboard/#11-test-procedure-for-keyboard-access
+    url: https://ictbaseline.access-board.gov/web-baselines/01Keyboard/#1a-test-procedure-for-keyboard-access
     standard: WCAG
     standard-ref: 2.1.1
   - name: 1.B No Keyboard Trap
     id: 1.B-NoKeyboardTrap
-    url: https://ictbaseline.access-board.gov/01Keyboard/#12-test-procedure-for-no-keyboard-trap
+    url: https://ictbaseline.access-board.gov/web-baselines/01Keyboard/#1b-test-procedure-for-no-keyboard-trap
     standard: WCAG
     standard-ref: 2.1.2
 - name: 2. Focus
   id: '02'
-  url: https://ictbaseline.access-board.gov/02FocusVisible/
+  url: https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/
   test-procedures:
   - name: 2.A Focus Visible
     id: 2.A-FocusVisible
-    url: https://ictbaseline.access-board.gov/02FocusVisible/#21-test-procedure-for-focus-visible
+    url: https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/#2a-test-procedure-for-focus-visible
     standard: WCAG
     standard-ref: 2.4.7
   - name: 2.B Focus Order
     id: 2.B-FocusOrder
-    url: https://ictbaseline.access-board.gov/02FocusVisible/#22-test-procedure-for-focus-order
+    url: https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/#2b-test-procedure-for-focus-order
     standard: WCAG
     standard-ref: 2.4.3
   - name: 2.C On Focus
     id: 2.C-OnFocus
-    url: https://ictbaseline.access-board.gov/02FocusVisible/#23-test-procedure-for-on-focus
+    url: https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/#2c-test-procedure-for-on-focus
     standard: WCAG
     standard-ref: 3.2.1
 - name: 3. Non-Interference
@@ -87,16 +87,26 @@
   id: '06'
   url: https://ictbaseline.access-board.gov/web-baselines/06Images/
   test-procedures:
-  - name: 6.A Meaningful Image
+  - name: 6.A Images with a non-empty text alternative
     id: 6.A-MeaningfulImage
-    url: https://ictbaseline.access-board.gov/web-baselines/06Images/#6a-test-procedure-for-meaningful-images
+    url: https://ictbaseline.access-board.gov/web-baselines/06Images/#6a-test-procedure-for-images-with-a-non-empty-text-alternative
     standard: WCAG
     standard-ref: 1.1.1
-  - name: 6.B Decorative Image
+  - name: 6.B Images with an empty text alternative
     id: 6.B-DecorativeImage
     url: https://ictbaseline.access-board.gov/web-baselines/06Images/#6b-test-procedure-for-images-with-an-empty-text-alternative
     standard: WCAG
     standard-ref: 1.1.1
+  - name: 6.C Captchas
+    id: 6.C-Captcha
+    url: https://ictbaseline.access-board.gov/web-baselines/06Images/#6c-test-procedure-for-captchas
+    standard: WCAG
+    standard-ref: 1.1.1
+  - name: 6.D Images of Text
+    id: 6.D-ImageText
+    url: https://ictbaseline.access-board.gov/web-baselines/06Images/#6d-test-procedure-for-images-of-text
+    standard: WCAG
+    standard-ref: 1.4.5
 - name: 7. Sensory Characteristics
   id: '07'
   url: https://ictbaseline.access-board.gov/web-baselines/07Sensory/
@@ -106,6 +116,16 @@
     url: https://ictbaseline.access-board.gov/web-baselines/07Sensory/#7a-test-procedure-for-use-of-color
     standard: WCAG
     standard-ref: 1.4.1
+  - name: 7.B Sensory Characteristics
+    id: 7.B-SensoryCharacteristics
+    url: https://ictbaseline.access-board.gov/web-baselines/07Sensory/#7b-test-procedure-for-sensory-characteristics
+    standard: WCAG
+    standard-ref: 1.3.3
+  - name: 7.C Audible Cues
+    id: 7.C-AudibleCues
+    url: https://ictbaseline.access-board.gov/web-baselines/07Sensory/#7c-test-procedure-for-audible-cues
+    standard: WCAG
+    standard-ref: 1.1.1
 - name: 8. Contrast
   id: 08
   url: https://ictbaseline.access-board.gov/web-baselines/08Contrast/
@@ -119,28 +139,48 @@
   id: 09
   url: https://ictbaseline.access-board.gov/web-baselines/09Flashing/
   test-procedures:
-  - name: 9.A Flashes
+  - name: 9.A Three Flashes or Below Threshold
     id: 9.A-Flashes
-    url: https://ictbaseline.access-board.gov/web-baselines/09Flashing/#9a-test-procedure-for-flashes
+    url: https://ictbaseline.access-board.gov/web-baselines/09Flashing/#9a-test-procedure-for-three-flashes-or-below-threshold
     standard: WCAG
     standard-ref: 2.3.1
 - name: 10. Forms
   id: '10'
   url: https://ictbaseline.access-board.gov/web-baselines/10Forms/
   test-procedures:
-  - name: 10.A Error Identification
-    id: 10.A-ErrorIdentification
-    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10a-test-procedure-for-error-identification
+  - name: 10.A Form Names
+    id: 10.A-FormName
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10a-test-procedure-for-form-names
+    standard: WCAG
+    standard-ref: 4.1.2
+  - name: 10.B Form Labels Descriptive
+    id: 10.B-FormDescriptiveLabel
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10b-test-procedure-for-form-labels-descriptive
+    standard: WCAG
+    standard-ref: 2.4.6
+  - name: 10.C On Input
+    id: 10.C-OnInput
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10c-test-procedure-for-on-input
+    standard: WCAG
+    standard-ref: 3.2.2
+  - name: 10.D Error Identification
+    id: 10.D-ErrorIdentification
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10d-test-procedure-for-error-identification
     standard: WCAG
     standard-ref: 3.3.1
-  - name: 10.B Labels or Instructions
-    id: 10.B-LabelsInstructions
-    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10b-test-procedure-for-labels-or-instructions
+  - name: 10.E Form has a Visible Label
+    id: 10.E-FormHasLabel
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10e-test-procedure-for-form-has-a-visible-label
     standard: WCAG
     standard-ref: 3.3.2
-  - name: 10.C Error Prevention (Legal, Financial, Data)
-    id: 10.C-ErrorPrevention
-    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10c-test-procedure-for-error-prevention-legal-financial-data
+  - name: 10.F Error Suggestion
+    id: 10.F-ErrorSuggestion
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10f-test-procedure-for-error-suggestion
+    standard: WCAG
+    standard-ref: 3.3.3
+  - name: 10.G Error Prevention (Legal, Financial, Data)
+    id: 10.G-ErrorPrevention
+    url: https://ictbaseline.access-board.gov/web-baselines/10Forms/#10g-test-procedure-for-error-prevention-legal-financial-data
     standard: WCAG
     standard-ref: 3.3.4
 - name: 11. Page Titles
@@ -166,6 +206,11 @@
     url: https://ictbaseline.access-board.gov/web-baselines/12DataTables/#12b-test-procedure-for-data-table-header-association
     standard: WCAG
     standard-ref: 1.3.1
+  - name: 12.C Layout Tables
+    id: 12.C-LayoutTable
+    url: https://ictbaseline.access-board.gov/web-baselines/12DataTables/#12c-test-procedure-for-layout-tables
+    standard: WCAG
+    standard-ref: 4.1.2
 - name: 13. Content Structure
   id: '13'
   url: https://ictbaseline.access-board.gov/web-baselines/13Structure/
@@ -180,20 +225,25 @@
     url: https://ictbaseline.access-board.gov/web-baselines/13Structure/#13b-test-procedure-for-visual-headings-programmatic
     standard: WCAG
     standard-ref: 1.3.1
+  - name: 13.C Programmatic Headings Visual
+    id: 13.C-ProgHeadingVisual
+    url: https://ictbaseline.access-board.gov/web-baselines/13Structure/#13c-test-procedure-for-programmatic-headings-visual
+    standard: WCAG
+    standard-ref: 1.3.1
+  - name: 13.D Visually Apparent Lists
+    id: 13.D-List
+    url: https://ictbaseline.access-board.gov/web-baselines/13Structure/#13d-test-procedure-for-visually-apparent-lists
+    standard: WCAG
+    standard-ref: 1.3.1
 - name: 14. Links
   id: '14'
   url: https://ictbaseline.access-board.gov/web-baselines/14Links/
   test-procedures:
-  - name: 14.A Link Purpose
+  - name: 14.A Link Purpose (In Context)
     id: 14.A-LinkPurpose
-    url: https://ictbaseline.access-board.gov/web-baselines/14Links/#14a-test-procedure-for-link-purpose
+    url: https://ictbaseline.access-board.gov/web-baselines/14Links/#14a-test-procedure-for-link-purpose-in-context
     standard: WCAG
     standard-ref: 2.4.4
-  - name: 14.B Link Accessible Name
-    id: 14.B-LinkName
-    url: https://ictbaseline.access-board.gov/web-baselines/14Links/#14b-test-procedure-for-link-accessible-name
-    standard: WCAG
-    standard-ref: 4.1.2
 - name: 15. Language
   id: '15'
   url: https://ictbaseline.access-board.gov/web-baselines/15Language/
@@ -212,28 +262,38 @@
   id: '16'
   url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/
   test-procedures:
-  - name: 16.A Audio-only (Prerecorded) Alternative
-    id: 16.A-AudioOnlyAlt
-    url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16a-test-procedure-for-audio-only-prerecorded-alternative
+  - name: 16.A Audio-only (Prerecorded)
+    id: 16.A-AudioOnlyTranscript
+    url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16a-test-procedure-for-audio-only-prerecorded
     standard: WCAG
     standard-ref: 1.2.1
-  - name: 16.B Video-only (Prerecorded) Alternative
+  - name: 16.B Video-only (Prerecorded)
     id: 16.B-VideoOnlyAlt
-    url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16b-test-procedure-for-video-only-prerecorded-alternative
+    url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16b-test-procedure-for-video-only-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.1
+  - name: 16.C Audio Media Alternative (Prerecorded)
+    id: 16.C-AudioMediaAlternative
+    url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16c-test-procedure-for-audio-media-alternative-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.1
+  - name: 16.D Video Media Alternative (Prerecorded)
+    id: 16.D-VideoMediaAlternative
+    url: https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16d-test-procedure-for-video-media-alternative-prerecorded
     standard: WCAG
     standard-ref: 1.2.1
 - name: 17. Synchronized Media
   id: '17'
   url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/
   test-procedures:
-  - name: 17.A Captions (Prerecorded)
-    id: 17.A-CaptionsPrerecorded
-    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17a-test-procedure-for-captions-prerecorded
-    standard: WCAG
-    standard-ref: 1.2.2
-  - name: 17.B Media Player Closed Caption Control Level
+  - name: 17.A Media Player Controls
+    id: 17.A-MediaPlayerCCADControls
+    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17a-test-procedure-for-media-player-controls
+    standard: '508'
+    standard-ref: '503.4'
+  - name: 17.B Media Player Caption Control Level
     id: 17.B-MediaPlayerCCLevel
-    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17b-test-procedure-for-media-player-closed-caption-control-level
+    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17b-test-procedure-for-media-player-caption-control-level
     standard: '508'
     standard-ref: 503.4.1
   - name: 17.C Media Player Audio Description Control Level
@@ -241,29 +301,49 @@
     url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17c-test-procedure-for-media-player-audio-description-control-level
     standard: '508'
     standard-ref: 503.4.2
+  - name: 17.D Captions (Prerecorded)
+    id: 17.D-CaptionsPrerecorded
+    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17d-test-procedure-for-captions-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.2
+  - name: 17.E Audio Description (Prerecorded)
+    id: 17.E-ADPrerecorded
+    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17e-test-procedure-for-audio-description-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.5
   - name: 17.F Captions (Live)
     id: 17.F-CaptionsLive
     url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17f-test-procedure-for-captions-live
     standard: WCAG
     standard-ref: 1.2.4
+  - name: 17.G Sync Media Alternative (Prerecorded)
+    id: 17.G-SyncMediaAlternative
+    url: https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17g-test-procedure-for-sync-media-alternative-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.3
 - name: 18. CSS Positioning
   id: '18'
   url: https://ictbaseline.access-board.gov/web-baselines/18Stylesheet/
   test-procedures:
-  - name: 18.A Meaningful Sequence
-    id: 18.A-MeaningfulSequence
-    url: https://ictbaseline.access-board.gov/web-baselines/18Stylesheet/#18a-test-procedure-for-meaningful-sequence
+  - name: 18.B CSS Positioned Content
+    id: 18.B-CSSPositionedContent
+    url: https://ictbaseline.access-board.gov/web-baselines/18Stylesheet/#18b-test-procedure-for-css-positioned-content
     standard: WCAG
     standard-ref: 1.3.2
 - name: 19. Frames and iFrames
   id: '19'
   url: https://ictbaseline.access-board.gov/web-baselines/19Frames/
   test-procedures:
-  - name: 19.A Frame and iFrame Title
+  - name: 19.A Frames
     id: 19.A-FrameTitle
-    url: https://ictbaseline.access-board.gov/web-baselines/19Frames/#19a-test-procedure-for-frame-and-iframe-title
+    url: https://ictbaseline.access-board.gov/web-baselines/19Frames/#19a-test-procedure-for-frames
     standard: WCAG
-    standard-ref: 2.4.1
+    standard-ref: 4.1.2
+  - name: 19.B iFrames
+    id: 19.B-iFrameName
+    url: https://ictbaseline.access-board.gov/web-baselines/19Frames/#19b-test-procedure-for-iframes
+    standard: WCAG
+    standard-ref: 4.1.2
 - name: 20. Conforming Alternate Version
   id: '20'
   url: https://ictbaseline.access-board.gov/web-baselines/20AlternateVersions/
@@ -277,14 +357,19 @@
   id: '21'
   url: https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/
   test-procedures:
-  - name: 21.B Moving, Blinking, Scrolling Information
+  - name: 21.A Timing Adjustable
+    id: 21.A-TimingAdjustable
+    url: https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21a-test-procedure-for-timing-adjustable
+    standard: WCAG
+    standard-ref: 2.2.1
+  - name: 21.B Moving Information
     id: 21.B-MovingInfo
-    url: https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21b-test-procedure-for-moving-blinking-scrolling-information
+    url: https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21b-test-procedure-for-moving-information
     standard: WCAG
     standard-ref: 2.2.2
-  - name: 21.C Auto-Update
+  - name: 21.C Auto-updating information
     id: 21.C-AutoUpdate
-    url: https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21c-test-procedure-for-auto-update
+    url: https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21c-test-procedure-for-auto-updating-information
     standard: WCAG
     standard-ref: 2.2.2
   - name: 21.D Audio Control
@@ -305,9 +390,9 @@
   id: '23'
   url: https://ictbaseline.access-board.gov/web-baselines/23MultipleWays/
   test-procedures:
-  - name: 23.A Multiple Ways
+  - name: 23.A Related Web Pages
     id: 23.A-MultipleWays
-    url: https://ictbaseline.access-board.gov/web-baselines/23MultipleWays/#23a-test-procedure-for-multiple-ways
+    url: https://ictbaseline.access-board.gov/web-baselines/23MultipleWays/#23a-test-procedure-for-related-web-pages
     standard: WCAG
     standard-ref: 2.4.5
 - name: 24. Parsing
