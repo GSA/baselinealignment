@@ -39,7 +39,7 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
           <a href="{{ site.baseurl }}{{ page.url }}">{{ page.tcid }} {{ page.title | markdownify }}</a>
         </td>
         <td>
-          <a href="{{ site.baseurl }}{{ page.sample }}">Test Page</a>
+          <a href="{{ site.baseurl }}{{ page.sample }}">{{ page.tcid }} Test Page</a>
         </td>
         <td>
           {{ page.standard }} {{ page.standard-ref }}
