@@ -28,7 +28,9 @@ The rendered test case index also provides JSON and CSV downloads for use in spr
 
 ## Technology Overview
 
-The site uses Jekyll to generate static pages from Markdown, YAML front matter, and Liquid templates. The shared website imports U.S. Web Design System (USWDS) styles, scripts, and header/footer blocks from Section508.gov, with local CSS for site-specific adjustments. Legacy Bootstrap references remain in shared templates and some standalone test samples. JavaScript supports the test case index and page behavior.
+The site uses Jekyll to generate static pages from Markdown, YAML front matter, and Liquid templates. The shared website imports U.S. Web Design System (USWDS) styles, scripts, and header/footer blocks from Section508.gov, with local CSS for site-specific adjustments. JavaScript supports the test case index and page behavior.
+
+Bootstrap CSS is retained for standalone test samples in `testfiles/assets/css/`, alongside its source map. Sample pages link to this stylesheet using relative paths; the shared website styles come from Section508.gov and local CSS.
 
 Test cases are ordinary Jekyll pages in `testcases/`. The index discovers pages with `layout: testcase`, while the test case layout uses each case's ID to look up its Baseline procedure in `_data/baselines.yaml`.
 
@@ -40,7 +42,7 @@ Test cases are ordinary Jekyll pages in `testcases/`. The index discovers pages 
 | `testcases.md` | Website test case index and download links. |
 | `testcases/` | Markdown test case descriptions and expected results. |
 | `testfiles/TF##/` | HTML samples grouped by Baseline number, with supporting files where needed. |
-| `testfiles/assets/` | Shared sample resources, including images, audio, video, and media player files. |
+| `testfiles/assets/` | Shared sample resources, including Bootstrap CSS and its source map in `css/`, images, audio, video, and media player files. |
 | `Templates/_testcase-template.md` | Starting template and authoring notes for test cases. |
 | `_data/baselines.yaml` | Baseline categories, procedures, links, and standard references. |
 | `_data/standards.yaml` | WCAG success criteria, levels, and version metadata. Some Section 508 software standards referenced in the ICT Baseline. |
