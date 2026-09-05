@@ -1,0 +1,1077 @@
+# Source: https://www.w3.org/WAI/WCAG22/quickref/
+# Guidelines contain success criteria, mirroring the groups in baselines.yaml.
+# All levels are included. versions lists the WCAG versions each criterion applies to.
+# 4.1.1 Parsing is retained for legacy baseline references; it was removed in WCAG 2.2.
+- name: 1.1. Text Alternatives
+  id: '1.1'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#text-alternatives
+  success-criteria:
+  - name: 1.1.1 Non-text Content
+    id: 1.1.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#non-text-content
+    standard: WCAG
+    standard-ref: 1.1.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+- name: 1.2. Time-based Media
+  id: '1.2'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#time-based-media
+  success-criteria:
+  - name: 1.2.1 Audio-only and Video-only (Prerecorded)
+    id: 1.2.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#audio-only-and-video-only-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.2 Captions (Prerecorded)
+    id: 1.2.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#captions-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.3 Audio Description or Media Alternative (Prerecorded)
+    id: 1.2.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#audio-description-or-media-alternative-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.3
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.4 Captions (Live)
+    id: 1.2.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#captions-live
+    standard: WCAG
+    standard-ref: 1.2.4
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.5 Audio Description (Prerecorded)
+    id: 1.2.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#audio-description-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.5
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.6 Sign Language (Prerecorded)
+    id: 1.2.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#sign-language-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.6
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.7 Extended Audio Description (Prerecorded)
+    id: 1.2.7
+    url: https://www.w3.org/WAI/WCAG22/quickref/#extended-audio-description-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.7
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.8 Media Alternative (Prerecorded)
+    id: 1.2.8
+    url: https://www.w3.org/WAI/WCAG22/quickref/#media-alternative-prerecorded
+    standard: WCAG
+    standard-ref: 1.2.8
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.2.9 Audio-only (Live)
+    id: 1.2.9
+    url: https://www.w3.org/WAI/WCAG22/quickref/#audio-only-live
+    standard: WCAG
+    standard-ref: 1.2.9
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+- name: 1.3. Adaptable
+  id: '1.3'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#adaptable
+  success-criteria:
+  - name: 1.3.1 Info and Relationships
+    id: 1.3.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships
+    standard: WCAG
+    standard-ref: 1.3.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.3.2 Meaningful Sequence
+    id: 1.3.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#meaningful-sequence
+    standard: WCAG
+    standard-ref: 1.3.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.3.3 Sensory Characteristics
+    id: 1.3.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#sensory-characteristics
+    standard: WCAG
+    standard-ref: 1.3.3
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.3.4 Orientation
+    id: 1.3.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#orientation
+    standard: WCAG
+    standard-ref: 1.3.4
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 1.3.5 Identify Input Purpose
+    id: 1.3.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#identify-input-purpose
+    standard: WCAG
+    standard-ref: 1.3.5
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 1.3.6 Identify Purpose
+    id: 1.3.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#identify-purpose
+    standard: WCAG
+    standard-ref: 1.3.6
+    level: AAA
+    versions:
+    - '2.1'
+    - '2.2'
+- name: 1.4. Distinguishable
+  id: '1.4'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#distinguishable
+  success-criteria:
+  - name: 1.4.1 Use of Color
+    id: 1.4.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#use-of-color
+    standard: WCAG
+    standard-ref: 1.4.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.2 Audio Control
+    id: 1.4.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#audio-control
+    standard: WCAG
+    standard-ref: 1.4.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.3 Contrast (Minimum)
+    id: 1.4.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum
+    standard: WCAG
+    standard-ref: 1.4.3
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.4 Resize Text
+    id: 1.4.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#resize-text
+    standard: WCAG
+    standard-ref: 1.4.4
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.5 Images of Text
+    id: 1.4.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#images-of-text
+    standard: WCAG
+    standard-ref: 1.4.5
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.6 Contrast (Enhanced)
+    id: 1.4.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#contrast-enhanced
+    standard: WCAG
+    standard-ref: 1.4.6
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.7 Low or No Background Audio
+    id: 1.4.7
+    url: https://www.w3.org/WAI/WCAG22/quickref/#low-or-no-background-audio
+    standard: WCAG
+    standard-ref: 1.4.7
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.8 Visual Presentation
+    id: 1.4.8
+    url: https://www.w3.org/WAI/WCAG22/quickref/#visual-presentation
+    standard: WCAG
+    standard-ref: 1.4.8
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.9 Images of Text (No Exception)
+    id: 1.4.9
+    url: https://www.w3.org/WAI/WCAG22/quickref/#images-of-text-no-exception
+    standard: WCAG
+    standard-ref: 1.4.9
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 1.4.10 Reflow
+    id: 1.4.10
+    url: https://www.w3.org/WAI/WCAG22/quickref/#reflow
+    standard: WCAG
+    standard-ref: 1.4.10
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 1.4.11 Non-text Contrast
+    id: 1.4.11
+    url: https://www.w3.org/WAI/WCAG22/quickref/#non-text-contrast
+    standard: WCAG
+    standard-ref: 1.4.11
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 1.4.12 Text Spacing
+    id: 1.4.12
+    url: https://www.w3.org/WAI/WCAG22/quickref/#text-spacing
+    standard: WCAG
+    standard-ref: 1.4.12
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 1.4.13 Content on Hover or Focus
+    id: 1.4.13
+    url: https://www.w3.org/WAI/WCAG22/quickref/#content-on-hover-or-focus
+    standard: WCAG
+    standard-ref: 1.4.13
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+- name: 2.1. Keyboard Accessible
+  id: '2.1'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#keyboard-accessible
+  success-criteria:
+  - name: 2.1.1 Keyboard
+    id: 2.1.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#keyboard
+    standard: WCAG
+    standard-ref: 2.1.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.1.2 No Keyboard Trap
+    id: 2.1.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap
+    standard: WCAG
+    standard-ref: 2.1.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.1.3 Keyboard (No Exception)
+    id: 2.1.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#keyboard-no-exception
+    standard: WCAG
+    standard-ref: 2.1.3
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.1.4 Character Key Shortcuts
+    id: 2.1.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#character-key-shortcuts
+    standard: WCAG
+    standard-ref: 2.1.4
+    level: A
+    versions:
+    - '2.1'
+    - '2.2'
+- name: 2.2. Enough Time
+  id: '2.2'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#enough-time
+  success-criteria:
+  - name: 2.2.1 Timing Adjustable
+    id: 2.2.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#timing-adjustable
+    standard: WCAG
+    standard-ref: 2.2.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.2.2 Pause, Stop, Hide
+    id: 2.2.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#pause-stop-hide
+    standard: WCAG
+    standard-ref: 2.2.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.2.3 No Timing
+    id: 2.2.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#no-timing
+    standard: WCAG
+    standard-ref: 2.2.3
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.2.4 Interruptions
+    id: 2.2.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#interruptions
+    standard: WCAG
+    standard-ref: 2.2.4
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.2.5 Re-authenticating
+    id: 2.2.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#re-authenticating
+    standard: WCAG
+    standard-ref: 2.2.5
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.2.6 Timeouts
+    id: 2.2.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#timeouts
+    standard: WCAG
+    standard-ref: 2.2.6
+    level: AAA
+    versions:
+    - '2.1'
+    - '2.2'
+- name: 2.3. Seizures and Physical Reactions
+  id: '2.3'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#seizures-and-physical-reactions
+  success-criteria:
+  - name: 2.3.1 Three Flashes or Below Threshold
+    id: 2.3.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#three-flashes-or-below-threshold
+    standard: WCAG
+    standard-ref: 2.3.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.3.2 Three Flashes
+    id: 2.3.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#three-flashes
+    standard: WCAG
+    standard-ref: 2.3.2
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.3.3 Animation from Interactions
+    id: 2.3.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#animation-from-interactions
+    standard: WCAG
+    standard-ref: 2.3.3
+    level: AAA
+    versions:
+    - '2.1'
+    - '2.2'
+- name: 2.4. Navigable
+  id: '2.4'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#navigable
+  success-criteria:
+  - name: 2.4.1 Bypass Blocks
+    id: 2.4.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#bypass-blocks
+    standard: WCAG
+    standard-ref: 2.4.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.2 Page Titled
+    id: 2.4.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#page-titled
+    standard: WCAG
+    standard-ref: 2.4.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.3 Focus Order
+    id: 2.4.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#focus-order
+    standard: WCAG
+    standard-ref: 2.4.3
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.4 Link Purpose (In Context)
+    id: 2.4.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#link-purpose-in-context
+    standard: WCAG
+    standard-ref: 2.4.4
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.5 Multiple Ways
+    id: 2.4.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways
+    standard: WCAG
+    standard-ref: 2.4.5
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.6 Headings and Labels
+    id: 2.4.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#headings-and-labels
+    standard: WCAG
+    standard-ref: 2.4.6
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.7 Focus Visible
+    id: 2.4.7
+    url: https://www.w3.org/WAI/WCAG22/quickref/#focus-visible
+    standard: WCAG
+    standard-ref: 2.4.7
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.8 Location
+    id: 2.4.8
+    url: https://www.w3.org/WAI/WCAG22/quickref/#location
+    standard: WCAG
+    standard-ref: 2.4.8
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.9 Link Purpose (Link Only)
+    id: 2.4.9
+    url: https://www.w3.org/WAI/WCAG22/quickref/#link-purpose-link-only
+    standard: WCAG
+    standard-ref: 2.4.9
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.10 Section Headings
+    id: 2.4.10
+    url: https://www.w3.org/WAI/WCAG22/quickref/#section-headings
+    standard: WCAG
+    standard-ref: 2.4.10
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 2.4.11 Focus Not Obscured (Minimum)
+    id: 2.4.11
+    url: https://www.w3.org/WAI/WCAG22/quickref/#focus-not-obscured-minimum
+    standard: WCAG
+    standard-ref: 2.4.11
+    level: AA
+    versions:
+    - '2.2'
+  - name: 2.4.12 Focus Not Obscured (Enhanced)
+    id: 2.4.12
+    url: https://www.w3.org/WAI/WCAG22/quickref/#focus-not-obscured-enhanced
+    standard: WCAG
+    standard-ref: 2.4.12
+    level: AAA
+    versions:
+    - '2.2'
+  - name: 2.4.13 Focus Appearance
+    id: 2.4.13
+    url: https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance
+    standard: WCAG
+    standard-ref: 2.4.13
+    level: AAA
+    versions:
+    - '2.2'
+- name: 2.5. Input Modalities
+  id: '2.5'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#input-modalities
+  success-criteria:
+  - name: 2.5.1 Pointer Gestures
+    id: 2.5.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#pointer-gestures
+    standard: WCAG
+    standard-ref: 2.5.1
+    level: A
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 2.5.2 Pointer Cancellation
+    id: 2.5.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#pointer-cancellation
+    standard: WCAG
+    standard-ref: 2.5.2
+    level: A
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 2.5.3 Label in Name
+    id: 2.5.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#label-in-name
+    standard: WCAG
+    standard-ref: 2.5.3
+    level: A
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 2.5.4 Motion Actuation
+    id: 2.5.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#motion-actuation
+    standard: WCAG
+    standard-ref: 2.5.4
+    level: A
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 2.5.5 Target Size (Enhanced)
+    id: 2.5.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#target-size-enhanced
+    standard: WCAG
+    standard-ref: 2.5.5
+    level: AAA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 2.5.6 Concurrent Input Mechanisms
+    id: 2.5.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#concurrent-input-mechanisms
+    standard: WCAG
+    standard-ref: 2.5.6
+    level: AAA
+    versions:
+    - '2.1'
+    - '2.2'
+  - name: 2.5.7 Dragging Movements
+    id: 2.5.7
+    url: https://www.w3.org/WAI/WCAG22/quickref/#dragging-movements
+    standard: WCAG
+    standard-ref: 2.5.7
+    level: AA
+    versions:
+    - '2.2'
+  - name: 2.5.8 Target Size (Minimum)
+    id: 2.5.8
+    url: https://www.w3.org/WAI/WCAG22/quickref/#target-size-minimum
+    standard: WCAG
+    standard-ref: 2.5.8
+    level: AA
+    versions:
+    - '2.2'
+- name: 3.1. Readable
+  id: '3.1'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#readable
+  success-criteria:
+  - name: 3.1.1 Language of Page
+    id: 3.1.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#language-of-page
+    standard: WCAG
+    standard-ref: 3.1.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.1.2 Language of Parts
+    id: 3.1.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#language-of-parts
+    standard: WCAG
+    standard-ref: 3.1.2
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.1.3 Unusual Words
+    id: 3.1.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#unusual-words
+    standard: WCAG
+    standard-ref: 3.1.3
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.1.4 Abbreviations
+    id: 3.1.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#abbreviations
+    standard: WCAG
+    standard-ref: 3.1.4
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.1.5 Reading Level
+    id: 3.1.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#reading-level
+    standard: WCAG
+    standard-ref: 3.1.5
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.1.6 Pronunciation
+    id: 3.1.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#pronunciation
+    standard: WCAG
+    standard-ref: 3.1.6
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+- name: 3.2. Predictable
+  id: '3.2'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#predictable
+  success-criteria:
+  - name: 3.2.1 On Focus
+    id: 3.2.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#on-focus
+    standard: WCAG
+    standard-ref: 3.2.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.2.2 On Input
+    id: 3.2.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#on-input
+    standard: WCAG
+    standard-ref: 3.2.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.2.3 Consistent Navigation
+    id: 3.2.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#consistent-navigation
+    standard: WCAG
+    standard-ref: 3.2.3
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.2.4 Consistent Identification
+    id: 3.2.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#consistent-identification
+    standard: WCAG
+    standard-ref: 3.2.4
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.2.5 Change on Request
+    id: 3.2.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#change-on-request
+    standard: WCAG
+    standard-ref: 3.2.5
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.2.6 Consistent Help
+    id: 3.2.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#consistent-help
+    standard: WCAG
+    standard-ref: 3.2.6
+    level: A
+    versions:
+    - '2.2'
+- name: 3.3. Input Assistance
+  id: '3.3'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#input-assistance
+  success-criteria:
+  - name: 3.3.1 Error Identification
+    id: 3.3.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#error-identification
+    standard: WCAG
+    standard-ref: 3.3.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.3.2 Labels or Instructions
+    id: 3.3.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#labels-or-instructions
+    standard: WCAG
+    standard-ref: 3.3.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.3.3 Error Suggestion
+    id: 3.3.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#error-suggestion
+    standard: WCAG
+    standard-ref: 3.3.3
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.3.4 Error Prevention (Legal, Financial, Data)
+    id: 3.3.4
+    url: https://www.w3.org/WAI/WCAG22/quickref/#error-prevention-legal-financial-data
+    standard: WCAG
+    standard-ref: 3.3.4
+    level: AA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.3.5 Help
+    id: 3.3.5
+    url: https://www.w3.org/WAI/WCAG22/quickref/#help
+    standard: WCAG
+    standard-ref: 3.3.5
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.3.6 Error Prevention (All)
+    id: 3.3.6
+    url: https://www.w3.org/WAI/WCAG22/quickref/#error-prevention-all
+    standard: WCAG
+    standard-ref: 3.3.6
+    level: AAA
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 3.3.7 Redundant Entry
+    id: 3.3.7
+    url: https://www.w3.org/WAI/WCAG22/quickref/#redundant-entry
+    standard: WCAG
+    standard-ref: 3.3.7
+    level: A
+    versions:
+    - '2.2'
+  - name: 3.3.8 Accessible Authentication (Minimum)
+    id: 3.3.8
+    url: https://www.w3.org/WAI/WCAG22/quickref/#accessible-authentication-minimum
+    standard: WCAG
+    standard-ref: 3.3.8
+    level: AA
+    versions:
+    - '2.2'
+  - name: 3.3.9 Accessible Authentication (Enhanced)
+    id: 3.3.9
+    url: https://www.w3.org/WAI/WCAG22/quickref/#accessible-authentication-enhanced
+    standard: WCAG
+    standard-ref: 3.3.9
+    level: AAA
+    versions:
+    - '2.2'
+- name: 4.1. Compatible
+  id: '4.1'
+  url: https://www.w3.org/WAI/WCAG22/quickref/#compatible
+  success-criteria:
+  - name: 4.1.1 Parsing
+    id: 4.1.1
+    url: https://www.w3.org/WAI/WCAG22/quickref/#parsing
+    standard: WCAG
+    standard-ref: 4.1.1
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    removed-in: '2.2'
+  - name: 4.1.2 Name, Role, Value
+    id: 4.1.2
+    url: https://www.w3.org/WAI/WCAG22/quickref/#name-role-value
+    standard: WCAG
+    standard-ref: 4.1.2
+    level: A
+    versions:
+    - '2.0'
+    - '2.1'
+    - '2.2'
+  - name: 4.1.3 Status Messages
+    id: 4.1.3
+    url: https://www.w3.org/WAI/WCAG22/quickref/#status-messages
+    standard: WCAG
+    standard-ref: 4.1.3
+    level: AA
+    versions:
+    - '2.1'
+    - '2.2'
+
+# Section 508, Chapter 5: Software (sections 501–504).
+# Source: https://www.access-board.gov/ict/#chapter-5-software
+# Numbered provisions use the same success-criteria schema as the WCAG entries.
+- name: 501 General
+  id: '501'
+  url: https://www.access-board.gov/ict/#501-general
+  success-criteria:
+  - name: 501.1 Scope
+    id: '501.1'
+    url: https://www.access-board.gov/ict/#501.1
+    standard: '508'
+    standard-ref: '501.1'
+- name: 502 Interoperability with Assistive Technology
+  id: '502'
+  url: https://www.access-board.gov/ict/#502-interoperability-assistive-technology
+  success-criteria:
+  - name: 502.1 General
+    id: '502.1'
+    url: https://www.access-board.gov/ict/#502.1
+    standard: '508'
+    standard-ref: '502.1'
+  - name: 502.2 Documented Accessibility Features
+    id: '502.2'
+    url: https://www.access-board.gov/ict/#502.2
+    standard: '508'
+    standard-ref: '502.2'
+  - name: 502.2.1 User Control of Accessibility Features
+    id: 502.2.1
+    url: https://www.access-board.gov/ict/#502.2.1
+    standard: '508'
+    standard-ref: 502.2.1
+  - name: 502.2.2 No Disruption of Accessibility Features
+    id: 502.2.2
+    url: https://www.access-board.gov/ict/#502.2.2
+    standard: '508'
+    standard-ref: 502.2.2
+  - name: 502.3 Accessibility Services
+    id: '502.3'
+    url: https://www.access-board.gov/ict/#502.3
+    standard: '508'
+    standard-ref: '502.3'
+  - name: 502.3.1 Object Information
+    id: 502.3.1
+    url: https://www.access-board.gov/ict/#502.3.1
+    standard: '508'
+    standard-ref: 502.3.1
+  - name: 502.3.2 Modification of Object Information
+    id: 502.3.2
+    url: https://www.access-board.gov/ict/#502.3.2
+    standard: '508'
+    standard-ref: 502.3.2
+  - name: 502.3.3 Row, Column, and Headers
+    id: 502.3.3
+    url: https://www.access-board.gov/ict/#502.3.3
+    standard: '508'
+    standard-ref: 502.3.3
+  - name: 502.3.4 Values
+    id: 502.3.4
+    url: https://www.access-board.gov/ict/#502.3.4
+    standard: '508'
+    standard-ref: 502.3.4
+  - name: 502.3.5 Modification of Values
+    id: 502.3.5
+    url: https://www.access-board.gov/ict/#502.3.5
+    standard: '508'
+    standard-ref: 502.3.5
+  - name: 502.3.6 Label Relationships
+    id: 502.3.6
+    url: https://www.access-board.gov/ict/#502.3.6
+    standard: '508'
+    standard-ref: 502.3.6
+  - name: 502.3.7 Hierarchical Relationships
+    id: 502.3.7
+    url: https://www.access-board.gov/ict/#502.3.7
+    standard: '508'
+    standard-ref: 502.3.7
+  - name: 502.3.8 Text
+    id: 502.3.8
+    url: https://www.access-board.gov/ict/#502.3.8
+    standard: '508'
+    standard-ref: 502.3.8
+  - name: 502.3.9 Modification of Text
+    id: 502.3.9
+    url: https://www.access-board.gov/ict/#502.3.9
+    standard: '508'
+    standard-ref: 502.3.9
+  - name: 502.3.10 List of Actions
+    id: 502.3.10
+    url: https://www.access-board.gov/ict/#502.3.10
+    standard: '508'
+    standard-ref: 502.3.10
+  - name: 502.3.11 Actions on Objects
+    id: 502.3.11
+    url: https://www.access-board.gov/ict/#502.3.11
+    standard: '508'
+    standard-ref: 502.3.11
+  - name: 502.3.12 Focus Cursor
+    id: 502.3.12
+    url: https://www.access-board.gov/ict/#502.3.12
+    standard: '508'
+    standard-ref: 502.3.12
+  - name: 502.3.13 Modification of Focus Cursor
+    id: 502.3.13
+    url: https://www.access-board.gov/ict/#502.3.13
+    standard: '508'
+    standard-ref: 502.3.13
+  - name: 502.3.14 Event Notification
+    id: 502.3.14
+    url: https://www.access-board.gov/ict/#502.3.14
+    standard: '508'
+    standard-ref: 502.3.14
+  - name: 502.4 Platform Accessibility Features
+    id: '502.4'
+    url: https://www.access-board.gov/ict/#502.4
+    standard: '508'
+    standard-ref: '502.4'
+- name: 503 Applications
+  id: '503'
+  url: https://www.access-board.gov/ict/#503-applications
+  success-criteria:
+  - name: 503.1 General
+    id: '503.1'
+    url: https://www.access-board.gov/ict/#503.1
+    standard: '508'
+    standard-ref: '503.1'
+  - name: 503.2 User Preferences
+    id: '503.2'
+    url: https://www.access-board.gov/ict/#503.2
+    standard: '508'
+    standard-ref: '503.2'
+  - name: 503.3 Alternative User Interfaces
+    id: '503.3'
+    url: https://www.access-board.gov/ict/#503.3
+    standard: '508'
+    standard-ref: '503.3'
+  - name: 503.4 User Controls for Captions and Audio Description
+    id: '503.4'
+    url: https://www.access-board.gov/ict/#503.4
+    standard: '508'
+    standard-ref: '503.4'
+  - name: 503.4.1 Caption Controls
+    id: 503.4.1
+    url: https://www.access-board.gov/ict/#503.4.1
+    standard: '508'
+    standard-ref: 503.4.1
+  - name: 503.4.2 Audio Description Controls
+    id: 503.4.2
+    url: https://www.access-board.gov/ict/#503.4.2
+    standard: '508'
+    standard-ref: 503.4.2
+- name: 504 Authoring Tools
+  id: '504'
+  url: https://www.access-board.gov/ict/#504-authoring-tools
+  success-criteria:
+  - name: 504.1 General
+    id: '504.1'
+    url: https://www.access-board.gov/ict/#504.1
+    standard: '508'
+    standard-ref: '504.1'
+  - name: 504.2 Content Creation or Editing
+    id: '504.2'
+    url: https://www.access-board.gov/ict/#504.2
+    standard: '508'
+    standard-ref: '504.2'
+  - name: 504.2.1 Preservation of Information Provided for Accessibility in Format
+      Conversion
+    id: 504.2.1
+    url: https://www.access-board.gov/ict/#504.2.1
+    standard: '508'
+    standard-ref: 504.2.1
+  - name: 504.2.2 PDF Export
+    id: 504.2.2
+    url: https://www.access-board.gov/ict/#504.2.2
+    standard: '508'
+    standard-ref: 504.2.2
+  - name: 504.3 Prompts
+    id: '504.3'
+    url: https://www.access-board.gov/ict/#504.3
+    standard: '508'
+    standard-ref: '504.3'
+  - name: 504.4 Templates
+    id: '504.4'
+    url: https://www.access-board.gov/ict/#504.4
+    standard: '508'
+    standard-ref: '504.4'

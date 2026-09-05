@@ -1,7 +1,16 @@
-<!-- jQuery, Bootstrap JS (bundled with Popper) -->
+<!-- jQuery for custom table scripts and DataTables -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="/baselinealignment/assets/js/bootstrap.bundle.min.js"></script>
 
 <!-- custom JS for sidbar flyover, TOC generation etc. -->
-<script src="/baselinealignment/assets/js/baseline-align.js"></script>
+<script src="{{ '/assets/js/baseline-align.js' | relative_url }}"></script>
 <script src="https://www.section508.gov/assets/js/uswds.min.js" defer="defer"></script>
+
+{% if page.scripts == "datatables" %}
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/2.3.3/js/dataTables.js" integrity="sha384-Xd9EI+3ANHTKs/M8nj3opCZh5f2/jQ6M60riN67nV9QBUqq18TptEuS0tHREh+DE" crossorigin="anonymous"></script>
+<script>
+    let table = new DataTable('#test-case-index', {
+        // options
+    });
+</script>
+{% endif %}

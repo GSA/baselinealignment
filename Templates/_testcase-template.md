@@ -5,9 +5,9 @@ layout: testcase
 # Brief, descriptive title for the test case
 title:
 
-# The Test Case ID should follow the pattern: 
-# TC[Baseline Test Procedure #]-[Test Instruction #]-
-# [Expected Result (pass/fail/dna)]-[example #], e.g., TC05.1-1-fail-1
+# The Test Case ID should follow the pattern:
+# TC[2-digit Baseline #].[Test Procedure letter]-[Test Instruction #]-
+# [Expected Result (pass/fail/dna)]-[example #], e.g., TC06.A-1-fail-1
 tcid:
 
 # Description of the Test Case, the included code sample, test considerations,

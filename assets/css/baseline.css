@@ -17,22 +17,6 @@
     background-color: #005ea2;
 }
 
-.layout-testcase .usa-in-page-nav-container main {
-    max-width: 43rem;
-}
-
-@media (max-width: 820px) {
-    .layout-testcase .usa-in-page-nav-container main {
-        max-width: 31rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .layout-testcase .usa-in-page-nav-container main {
-        max-width: 28rem;
-    }
-}
-
 code {
     color: #d83933 !important;
 }
@@ -69,4 +53,9 @@ iframe#codeframe {
 #TCsteps_table table caption {
     visibility: hidden;
     height: 0;
+}
+
+/* Override USWDS's search-input float so the DataTables label stays first. */
+#test-case-index_wrapper .dt-search input[type="search"] {
+    float: none;
 }

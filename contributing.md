@@ -3,7 +3,7 @@ layout: page
 title: Contributing to the ICT Baseline Alignment Framework
 ---
 ## How you can help
-If you are a federal employee or providing direct contract support to a federal agency, we invite you to contribute directly as a member of our ICT Baseline Working Group (with supervisor and/or client approval). If you are not a federal employee, we can still use your help and welcome your feedback and contributions via sumission of [issues](https://github.com/Section508Coordinators/baselinealignment/issues) and [pull requests](https://github.com/Section508Coordinators/baselinealignment/pulls) in the [GitHub repository](https://github.com/Section508Coordinators/baselinealignment). We are also happy to accept input and/or recommendations for other methods of contributions via [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov).
+If you are a federal employee or providing direct contract support to a federal agency, we invite you to contribute directly as a member of our ICT Baseline Working Group (with supervisor and/or client approval). If you are not a federal employee, we can still use your help and welcome your feedback and contributions via sumission of [issues](https://github.com/gsa/baselinealignment/issues) and [pull requests](https://github.com/gsa/baselinealignment/pulls) in the [GitHub repository](https://github.com/gsa/baselinealignment). We are also happy to accept input and/or recommendations for other methods of contributions via [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov).
 
 ### Developing and Evaluating Test Cases
 We welcome any input and feedback on the Baseline Alignment Framework Test Cases. If you have experience in front-end web development, we need help to develop code samples with various examples of both failures and passes against specific Section 508 conformance standards. Even if you aren't a developer, but you have some good examples of web content passes and failures, we welcome those suggestions as well. We will use contributed code samples to complete development of our Test Cases, which help test process and tool owners evaluate whether their tools/processes produce the same test results that the ICT Testing Baseline would predict.
@@ -26,7 +26,7 @@ We want this website to serve the needs of contributors and testers alike. We al
 * Long-term maintenance
 
 ## How we work
-We have small working groups that meet to make technical decisions or resolve problems. The larger group holds periodic status meetings. Communication and collaboration are through [our GitHub presence](https://github.com/Section508Coordinators/baselinealignment) and, secondarily, email.
+We have small working groups that meet to make technical decisions or resolve problems. The larger group holds periodic status meetings. Communication and collaboration are through [our GitHub presence](https://github.com/gsa/baselinealignment) and, secondarily, email.
 
 Not familiar with GitHub? It's a collaboration platform with strong version control. Here are some resources to get you started:
 

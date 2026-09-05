@@ -1,4 +1,4 @@
-// Add Bootstrap table classes to tables
+// Add USWDS table classes to tables
 $(document).ready(function(){
 	$("table")
 		.addClass("usa-table")

@@ -4,8 +4,48 @@
 
     <title>{{page.title}}</title>
 
-    <!-- Bootstrap CSS -->
-<!--    <link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">-->
+  <!-- FAVICONS -->
+  <!-- 128x128 -->
+  <link
+    rel="shortcut icon"
+    type="image/ico"
+    href="{{site.baseurl}}/assets/images/favicon.ico"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    href="{{site.baseurl}}/assets/images/favicon.ico"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="{{site.baseurl}}/assets/images/android-chrome-192x192.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="{{site.baseurl}}/assets/images/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="{{site.baseurl}}/assets/images/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="{{site.baseurl}}/assets/images/favicon-16x16.png"
+  />
+  <link rel="manifest" href="{{site.baseurl}}/assets/images/site.webmanifest" />
+
+    {% if page.scripts == "datatables" %} 
+    <!-- DataTables Style -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.3/css/dataTables.dataTables.css" />
+    {% endif %}
+
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,5 +55,5 @@
     <link rel="stylesheet" type="text/css" href="https://www.section508.gov/assets/css/index.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/baseline.css">
+    <link rel="stylesheet" href="{{ '/assets/css/baseline.css' | relative_url }}">
 </head>
