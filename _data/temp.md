@@ -1,1 +1,0 @@
-Each file in the testcases directory of this repository includes a key:value pair in the front matter for "tcid" where the value begins with "TC##", where ## corresponds with a Baseline number. The file in the _data directory named baselines.yaml contains an array of objects denoting Baseline test procedures where each 

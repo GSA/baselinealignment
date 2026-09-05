@@ -1,5 +1,5 @@
 # Baseline Test Pages
-The Baseline and ITTP Working Group will use this repository and set of pages to store and make reference to test pages for use in validating test rules contained in the [ICT Testing Baseline](https://section508coordinators.github.io/ICTTestingBaseline/). 
+The Baseline and ITTP Working Group will use this repository and set of pages to store and make reference to test pages for use in validating test rules contained in the [ICT Testing Baseline](https://ictbaseline.access-board.gov/). 
 
 ## Purpose and Objectives
 Members of the U.S. federal accessibility community must agree on what constitutes conforming to the Section 508 standards, in concrete terms. This is important to:

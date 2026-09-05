@@ -11,14 +11,14 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
 
 [Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) <span>|</span> [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
 
-<table id="test-case-index" class="display compact" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+<table id="test-case-index" class="display compact" data-order='[[ 0, "asc" ]]' data-page-length='25'>
   <caption>
     Index of Baseline Alignment Framework Test Cases
   </caption>
   <thead>
     <tr>
-      <th scope="col">ICT Baseline</th>
       <th scope="col">Test Case</th>
+      <th scope="col">ICT Baseline</th>
       <th scope="col">Sample Code</th>
       <th scope="col">Relevant Standard</th>
     </tr>
@@ -29,20 +29,20 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
       {% assign baselineID = page.tcid | slice: 2, 2 %}
       <tr>
         <td>
+          <a target="_blank" href="{{ site.baseurl }}{{ page.url }}">{{ page.tcid }} {{ page.title | markdownify }}</a>
+        </td>
+        <td>
         {% for baseline in site.data.baselines %}
           {% if baseline.id == baselineID %}
-          <a href="{{ baseline.url }}">{{ baseline.name }}</a>
+          <a target="_blank" href="{{ baseline.url }}" class="usa-link usa-link--external">{{ baseline.name }}</a>
           {% endif %} 
         {% endfor %}
         </td>
         <td>
-          <a href="{{ site.baseurl }}{{ page.url }}">{{ page.tcid }} {{ page.title | markdownify }}</a>
+          <a target="_blank" href="{{ site.baseurl }}{{ page.sample }}">{{ page.tcid }} Test Page</a>
         </td>
         <td>
-          <a href="{{ site.baseurl }}{{ page.sample }}">{{ page.tcid }} Test Page</a>
-        </td>
-        <td>
-          {{ page.standard }} {{ page.standard-ref }}
+          <a target="_blank" href="{{ page.standard-ref-url }}">{{ page.standard }} {{ page.standard-ref }}</a>
         </td>
       </tr>
       {% endif %}

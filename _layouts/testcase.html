@@ -18,7 +18,32 @@ provided in the document front matter; see the admin/config > collections
                             <h3 id="TCdesc">Test Case Description</h3>
                                 <p>{{page.descr | markdownify}}</p>
                             <h3 id="TCbase">Applicable ICT Baseline Test</h3>
-                                <p>{{page.app-baseline | markdownify}}</p>
+                                {% assign tcid_parts = page.tcid | remove_first: 'TC' | split: '-' %}
+                                {% assign procedure_parts = tcid_parts[0] | split: '.' %}
+                                {% assign baseline = nil %}
+                                {% for candidate in site.data.baselines %}
+                                    {% if candidate.id == procedure_parts[0] %}
+                                        {% assign baseline = candidate %}
+                                        {% break %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% assign baseline_number = procedure_parts[0] | plus: 0 %}
+                                {% assign procedure_reference = baseline_number | append: '.' | append: procedure_parts[1] %}
+                                {% assign baseline_procedure = nil %}
+                                {% for procedure in baseline.test-procedures %}
+                                    {% assign procedure_id = procedure.id | split: '-' | first %}
+                                    {% if procedure_id == procedure_reference %}
+                                        {% assign baseline_procedure = procedure %}
+                                        {% break %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if baseline_procedure %}
+                                    <p><strong>Test Procedure:</strong> <a href="{{ baseline_procedure.url | escape }}">{{ baseline_procedure.name | escape }}</a></p>
+                                    <p><strong>Baseline Test ID:</strong> {{ baseline_procedure.id | escape }}</p>
+                                {% else %}
+                                    <p>Baseline test procedure {{ procedure_reference | escape }} was not found in the baseline data.</p>
+                                {% endif %}
+                                <p><strong>Test Instruction:</strong> {% if tcid_parts[1] == 'ic' %}Identify Content{% else %}{{ tcid_parts[1] | escape }}{% endif %}</p>
 
                     <h2 class="border-bottom" id="TCdet">Test Case Detail</h2>
                         <h3 id="TCresult">Expected Baseline Result</h3>
@@ -33,20 +58,6 @@ provided in the document front matter; see the admin/config > collections
                                 <div id="codelink">
                                     <p><a id="samplecodelink" href="{{page.sample | absolute_url}}">{{page.sample | absolute_url}}</a></p>
                                 </div>
-
-                            <h4 id="TCframe">Embedded Code</h4>
-                                <div id="codeframe"></div>
-                                    <iframe id="codeframe" src="{{page.sample | absolute_url}}" title="embedded code">
-                                </iframe>
-
-                          <div class="usa-accordion usa-accordion--bordered site-accordion-code margin-top-4">
-                            <button class="usa-accordion__button" aria-controls="code-sticky" aria-expanded="true">Code</button>
-                            <div id="code-sticky" class="usa-accordion__content">
-                              <pre><code id="ta_code" class="language-html" data-lang="html"></code></pre>
-                            </div>
-                          </div>
-
-
                         <h3 id="TCsteps">Test Case Instruction</h3>
                         <div id="TCsteps_table">{{content}}</div>
         </div>
