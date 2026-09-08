@@ -3,19 +3,13 @@ layout: base
 ---
 
 {% comment %}
-This template is for a basic single page with bootstrap 'card' holders for content
+This template is for a basic single page
 {% endcomment %}
 
 <div id="main-content" class="usa-layout-docs usa-section layout-{{ page.layout }}">
     <div class="grid-container active">
         <div class="usa-in-page-nav-container">
-            <aside class="usa-in-page-nav"
-                   data-title-text="Table of Contents"
-                   data-title-heading-level="h2"
-                   data-scroll-offset="0"
-                   data-root-margin="0px 0px 0px 0px"
-                   data-threshold="1">
-            </aside>
+            {% include toc.html %}
             <main class="main-content usa-graphic-list">
                 {{ content }}
             </main>
