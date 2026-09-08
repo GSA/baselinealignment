@@ -10,7 +10,7 @@ We welcome any input and feedback on the Baseline Alignment Framework Test Cases
 
 ### Planning and Conducting Outreach
 We need people to know about our work so they can contribute and use it! Whether you enjoy giving presentations or would prefer to remain behind the scenes writing and editing, your skills are needed. Can you help with any of the following?
-* Writing and editing: would you like to produce short articles for [section508.gov](https://www.section508.gov) and other government websites, as well as announcements and presentation materials? You could also write for this website.
+* Writing and editing: would you like to produce short articles for [Section508.gov](https://www.section508.gov) and other government websites, as well as announcements and presentation materials? You could also write for this website.
 * Presenting: can you present on the project to a wide range of audiences, such as Section 508 program managers, procurement personnel, and website testers?
 * Serving as a resource: or maybe you can just make yourself available to answer questions or route them to the appropriate expert?
 
