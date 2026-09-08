@@ -32,4 +32,3 @@ Not familiar with GitHub? It's a collaboration platform with strong version cont
 
 * Get a basic understanding with <a href="https://guides.github.com/activities/hello-world/" class="usa-link usa-link--external">Hello World from GitHub Guides</a>
 * <a href="https://guides.github.com/features/issues/" class="usa-link usa-link--external">Learn about issues</a>, which we use not only for tracking bugs, but also for questions and our shared to-do list
-* If you have an hour to spare, consider watching <a href="https://www.youtube.com/watch?v=6fByt0o4UYs" class="usa-link usa-link--external">GitHub for Project Management</a>, which goes over the features discussed in the other two links in greater detail, or <a href="https://www.youtube.com/watch?v=EwWZbyjDs9c" class="usa-link usa-link--external">Exploring Workflows</a> for a somewhat more technical explanation
