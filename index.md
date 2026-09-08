@@ -10,7 +10,7 @@ Members of the U.S. federal accessibility community must agree on what constitut
 * Provide clear expectations to vendors
 * Maintain consistency across the Federal government
 
-The Section 508 standards incorporate the [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/), levels A and AA. The ICT Testing Baseline for Web establishes the minimum tests and evaluation guidance for determining whether Web content meets the requirements of WCAG 2.0 A and AA and, therefore, Section 508.
+The Section 508 standards incorporate the <a href="https://www.w3.org/TR/WCAG20/" class="usa-link usa-link--external">Web Content Accessibility Guidelines (WCAG) 2.0]</a>, levels A and AA. The ICT Testing Baseline for Web establishes the minimum tests and evaluation guidance for determining whether Web content meets the requirements of WCAG 2.0 A and AA and, therefore, Section 508.
 
 Although the ICT Testing Baseline does not provide processes or tools for conducting baseline tests, it can be used to develop test processes and evaluate how well test processes address all Section 508 requirements.
 

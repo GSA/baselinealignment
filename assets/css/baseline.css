@@ -12,6 +12,11 @@
     color: #005ea2;
 }
 
+/* Keep the external icon with its label; the anchor's ::after draws the nav underline. */
+.baseline-menu .usa-nav__link > .usa-link--external {
+    white-space: nowrap;
+}
+
 .baseline-menu.usa-header--extended .usa-nav__primary-item > .usa-current::after,
 .baseline-menu.usa-header--extended .usa-nav__primary-item > .usa-nav__link:hover::after {
     background-color: #005ea2;
@@ -58,4 +63,10 @@ iframe#codeframe {
 /* Override USWDS's search-input float so the DataTables label stays first. */
 #test-case-index_wrapper .dt-search input[type="search"] {
     float: none;
+}
+
+/* Store the usa-link--external icon at assets/images/launch.svg local and preview builds */
+.usa-link--external::after {
+  -webkit-mask-image: url("../images/launch.svg");
+  mask-image: url("../images/launch.svg");
 }

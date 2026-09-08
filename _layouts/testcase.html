@@ -15,7 +15,7 @@ provided in the document front matter; see the admin/config > collections
                 <p class="margin-top-05 margin-bottom-05"><strong>TCID:</strong><span id="TCid"> {{page.tcid}}</span></p>
                 <p class="margin-top-05 margin-bottom-05"><strong>TC Version:</strong><span id="TC-version"> {{page.tc-version}}</span></p>
                 <p class="margin-top-05 margin-bottom-05"><strong>Baseline Version:</strong><span id="baseline-version"> {{page.baseline-version}}</span></p>
-                <p class="margin-top-05 margin-bottom-05"><strong>Applicable Standard:</strong><span id="TCapp-standard"> <a href="{{page.standard-ref-url}}" target="_blank">{{page.standard}} {{page.standard-ref}}</a></span></p>
+                <p class="margin-top-05 margin-bottom-05"><strong>Applicable Standard:</strong><span id="TCapp-standard"> <a href="{{page.standard-ref-url}}" class="usa-link usa-link--external">{{page.standard}} {{page.standard-ref}}</a></span></p>
             <h3 id="TCdesc">Test Case Description</h3>
                 {{page.descr | markdownify}}
             <h3 id="TCbase">Applicable ICT Baseline Test</h3>
@@ -39,7 +39,7 @@ provided in the document front matter; see the admin/config > collections
                     {% endif %}
                 {% endfor %}
                 {% if baseline_procedure %}
-                    <p><strong>Test Procedure:</strong> <a href="{{ baseline_procedure.url | escape }}">{{ baseline_procedure.name | escape }}</a></p>
+                    <p><strong>Test Procedure:</strong> <a href="{{ baseline_procedure.url | escape }}" class="usa-link usa-link--external">{{ baseline_procedure.name | escape }}</a></p>
                     <p><strong>Baseline Test ID:</strong> {{ baseline_procedure.id | escape }}</p>
                 {% else %}
                     <p>Baseline test procedure {{ procedure_reference | escape }} was not found in the baseline data.</p>

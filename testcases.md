@@ -5,7 +5,7 @@ scripts: datatables
 ---
 ## Index of Test Cases
 
-The table below lists the test cases for validating alignment of test processes to the [Section 508 ICT Testing Baseline for Web](https://ictbaseline.access-board.gov/).
+The table below lists the test cases for validating alignment of test processes to the <a href="https://ictbaseline.access-board.gov/" class="usa-link usa-link--external">Section 508 ICT Testing Baseline for Web</a>.
 
 Test Case documents are organized by Baseline Test; each ICT Baseline corresponds to multiple Test Cases. Each Test Case provides a specific example (with sample code) of web content that passes, fails, or does not apply to particular ICT Baseline. You can also use the following links to download expanded test case index information in JavaScript Object Notation (JSON) or Comma-Separated Variable (CSV) formats.
 
@@ -32,6 +32,9 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
           <a target="_blank" href="{{ site.baseurl }}{{ page.url }}">{{ page.tcid }} {{ page.title | markdownify }}</a>
         </td>
         <td>
+          <a target="_blank" href="{{ site.baseurl }}{{ page.sample }}">{{ page.tcid }} Test Page</a>
+        </td>
+        <td>
         {% for baseline in site.data.baselines %}
           {% if baseline.id == baselineID %}
           <a target="_blank" href="{{ baseline.url }}" class="usa-link usa-link--external">{{ baseline.name }}</a>
@@ -39,10 +42,7 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
         {% endfor %}
         </td>
         <td>
-          <a target="_blank" href="{{ site.baseurl }}{{ page.sample }}">{{ page.tcid }} Test Page</a>
-        </td>
-        <td>
-          <a target="_blank" href="{{ page.standard-ref-url }}">{{ page.standard }} {{ page.standard-ref }}</a>
+          <a target="_blank" href="{{ page.standard-ref-url }}" class="usa-link usa-link--external">{{ page.standard }} {{ page.standard-ref }}</a>
         </td>
       </tr>
       {% endif %}
