@@ -18,8 +18,8 @@ Test Case documents are organized by Baseline Test; each ICT Baseline correspond
   <thead>
     <tr>
       <th scope="col">Test Case</th>
-      <th scope="col">ICT Baseline</th>
       <th scope="col">Sample Code</th>
+      <th scope="col">ICT Baseline</th>
       <th scope="col">Relevant Standard</th>
     </tr>
   </thead>
