@@ -1,17 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TC8.A-ic-dna-3 Decorative Image of Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      color: #1a1a1a;
+      background-color: #ffffff;
+    }
+
+    .card {
+      position: relative;
+      max-width: 600px;
+      padding: 2rem;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      background-color: #ffffff;
+      overflow: hidden;
+    }
+
+    .decorative-watermark {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 220px;
+      height: auto;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
 <body>
+  <main>
+    <h1>Quarterly Project Update</h1>
 
+    <div class="card">
+      <img
+        class="decorative-watermark"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='100' viewBox='0 0 300 100'%3E%3Crect width='300' height='100' fill='white'/%3E%3Ctext x='20' y='60' font-family='Arial' font-size='48' font-weight='bold' fill='%23eeeeee'%3EDRAFT%3C/text%3E%3C/svg%3E"
+        alt=""
+        role="presentation"
+        aria-hidden="true">
 
-
-<div id="tc_code">
-
-
-
-<img src="Happy Holidays.png" alt="Happy Holidays Image of Text Example" width="1200" height="600">
-
-
-
-</div>
+      <div class="card-content">
+        <h2>Status Summary</h2>
+        <p>
+          The project is on schedule. The next milestone is the stakeholder review,
+          which is planned for the end of the month.
+        </p>
+        <p>
+          All meaningful status information is provided in the visible text content.
+        </p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
