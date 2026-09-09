@@ -1,26 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>TC12.C-all-pass-2</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>12.2-all-pass-2</title>
-    <link rel="stylesheet" href="" type="text/css" />
-    <script src="TF12.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <div id="tc_code" class="page-contents">
-      <table id="ic-dna-3" role="grid">
-        <tr>
-          <td><div>Did you know? Section 508 requires agencies to follow WCAG 2.0 AA requirements.</div></td>
-          <td><div>Documents must be accessible; use built in styles and don't forget alternative text.</div></td>
-          <td><div>Want to know if a product you are looking to procure is accessible? Ask for an ACR!</div></td>
-        </tr>
-        <tr>
-          <td><div>Wondering how to get started with Section 508? Check out the numerous trainings offered.</div></td>
-          <td><div>Wondering how users with disabilities interact with digital content? While user experience differs, some users rely on Assistive Technology.</div></td>
-        </tr>
-      </table>
-    </div>
-  </body>
+    td {
+      padding: 1rem;
+      vertical-align: top;
+    }
+
+    .fact-card {
+      border: 1px solid #ccc;
+      background-color: #f7f7f7;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tc_code" class="page-contents">
+    <h1>Fast Facts</h1>
+
+    <table role="presentation">
+      <tr>
+        <td>
+          <div class="fact-card">
+            Section 508 requires agencies to follow accessibility requirements.
+          </div>
+        </td>
+        <td>
+          <div class="fact-card">
+            Documents should use built-in styles and meaningful alternative text.
+          </div>
+        </td>
+        <td>
+          <div class="fact-card">
+            Ask vendors for an Accessibility Conformance Report when procuring ICT.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="fact-card">
+            Section 508 training is available for many accessibility topics.
+          </div>
+        </td>
+        <td>
+          <div class="fact-card">
+            Some users rely on assistive technology to interact with digital content.
+          </div>
+        </td>
+        <td>
+          <div class="fact-card">
+            Accessibility should be considered throughout the content lifecycle.
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
 </html>
