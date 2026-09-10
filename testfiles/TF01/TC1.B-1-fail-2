@@ -1,0 +1,95 @@
+.B-1-fail-2.txt
+
+100%
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Keyboard Trap Demo (Inaccessible - For Training Only TC1.B-1-fail-2)</title>
+<style>
+  body { font-family: sans-serif; max-width: 500px; margin: 2rem auto; }
+  fieldset { margin-bottom: 1.5rem; padding: 1rem; }
+  legend { font-weight: bold; }
+  label { display: block; margin: 0.5rem 0 0.2rem; }
+  input { width: 100%; padding: 0.4rem; box-sizing: border-box; }
+  .instructions { background: #fff3cd; padding: 0.75rem; border: 1px solid #ffe08a; }
+  button { margin-top: 1rem; padding: 0.5rem 1rem; }
+</style>
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<!-- This on-screen instruction documents a nonstandard exit command.
+     WCAG 2.1.2 permits nonstandard exit methods ONLY IF the user is
+     advised of the method AND it actually works. Here it is intentionally
+     broken, which is what makes this an INACCESSIBLE keyboard trap. -->
+<p class="instructions" id="exit-help">
+  Tip: If you get stuck inside the Contact Information section,
+  press <strong>Ctrl + Alt + X</strong> to jump to the Mailing Address section.
+</p>
+
+<form>
+  <!-- SET 1: Contact Information — this is the trap -->
+  <fieldset aria-describedby="exit-help">
+    <legend>Contact Information</legend>
+
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+  </fieldset>
+
+  <!-- SET 2: Mailing Address -->
+  <fieldset>
+    <legend>Mailing Address</legend>
+
+    <label for="street">Street Address</label>
+    <input type="text" id="street" name="street">
+
+    <label for="city">City</label>
+    <input type="text" id="city" name="city">
+  </fieldset>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  // ---- This is what creates the keyboard trap ----
+  // Focus is forced to stay within the Contact Information fields.
+  // Tab / Shift+Tab cannot move focus out to the Mailing Address
+  // fields or the Submit button.
+  const trapFields = document.querySelectorAll(
+    '#fullname, #email'
+  );
+
+  trapFields.forEach(function (field) {
+    field.addEventListener('keydown', function (e) {
+      // Trap Tab and Shift+Tab: keep focus cycling within the two fields.
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const first = trapFields[0];
+        const last = trapFields[trapFields.length - 1];
+
+        if (e.shiftKey) {
+          // Shift+Tab from first wraps back to last (never escapes)
+          (document.activeElement === first ? last : first).focus();
+        } else {
+          // Tab from last wraps back to first (never escapes)
+          (document.activeElement === last ? first : last).focus();
+        }
+      }
+
+      // The documented "escape hatch" (Ctrl+Alt+X) is intentionally
+      // NON-FUNCTIONAL. It is advertised on screen but does nothing,
+      // so the user remains trapped. THIS is the accessibility defect.
+      //
+      // (Note the absence of any handler that actually moves focus
+      //  to #street when Ctrl+Alt+X is pressed.)
+    });
+  });
+</script>
+
+</body>
+</html>
