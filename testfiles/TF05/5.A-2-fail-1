@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.A-2-fail-1title>
+    </head>
+    <body>
+<button
+  type="button"
+  class="menu-button menu-toggle"
+  aria-label="Move up"
+  onclick="toggleMenu()">
+  <span aria-hidden="true">+</span>
+</button>
+
+<ul class="menu-items" hidden>
+  <li>My first item in the list</li>
+  <li>My second item in the list</li>
+  <li>My third item in the list</li>
+</ul>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu-items');
+    const button = document.querySelector('.menu-toggle');
+    const icon = button.querySelector('span');
+
+    const isExpanded = !menu.hasAttribute('hidden');
+
+    if (isExpanded) {
+      menu.setAttribute('hidden', '');
+      icon.textContent = '+';
+    } else {
+      menu.removeAttribute('hidden');
+      icon.textContent = '-';
+    }
+  }
+</script>
+</body>
+
