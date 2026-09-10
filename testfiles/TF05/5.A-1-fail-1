@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Control Name (5.A-1-fail-1)</title>
+</head>
+<body>
+<button class="menu-button menu-toggle" onclick="toggleMenu()"></button>
+    <ul class="menu-items">
+        <li>My First item in the list </li>
+        <li>My Second item in the list </li>
+        <li>My Third item in the list</li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu-items');
+            var button = document.querySelector('.menu-toggle');
+            
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                button.classList.remove('active');
+            } else {
+                menu.style.display = 'block';
+                button.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
