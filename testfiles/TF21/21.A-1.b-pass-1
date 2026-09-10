@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC21.A-1.b-pass-1</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .lock-screen {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #timeLimitInput {
+      width: 6rem;
+      margin: 10px;
+    }
+
+    #timeLimitValue,
+    #timeLeft {
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lock-screen">
+    <h1>Timed Activity</h1>
+
+    <div id="settings">
+      <p>
+        The default time limit is 30 seconds. You may adjust the time limit before starting.
+      </p>
+
+      <label for="timeLimitInput">
+        Set time limit in seconds:
+      </label>
+      <input
+        type="number"
+        id="timeLimitInput"
+        min="30"
+        max="300"
+        value="30">
+
+      <p>
+        Selected time limit:
+        <span id="timeLimitValue">30 seconds</span>
+      </p>
+
+      <button id="startButton">Start Timed Activity</button>
+    </div>
+
+    <div id="timedActivity" class="hidden" aria-live="polite">
+      <p>
+        Time remaining:
+        <span id="timeLeft">0:30</span>
+      </p>
+
+      <button id="completeButton">Complete Activity</button>
+    </div>
+  </div>
+
+  <script>
+    const defaultTimeLimit = 30;
+    const maxTimeLimit = defaultTimeLimit * 10;
+
+    let selectedTimeLimit = defaultTimeLimit;
+    let remainingTime = selectedTimeLimit;
+    let countdownTimer;
+
+    const timeLimitInput = document.getElementById('timeLimitInput');
+    const timeLimitValue = document.getElementById('timeLimitValue');
+    const settings = document.getElementById('settings');
+    const timedActivity = document.getElementById('timedActivity');
+    const timeLeft = document.getElementById('timeLeft');
+    const startButton = document.getElementById('startButton');
+
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = seconds % 60;
+      return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+
+    function updateSelectedTimeLimit() {
+      let newTimeLimit = parseInt(timeLimitInput.value, 10);
+
+      if (newTimeLimit < defaultTimeLimit) {
+        newTimeLimit = defaultTimeLimit;
+      }
+
+      if (newTimeLimit > maxTimeLimit) {
+        newTimeLimit = maxTimeLimit;
+      }
+
+      selectedTimeLimit = newTimeLimit;
+      timeLimitInput.value = selectedTimeLimit;
+      timeLimitValue.textContent = `${selectedTimeLimit} seconds`;
+    }
+
+    function startTimedActivity() {
+      updateSelectedTimeLimit();
+
+      remainingTime = selectedTimeLimit;
+      timeLeft.textContent = formatTime(remainingTime);
+
+      settings.classList.add('hidden');
+      timedActivity.classList.remove('hidden');
+
+      countdownTimer = setInterval(() => {
+        remainingTime--;
+        timeLeft.textContent = formatTime(remainingTime);
+
+        if (remainingTime <= 0) {
+          clearInterval(countdownTimer);
+          timeLeft.textContent = 'Expired';
+        }
+      }, 1000);
+    }
+
+    timeLimitInput.addEventListener('input', updateSelectedTimeLimit);
+    startButton.addEventListener('click', startTimedActivity);
+  </script>
+</body>
+</html>
