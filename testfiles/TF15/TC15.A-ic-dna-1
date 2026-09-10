@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="tc_code">
-	<img src="../assets/images/corplogo.png" width="50" height="50" class="" alt="Bland Corp. logo">
+	<img src="../assets/images/corplogo.png" width="50" height="50" class="" alt="">
   </div>
   </body>
 </html>
