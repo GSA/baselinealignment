@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.A-2-pass-1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<button class= "collapsible" id="openButton"> Press here to show collapsed list</button>
+
+    <!-- Collapsed list initially disabled -->
+    <ul id="myList" class="collapsed-list">
+        <li>My First item in the list </li>
+        <li>My Second item in the list </li>
+        <li>My Third item in the list</li>
+    </ul>
+
+    <script>
+        // Function to enable and open the list
+        function openList() {
+            const myList = document.getElementById("myList");
+
+            // Enable the list by removing the 'collapsed-list' class
+            myList.classList.remove("collapsed-list");
+
+            // Display the list by setting its style to 'block'
+            myList.style.display = "block";
+        }
+
+        // Add a click event listener to the button
+        document.getElementById("openButton").addEventListener("click", openList);    
+    </script>
+</body>
