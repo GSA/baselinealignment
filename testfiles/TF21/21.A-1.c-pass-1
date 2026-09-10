@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC21.A-1.c-pass-1</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .ticket-container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 0.25rem;
+    }
+
+    button:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+
+    .warning {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 2px solid #b35c00;
+      background-color: #fff4e5;
+      color: #3b2a00;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ticket-container">
+    <h1>Confirm Your Purchase</h1>
+
+    <p>
+      You have <span id="time-limit">2:00</span> minutes to confirm your purchase.
+    </p>
+
+    <button id="confirm">Confirm Purchase</button>
+
+    <div id="timeout-warning" class="warning hidden" aria-live="assertive">
+      <p>
+        Your time will expire in 20 seconds. Select “Extend Time Limit” to continue.
+      </p>
+      <button id="extend-time-limit">Extend Time Limit</button>
+      <p>
+        Extensions used: <span id="extension-count">0</span> of 10
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const defaultTimeLimit = 120; // 2 minutes
+    const warningTime = 20;       // warning appears with at least 20 seconds remaining
+    const extensionAmount = 120;  // each extension adds 2 minutes
+    const maxExtensions = 10;
+
+    let timeLimit = defaultTimeLimit;
+    let extensionCount = 0;
+    let timer;
+
+    const timeLimitDisplay = document.getElementById('time-limit');
+    const warning = document.getElementById('timeout-warning');
+    const extendButton = document.getElementById('extend-time-limit');
+    const extensionCountDisplay = document.getElementById('extension-count');
+    const confirmButton = document.getElementById('confirm');
+
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = seconds % 60;
+      return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+
+    function updateTimerDisplay() {
+      timeLimitDisplay.textContent = formatTime(timeLimit);
+    }
+
+    function showWarningIfNeeded() {
+      if (timeLimit <= warningTime && timeLimit > 0 && extensionCount < maxExtensions) {
+        warning.classList.remove('hidden');
+      }
+    }
+
+    function expireSession() {
+      clearInterval(timer);
+      timeLimitDisplay.textContent = 'Expired';
+      warning.classList.add('hidden');
+      confirmButton.disabled = true;
+      alert('Time limit expired. Please restart the purchase process.');
+    }
+
+    function startTimer() {
+      updateTimerDisplay();
+
+      timer = setInterval(() => {
+        timeLimit--;
+        updateTimerDisplay();
+        showWarningIfNeeded();
+
+        if (timeLimit <= 0) {
+          expireSession();
+        }
+      }, 1000);
+    }
+
+    function extendTimeLimit() {
+      if (extensionCount < maxExtensions) {
+        extensionCount++;
+        timeLimit += extensionAmount;
+        extensionCountDisplay.textContent = extensionCount;
+        warning.classList.add('hidden');
+        updateTimerDisplay();
+
+        if (extensionCount === maxExtensions) {
+          extendButton.disabled = true;
+        }
+      }
+    }
+
+    extendButton.addEventListener('click', extendTimeLimit);
+
+    startTimer();
+  </script>
+</body>
+</html>
