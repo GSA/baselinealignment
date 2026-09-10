@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuttle Launch Countdown</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-        .animation {
-            width: 200px;
-            height: 200px;
-            margin: 20px ;
-            background: url('../assets/images/Rocket.png') no-repeat center;
-            background-size: cover;
-        }
-        .launch {
-            background: url('../assets/images/rocketLaunch.png') no-repeat center;
-            background-size: cover;
-        }
-        #countdown{
-            font-size: 21px;
-        }
-    </style>
-    <script>
-        let countdown = 10;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC21.B-ic-dna-5</title>
 
-        function startCountdown() {
-            const countdownElement = document.getElementById("countdown");
-            const animationElement = document.getElementById("animation");
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      color: #1a1a1a;
+      background-color: #ffffff;
+    }
 
-            const interval = setInterval(() => {
-                if (countdown > 0) {
-                    countdownElement.innerText = countdown--;
-                } else {
-                    clearInterval(interval);
-                    countdownElement.innerText = "Launch!";
-                    animationElement.classList.add("launch");
-                }
-            }, 1000);
-        }
+    .metronome-demo {
+      max-width: 500px;
+      padding: 1.5rem;
+      border: 1px solid #767676;
+      border-radius: 8px;
+    }
 
-        window.onload = startCountdown;
-    </script>
+    .metronome {
+      position: relative;
+      width: 160px;
+      height: 220px;
+      margin: 2rem auto;
+      border: 2px solid #333333;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+    }
+
+    .pivot {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      border-radius: 50%;
+      background-color: #333333;
+      z-index: 2;
+    }
+
+    .pendulum {
+      position: absolute;
+      bottom: 26px;
+      left: 50%;
+      width: 4px;
+      height: 150px;
+      margin-left: -2px;
+      background-color: #005ea8;
+      transform-origin: bottom center;
+      animation: swing 1s infinite ease-in-out;
+    }
+
+    .weight {
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-radius: 50%;
+      background-color: #005ea8;
+    }
+
+    @keyframes swing {
+      0% {
+        transform: rotate(-28deg);
+      }
+
+      50% {
+        transform: rotate(28deg);
+      }
+
+      100% {
+        transform: rotate(-28deg);
+      }
+    }
+  </style>
 </head>
-<body>
-    <h1>Live Stream of Shuttle Launch</h1>
-    <p>The shuttle is preparing for launch. Stay tuned!</p>
-    <div id="animation" class="animation" aria-live="polite" aria-atomic="true">
-        <span id="countdown">10</span>
-    </div>
 
+<body>
+  <main id="tc_code">
+    <h1>Metronome Timing Exercise</h1>
+
+    <div class="metronome-demo">
+      <p>
+        Follow the moving metronome pendulum to practice a steady 60 beats-per-minute rhythm.
+        The motion is the instructional timing cue for this exercise.
+      </p>
+
+      <div
+        class="metronome"
+        role="img"
+        aria-label="Animated metronome pendulum demonstrating a 60 beats-per-minute rhythm">
+        <div class="pendulum">
+          <div class="weight"></div>
+        </div>
+        <div class="pivot"></div>
+      </div>
+
+      <p>
+        The moving pendulum is essential because it demonstrates the timing pattern that users are practicing.
+      </p>
+    </div>
+  </main>
 </body>
 </html>
