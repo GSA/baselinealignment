@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Image - no visible indication of focus (TC2.1-2-fail)</title>
+    <title>Image - no visible indication of focus (TC2.A-2-fail-1)</title>
 <style>
 
 .fname:focus {
