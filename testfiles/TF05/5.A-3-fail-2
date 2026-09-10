@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.A-3-fail-2</title>
+    </head>
+    <body><button
+  type="button"
+  class="menu-toggle"
+  aria-label="Expand color menu"
+  onclick="toggleMenu()">
+  <span aria-hidden="true">+</span>
+</button>
+
+<ul class="menu-items" hidden>
+  <li>Red</li>
+  <li>Green</li>
+  <li>Blue</li>
+</ul>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu-items');
+    const button = document.querySelector('.menu-toggle');
+    const icon = button.querySelector('span');
+
+    const isExpanded = !menu.hasAttribute('hidden');
+
+    if (isExpanded) {
+      menu.setAttribute('hidden', '');
+      icon.textContent = '+';
+      button.setAttribute('aria-label', 'Expand color menu');
+    } else {
+      menu.removeAttribute('hidden');
+      icon.textContent = '-';
+
+      // Failure condition:
+      // The accessible name changes but no longer describes the control's purpose.
+      // It should describe the action, such as "Collapse color menu".
+      button.setAttribute('aria-label', 'Expanded');
+    }
+  }
+</script>
+</body>
+
