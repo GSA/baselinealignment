@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image - no visible indication of focus (TC2.1-2-fail)</title>
+<style>
+
+.fname:focus {
+  outline: none;
+}
+
+</style>
+  </head>
+
+<body>
+<h1>User Information</h1>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<form>
+<fieldset>
+<legend>Choose your contact preference:</legend>
+  <input type="radio" class= "fname" id="email" name="email" value="email">
+  <label for="email">Email</label><br>
+  <input type="radio" id="textmessage" name="textmessage" value="textmessage">
+  <label for="textmessage">Text Message</label><br>
+  <input type="radio" class= "fname" id="phonecall" name="Phone Call" value="Phonecall">
+  <label for="phonecall">Phone call</label>
+</fieldset>
+</form> 
+
+</body>
