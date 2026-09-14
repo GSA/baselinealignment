@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.C-2-pass-1</title>
+    </head>
+    <body>
+<p>The submit button will become enabled once all required fields have been filled.</p>
+
+  <h4>Fill the Form</h4>
+
+  <label for="name">Name*:</label>
+  <input type="text" id="name" required>
+  <br><br>
+
+  <label for="email">Email*:</label>
+  <input type="email" id="email" required>
+  <br><br>
+
+  <label for="message">Message*:</label>
+  <textarea id="message" required></textarea>
+  <br><br>
+
+  <button type="submit" id="submitBtn" disabled>Submit</button>
+</form>
+
+<script>
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function checkForm() {
+    const isNameValid = nameInput.value.trim() !== '';
+    const isEmailValid = emailInput.value.trim() !== '';
+    const isMessageValid = messageInput.value.trim() !== '';
+
+    submitBtn.disabled = !(isNameValid && isEmailValid && isMessageValid);
+  }
+
+  nameInput.addEventListener('input', checkForm);
+  emailInput.addEventListener('input', checkForm);
+  messageInput.addEventListener('input', checkForm);
+</script>
+</body>
+</html>
