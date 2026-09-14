@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.D-1-pass-1</title>
+    </head>
+    <body>
+<label for="dropdown">Select a color:</label>
+<select id="dropdown" name="color">
+  <option value="" selected>Select a color</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+  <option value="purple">Purple</option>
+</select>
+</body>
+</html>
