@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.D-3-pass-1</title>
+    </head>
+    <body>
+    <label for="name">Customer Name:</label>
+    <input type="text" id="name" oninput="updateName()" aria-live="polite">
+
+    <script>
+        function updateName() {
+            const nameInput = document.getElementById('name');
+            const newValue = nameInput.value;
+        }
+    </script>
+</body>
+</html>
