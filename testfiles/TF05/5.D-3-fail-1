@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.D-3-fail-1</title>
+    </head>
+    <body>
+<label for="name">Customer Name:</label>
+    <input type="text" id="name" oninput="updateName()" aria-live="polite">
+    <div id="hidden-name" style="display: none;"></div>
+
+    <script>
+        function updateName() {
+            const nameInput = document.getElementById('name');
+            const hiddenName = document.getElementById('hidden-name');
+            const newValue = nameInput.value;
+
+            // Prevent the value from being updated in the input field
+            nameInput.value = 'Noah';
+
+            // Update the hidden element with the desired value
+            hiddenName.textContent = newValue;
+
+            // Announce the change to screen readers using ARIA live region
+            hiddenName.setAttribute('aria-live', 'polite');
+        }
+    </script>
+</body>
+</html>
