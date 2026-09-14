@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>21.A-all-fail-1</title>
+<style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Submit the Form</h1>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const refreshTime = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+setTimeout(() => {
+    document.getElementById('myForm').reset();
+    location.reload();
+}, refreshTime);
+
+    </script>
+</body>
+</html>
