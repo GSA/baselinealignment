@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.C-1-fail-3</title>
+    </head>
+<style>
+  .custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 2px solid #333;
+    width: fit-content;
+  }
+
+  .checkbox-visual {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkbox-visual::after {
+    content: "✓";
+    font-weight: bold;
+  }
+</style>
+<body>
+<div
+  role="checkbox"
+  tabindex="0"
+  aria-label="I agree to the terms and conditions"
+  aria-checked="false"
+  class="custom-checkbox"
+>
+  <span class="checkbox-visual" aria-hidden="true"></span>
+  <span>I agree to the terms and conditions</span>
+</div>
+</body>
+</html>
+
+
