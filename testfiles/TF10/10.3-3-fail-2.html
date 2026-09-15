@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10.3-3-fail-2</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+window.onload = function(){
+
+    //Get radiobutton element
+    let flavor = document.getElementById("id4");
+
+    //Add blur event to last radio button element
+    flavor.addEventListener("blur", function(){
+        //open a new browser window
+        window.open("https://www.access-board.gov/");
+    });
+};
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <fieldset>
+            <legend>Select an Ice Cream Flavor</legend>
+            <input type="radio" id="id1" name="flavor" />
+            <label for="id1">Chocolate</label>
+            <br />
+            <input type="radio" id="id2" name="flavor" />
+            <label for="id2">Vanilla</label>
+            <br />
+            <input type="radio" id="id3" name="flavor" />
+            <label for="id3">Strawberry</label>
+            <br />
+            <input type="radio" id="id4" name="flavor" />
+            <label for="id4">Lactose Intolerant</label>
+        </fieldset>
+        <br />
+        <button>Submit</button>
+    </div>
+
+</body>
+</html>

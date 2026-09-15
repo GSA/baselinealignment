@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>17.B-all-pass-2</title>
+    </head>
+    <body>
+<style>
+        video {
+            width: 500px;
+        }
+           
+    </style>
+    <title>TC17.2-all-pass-2</title>
+    <style>
+        .video-js {
+      width: 800px;
+      height: 450px;
+    }
+    
+    .vjs-custom-theme {
+      .vjs-control-bar{
+        background-color: transparent !important;
+      }
+      .vjs-big-play-button {
+        opacity: 0 !important;
+      }
+      .vjs-volume-control {
+        align-items: center !important;
+      }
+      
+      .vjs-play-progress:before {
+        top: -4px !important;
+      }
+      .vjs-fullscreen-control {
+        .vjs-icon-placeholder {
+          &:before {
+            line-height: 30px;
+          }
+        }
+      }
+      button {
+        &:hover {
+          color: #fff;
+        }
+      }
+    
+      .vjs-progress-control .vjs-progress-holder {
+        margin: 0 10px;
+        background: rgba(255, 255, 255, 0.25);
+        height: 1px;
+      }
+      .vjs-progress-control {
+        &:hover {
+          .vjs-play-progress:before {
+            top: -7px !important;
+          }
+        }
+      }
+    
+      .vjs-control-bar {
+        height: 54px;
+        background: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: visibility 0.1s, opacity 0.1s;
+        -o-transition: visibility 0.1s, opacity 0.1s;
+        transition: visibility 0.1s, opacity 0.1s;
+      }
+      .vjs-volume-panel {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+        display: flex;
+        align-items: center;
+      }
+    
+      .vjs-fullscreen-control {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 5;
+        order: 5;
+      }
+      .vjs-picture-in-picture-control,
+      .vjs-remaining-time {
+        display: none;
+      }
+      .vjs-play-control {
+        width: 5em !important;
+      }
+      .vjs-play-control .vjs-icon-placeholder::before {
+        font-size: 13px;
+        letter-spacing: 0.16px;
+        content: "Play" !important;
+        font-family: sans-serif;
+        line-height: 30px;
+      }
+    
+      .vjs-play-control.vjs-playing .vjs-icon-placeholder::before {
+        content: "Pause" !important;
+        font-family: sans-serif;
+      }
+    }
+      </style>
+      <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+      <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
+    
+    </head>
+    <body>
+      
+        <video class="video-js vjs-custom-theme " data-setup="{}" autoplay muted loop controls>
+             <source src="demo_nc.mp4" type="video/mp4" />
+             <track kind="captions" src="democaptions.vtt" srclang="en" label="English captions"/>
+             <track kind="descriptions" src="demodescriptionsempty.vtt" srclang="en"/>
+          
+        </video>
+      
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
+</html>
+

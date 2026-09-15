@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10.3-3-fail-1</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+window.onload = function(){
+
+    //Get last name textbox
+    let lastname = document.getElementById("last");
+
+    //Add blur event to last name textbox
+    lastname.addEventListener("blur", function(){
+        //get tc_code element
+        let codecontainer = document.getElementById("tc_code");
+
+        //replace tc_code element with form submission message
+        codecontainer.innerHTML = "<h2>Form Submitted</h2>";
+    });
+};
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <fieldset>
+            <legend>Name</legend>
+            <label for="first">First</label>
+            <input type="text" id="first" />
+            <label for="last">Last</label>
+            <input type="text" id="last" />
+        </fieldset>
+        <br />
+        <button>Submit</button>
+    </div>
+
+</body>
+</html>

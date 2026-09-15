@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Media Player Controls - media player on page, but it does not play synchronized media (only audio-only) (TC17.2-ic-dna-2)</title>
+    <!-- source code: http://www.terrillthompson.com/tests/html5-audio.html -->
+    <style type="text/css">
+      audio#player2 { 
+        height: 1px;
+      }
+      footer { 
+        clear: left;
+        margin-top: 2em;
+        padding-top: 1em;
+        border-top: thin #ccc solid;
+        font-size: 0.9em;
+      }
+      #controls { 
+        position: relative;
+        border: 2px solid #4c4c4c; 
+        background-color: #666666; 
+        width: 464px; 
+        height: 30px;
+        line-height: 30px;
+      }
+      input { 
+        border: 2px solid #666666; /* masked against background until input has focus*/
+        position: absolute;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      input#playpause {
+        top: 0px;
+        left: 0px;
+        width: 34px;
+        height: 30px;
+        background-color: transparent;
+        background-image: url('../assets/images/audio_play2.png');
+        color: transparent;
+        border-right-color: #848484; 
+      }
+      #seekBar { 
+        top: 0px;
+        left: 40px;
+        width: 200px;
+        height: 26px;
+      }
+      input#seekBack {
+        top: 0px;
+        left: 40px;
+        width: 34px;
+        height: 30px;
+        background-color: transparent;
+        /* background-image: url('../assets/images/audio_rewind.gif'); */
+        color: transparent;
+      }
+      input#seekForward {
+        top: 0px;
+        left: 80px;
+        width: 34px;
+        height: 30px;
+        background-color: transparent;
+        /* background-image: url('../assets/images/audio_forward.gif'); */
+        color: transparent;
+      }
+      span#timer { /* contains both span#currentTime and span#duration */
+        position: absolute;
+        left: 250px;
+        width: 100px;
+        color: #ffffff;
+      }
+      input#muteButton { 
+        left: 360px; 
+        top: 0px;
+        width: 34px;
+        height: 30px;
+        background-color: transparent;
+        background-image: url('../assets/images/audio_volume.png');
+        color: transparent;
+        border-left-color: #848484; 
+      }
+      input#volumeControl {
+        /* not used, but here for future reference */
+        display: none;
+        left: 360px;
+        top: -105px;
+        height: 100px;
+        width: 30px;
+        background-color: #666666;
+        border: 2px solid #4c4c4c;
+        color: #ffffff;
+      }
+      input#volumeUp { 
+        top: 0px;
+        left: 395px;
+        width: 34px;
+        height: 30px;
+        background-color: transparent;
+        background-image: url('../assets/images/audio_volumeup.png');
+        color: transparent;
+      }
+      input#volumeDown { 
+        top: 0px;
+        left: 430px;
+        width: 34px;
+        height: 30px;
+        background-color: transparent;
+        background-image: url('../assets/images/audio_volumedown.png');
+        color: transparent;
+      }
+      .offscreen { 
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+      }
+    </style>
+    <script>
+      var audio;
+      var player;
+      var playpause;
+      var seekBar;
+      var seekBack;
+      var seekForward;
+      var seekInterval = 15; //number of seconds to seek forward or back
+      var timer;
+      var currentTimeContainer;
+      var currentTime;
+      var duration;
+      var durationContainer;
+      var muteButton;
+      // var volumeControl; //not used
+      //while it's tempting to crank the volume by default, 
+      //doing so can drown out screen readers, so it's better to keep it moderate
+      var volume=0.5; //0 to 1
+      var hasSlider;
+      /* //volumeControl is not currently used, so neither are these vars
+      //var volumeIsVisible = false;
+      //var volumeHasFocus = false; 
+      //var muteHasFocus = false; 
+      */
+      function init() {
+        //add controls to #controls div using Javascript 
+        //but only for browsers that support <audio> 
+        player = document.getElementById('controls');
+        audio = document.getElementById('player2');
+        if (audio.canPlayType) { //this browser suports HTML5 audio
+        
+          audio.setAttribute('ontimeupdate','updateSeekBar()');
+          //audio.setAttribute('onvolumechange','updateVolumeControl()'); //not used
+         
+          playpause = document.createElement('input');
+          playpause.setAttribute('type','button');
+          playpause.setAttribute('id','playpause');
+          playpause.setAttribute('value','');
+          playpause.setAttribute('title','Play');
+          playpause.setAttribute('onclick','playAudio()');
+          playpause.setAttribute('accesskey','P');
+          player.appendChild(playpause);
+    
+          seekBar = document.createElement('input');
+          seekBar.setAttribute('type','range');
+          seekBar.setAttribute('id','seekBar');
+          seekBar.setAttribute('value','0'); //???
+          seekBar.setAttribute('step','any');
+          seekBar.setAttribute('ondurationchange','setupSeekBar()');
+          seekBar.setAttribute('onchange','seekAudio(this)');
+          seekBar.setAttribute('aria-label','seek bar');
+          player.appendChild(seekBar);
+    
+          if (seekBar.type !== 'text') { 
+            //if browser doesn't support type="range" (i.e., Firefox), it will render as type="text"
+            hasSlider = true;
+          }
+          else { 
+            //input type="text" is ugly and not very usable on the controller bar. Remove it.  
+            player.removeChild(seekBar); //seekBar.style.display='none'; 
+          }
+          //Now add rewind and fast forward buttons  
+          //These will be hidden from users who have sliders, but visible to users who don't
+          //We still want them, even if hidden, so users can benefit from their accesskeys
+          seekBack = document.createElement('input');
+          seekBack.setAttribute('type','button');
+          seekBack.setAttribute('id','seekBack');
+          seekBack.setAttribute('value','');
+          seekBack.setAttribute('title','Rewind ' + seekInterval + ' seconds');
+          seekBack.setAttribute('onclick','seekAudio(this)');
+          seekBack.setAttribute('accesskey','R');
+          player.appendChild(seekBack);
+          seekForward = document.createElement('input');
+          seekForward.setAttribute('type','button');
+          seekForward.setAttribute('id','seekForward');
+          seekForward.setAttribute('value','');
+          seekForward.setAttribute('title','Forward ' + seekInterval + ' seconds');
+          seekForward.setAttribute('onclick','seekAudio(this)');
+          seekForward.setAttribute('accesskey','F');
+          player.appendChild(seekForward);
+          if (hasSlider == true) { 
+            //Note: all major browsers support accesskey on elements hidden with visibility:hidden
+            seekBack.style.visibility='hidden';
+            seekForward.style.visibility='hidden';
+          }
+          timer = document.createElement('span');
+          timer.setAttribute('id','timer');		
+          currentTimeContainer = document.createElement('span');
+          currentTimeContainer.setAttribute('id','currentTime');
+          var startTime = document.createTextNode('0:00');
+          currentTimeContainer.appendChild(startTime);
+        
+          durationContainer = document.createElement('span');
+          durationContainer.setAttribute('id','duration');
+          timer.appendChild(currentTimeContainer);
+          timer.appendChild(durationContainer);
+          player.appendChild(timer);
+    
+          muteButton = document.createElement('input');
+          muteButton.setAttribute('type','button');
+          muteButton.setAttribute('id','muteButton');
+          muteButton.setAttribute('value','');
+          muteButton.setAttribute('title','Mute');		
+          muteButton.setAttribute('onclick','toggleMute()');
+          //muteButton.setAttribute('onmouseover','showVolume()'); //not used
+          //muteButton.setAttribute('onfocus','showVolume()'); //not used
+          //muteButton.setAttribute('onmouseout','hideVolume()'); //not used
+          //muteButton.setAttribute('onblur','hideVolume()'); //not used
+          muteButton.setAttribute('accesskey','M');
+          player.appendChild(muteButton);
+    
+          
+          //get and set default values 
+          audio.volume = volume;
+          //updateVolumeControl(volume); //not used
+          
+          //audio.duration returns a very very precice decimal value 
+          //this is exposed by MSAA and read by NVDA, and impairs accessibility
+          //Plus, it isn't necessary for our purposes
+          duration = Math.floor(audio.duration);
+          //Chrome and Safari return NaN for duration until audio.loadedmetadata is true.
+          //Other browsers are able to get duration with 100% reliability in my tests, 
+          //AND (interestingly) only Chrome and Safari support audio.loadedmetadata 
+          //So, have to assign duration both inside and outside of the following event listener 
+          if (isNaN(duration)) { 
+            audio.addEventListener('loadedmetadata',function (e) { 
+              duration = audio.duration;
+              showTime(duration,durationContainer,hasSlider);
+              seekBar.setAttribute('min',0);
+              seekBar.setAttribute('max',duration);
+            },false);
+          }
+          else { 
+            showTime(duration,durationContainer,hasSlider);
+            seekBar.setAttribute('min',0);
+            seekBar.setAttribute('max',duration);
+          }
+        }
+        else { 
+          player.style.display='none';
+        }	
+      }
+      function showTime(time,elem,hasSlider) { 
+        var minutes = Math.floor(time/60);  
+        var seconds = Math.floor(time % 60); 
+        if (seconds < 10) seconds = '0' + seconds;
+        var output = minutes + ':' + seconds; 
+        if (elem == currentTimeContainer) elem.innerHTML = output;
+        else elem.innerHTML = ' / ' + output;
+      }
+      function playAudio() { 
+        if (audio.paused || audio.ended) { 
+          audio.play();
+          playpause.setAttribute('title','Pause');
+          playpause.style.backgroundImage="url('../assets/images/audio_pause.png')";
+        }
+        else { 
+          audio.pause();
+          playpause.setAttribute('title','Play');
+          playpause.style.backgroundImage="url('../assets/images/audio_play2.png')";
+        }
+      }
+      function setupSeekBar() { 
+        seekBar.max = video.duration;
+      }
+      function seekAudio(element) {
+        //element is either seekBar, seekForward, or seekBack
+        if (element == seekBar) { 
+          var targetTime = element.value;
+          if (targetTime < duration) audio.currentTime = targetTime;
+        }
+        else if (element == seekForward) { 
+          var targetTime = audio.currentTime + seekInterval;
+          if (targetTime < duration) audio.currentTime = targetTime;
+          else audio.currentTime = duration;
+        }
+        else if (element == seekBack) { 
+          var targetTime = audio.currentTime - seekInterval;
+          if (targetTime > 0) audio.currentTime = targetTime;
+          else audio.currentTime = 0;
+        }
+      }
+      function updateSeekBar() { 
+        //if browser displays input[type=range] as a slider, increment it
+        if (seekBar.type !== 'text') { 
+          seekBar.value = audio.currentTime;
+        }
+        //also increment counter 
+        showTime(audio.currentTime,currentTimeContainer,hasSlider);
+      }
+      function toggleMute() { 
+        if (audio.muted) { 
+          audio.muted = false; //unmute the volume
+          muteButton.setAttribute('title','Mute');
+          audio.volume = volume;
+          //volumeControl.value = volume; //not used
+          muteButton.style.backgroundImage="url('../assets/images/audio_volume.png')";
+        }
+        else { 
+          audio.muted = true; //mute the volume
+          muteButton.setAttribute('title','UnMute');
+          //don't update var volume. Keep it at previous level 
+          //so we can return to it on unmute
+          muteButton.style.backgroundImage="url('../assets/images/audio_mute.png')";
+        }
+      }
+     
+    </script>
+     <!-- end source code: http://www.terrillthompson.com/tests/html5-audio.html -->
+  </head>
+<body onload="init()">
+  <h1>Audio-only Segment</h1>
+    <div id="tc_code">
+    <audio id="player2" preload tabindex="0">
+      <source src="../assets/audio/demo_audioonly.ogg" type="audio/ogg">
+      <source src="../assets/audio/demo_audioonly.mp3" type="audio/mpeg">  
+        Your browser does not support the audio tag.
+    </audio>
+    <div id="controls"></div>
+    <p>Transcript: Let's go again back to the test case demo branch, and I'm going to navigate to the file that I just modified.</p>
+    </div>
+
+    
+</body>
+</html>

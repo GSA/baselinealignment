@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20.A-1-dna-2</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleVersion() {
+      let standard = document.getElementById("standard-version");
+      let alternate = document.getElementById("alternate-version");
+      let toggleButton = document.getElementById("toggle-button");
+
+      if (standard.style.display === "none") {
+        standard.style.display = "block";
+        alternate.style.display = "none";
+        toggleButton.innerText = "Switch to Accessible Version";
+      } else {
+        standard.style.display = "none";
+        alternate.style.display = "block";
+        toggleButton.innerText = "Switch to Standard Version";
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <button id="toggle-button" onclick="toggleVersion()">Switch to Accessible Version</button>
+
+  <div id="standard-version">
+    <h2> Approved IT Lists </h2>
+          <p> Lorem ipsum odor amet, consectetuer adipiscing elit. Nec nostra eleifend posuere sodales volutpat curabitur ligula orci fames. Aconvallis dictum dis varius nibh semper. Vivamus sociosqu urna, id elit mi libero. Scelerisque tempus lobortis sollicitudin; diam per phasellus. Justo massa nec molestie elit lectus dictum natoque convallis?</p>
+      <h1>Approved Search Engines</h1>
+   
+      <p>1. Google - <a href="https://www.google.com">Open site</a></p>
+      <p>2. Yahoo - <a href="https://www.yahoo.com">Open site</a></p>
+      <p>3. Bing - <a href="https://www.bing.com">Open site</a></p>
+  
+    
+    </div>
+  
+    <!-- Alternate Accessible Version -->
+    <div id="alternate-version" class="hidden">
+    
+     <h1> Approved IT Lists </h1>
+          <p> Lorem ipsum odor amet, consectetuer adipiscing elit. Nec nostra eleifend posuere sodales volutpat curabitur ligula orci fames. Aconvallis dictum dis varius nibh semper. Vivamus sociosqu urna, id elit mi libero. Scelerisque tempus lobortis sollicitudin; diam per phasellus. Justo massa nec molestie elit lectus dictum natoque convallis?</p>
+      
+          <h2>Approved Search Engines</h2>
+          <ol>
+      <li>Google</li>
+      <li>Yahoo</li>
+      <li>Bing</li>
+          </ol>
+    </div>
+
+</body>
+
+</html>

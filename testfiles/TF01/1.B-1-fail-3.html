@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Keyboard Trap Loop (TC1.B-1-fail-3)</title>
+</head>
+<body>
+<p>The links below show a keyboard trap where the keyboard focus loops between the first three links with two links unable to be accessed using keyboard only.</p>
+  <a href="#" class="keyboard-trap" id="link1">Interesting Link</a><br>
+  <a href="#" class="keyboard-trap" id="link2">Unique Link</a><br>
+  <a href="#" class="keyboard-trap" id="link3">Last link before keyboard trap loop</a><br>
+<a href="#" id="link4">Link cannot be accessed</a><br>
+<a href="#" id="link5">Another link that cannot be accessed</a><br>
+
+  <script>
+    var links = document.querySelectorAll('.keyboard-trap');
+    var firstLink = links[0];
+    var lastLink = links[links.length - 1];
+
+    firstLink.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' && e.shiftKey) {
+        e.preventDefault();
+        lastLink.focus();
+      }
+    });
+
+    lastLink.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' && !e.shiftKey) {
+        e.preventDefault();
+        firstLink.focus();
+      }
+    });
+  </script>
+</body>
+</html>
