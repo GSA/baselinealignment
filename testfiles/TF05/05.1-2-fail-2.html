@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>05.1-2-fail-2</title>
+<!--  (was 05-001-fail) -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body{
+        padding:40px 10px;
+    }
+    i.emoji{
+        font-size: 30pt;
+        font-style: normal;
+        border: none;
+        background-color:transparent;
+    }
+    button i.emoji{
+        display:block;
+    }
+    strong{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20pt;
+    }
+    .select-feeling{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        border-radius: 5px;
+        border: none;
+        background-color: white;
+        padding-bottom: 5px;
+    }
+    .select-feeling:hover, .select-feeling:focus{
+        outline: 2px solid black;
+    }
+    .select-feeling[aria-pressed]{
+        background-color: #efefef;
+    }
+    #why-text{
+        border: 1px solid black;
+        width: 400px;
+        height: 2rem;
+        padding: 5px;
+    }
+
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+    window.onload = function(){
+
+        let feelingSelectBtns = document.querySelectorAll(".select-feeling");
+
+        //add click event to all buttons
+        feelingSelectBtns.forEach(function(elem){
+            elem.addEventListener("click", function(){
+
+                //handle aria-pressed state of buttons
+                feelingSelectBtns.forEach(function(btn){
+                    btn.removeAttribute("aria-pressed");
+                });
+                elem.setAttribute("aria-pressed","true");
+
+                //display follow-up question
+                document.getElementById("why").removeAttribute("hidden");
+
+                //react to user input
+                let feeling = elem.childNodes[1].textContent;
+                let reaction;
+                switch(feeling){
+                    case "great":
+                        reaction = "Wonderful!";
+                        break;
+                    case "good":
+                        reaction = "Excellent.";
+                        break;
+                    case "neutral":
+                        reaction = "Got it.";
+                        break;
+                    case "bad":
+                        reaction = "I'm sorry.";
+                        break;
+                    case "terrible":
+                        reaction = "My condolences.";
+                        break;
+                    default:
+                        reaction = "???";
+                }
+                document.getElementById("why-reaction").innerText = reaction;
+
+                // clear textbox element and send focus
+                let whyText = document.getElementById("why-text");
+                whyText.innerHTML = "";
+                whyText.focus();
+            });
+        });
+
+    };
+</script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+
+        <div id="feeling" role="group" aria-labelledby="feeling-question">
+            <strong id="feeling-question">How are you feeling today?</strong>
+            <br>
+            <button class="select-feeling"><i class="emoji" role="img">&#128512;</i>great</button>
+            <button class="select-feeling"><i class="emoji" role="img">&#128522;</i>good</button>
+            <button class="select-feeling"><i class="emoji" role="img">&#128528;</i>neutral</button>
+            <button class="select-feeling"><i class="emoji" role="img">&#128577;</i>bad</button>
+            <button class="select-feeling"><i class="emoji" role="img">&#128532;</i>terrible</button>
+        </div>
+        <br>
+        <div id="why" role="group" aria-labelledby="why-question" hidden>
+            <strong id="why-question">
+                <span id="why-reaction"></span>
+                Why are you feeling this way?
+            </strong>
+            <br>
+            <div id="why-text" contenteditable aria-label="Because..."></div>
+        </div>
+    </div>
+
+</body>
+</html>

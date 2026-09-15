@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission with Sound</title>
+    <script>
+        function playSoundAndSubmit(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById('submit-sound').play();
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <p>You will hear a sound to indicate successful submission of the form</p>
+    <form onsubmit="playSoundAndSubmit(event)">
+        <div>
+            <label for="question1">First Name</label>
+            <input type="text" id="question1" name="question1">
+        </div>
+        <br/>
+        <div>
+            <label for="question2">Last Name</label>
+            <input type="text" id="question2" name="question2">
+        </div>
+        <br/>
+        <div>
+            <label for="question3">Telephone</label>
+            <input type="text" id="question3" name="question3">
+        </div>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+
+    <audio id="submit-sound">
+        <source src="../assets/audio/alert-bell.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>

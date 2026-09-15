@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>21.A-all-fail-4</title> 
+      <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.lock-screen {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.locked {
+    display: none;
+}
+
+#timeLimitInput {
+    width: 80%;
+    margin: 10px auto;
+}
+
+#timeLimitValue {
+    font-size: 16px;
+}
+
+#timeLeft {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="lock-screen">
+        <h1>Lock Screen</h1>
+        <p>
+            <div class="locked" id="lockedScreen">
+                <p>Your Screen will be locked within: <span id="timeLeft"></span></p>
+            </div>
+            <label>To adjust the time: <input type="number" id="timeLimitInput" min="30" max="100" value="30"></label>
+        </p>
+        
+    </div>
+    <script> 
+    let countdownTimer;
+let defaultTimeLimit = 30; // Default time limit in seconds
+let maxTimeLimit = 100; 
+
+const timeLimitInput = document.getElementById('timeLimitInput');
+const timeLimitValue = document.getElementById('timeLimitValue');
+const lockedScreen = document.getElementById('lockedScreen');
+const timeLeft = document.getElementById('timeLeft');
+
+timeLimitInput.addEventListener('input', () => {
+    let newTimeLimit = parseInt(timeLimitInput.value);
+    if (newTimeLimit < 30) {
+        newTimeLimit = 30; // Minimum time limit is 30 seconds
+        timeLimitInput.value = newTimeLimit;
+    } else if (newTimeLimit > maxTimeLimit) {
+        newTimeLimit = maxTimeLimit; // Maximum time limit is 300 seconds (10 times the default)
+        timeLimitInput.value = newTimeLimit;
+    }
+    defaultTimeLimit = newTimeLimit;
+    timeLimitValue.textContent = `${newTimeLimit} seconds`;
+    updateTimer(defaultTimeLimit);
+});
+
+function startLock() {
+    clearInterval(countdownTimer);
+    lockedScreen.style.display = 'block';
+    updateTimer(defaultTimeLimit);
+
+    countdownTimer = setInterval(() => {
+        defaultTimeLimit--;
+        if (defaultTimeLimit <= 0) {
+            unlock();
+        } else {
+            updateTimer(defaultTimeLimit);
+        }
+    }, 1000);
+}
+
+function unlock() {
+    clearInterval(countdownTimer);
+    lockedScreen.style.display = 'none';
+    timeLimitInput.value = defaultTimeLimit; // Update the input value to match the remaining time
+    timeLimitValue.textContent = `${defaultTimeLimit} seconds`;
+}
+
+function updateTimer(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    timeLeft.textContent = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+
+// Start with the default lock screen time
+startLock();
+</script>
+</body>
+</html>

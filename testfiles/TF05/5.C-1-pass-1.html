@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC5.C-1-pass-1</title>
+    <style>
+        /* Define styles for the checkbox and its label */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-label {
+            margin-left: 10px;
+        }
+
+        /* Style for the checked state */
+        .checkbox-input:checked + .checkbox-label::before {
+            color: black;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" id="correct-checkbox" class="checkbox-input" checked> 
+        <label for="correct-checkbox" class="checkbox-label"> First Option </label>     
+    </div>
+</body>
