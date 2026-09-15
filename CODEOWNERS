@@ -1,0 +1,51 @@
+# Default ownership for all files, including new directories.
+# Last matching rule wins; put specific rules after broader rules.
+# Each rule must list all intended owners.
+* @drewnielson @KMSOC
+
+# Repository administration and contribution workflow
+/CODEOWNERS @drewnielson @KMSOC
+/.github/ @drewnielson @KMSOC
+/.gitignore @drewnielson @KMSOC
+/LICENSE.md @drewnielson @KMSOC
+
+# Build configuration and dependencies
+/_config.yml @drewnielson @KMSOC
+/.ruby-version @drewnielson @KMSOC
+/Gemfile @drewnielson @KMSOC
+/Gemfile.lock @drewnielson @KMSOC
+/package.json @drewnielson @KMSOC
+
+# Documentation and website content
+/README.md @drewnielson @KMSOC
+/contributing.md @drewnielson @KMSOC
+/index.md @drewnielson @KMSOC
+/about.markdown @drewnielson @KMSOC
+/testcases.md @drewnielson @KMSOC
+
+# Baseline and standards reference data
+/_data/ @drewnielson @KMSOC
+/_data/baselines.yaml @drewnielson @KMSOC
+/_data/standards.yaml @drewnielson @KMSOC
+
+# Jekyll layouts and shared page components
+/_layouts/ @drewnielson @KMSOC
+/_includes/ @drewnielson @KMSOC
+
+# Website assets
+/assets/ @drewnielson @KMSOC
+/assets/css/ @drewnielson @KMSOC
+/assets/js/ @drewnielson @KMSOC
+/assets/images/ @drewnielson @KMSOC
+
+# Test case index export templates
+/assets/baselineTestCases.csv @drewnielson @KMSOC
+/assets/baselineTestCases.json @drewnielson @KMSOC
+
+# Test case authoring and expected results
+/Templates/ @drewnielson @KMSOC
+/testcases/ @drewnielson @KMSOC
+
+# Test samples and shared sample resources
+/testfiles/ @drewnielson @KMSOC
+/testfiles/assets/ @drewnielson @KMSOC
