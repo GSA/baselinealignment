@@ -24,14 +24,26 @@
             let resultsContainer = document.getElementById("results");
 
             if (query) {
-                resultsContainer.innerHTML = `
-                    <p>Search Results for: <strong> "${query}<strong>"</p>
-                    <ul>
-                        <li><a href="#">Example result 1 for ${query}</a></li>
-                        <li><a href="#">Example result 2 for ${query}</a></li>
-                        <li><a href="#">Example result 3 for ${query}</a></li>
-                    </ul>
-                `;
+                resultsContainer.textContent = "";
+
+                const p = document.createElement("p");
+                p.appendChild(document.createTextNode('Search Results for: '));
+                const strong = document.createElement("strong");
+                strong.textContent = ` "${query}"`;
+                p.appendChild(strong);
+
+                const ul = document.createElement("ul");
+                for (let i = 1; i <= 3; i++) {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.href = "#";
+                    a.textContent = `Example result ${i} for ${query}`;
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                }
+
+                resultsContainer.appendChild(p);
+                resultsContainer.appendChild(ul);
                 resultsContainer.style.display = "block";
             } else {
                 resultsContainer.style.display = "none";
