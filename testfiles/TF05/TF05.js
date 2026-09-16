@@ -143,7 +143,7 @@ function updateRating()
 function updateWrongRating()
 {
     ratingSlider.ariaValueNow = 11 - ratingSlider.value;
-    ratingOutput.children[0].innerHTML = `Current rating: ${ratingSlider.value}`;
+    ratingOutput.children[0].textContent = `Current rating: ${ratingSlider.value}`;
     ratingOutput.ariaLabel = `Current rating: ${(11 - ratingSlider.value)}`;
 }
 
