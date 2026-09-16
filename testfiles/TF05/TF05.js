@@ -136,7 +136,7 @@ function changePage(page)
 //This function update the rating according to the slider.
 function updateRating()
 {
-    ratingOutput.children[0].innerHTML = `Current rating: ${ratingSlider.value}`;
+    ratingOutput.children[0].textContent = `Current rating: ${ratingSlider.value}`;
     ratingOutput.ariaLabel = `Current rating: ${ratingSlider.value}`
 }
 //This function update the rating according to the slider correclty but not on the aria.
