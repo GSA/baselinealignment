@@ -2,7 +2,12 @@ let submitText = "", pageContentList;
 let ratingSlider, ratingOutput
 function submitForm()
 {
-    document.getElementsByClassName("page-contents")[0].innerHTML = `<p>${document.getElementById("fname").value} ${document.getElementById("lname").value} your application will be reviewed shortly.</p>`;
+    const firstName = document.getElementById("fname").value;
+    const lastName = document.getElementById("lname").value;
+    const container = document.getElementsByClassName("page-contents")[0];
+    const message = document.createElement("p");
+    message.textContent = `${firstName} ${lastName} your application will be reviewed shortly.`;
+    container.replaceChildren(message);
 }
 window.onload = function ()
 {
