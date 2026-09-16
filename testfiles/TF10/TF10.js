@@ -12,7 +12,7 @@ function submitDateForm()
     //Everything is correct
     if((currDate.value.length == 10) && (dateCheck != "Invalid Date"))
     {
-        document.getElementsByClassName("page-contents")[0].innerHTML = `<p>${currDate.value} is the date you inserted.</p>`;
+        document.getElementsByClassName("page-contents")[0].textContent = `${currDate.value} is the date you inserted.`;
     }
     //Either date is invalid or format is invalid (Lack of detail explaination).
     else if(document.title == "10.6-all-fail-1")
