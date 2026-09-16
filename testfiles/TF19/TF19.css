@@ -1,0 +1,19 @@
+.maincontent-nav-body {
+  margin: 0;
+}
+
+.page-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.page-contents h2 {
+  font-size: 19px;
+}
+.page-contents p {
+  max-width: 1200px;
+}
+.page-contents h2, .page-contents p, .page-contents ul {
+  margin: 0;
+}/*# sourceMappingURL=TF19.css.map */

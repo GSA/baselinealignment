@@ -1,0 +1,324 @@
+.page-contents
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    #timer-div
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10px;
+        #timer-button
+        {
+            background-color: #005ea2;
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            width: auto;
+            height: 35px;
+            p 
+            {
+                margin: 3px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+        #timer-button:hover
+        {
+            cursor: pointer;
+            background-color: #1a3b66;
+            
+        }
+    }
+    p
+    {
+        margin: 5px 0px;
+    }
+}
+#overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#timeout-alert
+{
+    display: none;
+    padding: 18px;
+    background-color: white;
+    width: 300px;
+    height: 80px;
+    border-radius: 5px;
+    left: 50%;
+    top: 2%;
+    margin-left: -168px;
+    z-index: 99;
+    position: fixed;
+    #timeout-alert-decision
+    {
+        display: flex;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        column-gap: 10px;
+    }
+}
+
+.button
+{
+    background-color: #005ea2;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+    height: 35px;
+    p 
+    {
+        margin: 3px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+.button:hover
+{
+    cursor: pointer;
+    background-color: #1a3b66;
+    
+}
+.bidding-submit
+{
+    height: 25px !important;
+    padding: 0px 10px;
+}
+
+#bidding-input
+{
+    border: 1px inset #ccc;
+    padding-left: 4px;
+    input 
+    {
+        border: 0;
+    }
+}
+#bidding-warning
+{
+    color: red;
+}
+
+#bidding-info
+{
+    display: flex;
+    flex-direction: column;
+    #bidding-image
+    {
+        border-radius: 10px;
+        max-width: 450px;
+        height: 300px;
+    }
+    h3,h2
+    {
+        text-align: center;
+    }
+    #bidding-price
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5px;
+    }
+}
+
+.gif-div
+{
+    display: flex;
+    flex-direction: column;
+    .gif-label
+    {
+        margin-bottom: 10px;
+    }
+    #animated-button
+    {
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+        #gif-overlay
+        {
+            width: 400px;
+            height: 325px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img 
+            {
+                width: 170px;
+                height: 170px;
+            }
+        }
+        img
+        {
+            width: 400px;
+            height: 325px;
+        }
+    }
+
+}
+
+.stock-div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    .stock-name
+    {
+        margin: 0;
+    }
+    .stock-price
+    {
+        display: flex;
+        flex-direction: row;
+        column-gap: 5px;
+        p 
+        {
+            margin: 0;
+        }
+        .stock-movement
+        {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .stock-down
+        {
+            color: #A80000;
+        }
+        .stock-up
+        {
+            color: green;
+        }
+    }
+}
+
+#site-access
+{
+    display: block;
+    padding: 18px;
+    background-color: white;
+    width: 300px;
+    height: 80px;
+    border-radius: 5px;
+    left: 50%;
+    top: 2%;
+    margin-left: -168px;
+    z-index: 99;
+    position: fixed;
+    #timeout-alert-decision
+    {
+        display: flex;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        column-gap: 10px;
+    }
+}
+
+#site-access-overlay
+{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#audio-div
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-only-volume::-webkit-media-controls-play-button
+{
+    display: none;
+}
+
+#doi
+{
+    max-width: 1000px;
+    p 
+    {
+        margin-bottom: 10px;
+        font-size: 18px
+    }
+    .padding-left
+    {
+        padding-left: 20px;
+    }
+}
+
+
+
+// Kevin SCSS
+// 21.B.ib SCSS
+.main-container{
+    height: 500px;
+    width: 1000px;
+    background-image: url('../assets/images/Rocket.png');
+    background-size: auto;
+    position: relative;
+}
+
+#movingContent {
+    width: 100%;
+    height: 50px;
+    background-color: lightblue;
+    overflow: hidden;
+    position: absolute;
+    bottom:0;
+    
+}
+
+
+#movingText {
+    position: absolute;
+    white-space: nowrap;
+    animation: moveText 25s linear infinite;
+}
+
+.button-container{
+    position: absolute;
+    bottom: 50px;
+    p{
+        color:#fff;
+        padding:0;
+        margin:0;
+    }
+}
+
+@keyframes moveText {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
+#pauseButton, #stopButton, #hideButton {
+    margin: 10px;
+}
