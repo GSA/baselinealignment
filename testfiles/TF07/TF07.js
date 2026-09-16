@@ -5,7 +5,7 @@ function submitForm()
     let lname = document.getElementById("lname");
     let audio = new Audio('../assets/audio/alert-bell.wav');
     if((fname.value.length > 0) && (lname.value.length > 0))
-        document.getElementsByClassName("page-contents")[0].innerHTML = `<p>Thank You ${fname.value}, we will review your application shortly.</p>`;
+        document.getElementsByClassName("page-contents")[0].textContent = `Thank You ${fname.value}, we will review your application shortly.`;
     else if(document.title == '07.3-1-fail-2')
     {
         document.getElementById("alert-notification").innerHTML = "404 Error";
@@ -22,7 +22,7 @@ function submitFormNoAudio()
     let fname = document.getElementById("fname");
     let lname = document.getElementById("lname");
     if((fname.value.length > 0) && (lname.value.length > 0))
-        document.getElementsByClassName("page-contents")[0].innerHTML = `<p>Thank You ${fname.value}, we will review your application shortly.</p>`;
+        document.getElementsByClassName("page-contents")[0].textContent = `Thank You ${fname.value}, we will review your application shortly.`;
     else if(document.title == '07.3-1-fail-2')
     {
         document.getElementById("alert-notification").innerHTML = "404 Error";
