@@ -1,0 +1,133 @@
+.page-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.page-contents #timer-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.page-contents #timer-div #timer-button {
+  background-color: #005ea2;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  width: auto;
+  height: 35px;
+}
+.page-contents #timer-div #timer-button p {
+  margin: 3px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.page-contents #timer-div #timer-button:hover {
+  cursor: pointer;
+  background-color: #1a3b66;
+}
+.page-contents p {
+  margin: 5px 0px;
+  max-width: 1000px;
+}
+.page-contents #puerto-rico {
+  width: 370px;
+  height: 250px;
+}
+.page-contents #puerto-rico-flag {
+  width: 250px;
+  height: 150px;
+}
+
+.button {
+  background-color: #005ea2;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  width: auto;
+  height: 35px;
+}
+.button p {
+  margin: 3px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #1a3b66;
+}
+
+.page-contents-sn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: -8px;
+  height: 100vh;
+}
+.page-contents-sn .sidenav-content {
+  padding-left: 15px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  left: 0;
+  z-index: 1;
+  background-color: #005ea2;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidenav button {
+  text-align: left;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.sidenav a, .sidenav button {
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 550;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidenav a:hover, .sidenav button:hover {
+  background-color: #1a3b66;
+}
+.sidenav .dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.sidenav .dropdown-menu .expanded {
+  display: none;
+}
+.sidenav .active .expanded {
+  display: block;
+}
+.sidenav .active .collapsed {
+  display: none;
+}
+.sidenav .dropdown-container {
+  flex-direction: column;
+}
+
+.dropdown-container {
+  display: none;
+}
+
+.slidecontainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=TF05.css.map */

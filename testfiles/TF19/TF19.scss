@@ -1,0 +1,23 @@
+.maincontent-nav-body
+{
+    margin: 0;
+}
+.page-contents 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    h2 
+    {
+        font-size: 19px;
+    }
+    p 
+    {
+        max-width: 1200px;
+    }
+    h2,p,ul
+    {
+        margin: 0;
+    }
+}
