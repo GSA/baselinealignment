@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TC6.D-2-fail-1 - Image of Text Cannot Be Customized for Font</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      color: #1a1a1a;
+      background-color: #ffffff;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid #cccccc;
+      background-color: #f7f7f7;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    canvas {
+      border: 2px solid #333333;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    .note {
+      max-width: 700px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tc_code">
+    <h1>Image of Text Customization Example</h1>
+
+    <p class="note">
+      The announcement below is rendered as an image of text on a canvas.
+      Users can change the text size, text color, and background color,
+      but the font family is fixed and cannot be customized.
+    </p>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="fontSize">Text size</label>
+        <select id="fontSize">
+          <option value="24">24px</option>
+          <option value="32" selected>32px</option>
+          <option value="40">40px</option>
+          <option value="48">48px</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="textColor">Text color</label>
+        <input type="color" id="textColor" value="#003366">
+      </div>
+
+      <div class="control-group">
+        <label for="backgroundColor">Background color</label>
+        <input type="color" id="backgroundColor" value="#ffffff">
+      </div>
+    </div>
+
+    <canvas
+      id="announcementCanvas"
+      width="760"
+      height="220"
+      aria-label="Important announcement: Registration closes Friday at 5 PM.">
+    </canvas>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('announcementCanvas');
+    const context = canvas.getContext('2d');
+
+    const fontSize = document.getElementById('fontSize');
+    const textColor = document.getElementById('textColor');
+    const backgroundColor = document.getElementById('backgroundColor');
+
+    const announcementText = 'Important announcement:';
+    const detailText = 'Registration closes Friday at 5 PM.';
+
+    function drawAnnouncement() {
+      const selectedFontSize = fontSize.value;
+      const selectedTextColor = textColor.value;
+      const selectedBackgroundColor = backgroundColor.value;
+
+      // Background color can be customized.
+      context.fillStyle = selectedBackgroundColor;
+      context.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Text color can be customized.
+      context.fillStyle = selectedTextColor;
+
+      // Failure condition:
+      // Font family is intentionally fixed and cannot be customized by the user.
+      context.font = `bold ${selectedFontSize}px Arial`;
+      context.fillText(announcementText, 30, 80);
+
+      context.font = `${selectedFontSize}px Arial`;
+      context.fillText(detailText, 30, 140);
+    }
+
+    fontSize.addEventListener('change', drawAnnouncement);
+    textColor.addEventListener('input', drawAnnouncement);
+    backgroundColor.addEventListener('input', drawAnnouncement);
+
+    drawAnnouncement();
+  </script>
+</body>
+</html>
