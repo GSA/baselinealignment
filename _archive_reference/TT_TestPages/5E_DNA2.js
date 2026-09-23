@@ -1,1 +1,0 @@
-javascript:void((function(){andiScript=document.createElement('script');andiScript.setAttribute('src','https://www.dhs.gov/xlibrary/oast/ANDI/andi.js');document.body.appendChild(andiScript)})());

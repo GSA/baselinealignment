@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC9.A-3.a-pass-1 Accessible Flashing Example</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .flash-box {
+            width: 200px;
+            height: 200px;
+            margin: 1.5rem auto;
+            background-color: #003366;
+            border: 2px solid #1a1a1a;
+        }
+
+        /* Slow, safe flash: 1 cycle per second (1 Hz), well below 3 Hz */
+        .flash-box.animate {
+            animation: safeFlash 1s steps(2, jump-none) infinite;
+        }
+
+        @keyframes safeFlash {
+            0%, 49% { background-color: #003366; }
+            50%, 100% { background-color: #66a3ff; }
+        }
+
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .flash-box.animate {
+                animation: none;
+            }
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            cursor: pointer;
+            background: #003366;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:focus {
+            outline: 3px solid #ff8800;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accessible Flashing Example</h1>
+
+    <p>
+        This box flashes at a slow, safe rate (approximately 1 Hz), which is
+        well below the 3 Hz threshold defined by WCAG guidelines. The animation
+        is off by default, can be toggled by the user, and is disabled
+        automatically for anyone whose system prefers reduced motion.
+    </p>
+
+    <div id="flashBox" class="flash-box" role="img"
+         aria-label="A box that changes color slowly when animation is turned on."></div>
+
+    <button id="toggleBtn" aria-pressed="false">Start animation</button>
+
+    <script>
+        const box = document.getElementById('flashBox');
+        const btn = document.getElementById('toggleBtn');
+
+        btn.addEventListener('click', () => {
+            const isAnimating = box.classList.toggle('animate');
+            btn.setAttribute('aria-pressed', String(isAnimating));
+            btn.textContent = isAnimating ? 'Stop animation' : 'Start animation';
+        });
+    </script>
+</body>
+</html>

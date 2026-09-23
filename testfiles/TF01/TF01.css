@@ -1,0 +1,43 @@
+.page-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.page-contents p {
+  margin: 5px 0px;
+  max-width: 1000px;
+}
+.page-contents #email-div h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #005ea2;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  width: auto;
+  height: 35px;
+}
+.button p {
+  margin: 3px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #1a3b66;
+}
+
+#alert-notification {
+  color: #9E0000;
+  font-size: 20px;
+}
+
+.required {
+  font-weight: bold;
+}/*# sourceMappingURL=TF01.css.map */

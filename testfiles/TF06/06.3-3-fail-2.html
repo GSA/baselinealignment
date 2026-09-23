@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6.3-3-fail-2</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/bootstrap.css">
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/baselinealignment/assets/css/baseline-align.css">
+<!--Custom Style -->
+<style>
+    body {
+        padding:40px 10px;
+    }
+    button{
+        margin: 5px 0;
+    }
+
+</style>
+<!--Custom Style end -->
+<!--Custom Script -->
+<script>
+    window.onload = function(){
+
+        //Get audio button
+        let audio = document.getElementById("audio");
+
+        //Add click event to audio button
+        audio.addEventListener("click", function(){
+            //play audio
+            var file = new Audio('../assets/audio/captcha.ogv');
+            file.play();
+        });
+
+    };
+    </script>
+<!--Custom Script end -->
+</head>
+
+<body>
+
+    <div id="tc_code">
+        <h2>Create an account</h2>
+        <label for="id1">To make sure you are human, enter the type of the animal you hear:</label>
+        <br />
+        <button aria-label="Audio CAPTCHA pattern" id="audio"><i class="fa fa-headphones" style="font-size:14pt"></i></button>
+        <br />
+        <input type="text" id="id1" />
+        <br /><br />
+        <button>Submit</button>
+    </div>
+
+</body>
+</html>

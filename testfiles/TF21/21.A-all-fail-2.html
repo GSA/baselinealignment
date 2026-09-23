@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>21.A-all-fail-2</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ticket-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="ticket-container">
+        <h1> Are you still there ? </h1>
+        <p>You have <span id="time-limit">1:00</span> minutes to confirm your purchase.</p>
+        <div class="seat-selection">
+            <!-- Your seat selection interface goes here -->
+        </div>
+        <button id="confirm">Confirm Purchase</button>
+        <button id="extend-time-limit">Extend Time Limit</button>
+    </div>
+    <script> 
+    let timeLimit = 60; // 2 minutes (in seconds)
+let timer;
+let extensionCount = 0;
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+
+function updateTimer() {
+    document.getElementById('time-limit').textContent = formatTime(timeLimit);
+}
+
+function startTimer() {
+    timer = setInterval(() => {
+        timeLimit--;
+        updateTimer();
+        if (timeLimit <= 0) {
+            clearInterval(timer);
+            alert('Time limit expired. Please refresh the page to start again.');
+        }
+    }, 1000);
+}
+
+function extendTimeLimit() {
+    if (extensionCount < 3) { // Allow up to 3 extensions
+        timeLimit += 60; // Add 1 minute (60 seconds) to the time limit
+        extensionCount++;
+        updateTimer();
+        document.getElementById('extend-time-limit').disabled = false; // Disable the button after extending
+    } else {
+        alert('You have reached the maximum number of time extensions.');
+    }
+}
+
+document.getElementById('extend-time-limit').addEventListener('click', extendTimeLimit);
+
+// Start the timer when the page loads
+startTimer();
+    </script>
+</body>
+</html>

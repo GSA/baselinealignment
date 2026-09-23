@@ -38,6 +38,41 @@
 var AblePlayerInstances = [];
 
 (function ($) {
+
+	// Helper function to encode HTML entities
+	function escapeHtml(text) {
+		return String(text)
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	}
+
+	// Helper function to validate media src URLs
+	function isSafeMediaSrc(src) {
+		// Only allow http(s), relative URLs, and disallow javascript: and data: schemes
+		// Restrict to only allow certain file extensions (e.g., .mp4, .webm, .ogg, .mp3, .wav)
+		var pattern = /^(https?:\/\/|\.{0,2}\/|\/)[^<>"]+$/i;
+		if (!pattern.test(src)) {
+			return false;
+		}
+		// Disallow javascript: and data: schemes explicitly
+		if (/^\s*(javascript:|data:)/i.test(src)) {
+			return false;
+		}
+		// Only allow certain file extensions
+		var allowedExtensions = ['.mp4', '.webm', '.ogg', '.mp3', '.wav', '.m4a'];
+		var lowerSrc = src.toLowerCase();
+		var hasAllowedExtension = allowedExtensions.some(function(ext) {
+			return lowerSrc.endsWith(ext);
+		});
+		if (!hasAllowedExtension) {
+			return false;
+		}
+		return true;
+	}
+
 	$(document).ready(function () {
 
 		$('video, audio').each(function (index, element) {
@@ -1062,12 +1097,16 @@ var AblePlayerInstances = [];
 				var $youTubeVideos = $(this).find('li[data-youtube-id]');
 				$youTubeVideos.each(function() {
 					var youTubeId = $(this).attr('data-youtube-id');
-					var youTubePoster = thisObj.getYouTubePosterUrl(youTubeId,'120');
-					var $youTubeImg = $('<img>',{
-						'src': youTubePoster,
-						'alt': ''
-					});
-					$(this).find('button').prepend($youTubeImg);
+					// Validate YouTube video ID: 11 chars, letters, numbers, - and _
+					if (/^[A-Za-z0-9_-]{11}$/.test(youTubeId)) {
+						var youTubePoster = thisObj.getYouTubePosterUrl(youTubeId,'120');
+						var $youTubeImg = $('<img>',{
+							'src': youTubePoster,
+							'alt': ''
+						});
+						$(this).find('button').prepend($youTubeImg);
+					}
+					// else: invalid ID, do not inject image
 				});
 
 				// add accessibility to the list markup
@@ -4750,20 +4789,24 @@ var AblePlayerInstances = [];
 		if ($sourceSpans.length) {
 			$sourceSpans.each(function() {
 				if (thisObj.hasAttr($(this),'data-src')) {
-					// this is the only required attribute
-					var $newSource = $('<source>',{
-						'src': $(this).attr('data-src')
-					});
-					if (thisObj.hasAttr($(this),'data-type')) {
-						$newSource.attr('type',$(this).attr('data-type'));
+					var dataSrc = $(this).attr('data-src');
+					if (isSafeMediaSrc(dataSrc)) {
+						// this is the only required attribute
+						var $newSource = $('<source>',{
+							'src': escapeHtml(dataSrc)
+						});
+						if (thisObj.hasAttr($(this),'data-type')) {
+							$newSource.attr('type',$(this).attr('data-type'));
+						}
+						if (thisObj.hasAttr($(this),'data-desc-src')) {
+							$newSource.attr('data-desc-src',$(this).attr('data-desc-src'));
+						}
+						if (thisObj.hasAttr($(this),'data-sign-src')) {
+							$newSource.attr('data-sign-src',$(this).attr('data-sign-src'));
+						}
+						thisObj.$media.append($newSource);
 					}
-					if (thisObj.hasAttr($(this),'data-desc-src')) {
-						$newSource.attr('data-desc-src',$(this).attr('data-desc-src'));
-					}
-					if (thisObj.hasAttr($(this),'data-sign-src')) {
-						$newSource.attr('data-sign-src',$(this).attr('data-sign-src'));
-					}
-					thisObj.$media.append($newSource);
+					// else: invalid src, do not add
 				}
 			});
 		}
@@ -4777,11 +4820,15 @@ var AblePlayerInstances = [];
 					thisObj.hasAttr($(this),'data-kind') &&
 					thisObj.hasAttr($(this),'data-srclang')) {
 					// all required attributes are present
-					var $newTrack = $('<track>',{
-						'src': $(this).attr('data-src'),
-						'kind': $(this).attr('data-kind'),
-						'srclang': $(this).attr('data-srclang')
-					});
+					var dataSrc = $(this).attr('data-src');
+					if (!isSafeMediaSrc(dataSrc)) {
+						// Skip this track if src is not safe
+						return;
+					}
+					var $newTrack = $('<track>');
+					$newTrack.attr('src', escapeHtml(dataSrc));
+					$newTrack.attr('kind', $(this).attr('data-kind'));
+					$newTrack.attr('srclang', $(this).attr('data-srclang'));
 					if (thisObj.hasAttr($(this),'data-label')) {
 						$newTrack.attr('label',$(this).attr('data-label'));
 					}
@@ -4812,7 +4859,8 @@ var AblePlayerInstances = [];
 				if (typeof itemLang !== 'undefined') {
 					nowPlayingSpan.attr('lang',itemLang);
 				}
-				nowPlayingSpan.html('<span>' + this.tt.selectedTrack + ':</span>' + itemTitle);
+				nowPlayingSpan.append($('<span>').text(this.tt.selectedTrack + ':'));
+				nowPlayingSpan.append(document.createTextNode(itemTitle));
 				this.$nowPlayingDiv.html(nowPlayingSpan);
 			}
 		}
@@ -7480,8 +7528,12 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					// for all <source> elements, replace src with data-orig-src
 					origSrc = this.$sources[i].getAttribute('data-orig-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (origSrc) {
-						this.$sources[i].setAttribute('src',origSrc);
+					if (
+						typeof origSrc === 'string' &&
+						isSafeMediaSrc(origSrc) &&
+						!/[<>"'`]/.test(origSrc) // extra check: disallow HTML meta-characters
+					) {
+						this.$sources[i].setAttribute('src', escapeHtml(origSrc));
 					}
 				}
 				// No need to check for this.initializing
@@ -7497,8 +7549,8 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					origSrc = this.$sources[i].getAttribute('src');
 					descSrc = this.$sources[i].getAttribute('data-desc-src');
 					srcType = this.$sources[i].getAttribute('type');
-					if (descSrc) {
-						this.$sources[i].setAttribute('src',descSrc);
+					if (descSrc && isSafeMediaSrc(descSrc)) {
+						this.$sources[i].setAttribute('src', escapeHtml(descSrc));
 						this.$sources[i].setAttribute('data-orig-src',origSrc);
 					}
 				}
@@ -9925,7 +9977,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 		if (typeof thisCaption !== 'undefined') {
 			if (this.currentCaption !== thisCaption) {
 				// it's time to load the new caption into the container div
-				captionText = this.flattenCueForCaption(cues[thisCaption]).replace('\n', '<br>');
+				captionText = this.flattenCueForCaption(cues[thisCaption]).replace(/\n/g, '<br>');
 				this.$captionsDiv.html(captionText);
 				this.currentCaption = thisCaption;
 				if (captionText.length === 0) {
@@ -10490,7 +10542,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 			if (this.currentMeta !== thisMeta) {
 				if (this.metaType === 'text') {
 					// it's time to load the new metadata cue into the container div
-					this.$metaDiv.html(this.flattenCueForMeta(cues[thisMeta]).replace('\n', '<br>'));
+					this.$metaDiv.html(this.flattenCueForMeta(cues[thisMeta]).replace(/\n/g, '<br>'));
 				}
 				else if (this.metaType === 'selector') {
 					// it's time to show content referenced by the designated selector(s)
@@ -11190,7 +11242,7 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 					if (typeof result === 'string') {
 						if (thisObj.lyricsMode) {
 							// add <br> BETWEEN each caption and WITHIN each caption (if payload includes "\n")
-							result = result.replace('\n','<br>') + '<br>';
+							result = result.replace(/\n/g,'<br>') + '<br>';
 						}
 						else {
 							// just add a space between captions
@@ -13250,101 +13302,112 @@ if (thisObj.useTtml && (trackSrc.endsWith('.xml') || trackText.startsWith('<?xml
 })(jQuery);
 
 (function ($) {
-	AblePlayer.prototype.initSignLanguage = function() {
 
-		// Sign language is only currently supported in HTML5 player, not YouTube or Vimeo
-		if (this.player === 'html5') {
-			// check to see if there's a sign language video accompanying this video
-			// check only the first source
-			// If sign language is provided, it must be provided for all sources
-			this.signFile = this.$sources.first().attr('data-sign-src');
-			if (this.signFile) {
-  		  if (this.isIOS()) {
-    		  // IOS does not allow multiple videos to play simultaneously
-    		  // Therefore, sign language as rendered by Able Player unfortunately won't work
+  AblePlayer.prototype.initSignLanguage = function () {
+
+    // Sign language is only currently supported in HTML5 player, not YouTube or Vimeo
+    if (this.player === 'html5') {
+      // check to see if there's a sign language video accompanying this video
+      // check only the first source
+      // If sign language is provided, it must be provided for all sources
+      this.signFile = this.$sources.first().attr('data-sign-src');
+      if (this.signFile) {
+        if (this.isIOS()) {
+          // IOS does not allow multiple videos to play simultaneously
+          // Therefore, sign language as rendered by Able Player unfortunately won't work
           this.hasSignLanguage = false;
           if (this.debug) {
-            
           }
         }
         else {
-  				if (this.debug) {
-	  				
+          if (this.debug) {
           }
           this.hasSignLanguage = true;
           this.injectSignPlayerCode();
         }
-			}
-			else {
-				this.hasSignLanguage = false;
-			}
-		}
-		else {
-			this.hasSignLanguage = false;
-		}
-	};
+      }
+      else {
+        this.hasSignLanguage = false;
+      }
+    }
+    else {
+      this.hasSignLanguage = false;
+    }
+  };
 
-	AblePlayer.prototype.injectSignPlayerCode = function() {
+  AblePlayer.prototype.injectSignPlayerCode = function () {
 
-		// create and inject surrounding HTML structure
+    // Helper to sanitize and validate sign language video URLs
+    function sanitizeURL(url) {
+      try {
+        return new URL(url, window.location.href).href;
+      } catch (e) {
+        return null; // Invalid URL
+      }
+    }
 
-		var thisObj, signVideoId, signVideoWidth, i, signSrc, srcType, $signSource;
+    var thisObj, signVideoId, signVideoWidth, i, signSrc, srcType, $signSource;
 
-		thisObj = this;
+    thisObj = this;
 
-		signVideoWidth = this.getDefaultWidth('sign');
+    signVideoWidth = this.getDefaultWidth('sign');
 
-		signVideoId = this.mediaId + '-sign';
-		this.$signVideo = $('<video>',{
-			'id' : signVideoId,
-			'tabindex' : '-1'
-		});
-		this.signVideo = this.$signVideo[0];
-		// for each original <source>, add a <source> to the sign <video>
-		for (i=0; i < this.$sources.length; i++) {
-			signSrc = this.$sources[i].getAttribute('data-sign-src');
-			srcType = this.$sources[i].getAttribute('type');
-			if (signSrc) {
-				$signSource = $('<source>',{
-					'src' : signSrc,
-					'type' : srcType
-				});
-				this.$signVideo.append($signSource);
-			}
-			else {
-				// source is missing a sign language version
-				// can't include sign language
-				this.hasSignLanguage = false;
-				break;
-			}
-		}
+    signVideoId = this.mediaId + '-sign';
+    this.$signVideo = $('<video>', {
+      'id': signVideoId,
+      'tabindex': '-1'
+    });
+    this.signVideo = this.$signVideo[0];
 
-		this.$signWindow = $('<div>',{
-			'class' : 'able-sign-window',
-  		'role': 'dialog',
+    // for each original <source>, add a <source> to the sign <video>
+    for (i = 0; i < this.$sources.length; i++) {
+      signSrc = this.$sources[i].getAttribute('data-sign-src');
+      srcType = this.$sources[i].getAttribute('type');
+
+      signSrc = sanitizeURL(signSrc); // Sanitize the URL
+
+      if (signSrc) {
+        $signSource = $('<source>', {
+          'src': signSrc,
+          'type': srcType
+        });
+        this.$signVideo.append($signSource);
+      }
+      else {
+        // source is missing a sign language version
+        // can't include sign language
+        this.hasSignLanguage = false;
+        break;
+      }
+    }
+
+    this.$signWindow = $('<div>', {
+      'class': 'able-sign-window',
+      'role': 'dialog',
       'aria-label': this.tt.sign
-		});
-		this.$signToolbar = $('<div>',{
-			'class': 'able-window-toolbar able-' + this.toolbarIconColor + '-controls'
-		});
+    });
+    this.$signToolbar = $('<div>', {
+      'class': 'able-window-toolbar able-' + this.toolbarIconColor + '-controls'
+    });
 
-		this.$signWindow.append(this.$signToolbar, this.$signVideo);
+    this.$signWindow.append(this.$signToolbar, this.$signVideo);
 
-		this.$ableWrapper.append(this.$signWindow);
+    this.$ableWrapper.append(this.$signWindow);
 
-		// make it draggable
-		this.initDragDrop('sign');
+    // make it draggable
+    this.initDragDrop('sign');
 
-		if (this.prefSign === 1) {
-			// sign window is on. Go ahead and position it and show it
-			this.positionDraggableWindow('sign',this.getDefaultWidth('sign'));
-		}
-		else {
-			this.$signWindow.hide();
-		}
-	};
+    if (this.prefSign === 1) {
+      // sign window is on. Go ahead and position it and show it
+      this.positionDraggableWindow('sign', this.getDefaultWidth('sign'));
+    }
+    else {
+      this.$signWindow.hide();
+    }
+  };
 
 })(jQuery);
+
 
 (function ($) {
 	// Look up ISO 639-1 language codes to be used as subtitle labels
