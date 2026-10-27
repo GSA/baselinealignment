@@ -1,0 +1,2514 @@
+{
+  "schema_version": "0.2.0",
+  "suite_id": "framework-web-documents",
+  "suite_version": "0.2.0",
+  "source_revision": "b3da9104ab949808d7c082e701a22f7e2bb696fc",
+  "baseline_source_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2",
+  "status": "draft-published-source-inventory-not-completed-validation",
+  "cases": [
+    {
+      "id": "TC01.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC01.A-1-fail-1.md",
+      "record_sha256": "ff822629f47d070d87e053589e315e4862d93b71148b3e89196139b7fced1f9d",
+      "sample": "testfiles/TF01/01.A-1-fail-1.html",
+      "sample_sha256": "a6c46bee0329ef78a36cb47290ede5e001f3934b247720397a1e4d6a96bfd720",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:1.A-KeyboardAccess"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC01.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC01.A-2-fail-1.md",
+      "record_sha256": "c22396575057e07faff9c75747fe1d8f3a72a7002e574f4ded4ef5817eedf535",
+      "sample": "testfiles/TF01/01.A-2-fail-1.html",
+      "sample_sha256": "acc04aa06f6c50a33a0540ec08ae764e59986dfb492cf185986fa0efd3b8cd8d",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:1.A-KeyboardAccess"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC01.B-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC01.B-ic-dna-1.md",
+      "record_sha256": "d64b239cb756d1a509fc41c37bd50a8a1518113aadc234838137e0669e6a0b03",
+      "sample": "testfiles/TF01/01.B-ic-dna-1.html",
+      "sample_sha256": "f03520f0a893d8f80c5af5c98dc4d225a077824b0ad4493b34b98e3f46a521b9",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:1.B-NoKeyboardTrap"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC02.A-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC02.A-ic-dna-1.md",
+      "record_sha256": "92f7ad29cfa44a158cc498c69a50050aa71723ba06abfd156cf9f3b4cb548ef0",
+      "sample": "testfiles/TF02/02.A-ic-dna-1.html",
+      "sample_sha256": "caddadfee863c10a658de92d0c114272a6fe83cb3ee0ee4cc84c02decb794cb4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:2.A-FocusVisible"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.A-1-fail-1.md",
+      "record_sha256": "5f02aa962f56508e1289e812b212f2a7eba3d6557d2a5ddb2ef488c52da01991",
+      "sample": "testfiles/TF06/06.A-1-fail-1.html",
+      "sample_sha256": "1cbc28cf00e35f3022e05793c91871709fa7c7e64d575055d030622eb6b166ba",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.A-2-fail-1.md",
+      "record_sha256": "c6f350a16f92c1068164154577f10c9d107715f3d54f6dab319907363c5251b2",
+      "sample": "testfiles/TF06/06.A-2-fail-1.html",
+      "sample_sha256": "afea3404b8540112687a1180a27123db9213414ea958713c86049a9b058c5e12",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.A-3-fail-1.md",
+      "record_sha256": "8d4f71f44cef65a5ca0984d5d486e87bf65450d63c88e5c27bb67c6fc92007af",
+      "sample": "testfiles/TF06/06.A-3-fail-1.html",
+      "sample_sha256": "534ff5bb27e88b1355176061dbadb1c36438510f65c4b9ddccde680a55500e6a",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-4-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.A-4-fail-1.md",
+      "record_sha256": "294e28878c4fa5ba740029024ff9ff7f3f3ee49279c9e340956c308c93edc068",
+      "sample": "testfiles/TF06/06.A-4-fail-1.html",
+      "sample_sha256": "100a9eab38a7f7156269ae20a687c2af156dbed6c8a980a019d8cab1c24c1ea0",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-5-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.A-5-fail-1.md",
+      "record_sha256": "b0316ac5b77cb298d2dd90910776cd129923a00106e05886bb8691f127301f3a",
+      "sample": "testfiles/TF06/06.A-5-fail-1.html",
+      "sample_sha256": "f3a900999db96beaca9db07f5eaa31b23ae86e2e7456e3674faf087bf95512f1",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.A-all-pass-1.md",
+      "record_sha256": "b108bc828bf58c2286335ae1f9f1327eaec8e85b3d7672e52ddaabd8647236c3",
+      "sample": "testfiles/TF06/06.A-all-pass-1.html",
+      "sample_sha256": "9b929a9dfd7638753162520d5741385c55b95e7608fb41bbb1216776dabb34a9",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-all-pass-2",
+      "domain": "web",
+      "record": "testcases/TC06.A-all-pass-2.md",
+      "record_sha256": "41bd40ffec6138e62284b250ea57fc151211ac47feaea249d12254c551f0d394",
+      "sample": "testfiles/TF06/06.A-all-pass-2.html",
+      "sample_sha256": "c14ff245f4d80f3f7c2a85c8727906882b9981dced31f5f0f06438acfd526691",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-all-pass-3",
+      "domain": "web",
+      "record": "testcases/TC06.A-all-pass-3.md",
+      "record_sha256": "94a588c21519968b340b72b9899933bbf12e2c15389a3c8f54c42cf81d8b6d73",
+      "sample": "testfiles/TF06/06.A-all-pass-3.html",
+      "sample_sha256": "e14c416f9846c416e988cc4bc1f944612f78ae3bedd22f7c6f7c708f4e08de23",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-all-pass-4",
+      "domain": "web",
+      "record": "testcases/TC06.A-all-pass-4.md",
+      "record_sha256": "a8bf21d53c9fa27062c4b85d911abd1599a98865d17dd0e40ab75ecf1b56124c",
+      "sample": "testfiles/TF06/06.A-all-pass-4.html",
+      "sample_sha256": "30a00cb1f09a2a4abe4298cfb1fcbcc7b443c2dc1396bbc543069a51fcbcc506",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.A-all-pass-5",
+      "domain": "web",
+      "record": "testcases/TC06.A-all-pass-5.md",
+      "record_sha256": "448aa01be5256c65a0343e8a70af2122243b725cbbc26c6511a0de8887b28ce3",
+      "sample": "testfiles/TF06/06.A-all-pass-5.html",
+      "sample_sha256": "c7c42aade337df86b25dbb5bf96c6bbbc375a01025870a2fe4012af08cf4e98b",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.A-MeaningfulImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.B-1-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.B-1-pass-1.md",
+      "record_sha256": "9e954bcea8f76fbf8dd90ed739c9cd8120c988b6a9586ab2feb312ebf09633ee",
+      "sample": "testfiles/TF06/06.B-1-pass-1.html",
+      "sample_sha256": "22aca49e12df9085a8b5366f621bee02b98538cd74ae59c28b5c855a3caf7326",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.B-DecorativeImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.B-2-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.B-2-pass-1.md",
+      "record_sha256": "7dc41322db71c0f028046756e333c5ba54af930115aef54c3392cbefec262e8d",
+      "sample": "testfiles/TF06/06.B-2-pass-1.html",
+      "sample_sha256": "11ffb3dd39ada2fc581e82f5ed1ebeecb6625b5b206a48b88eb39e676248a99c",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.B-DecorativeImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.B-3-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.B-3-pass-1.md",
+      "record_sha256": "9b7b8b6403a3ebfa0d5dad0789e190ed43a7c140bca955c449fdba04b2bede30",
+      "sample": "testfiles/TF06/06.B-3-pass-1.html",
+      "sample_sha256": "16f994223e298307fc0987196a926aa5a8b780440bde525df56e0dac71a97dfa",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.B-DecorativeImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.B-4-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.B-4-pass-1.md",
+      "record_sha256": "dbe8755c79ea92347b89ca76c584c8169b5cf1df4f0efdaffadeb8234508a6a5",
+      "sample": "testfiles/TF06/06.B-4-pass-1.html",
+      "sample_sha256": "3194a3a39c76bcee849015f98ab6d45e19c3bef19df5a13724a85f0146b4cfcf",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.B-DecorativeImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.B-5-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.B-5-pass-1.md",
+      "record_sha256": "84e34ff60aa6c92daae57e932319be9be0459095582d9e6aec3eba7e6837454a",
+      "sample": "testfiles/TF06/06.B-5-pass-1.html",
+      "sample_sha256": "9824e64312f3aa48ac16fec87efc01646618b14f6735af9c31731a0761896e24",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.B-DecorativeImage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.C-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.C-1-fail-1.md",
+      "record_sha256": "a1a06cddc0bf288fc8fde27e9e74bc360a9f89644120ebcfdbbc501b600c8409",
+      "sample": "testfiles/TF06/06.C-1-fail-1.html",
+      "sample_sha256": "78fdd35e697bfc2566a73ff9ec68a711b91e7a7711f9a0c6dd6afae048e177fb",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.C-Captcha"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.C-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.C-2-fail-1.md",
+      "record_sha256": "0f8ee64552875e359d800029047cc8a9ebd8030e92f8eddd024c26317d803046",
+      "sample": "testfiles/TF06/06.C-2-fail-1.html",
+      "sample_sha256": "857fe9917fd32f28e0db02c3571b77a1010dc17f0ce0a0212d43fcb9e080d2b5",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.C-Captcha"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.C-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.C-3-fail-1.md",
+      "record_sha256": "aaa3ba53a7de27141f70b876b6480c1589c0b374c67c6e167a45e39b13e5efc1",
+      "sample": "testfiles/TF06/06.C-3-fail-1.html",
+      "sample_sha256": "6544acaeadd5a4885740c4e6acd72f8911048a966eacc9239aabc495e6fe9ac4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.C-Captcha"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.C-3-fail-2",
+      "domain": "web",
+      "record": "testcases/TC06.C-3-fail-2.md",
+      "record_sha256": "401cf949d594e41c0a39406ec39ba4eb091e5fd30e238e403b20b89ec503e9d3",
+      "sample": "testfiles/TF06/06.C-3-fail-2.html",
+      "sample_sha256": "a791dfde93b3a9c4b552d282536b8a3b7be06216fc1ff21e30ea6ad819c98e13",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.C-Captcha"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.C-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC06.C-all-pass-1.md",
+      "record_sha256": "69948776f95d503bd83b7fa5aa9b05673646ce0f6169ee488340102b583c42ea",
+      "sample": "testfiles/TF06/06.C-all-pass-1.html",
+      "sample_sha256": "35519784eb507a98c6b89a0c73336cf460f20c15dd81ca90c94dbc853bc5d2fc",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.C-Captcha"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.C-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC06.C-ic-dna-1.md",
+      "record_sha256": "c387e992ef71334199802f2846bf21cdda52598dd842916407cd52f1dcdd74f2",
+      "sample": "testfiles/TF06/06.C-ic-dna-1.html",
+      "sample_sha256": "a751d63e28d4f6bbffec42b3749e0503b3edca14ed5a5963f6c64ad0bb302c86",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.C-Captcha"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.D-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC06.D-1-fail-1.md",
+      "record_sha256": "58239773f1b977de35bcfb4aa829f1214f89644eb5d24624ce073d1e146c0b4f",
+      "sample": "testfiles/TF06/06.D-1-fail-1.html",
+      "sample_sha256": "169a2f224d66af359d83e062d2cd672b6090844c2ceeca04a5d66a956a5ae5f5",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.D-ImageText"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC06.D-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC06.D-ic-dna-1.md",
+      "record_sha256": "02c0b1af5e857f39eb81ae27cdcc7ac119343a40210b8f770ed3139b6b0327cf",
+      "sample": "testfiles/TF06/06.D-ic-dna-1.html",
+      "sample_sha256": "d22026b01f6bf8073bbafa438ddd6a832da36366593be93fb9516fdb2ff2d235",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:6.D-ImageText"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC07.B-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC07.B-ic-dna-1.md",
+      "record_sha256": "4fc19af4c4939c5c3854a53ca73fcb752234581ed5c4b7e71829ddc6926e9b2d",
+      "sample": "testfiles/TF07/07.B-ic-dna-1.html",
+      "sample_sha256": "0e58ceb175f711b6ab23a1deff13d7ef59cfbbc3bd7da1f7aaef27cf6299d1d0",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:7.B-SensoryCharacteristics"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC08.A-2-fail-1.md",
+      "record_sha256": "4479ef3ebbc3cb7a3ad03511d34a301ec83c21ccf4edad7b9c870612350104fa",
+      "sample": "testfiles/TF08/08.A-2-fail-1.html",
+      "sample_sha256": "2cf16d0e6dc3e6db7166a9c8cd5668fe4311dc4479c6f2457d598fdacfa74b85",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-2-fail-2",
+      "domain": "web",
+      "record": "testcases/TC08.A-2-fail-2.md",
+      "record_sha256": "60a897e0635db95025832e14f8bce87d9848ebe7e3034d51211816c746359a94",
+      "sample": "testfiles/TF08/08.A-2-fail-2.html",
+      "sample_sha256": "701dc972d8c1c55007a8ee590b658e43014433333c4a9d290969fdae681d2c6d",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-2-fail-3",
+      "domain": "web",
+      "record": "testcases/TC08.A-2-fail-3.md",
+      "record_sha256": "6d9b1d3fea64eb5e51f3680c13b66cfd59aea9944bfcc5df830a8f1845c27f06",
+      "sample": "testfiles/TF08/08.A-2-fail-3.html",
+      "sample_sha256": "1f71126119cd796bd1ba08a7c039e28e7ba04fb2b0f93a4e01a8e2c7c256232b",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-2-fail-4",
+      "domain": "web",
+      "record": "testcases/TC08.A-2-fail-4.md",
+      "record_sha256": "206ae71254031d93ea544a85c4f2dc0ced2f883a50d375797000233a401533fc",
+      "sample": "testfiles/TF08/08.A-2-fail-4.html",
+      "sample_sha256": "808c98e4dece11b2e820eae6babc4646f0fef900a288dc0ee5af89813777fadc",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-2-pass-1",
+      "domain": "web",
+      "record": "testcases/TC08.A-2-pass-1.md",
+      "record_sha256": "78d9d6b5417940c5c78f5929da2f801a2b9e35b8e21106473a45916bb4335870",
+      "sample": "testfiles/TF08/08.A-2-pass-1.html",
+      "sample_sha256": "470f127865cc1f2bf1abd59d094747e5a46f33806d3ba469f1dd3508abe61a15",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC08.A-3-fail-1.md",
+      "record_sha256": "0fb1ef1ce8ebbc3235043d2c4ccc0785643726bbbfc950a99c9aa5d86b25ce75",
+      "sample": "testfiles/TF08/08.A-3-fail-1.html",
+      "sample_sha256": "9179a4d3ab57e1114d378e9570f056ec81f9b4d80d14aa0c2c67c8852d7aba2f",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-3-fail-2",
+      "domain": "web",
+      "record": "testcases/TC08.A-3-fail-2.md",
+      "record_sha256": "71583a7f5eb9b5d7bf6451fdec2749c856edc669fd7b851aa71d7c8aaf7bd842",
+      "sample": "testfiles/TF08/08.A-3-fail-2.html",
+      "sample_sha256": "145d4d118a0f91d9fd88b6eb175d828f58495873e277cc26d6efbac9deb4237c",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-3-pass-1",
+      "domain": "web",
+      "record": "testcases/TC08.A-3-pass-1.md",
+      "record_sha256": "1768bdfa5d99ca4e2ed5011cbe7bcfdb91ff8503d842fedf376b8d3906007f51",
+      "sample": "testfiles/TF08/08.A-3-pass-1.html",
+      "sample_sha256": "84fa7cf8201cf01e318b0b75609581743dbb24fa595aaa9947a7758eec6d0aa1",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC08.A-3-pass-2",
+      "domain": "web",
+      "record": "testcases/TC08.A-3-pass-2.md",
+      "record_sha256": "2ac469723793e7b97fa0fa37292c0b701d9f9a5efc085acd621b118ad6833ae8",
+      "sample": "testfiles/TF08/08.A-3-pass-2.html",
+      "sample_sha256": "339755a9ddd212ba8b58e779f3027c5b96831640583d148b908d247573a408ae",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:8.A-ContrastMinimum"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC10.A-1-fail-1.md",
+      "record_sha256": "15018d5565fa3d1c4eeaa1cda95d340ade10921ae290fc641e2469242b7ceff2",
+      "sample": "testfiles/TF10/10.A-1-fail-1.html",
+      "sample_sha256": "e61a978c18a8376b173bde16be24bbbfd82558aac1377fe6dd8db2cb0fae72b5",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC10.A-all-pass-1.md",
+      "record_sha256": "ef882a4fdde6abffc02211d590d2195b2614c856fe686d2e6c322cf4fab0e15b",
+      "sample": "testfiles/TF10/10.A-all-pass-1.html",
+      "sample_sha256": "7887f1e0144377789e0e3c7821d2802d4e6e667b18f6a8c11101a15e644d9ef2",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-all-pass-2",
+      "domain": "web",
+      "record": "testcases/TC10.A-all-pass-2.md",
+      "record_sha256": "79e28d0b338402aaf7f0c12c6f4b81544983f2792c39596b0728781ddb2d1c60",
+      "sample": "testfiles/TF10/10.A-all-pass-2.html",
+      "sample_sha256": "4fb15068bf10f94759ac87db59e02b5247160d07ede4a5b1b6ed945e49c15add",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-all-pass-3",
+      "domain": "web",
+      "record": "testcases/TC10.A-all-pass-3.md",
+      "record_sha256": "2ded42513f2d4118915e9a61eb32f0a8f22a41c781d46e78324dbcd6987121b3",
+      "sample": "testfiles/TF10/10.A-all-pass-3.html",
+      "sample_sha256": "4a6079d4b5fd053ae703d6c38688b12d449c0df3f53a0dc7cc5822c4c0780eba",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-all-pass-4",
+      "domain": "web",
+      "record": "testcases/TC10.A-all-pass-4.md",
+      "record_sha256": "52a6741cc87933f43cb1685c837dca98f166de282900d5df8e6cc8eb74877b18",
+      "sample": "testfiles/TF10/10.A-all-pass-4.html",
+      "sample_sha256": "54a472f03281e4f30dd9e32a82ca6e09497bf3058057bf541a82b11fd44ee54b",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-all-pass-5",
+      "domain": "web",
+      "record": "testcases/TC10.A-all-pass-5.md",
+      "record_sha256": "f1fa43a656ff5e95ecac5ab8ee0b1d283efeed0a5f7f34ab758bbab2157dafb1",
+      "sample": "testfiles/TF10/10.A-all-pass-5.html",
+      "sample_sha256": "8ffbd877baf82ef5b606ba48d54db22e8026e49dee0828255a29759f300c0ac8",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-all-pass-6",
+      "domain": "web",
+      "record": "testcases/TC10.A-all-pass-6.md",
+      "record_sha256": "4a25fd8e431e8f05273a830c7c31965884050a637d1bea58e6bc2cd0adabf287",
+      "sample": "testfiles/TF10/10.A-all-pass-6.html",
+      "sample_sha256": "0440833bed093d652dd9e5ab5265f16aec7602551e5c32b3251d4a916edb69a2",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC10.A-ic-dna-1.md",
+      "record_sha256": "1565c20df16ae45f95669c01a106346b91a860a7cf92f6e5a62e69d769526613",
+      "sample": "testfiles/TF10/10.A-ic-dna-1.html",
+      "sample_sha256": "5d4e866d802eea4e4c31c37513a2d86513668bf72ac2b2082394f7368ae45cc5",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.A-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC10.A-ic-dna-2.md",
+      "record_sha256": "11397a1f66f6416d0f0e13e85b59da5e291032acff791d9f376573a1c8ac856f",
+      "sample": "testfiles/TF10/10.A-ic-dna-2.html",
+      "sample_sha256": "d6c046ec614c2fa67842cc98d79ce82a7bf827a1c8fab68770f15506c607cb1a",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.A-FormName"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.C-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC10.C-3-fail-1.md",
+      "record_sha256": "4190dcd31001d5636cd7778871fd12f08f6bc8b7187afecb8d028915572f5109",
+      "sample": "testfiles/TF10/10.C-3-fail-1.html",
+      "sample_sha256": "ede99e5b0f3dc41a2dd71767822a13257acc996f1af8fae5724bc0e443699b1d",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.C-OnInput"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.C-3-fail-2",
+      "domain": "web",
+      "record": "testcases/TC10.C-3-fail-2.md",
+      "record_sha256": "4f3f616f767b30ac8c39b603a9dbaa81c66fa2e0d4d806b610c5979ce816cae8",
+      "sample": "testfiles/TF10/10.C-3-fail-2.html",
+      "sample_sha256": "fc7a54ac1eed98a3626705aff3727002a28f5a6faf5eb135522b07d2db867c12",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.C-OnInput"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.C-3-fail-3",
+      "domain": "web",
+      "record": "testcases/TC10.C-3-fail-3.md",
+      "record_sha256": "0398bc366bdcf622d34e6d6c7a4fb8f9d2c783004f8557a709bb731acae1f61f",
+      "sample": "testfiles/TF10/10.C-3-fail-3.html",
+      "sample_sha256": "2043c9bf8793c954fa8a2a5f6eab600cf6237e3461a04d38cd50841841e03b62",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.C-OnInput"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.C-all-pass",
+      "domain": "web",
+      "record": "testcases/TC10.C-all-pass.md",
+      "record_sha256": "35cb849e4d2d7f0363f93dcc44a74c224250a423f8cd1141b1da618e5e5b82c2",
+      "sample": "testfiles/TF10/10.C-all-pass-1.html",
+      "sample_sha256": "f68e032e25f4abb32a4f6610acc692484dab2d2c5cd3a6b42110935b732e8036",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.C-OnInput"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.C-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC10.C-ic-dna-1.md",
+      "record_sha256": "7a98ea0fe062534d7b63f5d54035727e3a524211e3da42c87086125b0980d8c6",
+      "sample": "testfiles/TF10/10.C-ic-dna-1.html",
+      "sample_sha256": "18c391426fd623bfc32bc37bd979df3cf4d8723f98bc322a93d8bb7a7b2c583e",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.C-OnInput"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC10.D-2-fail-1.md",
+      "record_sha256": "879d24bd78c9bca500d290efc6a6f1eb4012984d45563c70067bb0e51c3a5679",
+      "sample": "testfiles/TF10/10.D-2-fail-1.html",
+      "sample_sha256": "cb5977d2133228380b2441d76944523d3f9bb180980a96fbe24f3fa53a7289a1",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-2-fail-2",
+      "domain": "web",
+      "record": "testcases/TC10.D-2-fail-2.md",
+      "record_sha256": "01cad853e1e4748b2ebef090d5c8a3a021bd0f5076f306326cc8df43d22e3115",
+      "sample": "testfiles/TF10/10.D-2-fail-2.html",
+      "sample_sha256": "60cac1e050f6bdbf251db43b9c59a355243a0f28e8c82d1ecaca5ab09c61c429",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-2-fail-3",
+      "domain": "web",
+      "record": "testcases/TC10.D-2-fail-3.md",
+      "record_sha256": "fd8d21275c781562181a750f0d4a52149ba5b902f96fbcc25be04db4e34ae2d6",
+      "sample": "testfiles/TF10/10.D-2-fail-3.html",
+      "sample_sha256": "370fbd3a88ac7c2db42a322dc55602c29d6a8d05ce6e406fc94cb7dfeac95e9e",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC10.D-all-pass-1.md",
+      "record_sha256": "52fc8c81db74689a7b40f25387c6d3b601f71b313b6a7c02402a382fcf6d2f1e",
+      "sample": "testfiles/TF10/10.D-all-pass-1.html",
+      "sample_sha256": "f828a322a7e67ce4c621ff086bb5f7d9dbc34aca4370257bb81747ae43850734",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-all-pass-2",
+      "domain": "web",
+      "record": "testcases/TC10.D-all-pass-2.md",
+      "record_sha256": "0d57faf111e52aa944b36b3c1bcfa1f2371700e653bd4e5cdd929f7fd24f2c1a",
+      "sample": "testfiles/TF10/10.D-all-pass-2.html",
+      "sample_sha256": "720db85bddbb2f7e296d5ef8fcbe5eb3a5646a736d949e66940da103e2deb747",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-all-pass-3",
+      "domain": "web",
+      "record": "testcases/TC10.D-all-pass-3.md",
+      "record_sha256": "7a5947d97cd2117f7ada34cc783df008be7f619dfcb686346e7b3cf67d7c2b07",
+      "sample": "testfiles/TF10/10.D-all-pass-3.html",
+      "sample_sha256": "f7ce4e12fc313041bc9be326e400d5ecc084ae1d851b8900cf554e01a0b5b672",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.D-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC10.D-ic-dna-1.md",
+      "record_sha256": "be626823fc6daa2fcd9a2ec4354da77881cddddb4076cf63217452bdc6750537",
+      "sample": "testfiles/TF10/10.D-ic-dna-1.html",
+      "sample_sha256": "2e51e974c873c5177fc810a2f6b5a1a0618c004ffb1f9a5925e4851a46156cbc",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.D-ErrorIdentification"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.E-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC10.E-1-fail-1.md",
+      "record_sha256": "674298bb4da09edc64a908658a07571e54d3a4977127aff2cab903002d6f9984",
+      "sample": "testfiles/TF10/10.E-1-fail-1.html",
+      "sample_sha256": "8cbd7547c70d72ade7d4f3bccd4d402123d65d13e13133e53ab1c895067d091a",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.E-FormHasLabel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.E-1-pass-1",
+      "domain": "web",
+      "record": "testcases/TC10.E-1-pass-1.md",
+      "record_sha256": "fb617eff5baa408eeb311a6c3b3992bda41723c703b07409d3336d58491b1013",
+      "sample": "testfiles/TF10/10.E-1-pass-1.html",
+      "sample_sha256": "3bc623539c97b4b9689ce549ac8e4617f35799e72a2daf739d8d0451c3f31a11",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.E-FormHasLabel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.E-1-pass-2",
+      "domain": "web",
+      "record": "testcases/TC10.E-1-pass-2.md",
+      "record_sha256": "2f7aae96ba237e00128a90ef14c7c668b0f2323d745bf2afb2a128513c4f6336",
+      "sample": "testfiles/TF10/10.E-1-pass-2.html",
+      "sample_sha256": "50e8f8031f8d40ea66818e28b6e472681e858b8ada338e9af912f80e819f3a4f",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.E-FormHasLabel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.E-1-pass-3",
+      "domain": "web",
+      "record": "testcases/TC10.E-1-pass-3.md",
+      "record_sha256": "c2aae2a44f2b50a462fb6e4e2ea582fda0c4b8e4b7f74d4b23456940e233e155",
+      "sample": "testfiles/TF10/10.E-1-pass-3.html",
+      "sample_sha256": "004e213862f999636d48b064f6aa7cbcd037906e4f7b0cd4c46eaf7efdd1e12e",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.E-FormHasLabel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.G-2.a-pass-1",
+      "domain": "web",
+      "record": "testcases/TC10.G-2.a-pass-1.md",
+      "record_sha256": "20e4d2198df8f966a985f9bda12ca307038a17c6f7f6043bba545e3a73a5284a",
+      "sample": "testfiles/TF10/10.G-2.a-pass-1.html",
+      "sample_sha256": "f8f9c02c886fc2846db26b483652b71efbe28409fc5f58ba2cffbfe3c1b6701b",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.G-ErrorPrevention"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.G-2.b-pass-1",
+      "domain": "web",
+      "record": "testcases/TC10.G-2.b-pass-1.md",
+      "record_sha256": "9e305595ca8d4b9823db695f5d1674b1b7a218a628f09890dc14a0718b977604",
+      "sample": "testfiles/TF10/10.G-2.b-pass-1.html",
+      "sample_sha256": "ec0174e5cda8feb8028358537f063bfe1fcf1d65e1f93d32b59b648be7fe0103",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.G-ErrorPrevention"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.G-2.c-pass-1",
+      "domain": "web",
+      "record": "testcases/TC10.G-2.c-pass-1.md",
+      "record_sha256": "15360f4aad26ab7482fd9aa0c57ff80241d70150ccf0ff52f6c3389aadeb097f",
+      "sample": "testfiles/TF10/10.G-2.c-pass-1.html",
+      "sample_sha256": "713a0af8bba9eda61f0c42c3d9a69724d081d8c33ee66cfd89e21858771ea67f",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.G-ErrorPrevention"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.G-all-fail-1",
+      "domain": "web",
+      "record": "testcases/TC10.G-all-fail-1.md",
+      "record_sha256": "8790a61bae52c5f147bd486e3b40fbfbc8e6c5f32870ddddaba6a98e75cbe412",
+      "sample": "testfiles/TF10/10.G-all-fail-1.html",
+      "sample_sha256": "27b923784ebb76057127694e5f58bc859fc98e5a8ff5e95ad6a2b4d749809f1c",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.G-ErrorPrevention"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.G-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC10.G-ic-dna-1.md",
+      "record_sha256": "7dd4825ffa5842f2ae0d68532a4ea334c87675d266a6f17dcc25ee09e84b1895",
+      "sample": "testfiles/TF10/10.G-ic-dna-1.html",
+      "sample_sha256": "eb295fb9271ed04b247a68e5f8d890ae3ea64cbff98583cee81e503679ba9126",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.G-ErrorPrevention"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC10.G-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC10.G-ic-dna-2.md",
+      "record_sha256": "6f5726995e49e2617b29e569147eea7e74766758644f5303be83b7b8d089c93b",
+      "sample": "testfiles/TF10/10.G-ic-dna-2.html",
+      "sample_sha256": "f823df00c6d23123eb9d5c928813238789bb9a639fd28be7ff336428fa4f1e23",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:10.G-ErrorPrevention"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC11.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC11.A-1-fail-1.md",
+      "record_sha256": "1d11aa928dad25577d6526a38bce8f3fc41fa1e76b14cd79d05d2a42d9d6ff74",
+      "sample": "testfiles/TF11/11.A-1-fail-1.html",
+      "sample_sha256": "a21e025a48c3e3e1d09a11ca52f72b13f5a11fbbb14f80b69a60e4ee71337517",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:11.A-PageTitled"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC11.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC11.A-2-fail-1.md",
+      "record_sha256": "4c150f0e48f142da69656a0ff67cd979902f4f82d5406d4c9acb8d4d12228d09",
+      "sample": "testfiles/TF11/11.A-2-fail-1.html",
+      "sample_sha256": "fecb59991ab6a9b471bc80f0d6b61e388530f25b98b8062526b55127de3c6b60",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:11.A-PageTitled"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC11.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC11.A-all-pass-1.md",
+      "record_sha256": "7c76355ec10bcbcd8c9f31c3d103be0d463c7d19d61d996d86e76bd2e3f1cf12",
+      "sample": "testfiles/TF11/11.A-all-pass-1.html",
+      "sample_sha256": "05a4285615cca541415991238121902650d325226159cebd968b679399bdd0de",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:11.A-PageTitled"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC12.A-2-fail-1.md",
+      "record_sha256": "902543dfad664e65eb25508472c3c4812bf38df89193d013595b8f865764b059",
+      "sample": "testfiles/TF12/12.A-2-fail-1.html",
+      "sample_sha256": "f1f3b9cea95a02c16d2ed972923af698f2c9fe3d4b7f13cc7b5722f49ab7ab63",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-2-fail-2",
+      "domain": "web",
+      "record": "testcases/TC12.A-2-fail-2.md",
+      "record_sha256": "9d075ea43bf90f3d809e36caeb4f3e97bdebfb016b6494722482a82bb3507c32",
+      "sample": "testfiles/TF12/12.A-2-fail-2.html",
+      "sample_sha256": "dc639f4d90cd3f351a001ebf01ab7c2b6d05917c5c1f5e6feed5cba5e5527eda",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC12.A-3-fail-1.md",
+      "record_sha256": "cfb5ee120d1d11ac18695f780e2d4cf4206cbd0617e2f67c1a114f3aaef9072d",
+      "sample": "testfiles/TF12/12.A-3-fail-1.html",
+      "sample_sha256": "c0b00d99f6a875d3991f136d7b519c3c48303a577ef6218d0593b1620025b0ff",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-4-fail-1",
+      "domain": "web",
+      "record": "testcases/TC12.A-4-fail-1.md",
+      "record_sha256": "f64ed0ad5afce90a05e094992cf118f215f105ed706e1f6c48c10f8476e8fe39",
+      "sample": "testfiles/TF12/12.A-4-fail-1.html",
+      "sample_sha256": "7617c013dc887602ca94c9466b16c449a17cc563d1610a365e1e7edf651b6aff",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-4-fail-2",
+      "domain": "web",
+      "record": "testcases/TC12.A-4-fail-2.md",
+      "record_sha256": "e363997902b284b1293fb6880016083275bc6088f6ec3c2e80b32e16db8082f5",
+      "sample": "testfiles/TF12/12.A-4-fail-2.html",
+      "sample_sha256": "aa3a8e5643976b0988ee81a059e67d1252861bfc18f0ba521111acad991094a0",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-4-fail-3",
+      "domain": "web",
+      "record": "testcases/TC12.A-4-fail-3.md",
+      "record_sha256": "bd0dd1e144e7eaec78184d01722384ba65ddbd1936eff7e0911ff9e4dda7b3f9",
+      "sample": "testfiles/TF12/12.A-4-fail-3.html",
+      "sample_sha256": "40594e93166ee691bedfe63dd7740d46358ce278c7f11d5f45695e6ea37d8142",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-4-fail-4",
+      "domain": "web",
+      "record": "testcases/TC12.A-4-fail-4.md",
+      "record_sha256": "3fca36756d243a6c99825ecb41f6e07bba2dbbfd1732fa12fc416762b41b1803",
+      "sample": "testfiles/TF12/12.A-4-fail-4.html",
+      "sample_sha256": "c141db752406c822d01987be8b37734a68f59679a995368f782dc537fb3f3a3d",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-4-fail-5",
+      "domain": "web",
+      "record": "testcases/TC12.A-4-fail-5.md",
+      "record_sha256": "09e173a7139c2565adf1339ab2d3a76507c81fb624721431461004be85a5e5fd",
+      "sample": "testfiles/TF12/12.A-4-fail-5.html",
+      "sample_sha256": "4238964af369d9a58c4698ffd932c3908fe624cd9d1a96be33fc37c4a0891f10",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-4-fail-6",
+      "domain": "web",
+      "record": "testcases/TC12.A-4-fail-6.md",
+      "record_sha256": "786990afe7b77a017de44cbdf0b1c889fa7d8388fe78157e8a95521930273507",
+      "sample": "testfiles/TF12/12.A-4-fail-6.html",
+      "sample_sha256": "ebcde6b528c45e25b3c98a4e1fc8afab89e404872c37a639f0cbe1750e78f3a4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC12.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC12.A-all-pass-1.md",
+      "record_sha256": "24dde5c731ffdcd48a013fcf54ddcb152edabd29602732b401940ba3a3c667a1",
+      "sample": "testfiles/TF12/12.A-all-pass-1.html",
+      "sample_sha256": "10db95d6da0303e999657e727b1676fd4cf7db7f4ed667aec6117583012b95a1",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:12.A-DataTableRole"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.A-1-fail-1.md",
+      "record_sha256": "fcc4f9634cea510fa8fea693a30b9d42138ca8a46d1bdd5a3d71054b1bee1a52",
+      "sample": "testfiles/TF13/13.A-1-fail-1.html",
+      "sample_sha256": "13528f1c4f06f22678d03e0456f7e9b7d39d14158574a5c58eaba91748d04159",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.A-HeadingDescriptive"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.A-1-pass-1",
+      "domain": "web",
+      "record": "testcases/TC13.A-1-pass-1.md",
+      "record_sha256": "e32c0fecaf3788689d44e34d34b9163183d73e05727c7540dea5597f451c7078",
+      "sample": "testfiles/TF13/13.A-1-pass-1.html",
+      "sample_sha256": "55b30aa05971341fcb551868ee52f65647fee3c089cc5c07ad4878d3fd0da634",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.A-HeadingDescriptive"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.A-1-pass-2",
+      "domain": "web",
+      "record": "testcases/TC13.A-1-pass-2.md",
+      "record_sha256": "90ab98f4db1780f903054dfd10980ca095040e81fdf98f1e4b53b38f5bdbe474",
+      "sample": "testfiles/TF13/13.A-1-pass-2.html",
+      "sample_sha256": "d97ff689b728f20a9b1cac73bf27fbcbff0398a501a5c5d5aa66e0975e840810",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.A-HeadingDescriptive"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.a-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.a-fail-1.md",
+      "record_sha256": "bdc6f5f48f6382e52c8fe2cbe45debe61700cc0576875095e489354a9a7d058f",
+      "sample": "testfiles/TF13/13.B-1.a-fail-1.html",
+      "sample_sha256": "5cfe6f1a6dd4640e7d29a8e8661c3ad096a7a819771dcff94aa9ce262985bd95",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.a-fail-2",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.a-fail-2.md",
+      "record_sha256": "34e6f71e2b47df93e46db1c9a61bc6d12c75c8107f044ee34b8edabd09595f61",
+      "sample": "testfiles/TF13/13.B-1.a-fail-2.html",
+      "sample_sha256": "96eca05eebc65bbde6a65024d9f4d3d694e503f8bb7d510d6319963786e8b219",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.b-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.b-fail-1.md",
+      "record_sha256": "eb4382e067ce8eb7ed7dc1685586a892f57f34499f12807333af74249ae32a82",
+      "sample": "testfiles/TF13/13.B-1.b-fail-1.html",
+      "sample_sha256": "8809303839a6baa8234636a5595a28f91d56a08376469c1526c2a4deb49a0ac4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.c-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.c-fail-1.md",
+      "record_sha256": "dbe291b1e0d4916dfe92a3765e16c97b1045aa82d042da27453ef00f18d58340",
+      "sample": "testfiles/TF13/13.B-1.c-fail-1.html",
+      "sample_sha256": "be1da59a7ee3d0e2f71567b759bbdad7eb1d022eade7fba5ddf0e37f8f70ac31",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.c-fail-2",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.c-fail-2.md",
+      "record_sha256": "caaba583fced465f899f7ac2280471f6cf65aaab88c882a541db447528c9ff72",
+      "sample": "testfiles/TF13/13.B-1.c-fail-2.html",
+      "sample_sha256": "7a1210d62c6fd197957ebc87f0c30fd8833aa00d2c2c14236922ec784fdc56ec",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.c-fail-3",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.c-fail-3.md",
+      "record_sha256": "b959064fa4ef87efa90a7ada8ab9984b86f25d46ec7f9fbb3c1ac3fde297ac3e",
+      "sample": "testfiles/TF13/13.B-1.c-fail-3.html",
+      "sample_sha256": "10719cf5d3f3e0777133ff9825cac0ef6daefabccc4e3be8958883fe088a3725",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-1.c-fail-4",
+      "domain": "web",
+      "record": "testcases/TC13.B-1.c-fail-4.md",
+      "record_sha256": "2832afe3fe807cdc56dfd1e8ced92a9ab70c3c12cf9e9e5d5603458cd5f601aa",
+      "sample": "testfiles/TF13/13.B-1.c-fail-4.html",
+      "sample_sha256": "91d2f5dab068bb12b8110621a54236d5dbd47b2d65b9b63fd8f586b0c1cdc0f2",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC13.B-all-pass-1.md",
+      "record_sha256": "937d3f778c3f6015019d3aa202c3c480c5f81a04269243e058ffc17b9ad4a461",
+      "sample": "testfiles/TF13/13.B-all-pass-1.html",
+      "sample_sha256": "15cfe2207a9256630a08df90cbc2661ce09ea0b6f789e6dc51ae0f061109ad6e",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-all-pass-2",
+      "domain": "web",
+      "record": "testcases/TC13.B-all-pass-2.md",
+      "record_sha256": "1cfbc0c8ca9961844ea8c0404dff9709afd913dda1f046ed39b75366c6eb0558",
+      "sample": "testfiles/TF13/13.B-all-pass-2.html",
+      "sample_sha256": "bc5a6a6cb6f3b53ea79c21de6647208accf1de38aebfdc3c81fb427e1a10e2be",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-all-pass-3",
+      "domain": "web",
+      "record": "testcases/TC13.B-all-pass-3.md",
+      "record_sha256": "cab3b1a39631f905292d16a863f2b5740d679e8e12665a57c0c93623a4ad9525",
+      "sample": "testfiles/TF13/13.B-all-pass-3.html",
+      "sample_sha256": "a1d37c22e81ca74fd21ae5234a829c2f05c88606e72b3b8fc1cacd527a5e31de",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC13.B-ic-dna-1.md",
+      "record_sha256": "f44a1e1260eaf0b35b0ae70e25610d46262e8ff9c0203b206e485e83e1d96bdf",
+      "sample": "testfiles/TF13/13.B-ic-dna-1.html",
+      "sample_sha256": "79c5b4a6625d2180e1d1ed55da313626a18432937cf58cf930cb05bb76a9f8c4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.B-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC13.B-ic-dna-2.md",
+      "record_sha256": "472793ea6af7bde47f9307bad45d9f104817b2c78a85a8db264a668f86ad5acf",
+      "sample": "testfiles/TF13/13.B-ic-dna-2.html",
+      "sample_sha256": "6d22f4e89ee6be2e2661021eaf223e1dfb2aca2e84f57d5d920c02844fee11d9",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.B-VisHeadingProg"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.C-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.C-1-fail-1.md",
+      "record_sha256": "8c047a3e0f5362ddf1b5d7125e53f18a5e6780e2ca33a9baab54e03d85e4d135",
+      "sample": "testfiles/TF13/13.C-1-fail-1.html",
+      "sample_sha256": "52198293f2d2aa89531ac9ed90d0ea2e44d5a4e2b7c4265daa66a6e2b371b479",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.C-ProgHeadingVisual"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.C-1-fail-2",
+      "domain": "web",
+      "record": "testcases/TC13.C-1-fail-2.md",
+      "record_sha256": "38ea745bd7fca284b200d48b4bd9c73809bc8636fc2fe6fb9fb772edbb6c7137",
+      "sample": "testfiles/TF13/13.C-1-fail-2.html",
+      "sample_sha256": "a51d91c1ed57cf7b37d44dd1b390d512b077ad4b5588c99a1be1f0cb89ce84c1",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.C-ProgHeadingVisual"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.C-1-pass-1",
+      "domain": "web",
+      "record": "testcases/TC13.C-1-pass-1.md",
+      "record_sha256": "7137857fca3809344a5c27e02d16efd1d51b0c8fc0aebf8a59731d7853d16b4c",
+      "sample": "testfiles/TF13/13.C-1-pass-1.html",
+      "sample_sha256": "646be268973fa1d681ce5dc3e1c9f2e53aafd783014deeedb1a989ea5260a843",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.C-ProgHeadingVisual"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.C-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC13.C-ic-dna-1.md",
+      "record_sha256": "044d40516007308ecf18e66858fceda0a29d26ad7ecc14a57bddf6804c768e3b",
+      "sample": "testfiles/TF13/13.C-ic-dna-1.html",
+      "sample_sha256": "e63a80d2f26a0edaccfb1e92d1536996e85d3d1d57d57a37607fc792afd7f9e4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.C-ProgHeadingVisual"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.C-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC13.C-ic-dna-2.md",
+      "record_sha256": "0cb4254f6c03a5626733547383ad303581d9589d8f0f42dbdcb3dc4e3cffc90e",
+      "sample": "testfiles/TF13/13.C-ic-dna-2.html",
+      "sample_sha256": "846849994903ddf2fb504fa80b444c7807f252168b38c149ce408613a3b74617",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.C-ProgHeadingVisual"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.D-1-fail-1.md",
+      "record_sha256": "a37d9bc502ea9267541058c8384c4448ac07cdfd1d7e1d28bd0d64713a1c14fa",
+      "sample": "testfiles/TF13/13.D-1-fail-1.html",
+      "sample_sha256": "4ec8ee7166060936e465329044b6dc60924f04e0af61a2c41f77977185d75ffa",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-1-pass-1",
+      "domain": "web",
+      "record": "testcases/TC13.D-1-pass-1.md",
+      "record_sha256": "5400d0393a4ab967842b4d646467fc13e59e2f920f2b6c468cabc11fc9a81fb3",
+      "sample": "testfiles/TF13/13.D-1-pass-1.html",
+      "sample_sha256": "ffa1579e4f6b63a0f342b4316a54168dce2f7ecb388c7ca38d016f0e18f84b56",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC13.D-2-fail-1.md",
+      "record_sha256": "7dc74cfcca9b00c94138bb2a24280540d9259b68d8626933b91b5e8331308b8a",
+      "sample": "testfiles/TF13/13.D-2-fail-1.html",
+      "sample_sha256": "0c6499452719f9c4f763d0cab2bfc136af838459fd9e97fb958e12330ddcc3e5",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-2-fail-2",
+      "domain": "web",
+      "record": "testcases/TC13.D-2-fail-2.md",
+      "record_sha256": "139e74a9f77994705ca353524e842d2bf96146f23a8dfca9ee902c691ca685b7",
+      "sample": "testfiles/TF13/13.D-2-fail-2.html",
+      "sample_sha256": "ab8555bfda29e6f03a665f7e20900f7db058fa3db87094f2552b3743d23d9026",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-2-pass-2",
+      "domain": "web",
+      "record": "testcases/TC13.D-2-pass-2.md",
+      "record_sha256": "6e9c110c579e32817501a6c90fcf023648224f786b9b5ea31cf54c4d8f3f9712",
+      "sample": "testfiles/TF13/13.D-2-pass-2.html",
+      "sample_sha256": "323630cd2a2c026853074674a6cbe2a25a29ac15ef05ae5c11d1d52b63f069e9",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-3-fail-2",
+      "domain": "web",
+      "record": "testcases/TC13.D-3-fail-2.md",
+      "record_sha256": "cf1aa4719632775ced7ae04d30e4289a862f79268c33bc905303e4ab6323c3ea",
+      "sample": "testfiles/TF13/13.D-3-fail-2.html",
+      "sample_sha256": "e69ae188d7cd2d5d936e59d202c05632fd81a0ce11b87563e9d5f337bcf71591",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-3-pass-2",
+      "domain": "web",
+      "record": "testcases/TC13.D-3-pass-2.md",
+      "record_sha256": "98a8eb388d919632bd7d7ca85822f9e9d7c560ed76920b619714858fafebd39c",
+      "sample": "testfiles/TF13/13.D-3-pass-2.html",
+      "sample_sha256": "4ed72dca31e6276e6247f80ee1f6d436929dd6a1cc8a52b9d57d1958836a9b3d",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC13.D-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC13.D-ic-dna-1.md",
+      "record_sha256": "eaec88b8d86e69c60849e4f182157d485392d0907d4cbd9eb09de2001301d5c2",
+      "sample": "testfiles/TF13/13.B-ic-dna-1.html",
+      "sample_sha256": "79c5b4a6625d2180e1d1ed55da313626a18432937cf58cf930cb05bb76a9f8c4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:13.D-List"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC14.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC14.A-1-fail-1.md",
+      "record_sha256": "786afcbce2e2ff23eac359226600d473e0a83f8b965af77b6cf0f7e95def5b47",
+      "sample": "testfiles/TF14/14.A-1-fail-1.html",
+      "sample_sha256": "a400b425c911dc7a2b127cb30b79b41e09a55d1b2a4ce7e9ddf46892ef2e2036",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:14.A-LinkPurpose"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC14.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC14.A-2-fail-1.md",
+      "record_sha256": "e679b32ee39e1a78bf44136dad427855ca2e17e7a809706e2d87b2ee2e252200",
+      "sample": "testfiles/TF14/14.A-2-fail-1.html",
+      "sample_sha256": "d998c26f900420e4db2ec3911b338972445824c98c56c4ed31ee5713d3d5f630",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:14.A-LinkPurpose"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC14.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC14.A-all-pass-1.md",
+      "record_sha256": "ffc43cf124ad4bc812991cd6b4503181e67d55081ff206edb180c9e8251669fc",
+      "sample": "testfiles/TF14/14.A-all-pass-1.html",
+      "sample_sha256": "fe83b49c6b265b9126d0a5e2f386beb550ad49560cafdd8ea5a0e275d2bad702",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:14.A-LinkPurpose"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC14.A-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC14.A-ic-dna-1.md",
+      "record_sha256": "467426901e8a51fc6fe3e3fc20c02ad7fc15384c08aea5d93f924e263e512f5d",
+      "sample": "testfiles/TF14/14.A-ic-dna-1.html",
+      "sample_sha256": "baa21e3188de3c6716adb18c3e943aa5631a8502fceaae960edb5be9c65805f7",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:14.A-LinkPurpose"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC15.A-2-fail-1.md",
+      "record_sha256": "df9fecb0abb8aca165d3e7088bc67fd550215343983f501671c54e0d0c2473da",
+      "sample": "testfiles/TF15/15.A-2-fail-1.html",
+      "sample_sha256": "bd77f462108951d27a6737f85437e0a0924425a4f6a38fa93a46bc77e5235019",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.A-LanguagePage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.A-2-fail-2",
+      "domain": "web",
+      "record": "testcases/TC15.A-2-fail-2.md",
+      "record_sha256": "b1bd7347aeed5fb954820e5df732a5bf09a4b7b3652947dfaf73119ae5c0ab88",
+      "sample": "testfiles/TF15/15.A-2-fail-2.html",
+      "sample_sha256": "172c8d9b007a8f37ce3187307bed72d0cac5983d3b2c7f6eff55035c874c5195",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.A-LanguagePage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.A-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC15.A-3-fail-1.md",
+      "record_sha256": "5e1b1fbcb40951975584771d000a4001ba2afdeb87e9a2cb07464b17a7d82536",
+      "sample": "testfiles/TF15/15.A-3-fail-1.html",
+      "sample_sha256": "6c7abc4c17979aaa3608e8b2d0856db322fe3dd3995a5e3f6c5708b254b4501e",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.A-LanguagePage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.A-3-fail-2",
+      "domain": "web",
+      "record": "testcases/TC15.A-3-fail-2.md",
+      "record_sha256": "a35728d66f6844e0a33ccf7e151e26860e1fccc530f7a8a39acc10dd234a2c61",
+      "sample": "testfiles/TF15/15.A-3-fail-2.html",
+      "sample_sha256": "b8625e8de266af73051223f19ed5d48854018cdc9f1d3a9b9e7a34c93fd4fd14",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.A-LanguagePage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC15.A-all-pass-1.md",
+      "record_sha256": "5756ab079e42942272f744252368c8ea1ada4608d517d314d017b5b449c47902",
+      "sample": "testfiles/TF15/15.A-all-pass-1.html",
+      "sample_sha256": "ac6c4cf462083449b06a2dbe1fcfe6bafbe50c02696f8e58ff93376a6395306d",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.A-LanguagePage"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.B-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC15.B-2-fail-1.md",
+      "record_sha256": "b1bd1ae924556ffbb4b61757acbc1f662f241c5cf11574d7bf89153e5d9eb96c",
+      "sample": "testfiles/TF15/15.B-2-fail-1.html",
+      "sample_sha256": "4bd328f48039a41e239dd0502baef8928c3ce58cfee034b3665cbb6d0410257c",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.B-LanguagePart"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.B-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC15.B-3-fail-1.md",
+      "record_sha256": "3e723b3d75d9cb3d94e07b19fd1fadaa1d1930b12a170c76099e5ae223130406",
+      "sample": "testfiles/TF15/15.B-3-fail-1.html",
+      "sample_sha256": "8509b3c2d8274804e22b2da58e15216c8ce6407c725d0300c9b05fa6cecbb624",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.B-LanguagePart"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.B-3-fail-2",
+      "domain": "web",
+      "record": "testcases/TC15.B-3-fail-2.md",
+      "record_sha256": "fa29355aa98bf9a4d6a8489d50146db592796c750cc66689c0c790311399b192",
+      "sample": "testfiles/TF15/15.B-3-fail-2.html",
+      "sample_sha256": "deb8219f501dad641c9b8ea9a33f4f736c3d55b450c04604bebc068013fc24c0",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.B-LanguagePart"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.B-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC15.B-all-pass-1.md",
+      "record_sha256": "dce23d1514e34c9d97284740d6a41f93c4cd8993bfa6644c26cfbb0564a93420",
+      "sample": "testfiles/TF15/15.B-all-pass-1.html",
+      "sample_sha256": "79e1c5c3de29229e9b949d0c08cdafef0345910b8f4227d91ee5afc3f7ff4958",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.B-LanguagePart"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC15.B-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC15.B-ic-dna-1.md",
+      "record_sha256": "ef29f688ff0adc7a0e685017db8ec6b62674372360d3b715f490f3a88aa246b6",
+      "sample": "testfiles/TF15/15.B-ic-dna-1.html",
+      "sample_sha256": "cd2990c1fec7cfe6f51e1b2492f01e6d482d5e3076eaabd1e48ade0975d5f745",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:15.B-LanguagePart"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC16.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC16.A-1-fail-1.md",
+      "record_sha256": "b20d95e886ebc0ec4bde3b6432953e2947246d2b48c04defe4818fedc25eac7c",
+      "sample": "testfiles/TF16/16.A-1-fail-1.html",
+      "sample_sha256": "1028476bc539e08aa19c39686bd422fb26b4b631eb265bf260783002f8ea51d8",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:16.A-AudioOnlyTranscript"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC16.A-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC16.A-2-fail-1.md",
+      "record_sha256": "2dcdd4aaefaa996a8250ab89867ccbc1cd9ccfe66752254ac1fd407f52310fb3",
+      "sample": "testfiles/TF16/16.A-2-fail-1.html",
+      "sample_sha256": "08403e17eea2f5f04d918ec30440e60f850271e9f0cdd83909f77b70cb9678f0",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:16.A-AudioOnlyTranscript"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC16.A-2-fail-2",
+      "domain": "web",
+      "record": "testcases/TC16.A-2-fail-2.md",
+      "record_sha256": "52feb34f26c135f3582d87a74fe1827e67106a6864f4bb3fa2d5537cad7a50e3",
+      "sample": "testfiles/TF16/16.A-2-fail-2.html",
+      "sample_sha256": "dd7e151fd787230d8affef15448fead97ab1c207bc44fbe147d4d66e8587055f",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:16.A-AudioOnlyTranscript"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC16.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC16.A-all-pass-1.md",
+      "record_sha256": "217008ef13c331563d00a44268ff4a6f4ba0d98b035cf7c4af83bf43066fd7c2",
+      "sample": "testfiles/TF16/16.A-all-pass-1.html",
+      "sample_sha256": "c5247aa4ae6601ff7f1e78b745ebd2f19b0b8ff31fbfde6dec38d1f251953689",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:16.A-AudioOnlyTranscript"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC16.A-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC16.A-ic-dna-1.md",
+      "record_sha256": "26843b2581e115bbbe9874bd41e9b99735ee29b38f7c425e5bd1a20778f1f917",
+      "sample": "testfiles/TF17/17.D-ic-dna-1.html",
+      "sample_sha256": "3b1ca5cda839dd21b0ca99e5ae00a2b285aeae3c006789e3e0c02615112d1695",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:16.A-AudioOnlyTranscript"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.A-1-fail-1",
+      "domain": "web",
+      "record": "testcases/TC17.A-1-fail-1.md",
+      "record_sha256": "964767abc734328841e57191fc56c03cb93e5d1bde63268cddef548c7645d076",
+      "sample": "testfiles/TF17/17.A-1-fail-1.html",
+      "sample_sha256": "74b8848b958a12ecaf6e705da653e169ceb35691b8a50527ac94946321dfd4b3",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.A-MediaPlayerCCADControls"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.A-1-fail-2",
+      "domain": "web",
+      "record": "testcases/TC17.A-1-fail-2.md",
+      "record_sha256": "01c66751f9fb4ae9706ff25c905126f5eccf08b0a0f50c0de52a4f76d4b73708",
+      "sample": "testfiles/TF17/17.A-1-fail-2.html",
+      "sample_sha256": "d81c87851e479f1a98d9717fba1c4b485ca477482b8cd890e5ae344fb2c5705b",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.A-MediaPlayerCCADControls"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.A-1-fail-3",
+      "domain": "web",
+      "record": "testcases/TC17.A-1-fail-3.md",
+      "record_sha256": "b424b7c66db7f300bb8a8a3cd3d4ff07f600ab4eff67f9c11bdcdfb8f443a558",
+      "sample": "testfiles/TF17/17.A-1-fail-3.html",
+      "sample_sha256": "9d13e6b5fbca0fbb28f6ed2874fc3e6d96e14ecc5c203ef1fb187fcdb3797026",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.A-MediaPlayerCCADControls"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.A-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC17.A-all-pass-1.md",
+      "record_sha256": "395c0558639c5549fb858695a10ffbd2ccfe2897998b78e27537d05e44d2df53",
+      "sample": "testfiles/TF17/17.D-all-pass-1.html",
+      "sample_sha256": "2b115bd6399c2ed9453ecf41f699683079ef357ada6877ffbc4a588b275aaaf4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.A-MediaPlayerCCADControls"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.A-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC17.A-ic-dna-1.md",
+      "record_sha256": "fb3632345537f79699e35da5287f128efe8187c57b8229819e8253abd42e8b5e",
+      "sample": "testfiles/TF17/17.D-ic-dna-1.html",
+      "sample_sha256": "3b1ca5cda839dd21b0ca99e5ae00a2b285aeae3c006789e3e0c02615112d1695",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.A-MediaPlayerCCADControls"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.A-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC17.A-ic-dna-2.md",
+      "record_sha256": "8148b0a1d05a28c4e9f4d03e236dada4f9795314dd56c0a2be9986368dc2340f",
+      "sample": "testfiles/TF17/17.A-ic-dna-2.html",
+      "sample_sha256": "04f174859ea9bdebd2281539d5598ea2145aa984a44aa7f335620e4916b67fa3",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.A-MediaPlayerCCADControls"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.B-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC17.B-all-pass-1.md",
+      "record_sha256": "0dd913dbc7c9ebd031fff6a602ff5dafc43ee38c66459961b5236e0c87d367b7",
+      "sample": "testfiles/TF17/17.A-1-fail-2.html",
+      "sample_sha256": "d81c87851e479f1a98d9717fba1c4b485ca477482b8cd890e5ae344fb2c5705b",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.B-MediaPlayerCCLevel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.B-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC17.B-ic-dna-1.md",
+      "record_sha256": "2a15ed11d7b608c1ca27c07fc4078f715788c10a2469deb49dc83d1cf78dfe1a",
+      "sample": "testfiles/TF17/17.D-ic-dna-1.html",
+      "sample_sha256": "3b1ca5cda839dd21b0ca99e5ae00a2b285aeae3c006789e3e0c02615112d1695",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.B-MediaPlayerCCLevel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.B-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC17.B-ic-dna-2.md",
+      "record_sha256": "387a027dc806320c92d5346f1a26cd83f112c986324cf9d5fb019b5126d3f82b",
+      "sample": "testfiles/TF16/16.A-1-fail-1.html",
+      "sample_sha256": "1028476bc539e08aa19c39686bd422fb26b4b631eb265bf260783002f8ea51d8",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.B-MediaPlayerCCLevel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.C-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC17.C-ic-dna-1.md",
+      "record_sha256": "08b63369c566f2a78a0a5f252ed84ad13b303c6c8b5367c0ca098d0552972064",
+      "sample": "testfiles/TF17/17.D-ic-dna-1.html",
+      "sample_sha256": "3b1ca5cda839dd21b0ca99e5ae00a2b285aeae3c006789e3e0c02615112d1695",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.C-MediaPlayerADLevel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.C-ic-dna-2",
+      "domain": "web",
+      "record": "testcases/TC17.C-ic-dna-2.md",
+      "record_sha256": "890a11349d1be41f85e66e87f7eb3df4fcc34755ce0591bcfbff83476074ab6a",
+      "sample": "testfiles/TF17/17.A-ic-dna-2.html",
+      "sample_sha256": "04f174859ea9bdebd2281539d5598ea2145aa984a44aa7f335620e4916b67fa3",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.C-MediaPlayerADLevel"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.D-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC17.D-2-fail-1.md",
+      "record_sha256": "49c718ee96da89e6ab2f4fe1322b1a77920418668894f3f26451b1e2b4f49f61",
+      "sample": "testfiles/TF17/17.D-2-fail-1.html",
+      "sample_sha256": "8d2b5b9c712166ac3c41d6256353ee38f36796d4b3a3a083f3015e718cf29c38",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.D-CaptionsPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.D-3b-fail-2",
+      "domain": "web",
+      "record": "testcases/TC17.D-3b-fail-2.md",
+      "record_sha256": "e001f0ca4f04c1c86ca1802233442361991d0c5a3a88d3c1981fa390125d137b",
+      "sample": "testfiles/TF17/17.D-3b-fail-2.html",
+      "sample_sha256": "fc866923de179e7d67e7a55216e440f3f62804e917fc7f7af72d1a25d879d593",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.D-CaptionsPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.D-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC17.D-all-pass-1.md",
+      "record_sha256": "3efe501c6d0d3a541eb69fe25230af756f3f40840c869d54ef0db99c04c412de",
+      "sample": "testfiles/TF17/17.D-all-pass-1.html",
+      "sample_sha256": "2b115bd6399c2ed9453ecf41f699683079ef357ada6877ffbc4a588b275aaaf4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.D-CaptionsPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.D-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC17.D-ic-dna-1.md",
+      "record_sha256": "675b9aec29510145ba9c2cd0e69095925f54b9f0d8ec8eb1984310a21dbb0df4",
+      "sample": "testfiles/TF17/17.D-ic-dna-1.html",
+      "sample_sha256": "3b1ca5cda839dd21b0ca99e5ae00a2b285aeae3c006789e3e0c02615112d1695",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.D-CaptionsPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.E-2-fail-1",
+      "domain": "web",
+      "record": "testcases/TC17.E-2-fail-1.md",
+      "record_sha256": "a986b417ecac42fbe902a9cd577525b254f4b88d227919d4a637d65b7fd65392",
+      "sample": "testfiles/TF17/17.D-all-pass-1.html",
+      "sample_sha256": "2b115bd6399c2ed9453ecf41f699683079ef357ada6877ffbc4a588b275aaaf4",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.E-ADPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.E-3-fail-1",
+      "domain": "web",
+      "record": "testcases/TC17.E-3-fail-1.md",
+      "record_sha256": "9a1e40ff8a471e3e04f87732486df94dbcb02c6e13367572e820785e17fc3bcc",
+      "sample": "testfiles/TF17/17.E-3-fail-1.html",
+      "sample_sha256": "c5c2fcca2cbeb7b05f6aa58f37729ecaa0d0f7404a3147be2325db5f3c257e90",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.E-ADPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.E-all-pass-1",
+      "domain": "web",
+      "record": "testcases/TC17.E-all-pass-1.md",
+      "record_sha256": "1e3bd1f84a7097904df2998610b8adfb71f1f5de1583e99e5ce350b127cbb40e",
+      "sample": "testfiles/TF17/17.E-all-pass-1.html",
+      "sample_sha256": "66dec86359577c5f80d55f0a7c12875610b6eaed7a945ce17fdf8679e3de0a1e",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.E-ADPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    },
+    {
+      "id": "TC17.E-ic-dna-1",
+      "domain": "web",
+      "record": "testcases/TC17.E-ic-dna-1.md",
+      "record_sha256": "02185cee260e507cdf1c5f16910e6caaca768c0fbdacde13c8b82db4d0f5e901",
+      "sample": "testfiles/TF17/17.D-ic-dna-1.html",
+      "sample_sha256": "3b1ca5cda839dd21b0ca99e5ae00a2b285aeae3c006789e3e0c02615112d1695",
+      "case_version": "1",
+      "declared_baseline_version": "3.1",
+      "procedure_keys": [
+        "web:17.E-ADPrerecorded"
+      ],
+      "availability": "published-source",
+      "review_status": "pending-human-review",
+      "result_status": "not-tested",
+      "dependency_policy": "preserve and record all local CSS, JavaScript, images, frames and relevant network dependencies before execution"
+    }
+  ],
+  "mapping_issues": [],
+  "document_cases": [],
+  "document_case_status": "No document alignment cases are supplied in this repository snapshot; no generated examples are presented as published cases.",
+  "supplemental_case_status": "No WCAG 2.1/2.2 alignment coverage is inferred from Section 508 cases. Add separately reviewed local supplemental cases.",
+  "evaluator_only": "evaluations/evaluator/expected-outcomes.yaml"
+}

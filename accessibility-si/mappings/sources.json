@@ -1,0 +1,338 @@
+{
+  "collection_version": "0.2.0",
+  "retrieved_on": "2026-10-27",
+  "baseline_repository": "https://github.com/atbcb/ICTTestingBaseline",
+  "baseline_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2",
+  "framework_repository": "https://github.com/GSA/baselinealignment",
+  "framework_revision": "b3da9104ab949808d7c082e701a22f7e2bb696fc",
+  "web_baseline": "3.1",
+  "document_baseline": "1.0",
+  "wcag22": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+  "wcag2ict": "https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/",
+  "files": [
+    {
+      "path": "_baselines/web-baselines/01Keyboard.md",
+      "sha256": "e76234344b09b89415fde08c8b9fb1bee86564a9067a014b0335cfc6e0cedced"
+    },
+    {
+      "path": "_baselines/web-baselines/02FocusVisible.md",
+      "sha256": "b77cfdd7b51d5675d2808db3ae52d437e748bf66a157086e797b4598948eeca0"
+    },
+    {
+      "path": "_baselines/web-baselines/03Noninterference.md",
+      "sha256": "af534e1454d4f7fb899134e727190822f9a3ac523134cf4b0e34591fb47a54de"
+    },
+    {
+      "path": "_baselines/web-baselines/04RepetitiveContent.md",
+      "sha256": "24799b1432f393c96660155ba68c974949e01d1e521a5ff73417485e425e48cd"
+    },
+    {
+      "path": "_baselines/web-baselines/05Controls.md",
+      "sha256": "f9b2e777cc652a34cdd13156c21af8f254031eba68cc7ed62a87dcc15b2bdedd"
+    },
+    {
+      "path": "_baselines/web-baselines/06Images.md",
+      "sha256": "8efbd9c170b0e9827d4c9ba972aaed261c3f34eb730c2d44ce45825659701369"
+    },
+    {
+      "path": "_baselines/web-baselines/07Sensory.md",
+      "sha256": "57c7aec106080cfbe23cb070050f204be35783e1dbd094feecbbdf67f9064f40"
+    },
+    {
+      "path": "_baselines/web-baselines/08Contrast.md",
+      "sha256": "8503b757db4242b3aeb8d66d9ef79f1fe8dec25036830bc45fe80e28bb74d1c2"
+    },
+    {
+      "path": "_baselines/web-baselines/09Flashing.md",
+      "sha256": "c6ea7fc72664c57489fa2437a5b3cb1845cf9cb00c5ebd627f7e021b878fc92c"
+    },
+    {
+      "path": "_baselines/web-baselines/10Forms.md",
+      "sha256": "c2dfda6a9c49eb9ffa7d2ec41368eb8d4a5adca9e4608e7ac6387e67becdf5ae"
+    },
+    {
+      "path": "_baselines/web-baselines/11PageTitles.md",
+      "sha256": "51769195c27419a8ad4c8e92f587c655a1943aa3674f23a1d8191b436a5e2e0b"
+    },
+    {
+      "path": "_baselines/web-baselines/12DataTables.md",
+      "sha256": "ea550e9d2f49b9d689bf621853e533b75a01397b8761025c46c444496deadd22"
+    },
+    {
+      "path": "_baselines/web-baselines/13Structure.md",
+      "sha256": "202f959d4f48d9f5abbf2d88c909b02c41a45193ffc65f0eb550298cbff49697"
+    },
+    {
+      "path": "_baselines/web-baselines/14Links.md",
+      "sha256": "e4ec5c7be6b39e90ef6ebe05c3a909560b25fe798902e306aa22936c0294e8d0"
+    },
+    {
+      "path": "_baselines/web-baselines/15Language.md",
+      "sha256": "bc8f9dc12b5af5f9f39168913f9ced3c49af1d3dbca8391c83033bc6bc4ce367"
+    },
+    {
+      "path": "_baselines/web-baselines/16AudioVideo.md",
+      "sha256": "41def267995958aafe395107eef9a8e11ebe47e916dbf303e4f060d1eb5be109"
+    },
+    {
+      "path": "_baselines/web-baselines/17SyncMedia.md",
+      "sha256": "34b5aa6d3c1e7c6d91b1a4b3b7294a641ed709f89432cc5d92fc9ca9e87da7ae"
+    },
+    {
+      "path": "_baselines/web-baselines/18Stylesheet.md",
+      "sha256": "9e88c3aa63bf76eb14698dd9e656b4632506ed3bcd53fe8f45980876658719f0"
+    },
+    {
+      "path": "_baselines/web-baselines/19Frames.md",
+      "sha256": "37cf714ac4496ba1a1666756c564b62209eb41392c54ab79ad939d1ee1df8c62"
+    },
+    {
+      "path": "_baselines/web-baselines/20AlternateVersions.md",
+      "sha256": "ddb0e0e097ce8ddc6af580cb6ccbee414530b779596f65b801216d60ceff7be1"
+    },
+    {
+      "path": "_baselines/web-baselines/21TimedEvents.md",
+      "sha256": "d7736c3da3d7662b652b877086e2740dba2a40b430422fc6da17e01cd5650e81"
+    },
+    {
+      "path": "_baselines/web-baselines/22Resize.md",
+      "sha256": "207915e27e9fd6063b5bdc9334fb87ae72fd1292d0ebb7479949f727767aa368"
+    },
+    {
+      "path": "_baselines/web-baselines/23MultipleWays.md",
+      "sha256": "13277bb179d5339eafe4e142ecad4099ca836233b1f3051a492d6d4a9a41099d"
+    },
+    {
+      "path": "_baselines/web-baselines/24Parsing.md",
+      "sha256": "58851f17ce6125b28b9eb7115e7cc68f07cc31b27d9d4ffea4ddb6769506922a"
+    },
+    {
+      "path": "_baselines/document-baselines/01KeyboardDocs.md",
+      "sha256": "633c63423957fd71341332dff493819780d5f2e48f9e99f0ce63d57b9d058be9"
+    },
+    {
+      "path": "_baselines/document-baselines/02FocusDocs.md",
+      "sha256": "e79017452d091656ddaee3c0e13c48ef8a54dacfbe9b1ab91d08eac676a3be22"
+    },
+    {
+      "path": "_baselines/document-baselines/03NoninterferenceDocs.md",
+      "sha256": "9683acf649fe29f3a83505064fab0cfa3a0f87c83fa0fd02ea20cccef31e8d98"
+    },
+    {
+      "path": "_baselines/document-baselines/04RepetitiveContentDocs.md",
+      "sha256": "03eed08a95f62b50ea19a39890a56749de62d86656bf75e78f3028c31a772761"
+    },
+    {
+      "path": "_baselines/document-baselines/05ControlsDocs.md",
+      "sha256": "169dffd433741094dd7d4b6660961404379ad5da8fafe97db5a842c8629327e2"
+    },
+    {
+      "path": "_baselines/document-baselines/06ImagesDocs.md",
+      "sha256": "1bd9a21d5cdee6bb6d6703eb47a9c70dcf89943975a3624d06739c83c651afed"
+    },
+    {
+      "path": "_baselines/document-baselines/07SensoryDocs.md",
+      "sha256": "e6d83a71149cbc948233d9fb5e2b4a92d89a2128a146f2171a9fd98da681bea9"
+    },
+    {
+      "path": "_baselines/document-baselines/08ContrastDocs.md",
+      "sha256": "a8cacd0fc97761d43441d175f5524d3bbf07a3158f3c74c229c57ac9ed47fda8"
+    },
+    {
+      "path": "_baselines/document-baselines/09FlashingDocs.md",
+      "sha256": "358b1a8db2923accc3098fb3bd32aa09f2e79d1a778f2cc29830cf43e283ad79"
+    },
+    {
+      "path": "_baselines/document-baselines/10FormsDocs.md",
+      "sha256": "11f0ffb2a95c9378500b5629e6fb32f90852c077a38b80112fdfde5978b64aeb"
+    },
+    {
+      "path": "_baselines/document-baselines/11PageTitlesDocs.md",
+      "sha256": "5ee10b0b1a846bb0ac159ac4bf7e5f8e9f4495406b61c855896591960aee0c83"
+    },
+    {
+      "path": "_baselines/document-baselines/12DataTablesDocs.md",
+      "sha256": "bf807d7994e5727760fefcf7175f339691cb516f8227506e960736bdac245cce"
+    },
+    {
+      "path": "_baselines/document-baselines/13StructureDocs.md",
+      "sha256": "571122262a9436a7ab01095481ab35bbfe5e20b2c0c9a3bb21daf72277e053fd"
+    },
+    {
+      "path": "_baselines/document-baselines/14LinksDocs.md",
+      "sha256": "78aaeec92616704a9c93edc57d563c95c00b09e202f40e40fcf326bb7771e3cf"
+    },
+    {
+      "path": "_baselines/document-baselines/15LanguageDocs.md",
+      "sha256": "47b90f97d58bf467f51326ddaa7376be39e22d872ad1a4d0d2a312d6d23d0021"
+    },
+    {
+      "path": "_baselines/document-baselines/16AudioVideoDocs.md",
+      "sha256": "fa6177ab3710a1d614224de4f04327ff671bf7e641297245e8f949e23340da46"
+    },
+    {
+      "path": "_baselines/document-baselines/17SyncMediaDocs.md",
+      "sha256": "c11895656b0b3ca4e69a0dd6b9205335654884caabc08cdf4edf92bc9443864d"
+    },
+    {
+      "path": "_baselines/document-baselines/18StylesheetDocs.md",
+      "sha256": "a6ff40ba1ab69fdb18c63002596d2ae355ee89fc7b1d8070a22d2bd7dccb6639"
+    },
+    {
+      "path": "_baselines/document-baselines/19FramesDocs.md",
+      "sha256": "821ecac3a39f4dcb2c68904452d5cf1ccccccab1f7d21ba5ff4abfe93fc001d4"
+    },
+    {
+      "path": "_baselines/document-baselines/20AlternateVersionsDocs.md",
+      "sha256": "c707474f6fd94e9cd4f0c23505dd101c63801906bbbafbd995fde3865558fd4a"
+    },
+    {
+      "path": "_baselines/document-baselines/21TimedEventsDocs.md",
+      "sha256": "5e61484707691d0c404a7f0798466acf82504c86d2a3e3aba89aa8e1dd4a6b7b"
+    },
+    {
+      "path": "_baselines/document-baselines/22ResizeDocs.md",
+      "sha256": "4bc2a2f3a54ecedd467809f49fe8c61085d4434c857c74723accea2d64c92679"
+    },
+    {
+      "path": "_baselines/document-baselines/23MultipleWaysDocs.md",
+      "sha256": "1b6492c8cb3116b091f92c8b51b7e5ac124959cf796a1162751e4192b25bb3b1"
+    },
+    {
+      "path": "_baselines/document-baselines/24ParsingDocs.md",
+      "sha256": "beae82af2a4a5b9264b474673ee032d7eb5277baf8339323cdeeb599d76b43ad"
+    }
+  ],
+  "wcag_html_sha256": "6e3c5fe397257cae509a2fb4752b73062cf8cbeb92c2cec618989b17e4cf7057",
+  "notes": [
+    "Sources are pinned for traceability, not automatically updated.",
+    "A 2.2 Understanding link on a Baseline page does not add newer success criteria to its scope."
+  ],
+  "procedure_ids": {
+    "web": [
+      "1.A-KeyboardAccess",
+      "1.B-NoKeyboardTrap",
+      "2.A-FocusVisible",
+      "2.B-FocusOrder",
+      "2.C-OnFocus",
+      "3.A-NonInterference",
+      "4.A-BypassBlocks",
+      "4.B-ConsistentNavigation",
+      "4.C-ConsistentIdentification",
+      "5.A-ControlName",
+      "5.B-ControlRole",
+      "5.C-ControlState",
+      "5.D-ControlValue",
+      "6.A-MeaningfulImage",
+      "6.B-DecorativeImage",
+      "6.C-Captcha",
+      "6.D-ImageText",
+      "7.A-Color",
+      "7.B-SensoryCharacteristics",
+      "7.C-AudibleCues",
+      "8.A-ContrastMinimum",
+      "9.A-Flashes",
+      "10.A-FormName",
+      "10.B-FormDescriptiveLabel",
+      "10.C-OnInput",
+      "10.D-ErrorIdentification",
+      "10.E-FormHasLabel",
+      "10.F-ErrorSuggestion",
+      "10.G-ErrorPrevention",
+      "11.A-PageTitled",
+      "12.A-DataTableRole",
+      "12.B-DataTableHeaderAssociation",
+      "12.C-LayoutTable",
+      "13.A-HeadingDescriptive",
+      "13.B-VisHeadingProg",
+      "13.C-ProgHeadingVisual",
+      "13.D-List",
+      "14.A-LinkPurpose",
+      "15.A-LanguagePage",
+      "15.B-LanguagePart",
+      "16.A-AudioOnlyTranscript",
+      "16.B-VideoOnlyAlt",
+      "16.C-AudioMediaAlternative",
+      "16.D-VideoMediaAlternative",
+      "17.A-MediaPlayerCCADControls",
+      "17.B-MediaPlayerCCLevel",
+      "17.C-MediaPlayerADLevel",
+      "17.D-CaptionsPrerecorded",
+      "17.E-ADPrerecorded",
+      "17.F-CaptionsLive",
+      "17.G-SyncMediaAlternative",
+      "18.B-CSSPositionedContent",
+      "19.A-FrameTitle",
+      "19.B-iFrameName",
+      "20.A-ConformingAltVersion",
+      "21.A-TimingAdjustable",
+      "21.B-MovingInfo",
+      "21.C-AutoUpdate",
+      "21.D-AudioControl",
+      "22.A-ResizeText",
+      "23.A-MultipleWays",
+      "24.A-Parsing"
+    ],
+    "documents": [
+      "1.A-KeyboardAccess",
+      "1.B-NoKeyboardTrap",
+      "2.A-FocusVisible",
+      "2.B-FocusOrder",
+      "2.C-OnFocus",
+      "3.A-NonInterference",
+      "5.A-ControlName",
+      "5.B-ControlRole",
+      "5.C-ControlState",
+      "5.D-ControlValue",
+      "6.A-MeaningfulImage",
+      "6.B-DecorativeImage",
+      "6.C-Captcha",
+      "6.D-ImageText",
+      "7.A-Color",
+      "7.B-SensoryCharacteristics",
+      "7.C-AudibleCues",
+      "8.A-ContrastMinimum",
+      "9.A-Flashes",
+      "10.A-FormName",
+      "10.B-FormDescriptiveLabel",
+      "10.C-OnInput",
+      "10.D-ErrorIdentification",
+      "10.E-FormHasLabel",
+      "10.F-ErrorSuggestion",
+      "10.G-ErrorPrevention",
+      "11.A-DocumentTitled",
+      "12.A-DataTableRole",
+      "12.B-DataTableHeaderAssociation",
+      "12.C-LayoutTable",
+      "13.A-HeadingDescriptive",
+      "13.B-VisHeadingProg",
+      "13.C-ProgHeadingVisual",
+      "13.D-List",
+      "14.A-LinkPurpose",
+      "15.A-LanguageDocument",
+      "15.B-LanguageParts",
+      "16.A-AudioOnlyTranscript",
+      "16.B-VideoOnlyAlt",
+      "16.C-AudioMediaAlternative",
+      "16.D-VideoMediaAlternative",
+      "17.A-MediaPlayerCCADControls",
+      "17.B-MediaPlayerCCLevel",
+      "17.C-MediaPlayerADLevel",
+      "17.D-CaptionsPrerecorded",
+      "17.E-ADPrerecorded",
+      "17.F-CaptionsLive",
+      "17.G-SyncMediaAlternative",
+      "18.A-MeaningfulContent",
+      "18.B-MeaningfulSequence",
+      "20.A-ConformingAltVersion",
+      "21.A-TimingAdjustable",
+      "21.B-MovingInfo",
+      "21.C-AutoUpdate",
+      "21.D-AudioControl",
+      "22.A-ResizeText",
+      "24.A-Parsing"
+    ]
+  },
+  "incorporated_wcag20": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/",
+  "wcag20_html_sha256": "3a438f1a4aa7b6a0848ce9dcd8cc0388577b6109c3bace7c68bd44df159d19c3"
+}

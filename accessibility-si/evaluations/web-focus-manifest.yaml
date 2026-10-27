@@ -1,0 +1,78 @@
+schema_version: 0.1.0
+suite_id: web-focus-pilot
+suite_version: 0.1.0
+status: draft
+baseline_version: '3.1'
+source_repository: https://github.com/GSA/baselinealignment
+source_revision: b3da9104ab949808d7c082e701a22f7e2bb696fc
+checks:
+- id: focus-visible
+  wcag_sc: 2.4.7
+  track: section508-baseline
+  baseline_procedure_id: 2.A-FocusVisible
+- id: focus-not-obscured
+  wcag_sc: 2.4.11
+  track: supplemental-wcag22
+  baseline_procedure_id: null
+  local_procedure: SUP-WEB-FOCUS-01
+cases:
+- id: case-01
+  source: testfiles/TF02/2.A-all-pass-1.html
+  files:
+  - path: testfiles/TF02/2.A-all-pass-1.html
+    sha256: 523bfae20b96ecb45633d39ad01b8206b9890643abc3d0be26052a0ea42f2660
+  upstream_case: null
+  upstream_sample: true
+  input_transform: neutral-title
+  checks:
+  - focus-visible
+  - focus-not-obscured
+- id: case-02
+  source: testfiles/TF02/02.A-2-fail-2.html
+  files:
+  - path: testfiles/TF02/02.A-2-fail-2.html
+    sha256: a330eb2071611d0851d448fa48df274980c450997e020dec25d422e82b03ae61
+  - path: testfiles/TF02/TF02.css
+    sha256: f29e7c48428e1803621f70653aa8d19e325b723823450dc2d9196f1ef1f5e091
+  - path: testfiles/TF02/TF02.js
+    sha256: 51314f7366d13ae5e34f6340205a472f5da7724defe836465cb43a9ee9b8fdfd
+  upstream_case: null
+  upstream_sample: true
+  input_transform: neutral-title-and-only-relevant-css-and-focus-submit-handlers
+  checks:
+  - focus-visible
+  - focus-not-obscured
+- id: case-03
+  source: testfiles/TF02/02.A-ic-dna-1.html
+  files:
+  - path: testfiles/TF02/02.A-ic-dna-1.html
+    sha256: caddadfee863c10a658de92d0c114272a6fe83cb3ee0ee4cc84c02decb794cb4
+  upstream_case: testcases/TC02.A-ic-dna-1.md
+  upstream_sample: true
+  input_transform: neutral-title-and-explanatory-sentence
+  checks:
+  - focus-visible
+  - focus-not-obscured
+- id: case-04
+  source: accessibility-si/examples/web-focus/fixtures/overlay.html
+  files:
+  - path: accessibility-si/examples/web-focus/fixtures/overlay.html
+    sha256: 326d738424e4b4fb58451ab9661be57c6e3318f9d1a186e00ac0264a75acc158
+  upstream_case: null
+  upstream_sample: false
+  input_transform: neutral-title
+  checks:
+  - focus-visible
+  - focus-not-obscured
+- id: case-05
+  source: accessibility-si/examples/web-focus/fixtures/flow.html
+  files:
+  - path: accessibility-si/examples/web-focus/fixtures/flow.html
+    sha256: 38695cbb87cfcc04b2e22ef544e6871e23bcffb2cd3c25c6537c521c09c95c02
+  upstream_case: null
+  upstream_sample: false
+  input_transform: neutral-title
+  checks:
+  - focus-visible
+  - focus-not-obscured
+evaluator_only: evaluations/evaluator/rubric.md

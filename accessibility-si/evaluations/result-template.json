@@ -1,0 +1,1425 @@
+{
+  "schema_version": "0.2.0",
+  "suite_id": "framework-web-documents",
+  "run_id": "replace-before-execution",
+  "performed_at": null,
+  "scope": {
+    "domain": "web",
+    "format": "html",
+    "selection": "full-scope",
+    "stage": "initial",
+    "collection_version": "0.2.0",
+    "baseline_version": "3.1",
+    "baseline_source_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2",
+    "dispositions": [
+      {
+        "target_id": "web:17.G-SyncMediaAlternative",
+        "disposition": "not-separately-tested-at-AA",
+        "basis": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17g-test-procedure-for-sync-media-alternative-prerecorded"
+      },
+      {
+        "target_id": "web:24.A-Parsing",
+        "disposition": "no-test-required",
+        "basis": "https://ictbaseline.access-board.gov/web-baselines/24Parsing/#24a-test-procedure-for-parsing"
+      }
+    ]
+  },
+  "artifact": {
+    "path": "replace-with-delivered-artifact",
+    "sha256": null,
+    "dependencies": []
+  },
+  "environment": {
+    "agent": "not-recorded",
+    "model": "not-recorded",
+    "os": "not-recorded",
+    "browser_or_reader": "not-recorded",
+    "assistive_technology": "not-recorded",
+    "viewport_or_view": "not-recorded",
+    "zoom": "not-recorded",
+    "keyboard_settings": "not-recorded"
+  },
+  "results": [
+    {
+      "target_id": "web:1.A-KeyboardAccess",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "1.A-KeyboardAccess",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.1.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/01Keyboard/#1a-test-procedure-for-keyboard-access",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:1.B-NoKeyboardTrap",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "1.B-NoKeyboardTrap",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/01Keyboard/#1b-test-procedure-for-no-keyboard-trap",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:2.A-FocusVisible",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "2.A-FocusVisible",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.7"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/#2a-test-procedure-for-focus-visible",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:2.B-FocusOrder",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "2.B-FocusOrder",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.3"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/#2b-test-procedure-for-focus-order",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:2.C-OnFocus",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "2.C-OnFocus",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.2.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/#2c-test-procedure-for-on-focus",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:3.A-NonInterference",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "3.A-NonInterference",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.4.2",
+        "2.1.2",
+        "2.2.2",
+        "2.3.1",
+        "CR5"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/03Noninterference/#3a-test-procedure-for-non-interference",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:4.A-BypassBlocks",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "4.A-BypassBlocks",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/04RepetitiveContent/#4a-test-procedure-for-bypass-blocks",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:4.B-ConsistentNavigation",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "4.B-ConsistentNavigation",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.2.3"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/04RepetitiveContent/#4b-test-procedure-for-consistent-navigation",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:4.C-ConsistentIdentification",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "4.C-ConsistentIdentification",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.2.4"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/04RepetitiveContent/#4c-test-procedure-for-consistent-identification",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:5.A-ControlName",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "5.A-ControlName",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/05Controls/#5a-test-procedure-for-control-name",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:5.B-ControlRole",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "5.B-ControlRole",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/05Controls/#5b-test-procedure-for-control-role",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:5.C-ControlState",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "5.C-ControlState",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/05Controls/#5c-test-procedure-for-control-state",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:5.D-ControlValue",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "5.D-ControlValue",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/05Controls/#5d-test-procedure-for-control-value",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:6.A-MeaningfulImage",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "6.A-MeaningfulImage",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.1.1",
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/06Images/#6a-test-procedure-for-images-with-a-non-empty-text-alternative",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:6.B-DecorativeImage",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "6.B-DecorativeImage",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.1.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/06Images/#6b-test-procedure-for-images-with-an-empty-text-alternative",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:6.C-Captcha",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "6.C-Captcha",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.1.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/06Images/#6c-test-procedure-for-captchas",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:6.D-ImageText",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "6.D-ImageText",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.4.5"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/06Images/#6d-test-procedure-for-images-of-text",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:7.A-Color",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "7.A-Color",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.4.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/07Sensory/#7a-test-procedure-for-use-of-color",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:7.B-SensoryCharacteristics",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "7.B-SensoryCharacteristics",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.3"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/07Sensory/#7b-test-procedure-for-sensory-characteristics",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:7.C-AudibleCues",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "7.C-AudibleCues",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.1.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/07Sensory/#7c-test-procedure-for-audible-cues",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:8.A-ContrastMinimum",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "8.A-ContrastMinimum",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.4.3"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/08Contrast/#8a-test-procedure-for-contrast-minimum",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:9.A-Flashes",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "9.A-Flashes",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.3.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/09Flashing/#9a-test-procedure-for-three-flashes-or-below-threshold",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.A-FormName",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.A-FormName",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.1.1",
+        "1.3.1",
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10a-test-procedure-for-form-names",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.B-FormDescriptiveLabel",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.B-FormDescriptiveLabel",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.6"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10b-test-procedure-for-form-labels-descriptive",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.C-OnInput",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.C-OnInput",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.2.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10c-test-procedure-for-on-input",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.D-ErrorIdentification",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.D-ErrorIdentification",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.3.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10d-test-procedure-for-error-identification",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.E-FormHasLabel",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.E-FormHasLabel",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.3.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10e-test-procedure-for-form-has-a-visible-label",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.F-ErrorSuggestion",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.F-ErrorSuggestion",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.3.3"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10f-test-procedure-for-error-suggestion",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:10.G-ErrorPrevention",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "10.G-ErrorPrevention",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.3.4"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/10Forms/#10g-test-procedure-for-error-prevention-legal-financial-data",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:11.A-PageTitled",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "11.A-PageTitled",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/11PageTitles/#11a-test-procedure-for-page-titled",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:12.A-DataTableRole",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "12.A-DataTableRole",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.1",
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/12DataTables/#12a-test-procedure-for-data-table-roles",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:12.B-DataTableHeaderAssociation",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "12.B-DataTableHeaderAssociation",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/12DataTables/#12b-test-procedure-for-data-table-header-association",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:12.C-LayoutTable",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "12.C-LayoutTable",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/12DataTables/#12c-test-procedure-for-layout-tables",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:13.A-HeadingDescriptive",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "13.A-HeadingDescriptive",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.6"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/13Structure/#13a-test-procedure-for-descriptive-headings",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:13.B-VisHeadingProg",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "13.B-VisHeadingProg",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/13Structure/#13b-test-procedure-for-visual-headings-programmatic",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:13.C-ProgHeadingVisual",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "13.C-ProgHeadingVisual",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/13Structure/#13c-test-procedure-for-programmatic-headings-visual",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:13.D-List",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "13.D-List",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/13Structure/#13d-test-procedure-for-visually-apparent-lists",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:14.A-LinkPurpose",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "14.A-LinkPurpose",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/14Links/#14a-test-procedure-for-link-purpose-in-context",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:15.A-LanguagePage",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "15.A-LanguagePage",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.1.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/15Language/#15a-test-procedure-for-language-of-page",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:15.B-LanguagePart",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "15.B-LanguagePart",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "3.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/15Language/#15b-test-procedure-for-language-of-parts",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:16.A-AudioOnlyTranscript",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "16.A-AudioOnlyTranscript",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16a-test-procedure-for-audio-only-prerecorded",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:16.B-VideoOnlyAlt",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "16.B-VideoOnlyAlt",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16b-test-procedure-for-video-only-prerecorded",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:16.C-AudioMediaAlternative",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "16.C-AudioMediaAlternative",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16c-test-procedure-for-audio-media-alternative-prerecorded",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:16.D-VideoMediaAlternative",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "16.D-VideoMediaAlternative",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/16AudioVideo/#16d-test-procedure-for-video-media-alternative-prerecorded",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:17.A-MediaPlayerCCADControls",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "17.A-MediaPlayerCCADControls",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "503.4"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17a-test-procedure-for-media-player-controls",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:17.B-MediaPlayerCCLevel",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "17.B-MediaPlayerCCLevel",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "503.4.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17b-test-procedure-for-media-player-caption-control-level",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:17.C-MediaPlayerADLevel",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "17.C-MediaPlayerADLevel",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "503.4.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17c-test-procedure-for-media-player-audio-description-control-level",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:17.D-CaptionsPrerecorded",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "17.D-CaptionsPrerecorded",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17d-test-procedure-for-captions-prerecorded",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:17.E-ADPrerecorded",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "17.E-ADPrerecorded",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.5"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17e-test-procedure-for-audio-description-prerecorded",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:17.F-CaptionsLive",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "17.F-CaptionsLive",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.2.4"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/17SyncMedia/#17f-test-procedure-for-captions-live",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:18.B-CSSPositionedContent",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "18.B-CSSPositionedContent",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.3.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/18Stylesheet/#18b-test-procedure-for-css-positioned-content",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:19.A-FrameTitle",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "19.A-FrameTitle",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/19Frames/#19a-test-procedure-for-frames",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:19.B-iFrameName",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "19.B-iFrameName",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "4.1.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/19Frames/#19b-test-procedure-for-iframes",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:20.A-ConformingAltVersion",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "20.A-ConformingAltVersion",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "CR1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/20AlternateVersions/#20a-test-procedure-for-conforming-alternate-version",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:21.A-TimingAdjustable",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "21.A-TimingAdjustable",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.2.1"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21a-test-procedure-for-timing-adjustable",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:21.B-MovingInfo",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "21.B-MovingInfo",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.2.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21b-test-procedure-for-moving-information",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:21.C-AutoUpdate",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "21.C-AutoUpdate",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.2.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21c-test-procedure-for-auto-updating-information",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:21.D-AudioControl",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "21.D-AudioControl",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.4.2"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/21TimedEvents/#21d-test-procedure-for-audio-control",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:22.A-ResizeText",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "22.A-ResizeText",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "1.4.4"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/22Resize/#22a-test-procedure-for-resize-text",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:23.A-MultipleWays",
+      "target_kind": "baseline-procedure",
+      "testing_track": "section508-baseline",
+      "baseline_procedure_id": "23.A-MultipleWays",
+      "local_procedure_id": null,
+      "requirement_refs": [
+        "2.4.5"
+      ],
+      "source_url": "https://ictbaseline.access-board.gov/web-baselines/23MultipleWays/#23a-test-procedure-for-related-web-pages",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:1.3.4",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-1.3.4",
+      "requirement_refs": [
+        "1.3.4"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#orientation",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:1.3.5",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-1.3.5",
+      "requirement_refs": [
+        "1.3.5"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#identify-input-purpose",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:1.4.10",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-1.4.10",
+      "requirement_refs": [
+        "1.4.10"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#reflow",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:1.4.11",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-1.4.11",
+      "requirement_refs": [
+        "1.4.11"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#non-text-contrast",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:1.4.12",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-1.4.12",
+      "requirement_refs": [
+        "1.4.12"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#text-spacing",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:1.4.13",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-1.4.13",
+      "requirement_refs": [
+        "1.4.13"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.1.4",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-2.1.4",
+      "requirement_refs": [
+        "2.1.4"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#character-key-shortcuts",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.4.11",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag22",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG22-2.4.11",
+      "requirement_refs": [
+        "2.4.11"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.5.1",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-2.5.1",
+      "requirement_refs": [
+        "2.5.1"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#pointer-gestures",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.5.2",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-2.5.2",
+      "requirement_refs": [
+        "2.5.2"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#pointer-cancellation",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.5.3",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-2.5.3",
+      "requirement_refs": [
+        "2.5.3"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#label-in-name",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.5.4",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-2.5.4",
+      "requirement_refs": [
+        "2.5.4"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#motion-actuation",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.5.7",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag22",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG22-2.5.7",
+      "requirement_refs": [
+        "2.5.7"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#dragging-movements",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:2.5.8",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag22",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG22-2.5.8",
+      "requirement_refs": [
+        "2.5.8"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#target-size-minimum",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:3.2.6",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag22",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG22-3.2.6",
+      "requirement_refs": [
+        "3.2.6"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#consistent-help",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:3.3.7",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag22",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG22-3.3.7",
+      "requirement_refs": [
+        "3.3.7"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#redundant-entry",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:3.3.8",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag22",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG22-3.3.8",
+      "requirement_refs": [
+        "3.3.8"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:supplemental:4.1.3",
+      "target_kind": "supplemental-sc",
+      "testing_track": "supplemental-wcag21",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SUP-WEB-WCAG21-4.1.3",
+      "requirement_refs": [
+        "4.1.3"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG22/#status-messages",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:conformance:CR1",
+      "target_kind": "conformance",
+      "testing_track": "section508-conformance",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "CONF-1",
+      "requirement_refs": [
+        "CR1"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG20/#conformance-reqs",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:conformance:CR2",
+      "target_kind": "conformance",
+      "testing_track": "section508-conformance",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "CONF-2",
+      "requirement_refs": [
+        "CR2"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG20/#conformance-reqs",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:conformance:CR3",
+      "target_kind": "conformance",
+      "testing_track": "section508-conformance",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "CONF-3",
+      "requirement_refs": [
+        "CR3"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG20/#conformance-reqs",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:conformance:CR4",
+      "target_kind": "conformance",
+      "testing_track": "section508-conformance",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "CONF-4",
+      "requirement_refs": [
+        "CR4"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG20/#conformance-reqs",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:conformance:CR5",
+      "target_kind": "conformance",
+      "testing_track": "section508-conformance",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "CONF-5",
+      "requirement_refs": [
+        "CR5"
+      ],
+      "source_url": "https://www.w3.org/TR/WCAG20/#conformance-reqs",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:scope:content-scope",
+      "target_kind": "scope",
+      "testing_track": "section508-scope",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SCOPE-content-scope",
+      "requirement_refs": [
+        "E205.2",
+        "E205.3",
+        "E205.4"
+      ],
+      "source_url": "https://www.access-board.gov/ict/",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    },
+    {
+      "target_id": "web:scope:support-documentation",
+      "target_kind": "scope",
+      "testing_track": "section508-scope",
+      "baseline_procedure_id": null,
+      "local_procedure_id": "SCOPE-support-documentation",
+      "requirement_refs": [
+        "602.3"
+      ],
+      "source_url": "https://www.access-board.gov/ict/",
+      "case_id": null,
+      "status": "not-tested",
+      "tester_type": "none",
+      "evidence": [],
+      "rationale": "No observation has been made; complete this check or retain an explicit gap."
+    }
+  ],
+  "case_comparisons": [],
+  "human_review": {
+    "status": "pending",
+    "reviewer": null,
+    "evidence": []
+  },
+  "limitations": [
+    "Template only; no accessibility evaluation or conformance determination has occurred.",
+    "Case availability and instruction coverage are independent of observed outcomes."
+  ]
+}

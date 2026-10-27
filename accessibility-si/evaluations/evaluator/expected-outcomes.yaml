@@ -1,0 +1,1035 @@
+{
+  "schema_version": "0.2.0",
+  "warning": "Evaluator only. Freeze candidate results before using expected outcomes. Source case titles and filenames also leak outcomes.",
+  "outcomes": [
+    {
+      "case_id": "TC01.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "Not all interactive interface components can be accessed by keyboard or have an alternative control on the page with the same functionality that is available by keyboard. Specifically, the city and area code form fields have a tabindex of -1 and their functionality is not available elsewhere on the page.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC01.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "Users must press and hold a key for three seconds to use a function.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC01.B-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There are no components that receive keyboard focus.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC02.A-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no visual focus since there are no components that receive keyboard focus.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The image in the code sample does not provide any attributes that would contribute to an accessible name or description text alternative output.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The image in the code sample has an accessible name from its <code>alt</code> attribute that is not descriptive.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The image in the code sample provides an ALT attribute with a value that provides an equivalent text alternative description of the image. However, the image also includes <code>role=\"presentation\"</code>, which would prompt Assistive Technologies to ignore the image and its text alternative description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-4-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The image in the code sample provides an <code>alt</code> attribute with a value that provides an equivalent text alternative description of the image. However, the image also includes <code>role=\"none\"</code>, which would prompt Assistive Technologies to ignore the image and its text alternative description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-5-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The image in the code sample provides an ALT attribute with a value that provides an equivalent text alternative description of the image. However, the image also includes <code>aria-hidden=\"true\"</code>, which would prompt Assistive Technologies to ignore the image and its text alternative description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample has a descriptive accessible name from its <code>alt</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-all-pass-2",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample has a descriptive accessible name from its <code>title</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-all-pass-3",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample has a descriptive accessible name from its <code>aria-label</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-all-pass-4",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample has a descriptive accessible name from its <code>aria-labelledby</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.A-all-pass-5",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample has a descriptive accessible name from its <code>aria-describedby</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.B-1-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample is a decorative image from its <code>role=\"presentation\"</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.B-2-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample is a decorative image from its <code>role = \"none\"</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.B-3-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample is a decorative image from its <code>aria-hidden=\"true\"</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.B-4-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample is a decorative image from its <code>alt=\"\"</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.B-5-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The image in the code sample is inserted from CSS.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.C-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "A user without vision will not be able to solve the CAPTCHA because it has an empty text alternative",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.C-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "A user without vision will not be able to solve the CAPTCHA because it does not identify or describe the purpose",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.C-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "Users without vision will not be able to complete the CAPTCHA since the CAPTCHA requires vision",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.C-3-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "Users without hearing will not be able to complete the CAPTCHA since the CAPTCHA requires hearing",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.C-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "All users should be able to complete this CAPTCHA test since there are visual and auditory options.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.C-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "DNA since there are no CAPTCHAs.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.D-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "FAIL since there is an image of text that could easily be just text.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC06.D-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "DNA since there are no images of text on the page.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC07.B-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "DNA since there are no instructions that rely on Sensory Characteristics.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The foreground text in the code sample does not provide sufficient contrast based on the text size, foreground color, and background color.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-2-fail-2",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The foreground text in the code sample does not provide sufficient contrast (1.72:1) based on the text size (14 point), foreground color, and background color.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-2-fail-3",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The foreground and background text and size contrast ratio in the code sample provide sufficient contrast in the initial state of the text; however, the color of the heading changes on hover, which does not provide sufficient contrast ratio (2.32:1) between the text and the background.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-2-fail-4",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The foreground and background text and size contrast ratio in the code sample does not provide sufficient contrast in an image of text.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-2-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The foreground text in the code sample provides sufficient contrast based on the text size, foreground color, and background color.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "Although the foreground text in the code sample is bolded, it DOES NOT provide sufficient contrast because the contrast is below the 3:1 contrast ratio requirement for bolded text.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-3-fail-2",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The foreground text in the code sample **DOES NOT** provide sufficient contrast (1.72:1) based on the text size (18 pt font), foreground color, and background color.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-3-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The foreground text in the code sample provides sufficient contrast (greaer than 3:1) based on the text size (18 point font), foreground color, and background color.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC08.A-3-pass-2",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The foreground text in the code sample provides sufficient contrast based on the text size and weight.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The <code>input</code> element in the code sample does not have any attributes that would contribute to an accessible name or description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The input element in the code sample provides an accessible name value via implementation of the placeholder attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-all-pass-2",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The input element in the code sample provides an accessible name value via implementation of label/for= binding of an on-screen label.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-all-pass-3",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The input element in the code sample provides an accessible name value via implementation of a title attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-all-pass-4",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The input element in the code sample provides an accessible name value via implementation of an aria-label attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-all-pass-5",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The input element in the code sample provides an accessible name value via implementation of an aria-labelledby attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-all-pass-6",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The input element in the code sample provides an accessible name value via implementation of an aria-describedby attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The input element in the code sample is hidden from visibility and from the accessibility tree; therefore there are no elements on the page that fit the Identify Content criteria.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.A-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The input element in the code sample is hidden from visibility and from the accessibility tree; therefore there are no elements on the page that fit the Identify Content criteria.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.C-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "After input, there are unexpected changes to context",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.C-3-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "After input, there are unexpected changes to context",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.C-3-fail-3",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "After input, there are unexpected changes to context",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.C-all-pass",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "After input, there are no changes to context",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.C-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There are no form elements, therefore there is nothing to input.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The user is not made aware of the error when focus is shifted away from the item in error or when trying to submit the form.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-2-fail-2",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The error is not described to the user in text.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-2-fail-3",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The item in error is not identified in text.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "An error is automatically detected and the error notification meets all requirements of 10.4",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-all-pass-2",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "An error is automatically detected and the error notification meets all requirements of 10.4",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-all-pass-3",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "An error is automatically detected and the error notification meets all requirements of 10.4",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.D-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "10.4 does not apply because when incorrect values are entered/submitted, no alert notification are provided.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.E-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The form component is unlabeled.\n",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.E-1-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The form component is labeled, but the prompt is not clear enough.\n",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.E-1-pass-2",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The form component is labeled with a basic prompt for what it wants you to type.\n",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.E-1-pass-3",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The form component is labeled with a clear and descriptive label instead of a basic prompt.\n",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.G-2.a-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "A financial transaction occurs and the opportunity to reverse the transaction is available.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.G-2.b-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them before the financial transaction occurs.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.G-2.c-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The system provides a mechanism for reviewing, confirming, and correcting information before finalizing a financial transaction.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.G-all-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "A financial transaction occurs without opportunity to reverse, check, or confirm.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.G-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The page does not have a form, therefore this test procedure does not apply",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC10.G-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The page does not cause a legal commitment, financial transactions, nor modifies/deletes user-controllable data in a storage system, therefore this test procedure does not apply",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC11.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "No `<title>` element is defined for the page.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC11.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "An inaccurate `<title>` element is defined for the page.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC11.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "Correct descriptive `<title>` element is defined for the page.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "Because the `<table>` element includes an ARIA `role=\"presentation\"`, assistive technologies do not have access to the table header header and data cell relationships necessary for understanding the data in the table. The table fails Baseline test 12.1 because of inadequately defined programmatic relationships in the table.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-2-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "Because the <table> element includes an ARIA role=\"none\", assistive technologies do not have access to the table header header and data cell relationships necessary for understanding the data in the table. The table fails Baseline test 12.1 because of inadequately defined programmatic relationships in the table.\n",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because a data cell also includes an ARIA role with table structure semantics, 'role = \"cell\"'.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-4-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because the data tables do not have header cells, `<th>`.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-4-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because the data table has incorrect or invalid scope attribute defined.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-4-fail-3",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because the data table has valid scope attributes defined, but they are insufficient by themselves to correctly define cell-header relationships.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-4-fail-4",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because the data table has a valid scope attribute and ids/headers defined, but header references (which override scope attributes) are incorrect.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-4-fail-5",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because the data table has incorrect or incomplete id/header references.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-4-fail-6",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The table fails the baseline test because the data table has incorrect role assigned and does not use the native table element.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC12.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The code sample includes a simple table with only one row of column headers denoted using `<th>` elements. The code sample should PASS the baseline test for Data Tables.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The heading in the code sample does not describe the meaning of the contents",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.A-1-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The heading in the code sample describes the purpose of the contents.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.A-1-pass-2",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The heading in the code sample describes the purpose of the contents.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.a-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The visual heading has a lower programmatic heading level than its subheadings in the code samples .",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.a-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The headings in the code samples do not match the visual hierarchy.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.b-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The visual headings in the code sample are all at the same level, but some should be at a lower level",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.c-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The \"Classical Period\" heading in the code sample is not defined as a heading programmatically.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.c-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The \"Baroque Period\" heading in the code sample has  mismatched heading levels (HTML heading level is 3. ARIA heading level is 4.)",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.c-fail-3",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The \"Types of Music\" heading in the code sample has  mismatched heading levels (HTML heading level is \"1\". ARIA heading level is not specified and defaults to \"2\".)",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-1.c-fail-4",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The \"Types of Music\" heading in the code sample has the wrong heading level. (The heading level should be \"1\". ARIA heading level is not specified and defaults to \"2\".)",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The visually apparent headings in the sample are identified with multiple heading levels using native heading elements.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-all-pass-2",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The visually apparent headings in the code sample contain multiple heading levels created using ARIA role=heading and appropriate ARIA-level attributes",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-all-pass-3",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The visually apparent headings in the code sample have multiple heading levels and are identified using BOTH native heading elements AND ARIA role=heading and appropriate ARIA-level attributes",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "No visual heading in the code samples.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.B-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "Programmatic headings, no visual heading in the code samples.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.C-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The programmatic heading in the code sample is not a visual heading",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.C-1-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The programmatic heading in the code sample is not a visual heading",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.C-1-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The programmatic headings in the code sample are visual headings",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.C-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There are no programmatic headings.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.C-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The are no programmatic headings in the code sample",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "Because the information presented visually in a list is not defined as a list programatically the content fails baseline test 13.4.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-1-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The visually apparent list is defined as an unordered list programatically.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "Because the information presented visually in an ordered list is not defined as a list programatically the content fails baseline test 13.4.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-2-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The incorrect list type is used for the visually apparent list.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-2-pass-2",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The correct list type is used for the visually apparent list.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-3-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The visually apparent description list is not identified programmatically.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-3-pass-2",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The visually apparent description list is identified programmatically.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC13.D-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "Because the information presented visually in a list is not defined as a list programatically the content fails baseline test 13.4.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC14.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "The code sample includes an image/link with no accessible name or description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC14.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "Fail",
+      "source_rationale": "A link in the code sample does not sufficiently describe the purpose of the link.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC14.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "The inner text and context of each link in the code sample sufficiently describes the purpose of the link.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC14.A-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The code sample shows that there are no links present.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The English page's <code>&lt;html&gt;</code> tag has no <code>lang</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.A-2-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The English page's <code>&lt;html&gt;</code> tag has no <code>lang</code> attribute. The <code>lang</code> attribute is on the a <code>&lt;head&gt;</code> tag, which is incorrect.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.A-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The English page's <code>html</code> tag has <code>lang=\"eng\"</code> which is an invalid language subtag.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.A-3-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The English page's <code>html</code> tag has <code>lang=\"fr\"</code> which is not the correct value.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The page's <code>&lt;html&gt;</code> tag has <code>lang=\"en\"</code> correctly identified.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.B-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The French part has no <code>lang</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.B-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The French part has <code>lang=\"fre\"</code>, which is not a valid language subtag. The correct language subtag for French is \"fr\".",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.B-3-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The French part has incorrect <code>lang=\"es\"</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.B-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The French part has correct <code>lang=\"fr\"</code> attribute.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC15.B-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "The page is only in one language (English).",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC16.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "There is no transcript for audio-only content.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC16.A-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The transcript provided for audio-only content is an image.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC16.A-2-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The transcript provided for audio-only content is an image.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC16.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "Pass",
+      "source_rationale": "A complete and accurate text transcript is provided for audio-only content.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC16.A-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no audio-only content in the code sample.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.A-1-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The media player has no control for captions or for audio description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.A-1-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The media player has no control for audio description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.A-1-fail-3",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The media player has no control for captions.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.A-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The media player has controls for captions and for audio description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.A-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media player in the code sample.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.A-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media player in the code sample. There is only an audio player.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.B-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The media player has controls for captions at the same level as volume control.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.B-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media in the code sample.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.B-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media player in the code sample. There is only an audio player.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.C-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media in the code sample.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.C-ic-dna-2",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media player in the code sample. There is only an audio player.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.D-2-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The video in the code sample does not provide any captions.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.D-3b-fail-2",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The video in the code sample has inaccurate captions.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.D-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The video in the code sample includes captions that are complete, accurate, synchronized, and do not obscure other important on-screen text.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.D-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media in the code sample.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.E-2-fail-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The video in the code sample does not have audio description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.E-3-fail-1",
+      "expected_status": "fail",
+      "source_result": "FAIL",
+      "source_rationale": "The video in the code sample has inaccurate audio description.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.E-all-pass-1",
+      "expected_status": "pass",
+      "source_result": "PASS",
+      "source_rationale": "The video in the code sample has audio descriptions adequately describe all important visual content.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    },
+    {
+      "case_id": "TC17.E-ic-dna-1",
+      "expected_status": "not-applicable",
+      "source_result": "DNA",
+      "source_rationale": "There is no synchronized media in the code sample.",
+      "authority": "existing-framework-case; review against pinned Baseline source before scoring"
+    }
+  ]
+}

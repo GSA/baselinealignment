@@ -1,0 +1,1089 @@
+{
+  "schema_version": "0.2.0",
+  "development_target": "WCAG-2.2-A-AA",
+  "criteria": [
+    {
+      "id": "1.1.1",
+      "name": "Non-text Content",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#non-text-content",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Give meaningful graphics equivalent alternatives; make decoration ignorable; name controls and provide appropriate alternatives for complex images and CAPTCHA.",
+      "testing": "Compare every image, chart, icon and non-text object with its exposed name/description and surrounding content; check purpose, decorative handling and criterion exceptions.",
+      "document_notes": "Use native alternative-text/decorative or PDF artifact mechanisms; give complex charts equivalent narrative or accessible data. An empty cell is not itself an accessibility failure.",
+      "web_baseline_procedures": [
+        "6.A-MeaningfulImage",
+        "6.B-DecorativeImage",
+        "6.C-Captcha",
+        "7.C-AudibleCues",
+        "10.A-FormName"
+      ],
+      "documents_baseline_procedures": [
+        "6.A-MeaningfulImage",
+        "6.B-DecorativeImage",
+        "7.C-AudibleCues",
+        "10.A-FormName"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#text-equiv-all"
+    },
+    {
+      "id": "1.2.1",
+      "name": "Audio-only and Video-only (Prerecorded)",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide an equivalent transcript for prerecorded audio-only and an equivalent text or audio alternative for prerecorded video-only, subject to the text-alternative exception.",
+      "testing": "Compare the entire recording with its alternative; include relevant sounds, speaker identity and visual information as appropriate.",
+      "document_notes": "Include linked and embedded recordings, not just visible document text.",
+      "web_baseline_procedures": [
+        "16.A-AudioOnlyTranscript",
+        "16.B-VideoOnlyAlt",
+        "16.C-AudioMediaAlternative",
+        "16.D-VideoMediaAlternative"
+      ],
+      "documents_baseline_procedures": [
+        "16.A-AudioOnlyTranscript",
+        "16.B-VideoOnlyAlt",
+        "16.C-AudioMediaAlternative",
+        "16.D-VideoMediaAlternative"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#media-equiv-av-only-alt"
+    },
+    {
+      "id": "1.2.2",
+      "name": "Captions (Prerecorded)",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#captions-prerecorded",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide accurate synchronized captions for prerecorded synchronized media, subject to the labeled text-alternative exception.",
+      "testing": "Play the full media with captions; compare speech, meaningful sounds, timing and placement.",
+      "document_notes": "A slide transcript alone does not replace synchronized captions.",
+      "web_baseline_procedures": [
+        "17.D-CaptionsPrerecorded"
+      ],
+      "documents_baseline_procedures": [
+        "17.D-CaptionsPrerecorded"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#media-equiv-captions"
+    },
+    {
+      "id": "1.2.3",
+      "name": "Audio Description or Media Alternative (Prerecorded)",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide audio description or an equivalent time-based media alternative for prerecorded synchronized media under the Level A rule.",
+      "testing": "Check the Level A alternative and its exception; at AA also evaluate the stricter audio-description requirement of 1.2.5.",
+      "document_notes": "The Baselines use 1.2.5 for AA rather than a separate 1.2.3 outcome; retain this relationship in coverage records.",
+      "web_baseline_procedures": [
+        "17.G-SyncMediaAlternative"
+      ],
+      "documents_baseline_procedures": [
+        "17.G-SyncMediaAlternative"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#media-equiv-audio-desc"
+    },
+    {
+      "id": "1.2.4",
+      "name": "Captions (Live)",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#captions-live",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide synchronized captions for live synchronized media.",
+      "testing": "Observe the live broadcast and compare captions with speech and meaningful sounds; distinguish broadcasts from excluded two-way calls in the Baseline.",
+      "document_notes": "Record the live delivery environment; a static document without live media can have a justified non-applicability finding.",
+      "web_baseline_procedures": [
+        "17.F-CaptionsLive"
+      ],
+      "documents_baseline_procedures": [
+        "17.F-CaptionsLive"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#media-equiv-real-time-captions"
+    },
+    {
+      "id": "1.2.5",
+      "name": "Audio Description (Prerecorded)",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#audio-description-prerecorded",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Describe important prerecorded visual information not already conveyed in the soundtrack.",
+      "testing": "Play the entire synchronized recording with description enabled; compare meaningful actions, changes, graphics and on-screen text.",
+      "document_notes": "Include exported narrated slide presentations and their delivered playback versions.",
+      "web_baseline_procedures": [
+        "17.E-ADPrerecorded"
+      ],
+      "documents_baseline_procedures": [
+        "17.E-ADPrerecorded"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#media-equiv-audio-desc-only"
+    },
+    {
+      "id": "1.3.1",
+      "name": "Info and Relationships",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#info-and-relationships",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Represent headings, lists, labels, table relationships and other visually conveyed structure programmatically or in text.",
+      "testing": "Compare visual relationships with the accessibility tree or native structure and assistive technology output; evaluate all meaningful structures.",
+      "document_notes": "Use styles, native lists, table headers, chart alternatives and PDF structure. Assess merged cells by actual header relationships and navigation, not a blanket prohibition.",
+      "web_baseline_procedures": [
+        "10.A-FormName",
+        "12.A-DataTableRole",
+        "12.B-DataTableHeaderAssociation",
+        "13.B-VisHeadingProg",
+        "13.C-ProgHeadingVisual",
+        "13.D-List"
+      ],
+      "documents_baseline_procedures": [
+        "10.A-FormName",
+        "12.A-DataTableRole",
+        "12.B-DataTableHeaderAssociation",
+        "13.B-VisHeadingProg",
+        "13.C-ProgHeadingVisual",
+        "13.D-List",
+        "18.A-MeaningfulContent"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#content-structure-separation-programmatic"
+    },
+    {
+      "id": "1.3.2",
+      "name": "Meaningful Sequence",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#meaningful-sequence",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Keep a meaningful reading sequence in both presentation and programmatic order.",
+      "testing": "Read complex layouts in their exposed sequence; compare the meaning with the visual layout, including positioned or floating content.",
+      "document_notes": "Inspect Word object anchors, Excel navigation, PowerPoint object order and PDF tag order independently of visual coordinates.",
+      "web_baseline_procedures": [
+        "18.B-CSSPositionedContent"
+      ],
+      "documents_baseline_procedures": [
+        "18.B-MeaningfulSequence"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#content-structure-separation-sequence"
+    },
+    {
+      "id": "1.3.3",
+      "name": "Sensory Characteristics",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#sensory-characteristics",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Write instructions that do not rely solely on position, shape, size, sound or orientation.",
+      "testing": "Follow each instruction without relying on the cited sensory property and check for a text/name equivalent.",
+      "document_notes": "Identify worksheet cells, slides and controls with meaningful names or text as well as spatial cues.",
+      "web_baseline_procedures": [
+        "7.B-SensoryCharacteristics"
+      ],
+      "documents_baseline_procedures": [
+        "7.B-SensoryCharacteristics"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#content-structure-separation-understanding"
+    },
+    {
+      "id": "1.3.4",
+      "name": "Orientation",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#orientation",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/orientation.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Support portrait and landscape unless one orientation is essential.",
+      "testing": "Rotate or change the display orientation and check access and operation; substantiate the essential-orientation exception.",
+      "document_notes": "A printed page's portrait layout is not the same as locking device orientation; evaluate the delivered reader/content behavior using WCAG2ICT.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "1.3.5",
+      "name": "Identify Input Purpose",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#identify-input-purpose",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Expose the defined input purpose for fields collecting information about the user when the technology supports it.",
+      "testing": "Inspect applicable user-data fields against the criterion's input-purpose taxonomy and supported programmatic mechanism.",
+      "document_notes": "Evaluate supported native/PDF form properties; document an unsupported mechanism and human interpretation rather than pretending HTML autocomplete exists.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "1.4.1",
+      "name": "Use of Color",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#use-of-color",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Communicate status and distinctions with more than color alone.",
+      "testing": "Compare color-coded meaning with text, patterns, symbols or programmatic cues; check links and charts in context.",
+      "document_notes": "Use labels and patterns for conditional formatting and charts; do not remove meaningful color when adding another cue.",
+      "web_baseline_procedures": [
+        "7.A-Color"
+      ],
+      "documents_baseline_procedures": [
+        "7.A-Color"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-without-color"
+    },
+    {
+      "id": "1.4.2",
+      "name": "Audio Control",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#audio-control",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide control of automatically playing audio that lasts more than three seconds.",
+      "testing": "Trigger automatic playback; verify an appropriate stop/pause or independent volume control and its keyboard operation.",
+      "document_notes": "Check embedded media and presentation startup states; ordinary system volume alone is insufficient for the independent-volume option.",
+      "web_baseline_procedures": [
+        "3.A-NonInterference",
+        "21.D-AudioControl"
+      ],
+      "documents_baseline_procedures": [
+        "3.A-NonInterference",
+        "21.D-AudioControl"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-dis-audio"
+    },
+    {
+      "id": "1.4.3",
+      "name": "Contrast (Minimum)",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#contrast-minimum",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Choose text/background combinations meeting 4.5:1, or 3:1 for qualifying large text, with the criterion's exceptions.",
+      "testing": "Measure actual foreground/background combinations, including states, images of text and gradients; apply large-text and exception definitions.",
+      "document_notes": "Check text inside charts, tables, slide masters and exported PDFs, not only body text.",
+      "web_baseline_procedures": [
+        "8.A-ContrastMinimum"
+      ],
+      "documents_baseline_procedures": [
+        "8.A-ContrastMinimum"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast"
+    },
+    {
+      "id": "1.4.4",
+      "name": "Resize Text",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#resize-text",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Allow text to enlarge to 200 percent without losing content or functionality, subject to criterion exceptions.",
+      "testing": "Enlarge text in the delivered environment; inspect clipping, overlap, controls and hidden information.",
+      "document_notes": "Use a format-appropriate text-resize method. A page magnifier alone is not proof of text-resize support; record reader limitations.",
+      "web_baseline_procedures": [
+        "22.A-ResizeText"
+      ],
+      "documents_baseline_procedures": [
+        "22.A-ResizeText"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-scale"
+    },
+    {
+      "id": "1.4.5",
+      "name": "Images of Text",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#images-of-text",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Use real text rather than images of text when the technology can achieve the presentation, subject to customizable/essential exceptions.",
+      "testing": "Identify text rendered as images; check whether real text can achieve the result and whether a stated exception actually applies.",
+      "document_notes": "OCR can restore text availability but does not automatically repair relationships, reading order or image-of-text issues.",
+      "web_baseline_procedures": [
+        "6.D-ImageText"
+      ],
+      "documents_baseline_procedures": [
+        "6.D-ImageText"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-text-presentation"
+    },
+    {
+      "id": "1.4.10",
+      "name": "Reflow",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#reflow",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Support reflow without two-dimensional scrolling at the criterion's 320 CSS-pixel width or 256 CSS-pixel height equivalent, with the stated two-dimensional-layout exception.",
+      "testing": "Test the applicable narrow/zoomed view; check that information and functionality remain, and limit any exception to content requiring two-dimensional layout.",
+      "document_notes": "Test the actual document reader's reflow and content. A table or sheet may qualify for a two-dimensional exception; that does not exempt unrelated text or the entire document.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "1.4.11",
+      "name": "Non-text Contrast",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#non-text-contrast",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Provide 3:1 contrast for required visual control/state and meaningful graphic information against adjacent colors, with criterion exceptions.",
+      "testing": "Measure boundaries, state indicators and meaningful graphical parts; distinguish essential information from decorative detail and unmodified user-agent styling.",
+      "document_notes": "Check chart distinctions, author-provided form borders and focus indicators; assess reader-owned controls separately.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "1.4.12",
+      "name": "Text Spacing",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#text-spacing",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Avoid loss when users set line height to 1.5 times font size, paragraph spacing to 2 times, letter spacing to .12 times and word spacing to .16 times.",
+      "testing": "Apply the specified spacing settings where applicable; inspect clipping, overlap and loss of functionality while preserving other styles.",
+      "document_notes": "Interpret with WCAG2ICT for the format; document technology/reader support and applicable language exceptions instead of inventing HTML styling controls.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "1.4.13",
+      "name": "Content on Hover or Focus",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Make qualifying author-controlled hover/focus content dismissible, hoverable and persistent, with the criterion's exceptions.",
+      "testing": "Reveal the content by pointer and keyboard; try dismissing it, moving into it and keeping it open until the trigger ends or it is dismissed.",
+      "document_notes": "Evaluate author-created popups and tooltips; distinguish reader-controlled presentation and its responsible software.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.1.1",
+      "name": "Keyboard",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#keyboard",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide keyboard access to all functionality without timing individual keystrokes, subject to the path-dependent-input exception.",
+      "testing": "Exercise every function with keyboard alone, including hidden/expanded controls and equivalent controls; check keystroke timing.",
+      "document_notes": "Use the intended reading/presentation mode and test content interactions separately from the authoring application's ribbon.",
+      "web_baseline_procedures": [
+        "1.A-KeyboardAccess"
+      ],
+      "documents_baseline_procedures": [
+        "1.A-KeyboardAccess"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#keyboard-operation-keyboard-operable"
+    },
+    {
+      "id": "2.1.2",
+      "name": "No Keyboard Trap",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#no-keyboard-trap",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Allow keyboard focus to leave every component, with instructions for any nonstandard exit keys.",
+      "testing": "Navigate into and out of every interactive region in both directions; verify any documented exit mechanism.",
+      "document_notes": "Include PDF forms, embedded objects and slide media; absence of controls may justify non-applicability only after inspection.",
+      "web_baseline_procedures": [
+        "1.B-NoKeyboardTrap",
+        "3.A-NonInterference"
+      ],
+      "documents_baseline_procedures": [
+        "1.B-NoKeyboardTrap",
+        "3.A-NonInterference"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#keyboard-operation-trapping"
+    },
+    {
+      "id": "2.1.4",
+      "name": "Character Key Shortcuts",
+      "level": "A",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#character-key-shortcuts",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Allow single-character shortcuts to be disabled or remapped, or limit them to focused components as specified.",
+      "testing": "Exercise character shortcuts with and without component focus; verify an allowed mitigation.",
+      "document_notes": "Check author-created macros or content interactions, not unrelated reader/global shortcuts.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.2.1",
+      "name": "Timing Adjustable",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#timing-adjustable",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Allow users to turn off, adjust or extend content time limits under one of the criterion's permitted options or exceptions.",
+      "testing": "Find time limits and exercise the selected option; for extension verify the warning interval and allowed repetitions against the normative criterion.",
+      "document_notes": "Include timed slides, forms and linked completion processes; check real-time/essential exceptions explicitly.",
+      "web_baseline_procedures": [
+        "21.A-TimingAdjustable"
+      ],
+      "documents_baseline_procedures": [
+        "21.A-TimingAdjustable"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#time-limits-required-behaviors"
+    },
+    {
+      "id": "2.2.2",
+      "name": "Pause, Stop, Hide",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#pause-stop-hide",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide required pause/stop/hide or update-frequency controls for qualifying moving, blinking, scrolling and auto-updating content.",
+      "testing": "Observe startup and updates; check movement lasting more than five seconds alongside other content and the separate auto-update rule.",
+      "document_notes": "Check slide transitions, animations, media and changing data; do not apply the five-second threshold to all auto-updating information.",
+      "web_baseline_procedures": [
+        "3.A-NonInterference",
+        "21.B-MovingInfo",
+        "21.C-AutoUpdate"
+      ],
+      "documents_baseline_procedures": [
+        "3.A-NonInterference",
+        "21.B-MovingInfo",
+        "21.C-AutoUpdate"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#time-limits-pause"
+    },
+    {
+      "id": "2.3.1",
+      "name": "Three Flashes or Below Threshold",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Avoid flashes above the permitted rate or satisfy the general/red flash thresholds.",
+      "testing": "Identify flashing regions and use an appropriate analyzer or qualified review when necessary; do not expose a tester to unsafe flashing.",
+      "document_notes": "Review animations and media in the delivered file; a thumbnail or source inspection cannot establish flash thresholds.",
+      "web_baseline_procedures": [
+        "3.A-NonInterference",
+        "9.A-Flashes"
+      ],
+      "documents_baseline_procedures": [
+        "3.A-NonInterference",
+        "9.A-Flashes"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#seizure-does-not-violate"
+    },
+    {
+      "id": "2.4.1",
+      "name": "Bypass Blocks",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#bypass-blocks",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html",
+      "document_section508_applicability": "excepted-by-E205.4",
+      "development": "Provide a way to bypass repeated blocks in web content.",
+      "testing": "Use the bypass mechanism and verify that it reaches the relevant content; check keyboard and programmatic behavior.",
+      "document_notes": "E205.4 exempts non-web documents from this criterion; optional document navigation aids remain good practice without becoming a Section 508 obligation.",
+      "web_baseline_procedures": [
+        "4.A-BypassBlocks"
+      ],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-skip"
+    },
+    {
+      "id": "2.4.2",
+      "name": "Page Titled",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#page-titled",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Give each page/document a title identifying topic or purpose.",
+      "testing": "Inspect the exposed title and compare it with the content and purpose.",
+      "document_notes": "Set document title metadata and appropriate reader display settings; do not substitute an unexplained filename for the actual document title.",
+      "web_baseline_procedures": [
+        "11.A-PageTitled"
+      ],
+      "documents_baseline_procedures": [
+        "11.A-DocumentTitled"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-title"
+    },
+    {
+      "id": "2.4.3",
+      "name": "Focus Order",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#focus-order",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Keep focus order meaningful and operable where sequence matters.",
+      "testing": "Traverse focus forward and backward through all states; compare order with task meaning and operation.",
+      "document_notes": "Check form tab order, reading/presentation mode and PDF annotation order; visual order and tag order do not automatically establish focus order.",
+      "web_baseline_procedures": [
+        "2.B-FocusOrder"
+      ],
+      "documents_baseline_procedures": [
+        "2.B-FocusOrder"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-focus-order"
+    },
+    {
+      "id": "2.4.4",
+      "name": "Link Purpose (In Context)",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#link-purpose-in-context",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Make link purpose determinable from its text and permitted programmatic context.",
+      "testing": "Inspect links and their context as exposed to assistive technology; check image links and repeated ambiguous text.",
+      "document_notes": "Use meaningful links in Word, sheets, slides and PDF annotations; include valid destinations in generated files.",
+      "web_baseline_procedures": [
+        "14.A-LinkPurpose"
+      ],
+      "documents_baseline_procedures": [
+        "14.A-LinkPurpose"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-refs"
+    },
+    {
+      "id": "2.4.5",
+      "name": "Multiple Ways",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#multiple-ways",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html",
+      "document_section508_applicability": "excepted-by-E205.4",
+      "development": "Offer more than one way to locate a web page within a set, except process-result/step pages.",
+      "testing": "Identify the set and verify at least two usable location methods or the stated exception.",
+      "document_notes": "E205.4 exempts non-web documents; a useful table of contents or bookmarks does not become this mandatory test.",
+      "web_baseline_procedures": [
+        "23.A-MultipleWays"
+      ],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-mult-loc"
+    },
+    {
+      "id": "2.4.6",
+      "name": "Headings and Labels",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#headings-and-labels",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Use headings and labels that describe topic or purpose.",
+      "testing": "Compare each heading/label with the content or control it introduces; assess wording separately from structural markup.",
+      "document_notes": "Use clear worksheet/table names and field labels; headings/labels guidance does not require adding headings where none are needed.",
+      "web_baseline_procedures": [
+        "10.B-FormDescriptiveLabel",
+        "13.A-HeadingDescriptive"
+      ],
+      "documents_baseline_procedures": [
+        "10.B-FormDescriptiveLabel",
+        "13.A-HeadingDescriptive"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-descriptive"
+    },
+    {
+      "id": "2.4.7",
+      "name": "Focus Visible",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#focus-visible",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Keep a perceivable keyboard focus indicator visible throughout focus.",
+      "testing": "Navigate every relevant component, pause to detect timed changes, and inspect indicator visibility in each state.",
+      "document_notes": "Test content controls in the reader/presentation environment; a caret or other clear indicator may satisfy the requirement without an outline.",
+      "web_baseline_procedures": [
+        "2.A-FocusVisible"
+      ],
+      "documents_baseline_procedures": [
+        "2.A-FocusVisible"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#navigation-mechanisms-focus-visible"
+    },
+    {
+      "id": "2.4.11",
+      "name": "Focus Not Obscured (Minimum)",
+      "level": "AA",
+      "introduced_in": "2.2",
+      "track": "supplemental-wcag22",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Keep a focused component from being entirely hidden by author-created content, applying the normative notes.",
+      "testing": "Navigate beneath sticky regions, overlays and scrolling containers; observe the component when focus arrives and apply user-opened/movable-content notes.",
+      "document_notes": "Check author-created layers and presentation overlays in the actual reader; do not label normal partial coverage a failure of this minimum criterion.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.5.1",
+      "name": "Pointer Gestures",
+      "level": "A",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#pointer-gestures",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Provide a single-pointer alternative to multipoint/path-based gestures unless essential.",
+      "testing": "Exercise each gesture and verify an equivalent simple-pointer action or the essential exception.",
+      "document_notes": "For static documents without authored gesture interactions record justified non-applicability; assess reader-owned gestures separately.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.5.2",
+      "name": "Pointer Cancellation",
+      "level": "A",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#pointer-cancellation",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Avoid irreversible activation on pointer down, using a permitted completion, abort, undo or essential option.",
+      "testing": "Test down/up actions, moving away before release and cancellation/undo for each authored pointer action.",
+      "document_notes": "Evaluate interactive document controls; do not infer cancellation from the appearance of a button.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.5.3",
+      "name": "Label in Name",
+      "level": "A",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#label-in-name",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Include the visible text label in the accessible name, preferably at its start.",
+      "testing": "Compare visible labels with computed/exposed names, including speech-input use where appropriate.",
+      "document_notes": "Check form-field names, PDF tooltips and clickable shapes; maintain visible wording in the programmatic name.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.5.4",
+      "name": "Motion Actuation",
+      "level": "A",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#motion-actuation",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Provide interface alternatives to device/user motion and allow motion response to be disabled, except supported/essential cases.",
+      "testing": "Trigger motion-actuated functions and exercise a conventional interface alternative and disable option.",
+      "document_notes": "Determine whether the document authors any motion behavior; do not assign reader features to the document without justification.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.5.7",
+      "name": "Dragging Movements",
+      "level": "AA",
+      "introduced_in": "2.2",
+      "track": "supplemental-wcag22",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#dragging-movements",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Provide a single-pointer alternative to dragging unless dragging is essential or unmodified user-agent behavior.",
+      "testing": "Perform each drag task using the non-drag alternative and compare the result.",
+      "document_notes": "Check author-created drag exercises; a static document without dragging has a different applicability finding from its editor's drag tools.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "2.5.8",
+      "name": "Target Size (Minimum)",
+      "level": "AA",
+      "introduced_in": "2.2",
+      "track": "supplemental-wcag22",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#target-size-minimum",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Make pointer targets at least 24 by 24 CSS pixels or meet a specific spacing or other exception.",
+      "testing": "Measure targets in the rendered environment; for undersized targets assess the 24 CSS-pixel spacing-circle test or the applicable exception.",
+      "document_notes": "Use a defensible reader/unit conversion for content targets; do not apply CSS pixels directly to point values without accounting for rendering.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "3.1.1",
+      "name": "Language of Page",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#language-of-page",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Declare the primary human language.",
+      "testing": "Compare the programmatic language with the content's primary language and assistive technology behavior.",
+      "document_notes": "Set native language properties and PDF document language; test the delivered file, not just its template.",
+      "web_baseline_procedures": [
+        "15.A-LanguagePage"
+      ],
+      "documents_baseline_procedures": [
+        "15.A-LanguageDocument"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#meaning-doc-lang-id"
+    },
+    {
+      "id": "3.1.2",
+      "name": "Language of Parts",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#language-of-parts",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Declare language changes where required, applying proper-name/technical-term and other exceptions.",
+      "testing": "Inspect passages/phrases in another language and their programmatic language properties.",
+      "document_notes": "Check run/paragraph/shape/tag language support in each format; record unsupported mechanisms and actual exposure.",
+      "web_baseline_procedures": [
+        "15.B-LanguagePart"
+      ],
+      "documents_baseline_procedures": [
+        "15.B-LanguageParts"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#meaning-other-lang-id"
+    },
+    {
+      "id": "3.2.1",
+      "name": "On Focus",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#on-focus",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Avoid an unexpected change of context merely when a component receives focus.",
+      "testing": "Move focus onto every applicable control and observe navigation, dialogs and other context changes.",
+      "document_notes": "Check focus-driven actions in document forms and interactive presentations; do not confuse a content update with every change of context.",
+      "web_baseline_procedures": [
+        "2.C-OnFocus"
+      ],
+      "documents_baseline_procedures": [
+        "2.C-OnFocus"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#consistent-behavior-receive-focus"
+    },
+    {
+      "id": "3.2.2",
+      "name": "On Input",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#on-input",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-input.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Do not change context on input without prior advice.",
+      "testing": "Change each setting and inspect the resulting behavior and instructions given before input.",
+      "document_notes": "Check form fields and interactive document controls; ordinary data updates are not automatically context changes.",
+      "web_baseline_procedures": [
+        "10.C-OnInput"
+      ],
+      "documents_baseline_procedures": [
+        "10.C-OnInput"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#consistent-behavior-unpredictable-change"
+    },
+    {
+      "id": "3.2.3",
+      "name": "Consistent Navigation",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#consistent-navigation",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html",
+      "document_section508_applicability": "excepted-by-E205.4",
+      "development": "Keep repeated navigation in the same relative order unless the user initiates a change.",
+      "testing": "Compare repeated navigation across the relevant set of web pages.",
+      "document_notes": "E205.4 exempts non-web documents; optional consistency across a document set is supplemental practice.",
+      "web_baseline_procedures": [
+        "4.B-ConsistentNavigation"
+      ],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#consistent-behavior-consistent-locations"
+    },
+    {
+      "id": "3.2.4",
+      "name": "Consistent Identification",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#consistent-identification",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html",
+      "document_section508_applicability": "excepted-by-E205.4",
+      "development": "Identify components with the same function consistently across a set of pages.",
+      "testing": "Compare names/icons/labels for repeated functions across the relevant set.",
+      "document_notes": "E205.4 exempts non-web documents; optional naming consistency remains useful authoring practice.",
+      "web_baseline_procedures": [
+        "4.C-ConsistentIdentification"
+      ],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#consistent-behavior-consistent-functionality"
+    },
+    {
+      "id": "3.2.6",
+      "name": "Consistent Help",
+      "level": "A",
+      "introduced_in": "2.2",
+      "track": "supplemental-wcag22",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#consistent-help",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Keep repeated specified help mechanisms in a consistent relative order unless the user initiates a change.",
+      "testing": "Identify the criterion's help mechanisms and compare their placement across the set; do not interpret this as a requirement to add help.",
+      "document_notes": "Use WCAG2ICT interpretation for a set of documents and identify any applicability limits; the Baselines do not map this newer criterion.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "3.3.1",
+      "name": "Error Identification",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#error-identification",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Identify detected input errors and describe them in text.",
+      "testing": "Submit or otherwise trigger invalid input safely and compare each detected error with its text identification and associated field.",
+      "document_notes": "Use synthetic data for interactive forms; static reports without user input may not present an applicable error-detection function.",
+      "web_baseline_procedures": [
+        "10.D-ErrorIdentification"
+      ],
+      "documents_baseline_procedures": [
+        "10.D-ErrorIdentification"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-identified"
+    },
+    {
+      "id": "3.3.2",
+      "name": "Labels or Instructions",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#labels-or-instructions",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Provide labels and instructions when content requires input.",
+      "testing": "Inspect each required input, format constraint and mandatory field for understandable labels/instructions.",
+      "document_notes": "Check native/PDF forms and spreadsheet templates used for input; a tooltip alone may not provide a visible label.",
+      "web_baseline_procedures": [
+        "10.E-FormHasLabel"
+      ],
+      "documents_baseline_procedures": [
+        "10.E-FormHasLabel"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-cues"
+    },
+    {
+      "id": "3.3.3",
+      "name": "Error Suggestion",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#error-suggestion",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Suggest corrections for detected errors when known, unless security or purpose would be jeopardized.",
+      "testing": "Trigger representative errors and assess whether actionable correction advice is supplied or a valid exception applies.",
+      "document_notes": "Check author-controlled form validation and calculations; do not test only the reader's generic error messages.",
+      "web_baseline_procedures": [
+        "10.F-ErrorSuggestion"
+      ],
+      "documents_baseline_procedures": [
+        "10.F-ErrorSuggestion"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-suggestions"
+    },
+    {
+      "id": "3.3.4",
+      "name": "Error Prevention (Legal, Financial, Data)",
+      "level": "AA",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Make covered legal/financial, stored-data or test-response submissions reversible, checked or confirmable as required.",
+      "testing": "Exercise an appropriate review/correction, checking or reversal path without real transactions or destructive changes.",
+      "document_notes": "Identify content-driven submission workflows and document the covered trigger; ordinary contact forms are not automatically covered.",
+      "web_baseline_procedures": [
+        "10.G-ErrorPrevention"
+      ],
+      "documents_baseline_procedures": [
+        "10.G-ErrorPrevention"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-reversible"
+    },
+    {
+      "id": "3.3.7",
+      "name": "Redundant Entry",
+      "level": "A",
+      "introduced_in": "2.2",
+      "track": "supplemental-wcag22",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#redundant-entry",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Avoid making users re-enter information in the same process; allow reuse or selection subject to the exceptions.",
+      "testing": "Complete the process with synthetic data and check repeated requested information, including expired/security/essential cases.",
+      "document_notes": "Evaluate the whole author-controlled multi-document/form process, not only one file in isolation.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "3.3.8",
+      "name": "Accessible Authentication (Minimum)",
+      "level": "AA",
+      "introduced_in": "2.2",
+      "track": "supplemental-wcag22",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Avoid cognitive-function tests for authentication unless an allowed alternative, mechanism, object-recognition or personal-content exception applies.",
+      "testing": "Exercise authentication with password-manager support and paste, and assess any cognitive task against the exact allowed exceptions.",
+      "document_notes": "Distinguish document-authored authentication from the separate reader/service; do not claim accessible authentication from a document password label alone.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    },
+    {
+      "id": "4.1.2",
+      "name": "Name, Role, Value",
+      "level": "A",
+      "introduced_in": "2.0",
+      "track": "section508",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#name-role-value",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+      "document_section508_applicability": "content-dependent",
+      "development": "Expose interface name, role and current states/values; convey changes through accessibility-supported mechanisms.",
+      "testing": "Inspect each control through accessibility APIs/native structure and exercise state/value updates with applicable assistive technology.",
+      "document_notes": "Check PDF/native form properties and interactive shapes; do not require HTML ARIA in a file format with different native semantics.",
+      "web_baseline_procedures": [
+        "5.A-ControlName",
+        "5.B-ControlRole",
+        "5.C-ControlState",
+        "5.D-ControlValue",
+        "6.A-MeaningfulImage",
+        "10.A-FormName",
+        "12.A-DataTableRole",
+        "12.C-LayoutTable",
+        "14.A-LinkPurpose",
+        "19.A-FrameTitle",
+        "19.B-iFrameName"
+      ],
+      "documents_baseline_procedures": [
+        "5.A-ControlName",
+        "5.B-ControlRole",
+        "5.C-ControlState",
+        "5.D-ControlValue",
+        "10.A-FormName",
+        "12.A-DataTableRole",
+        "12.C-LayoutTable",
+        "14.A-LinkPurpose"
+      ],
+      "incorporated_wcag20_url": "https://www.w3.org/TR/2008/REC-WCAG20-20081211/#ensure-compat-rsv"
+    },
+    {
+      "id": "4.1.3",
+      "name": "Status Messages",
+      "level": "AA",
+      "introduced_in": "2.1",
+      "track": "supplemental-wcag21",
+      "normative_url": "https://www.w3.org/TR/WCAG22/#status-messages",
+      "understanding_url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "document_section508_applicability": "supplemental-with-WCAG2ICT-interpretation",
+      "development": "Expose qualifying status messages without moving focus, using an appropriate role/property mechanism.",
+      "testing": "Trigger success, progress, errors and other qualifying status updates; observe programmatic exposure and assistive technology announcements without forced focus.",
+      "document_notes": "Apply supported native accessibility events for author-created updates; ordinary static text and viewer-owned notices need separate applicability decisions.",
+      "web_baseline_procedures": [],
+      "documents_baseline_procedures": [],
+      "incorporated_wcag20_url": null
+    }
+  ],
+  "omitted": [
+    {
+      "id": "4.1.1",
+      "reason": "No active test; both Baselines 24.A specify no testing necessary. Removed from WCAG 2.2; preserve real defects under affected criteria.",
+      "web_procedure": "24.A-Parsing",
+      "document_procedure": "24.A-Parsing",
+      "disposition": "no-test-required",
+      "url": "https://ictbaseline.access-board.gov/web-baselines/24Parsing/"
+    }
+  ]
+}

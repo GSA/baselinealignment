@@ -1,0 +1,48 @@
+schema_version: 0.2.0
+mapping_id: web-focus-pilot
+status: draft
+reviewed_on: '2026-10-26'
+coverage: selected-checks-only
+sources:
+  repository: https://github.com/GSA/baselinealignment
+  repository_revision: b3da9104ab949808d7c082e701a22f7e2bb696fc
+  baseline_version: '3.1'
+  baseline_data: _data/baselines.yaml
+  baseline_url: https://ictbaseline.access-board.gov/web-baselines/02FocusVisible/
+  development_standard: https://www.w3.org/TR/WCAG22/
+  regulation: https://www.access-board.gov/ict/#E205.4
+  baseline_version_basis: testcases/TC02.A-ic-dna-1.md baseline-version field; source
+    page may not display version
+checks:
+- id: focus-visible
+  wcag_sc: 2.4.7
+  wcag_level: AA
+  introduced_in: '2.0'
+  development_target: WCAG-2.2-A-AA
+  testing_track: section508-baseline
+  section508_basis: E205.4-incorporated-WCAG-2.0
+  baseline_coverage: mapped
+  baseline_procedure_id: 2.A-FocusVisible
+  method: human-keyboard-and-visual-observation
+  coverage_limit: Selected focus-visible behavior only; not other Focus procedures
+    or full SC coverage across all environments.
+- id: focus-not-obscured
+  wcag_sc: 2.4.11
+  wcag_level: AA
+  introduced_in: '2.2'
+  development_target: WCAG-2.2-A-AA
+  testing_track: supplemental-wcag22
+  section508_basis: not-incorporated-as-WCAG-2.0-SC
+  baseline_coverage: not-covered
+  baseline_procedure_id: null
+  local_procedure: SUP-WEB-FOCUS-01
+  method: human-keyboard-and-visual-observation
+  coverage_limit: Local supplemental procedure; no Web Baseline 3.1 alignment assertion.
+    Apply normative notes and tested states.
+excluded:
+- wcag_sc: 4.1.1
+  reason: 'No active Parsing test: Web Baseline 3.1 procedure 24.A states no testing
+    necessary; assess actual defects under affected criteria.'
+- wcag_sc: other-A-AA-criteria
+  reason: Not mapped or evaluated by this pilot. Absence of a mapping does not mean
+    not applicable.
