@@ -9,3 +9,4 @@ package-lock.json
 *dwsync.xml
 *.LCK
 _notes/
+.venv/

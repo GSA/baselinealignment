@@ -178,11 +178,21 @@
       "properties": {
         "agent": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "The agent used in the testing process. Use \"not-applicable\" for human-only testing with no agent or model, and \"not-recorded\" while this information is unknown. Non-applicability does not replace other environment details or test evidence.",
+          "examples": [
+            "not-recorded",
+            "not-applicable"
+          ]
         },
         "model": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "The model used in the testing process. Use \"not-applicable\" for human-only testing with no agent or model, and \"not-recorded\" while this information is unknown. Non-applicability does not replace other environment details or test evidence.",
+          "examples": [
+            "not-recorded",
+            "not-applicable"
+          ]
         },
         "os": {
           "type": "string",

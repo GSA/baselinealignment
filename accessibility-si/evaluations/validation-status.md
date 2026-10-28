@@ -18,7 +18,7 @@ Date: 2026-10-27. Collection: 0.2.0, full-scope authored draft.
 - Current case inventory matches the repository snapshot; all case prefixes map to known procedures.
 - Result schemas and scoped templates for HTML, DOCX, XLSX, PPTX and PDF; complete web records contain 85 selected targets and document records 80, including supplemental, conformance and scoping checks. Separate dispositions are not counted as executed passes.
 - Negative checks reject invented Baseline mappings for newer criteria, unobserved passes, missing full-scope targets, active Parsing results, unreviewed comparisons and contradictory comparison outcomes. A synthetic validator test confirms that a correctly classified content failure can match an expected failure. Synthetic inputs are not accessibility evidence.
-- Generic focus-suite preparation and its retained schema validation; standalone four-skill packaging, source notices, licensing and content-hash inventories. Core file I/O explicitly uses UTF-8.
+- Standalone four-skill packaging, source notices, licensing and content-hash inventories. Core file I/O explicitly uses UTF-8.
 
 ## Task-local trials
 
