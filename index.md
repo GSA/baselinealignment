@@ -3,25 +3,44 @@ layout: page
 title: ICT Testing Baseline Alignment Framework
 ---
 
-## Purpose and objectives
+## About the Framework
 
-Members of the U.S. federal accessibility community must agree on what constitutes conforming to the Section 508 standards, in concrete terms. This is important to:
-* Conserve and share resources
-* Provide clear expectations to vendors
-* Maintain consistency across the Federal government
+The ICT Baseline Alignment Framework helps accessibility testers, test process owners, testing tool developers, and federal agencies evaluate whether their testing methods produce results consistent with the [ICT Testing Baseline for Web](https://ictbaseline.access-board.gov/){: .usa-link .usa-link--external}.
 
-The Section 508 standards incorporate the <a href="https://www.w3.org/TR/WCAG20/" class="usa-link usa-link--external">Web Content Accessibility Guidelines (WCAG) 2.0]</a>, levels A and AA. The ICT Testing Baseline for Web establishes the minimum tests and evaluation guidance for determining whether Web content meets the requirements of WCAG 2.0 A and AA and, therefore, Section 508.
+Each Framework test case pairs a web content sample with an expected Baseline result and instruction-level details. By applying their own procedures, tools, or combination of testing methods to the same sample, users can compare results, identify gaps, and improve consistency across accessibility testing processes.
 
-Although the ICT Testing Baseline does not provide processes or tools for conducting baseline tests, it can be used to develop test processes and evaluate how well test processes address all Section 508 requirements.
+Test cases and alignment guidance are still being developed. The available cases provide evidence for evaluating a test process; they do not constitute a complete accessibility test process, certify a tool or process, or establish that an artifact conforms to Section 508 or WCAG.
 
-The ICT Baseline Alignment Validation Framework provides test cases as a way for agencies to check whether their own test processes and use of testing tools adequately address all Section 508 requirements. Two different processes that align to the Baseline should produce the same replicable and reliable test results.
+## Use the test cases
 
-## How to contribute
+1. Browse the [Test Cases](testcases.html) and select a case relevant to the Baseline procedure you want to evaluate.
+2. Read the case description, applicable procedure, and test instructions.
+3. Open the linked sample and evaluate it using your normal test process.
+4. Compare your finding with the expected result and instruction-level details. Results are `PASS`, `FAIL`, or `DNA` (does not apply).
+5. Investigate differences and report unclear instructions or unexpected results through a [GitHub issue](https://github.com/GSA/baselinealignment/issues){: .usa-link .usa-link--external}. Include the test case ID, test process, and testing environment.
 
-Contributors do not need to be highly technical nor make a long-term commitment, although both skills and time can certainly be helpful. The ICT Baseline Alignment Working Group needs help developing and evaluating test cases. Accessibility advocates are also needed to spread the word about the Framework, develop a governance structure, participate in governance, develop and maintain the website, provide user experience and plain language expertise, and even provide legal support. Please visit our [How You Can Help](contributing.html#helping) and [How We Work](contributing.html#how-we-work) sections or contact us at [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov) for more information about getting involved.
+Samples intentionally include accessibility failures and situations in which a specific test does not apply. A passing result applies only to the checks described in that case; it does not mean the entire sample page passes every accessibility requirement.
 
-## How to validate alignment to the ICT Baseline
+The test case index also provides JSON and CSV downloads for spreadsheet, tool, and other analysis workflows.
 
-Our ICT Baseline Working Group is still developing test cases and guidance for test process and tool owners to evaluate alignment to the ICT Testing Baseline. The basic purpose of the Baseline Alignment Framework [Test Cases](testcases.html) is to provide code samples along with the ICT Testing Baeline's expected conformance test result for a specific code sample and specific Baseline test procedure. Test process and tool owners can test the same sample code, using their own relevant test procedures and/or test rules, and compare their test results to those in the test cases to determine whether their tools/processes produce the same results that the ICT Testing Bseline would predict.
+## Evaluate a test process
 
-More detailed guidance is still to come. As our working group continues to develop test cases and accompanying guidance, we invite test process and tool owners to review the test cases and provide feedback.
+A test process may combine manual procedures, automated scanners, browser and developer tools, assistive technologies, scripts, organizational decision rules, and AI/SI-enabled tools. The Framework provides a common method for evaluating whether that process classifies selected samples consistently with expected Baseline results.
+
+The method asks process owners to define and pin the process, select cases and document coverage, keep expected results independent from the test execution, preserve results before comparison, investigate discrepancies, and report evidence and gaps. Matching the available cases is useful evidence, but it is not by itself a certification or a complete claim of Baseline alignment.
+
+See [Evaluating a Test Process](evaluating-test-processes.html) for the general guidance and reporting framework.
+
+## Accessibility SI resources
+
+The repository also includes portable instructions, task-specific skills, references, mappings, workflows, and evaluation resources for creating, remediating, and testing accessible web content and non-web documents. These resources can support human, automated, hybrid, and AI/SI-enabled work.
+
+The Accessibility SI collection includes tailored guidance for using AI/SI as part of a testing process and for evaluating that process with Framework cases. It is a full-scope authored draft with documented validation gaps; publication does not establish completed human review, proven Baseline alignment, or certification.
+
+See [Accessibility SI Resources](accessibility-si.html) to choose resources and understand how they relate to the Framework.
+
+## Contribute
+
+We welcome new samples, reviews of expected results, clearer test instructions, improvements to the evaluation framework and Accessibility SI resources, website updates, and feedback from test process and tool owners.
+
+See [Contributing to the ICT Baseline Alignment Framework](contributing.html) or contact [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov) for more information.

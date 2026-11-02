@@ -5,9 +5,9 @@ scripts: datatables
 ---
 ## Index of Test Cases
 
-The table below lists the test cases for validating alignment of test processes to the <a href="https://ictbaseline.access-board.gov/" class="usa-link usa-link--external">Section 508 ICT Testing Baseline for Web</a>.
+The table below lists test cases for evaluating whether test processes produce results consistent with the <a href="https://ictbaseline.access-board.gov/" class="usa-link usa-link--external">Section 508 ICT Testing Baseline for Web</a>. Available cases provide evidence for the procedures and scenarios they exercise; they do not by themselves certify a process or establish complete Baseline alignment. See [Evaluating a Test Process](evaluating-test-processes.html) for guidance.
 
-Test Case documents are organized by Baseline Test; each ICT Baseline corresponds to multiple Test Cases. Each Test Case provides a specific example (with sample code) of web content that passes, fails, or does not apply to particular ICT Baseline. You can also use the following links to download expanded test case index information in JavaScript Object Notation (JSON) or Comma-Separated Variable (CSV) formats.
+Test Case documents are organized by Baseline test; each ICT Baseline may correspond to multiple Test Cases. Each Test Case provides a specific example, with sample code, of web content that passes, fails, or does not apply to a particular Baseline procedure. You can also download expanded test case index information in JavaScript Object Notation (JSON) or comma-separated values (CSV) formats.
 
 [Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) <span>|</span> [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
 

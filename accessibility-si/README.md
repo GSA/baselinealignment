@@ -7,7 +7,7 @@ Version 0.2.0 is a full-scope authored draft. Authored coverage does not establi
 ## Choose your path
 
 - **Apply the resources in your environment:** start with [For users](#for-users-apply-the-resources) to choose guidance, load or apply it, and record results.
-- **Evaluate an AI/SI-enabled test process:** use the [Framework evaluation subsection](#evaluate-an-aisi-enabled-test-process-with-the-baseline-alignment-framework) to assess how your process classifies published samples.
+- **Evaluate an AI/SI-enabled test process:** begin with the Framework's [general test process evaluation guidance](../evaluating-test-processes.md), then use the [AI/SI-tailored subsection](#evaluate-an-aisi-enabled-test-process-with-the-baseline-alignment-framework) to assess how your process classifies published samples.
 - **Maintain or distribute the resources for others:** start with [For maintainers](#for-maintainers-develop-and-publish-the-resources) for source ownership, regeneration, review and release responsibilities.
 
 You may use the resources and maintain a customized distribution. Environment setup is described in [packaging and integration guidance](packaging.md); substantive changes follow the maintenance path.
@@ -35,9 +35,11 @@ For tool-specific integration starting points, official documentation links and 
 
 ### Evaluate an AI/SI-enabled test process with the Baseline Alignment Framework
 
-Use this path if you own or develop a testing process that uses AI/SI, agents, automated tools, human judgment or a combination of these. The evaluation asks whether that process produces results consistent with reviewed Framework expectations for selected procedures and samples. It does not certify the tested artifact, model or tool, or establish full alignment from a sample score.
+The Framework's [general test process evaluation guidance](../evaluating-test-processes.md) applies to manual, automated, hybrid and AI/SI-enabled processes. Use this tailored path when AI/SI, agents or model-driven tools are components of the process. It adds controls for supplied instructions and context, model and agent versions, tool access, variability, evaluator-expectation isolation and human review.
 
-1. **Define and pin the process.** Record the collection and Framework revisions, Baseline version, agent/model versions, instructions, tool configuration, browser or native application, assistive technologies and human involvement. Describe what the process can execute and what requires human review.
+The evaluation asks whether the defined process produces results consistent with reviewed Framework expectations for selected procedures and samples. It does not certify the tested artifact, process, model or tool, or establish full alignment from a sample score.
+
+1. **Define and pin the process.** Record the collection and Framework revisions, Baseline version, agent/model versions, system/project/skill/task instructions, supplied context, tool configuration and permissions, browser or native application, assistive technologies and human involvement. Describe what the process can execute, what requires human review, how variability is handled and what changes require a separate process configuration.
 2. **Select cases and document coverage.** Use a source checkout containing the case records and samples referenced by the [published case inventory](evaluations/test-manifest.yaml). Consult the [coverage inventory](evaluations/coverage.md) and verify sample dependencies. An individual skill or copied collection alone does not contain the full evaluation corpus. The pinned snapshot supplies web cases; document and supplemental-criterion gaps remain explicit.
 3. **Prepare independent candidate inputs.** Keep evaluator expectations, rationale and outcome-bearing case names, titles and comments outside the candidate's inputs. Verify behavior-preserving neutral copies and their dependencies before use. Build Jekyll/Liquid-dependent samples appropriately. Site exclusions alone do not isolate public answers from an agent with repository access.
 4. **Run the normal process and preserve its output.** Supply the chosen skills and instructions, collect actual observations, and record unavailable checks honestly. Freeze the candidate's output before comparing it with evaluator expectations.

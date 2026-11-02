@@ -1,21 +1,23 @@
 title: ICT Baseline Alignment Framework
 email: ictbaseline@gsa.gov
 description: >-
-  The ICT Baseline Alignment Validation Framework provides 
-  test cases as a way for agencies to assess whether their 
-  own test processes and use of testing tools cover all Section 508 
-  requirements. Two different processes that align to the Baseline 
-  should produce the same replicable and reliable test results.
+  The ICT Baseline Alignment Framework provides test cases and guidance
+  for evaluating whether accessibility test processes produce results
+  consistent with the ICT Testing Baseline for Web.
 
 baseurl: /baselinealignment
 
 primary_navigation:
   - name: Baseline Alignment Home
     url: /
-  - name: Contributing
-    url: /contributing.html
   - name: Test Cases
     url: /testcases.html
+  - name: Evaluate a Test Process
+    url: /evaluating-test-processes.html
+  - name: Accessibility SI Resources
+    url: /accessibility-si.html
+  - name: Contributing
+    url: /contributing.html
   - name: ICT Baseline
     url: https://ictbaseline.access-board.gov/
     ext: true

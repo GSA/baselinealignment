@@ -2,33 +2,70 @@
 layout: page
 title: Contributing to the ICT Baseline Alignment Framework
 ---
+
 ## How you can help
-If you are a federal employee or providing direct contract support to a federal agency, we invite you to contribute directly as a member of our ICT Baseline Working Group (with supervisor and/or client approval). If you are not a federal employee, we can still use your help and welcome your feedback and contributions via sumission of <a href="https://github.com/gsa/baselinealignment/issues" class="usa-link usa-link--external">issues</a> and <a href="https://github.com/gsa/baselinealignment/pulls" class="usa-link usa-link--external">pull requests</a> in the <a href="https://github.com/gsa/baselinealignment" class="usa-link usa-link--external">GitHub repository</a>. We are also happy to accept input and/or recommendations for other methods of contributions via [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov).
 
-### Developing and Evaluating Test Cases
-We welcome any input and feedback on the Baseline Alignment Framework Test Cases. If you have experience in front-end web development, we need help to develop code samples with various examples of both failures and passes against specific Section 508 conformance standards. Even if you aren't a developer, but you have some good examples of web content passes and failures, we welcome those suggestions as well. We will use contributed code samples to complete development of our Test Cases, which help test process and tool owners evaluate whether their tools/processes produce the same test results that the ICT Testing Baseline would predict.
+We welcome contributions from accessibility testers, developers, test process and tool owners, writers, researchers, and other interested members of the public. Federal employees and people providing direct support to federal agencies may also participate in working group activities with appropriate approval.
 
-### Planning and Conducting Outreach
-We need people to know about our work so they can contribute and use it! Whether you enjoy giving presentations or would prefer to remain behind the scenes writing and editing, your skills are needed. Can you help with any of the following?
-* Writing and editing: would you like to produce short articles for <a href="https://www.section508.gov" class="usa-link" target="_blank">Section508.gov</a> and other government websites, as well as announcements and presentation materials? You could also write for this website.
-* Presenting: can you present on the project to a wide range of audiences, such as Section 508 program managers, procurement personnel, and website testers?
-* Serving as a resource: or maybe you can just make yourself available to answer questions or route them to the appropriate expert?
+Submit feedback and questions through [GitHub issues](https://github.com/GSA/baselinealignment/issues){: .usa-link .usa-link--external} and proposed changes through [pull requests](https://github.com/GSA/baselinealignment/pulls){: .usa-link .usa-link--external}. You may also contact [ictbaseline@gsa.gov](mailto:ictbaseline@gsa.gov) with contribution questions or recommendations.
 
-### Developing and Conducting Governance
-Any project this size needs a program manager. Are you game? Or do you have process management or change control expertise that you could use to help ensure the test cases remain in alignment with the baseline?
+When reporting a problem, include the affected page, resource, or test case ID; the source or collection revision when known; your testing process and environment; the observed behavior; and supporting evidence. This information helps maintainers reproduce and evaluate the issue.
 
-Once the test cases are ready, we'll need to have a way of validating alignment to the ICT Baseline. We're still working out how that would work (and could use your input), but we know we'll need people to manage alignment certification. Also, disputes will occasionally arise, and we'll need people with the technical and soft skills necessary to resolve them.
+### Develop and evaluate test cases
 
-### Developing and Maintaining this Website
-We want this website to serve the needs of contributors and testers alike. We also need the basic information to be intelligible to Section 508 program managers, procurement officials, and others with potentially less technical knowledge so they can understand what this project is all about and how their agencies can benefit from it. And, of course, the website must be usable and accessible. Therefore, we could use your help with:
-* Designing and testing
-* Writing and editing for plain language
-* Long-term maintenance
+Framework cases help test process and tool owners determine whether their methods produce results consistent with the ICT Testing Baseline. Contributions may include:
+
+* Web content samples that demonstrate passing, failing, or not-applicable scenarios for a specific procedure.
+* Test case metadata, expected results, rationale, and instruction-level details.
+* Reviews of existing cases, sample dependencies, and Baseline procedure references.
+* Reports of ambiguous instructions or differences between a test process and a case's expected result.
+* Additional scenarios that improve procedure, outcome, and edge-case coverage.
+
+Use the existing cases and the repository's test case template as authoring references. A proposed case should identify the relevant Baseline procedure and should not imply that one case evaluates every requirement on a page.
+
+### Improve test process evaluation guidance
+
+The [test process evaluation framework](evaluating-test-processes.html) applies to manual, automated, hybrid, and AI/SI-enabled processes. Contributions can improve case selection, independent execution, comparison methods, discrepancy analysis, structured reporting, and guidance for interpreting coverage.
+
+Evaluation guidance must preserve the distinction between an accessibility finding and the comparison outcome. For example, correctly identifying an expected content failure is a matched classification. It must also avoid treating a score from the available cases as certification or complete Baseline alignment.
+
+When proposing a change, describe the kinds of processes affected, the evidence the change would collect, and how it addresses incomplete coverage or other limitations.
+
+### Improve Accessibility SI resources
+
+The [`accessibility-si` collection](accessibility-si.html) contains instructions, task-specific skills, shared references, workflows, structured mappings, evaluation resources, and maintenance scripts. Contributions may address:
+
+* Web or document creation, remediation, and testing guidance.
+* WCAG and Baseline mappings, scope, exceptions, and dispositions.
+* Word, Excel, PowerPoint, PDF, or web-format references.
+* AI/SI-specific process integration and evaluation guidance.
+* Evaluation manifests, schemas, coverage records, and result templates.
+* Packaging, validation, source attribution, and publication status.
+
+Identify the canonical source before editing the collection. Update shared mappings or references and regenerate their derived copies instead of changing generated or skill-local copies independently. From the repository root, the primary maintenance checks are:
+
+```sh
+python accessibility-si/scripts/refresh-resources.py
+python accessibility-si/scripts/refresh-resources.py --check
+python accessibility-si/scripts/validate.py
+```
+
+When committed Framework cases are added or corrected, maintainers should also refresh the case inventory with the full source revision as described in the [collection maintenance guidance](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/README.md#change-and-validate-the-collection){: .usa-link .usa-link--external}.
+
+Technical checks do not replace qualified human review or executed accessibility testing. Proposed changes should state the checks performed, evidence collected, and review that remains.
+
+### Support outreach, governance, and the website
+
+We also welcome help with:
+
+* Writing and editing in plain language.
+* Website design, accessibility, usability, and long-term maintenance.
+* Articles, announcements, presentations, and other outreach materials.
+* Project governance, change control, issue triage, and resolution of technical disagreements.
+* Explaining the Framework to Section 508 program managers, procurement personnel, testers, developers, and vendors.
 
 ## How we work
-We have small working groups that meet to make technical decisions or resolve problems. The larger group holds periodic status meetings. Communication and collaboration are through <a href="https://github.com/gsa/baselinealignment" class="usa-link usa-link--external">our GitHub presence</a> and, secondarily, email.
 
-Not familiar with GitHub? It's a collaboration platform with strong version control. Here are some resources to get you started:
+Working groups meet as needed to make technical decisions and resolve issues. Broader project communication and collaboration take place primarily in the [GitHub repository](https://github.com/GSA/baselinealignment){: .usa-link .usa-link--external} and secondarily through email.
 
-* Get a basic understanding with <a href="https://guides.github.com/activities/hello-world/" class="usa-link usa-link--external">Hello World from GitHub Guides</a>
-* <a href="https://guides.github.com/features/issues/" class="usa-link usa-link--external">Learn about issues</a>, which we use not only for tracking bugs, but also for questions and our shared to-do list
+If you are new to GitHub, see [GitHub's documentation for contributing to projects](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project){: .usa-link .usa-link--external} and [creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue){: .usa-link .usa-link--external}.
