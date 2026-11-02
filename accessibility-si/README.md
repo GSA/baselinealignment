@@ -1,8 +1,114 @@
 # Accessibility SI resources
 
-Version 0.2.0: full-scope authored draft for web and non-web documents. This collection provides portable instructions, four skills, criterion and Baseline references, mappings, workflows and manually runnable evaluation resources. SI means Super Intelligence in this collection.
+This collection provides portable accessibility instructions, four task-specific skills, references and workflows for creating, remediating and testing web content and non-web documents. It also includes mappings and evaluation resources for assessing testing processes and maintaining the collection. SI means Super Intelligence in this collection.
 
-## Scope
+Version 0.2.0 is a full-scope authored draft. Authored coverage does not establish completed human review, executed testing, proven Baseline alignment or certification. See [validation status](evaluations/validation-status.md) for completed checks and remaining work.
+
+## Choose your path
+
+- **Apply the resources in your environment:** start with [For users](#for-users-apply-the-resources) to choose guidance, load or apply it, and record results.
+- **Evaluate an AI/SI-enabled test process:** use the [Framework evaluation subsection](#evaluate-an-aisi-enabled-test-process-with-the-baseline-alignment-framework) to assess how your process classifies published samples.
+- **Maintain or distribute the resources for others:** start with [For maintainers](#for-maintainers-develop-and-publish-the-resources) for source ownership, regeneration, review and release responsibilities.
+
+You may use the resources and maintain a customized distribution. Environment setup is described in [packaging and integration guidance](packaging.md); substantive changes follow the maintenance path.
+
+## For users: apply the resources
+
+Use the guidance directly, supply it as task context, or load it through your tool's supported mechanism. No particular agent, editor, operating system or installation mechanism is required. Scripts are optional unless you choose an activity that depends on them.
+
+### Choose guidance for your task
+
+| Task | Start here | Supporting workflow |
+| --- | --- | --- |
+| Create or remediate web content | [Accessible web development](skills/accessible-web-development/SKILL.md) | [Generate, test and remediate](workflows/generate-test-remediate.md) |
+| Test web content | [Web accessibility testing](skills/web-accessibility-testing/SKILL.md) | [Guided manual testing](workflows/guided-manual-testing.md) |
+| Create or remediate Word, Excel, PowerPoint or PDF documents | [Accessible document creation](skills/accessible-document-creation/SKILL.md) | [Generate, test and remediate](workflows/generate-test-remediate.md) |
+| Test non-web documents | [Document accessibility testing](skills/document-accessibility-testing/SKILL.md) | [Guided manual testing](workflows/guided-manual-testing.md) |
+
+1. Choose an intact individual skill, the complete collection, or direct reading using [the distribution options](packaging.md#choose-how-to-use-the-resources).
+2. Apply the [starter instructions](instructions/accessibility-starter.md) across tasks. Add the [development instructions](instructions/accessibility-development.md) when creating or remediating content. Loading a skill does not automatically load these separate instructions; verify that your environment makes the intended guidance available.
+3. Identify the artifact, delivery format, applicable requirements and available testing capabilities. Each skill bundles required references locally. The shared [criterion reference](references/wcag-a-aa.md), [Web procedures](references/web-baseline.md), [Document procedures](references/document-baseline.md) and format references provide additional navigation. Read official sources for complete applicability, steps, definitions, exceptions and outcomes.
+4. Follow the workflow for your task and arrange human testing using [Section508.gov guidance](https://www.section508.gov/test/). Verify delivered exports independently of their sources.
+5. Deliver the artifact or findings with the environment, performed checks, observed evidence, unresolved issues and pending human review. Use structured records below when appropriate to your reporting needs.
+
+For tool-specific integration starting points, official documentation links and example task requests, see [starting points for common AI/SI tools](packaging.md#starting-points-for-common-aisi-tools). That guidance explains how to combine instructions, selected skills and workflows in your environment.
+
+### Evaluate an AI/SI-enabled test process with the Baseline Alignment Framework
+
+Use this path if you own or develop a testing process that uses AI/SI, agents, automated tools, human judgment or a combination of these. The evaluation asks whether that process produces results consistent with reviewed Framework expectations for selected procedures and samples. It does not certify the tested artifact, model or tool, or establish full alignment from a sample score.
+
+1. **Define and pin the process.** Record the collection and Framework revisions, Baseline version, agent/model versions, instructions, tool configuration, browser or native application, assistive technologies and human involvement. Describe what the process can execute and what requires human review.
+2. **Select cases and document coverage.** Use a source checkout containing the case records and samples referenced by the [published case inventory](evaluations/test-manifest.yaml). Consult the [coverage inventory](evaluations/coverage.md) and verify sample dependencies. An individual skill or copied collection alone does not contain the full evaluation corpus. The pinned snapshot supplies web cases; document and supplemental-criterion gaps remain explicit.
+3. **Prepare independent candidate inputs.** Keep evaluator expectations, rationale and outcome-bearing case names, titles and comments outside the candidate's inputs. Verify behavior-preserving neutral copies and their dependencies before use. Build Jekyll/Liquid-dependent samples appropriately. Site exclusions alone do not isolate public answers from an agent with repository access.
+4. **Run the normal process and preserve its output.** Supply the chosen skills and instructions, collect actual observations, and record unavailable checks honestly. Freeze the candidate's output before comparing it with evaluator expectations.
+5. **Compare and investigate.** An evaluator uses reviewed expectations to record matched, mismatched or not-compared separately from content findings. Correctly identifying an expected content failure is a matched classification. Investigate discrepancies in the case, mapping, guidance, tool, environment or sample preparation, and retain initial results when rerunning.
+6. **Report the evidence and gaps.** State the cases, procedures, scenarios and environments evaluated, human-review status, unresolved discrepancies and uncovered areas. Missing cases do not make requirements inapplicable. Available cases provide only part of the evidence for a process claiming alignment.
+
+Follow the detailed [Framework evaluation workflow](workflows/validate-against-framework.md) and [publication and coverage policy](evaluations/publication-and-coverage.md). Case inventory and source hashes establish availability and identity; they do not establish that cases were executed or expectations reviewed.
+
+### Optional structured result records
+
+Use the [result template](evaluations/result-template.json), or generate a domain/format-specific template. Run examples from the repository root, the parent of `accessibility-si`, using an available Python 3 interpreter in place of `python`. Template generation uses the standard library and refuses existing output paths; choose paths appropriate to your environment.
+
+```sh
+python accessibility-si/scripts/create-evaluation.py --domain web --output ../web-results.json
+python accessibility-si/scripts/create-evaluation.py --domain documents --format pdf --output ../pdf-results.json
+```
+
+Generate one result file per environment and stage. Replace template identifiers and artifact/environment placeholders with actual details or explained non-applicability. For human-only testing, set `environment.agent` and `environment.model` to `"not-applicable"`, or add `--human-only` when generating a template. Record performed human checks with `tester_type: "human"`.
+
+Every selected target starts not-tested until observations are recorded. No-test-required or excepted entries are scope dispositions, not executed passes. Framework comparisons have a separate outcome from the content finding. Record only observations from methods actually used.
+
+To check a completed record, use a source checkout with [validation dependencies](scripts/requirements-validation.txt) installed through your environment's dependency-management process:
+
+```sh
+python accessibility-si/scripts/validate.py --result ../pdf-results.json
+```
+
+Validation requires the repository case records and samples at the manifest paths. It checks structure, source hashes, references and record consistency; it does not execute accessibility tests or establish conformance.
+
+## For maintainers: develop and publish the resources
+
+Maintainers keep the shared guidance, mappings, evaluation framework and distributions usable and traceable for others. Local installation paths and tool configuration belong in an integration layer; substantive changes belong in the canonical sources.
+
+### Source ownership and responsibilities
+
+| Resource | Maintainer responsibility |
+| --- | --- |
+| Instructions and workflows | Keep task guidance, applicability and evidence expectations consistent. |
+| Criterion and procedure mappings | Maintain canonical catalogs, source provenance, requirement relationships and dispositions. Catalogs use JSON-compatible YAML. |
+| Shared references | Maintain canonical document-format, scope and attribution guidance; generate criterion/procedure references from mappings. |
+| Skill-local references | Regenerate required copies from canonical sources; keep each skill self-contained. |
+| Evaluation framework | Maintain schemas, case inventories, reviewed expectations, coverage gaps and retained results. |
+| Distributions | Identify versions, source revisions, changes, licensing, hashes and review status. |
+
+### Change and validate the collection
+
+Run commands below from the repository root with an available Python 3 interpreter. Reference generation uses the standard library. Structural validation and case-inventory refresh require [validation dependencies](scripts/requirements-validation.txt) and the repository case records and samples. Preserve source line endings: source hash checks assume the pinned repository bytes.
+
+1. Identify the canonical source for the proposed change. Update mappings or shared references rather than editing generated references or skill-local copies independently. See [document mapping guidance](mappings/documents/README.md) for document-specific responsibilities.
+2. If new or corrected committed Framework cases are included, refresh their inventory with the full commit ID for that snapshot:
+
+   ```sh
+   python accessibility-si/scripts/refresh-case-inventory.py --source-revision FULL_COMMIT_SHA
+   ```
+
+   The updater refreshes web-case availability and pending-review expectations. Adding native document cases requires an explicit reviewed ingestion schema. Retain earlier suite/result versions and update the suite version when its evidence scope changes.
+
+3. Regenerate references and check structure:
+
+   ```sh
+   python accessibility-si/scripts/refresh-resources.py
+   python accessibility-si/scripts/refresh-resources.py --check
+   python accessibility-si/scripts/validate.py
+   ```
+
+4. Review affected guidance, mappings and format interpretations against authoritative sources. Run relevant evaluations, record evidence and gaps, and complete qualified human review before promoting guidance to reviewed status. Structural checks alone do not establish accessibility or alignment.
+5. Update version and release information as appropriate, then follow [packaging guidance](packaging.md#for-maintainers-build-a-distribution) to prepare a distribution. Preserve applicable licensing and attribution; external standards and product documentation retain their own terms.
+
+When integrating resources into a site or another repository, configure publication and loading explicitly. Excluding files from a site build does not make public source files private or isolate evaluator expectations from tester inputs.
+
+## Scope and authority
 
 - Address all **55 active WCAG 2.2 A/AA criteria**: 37 inherited from WCAG 2.0 after omitting active Parsing testing, 12 added in WCAG 2.1, and 6 added in WCAG 2.2.
 - Account for every procedure in **Web Baseline 3.1** and **Electronic Documents Baseline 1.0**, including no-test-required, not-applicable and subsumed/redirected entries.
@@ -13,57 +119,18 @@ Version 0.2.0: full-scope authored draft for web and non-web documents. This col
 
 Read [scope and authority](references/scope.md). Sources are pinned in [source provenance](mappings/sources.json). Authored coverage is not completed human review, completed testing, proven Baseline alignment or certification. See [validation status](evaluations/validation-status.md).
 
-## Use the resources
+## Resource directory
 
-Use these resources as task guidance for people, tools or a combination of both. No particular agent, editor, operating system or installation mechanism is required to read and apply them. Choose the resources that fit the task; the scripts are optional utilities for structured records and collection maintenance.
-
-| Resource | Purpose |
+| Resource | Purpose and audience |
 | --- | --- |
-| `instructions/` | General guidance to apply across accessibility tasks. |
-| `skills/` | Four task-specific guides, each with self-contained references. |
-| `references/` | Shared scope, criterion, Baseline and document-format guidance. |
-| `workflows/` | Steps for creation, testing, remediation and testing-process evaluation. |
-| `mappings/` | Structured criterion/procedure catalogs and source provenance. |
-| `evaluations/` | Coverage inventories, record schemas and evaluator expectations. |
-| `scripts/` | Optional record-generation, packaging and maintenance utilities. |
+| [instructions/](instructions/) | Users apply general task guidance; maintainers keep shared expectations consistent. |
+| [skills/](skills/) | Users select four task guides with local references; maintainers update guidance and regenerate bundled references. |
+| [references/](references/) | Users consult scope, criteria, procedures and format guidance; maintainers distinguish canonical sources from generated outputs. |
+| [workflows/](workflows/) | Users follow creation, testing, remediation and process-evaluation steps; maintainers review these procedures. |
+| [mappings/](mappings/) | Integrators trace structured requirements; maintainers update canonical catalogs and provenance. |
+| [evaluations/](evaluations/) | Process evaluators use inventories, schemas and separately controlled expectations; maintainers curate the evidence framework. |
+| [scripts/](scripts/) | Users optionally generate/check records; maintainers regenerate, validate and package resources. |
 
-1. Read or supply [starter instructions](instructions/accessibility-starter.md) and [development instructions](instructions/accessibility-development.md) as task context. If a tool supports loading instructions, use its documented mechanism; otherwise, apply the guidance directly.
-2. Select [accessible web development](skills/accessible-web-development/SKILL.md), [web accessibility testing](skills/web-accessibility-testing/SKILL.md), [accessible document creation](skills/accessible-document-creation/SKILL.md) or [document accessibility testing](skills/document-accessibility-testing/SKILL.md). Each skill bundles its required references locally.
-3. Use [the full criterion reference](references/wcag-a-aa.md), [Web procedures](references/web-baseline.md), [Document procedures](references/document-baseline.md) and the linked format references. Read official sources for complete applicability, steps, definitions, exceptions and outcomes.
-4. Follow [guided testing](workflows/guided-manual-testing.md), [generate/test/remediate](workflows/generate-test-remediate.md) and [Framework validation](workflows/validate-against-framework.md). Arrange human testing using [Section508.gov guidance](https://www.section508.gov/test/).
-5. For structured evaluation records or testing-process assessment, inspect [coverage inventory](evaluations/coverage.md), [published case inventory](evaluations/test-manifest.yaml) and [publication/coverage policy](evaluations/publication-and-coverage.md). Use the [result template](evaluations/result-template.json) or generate a domain/format-specific template with the optional script below, then record actual evidence. Keep evaluator expectations separate from inputs used for independent testing.
+## Feedback and contributions
 
-## Optional scripts
-
-The examples below run from the parent directory containing `accessibility-si`. Use an available Python 3 interpreter in place of `python` and choose output paths suitable for the environment. Template generation and skill packaging refuse to overwrite existing outputs; packaging also requires an output directory outside the source repository.
-
-Template generation, reference generation and packaging use the Python standard library. Structural validation and case-inventory refresh require the packages listed in [validation dependencies](scripts/requirements-validation.txt), installed using the environment's dependency-management process. Validation and case-inventory refresh also require the source repository's case records and samples at the paths recorded in the manifest; a copied skill folder or collection directory alone is insufficient.
-
-```sh
-python accessibility-si/scripts/create-evaluation.py --domain web --output ../web-results.json
-python accessibility-si/scripts/create-evaluation.py --domain documents --format pdf --output ../pdf-results.json
-python accessibility-si/scripts/package-skills.py --output ../skill-distributions
-```
-
-To check collection structure and a completed record, use a source checkout with the validation dependencies available:
-
-```sh
-python accessibility-si/scripts/validate.py
-python accessibility-si/scripts/validate.py --result ../pdf-results.json
-```
-
-These checks verify structure, source hashes, references and record consistency; they do not execute accessibility tests or establish conformance.
-
-Generate one result file per environment and stage. Replace template identifiers and artifact/environment placeholders with actual information; explain fields that do not apply to the testing process. For human-only testing with no agent or model, set `environment.agent` and `environment.model` to `"not-applicable"`, or add `--human-only` when generating a template. Other environment fields still require actual details or explained non-applicability. Record performed human checks with `tester_type: "human"`; template checks remain not-tested until observations are recorded. Every selected target starts not-tested; no-test-required or excepted entries are recorded as scope dispositions, not executed passes. Framework case comparisons use a separate outcome from the content finding. Record observations from the testing methods actually used.
-
-## Adapting and maintaining a copy
-
-The criterion/procedure mappings and shared document-format, scope and attribution references are the canonical authored sources. Generated references and their skill-local copies must be updated through those sources. See [packaging](packaging.md) for standalone distribution and local customization.
-
-When changing the collection, run `python accessibility-si/scripts/refresh-resources.py` to regenerate references, or add `--check` to detect drift. Machine-readable catalogs use JSON-compatible YAML so reference and template generation can use the Python standard library. Source hash checks assume the pinned repository bytes; preserve source line endings during checkout.
-
-When maintaining a source checkout with new or corrected committed Framework cases, run `python accessibility-si/scripts/refresh-case-inventory.py --source-revision FULL_COMMIT_SHA` with the full commit ID for that snapshot, then regenerate references and validate. The updater refreshes web-case availability and pending-review expectations; adding native document cases requires an explicit reviewed ingestion schema. Retain earlier suite/result versions and update the suite version when its evidence scope changes.
-
-If integrating the collection into a published site or another repository, use that environment's configuration to control which resources are published or loaded. Excluding files from a site build does not make public source files private or keep evaluator expectations out of a tester's inputs.
-
-Preserve applicable repository licensing and attribution when copying or adapting resources. External standards and product documentation retain their own terms; source links do not transfer ownership or imply endorsement.
+See the repository's [contribution guidance](../contributing.md). Report unclear guidance, mapping issues or unexpected results with the collection revision, affected resource or case ID, environment, observed behavior and supporting evidence. For proposed changes, identify the canonical sources affected and the checks and review performed.
