@@ -36,7 +36,7 @@ def validate(result_path=None):
   if domain=='documents':
    for sc in ['2.4.1','2.4.5','3.2.3','3.2.4']:require(not criteria_by[sc]['documents_baseline_procedures'],'Non-web exception mapped as an active test')
    require(next(p for p in procs if p['id']=='6.C-Captcha')['disposition']=='not-applicable','Document CAPTCHA retained disposition missing')
- manifest=load('evaluations/test-manifest.yaml');answers=load('evaluations/evaluator/expected-outcomes.yaml')['outcomes']
+ manifest=load('../evaluations/test-manifest.yaml');answers=load('../evaluations/evaluator/expected-outcomes.yaml')['outcomes']
  require(not manifest['mapping_issues'],'Framework mapping issues require human resolution')
  require(not manifest['document_cases'],'Do not infer published document cases')
  require(manifest['source_revision']==sources['framework_revision'],'Framework source mismatch')
@@ -54,7 +54,7 @@ def validate(result_path=None):
   for key in case['procedure_keys']:require(key in procmap and case['id'] in procmap[key]['published_case_ids'],'Case-to-procedure mapping mismatch')
  require(caseids==set(answers),'Expected outcome inventory differs from case inventory')
  require(caseids=={str(yaml.safe_load(p.read_text(encoding='utf-8').split('---',2)[1])['tcid']) for p in (ROOT/'testcases').glob('*.md')},'New or missing cases: refresh inventory')
- for path in A.rglob('*.md'):
+ for path in list(A.rglob('*.md'))+list((ROOT/'evaluations').rglob('*.md')):
   for link in re.findall(r'\[[^\]]*\]\(([^)]+)\)',path.read_text(encoding='utf-8')):
    if '://' in link or link.startswith('#'):continue
    target=(path.parent/link.split('#')[0]).resolve();require(target.exists(),f'Broken local link {path}: {link}')
@@ -66,6 +66,8 @@ def validate(result_path=None):
   require(set(front)=={'name','description'} and front['name']==path.parent.name,'Invalid skill metadata')
   require('TODO' not in text and len(text.splitlines())<500,'Unfinished or excessive skill entry point')
  subprocess.run([sys.executable,str(A/'scripts/refresh-resources.py'),'--check'],check=True)
+ general_schema=json.loads((ROOT/'evaluations/results-schema.json').read_text(encoding='utf-8'));Draft202012Validator.check_schema(general_schema)
+ general_template=json.loads((ROOT/'evaluations/result-template.json').read_text(encoding='utf-8'));Draft202012Validator(general_schema,format_checker=FormatChecker()).validate(general_template)
  schema=load('evaluations/results-schema.json');Draft202012Validator.check_schema(schema)
  data=json.loads((result_path or A/'evaluations/result-template.json').read_text(encoding='utf-8'));Draft202012Validator(schema,format_checker=FormatChecker()).validate(data)
  domain=data['scope']['domain'];targets,dispositions=targets_for(domain);registry={t['target_id']:t for t in targets}

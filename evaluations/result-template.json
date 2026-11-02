@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "suite": {
+    "id": "framework-web",
+    "version": "0.2.0",
+    "framework_revision": "b3da9104ab949808d7c082e701a22f7e2bb696fc",
+    "baseline_version": "3.1",
+    "baseline_source_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2"
+  },
+  "run": {
+    "id": "replace-before-execution",
+    "stage": "initial",
+    "performed_at": null,
+    "status": "planned",
+    "prior_run_id": null
+  },
+  "process": {
+    "name": "replace-with-process-name",
+    "version": "replace-with-process-version",
+    "description": "Describe the complete process or intentionally scoped component being evaluated.",
+    "owner": "replace-with-process-owner",
+    "components": [
+      {
+        "id": "component-1",
+        "name": "replace-with-component-name",
+        "type": "manual-procedure",
+        "version": "replace-with-component-version",
+        "configuration": "Describe procedures, settings, instructions and role in the process.",
+        "procedures_addressed": [],
+        "limitations": [],
+        "profile": null
+      }
+    ],
+    "decision_rules": [],
+    "reporting_conventions": []
+  },
+  "environment": {
+    "operating_system": "not-recorded",
+    "browser_or_native_application": "not-recorded",
+    "assistive_technologies": [],
+    "input_methods": [],
+    "viewport_or_view": "not-recorded",
+    "zoom": "not-recorded",
+    "tools": [],
+    "additional_conditions": []
+  },
+  "scope": {
+    "evaluation_type": "full-process",
+    "domain": "web",
+    "selection_rationale": "Document why these procedures and cases were selected.",
+    "process_procedures": [],
+    "selected_case_ids": [],
+    "uncovered_procedures": [],
+    "dispositions": []
+  },
+  "artifact": {
+    "path_or_url": "replace-with-sample-or-artifact",
+    "sha256": null,
+    "dependencies": []
+  },
+  "results": [],
+  "case_comparisons": [],
+  "human_review": {
+    "status": "pending",
+    "reviewers": [],
+    "evidence": [],
+    "pending_work": []
+  },
+  "limitations": [
+    "Template only; no accessibility evaluation, process alignment or conformance determination has occurred."
+  ]
+}

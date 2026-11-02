@@ -43,6 +43,7 @@ Test cases are ordinary Jekyll pages in `testcases/`. The index discovers pages 
 | `evaluating-test-processes.md` | General framework for evaluating manual, automated, hybrid, and AI/SI-enabled test processes. |
 | `accessibility-si.md` | Website introduction to the Accessibility SI resources and their relationship to the Framework. |
 | `accessibility-si/` | Portable accessibility instructions, skills, references, workflows, mappings, evaluation resources, and maintenance utilities. |
+| `evaluations/` | General test-process evaluation manifest, coverage inventory, result schema and template, controlled expectations, publication policy, and validation status. |
 | `testcases/` | Markdown test case descriptions and expected results. |
 | `testfiles/TF##/` | HTML samples grouped by Baseline number, with supporting files where needed. |
 | `testfiles/assets/` | Shared sample resources, including Bootstrap CSS and its source map in `css/`, images, audio, video, and media player files. |

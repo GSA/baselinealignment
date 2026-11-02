@@ -25,11 +25,13 @@ Use the existing cases and the repository's test case template as authoring refe
 
 ### Improve test process evaluation guidance
 
-The [test process evaluation framework](evaluating-test-processes.html) applies to manual, automated, hybrid, and AI/SI-enabled processes. Contributions can improve case selection, independent execution, comparison methods, discrepancy analysis, structured reporting, and guidance for interpreting coverage.
+The [test process evaluation framework](evaluating-test-processes.html) and [general evaluation package](https://github.com/GSA/baselinealignment/tree/main/evaluations){: .usa-link .usa-link--external} apply to manual, automated, hybrid, and AI/SI-enabled processes. Contributions can improve case selection, independent execution, comparison methods, discrepancy analysis, process and component modeling, structured reporting, and guidance for interpreting coverage.
 
 Evaluation guidance must preserve the distinction between an accessibility finding and the comparison outcome. For example, correctly identifying an expected content failure is a matched classification. It must also avoid treating a score from the available cases as certification or complete Baseline alignment.
 
 When proposing a change, describe the kinds of processes affected, the evidence the change would collect, and how it addresses incomplete coverage or other limitations.
+
+The repository-level `evaluations/` directory is canonical for the case manifest, coverage inventory, process-neutral schema and template, controlled expectations, publication policy, and general validation status. Keep expected outcomes under evaluator control and version schema or expectation changes so historical results remain interpretable.
 
 ### Improve Accessibility SI resources
 
@@ -39,7 +41,7 @@ The [`accessibility-si` collection](accessibility-si.html) contains instructions
 * WCAG and Baseline mappings, scope, exceptions, and dispositions.
 * Word, Excel, PowerPoint, PDF, or web-format references.
 * AI/SI-specific process integration and evaluation guidance.
-* Evaluation manifests, schemas, coverage records, and result templates.
+* The AI/SI evaluation profile and compatibility with the general result model.
 * Packaging, validation, source attribution, and publication status.
 
 Identify the canonical source before editing the collection. Update shared mappings or references and regenerate their derived copies instead of changing generated or skill-local copies independently. From the repository root, the primary maintenance checks are:

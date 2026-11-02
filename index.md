@@ -29,7 +29,9 @@ A test process may combine manual procedures, automated scanners, browser and de
 
 The method asks process owners to define and pin the process, select cases and document coverage, keep expected results independent from the test execution, preserve results before comparison, investigate discrepancies, and report evidence and gaps. Matching the available cases is useful evidence, but it is not by itself a certification or a complete claim of Baseline alignment.
 
-See [Evaluating a Test Process](evaluating-test-processes.html) for the general guidance and reporting framework.
+The repository-level evaluation resources provide a versioned case manifest, coverage inventory, process-neutral result schema and template, separately controlled expected outcomes, publication policy, and validation status. They can be used for complete processes or clearly scoped evaluations of individual tools, components, and subprocesses.
+
+See [Evaluating a Test Process](evaluating-test-processes.html) for the general guidance and [general evaluation resources](https://github.com/GSA/baselinealignment/tree/main/evaluations){: .usa-link .usa-link--external} for the supporting framework files.
 
 ## Accessibility SI resources
 

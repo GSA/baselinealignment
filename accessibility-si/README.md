@@ -2,7 +2,7 @@
 
 This collection provides portable accessibility instructions, four task-specific skills, references and workflows for creating, remediating and testing web content and non-web documents. It also includes mappings and evaluation resources for assessing testing processes and maintaining the collection. SI means Super Intelligence in this collection.
 
-Version 0.2.0 is a full-scope authored draft. Authored coverage does not establish completed human review, executed testing, proven Baseline alignment or certification. See [validation status](evaluations/validation-status.md) for completed checks and remaining work.
+Version 0.2.0 is a full-scope authored draft. Authored coverage does not establish completed human review, executed testing, proven Baseline alignment or certification. See the collection [validation status](evaluations/validation-status.md) and the general framework [validation status](../evaluations/validation-status.md) for completed checks and remaining work.
 
 ## Choose your path
 
@@ -40,17 +40,17 @@ The Framework's [general test process evaluation guidance](../evaluating-test-pr
 The evaluation asks whether the defined process produces results consistent with reviewed Framework expectations for selected procedures and samples. It does not certify the tested artifact, process, model or tool, or establish full alignment from a sample score.
 
 1. **Define and pin the process.** Record the collection and Framework revisions, Baseline version, agent/model versions, system/project/skill/task instructions, supplied context, tool configuration and permissions, browser or native application, assistive technologies and human involvement. Describe what the process can execute, what requires human review, how variability is handled and what changes require a separate process configuration.
-2. **Select cases and document coverage.** Use a source checkout containing the case records and samples referenced by the [published case inventory](evaluations/test-manifest.yaml). Consult the [coverage inventory](evaluations/coverage.md) and verify sample dependencies. An individual skill or copied collection alone does not contain the full evaluation corpus. The pinned snapshot supplies web cases; document and supplemental-criterion gaps remain explicit.
+2. **Select cases and document coverage.** Use a source checkout containing the case records and samples referenced by the general framework's [published case inventory](../evaluations/test-manifest.yaml). Consult the [coverage inventory](../evaluations/coverage.md) and verify sample dependencies. An individual skill or copied collection alone does not contain the full evaluation corpus. The pinned snapshot supplies web cases; document and supplemental-criterion gaps remain explicit.
 3. **Prepare independent candidate inputs.** Keep evaluator expectations, rationale and outcome-bearing case names, titles and comments outside the candidate's inputs. Verify behavior-preserving neutral copies and their dependencies before use. Build Jekyll/Liquid-dependent samples appropriately. Site exclusions alone do not isolate public answers from an agent with repository access.
 4. **Run the normal process and preserve its output.** Supply the chosen skills and instructions, collect actual observations, and record unavailable checks honestly. Freeze the candidate's output before comparing it with evaluator expectations.
 5. **Compare and investigate.** An evaluator uses reviewed expectations to record matched, mismatched or not-compared separately from content findings. Correctly identifying an expected content failure is a matched classification. Investigate discrepancies in the case, mapping, guidance, tool, environment or sample preparation, and retain initial results when rerunning.
 6. **Report the evidence and gaps.** State the cases, procedures, scenarios and environments evaluated, human-review status, unresolved discrepancies and uncovered areas. Missing cases do not make requirements inapplicable. Available cases provide only part of the evidence for a process claiming alignment.
 
-Follow the detailed [Framework evaluation workflow](workflows/validate-against-framework.md) and [publication and coverage policy](evaluations/publication-and-coverage.md). Case inventory and source hashes establish availability and identity; they do not establish that cases were executed or expectations reviewed.
+Follow the detailed [Framework evaluation workflow](workflows/validate-against-framework.md), [AI/SI profile](evaluations/ai-si-profile.md) and general [publication and coverage policy](../evaluations/publication-and-coverage.md). Case inventory and source hashes establish availability and identity; they do not establish that cases were executed or expectations reviewed.
 
 ### Optional structured result records
 
-Use the [result template](evaluations/result-template.json), or generate a domain/format-specific template. Run examples from the repository root, the parent of `accessibility-si`, using an available Python 3 interpreter in place of `python`. Template generation uses the standard library and refuses existing output paths; choose paths appropriate to your environment.
+For new evaluations, start with the general [process-neutral result template](../evaluations/result-template.json) and represent each AI/SI component with `type: "ai-si-tool"`. The collection also retains its [version 0.2 compatibility template](evaluations/result-template.json), or can generate a domain/format-specific 0.2 record. Run the examples below from the repository root, the parent of `accessibility-si`, using an available Python 3 interpreter in place of `python`. Template generation uses the standard library and refuses existing output paths; choose paths appropriate to your environment.
 
 ```sh
 python accessibility-si/scripts/create-evaluation.py --domain web --output ../web-results.json
@@ -119,7 +119,7 @@ When integrating resources into a site or another repository, configure publicat
 - Omit active **4.1.1 Parsing** testing as specified by both Baselines' 24.A disposition. Preserve traceability and evaluate actual defects under affected criteria.
 - Include content scoping, conformance requirements, alternate versions and Baseline media-player controls. This is not an audit of all software, hardware, authoring tools, support services or Section 508 provisions outside this content scope.
 
-Read [scope and authority](references/scope.md). Sources are pinned in [source provenance](mappings/sources.json). Authored coverage is not completed human review, completed testing, proven Baseline alignment or certification. See [validation status](evaluations/validation-status.md).
+Read [scope and authority](references/scope.md). Sources are pinned in [source provenance](mappings/sources.json). Authored coverage is not completed human review, completed testing, proven Baseline alignment or certification. See the collection [validation status](evaluations/validation-status.md) and general framework [validation status](../evaluations/validation-status.md).
 
 ## Resource directory
 
@@ -130,7 +130,8 @@ Read [scope and authority](references/scope.md). Sources are pinned in [source p
 | [references/](references/) | Users consult scope, criteria, procedures and format guidance; maintainers distinguish canonical sources from generated outputs. |
 | [workflows/](workflows/) | Users follow creation, testing, remediation and process-evaluation steps; maintainers review these procedures. |
 | [mappings/](mappings/) | Integrators trace structured requirements; maintainers update canonical catalogs and provenance. |
-| [evaluations/](evaluations/) | Process evaluators use inventories, schemas and separately controlled expectations; maintainers curate the evidence framework. |
+| [../evaluations/](../evaluations/) | General process evaluators use the canonical case inventory, coverage model, schema, template and separately controlled expectations. |
+| [evaluations/](evaluations/) | AI/SI evaluators use the AI/SI profile and retained version 0.2 compatibility schema and template. |
 | [scripts/](scripts/) | Users optionally generate/check records; maintainers regenerate, validate and package resources. |
 
 ## Feedback and contributions

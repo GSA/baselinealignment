@@ -11,7 +11,7 @@ from evaluation_common import A,load
 ROOT=A.parent
 
 def build(revision):
- manifest=load('evaluations/test-manifest.yaml');web=load('mappings/web/baseline.yaml');docs=load('mappings/documents/baseline.yaml')
+ manifest=load('../evaluations/test-manifest.yaml');web=load('mappings/web/baseline.yaml');docs=load('mappings/documents/baseline.yaml')
  byshort={p['short_id']:p for p in web['procedures']}
  for p in web['procedures']:p['published_case_ids']=[];p['case_coverage']='no-published-cases-in-this-snapshot'
  cases=[];answers=[];issues=[];seen=set()
@@ -34,11 +34,11 @@ def build(revision):
  # Document ingestion deliberately requires a reviewed format/source schema rather than inferring it from web metadata.
  if manifest['document_cases']:raise ValueError('Document case ingestion needs an explicit reviewed schema before this updater can be used.')
  sources=load('mappings/sources.json');sources['framework_revision']=revision
- return {'evaluations/test-manifest.yaml':manifest,'evaluations/evaluator/expected-outcomes.yaml':{'schema_version':'0.2.0','warning':'Evaluator only. Freeze candidate results before using expected outcomes. Source case titles and filenames also leak outcomes.','outcomes':answers},'mappings/web/baseline.yaml':web,'mappings/sources.json':sources}
+ return {'../evaluations/test-manifest.yaml':manifest,'../evaluations/evaluator/expected-outcomes.yaml':{'schema_version':'0.2.0','warning':'Evaluator only. Freeze candidate results before using expected outcomes. Source case titles and filenames also leak outcomes.','outcomes':answers},'mappings/web/baseline.yaml':web,'mappings/sources.json':sources}
 if __name__=='__main__':
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--source-revision');parser.add_argument('--check',action='store_true');args=parser.parse_args()
  if not args.check and not args.source_revision:parser.error('Provide --source-revision for an updated committed Framework snapshot.')
- revision=args.source_revision or load('evaluations/test-manifest.yaml')['source_revision']
+ revision=args.source_revision or load('../evaluations/test-manifest.yaml')['source_revision']
  if not re.fullmatch('[0-9a-f]{40}',revision):parser.error('Use a full source commit SHA.')
  stale=[]
  for name,value in build(revision).items():

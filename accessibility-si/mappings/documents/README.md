@@ -11,7 +11,7 @@ This directory contains the canonical, machine-readable [Electronic Documents Ba
 | Create or remediate a document | [Accessible document creation](../../skills/accessible-document-creation/SKILL.md), including its bundled format references |
 | Test a document | [Document accessibility testing](../../skills/document-accessibility-testing/SKILL.md), including its bundled format references |
 | Trace procedures to requirements and dispositions | The readable [Document Baseline reference](../../references/document-baseline.md); inspect [baseline.yaml](baseline.yaml) when structured mappings are needed |
-| Assess a testing process | The [Framework evaluation workflow](../../workflows/validate-against-framework.md) and [coverage inventory](../../evaluations/coverage.md), subject to the document-case gaps below |
+| Assess a testing process | The [general Framework evaluation resources](../../../evaluations/README.md), [AI/SI workflow](../../workflows/validate-against-framework.md) and [coverage inventory](../../../evaluations/coverage.md), subject to the document-case gaps below |
 
 The mapping is a traceability and task-guidance resource. Read the official procedures for complete applicability, test steps, definitions, exceptions and outcomes. A mapped procedure contributes targeted evidence; its presence does not establish full criterion coverage or completed testing. Use [packaging guidance](../../packaging.md) for copying resources and loading them in your environment.
 
@@ -40,4 +40,4 @@ WCAG 2.1/2.2 additions have no Baseline procedure mapping and use supplemental g
 
 No document Framework cases are supplied by the pinned repository snapshot. Instruction coverage is authored draft; qualified human review, procedure execution and representative document case creation remain separate work. Missing cases do not make requirements inapplicable or provide validation evidence.
 
-See the collection's [validation status](../../evaluations/validation-status.md) and [publication and coverage policy](../../evaluations/publication-and-coverage.md) for completed checks, remaining work and the evidence required for review and validation claims.
+See the collection's [validation status](../../evaluations/validation-status.md), general framework [validation status](../../../evaluations/validation-status.md) and [publication and coverage policy](../../../evaluations/publication-and-coverage.md) for completed checks, remaining work and the evidence required for review and validation claims.

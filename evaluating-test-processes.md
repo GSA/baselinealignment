@@ -119,6 +119,23 @@ An evaluation report should identify:
 
 Report counts and percentages only with their scope and denominator. Do not describe one aggregate score as “Baseline alignment.” A process claiming comprehensive alignment still needs to incorporate every applicable Baseline procedure; available Framework cases provide only part of the evidence for that claim.
 
+## Evaluation resources
+
+The repository's [general evaluation package](https://github.com/GSA/baselinealignment/tree/main/evaluations){: .usa-link .usa-link--external} supports this method:
+
+| Resource | How to use it |
+| --- | --- |
+| [Case manifest](https://github.com/GSA/baselinealignment/blob/main/evaluations/test-manifest.yaml){: .usa-link .usa-link--external} | Pin case records, primary samples, hashes, procedure mappings, versions and review status. |
+| [Coverage inventory](https://github.com/GSA/baselinealignment/blob/main/evaluations/coverage.md){: .usa-link .usa-link--external} | Identify which procedures have published cases; do not treat availability as execution or complete scenario coverage. |
+| [General result template](https://github.com/GSA/baselinealignment/blob/main/evaluations/result-template.json){: .usa-link .usa-link--external} | Start a structured record for a complete process, component or subprocess evaluation. |
+| [Result schema](https://github.com/GSA/baselinealignment/blob/main/evaluations/results-schema.json){: .usa-link .usa-link--external} | Record the process, components, environment, scope, findings, comparisons, review and limitations consistently. |
+| [Publication and coverage policy](https://github.com/GSA/baselinealignment/blob/main/evaluations/publication-and-coverage.md){: .usa-link .usa-link--external} | Apply safeguards for evidence, review, coverage and public claims. |
+| [Validation status](https://github.com/GSA/baselinealignment/blob/main/evaluations/validation-status.md){: .usa-link .usa-link--external} | Distinguish completed structural work from pending review and execution. |
+
+Expected outcomes are maintained separately under evaluator control. Freeze candidate results before consulting them. The general result schema represents each tool, method or organizational step as a process component and supports manual, automated, hybrid, document and AI/SI-enabled evaluations without making any one approach the default.
+
+Always distinguish process coverage, available case coverage and cases actually executed in an evaluation. The general package versions these as related but independent evidence.
+
 ## Adapt the framework to the process
 
 The core method stays the same across process types, but the implementation details differ:

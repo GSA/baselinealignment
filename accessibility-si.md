@@ -9,13 +9,13 @@ The Accessibility SI collection provides portable instructions, task-specific sk
 
 The resources can be read and applied directly, supplied as task context, or loaded through a tool's supported instruction or skill mechanism. No particular agent, editor, operating system, or installation method is required.
 
-Version 0.2.0 is a full-scope authored draft. Authored coverage does not establish completed human review, executed testing, proven Baseline alignment, artifact conformance, or certification. Consult the collection's [validation status](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/validation-status.md){: .usa-link .usa-link--external} for completed checks and remaining work.
+Version 0.2.0 is a full-scope authored draft. Authored coverage does not establish completed human review, executed testing, proven Baseline alignment, artifact conformance, or certification. Consult the collection's [validation status](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/validation-status.md){: .usa-link .usa-link--external} and the general framework's [validation status](https://github.com/GSA/baselinealignment/blob/main/evaluations/validation-status.md){: .usa-link .usa-link--external} for completed checks and remaining work.
 
 ## Relationship to the Baseline Alignment Framework
 
 The Baseline Alignment Framework provides test cases with samples and expected results for specific Baseline procedures. The Accessibility SI collection provides guidance and process components that can be used to perform accessibility work and evaluate an AI/SI-enabled test process against selected Framework cases.
 
-The general [Evaluating a Test Process](evaluating-test-processes.html) method applies to any combination of manual procedures, tools, assistive technologies, scripts, organizational sub-processes, and AI/SI capabilities. The collection adds AI/SI-tailored controls, including documenting models and instructions, verifying tool capabilities, isolating expected results from candidate inputs, preserving original output, and identifying checks that require human review.
+The general [Evaluating a Test Process](evaluating-test-processes.html) method and [repository-level evaluation package](https://github.com/GSA/baselinealignment/tree/main/evaluations){: .usa-link .usa-link--external} apply to any combination of manual procedures, tools, assistive technologies, scripts, organizational subprocesses, and AI/SI capabilities. The collection adds an [AI/SI profile](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/ai-si-profile.md){: .usa-link .usa-link--external} covering models and instructions, tool capabilities and permissions, expected-result isolation, variability, original-output retention, and human review.
 
 ## Choose resources for a task
 
@@ -50,7 +50,7 @@ For an AI/SI-enabled process, also record:
 * Variability controls, rerun policy, and retention of the original output.
 * Checks that the system cannot execute and those requiring qualified human review.
 
-Use the collection's [AI/SI-tailored evaluation workflow](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/workflows/validate-against-framework.md){: .usa-link .usa-link--external}, [case manifest](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/test-manifest.yaml){: .usa-link .usa-link--external}, [coverage inventory](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/coverage.md){: .usa-link .usa-link--external}, and [structured result template](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/result-template.json){: .usa-link .usa-link--external}.
+Use the collection's [AI/SI-tailored evaluation workflow](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/workflows/validate-against-framework.md){: .usa-link .usa-link--external} and [AI/SI profile](https://github.com/GSA/baselinealignment/blob/main/accessibility-si/evaluations/ai-si-profile.md){: .usa-link .usa-link--external} with the general [case manifest](https://github.com/GSA/baselinealignment/blob/main/evaluations/test-manifest.yaml){: .usa-link .usa-link--external}, [coverage inventory](https://github.com/GSA/baselinealignment/blob/main/evaluations/coverage.md){: .usa-link .usa-link--external}, and [structured result template](https://github.com/GSA/baselinealignment/blob/main/evaluations/result-template.json){: .usa-link .usa-link--external}.
 
 An individual skill or copied collection does not contain the full Framework case corpus. Use a source checkout containing the referenced case records and samples. Keep evaluator expectations separately controlled; access to a public repository or published site can expose answers even when files are excluded from a site build.
 
@@ -69,7 +69,8 @@ See [Packaging and integrating the resources](https://github.com/GSA/baselineali
 | [References](https://github.com/GSA/baselinealignment/tree/main/accessibility-si/references){: .usa-link .usa-link--external} | Scope, criteria, procedures, source notices, and format guidance. |
 | [Workflows](https://github.com/GSA/baselinealignment/tree/main/accessibility-si/workflows){: .usa-link .usa-link--external} | Creation, testing, remediation, manual testing, and process-evaluation steps. |
 | [Mappings](https://github.com/GSA/baselinealignment/tree/main/accessibility-si/mappings){: .usa-link .usa-link--external} | Structured WCAG, Web Baseline, and document Baseline relationships and provenance. |
-| [Evaluations](https://github.com/GSA/baselinealignment/tree/main/accessibility-si/evaluations){: .usa-link .usa-link--external} | Case inventory, coverage, schemas, controlled expectations, and result templates. |
+| [General evaluations](https://github.com/GSA/baselinealignment/tree/main/evaluations){: .usa-link .usa-link--external} | Canonical case inventory, coverage, process-neutral schema and template, controlled expectations, and publication policy. |
+| [AI/SI evaluation profile](https://github.com/GSA/baselinealignment/tree/main/accessibility-si/evaluations){: .usa-link .usa-link--external} | AI/SI-specific controls and retained version 0.2 compatibility schema and template. |
 | [Scripts](https://github.com/GSA/baselinealignment/tree/main/accessibility-si/scripts){: .usa-link .usa-link--external} | Optional generation, validation, inventory, and packaging utilities. |
 
 ## Scope and limitations
