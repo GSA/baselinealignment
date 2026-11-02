@@ -85,7 +85,7 @@ The Markdown body contains a table with **Test Instruction**, **Instruction Deta
 - `descr`, `result`, and `result-descr` explain the scenario and expected outcome.
 - `sample` is the sample's site-relative path, without the `/baselinealignment` base URL prefix.
 
-When adding a case, create its sample under the corresponding `testfiles/TF##/` directory and mark the relevant sample container with `id="tc_code"`, as described in the template. Ensure the case ID matches a procedure in `_data/baselines.yaml`: the current layout derives the procedure reference from `tcid`, rather than the template's older `app-baseline` field.
+When adding a case, create its sample under the corresponding `testfiles/TF##/` directory and mark the relevant sample container with `id="tc_code"`, as described in the template. Ensure the case ID matches a procedure in `_data/baselines.yaml`: the layout derives the procedure reference from `tcid`; no separate Baseline front-matter field is required.
 
 The files `assets/baselineTestCases.json` and `assets/baselineTestCases.csv` are Liquid templates populated from test case pages during the build. Update case metadata to change exported records.
 
