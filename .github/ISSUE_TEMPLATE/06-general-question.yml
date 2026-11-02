@@ -1,0 +1,59 @@
+name: General question or proposal
+description: Ask a question or suggest work that does not fit another issue form.
+title: "[Question]: "
+labels:
+  - "type: question"
+  - "needs: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use a more specific form when possible. Do not include credentials, private data, sensitive prompts, or information that should not be public.
+
+  - type: checkboxes
+    id: preliminary
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing issue that answers this question or covers this proposal.
+          required: true
+        - label: I reviewed the available issue forms and this is the best fit.
+          required: true
+        - label: I removed credentials, private data, and other sensitive information.
+          required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Framework purpose or use
+        - Test cases or samples
+        - Test process evaluation
+        - Accessibility SI resources
+        - Website or documentation
+        - Contribution or governance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or proposal
+    validations:
+      required: true
+
+  - type: textarea
+    id: reviewed
+    attributes:
+      label: Resources already reviewed
+      description: Link relevant cases, pages, files, documentation, or existing issues.
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Explain the answer, decision, guidance, or change that would resolve this issue.
+    validations:
+      required: true

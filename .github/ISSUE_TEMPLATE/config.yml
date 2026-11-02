@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ICT Testing Baseline
+    url: https://ictbaseline.access-board.gov/
+    about: Review the authoritative ICT Testing Baseline procedures and source guidance.
+  - name: Contribution guidance
+    url: https://gsa.github.io/baselinealignment/contributing.html
+    about: Review ways to contribute and the evidence to include with an issue.

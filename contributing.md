@@ -11,6 +11,21 @@ Submit feedback and questions through [GitHub issues](https://github.com/GSA/bas
 
 When reporting a problem, include the affected page, resource, or test case ID; the source or collection revision when known; your testing process and environment; the observed behavior; and supporting evidence. This information helps maintainers reproduce and evaluate the issue.
 
+### Choose an issue type
+
+The repository provides targeted issue forms so contributors can supply the information needed for review:
+
+| Issue type | Use it for |
+| --- | --- |
+| Test case proposal or change | New cases or samples, additional scenarios, and corrections to existing case records or sample files. |
+| Unexpected result or case discrepancy | Differences between a preserved test-process result and a Framework expectation. |
+| Evaluation framework improvement | General evaluation guidance, manifests, coverage, schemas, templates, controlled expectations, policies, or validation tooling. |
+| Accessibility SI resource issue | Instructions, skills, workflows, mappings, references, packaging, scripts, or the AI/SI evaluation profile. |
+| Website or documentation issue | Content, links, navigation, accessibility, usability, rendering, or plain-language concerns. |
+| General question or proposal | Questions and proposals that do not fit a more specific form. |
+
+Select the most specific form available. Do not include credentials, private data, sensitive prompts, or other information that should not be public. For a discrepancy, preserve the original candidate result before consulting expected outcomes and keep the accessibility finding separate from the Framework comparison.
+
 ### Develop and evaluate test cases
 
 Framework cases help test process and tool owners determine whether their methods produce results consistent with the ICT Testing Baseline. Contributions may include:

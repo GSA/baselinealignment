@@ -1,0 +1,110 @@
+name: Test case proposal or change
+description: Propose a Framework case or sample, or request a correction to an existing one.
+title: "[Test case]: "
+labels:
+  - "type: test case"
+  - "component: cases"
+  - "needs: triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for case records and sample files. One case provides evidence for a specific Baseline procedure and scenario; it does not evaluate every requirement on a page.
+
+  - type: checkboxes
+    id: preliminary
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing issue covering this case or scenario.
+          required: true
+        - label: I removed credentials, private data, and other sensitive information.
+          required: true
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - New case and sample
+        - New case using an existing sample
+        - Change an existing case
+        - Change an existing sample
+        - Add scenario coverage
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: procedure
+    attributes:
+      label: Baseline procedure
+      description: Provide the current procedure ID and name, such as 6.A-MeaningfulImage.
+      placeholder: 6.A-MeaningfulImage
+    validations:
+      required: true
+
+  - type: input
+    id: case_id
+    attributes:
+      label: Existing or proposed case ID
+      description: Provide an existing ID when changing a case, or a proposed ID when known.
+      placeholder: TC06.A-1-fail-1
+
+  - type: dropdown
+    id: proposed_outcome
+    attributes:
+      label: Proposed expected outcome
+      options:
+        - PASS
+        - FAIL
+        - DNA (does not apply)
+        - Needs determination
+    validations:
+      required: true
+
+  - type: textarea
+    id: instruction
+    attributes:
+      label: Procedure instruction or decision point
+      description: Identify the instruction, condition, or decision this case is intended to exercise.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario and expected behavior
+      description: Describe the content, interaction, expected result, and why the scenario is useful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: Case record, sample, and dependencies
+      description: Describe required files, scripts, styles, images, media, frames, or network dependencies. Include relevant paths when known.
+    validations:
+      required: true
+
+  - type: textarea
+    id: authority
+    attributes:
+      label: Standards references and rationale
+      description: Link the applicable Baseline procedure and other authoritative sources, then explain the proposed outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: review
+    attributes:
+      label: Testing and review performed
+      description: Describe checks already performed, evidence collected, similar cases reviewed, and human review still needed.
+
+  - type: checkboxes
+    id: claims
+    attributes:
+      label: Scope acknowledgement
+      options:
+        - label: I understand that one case result does not establish artifact conformance, certification, or complete Baseline alignment.
+          required: true

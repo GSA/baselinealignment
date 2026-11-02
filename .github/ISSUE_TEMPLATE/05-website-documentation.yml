@@ -1,0 +1,72 @@
+name: Website or documentation issue
+description: Report incorrect content, broken links, navigation, accessibility, usability, rendering, or plain-language concerns.
+title: "[Website]: "
+labels:
+  - "type: website"
+  - "component: documentation"
+  - "needs: triage"
+body:
+  - type: checkboxes
+    id: preliminary
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing issue covering this page or problem.
+          required: true
+        - label: I removed credentials, private data, and other sensitive information.
+          required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Page URL or repository path
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      options:
+        - Incorrect or outdated content
+        - Broken or incorrect link
+        - Navigation or information architecture
+        - Accessibility
+        - Usability
+        - Visual layout or responsive behavior
+        - Rendering or build behavior
+        - Plain language
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior or content
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior or content
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps and environment
+      description: For behavior issues, include browser, operating system, viewport, zoom, input method, and assistive technology where relevant.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and references
+      description: Include screenshots, output, WCAG or USWDS references, or other supporting evidence.
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested revision

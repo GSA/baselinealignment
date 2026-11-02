@@ -1,0 +1,125 @@
+name: Unexpected result or case discrepancy
+description: Report disagreement between a test process result and a Framework case expectation.
+title: "[Discrepancy]: "
+labels:
+  - "type: discrepancy"
+  - "component: evaluation"
+  - "needs: investigation"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Freeze and retain the candidate result before consulting expected outcomes. Keep the accessibility finding separate from the Framework comparison—a correctly identified expected failure is a matched classification.
+
+  - type: checkboxes
+    id: preliminary
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing issue about this case and discrepancy.
+          required: true
+        - label: I preserved the original candidate result and removed credentials, private data, and sensitive prompts.
+          required: true
+
+  - type: input
+    id: case_id
+    attributes:
+      label: Case ID
+      placeholder: TC06.A-1-fail-1
+    validations:
+      required: true
+
+  - type: input
+    id: sample
+    attributes:
+      label: Case or sample URL
+    validations:
+      required: true
+
+  - type: input
+    id: procedure
+    attributes:
+      label: Baseline procedure
+      placeholder: 6.A-MeaningfulImage
+    validations:
+      required: true
+
+  - type: dropdown
+    id: expected
+    attributes:
+      label: Framework expected result
+      options:
+        - PASS
+        - FAIL
+        - DNA (does not apply)
+        - Expectation not reviewed or unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: observed
+    attributes:
+      label: Observed candidate result
+      options:
+        - PASS
+        - FAIL
+        - DNA (does not apply)
+        - Incomplete or capability-limited
+        - No result
+    validations:
+      required: true
+
+  - type: textarea
+    id: process
+    attributes:
+      label: Test process and components
+      description: Identify the process name and version, procedures, tools, configurations, manual steps, and decision rules used.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Test environment
+      description: Include operating system, browser or native application, assistive technology, input method, viewport or view, and relevant versions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps performed
+      description: Provide enough detail to reproduce the result, including sample preparation or neutralization.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and rationale
+      description: Include observations, output, screenshots, logs, or other evidence without sensitive information.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: suspected_source
+    attributes:
+      label: Suspected source of the discrepancy
+      options:
+        - Unknown
+        - Candidate test process
+        - Tool or configuration
+        - Test environment
+        - Sample preparation or dependency
+        - Framework case or sample
+        - Expected result or rationale
+        - Procedure mapping or interpretation
+        - Reporting or data entry
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Note reruns, variability, unavailable checks, human review, or related issues.

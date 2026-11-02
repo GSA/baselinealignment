@@ -1,0 +1,110 @@
+name: Evaluation framework improvement
+description: Improve the general evaluation guidance, manifest, coverage model, schema, expectations, or validation tooling.
+title: "[Evaluation framework]: "
+labels:
+  - "type: enhancement"
+  - "component: evaluation"
+  - "needs: review"
+body:
+  - type: checkboxes
+    id: preliminary
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing issue or proposal covering this change.
+          required: true
+        - label: I removed credentials, private data, and other sensitive information.
+          required: true
+
+  - type: dropdown
+    id: resource
+    attributes:
+      label: Affected evaluation resource
+      options:
+        - Evaluate a Test Process guidance
+        - General evaluation README
+        - Case manifest
+        - Coverage inventory
+        - Result schema or template
+        - Evaluator-controlled expectations
+        - Publication and coverage policy
+        - Validation status or tooling
+        - Process-specific profile
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: process_type
+    attributes:
+      label: Process type affected
+      multiple: true
+      options:
+        - All process types
+        - Manual
+        - Automated tool
+        - Hybrid
+        - Document testing
+        - AI/SI-enabled
+        - Organizational process
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evaluation_scope
+    attributes:
+      label: Evaluation scope affected
+      multiple: true
+      options:
+        - Complete process
+        - Component
+        - Subprocess
+        - Case corpus or expectations
+        - All scopes
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Current behavior or limitation
+      description: Describe the affected file or section and the problem the change should solve.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain the recommended behavior, structure, or wording.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence captured or improved
+      description: Explain what evidence the change would collect, preserve, compare, or clarify.
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and versioning
+      description: Describe effects on existing result records, schemas, case versions, expectations, scripts, or historical evaluations.
+
+  - type: textarea
+    id: safeguards
+    attributes:
+      label: Evaluation safeguards
+      description: Describe effects on candidate/evaluator separation, coverage claims, human review, certification language, or conformance claims.
+
+  - type: checkboxes
+    id: claims
+    attributes:
+      label: Scope acknowledgement
+      options:
+        - label: This proposal keeps accessibility findings separate from Framework comparison outcomes.
+          required: true

@@ -1,0 +1,96 @@
+name: Accessibility SI resource issue
+description: Report or propose a change to instructions, skills, workflows, mappings, references, packaging, scripts, or the AI/SI profile.
+title: "[Accessibility SI]: "
+labels:
+  - "type: accessibility-si"
+  - "component: accessibility-si"
+  - "needs: triage"
+body:
+  - type: checkboxes
+    id: preliminary
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing issue covering this resource or behavior.
+          required: true
+        - label: I removed credentials, private data, and sensitive prompts or configuration.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Collection version and source revision
+      placeholder: 0.2.0; commit SHA if known
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Resource category
+      options:
+        - Shared instructions
+        - Skill
+        - Workflow
+        - Shared reference
+        - WCAG or Baseline mapping
+        - AI/SI evaluation profile
+        - Compatibility schema or template
+        - Packaging or integration
+        - Script or validation
+        - Publication or validation status
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: path
+    attributes:
+      label: Affected file or section
+      placeholder: accessibility-si/path/to/file.md#section
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_environment
+    attributes:
+      label: Task, format, and environment
+      description: Identify the accessibility task, web or document format, and relevant tool, agent, model, application, or operating environment.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Current behavior or unclear guidance
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed correction or improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative sources and evidence
+      description: Link relevant standards, Baseline procedures, product documentation, observations, or test evidence.
+    validations:
+      required: true
+
+  - type: textarea
+    id: canonical_source
+    attributes:
+      label: Canonical source and generated copies
+      description: Identify the mapping or shared reference that should change and any generated or skill-local copies affected. If unknown, say so.
+    validations:
+      required: true
+
+  - type: textarea
+    id: review
+    attributes:
+      label: Checks and human review
+      description: Describe checks performed, evidence retained, and qualified review still needed.
