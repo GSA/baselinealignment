@@ -14,7 +14,7 @@ const version = await fetch(`${debug}/json/version`).then(r=>r.json());
 const ws = new WebSocket(version.webSocketDebuggerUrl);
 await new Promise((resolve,reject)=>{ws.onopen=resolve;ws.onerror=reject;});
 let sequence=0,session;
-const pending=new Map(),requests=[],exceptions=[];
+const pending=new Map(),requests=[],exceptions=[],fileChoosers=[];
 function send(method,params={},sessionId=session) {
   const id=++sequence;
   return new Promise((resolve,reject)=>{
@@ -26,6 +26,7 @@ ws.onmessage=({data})=>{
   if(message.id){const task=pending.get(message.id);pending.delete(message.id);message.error?task.reject(new Error(JSON.stringify(message.error))):task.resolve(message.result);}
   if(message.method==='Network.requestWillBeSent') requests.push(message.params.request.url);
   if(message.method==='Runtime.exceptionThrown') exceptions.push(message.params.exceptionDetails);
+  if(message.method==='Page.fileChooserOpened') fileChoosers.push(message.params);
   if(message.method==='Page.javascriptDialogOpening') send('Page.handleJavaScriptDialog',{accept:true},message.sessionId).catch(()=>{});
 };
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -47,6 +48,30 @@ async function selectFile(selector,path) {
   const {nodeId}=await send('DOM.querySelector',{nodeId:root.nodeId,selector});
   await send('DOM.setFileInputFiles',{nodeId,files:[path]});
 }
+async function keyboardFilePicker(id,previousId,path,key='Enter') {
+  await send('Page.setInterceptFileChooserDialog',{enabled:true});
+  try {
+    await evaluate(`document.getElementById(${JSON.stringify(previousId)}).focus()`);
+    await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});
+    await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});
+    assert.equal(await evaluate('document.activeElement.id'),id,`${id} is unreachable with Tab`);
+    if (id==='verify-candidate') {
+      await evaluate("document.getElementById('verify-candidate').scrollIntoView({block:'center',behavior:'instant'})");
+      const focused=await send('Page.captureScreenshot',{format:'png'});
+      await writeFile(resolve(output,'candidate-picker-keyboard-focus.png'),Buffer.from(focused.data,'base64'));
+    }
+    const before=fileChoosers.length;
+    const code=key==='Enter'?'Enter':'Space',virtual=key==='Enter'?13:32;
+    await send('Input.dispatchKeyEvent',{type:'keyDown',key,code,windowsVirtualKeyCode:virtual,text:key==='Enter'?'\r':' '});
+    await send('Input.dispatchKeyEvent',{type:'keyUp',key,code,windowsVirtualKeyCode:virtual});
+    for(let n=0;n<100 && fileChoosers.length===before;n++)await pause(50);
+    assert.equal(fileChoosers.length,before+1,`${key} did not open the ${id} file browser`);
+    const opened=fileChoosers.at(-1);
+    const {node}=await send('DOM.describeNode',{backendNodeId:opened.backendNodeId});
+    assert.equal(node.attributes[node.attributes.indexOf('id')+1],id);
+    await send('DOM.setFileInputFiles',{backendNodeId:opened.backendNodeId,files:path?[path]:[]});
+  } finally { await send('Page.setInterceptFileChooserDialog',{enabled:false}); }
+}
 async function fileExists(path) {try{await access(path);return true;}catch{return false;}}
 async function fileWait(path) {for(let n=0;n<100;n++){if(await fileExists(path))return;await pause(100);}throw new Error(`Download missing: ${path}`);}
 let targetId;
@@ -63,6 +88,8 @@ try {
   await click('#start-illustrative');await submit('start-form');
   await wait("!document.getElementById('workspace').hidden",'record created');
   const runId=await evaluate("document.getElementById('run-id').value");
+  assert.equal(await evaluate("document.getElementById('candidate-verification-fields').hidden"),true);
+  assert.equal(await evaluate("document.getElementById('verification-prerequisite').hidden"),false);
   await click('input[name="target"][value="web:6.A-MeaningfulImage"]');
   await evaluate("[...document.querySelectorAll('input[name=case]')].find(n=>n.value.startsWith('TC06.A-')).click()");
   await input('scope-type','subprocess');await input('scope-rationale','Synthetic browser behavior check; no accessibility evaluation occurred.');
@@ -101,11 +128,18 @@ try {
   assert.equal(record.record_kind,'illustrative');assert.equal(record.schema_version,'1.0.0');assert.equal(record.results[0].status,'fail');
   const check=spawnSync(resolve(root,'.venv/bin/python'),['evaluations/scripts/validate_reporting.py',recordPath,'--candidate',candidatePath],{cwd:root,encoding:'utf8'});
   assert.equal(check.status,0,check.stdout+check.stderr);
-  await selectFile('#import-record',recordPath);
+  await wait("document.getElementById('save-status').textContent.startsWith('Saved in this browser')",'autosave before reopening');
+  await keyboardFilePicker('import-record','clear-saved',recordPath);
   await wait("document.getElementById('freeze-status').textContent.includes('Choose the original candidate')",'reopened evaluator requires candidate');
   assert.equal(await evaluate("document.getElementById('compare').disabled"),true);
-  await selectFile('#verify-candidate',candidatePath);
+  assert.equal(await evaluate("document.getElementById('candidate-verification-fields').hidden"),false);
+  assert.equal(await evaluate("document.getElementById('verify-candidate').disabled"),false);
+  await keyboardFilePicker('verify-candidate','freeze-status',null,' ');
+  assert.equal(await evaluate("document.getElementById('reporting-errors').hidden"),true,'cancelling the candidate picker caused an error');
+  await keyboardFilePicker('verify-candidate','freeze-status',candidatePath);
   await wait("document.getElementById('freeze-status').textContent.includes('verified in this session')",'candidate restored');
+  assert.equal(await evaluate("document.getElementById('candidate-verification-fields').hidden"),true);
+  assert.equal(await evaluate('document.activeElement.id'),'freeze-status');
   assert.equal(requests.filter(url=>url.includes('expected-outcomes')).length,1,'verification loaded expectations');
   await click('#compare');await wait("document.getElementById('reporting-status').textContent.includes('Evaluator comparison recorded')",'comparison after import');
   await wait("document.getElementById('save-status').textContent.startsWith('Saved in this browser')",'transaction committed');
@@ -187,7 +221,7 @@ try {
   await evaluate("Array.from(document.querySelectorAll('#components-list button')).find(b=>b.textContent==='Edit Synthetic AI QA component').click()");
   await wait("!document.getElementById('component-ai-profile').hidden",'AI configuration copied to rerun');
   assert.equal(await evaluate("document.querySelectorAll('#ai-outputs [data-ai-output]').length"),0,'new run inherited previous output evidence');
-  await click('#component-new');await selectFile('#import-profile',fullProfilePath);
+  await click('#component-new');await keyboardFilePicker('import-profile','export-profile',fullProfilePath);
   await wait("document.getElementById('reporting-status').textContent.includes('Per-run AI/SI output references cleared')",'profile import clears per-run outputs');
   await evaluate("Array.from(document.querySelectorAll('#components-list button')).find(b=>b.textContent==='Edit Synthetic AI QA component').click()");
   await wait("!document.getElementById('component-ai-profile').hidden",'imported AI configuration editor');
@@ -255,7 +289,7 @@ try {
   await click('#export-json');await fileWait(resolve(output,`${hostile.run.id}.json`));
   const moduleErrors=exceptions.filter(e=>JSON.stringify(e).includes('/assets/js/reporting/'));
   assert.deepEqual(moduleErrors,[]);
-  console.log(JSON.stringify({status:'PASS',recordPath,candidatePath,reportPath,checks:['create and edit','scope preparation and filtering','manual rules','finalization','freeze before expectation fetch','explicit comparisons','JSON/CSV/HTML downloads','independent Python validation of browser output','reopen and exact-byte verification','IndexedDB restore','document artifact boundary','conditional AI fields and required validation','direct model use and type-toggle preservation','AI output hash validation','AI literal-instruction and profile round-trip','AI report HTML/CSV sections','per-run AI output reset on reuse','AI evaluation freeze/comparison/Python validation','keyboard focus and labels','320px reflow','standalone HTML offline','blocked storage fallback','error focus and recovery','invalid import preserves workspace','imported text cannot inject markup'],screenshots:output},null,2));
+  console.log(JSON.stringify({status:'PASS',recordPath,candidatePath,reportPath,checks:['native file-picker Tab/Enter/Space activation','candidate-picker eligibility and focus return','create and edit','scope preparation and filtering','manual rules','finalization','freeze before expectation fetch','explicit comparisons','JSON/CSV/HTML downloads','independent Python validation of browser output','reopen and exact-byte verification','IndexedDB restore','document artifact boundary','conditional AI fields and required validation','direct model use and type-toggle preservation','AI output hash validation','AI literal-instruction and profile round-trip','AI report HTML/CSV sections','per-run AI output reset on reuse','AI evaluation freeze/comparison/Python validation','keyboard focus and labels','320px reflow','standalone HTML offline','blocked storage fallback','error focus and recovery','invalid import preserves workspace','imported text cannot inject markup'],screenshots:output},null,2));
 } catch(error) {
   console.error(JSON.stringify({url:await evaluate('location.href'),body:await evaluate('document.body?.innerText?.slice(0,1000)'),
     overflow:await evaluate("Array.from(document.querySelectorAll('#reporting-app *')).filter(n=>n.getClientRects().length && n.scrollWidth>n.clientWidth+2 && getComputedStyle(n).overflowX==='visible').map(n=>({tag:n.tagName,id:n.id,class:n.className,client:n.clientWidth,scroll:n.scrollWidth})).slice(0,20)"),requests:requests.slice(-12)},null,2));

@@ -88,6 +88,8 @@ Candidate mode does not load expected outcomes. After recording and finalizing t
 3. Review matched, mismatched, and not-compared classifications. Incomplete and unperformed checks remain not compared. A content failure that matches the expected failure is a matched process classification, not passing content.
 4. Download the evaluator record and retain the original candidate alongside it. When reopening an evaluator record, choose its original candidate file to verify the exact-byte hash and contents before comparing or issuing it again.
 
+The original-candidate file picker appears after you reopen an evaluator record that has a frozen hash and needs verification. Before that step, instructions explain how to reach it. Once shown, reach the picker with Tab and press Enter or Space to open the file browser. After successful verification, the picker closes and focus moves to the verification status. A candidate frozen in the current session is already verified, so no additional file selection is needed.
+
 Public case IDs, sample filenames, and sample content may reveal outcomes. Candidate indexes omit explicit expected-result fields and explanatory metadata, but do not provide blinded inputs or enforce independent execution. Use an appropriately controlled candidate environment. A freeze detects later changes; it cannot prove that a tester never saw public expectations. Source expectations may still require qualified human review.
 
 ## Save, reopen, and export

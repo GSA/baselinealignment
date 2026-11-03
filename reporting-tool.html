@@ -22,7 +22,7 @@ title: Baseline Reporting Tool
       </fieldset>
     </form>
     <div class="reporting-actions"><button class="usa-button usa-button--outline" id="resume" type="button" disabled>Restore browser autosave</button><button class="usa-button usa-button--unstyled" id="clear-saved" type="button" disabled>Delete browser autosave</button></div>
-    <label class="usa-label" for="import-record">Reopen a reporting JSON file</label><input class="usa-file-input" id="import-record" type="file" accept=".json,application/json" disabled aria-describedby="import-help"><p id="import-help" class="usa-hint">Use reporting format 1.0.0. Import replaces the current workspace after confirmation.</p>
+    <div id="record-import-fields" hidden><label class="usa-label" for="import-record">Reopen a reporting JSON file</label><input class="usa-file-input" id="import-record" type="file" accept=".json,application/json" aria-describedby="import-help"><p id="import-help" class="usa-hint">Use reporting format 1.0.0. Import replaces the current workspace after confirmation.</p></div>
   </section>
   <div id="workspace" hidden>
     <p id="record-summary" class="reporting-summary" tabindex="-1"></p>
@@ -44,7 +44,7 @@ title: Baseline Reporting Tool
       <p>Describe the combination of tools, manual procedures, and decision rules used. For an AI/SI component, choose <strong>ai-si-tool</strong> to record its agent/model setup, instructions, access, and human responsibilities. A rule mapping records a claimed contribution; it does not prove complete coverage.</p>
       <form id="process-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Process description</legend><div id="process-fields" class="reporting-grid"></div></fieldset></form>
       <div class="reporting-actions"><button class="usa-button usa-button--outline" id="export-profile" type="button">Download process profile</button></div>
-      <label class="usa-label" for="import-profile">Use a saved process profile</label><input class="usa-file-input" id="import-profile" type="file" accept=".json,application/json">
+      <div id="profile-import-fields"><label class="usa-label" for="import-profile">Use a saved process profile</label><input class="usa-file-input" id="import-profile" type="file" accept=".json,application/json"></div>
       <h3>Components</h3><div id="components-list"></div>
       <details class="reporting-details" id="component-details"><summary>Add or edit a component</summary><form id="component-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Component editor</legend><div id="component-fields" class="reporting-grid"></div><button class="usa-button" type="submit">Save component</button><button class="usa-button usa-button--unstyled" type="button" id="component-new">Clear component editor</button></fieldset></form></details>
       <h3>Rules and procedure mappings</h3><div id="rules-list"></div>
@@ -87,7 +87,13 @@ title: Baseline Reporting Tool
       <section id="evaluator-panel" aria-labelledby="evaluator-title">
         <h3 id="evaluator-title">Evaluator comparison</h3><p>Public case IDs and sample names can reveal outcomes. These inputs are not blinded. Expectations are loaded only when you choose to compare after freezing.</p>
         <button class="usa-button usa-button--outline" id="freeze" type="button">Freeze and download candidate</button><button class="usa-button usa-button--outline" id="download-candidate" type="button" hidden>Download original candidate again</button>
-        <p id="freeze-status" tabindex="-1"></p><label class="usa-label" for="verify-candidate">Verify a frozen candidate file for an imported evaluator record</label><input class="usa-file-input" id="verify-candidate" type="file" accept=".json,application/json">
+        <p id="freeze-status" tabindex="-1"></p>
+        <p id="verification-prerequisite">To verify a saved candidate, first <a href="#import-record">reopen its evaluator JSON record</a>. For a new evaluation, finalize the record, then freeze and download its candidate.</p>
+        <div id="candidate-verification-fields" hidden>
+          <label class="usa-label" for="verify-candidate">Choose the original frozen candidate JSON file</label>
+          <p class="usa-hint" id="verify-candidate-help">Select the exact candidate download saved before evaluator comparison, up to 10 MB. The tool will check it against the frozen hash above. Press Tab to focus the picker, then Enter or Space to open the file browser.</p>
+          <input class="usa-file-input" id="verify-candidate" type="file" accept=".json,application/json" aria-describedby="verify-candidate-help">
+        </div>
         <label class="usa-label" for="evaluator-name">Evaluator name</label><input class="usa-input" id="evaluator-name" type="text"><button class="usa-button" id="compare" type="button">Load expectations and compare</button><div id="comparisons-list"></div>
       </section>
       <h3>Download your record</h3><p>JSON preserves the complete editable record. CSV files contain related tables with nested values encoded as JSON within cells. The HTML report is standalone and includes all recorded details.</p>

@@ -454,11 +454,15 @@ function lock() {
   const locked = current.lifecycle === 'final' || !!current.candidate_freeze;
   root.querySelectorAll('[data-editable]').forEach(f => { f.disabled = locked; });
   $('locked-notice').hidden = !locked;
-  for (const id of ['import-profile','manual-rules','add-observation','finalize']) $(id).disabled = locked;
+  for (const id of ['manual-rules','add-observation','finalize']) $(id).disabled = locked;
+  // Keep enhanced file inputs enabled. USWDS initializes their disabled styling
+  // once; visibility communicates workflow eligibility without stale widget state.
+  $('profile-import-fields').hidden = locked;
   $('evaluator-panel').hidden = current.purpose !== 'process-evaluation';
   $('freeze').disabled = !!current.candidate_freeze;
   $('compare').disabled = !current.candidate_freeze || !candidate;
-  $('verify-candidate').disabled = !current.candidate_freeze;
+  $('candidate-verification-fields').hidden = !current.candidate_freeze || !!candidate;
+  $('verification-prerequisite').hidden = !!current.candidate_freeze;
   $('download-candidate').hidden = !candidateText;
   $('freeze-status').textContent = current.candidate_freeze ? `Frozen SHA-256: ${current.candidate_freeze.sha256}. ${candidate ? 'Candidate verified in this session.' : 'Choose the original candidate file to verify it.'}` : 'No candidate frozen. Finalize before freezing.';
 }
@@ -493,6 +497,7 @@ action('start-form','submit', async () => {
   await loadRecord(record); $('run-id').focus();
 });
 action('import-record','change', async () => {
+  if (!$('import-record').files.length) return;
   try { pending(); const text = await readFile($('import-record')); if (!confirmReplace()) return; await loadRecord(JSON.parse(text)); }
   finally { $('import-record').value = ''; }
 });
@@ -563,6 +568,7 @@ action('export-profile','click', () => {
   download(serialize(profile), `${safeName(current.process.name)}-profile.json`);
 });
 action('import-profile','change', async () => {
+  if (!$('import-profile').files.length) return;
   try {
     editable(); pending(); if (current.results.some(r => r.status !== 'not-tested' || r.component_ids.length || r.rule_ids.length || r.evidence_ids.length)) throw new Error('Import a process profile before recording observations, or start a new run.');
     const profile = JSON.parse(await readFile($('import-profile')));
@@ -652,7 +658,14 @@ action('freeze','click', async () => {
 });
 action('download-candidate','click', () => download(candidateText,current.candidate_freeze.path_or_url));
 action('verify-candidate','change', async () => {
-  try { const text = await readFile($('verify-candidate')); candidate = await verifyCandidate(current,text); candidateText = text; lock(); changed(); announce('Frozen candidate hash and contents verified. Evaluator expectations have not been loaded.'); }
+  if (!$('verify-candidate').files.length) return;
+  try {
+    if (!current?.candidate_freeze) throw new Error('Reopen the evaluator JSON record containing the frozen candidate hash before selecting the candidate file.');
+    const text = await readFile($('verify-candidate'));
+    candidate = await verifyCandidate(current,text); candidateText = text;
+    lock(); changed(); $('freeze-status').focus();
+    announce('Frozen candidate hash and contents verified. Evaluator expectations have not been loaded.');
+  }
   finally { $('verify-candidate').value = ''; }
 });
 action('compare','click', async () => {
@@ -694,6 +707,6 @@ try {
   if (!catalog?.domains?.web || !cases?.length) throw new Error('Reporting build data is missing. Restart Jekyll after adding the generator plugin.');
   try { store = await openWorkspaceStore(base.pathname); if (await store.read()) { $('resume').disabled = false; $('clear-saved').disabled = false; } }
   catch { announce('Browser autosave is unavailable. Download JSON regularly.'); }
-  $('start-fields').disabled = false; $('import-record').disabled = false;
+  $('start-fields').disabled = false; $('record-import-fields').hidden = false;
   announce(store ? 'Ready. Create, reopen, or restore a record.' : 'Ready. Browser autosave unavailable; use JSON downloads to keep your work.');
 } catch (error) { showErrors([error.message]); announce('Reporting resources could not be loaded. Your saved downloads have not been changed.'); }
