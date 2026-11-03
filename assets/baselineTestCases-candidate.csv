@@ -1,0 +1,6 @@
+---
+layout: null
+---
+suite_id,suite_version,framework_revision,case_id,domain,sample_url,sample_sha256,case_version,procedure_keys
+{% assign catalog = site.data.reporting_candidates %}{% for item in catalog.cases %}"{{ catalog.suite_id | replace: '"', '""' }}","{{ catalog.suite_version | replace: '"', '""' }}","{{ catalog.framework_revision }}","{{ item.case_id | replace: '"', '""' }}",web,"{{ item.sample | relative_url | replace: '"', '""' }}","{{ item.sample_sha256 }}","{{ item.case_version | replace: '"', '""' }}","{{ item.procedure_keys | join: ';' | replace: '"', '""' }}"
+{% endfor %}

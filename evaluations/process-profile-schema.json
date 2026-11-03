@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gsa.github.io/baselinealignment/evaluations/process-profile-schema.json",
+  "title": "Reusable process profile 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "process": {
+      "$ref": "results-schema.json#/$defs/process"
+    }
+  },
+  "required": [
+    "schema_version",
+    "process"
+  ]
+}

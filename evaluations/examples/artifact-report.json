@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "artifact-report",
+  "record_kind": "illustrative",
+  "lifecycle": "draft",
+  "suite": null,
+  "baselines": [
+    {
+      "domain": "web",
+      "version": "3.1",
+      "source_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2"
+    }
+  ],
+  "run": {
+    "id": "illustrative-artifact-run",
+    "stage": "initial",
+    "performed_at": "2026-11-03T15:00:00Z",
+    "status": "in-progress",
+    "prior_run_id": null
+  },
+  "process": {
+    "id": "illustrative-hybrid",
+    "name": "Illustrative image testing process",
+    "version": "example-1",
+    "description": "Fictional scanner plus manual review used only to illustrate this data contract.",
+    "owner": "Fictional team",
+    "components": [
+      {
+        "id": "scanner",
+        "name": "Example scanner",
+        "type": "automated-tool",
+        "version": "example-1",
+        "configuration": "Fictional example configuration.",
+        "procedures_addressed": [
+          "web:6.A-MeaningfulImage"
+        ],
+        "limitations": [
+          "Illustrative only."
+        ],
+        "profile": null
+      },
+      {
+        "id": "manual",
+        "name": "Manual image review",
+        "type": "manual-procedure",
+        "version": "example-1",
+        "configuration": "Fictional example configuration.",
+        "procedures_addressed": [
+          "web:6.A-MeaningfulImage"
+        ],
+        "limitations": [
+          "Illustrative only."
+        ],
+        "profile": null
+      }
+    ],
+    "rules": [
+      {
+        "id": "auto-alt",
+        "component_id": "scanner",
+        "external_id": "IMG-001",
+        "name": "Alternative presence",
+        "version": "example-1",
+        "source": null
+      },
+      {
+        "id": "manual-alt",
+        "component_id": "manual",
+        "external_id": "MAN-IMG-02",
+        "name": "Alternative equivalence",
+        "version": "example-1",
+        "source": null
+      }
+    ],
+    "mappings": [
+      {
+        "id": "map-auto-alt",
+        "rule_ids": [
+          "auto-alt"
+        ],
+        "target_id": "web:6.A-MeaningfulImage",
+        "coverage": "contributes",
+        "rationale": "Contributes selected image checks; does not establish entire procedure coverage.",
+        "limitations": [
+          "Other scenarios remain outside this example."
+        ],
+        "review": {
+          "status": "pending",
+          "reviewers": [],
+          "evidence_ids": [],
+          "pending_work": []
+        }
+      },
+      {
+        "id": "map-manual-alt",
+        "rule_ids": [
+          "manual-alt"
+        ],
+        "target_id": "web:6.A-MeaningfulImage",
+        "coverage": "contributes",
+        "rationale": "Contributes selected image checks; does not establish entire procedure coverage.",
+        "limitations": [
+          "Other scenarios remain outside this example."
+        ],
+        "review": {
+          "status": "pending",
+          "reviewers": [],
+          "evidence_ids": [],
+          "pending_work": []
+        }
+      }
+    ],
+    "decision_rules": [
+      "Retain component observations; a reviewer resolves disagreements."
+    ],
+    "reporting_conventions": [
+      "Pass describes only the selected target and location."
+    ]
+  },
+  "environment": {
+    "operating_system": "Fictional OS 1",
+    "browser_or_native_application": "Fictional browser 1",
+    "assistive_technologies": [],
+    "input_methods": [
+      "keyboard"
+    ],
+    "viewport_or_view": "1280 x 800 (fictional)",
+    "zoom": "100%",
+    "tools": [
+      "Example scanner example-1"
+    ],
+    "additional_conditions": [
+      "Synthetic design example; no execution occurred."
+    ]
+  },
+  "scope": {
+    "domain": "web",
+    "evaluation_type": "subprocess",
+    "selection_rationale": "Illustrate two pages, component conflict, adjudication, and a remaining gap.",
+    "target_ids": [
+      "web:6.A-MeaningfulImage",
+      "web:supplemental:1.4.10"
+    ],
+    "selected_case_ids": [],
+    "uncovered_procedures": [
+      "web:supplemental:1.4.10"
+    ],
+    "dispositions": [
+      {
+        "target_id": "web:24.A-Parsing",
+        "disposition": "no-test-required",
+        "basis": "https://ictbaseline.access-board.gov/web-baselines/24Parsing/"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "page-1",
+      "domain": "web",
+      "format": "html",
+      "path_or_url": "https://example.invalid/page-1",
+      "sha256": null,
+      "case_ids": [],
+      "dependencies": []
+    },
+    {
+      "id": "page-2",
+      "domain": "web",
+      "format": "html",
+      "path_or_url": "https://example.invalid/page-2",
+      "sha256": null,
+      "case_ids": [],
+      "dependencies": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-manual-observation",
+      "description": "Fictional evidence narrative; no real execution or attachment.",
+      "path_or_url": null,
+      "sha256": null
+    },
+    {
+      "id": "evidence-reviewed-determination",
+      "description": "Fictional evidence narrative; no real execution or attachment.",
+      "path_or_url": null,
+      "sha256": null
+    },
+    {
+      "id": "evidence-scanner-observation",
+      "description": "Fictional evidence narrative; no real execution or attachment.",
+      "path_or_url": null,
+      "sha256": null
+    }
+  ],
+  "results": [
+    {
+      "id": "scanner-observation",
+      "kind": "component-observation",
+      "artifact_id": "page-1",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": null,
+      "status": "pass",
+      "completeness": "complete",
+      "component_ids": [
+        "scanner"
+      ],
+      "rule_ids": [
+        "auto-alt"
+      ],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-scanner-observation"
+      ],
+      "rationale": "Fictional observation for data-model illustration.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "manual-observation",
+      "kind": "component-observation",
+      "artifact_id": "page-1",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": null,
+      "status": "fail",
+      "completeness": "complete",
+      "component_ids": [
+        "manual"
+      ],
+      "rule_ids": [
+        "manual-alt"
+      ],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-manual-observation"
+      ],
+      "rationale": "Fictional manual finding: the supplied alternative does not convey the image meaning.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "reviewed-determination",
+      "kind": "process-determination",
+      "artifact_id": "page-1",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": null,
+      "status": "fail",
+      "completeness": "complete",
+      "component_ids": [
+        "scanner",
+        "manual"
+      ],
+      "rule_ids": [
+        "auto-alt",
+        "manual-alt"
+      ],
+      "observation_ids": [
+        "scanner-observation",
+        "manual-observation"
+      ],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-reviewed-determination"
+      ],
+      "rationale": "Fictional reviewer resolves disagreement: presence alone does not establish equivalent meaning.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "pending-page",
+      "kind": "process-determination",
+      "artifact_id": "page-2",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": null,
+      "status": "not-tested",
+      "completeness": "not-started",
+      "component_ids": [],
+      "rule_ids": [],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [],
+      "rationale": "No observation has been made.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "pending",
+        "reviewers": [],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "reflow-gap",
+      "kind": "process-determination",
+      "artifact_id": "page-1",
+      "target_id": "web:supplemental:1.4.10",
+      "case_id": null,
+      "status": "not-tested",
+      "completeness": "not-started",
+      "component_ids": [],
+      "rule_ids": [],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [],
+      "rationale": "No observation has been made.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "pending",
+        "reviewers": [],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    }
+  ],
+  "case_comparisons": [],
+  "candidate_freeze": null,
+  "human_review": {
+    "status": "pending",
+    "reviewers": [],
+    "evidence_ids": [],
+    "pending_work": []
+  },
+  "limitations": [
+    "Synthetic artifact report only; example.invalid URLs are fictional.",
+    "Selected image checks do not establish page conformance."
+  ]
+}

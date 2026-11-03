@@ -4,6 +4,8 @@ This directory contains the process-neutral evaluation framework for the ICT Bas
 
 Start with the site's [Evaluating a Test Process](../evaluating-test-processes.md) guidance. These files provide the versioned corpus, coverage information, structured records and evaluator controls that support that method.
 
+**Framework test-process evaluation is Web-only.** Document procedures may be used to record results for users' own documents, but no document Framework case-evaluation workflow is available. The [reporting data model and implementation plan](../reporting-tool/README.md) defines the 1.0.0 format for Jekyll, vanilla JavaScript, and USWDS, with representative synthetic records and the deferred sample-naming work.
+
 ## Resource directory
 
 | Resource | Purpose |
@@ -12,6 +14,10 @@ Start with the site's [Evaluating a Test Process](../evaluating-test-processes.m
 | [coverage.md](coverage.md) | Shows published case availability by procedure; it does not represent execution or complete scenario coverage. |
 | [result-template.json](result-template.json) | Process-neutral starting record for an evaluation run. |
 | [results-schema.json](results-schema.json) | JSON Schema for the general result format. |
+| [process-profile-schema.json](process-profile-schema.json) | Reusable component/rule/mapping profile shared with run snapshots. |
+| [ai-si-profile-schema.json](ai-si-profile-schema.json) | Formal AI/SI component profile required for `ai-si-tool`, shared by result and reusable process records. |
+| [templates/artifact-report.json](templates/artifact-report.json) | Draft results for users' own artifacts, without Framework comparisons. |
+| [examples/](examples/) | Synthetic profile, candidate, process-evaluation, and artifact-report records. |
 | [publication-and-coverage.md](publication-and-coverage.md) | Defines evidence and publication safeguards. |
 | [validation-status.md](validation-status.md) | Separates completed structural work from pending review and execution. |
 | [evaluator/expected-outcomes.yaml](evaluator/expected-outcomes.yaml) | Controlled comparison data; freeze candidate results before use. |
@@ -43,7 +49,9 @@ Component types include manual procedures, automated tools, browser tools, assis
 
 The Accessibility SI collection supplies an [AI/SI evaluation profile](../accessibility-si/evaluations/ai-si-profile.md) and retains its 0.2 structured result format for compatibility. The profile adds model and agent versions, supplied instructions and context, tool access, permissions, variability controls, evaluator-expectation isolation and original-output retention.
 
-Future profiles can address manual testing, automated tools, hybrid processes and document testing while using the same manifest, controlled expectations and comparison vocabulary.
+The reporting tool supports manual, automated, and hybrid profiles. Document artifact reporting does not use the Web case manifest or Framework comparisons. See the [published user guide](../reporting-guide.md) and [maintainer README](../reporting-tool/README.md).
+
+The [AI/SI examples](examples/ai-si-process-profile.json) include a reusable configuration, a [standalone component profile](examples/ai-si-component-profile.json), [frozen candidate](examples/ai-si-process-candidate.json), and [evaluator record](examples/ai-si-process-evaluation.json). All are synthetic; no accessibility execution is asserted.
 
 ## Evaluator control
 

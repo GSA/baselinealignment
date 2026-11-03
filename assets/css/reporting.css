@@ -1,0 +1,30 @@
+#reporting-app { max-width: 78rem; }
+#reporting-app [hidden] { display: none !important; }
+.reporting-form { max-width: none; margin-bottom: 1.5rem; }
+#reporting-app .usa-fieldset { min-inline-size: 0; }
+#freeze-status { overflow-wrap: anywhere; }
+.reporting-grid { display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit,minmax(min(100%,22rem),1fr)); }
+.reporting-grid, .reporting-field { min-width: 0; }
+.reporting-field .usa-label { margin-top: .5rem; }
+.reporting-field .usa-input,.reporting-field .usa-select,.reporting-field .usa-textarea { max-width: none; }
+.reporting-field .usa-select[multiple] { height: auto; min-height: 8rem; }
+.reporting-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
+.reporting-actions .usa-button { margin: 0; }
+.reporting-details { border: 1px solid #757575; margin: 1rem 0; padding: .85rem; }
+.reporting-details > summary { cursor: pointer; font-weight: 700; padding: .4rem; }
+.reporting-table-scroll { overflow-x: auto; max-width: 100%; margin-bottom: 1rem; }
+.reporting-table-scroll table { width: 100%; }
+.reporting-table-scroll th,.reporting-table-scroll td { overflow-wrap: anywhere; min-width: 8rem; }
+.reporting-table-scroll button { white-space: normal; }
+.reporting-section-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding-left: 1.25rem; }
+.reporting-summary { background: #eef5fa; border-left: .4rem solid #005ea2; padding: 1rem; }
+#reporting-app section { scroll-margin-top: 6rem; margin-top: 2rem; }
+#reporting-errors { padding: 1rem 1.5rem; overflow-wrap: anywhere; }
+#reporting-app :focus-visible { outline: 3px solid #005ea2; outline-offset: 3px; }
+#reporting-app button { box-sizing: border-box; min-height: 2.25rem; max-width: 100%; white-space: normal; }
+#reporting-app .usa-checkbox { margin: .75rem 0; }
+#reporting-app .usa-checkbox__label { overflow-wrap: anywhere; }
+.reporting-target-group { margin: 1rem 0; }
+.reporting-target-group h4 { margin: .75rem 0; }
+#reporting-app input[type="file"] { max-width: 100%; }
+@media print { #reporting-app form, #reporting-app button, #reporting-app nav { display: none; } }

@@ -5,13 +5,36 @@
       <!-- Desktop nav -->
       <ul class="usa-nav__primary usa-nav__primary--desktop usa-accordion">
         {% for nav_item in site.primary_navigation %}
-        <li class="usa-nav__primary-item"><a
+        <li class="usa-nav__primary-item">
+          {% if nav_item.children %}
+          {% assign section_current = false %}
+          {% for child in nav_item.children %}
+            {% if page.url == child.url %}{% assign section_current = true %}{% endif %}
+          {% endfor %}
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link{% if section_current %} usa-current{% endif %}"
+            aria-expanded="false"
+            aria-controls="primary-nav-submenu-{{ forloop.index }}">
+            <span>{{ nav_item.name | escape }}</span>
+          </button>
+          <ul id="primary-nav-submenu-{{ forloop.index }}" class="usa-nav__submenu" hidden>
+            {% for child in nav_item.children %}
+            <li class="usa-nav__submenu-item">
+              <a href="{{ child.url | relative_url }}"{% if page.url == child.url %} class="usa-current" aria-current="page"{% endif %}><span>{{ child.name | escape }}</span></a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <a
             href="{% if nav_item.ext == true %}{{ nav_item.url }}{% else %}{{ nav_item.url | prepend: site.baseurl }}{% endif %}"
             data-page-url="{{ page.url }}"
             data-nav-item-url="{{ nav_item.url }}"
             class="usa-nav__link{% if page.url == nav_item.url %} usa-current{% endif %}"
             aria-label="{{ nav_item.name }} menu link"
-            {% if nav_item.ext == true %}target="_blank"{% endif %}><span{% if nav_item.ext == true %} class="usa-link--external"{% endif %}>{{ nav_item.name }}</span></a></li>
+            {% if nav_item.ext == true %}target="_blank"{% endif %}><span{% if nav_item.ext == true %} class="usa-link--external"{% endif %}>{{ nav_item.name }}</span></a>
+          {% endif %}
+        </li>
 
         {% endfor %}
 

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "artifact-report",
+  "record_kind": "actual",
+  "lifecycle": "draft",
+  "suite": null,
+  "baselines": [
+    {
+      "domain": "web",
+      "version": "3.1",
+      "source_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2"
+    }
+  ],
+  "run": {
+    "id": "draft-run",
+    "stage": "initial",
+    "performed_at": null,
+    "status": "planned",
+    "prior_run_id": null
+  },
+  "process": {
+    "id": "process-to-be-defined",
+    "name": "Untitled process",
+    "version": "unversioned-draft",
+    "description": "Draft process definition; configure before execution.",
+    "owner": "unassigned",
+    "components": [
+      {
+        "id": "manual",
+        "name": "Manual review",
+        "type": "manual-procedure",
+        "version": "unversioned-draft",
+        "configuration": "Not configured.",
+        "procedures_addressed": [],
+        "limitations": [],
+        "profile": null
+      }
+    ],
+    "rules": [],
+    "mappings": [],
+    "decision_rules": [],
+    "reporting_conventions": []
+  },
+  "environment": null,
+  "scope": {
+    "domain": "web",
+    "evaluation_type": "full-process",
+    "selection_rationale": null,
+    "target_ids": [],
+    "selected_case_ids": [],
+    "uncovered_procedures": [],
+    "dispositions": [
+      {
+        "target_id": "web:24.A-Parsing",
+        "disposition": "no-test-required",
+        "basis": "https://ictbaseline.access-board.gov/web-baselines/24Parsing/"
+      }
+    ]
+  },
+  "artifacts": [],
+  "evidence": [],
+  "results": [],
+  "case_comparisons": [],
+  "candidate_freeze": null,
+  "human_review": {
+    "status": "pending",
+    "reviewers": [],
+    "evidence_ids": [],
+    "pending_work": []
+  },
+  "limitations": [
+    "Draft only; no tests have been executed."
+  ]
+}

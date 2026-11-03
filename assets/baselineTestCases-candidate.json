@@ -1,0 +1,21 @@
+---
+layout: null
+---
+{% assign catalog = site.data.reporting_candidates %}{
+  "catalog_version": "1.0.0",
+  "suite_id": {{ catalog.suite_id | jsonify }},
+  "suite_version": {{ catalog.suite_version | jsonify }},
+  "framework_revision": {{ catalog.framework_revision | jsonify }},
+  "evaluation_domain": "web",
+  "isolation_status": "expected-fields-omitted-public-identifiers-still-outcome-bearing",
+  "cases": [{% for item in catalog.cases %}
+    {
+      "case_id": {{ item.case_id | jsonify }},
+      "domain": "web",
+      "sample_url": {{ item.sample | relative_url | jsonify }},
+      "sample_sha256": {{ item.sample_sha256 | jsonify }},
+      "case_version": {{ item.case_version | jsonify }},
+      "procedure_keys": {{ item.procedure_keys | jsonify }}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}

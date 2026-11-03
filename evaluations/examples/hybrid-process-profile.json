@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "process": {
+    "id": "illustrative-hybrid",
+    "name": "Illustrative image testing process",
+    "version": "example-1",
+    "description": "Fictional scanner plus manual review used only to illustrate this data contract.",
+    "owner": "Fictional team",
+    "components": [
+      {
+        "id": "scanner",
+        "name": "Example scanner",
+        "type": "automated-tool",
+        "version": "example-1",
+        "configuration": "Fictional example configuration.",
+        "procedures_addressed": [
+          "web:6.A-MeaningfulImage"
+        ],
+        "limitations": [
+          "Illustrative only."
+        ],
+        "profile": null
+      },
+      {
+        "id": "manual",
+        "name": "Manual image review",
+        "type": "manual-procedure",
+        "version": "example-1",
+        "configuration": "Fictional example configuration.",
+        "procedures_addressed": [
+          "web:6.A-MeaningfulImage"
+        ],
+        "limitations": [
+          "Illustrative only."
+        ],
+        "profile": null
+      }
+    ],
+    "rules": [
+      {
+        "id": "auto-alt",
+        "component_id": "scanner",
+        "external_id": "IMG-001",
+        "name": "Alternative presence",
+        "version": "example-1",
+        "source": null
+      },
+      {
+        "id": "manual-alt",
+        "component_id": "manual",
+        "external_id": "MAN-IMG-02",
+        "name": "Alternative equivalence",
+        "version": "example-1",
+        "source": null
+      }
+    ],
+    "mappings": [
+      {
+        "id": "map-auto-alt",
+        "rule_ids": [
+          "auto-alt"
+        ],
+        "target_id": "web:6.A-MeaningfulImage",
+        "coverage": "contributes",
+        "rationale": "Contributes selected image checks; does not establish entire procedure coverage.",
+        "limitations": [
+          "Other scenarios remain outside this example."
+        ],
+        "review": {
+          "status": "pending",
+          "reviewers": [],
+          "evidence_ids": [],
+          "pending_work": []
+        }
+      },
+      {
+        "id": "map-manual-alt",
+        "rule_ids": [
+          "manual-alt"
+        ],
+        "target_id": "web:6.A-MeaningfulImage",
+        "coverage": "contributes",
+        "rationale": "Contributes selected image checks; does not establish entire procedure coverage.",
+        "limitations": [
+          "Other scenarios remain outside this example."
+        ],
+        "review": {
+          "status": "pending",
+          "reviewers": [],
+          "evidence_ids": [],
+          "pending_work": []
+        }
+      }
+    ],
+    "decision_rules": [
+      "Retain component observations; a reviewer resolves disagreements."
+    ],
+    "reporting_conventions": [
+      "Pass describes only the selected target and location."
+    ]
+  }
+}
