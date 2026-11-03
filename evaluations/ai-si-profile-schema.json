@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gsa.github.io/baselinealignment/evaluations/ai-si-profile-schema.json",
+  "title": "AI/SI component profile 1.0",
+  "$ref": "results-schema.json#/$defs/ai-si-profile"
+}

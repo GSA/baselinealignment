@@ -4,11 +4,12 @@
         padding-left: 2rem !important;
     }
 }
-.baseline-menu .usa-nav__primary > .usa-nav__primary-item > a {
+.baseline-menu .usa-nav__primary > .usa-nav__primary-item > .usa-nav__link {
     font-weight: normal;
 }
 
-.baseline-menu .usa-nav__primary > .usa-nav__primary-item > a:hover {
+.baseline-menu .usa-nav__primary > .usa-nav__primary-item > a:hover,
+.baseline-menu .usa-nav__primary > .usa-nav__primary-item > button[aria-expanded="false"]:hover {
     color: #005ea2;
 }
 

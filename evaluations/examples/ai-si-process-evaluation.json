@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "process-evaluation",
+  "record_kind": "illustrative",
+  "lifecycle": "final",
+  "suite": {
+    "id": "framework-web-documents",
+    "version": "0.2.0",
+    "framework_revision": "b3da9104ab949808d7c082e701a22f7e2bb696fc",
+    "manifest_sha256": "580af2a543f2ea6c63799661756cd8c0880dab8dbb1302f7454fd05fb9a1c70d",
+    "expectations_sha256": "d6f6e6681238ae27d3cd508f8ce11dffd6ba3f528f9f4558e381993a7b2ba1fe"
+  },
+  "baselines": [
+    {
+      "domain": "web",
+      "version": "3.1",
+      "source_revision": "082e144ef2219bb66ce530018e1e4fb2534352b2"
+    }
+  ],
+  "run": {
+    "id": "illustrative-ai-process-run",
+    "stage": "initial",
+    "performed_at": "2026-11-03T15:00:00Z",
+    "status": "completed",
+    "prior_run_id": null
+  },
+  "process": {
+    "id": "illustrative-ai-hybrid",
+    "name": "Illustrative AI/SI and manual image process",
+    "version": "example-1",
+    "description": "Fictional scanner plus manual review used only to illustrate this data contract.",
+    "owner": "Fictional team",
+    "components": [
+      {
+        "id": "ai-agent",
+        "name": "Illustrative AI agent",
+        "type": "ai-si-tool",
+        "version": "example-1",
+        "configuration": "Fictional example configuration.",
+        "procedures_addressed": [
+          "web:6.A-MeaningfulImage"
+        ],
+        "limitations": [
+          "Illustrative only."
+        ],
+        "profile": {
+          "profile_type": "ai-si",
+          "profile_version": "1.0.0",
+          "agent": {
+            "provider": "Fictional agent maintainer",
+            "name": "Illustrative agent",
+            "version": "example-1"
+          },
+          "model": {
+            "provider": "Fictional model provider",
+            "name": "Illustrative model",
+            "version": "example-1"
+          },
+          "instructions": {
+            "system": "Synthetic instruction: record observations and capability gaps without inferring passes.",
+            "project": "Not used in this fictional configuration; no project instructions were supplied.",
+            "skills": "Synthetic image-review skill example-1; controlled reference: synthetic/skill.txt.",
+            "task": "Synthetic task: inspect the supplied image case and retain original output for human review."
+          },
+          "context": {
+            "supplied_files": [
+              "Synthetic fixture inputs selected by the evaluator."
+            ],
+            "retrieval_sources": [],
+            "boundaries": "Only candidate fixture inputs and procedure information; explanatory case documents and evaluator expectations withheld."
+          },
+          "access": {
+            "tools": [
+              "Fictional browser inspection tool example-1"
+            ],
+            "permissions": "Read-only inspection of supplied fixtures; no repository mutation.",
+            "network": "Fixture server only in the illustrative configuration; no external retrieval.",
+            "applications": [
+              "Fictional browser example-1"
+            ]
+          },
+          "execution": {
+            "environment": "Synthetic browser environment; see the run environment for its snapshot.",
+            "human_responsibilities": "A fictional human reviewer checks image equivalence, resolves disagreements and accepts the report.",
+            "referral_conditions": [
+              "Image meaning cannot be established from available evidence."
+            ]
+          },
+          "variability": {
+            "settings": "Synthetic configuration; temperature/seed controls unavailable and not inferred.",
+            "sampling_plan": "One fictional run per selected case. No actual executions occurred.",
+            "retry_policy": "No automatic retries in this illustrative setup.",
+            "rerun_policy": "Retain prior results and create a linked new run after configuration changes.",
+            "output_selection_policy": "Retain all original outputs; do not select only favorable classifications."
+          },
+          "output_retention": {
+            "policy": "Retain original output separately from reviewer conclusions, with file references and SHA-256 where available. Synthetic references below are not actual attachments.",
+            "original_outputs": [
+              {
+                "path_or_url": "synthetic/agent-run-output.txt",
+                "sha256": null
+              }
+            ],
+            "unavailable_reason": null
+          },
+          "isolation": {
+            "method": "Public inputs, not blinded. Explicit expected results withheld until candidate freeze, with outcome-bearing names still present.",
+            "known_exposure_paths": [
+              "Public case IDs, sample filenames and fixture content can disclose expectations."
+            ],
+            "transformations": [
+              "No fixture renaming or behavior transformation in this illustrative setup."
+            ]
+          },
+          "capability_limits": [
+            "This fictional component cannot establish image equivalence or whole-page conformance without human evidence."
+          ]
+        }
+      },
+      {
+        "id": "manual",
+        "name": "Manual image review",
+        "type": "manual-procedure",
+        "version": "example-1",
+        "configuration": "Fictional example configuration.",
+        "procedures_addressed": [
+          "web:6.A-MeaningfulImage"
+        ],
+        "limitations": [
+          "Illustrative only."
+        ],
+        "profile": null
+      }
+    ],
+    "rules": [
+      {
+        "id": "ai-image-rule",
+        "component_id": "ai-agent",
+        "external_id": "AIS-IMG-001",
+        "name": "AI-assisted image observation",
+        "version": "example-1",
+        "source": null
+      },
+      {
+        "id": "manual-alt",
+        "component_id": "manual",
+        "external_id": "MAN-IMG-02",
+        "name": "Alternative equivalence",
+        "version": "example-1",
+        "source": null
+      }
+    ],
+    "mappings": [
+      {
+        "id": "map-auto-alt",
+        "rule_ids": [
+          "ai-image-rule"
+        ],
+        "target_id": "web:6.A-MeaningfulImage",
+        "coverage": "contributes",
+        "rationale": "Contributes selected image checks; does not establish entire procedure coverage.",
+        "limitations": [
+          "Other scenarios remain outside this example."
+        ],
+        "review": {
+          "status": "pending",
+          "reviewers": [],
+          "evidence_ids": [],
+          "pending_work": []
+        }
+      },
+      {
+        "id": "map-manual-alt",
+        "rule_ids": [
+          "manual-alt"
+        ],
+        "target_id": "web:6.A-MeaningfulImage",
+        "coverage": "contributes",
+        "rationale": "Contributes selected image checks; does not establish entire procedure coverage.",
+        "limitations": [
+          "Other scenarios remain outside this example."
+        ],
+        "review": {
+          "status": "pending",
+          "reviewers": [],
+          "evidence_ids": [],
+          "pending_work": []
+        }
+      }
+    ],
+    "decision_rules": [
+      "Retain component observations; a reviewer resolves disagreements."
+    ],
+    "reporting_conventions": [
+      "Pass describes only the selected target and location."
+    ]
+  },
+  "environment": {
+    "operating_system": "Fictional OS 1",
+    "browser_or_native_application": "Fictional browser 1",
+    "assistive_technologies": [],
+    "input_methods": [
+      "keyboard"
+    ],
+    "viewport_or_view": "1280 x 800 (fictional)",
+    "zoom": "100%",
+    "tools": [
+      "Example scanner example-1"
+    ],
+    "additional_conditions": [
+      "Synthetic design example; no execution occurred."
+    ]
+  },
+  "scope": {
+    "domain": "web",
+    "evaluation_type": "subprocess",
+    "selection_rationale": "Illustrate matched, mismatched, and not-compared cases for one procedure.",
+    "target_ids": [
+      "web:6.A-MeaningfulImage"
+    ],
+    "selected_case_ids": [
+      "TC06.A-1-fail-1",
+      "TC06.A-2-fail-1",
+      "TC06.A-3-fail-1"
+    ],
+    "uncovered_procedures": [],
+    "dispositions": [
+      {
+        "target_id": "web:24.A-Parsing",
+        "disposition": "no-test-required",
+        "basis": "https://ictbaseline.access-board.gov/web-baselines/24Parsing/"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "sample-1",
+      "domain": "web",
+      "format": "html",
+      "path_or_url": "testfiles/TF06/06.A-1-fail-1.html",
+      "sha256": "1cbc28cf00e35f3022e05793c91871709fa7c7e64d575055d030622eb6b166ba",
+      "case_ids": [
+        "TC06.A-1-fail-1"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "sample-2",
+      "domain": "web",
+      "format": "html",
+      "path_or_url": "testfiles/TF06/06.A-2-fail-1.html",
+      "sha256": "afea3404b8540112687a1180a27123db9213414ea958713c86049a9b058c5e12",
+      "case_ids": [
+        "TC06.A-2-fail-1"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "sample-3",
+      "domain": "web",
+      "format": "html",
+      "path_or_url": "testfiles/TF06/06.A-3-fail-1.html",
+      "sha256": "534ff5bb27e88b1355176061dbadb1c36438510f65c4b9ddccde680a55500e6a",
+      "case_ids": [
+        "TC06.A-3-fail-1"
+      ],
+      "dependencies": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-determination-1",
+      "description": "Fictional evidence narrative; no real execution or attachment.",
+      "path_or_url": null,
+      "sha256": null
+    },
+    {
+      "id": "evidence-determination-2",
+      "description": "Fictional evidence narrative; no real execution or attachment.",
+      "path_or_url": null,
+      "sha256": null
+    },
+    {
+      "id": "evidence-ai-observation",
+      "description": "Fictional AI output used only to illustrate attribution and disagreement.",
+      "path_or_url": null,
+      "sha256": null
+    }
+  ],
+  "results": [
+    {
+      "id": "ai-observation-1",
+      "kind": "component-observation",
+      "artifact_id": "sample-1",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": "TC06.A-1-fail-1",
+      "status": "pass",
+      "completeness": "complete",
+      "component_ids": [
+        "ai-agent"
+      ],
+      "rule_ids": [
+        "ai-image-rule"
+      ],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-ai-observation"
+      ],
+      "rationale": "Synthetic AI observation misses the image-equivalence problem; no accessibility test actually occurred.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "pending",
+        "reviewers": [],
+        "evidence_ids": [],
+        "pending_work": [
+          "Human image-equivalence review."
+        ]
+      }
+    },
+    {
+      "id": "observation-1",
+      "kind": "component-observation",
+      "artifact_id": "sample-1",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": "TC06.A-1-fail-1",
+      "status": "fail",
+      "completeness": "complete",
+      "component_ids": [
+        "manual"
+      ],
+      "rule_ids": [
+        "manual-alt"
+      ],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-determination-1"
+      ],
+      "rationale": "Fictional observation for data-model illustration.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "determination-1",
+      "kind": "process-determination",
+      "artifact_id": "sample-1",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": "TC06.A-1-fail-1",
+      "status": "fail",
+      "completeness": "complete",
+      "component_ids": [
+        "manual",
+        "ai-agent"
+      ],
+      "rule_ids": [
+        "manual-alt",
+        "ai-image-rule"
+      ],
+      "observation_ids": [
+        "observation-1",
+        "ai-observation-1"
+      ],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-determination-1"
+      ],
+      "rationale": "Fictional reviewer retains the manual failure despite the conflicting synthetic AI observation.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "observation-2",
+      "kind": "component-observation",
+      "artifact_id": "sample-2",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": "TC06.A-2-fail-1",
+      "status": "pass",
+      "completeness": "complete",
+      "component_ids": [
+        "manual"
+      ],
+      "rule_ids": [
+        "manual-alt"
+      ],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-determination-2"
+      ],
+      "rationale": "Fictional observation for data-model illustration.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "determination-2",
+      "kind": "process-determination",
+      "artifact_id": "sample-2",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": "TC06.A-2-fail-1",
+      "status": "pass",
+      "completeness": "complete",
+      "component_ids": [
+        "manual"
+      ],
+      "rule_ids": [
+        "manual-alt"
+      ],
+      "observation_ids": [
+        "observation-2"
+      ],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [
+        "evidence-determination-2"
+      ],
+      "rationale": "Fictional observation for data-model illustration.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "completed",
+        "reviewers": [
+          "Fictional reviewer"
+        ],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    },
+    {
+      "id": "determination-3",
+      "kind": "process-determination",
+      "artifact_id": "sample-3",
+      "target_id": "web:6.A-MeaningfulImage",
+      "case_id": "TC06.A-3-fail-1",
+      "status": "not-tested",
+      "completeness": "not-started",
+      "component_ids": [],
+      "rule_ids": [],
+      "observation_ids": [],
+      "locations": [
+        {
+          "kind": "whole-artifact",
+          "value": "Selected image scenario",
+          "state": null
+        }
+      ],
+      "evidence_ids": [],
+      "rationale": "Fictional observation for data-model illustration.",
+      "limitations": [
+        "Synthetic example only."
+      ],
+      "review": {
+        "status": "pending",
+        "reviewers": [],
+        "evidence_ids": [],
+        "pending_work": []
+      }
+    }
+  ],
+  "case_comparisons": [
+    {
+      "id": "comparison-1",
+      "result_id": "determination-1",
+      "expected_status": "fail",
+      "comparison": "matched",
+      "expectation_version": "d6f6e6681238ae27d3cd508f8ce11dffd6ba3f528f9f4558e381993a7b2ba1fe",
+      "evaluator": "Fictional evaluator",
+      "rationale": "Synthetic comparison only; expectation is unreviewed."
+    },
+    {
+      "id": "comparison-2",
+      "result_id": "determination-2",
+      "expected_status": "fail",
+      "comparison": "mismatched",
+      "expectation_version": "d6f6e6681238ae27d3cd508f8ce11dffd6ba3f528f9f4558e381993a7b2ba1fe",
+      "evaluator": "Fictional evaluator",
+      "rationale": "Synthetic comparison only; expectation is unreviewed."
+    },
+    {
+      "id": "comparison-3",
+      "result_id": "determination-3",
+      "expected_status": "fail",
+      "comparison": "not-compared",
+      "expectation_version": "d6f6e6681238ae27d3cd508f8ce11dffd6ba3f528f9f4558e381993a7b2ba1fe",
+      "evaluator": "Fictional evaluator",
+      "rationale": "Synthetic comparison only; expectation is unreviewed."
+    }
+  ],
+  "candidate_freeze": {
+    "path_or_url": "ai-si-process-candidate.json",
+    "sha256": "a6160277a1d3620d9ea81d81f5fa826f0717f386079f89a32987ec18b3faefb8",
+    "frozen_at": "2026-11-03T15:01:00Z",
+    "isolation": "public-inputs-outcome-bearing",
+    "transformations": [
+      "No neutral renaming; IDs and sample names remain outcome-bearing."
+    ]
+  },
+  "human_review": {
+    "status": "pending",
+    "reviewers": [],
+    "evidence_ids": [],
+    "pending_work": []
+  },
+  "limitations": [
+    "Entirely synthetic example. No process or sample was tested; no alignment claim is made.",
+    "Source expectations remain pending human review."
+  ]
+}

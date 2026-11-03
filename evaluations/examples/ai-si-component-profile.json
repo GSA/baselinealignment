@@ -1,0 +1,68 @@
+{
+  "profile_type": "ai-si",
+  "profile_version": "1.0.0",
+  "agent": {
+    "provider": "Fictional agent maintainer",
+    "name": "Illustrative agent",
+    "version": "example-1"
+  },
+  "model": {
+    "provider": "Fictional model provider",
+    "name": "Illustrative model",
+    "version": "example-1"
+  },
+  "instructions": {
+    "system": "Synthetic instruction: record observations and capability gaps without inferring passes.",
+    "project": "Not used in this fictional configuration; no project instructions were supplied.",
+    "skills": "Synthetic image-review skill example-1; controlled reference: synthetic/skill.txt.",
+    "task": "Synthetic task: inspect the supplied image case and retain original output for human review."
+  },
+  "context": {
+    "supplied_files": [
+      "Synthetic fixture inputs selected by the evaluator."
+    ],
+    "retrieval_sources": [],
+    "boundaries": "Only candidate fixture inputs and procedure information; explanatory case documents and evaluator expectations withheld."
+  },
+  "access": {
+    "tools": [
+      "Fictional browser inspection tool example-1"
+    ],
+    "permissions": "Read-only inspection of supplied fixtures; no repository mutation.",
+    "network": "Fixture server only in the illustrative configuration; no external retrieval.",
+    "applications": [
+      "Fictional browser example-1"
+    ]
+  },
+  "execution": {
+    "environment": "Synthetic browser environment; see the run environment for its snapshot.",
+    "human_responsibilities": "A fictional human reviewer checks image equivalence, resolves disagreements and accepts the report.",
+    "referral_conditions": [
+      "Image meaning cannot be established from available evidence."
+    ]
+  },
+  "variability": {
+    "settings": "Synthetic configuration; temperature/seed controls unavailable and not inferred.",
+    "sampling_plan": "One fictional run per selected case. No actual executions occurred.",
+    "retry_policy": "No automatic retries in this illustrative setup.",
+    "rerun_policy": "Retain prior results and create a linked new run after configuration changes.",
+    "output_selection_policy": "Retain all original outputs; do not select only favorable classifications."
+  },
+  "output_retention": {
+    "policy": "Retain original output separately from reviewer conclusions, with file references and SHA-256 where available. Synthetic references below are not actual attachments.",
+    "original_outputs": [],
+    "unavailable_reason": null
+  },
+  "isolation": {
+    "method": "Public inputs, not blinded. Explicit expected results withheld until candidate freeze, with outcome-bearing names still present.",
+    "known_exposure_paths": [
+      "Public case IDs, sample filenames and fixture content can disclose expectations."
+    ],
+    "transformations": [
+      "No fixture renaming or behavior transformation in this illustrative setup."
+    ]
+  },
+  "capability_limits": [
+    "This fictional component cannot establish image equivalence or whole-page conformance without human evidence."
+  ]
+}

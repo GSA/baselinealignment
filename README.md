@@ -13,6 +13,7 @@ Test cases and alignment guidance are still being developed. The available cases
 - Structured references to Baseline test procedures and WCAG success criteria.
 - A searchable test case index and downloadable JSON and CSV indexes.
 - A Jekyll website with shared layouts, navigation, styles, and contribution guidance.
+- A browser-based reporting workspace for Web process evaluation and results for users' own content, with reusable process profiles and JSON/CSV/HTML downloads.
 
 ## Using the Test Cases
 
@@ -41,6 +42,8 @@ Test cases are ordinary Jekyll pages in `testcases/`. The index discovers pages 
 | `index.md` | Framework purpose and introductory alignment guidance. |
 | `testcases.md` | Website test case index and download links. |
 | `evaluating-test-processes.md` | General framework for evaluating manual, automated, hybrid, and AI/SI-enabled test processes. |
+| `reporting-tool.html`, `reporting-guide.md` | Reporting workspace and published user guidance. |
+| `reporting-tool/README.md` | Excluded maintainer notes, verification evidence, and remaining reporting work. |
 | `accessibility-si.md` | Website introduction to the Accessibility SI resources and their relationship to the Framework. |
 | `accessibility-si/` | Portable accessibility instructions, skills, references, workflows, mappings, evaluation resources, and maintenance utilities. |
 | `evaluations/` | General test-process evaluation manifest, coverage inventory, result schema and template, controlled expectations, publication policy, and validation status. |
@@ -89,6 +92,8 @@ When adding a case, create its sample under the corresponding `testfiles/TF##/` 
 
 The files `assets/baselineTestCases.json` and `assets/baselineTestCases.csv` are Liquid templates populated from test case pages during the build. Update case metadata to change exported records.
 
+The additional `assets/baselineTestCases-candidate.json` and `.csv` templates use `_plugins/reporting_catalog.rb` to export allowlisted fields from `evaluations/test-manifest.yaml`. Refresh the canonical manifest after case uploads before rebuilding these indexes. They omit explicit expected outcomes and explanatory metadata; retained IDs and sample filenames still disclose outcomes. Framework process evaluation remains Web-only. See the [reporting model and implementation plan](reporting-tool/README.md) for the 1.0.0 data contract, synthetic examples, validation commands, and deferred neutral-naming work.
+
 ## Local Development
 
 Use Ruby 3.4.9 as specified in `.ruby-version`, with Bundler installed. The Gemfile permits Ruby versions from 3.4.9 up to, but excluding, 3.5.
@@ -116,7 +121,7 @@ bundle exec jekyll clean
 
 If Node.js and npm are available, `npm start`, `npm run build`, and `npm run clean` wrap these same Jekyll commands.
 
-Before submitting content changes, build the site and review the affected case, sample page, Baseline link, index entry, and exports. Confirm that the sample produces the documented result for the specified procedure. There is no automated test suite configured; `npm test` is a placeholder that exits with an error.
+Before submitting content changes, build the site and review the affected case, sample page, Baseline link, index entry, and exports. Confirm that the sample produces the documented result for the specified procedure. Reporting data and candidate exports have a Python regression suite; see the [validation commands](reporting-tool/README.md#local-development-and-verification). `npm test` runs the reporting JavaScript logic tests without installing dependencies.
 
 ## Contributing
 

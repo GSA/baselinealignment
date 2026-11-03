@@ -11,6 +11,8 @@ Test Case documents are organized by Baseline test; each ICT Baseline may corres
 
 [Download .json]({{ site.baseurl }}/assets/baselineTestCases.json) <span>|</span> [Download .csv]({{ site.baseurl }}/assets/baselineTestCases.csv)
 
+For candidate test-process inputs, download the [candidate JSON index]({{ '/assets/baselineTestCases-candidate.json' | relative_url }}) or [candidate CSV index]({{ '/assets/baselineTestCases-candidate.csv' | relative_url }}). These Web-only exports omit expected-result fields, case titles, rationale, and explanatory case-document links. Existing case IDs, filenames, and sample content can still reveal outcomes, so these exports are not blinded inputs. See the [reporting tool guidance]({{ '/reporting-guide.html' | relative_url }}).
+
 <table id="test-case-index" class="display compact" data-order='[[ 0, "asc" ]]' data-page-length='25'>
   <caption>
     Index of Baseline Alignment Framework Test Cases

@@ -2,6 +2,8 @@
 
 Use this profile with the [general test process evaluation framework](../../evaluations/README.md) when a process component uses an agent, model or other AI/SI-enabled capability.
 
+The shared reporting format 1.0.0 now formally defines the [AI/SI component profile 1.0.0](../../evaluations/ai-si-profile-schema.json), referenced by the general result and reusable process-profile schemas. A component with `type: ai-si-tool` requires this non-null structured profile. The reporting tool collects and validates its fields. See the [user guide](../../reporting-guide.md#aisi-components) and [synthetic hybrid AI/SI evaluation](../../evaluations/examples/ai-si-process-evaluation.json). The separate Accessibility SI 0.2 result format remains a distinct format; it is not automatically converted by the reporting tool.
+
 ## Required component information
 
 For each AI/SI component, record in its general result `profile` object:
@@ -15,6 +17,10 @@ For each AI/SI component, record in its general result `profile` object:
 - Retry, rerun and output-selection policy.
 - Original-output retention location and hashes where appropriate.
 - Capability limits and checks referred for qualified human review.
+
+The formal groups are `agent` (an identity object, or null for explicitly declared direct model use), `model`, `instructions`, `context`, `access`, `execution`, `variability`, `output_retention`, `isolation`, and `capability_limits`, with `profile_type: ai-si` and `profile_version: 1.0.0`. Required descriptions must contain non-whitespace text. Optional lists may be empty when no entries apply; capability limits require at least one explicit entry. Explain absent/unavailable instruction layers and controls rather than filling in presumed values.
+
+Final records attributing observed or incomplete results to an AI/SI component require original-output references or an explicit `output_retention.unavailable_reason`. References/hashes are recorded assertions; the tool does not fetch or inspect the referenced files. A missing-output explanation is a gap, not validation evidence. Reusable-profile export/import and new-run creation clear original-output references and this per-run explanation while retaining configuration and retention policy. Full report imports/exports preserve them.
 
 Do not include secrets, credentials or sensitive prompt content in a published result. Record a controlled reference or redacted description sufficient to identify the configuration.
 

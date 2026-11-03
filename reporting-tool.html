@@ -1,0 +1,99 @@
+---
+layout: page_no-toc
+title: Baseline Reporting Tool
+---
+<link rel="stylesheet" href="{{ '/assets/css/reporting.css' | relative_url }}">
+<div id="reporting-app" data-base="{{ '/' | relative_url }}">
+  <p>Evaluate a test process against <strong>Web Baseline</strong> cases, or record results for your own web content or documents. <a href="{{ '/reporting-guide.html' | relative_url }}">Read the reporting guide</a>.</p>
+  <p>Work stays in this browser unless you download or share it. Browser autosave is not a backup. Evidence files are referenced, not uploaded.</p>
+  <noscript><p class="usa-alert usa-alert--warning">JavaScript is required for this workspace. You can download the <a href="{{ '/evaluations/result-template.json' | relative_url }}">process evaluation template</a> or <a href="{{ '/evaluations/templates/artifact-report.json' | relative_url }}">artifact report template</a> and complete it with your own tools.</p></noscript>
+  <p id="reporting-status" role="status">Loading reporting resources…</p>
+  <div id="reporting-errors" class="usa-alert usa-alert--error" tabindex="-1" hidden></div>
+  <section aria-labelledby="start-title">
+    <h2 id="start-title">Start or reopen a record</h2>
+    <form id="start-form" class="usa-form reporting-form">
+      <fieldset class="usa-fieldset" disabled id="start-fields">
+        <legend class="usa-legend">Choose a purpose</legend>
+        <div class="usa-radio"><input class="usa-radio__input" id="purpose-process" type="radio" name="purpose" value="process-evaluation" checked><label class="usa-radio__label" for="purpose-process">Evaluate a test process — Web Baseline only</label></div>
+        <div class="usa-radio"><input class="usa-radio__input" id="purpose-artifact" type="radio" name="purpose" value="artifact-report"><label class="usa-radio__label" for="purpose-artifact">Record results for my own content</label></div>
+        <div id="domain-choice" hidden><label class="usa-label" for="start-domain">Content domain</label><select class="usa-select" id="start-domain"><option value="web">Web content</option><option value="documents">Non-web documents</option></select></div>
+        <div class="usa-checkbox"><input class="usa-checkbox__input" id="start-illustrative" type="checkbox"><label class="usa-checkbox__label" for="start-illustrative">Create an illustrative record (no actual testing)</label></div>
+        <button class="usa-button" type="submit">Create record</button>
+      </fieldset>
+    </form>
+    <div class="reporting-actions"><button class="usa-button usa-button--outline" id="resume" type="button" disabled>Restore browser autosave</button><button class="usa-button usa-button--unstyled" id="clear-saved" type="button" disabled>Delete browser autosave</button></div>
+    <label class="usa-label" for="import-record">Reopen a reporting JSON file</label><input class="usa-file-input" id="import-record" type="file" accept=".json,application/json" disabled aria-describedby="import-help"><p id="import-help" class="usa-hint">Use reporting format 1.0.0. Import replaces the current workspace after confirmation.</p>
+  </section>
+  <div id="workspace" hidden>
+    <p id="record-summary" class="reporting-summary" tabindex="-1"></p>
+    <p id="save-status" role="status">No changes saved yet.</p>
+    <nav aria-label="Reporting workspace"><ul class="usa-list reporting-section-links"><li><a href="#run-section">Run and environment</a></li><li><a href="#process-section">Test process</a></li><li><a href="#scope-section">Scope and artifacts</a></li><li><a href="#results-section">Results</a></li><li><a href="#review-section">Review and exports</a></li></ul></nav>
+    <p id="locked-notice" class="usa-alert usa-alert--info" hidden>This record is locked. Start a new run to record changes; download the current record before replacing it.</p>
+    <section id="run-section" aria-labelledby="run-title">
+      <h2 id="run-title">1. Run and environment</h2>
+      <form id="metadata-form" class="usa-form reporting-form">
+        <fieldset class="usa-fieldset" data-editable>
+          <legend class="usa-sr-only">Run information</legend>
+          <div class="reporting-grid" id="run-fields"></div>
+          <details class="reporting-details"><summary>Environment and conditions</summary><p>Record the actual testing environment before finalizing. Explain non-applicability rather than leaving a required field unrecorded.</p><div class="reporting-grid" id="environment-fields"></div></details>
+        </fieldset>
+      </form>
+    </section>
+    <section id="process-section" aria-labelledby="process-title">
+      <h2 id="process-title">2. Test process</h2>
+      <p>Describe the combination of tools, manual procedures, and decision rules used. For an AI/SI component, choose <strong>ai-si-tool</strong> to record its agent/model setup, instructions, access, and human responsibilities. A rule mapping records a claimed contribution; it does not prove complete coverage.</p>
+      <form id="process-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Process description</legend><div id="process-fields" class="reporting-grid"></div></fieldset></form>
+      <div class="reporting-actions"><button class="usa-button usa-button--outline" id="export-profile" type="button">Download process profile</button></div>
+      <label class="usa-label" for="import-profile">Use a saved process profile</label><input class="usa-file-input" id="import-profile" type="file" accept=".json,application/json">
+      <h3>Components</h3><div id="components-list"></div>
+      <details class="reporting-details" id="component-details"><summary>Add or edit a component</summary><form id="component-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Component editor</legend><div id="component-fields" class="reporting-grid"></div><button class="usa-button" type="submit">Save component</button><button class="usa-button usa-button--unstyled" type="button" id="component-new">Clear component editor</button></fieldset></form></details>
+      <h3>Rules and procedure mappings</h3><div id="rules-list"></div>
+      <p><button class="usa-button usa-button--outline" id="manual-rules" type="button">Add manual rules for selected targets</button></p>
+      <details class="reporting-details" id="rule-details"><summary>Add or edit a rule and its mappings</summary><form id="rule-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Rule editor</legend><div id="rule-fields" class="reporting-grid"></div><button class="usa-button" type="submit">Save rule and mappings</button><button class="usa-button usa-button--unstyled" type="button" id="rule-new">Clear rule editor</button></fieldset></form></details>
+    </section>
+    <section id="scope-section" aria-labelledby="scope-title">
+      <h2 id="scope-title">3. Scope and artifacts</h2>
+      <form id="scope-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable>
+        <legend class="usa-sr-only">Select targets and cases</legend>
+        <label class="usa-label" for="scope-type">Process scope</label><select class="usa-select" id="scope-type"><option value="full-process">Full process</option><option value="component">Component</option><option value="subprocess">Subprocess</option></select>
+        <label class="usa-label" for="scope-rationale">Selection rationale</label><textarea class="usa-textarea" id="scope-rationale" rows="3"></textarea>
+        <p id="scope-boundary"></p>
+        <details class="reporting-details" open><summary>Select procedures and other targets</summary><p><button class="usa-button usa-button--unstyled" type="button" id="select-baseline">Select all active Baseline procedures</button> <button class="usa-button usa-button--unstyled" type="button" id="clear-targets">Clear target selection</button></p><div id="targets-list"></div></details>
+        <div id="cases-panel"><label class="usa-label" for="case-search">Filter Web cases by ID</label><input class="usa-input" id="case-search" type="search"><p id="case-filter-status" role="status"></p><p><button class="usa-button usa-button--unstyled" id="select-cases" type="button">Select cases for checked procedures</button></p><details class="reporting-details"><summary>Select Framework cases</summary><div id="cases-list"></div></details></div>
+        <button class="usa-button" type="submit">Apply scope and prepare result rows</button>
+        <button class="usa-button usa-button--unstyled" id="cancel-scope" type="button">Reset scope selection to saved values</button>
+      </fieldset></form>
+      <p id="coverage-summary"></p>
+      <div id="artifacts-list"></div>
+      <details class="reporting-details" id="artifact-details"><summary>Add or edit your artifact</summary><form id="artifact-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Artifact editor</legend><div id="artifact-fields" class="reporting-grid"></div><button class="usa-button" type="submit">Save artifact</button><button class="usa-button usa-button--unstyled" type="button" id="artifact-new">Clear artifact editor</button></fieldset></form></details>
+    </section>
+    <section id="results-section" aria-labelledby="results-title">
+      <h2 id="results-title">4. Results</h2>
+      <p>Prepared rows start as not tested. Record component observations separately, then link them to a process determination. A passing observation for one location does not establish whole-page conformance.</p>
+      <label class="usa-label" for="result-search">Filter results by artifact, target, case, or outcome</label><input class="usa-input" id="result-search" type="search"><p id="result-count" role="status"></p>
+      <div id="results-list"></div>
+      <button class="usa-button usa-button--outline" type="button" id="add-observation">Add component observation</button>
+      <div id="result-editor" hidden>
+        <h3 id="result-editor-title" tabindex="-1">Edit result</h3>
+        <p id="result-dirty" role="status"></p>
+        <form id="result-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Result editor</legend><div id="result-fields" class="reporting-grid"></div><button class="usa-button" type="submit">Save result</button></fieldset><button class="usa-button usa-button--unstyled" type="button" id="cancel-result">Close editor and discard unsaved edits</button></form>
+      </div>
+    </section>
+    <section id="review-section" aria-labelledby="review-title">
+      <h2 id="review-title">5. Review and exports</h2>
+      <form id="review-form" class="usa-form reporting-form"><fieldset class="usa-fieldset" data-editable><legend class="usa-sr-only">Run review and limitations</legend><div id="review-fields" class="reporting-grid"></div></fieldset></form>
+      <div class="reporting-actions"><button class="usa-button usa-button--outline" id="validate-record" type="button">Check record</button><button class="usa-button" id="finalize" type="button">Finalize record</button><button class="usa-button usa-button--outline" id="rerun" type="button">Start a new run from this process</button></div>
+      <p>Finalizing checks the record's structure and coverage accounting. It does not certify the process, complete unperformed tests, or complete human review.</p>
+      <section id="evaluator-panel" aria-labelledby="evaluator-title">
+        <h3 id="evaluator-title">Evaluator comparison</h3><p>Public case IDs and sample names can reveal outcomes. These inputs are not blinded. Expectations are loaded only when you choose to compare after freezing.</p>
+        <button class="usa-button usa-button--outline" id="freeze" type="button">Freeze and download candidate</button><button class="usa-button usa-button--outline" id="download-candidate" type="button" hidden>Download original candidate again</button>
+        <p id="freeze-status" tabindex="-1"></p><label class="usa-label" for="verify-candidate">Verify a frozen candidate file for an imported evaluator record</label><input class="usa-file-input" id="verify-candidate" type="file" accept=".json,application/json">
+        <label class="usa-label" for="evaluator-name">Evaluator name</label><input class="usa-input" id="evaluator-name" type="text"><button class="usa-button" id="compare" type="button">Load expectations and compare</button><div id="comparisons-list"></div>
+      </section>
+      <h3>Download your record</h3><p>JSON preserves the complete editable record. CSV files contain related tables with nested values encoded as JSON within cells. The HTML report is standalone and includes all recorded details.</p>
+      <div class="reporting-actions"><button class="usa-button" id="export-json" type="button">Download JSON</button><button class="usa-button usa-button--outline" id="export-csv" type="button">Prepare CSV downloads</button><button class="usa-button usa-button--outline" id="export-html" type="button">Download HTML report</button></div>
+      <ul id="csv-downloads" class="usa-list"></ul>
+    </section>
+  </div>
+</div>
+<script type="module" src="{{ '/assets/js/reporting/app.mjs' | relative_url }}"></script>

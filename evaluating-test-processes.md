@@ -7,6 +7,8 @@ title: Evaluating a Test Process
 
 Use the ICT Baseline Alignment Framework to evaluate whether an accessibility test process produces results consistent with the ICT Testing Baseline for selected procedures and samples.
 
+**Framework process evaluation is currently available only against the ICT Testing Baseline for Web.** There are no document Framework test cases or samples for this selection and workflow. Recording results for users' own documents is a separate reporting purpose. See the [reporting tool guidance]({{ '/reporting-guide.html' | relative_url }}).
+
 A test process is the complete set of methods used to reach and report an accessibility finding. It may include manual procedures, automated scanners, browser and developer tools, assistive technologies, format-specific inspection tools, scripts, organizational workflows, decision rules, human judgment, and AI/SI-enabled tools.
 
 The evaluation produces evidence about the process as defined and executed in a particular environment. It does not certify the process or its tools, establish that a tested artifact conforms, or demonstrate complete Baseline alignment from a sample score.
@@ -54,7 +56,9 @@ Keep uncovered procedures and scenarios visible. The absence of an available cas
 
 The people and tools executing the candidate process should receive the sample and the information normally needed to identify the applicable test, but not the expected result or evaluator rationale.
 
-Evaluators can use the downloadable [JSON test case index]({{ site.baseurl }}/assets/baselineTestCases.json) or [CSV test case index]({{ site.baseurl }}/assets/baselineTestCases.csv) to select cases and configure tools to open specific sample URLs. These index files also contain expected results and may contain outcome-bearing names or metadata. Keep the complete index under evaluator control; provide the candidate process only the case identifiers, sample locations, applicable procedure information, or other fields necessary for independent execution.
+Use the Jekyll-generated [candidate JSON index]({{ '/assets/baselineTestCases-candidate.json' | relative_url }}) or [candidate CSV index]({{ '/assets/baselineTestCases-candidate.csv' | relative_url }}) for sample locations, procedure keys, hashes, and suite provenance without explicit expected results, titles, rationale, or case-document links. These exports still contain outcome-bearing IDs and sample filenames; they are not sufficient for blinded execution. Use a controlled candidate environment when independent evaluation is required.
+
+The original [JSON test case index]({{ site.baseurl }}/assets/baselineTestCases.json) and [CSV test case index]({{ site.baseurl }}/assets/baselineTestCases.csv) remain evaluator resources with expected results. Keep them and explanatory case content outside independent candidate inputs.
 
 Keep expected outcomes, explanatory case text, and outcome-bearing file names, page titles, comments, or identifiers outside the candidate environment when they could reveal the answer. If a neutral copy of a sample is needed, document the transformation and verify that behavior, structure, relationships, and dependencies remain equivalent.
 

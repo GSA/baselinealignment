@@ -14,6 +14,12 @@ primary_navigation:
     url: /testcases.html
   - name: Evaluate a Test Process
     url: /evaluating-test-processes.html
+  - name: Reporting Tool
+    children:
+      - name: Reporting Tool
+        url: /reporting-tool.html
+      - name: Reporting Tool Guide
+        url: /reporting-guide.html
   - name: Accessibility SI Resources
     url: /accessibility-si.html
   - name: Contributing
@@ -43,3 +49,12 @@ exclude:
   - CODEOWNERS
   - Templates/_testcase-template.md
   - Templates/_BAWG-Tmpl-01.dwt
+  - evaluations/scripts
+  - evaluations/tests
+  # Maintainer documentation and portable source resources are repository-only.
+  - "**/README.md"
+  - reporting-tool/
+  - accessibility-si/
+  - evaluations/coverage.md
+  - evaluations/publication-and-coverage.md
+  - evaluations/validation-status.md
