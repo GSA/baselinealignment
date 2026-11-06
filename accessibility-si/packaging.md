@@ -71,7 +71,15 @@ python accessibility-si/scripts/package-skills.py --output ../skill-distribution
 
 Choose a new output directory outside the source repository. The script uses the Python standard library, copies all four standalone skill folders, includes the source repository's `LICENSE.md` at each skill root, and writes `inventory.json` with file hashes outside the folders. It refuses overwrites and creates folders rather than archives. Recipients load the resulting resources using their environment's supported mechanism.
 
-The script packages individual skills; it does not package the complete collection or Framework case corpus. For a complete-collection distribution, preserve the relative layout and document whether the associated repository cases and samples are supplied or must be obtained separately. Explain any limits on running scripts from the delivered layout.
+Without additional options, the script packages only the individual skills. It does not include separate instructions, workflows, evaluations or the Framework case corpus.
+
+To package the complete collection together with the Framework evaluation resources, case records and samples needed by its validator, add `--complete`:
+
+```sh
+python accessibility-si/scripts/package-skills.py --complete --output ../accessibility-si-distribution
+```
+
+The complete distribution preserves the repository-relative layout used by the collection, evaluation framework, reporting resources and case corpus. Install the four folders under `accessibility-si/skills/` separately in an environment's skill-discovery directory when reusable skill discovery is desired.
 
 Content hashes identify the distributed files. Successful packaging does not demonstrate human review, accessibility results, Baseline alignment or compatibility with a recipient's environment.
 
