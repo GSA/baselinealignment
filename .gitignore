@@ -10,3 +10,4 @@ package-lock.json
 *.LCK
 _notes/
 .venv/
+.DS_Store
