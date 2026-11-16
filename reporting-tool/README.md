@@ -60,35 +60,9 @@ Only user pages and runtime/download resources are published. `_config.yml` excl
 
 ## Remaining work and notes
 
-- After the colleague's large test-file upload, refresh the manifest and expectation pins, reconcile new mappings, then settle neutral fixture IDs/filenames. Preserve stable case references and evaluator-only alias mappings; verify transformed samples and all dependencies preserve tested behavior. Renaming is deliberately deferred.
+- After the pending large test-file upload, refresh the manifest and expectation pins, reconcile new mappings, then settle neutral fixture IDs/filenames. Preserve stable case references and evaluator-only alias mappings; verify transformed samples and all dependencies preserve tested behavior. Renaming is deliberately deferred.
 - Add selected scanner-output adapters only with documented rule mappings. The current tool records/imports reporting-format JSON; it does not run scanners or accept arbitrary vendor reports.
 - Consider evidence packaging/upload integrations, a richer dependency editor, history/catalog loading, multiple saved browser projects, and collaboration only when needed. There is no account service or central database.
 - Pin and bundle the existing shared USWDS/site dependencies if fully offline operation of the editing site becomes a requirement. Exported HTML already embeds its styles and has no network dependency.
 - Human acceptance still requires keyboard, visual/content-equivalence, zoom/reflow, and applicable screen-reader review of the complete workflow and delivered exports. Record actual evidence; do not infer whole-site conformance from automated checks.
 - Keep document Framework process evaluation unavailable until a reviewed document sample corpus and workflow exist.
-
-## Verification record
-
-Completed 2026-11-03:
-
-- Jekyll builds under `/baselinealignment` and `/preview/gsa/baselinealignment/review` succeeded.
-- All 13 JavaScript logic tests passed, including schema/relationship checks, exact-byte freeze verification, CSV quoting/formula protection, HTML escaping, gap accounting, and independent Python validation of representative records.
-- All 24 Python regressions passed against the rendered preview build, including matching candidate JSON/CSV inventories and publication exclusions. No README or raw Markdown files were emitted; public tool, guide, Accessibility SI landing page, and runtime assets remained available.
-- The existing Accessibility SI/framework structural validator passed: 55 criteria, 62 Web procedures, 57 document procedures, and 147 case/source references. This was not test-case execution.
-- The isolated headless Chrome smoke test passed creation/editing, scope preparation/filtering, manual rule definitions, finalization, candidate freeze before any expectation request, explicit comparison, JSON/CSV/HTML downloads, Python validation of the browser-generated evaluator record and original candidate, reopening/verification, and committed IndexedDB restoration.
-- Browser checks also passed the document-report boundary, a native Tab/focus smoke check and form labels, 320 CSS-pixel page reflow, offline standalone HTML viewing, unavailable-storage fallback with JSON download, error-summary focus, rejection of invalid imports without replacing the workspace, and escaping of imported markup. Desktop/narrow workspace screenshots and the exported report were visually inspected.
-- Human screen-reader testing, comprehensive human keyboard/content-equivalence review, and acceptance across the intended browser/assistive-technology combinations remain pending. Automated structure/behavior checks and selected visual inspection are not a whole-site accessibility determination.
-
-### AI/SI extension verification — 2026-11-03
-
-- All 19 JavaScript logic tests and 30 Python regressions passed. These include the standalone profile, reusable process and run schemas; required/whitespace-only AI fields; direct model use; non-AI custom-profile compatibility; output references or explicitly explained gaps for final observed AI results; and post-freeze instruction tampering.
-- Default and Cloud.gov-style preview-path Jekyll builds passed, including publication checks for the new runtime module and standalone schema. The existing collection/framework structural validator also passed.
-- The isolated Chrome regression passed conditional display/enablement, required-field focus and expansion of invalid groups, direct-model agent omission, values surviving component-type switches, invalid output-hash focus, literal instruction whitespace surviving edits, full AI-profile JSON round-tripping, dedicated HTML/CSV sections, and output-reference clearing on reusable-profile export/import and new runs. The browser-generated AI evaluator record and original candidate passed independent Python validation.
-- Browser checks verified that no expectations were fetched before the explicit post-freeze comparison action. Existing create/edit, save/restore, export, import rejection, markup escaping, offline HTML, and unavailable-storage checks passed as part of the same regression.
-- Expanded AI forms and frozen-record hash text fit at 320 CSS pixels after scoped fieldset/grid/button sizing and hash-wrapping corrections. The narrow AI editor was visually inspected. These checks do not replace the pending human assistive-technology and complete-process acceptance review above.
-
-### File-picker eligibility and keyboard verification — 2026-11-03
-
-- The candidate verification input was displayed while disabled before a freeze existed. It now appears only for an opened evaluator record whose original candidate still needs verification; prerequisite instructions link to the report import control. Successful verification hides the picker and moves focus to the verification status.
-- File inputs remain enabled within conditionally visible containers. This avoids USWDS enhancement retaining disabled styling after the native input is enabled. Initial report import waits for resource readiness; profile import is hidden for locked records. Cancelling a picker or receiving an empty change event does not raise an application error.
-- The browser regression now uses actual Tab navigation and Enter/Space activation with native file-chooser interception, rather than only assigning files programmatically. Report import, profile import, candidate verification, cancellation, eligibility, and focus return passed alongside the existing complete workflow regression. The active candidate picker's visible focus indicator was captured and visually inspected. The Jekyll build and whitespace checks passed. Human assistive-technology acceptance remains pending.
